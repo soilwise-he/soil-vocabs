@@ -1,0 +1,719 @@
+@prefix agrovoc: <http://aims.fao.org/aos/agrovoc/> .
+@prefix benchmarks: <https://soilhealthbenchmarks.eu/glossary/> .
+@prefix gemet: <http://www.eionet.europa.eu/gemet/concept/> .
+@prefix inrae: <http://opendata.inrae.fr/thesaurusINRAE/> .
+@prefix iso11074: <https://data.geoscience.earth/ncl/ISO11074v2025/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+benchmarks:4036 a skos:Concept ;
+    skos:closeMatch agrovoc:c_a9645d28 ;
+    skos:definition "Soil health is the ability of a soil, at a specified point in time, to function as a vital living system, within natural or managed ecosystem boundaries and land-use boundaries, to sustain plant and animal productivity and health, maintain or enhance water and air quality and to further provide ecosystem services in the long-term without (increased) trade-offs between ecosystem services."@en,
+        "The physical, chemical and biological condition of the soil determining its capacity to function as a vital living system and to provide ecosystem services."@en ;
+    skos:exactMatch inrae:c_2d69fde2 ;
+    skos:prefLabel "soil health"@en .
+
+benchmarks:4068 a skos:Concept ;
+    skos:definition "Soil management practices that maintain or enhance the ecosystem services provided by the soil without impairing the functions enabling those services, or being detrimental to other properties of the environment."@en,
+        "Sustainable soil management comprises practices that maintain or enhance the provisioning, regulation and maintenance as well as cultural services provided by soils without significantly impairing either the soil functions that enable those services or biodiversity."@en ;
+    skos:prefLabel "sustainable soil management"@en .
+
+benchmarks:4070 a skos:Concept ;
+    skos:definition "Soils where soil management practices are carried out."@en ;
+    skos:prefLabel "managed soils"@en .
+
+benchmarks:above-ground-vegetation-biomass a skos:Concept ;
+    skos:definition "All biomass of living vegetation, both woody and herbaceous, above the soil including stems, stumps, branches, bark, seeds, and foliage."@en ;
+    skos:prefLabel "above-ground (vegetation) biomass"@en .
+
+benchmarks:agriculture a skos:Concept ;
+    skos:definition "The production of plants and animals useful to man, involving soil cultivation and the breeding and management of crops and livestock."@en ;
+    skos:exactMatch agrovoc:c_203,
+        inrae:c_3959,
+        gemet:232 ;
+    skos:prefLabel "agriculture"@en .
+
+benchmarks:agroforestry a skos:Concept ;
+    skos:definition "Integrates the use of woody perennials with agricultural crops and/ or animals for a variety of benefits and services, including better use of soil and water re-sources; multiple fuel, fodder, and food products; and habitat for associated species."@en ;
+    skos:exactMatch agrovoc:c_207,
+        inrae:c_3460,
+        gemet:239 ;
+    skos:prefLabel "agroforestry"@en .
+
+benchmarks:allotments a skos:Concept ;
+    skos:definition "Plots of land leased cheaply, or even freely to tenants for personal food production."@en ;
+    skos:exactMatch agrovoc:c_294 ;
+    skos:prefLabel "allotments"@en .
+
+benchmarks:animal-management a skos:Concept ;
+    skos:definition "The management of the wild animals populations in forests, as well as the management of transhumant livestocks in open wooded lands, such as woody savannas or woody rangelands; may lead to soil carbon increase."@en ;
+    skos:prefLabel "animal management"@en .
+
+benchmarks:arable-land a skos:Concept ;
+    skos:definition "Arable land is land worked (ploughed or tilled) regularly, generally under a system of crop rotation."@en ;
+    skos:exactMatch agrovoc:c_18948,
+        inrae:c_3071 ;
+    skos:prefLabel "arable land"@en .
+
+benchmarks:artefacts a skos:Concept ;
+    skos:definition "Artefacts are solid or liquid substances that are created or substantially modified by humans as part of an industrial or artisanal manufacturing process, or brought to the surface by human activity from a depth, where they were not influenced by surface processes, and deposited in an environment, where they do not commonly occur."@en ;
+    skos:prefLabel "artefacts"@en .
+
+benchmarks:below-ground-biomass-root-biomass a skos:Concept ;
+    skos:definition "All biomass of live roots. Fine roots of less than 2 mm diameter are excluded because these often cannot be distinguished empirically from soil organic matter or litter."@en ;
+    skos:prefLabel "below-ground biomass (root biomass)"@en .
+
+benchmarks:benchmark a skos:Concept ;
+    skos:definition "A reference point from which measurements may be indicated or made (e.g. topographic elevations, tidal observations) or a standard, problem or test that serves as a basis for evaluation, judgement or comparison."@en ;
+    skos:prefLabel "benchmark"@en .
+
+benchmarks:biodiversity-management a skos:Concept ;
+    skos:definition "Practices that aim to maintain and/or enhance biodiversity."@en ;
+    skos:exactMatch inrae:c_27379b1c ;
+    skos:prefLabel "biodiversity management"@en .
+
+benchmarks:blue-green-infrastructure a skos:Concept ;
+    skos:definition "Blue-Green Infrastructure (BGI) is an approach to urban flood resilience, recognised globally and in international literature, that capitalises on the benefits of working with urban green-spaces and naturalised water-flows."@en ;
+    skos:exactMatch agrovoc:c_983f26c6 ;
+    skos:prefLabel "blue-green infrastructure"@en .
+
+benchmarks:built-up-areas a skos:Concept ;
+    skos:definition "Built-up area is defined as the presence of buildings (roofed structures)."@en ;
+    skos:prefLabel "built-up areas"@en .
+
+benchmarks:carbon-and-nutrient-management a skos:Concept ;
+    skos:definition "Carbon management refers to a series of practices that aim to retain carbon in thesoiland avoid losses. Nutrient management refers to a series of practices that maintain nutrients in the system and reduce losses (e.g., nitrate leaching)."@en ;
+    skos:prefLabel "carbon and nutrient management"@en .
+
+benchmarks:citizen-science a skos:Concept ;
+    skos:definition "Scientific work undertaken by members of the general public, in collaboration with professional scientists and scientific institutions."@en ;
+    skos:exactMatch agrovoc:c_f888df97,
+        inrae:c_20199,
+        gemet:15358 ;
+    skos:prefLabel "citizen science"@en .
+
+benchmarks:citizens a skos:Concept ;
+    skos:definition "Individuals of the general public (e.g., of a community, town) that are not included in one of the other stakeholder groups but that will be affected by soil health and soil governance."@en ;
+    skos:prefLabel "citizens"@en .
+
+benchmarks:contaminant a skos:Concept ;
+    skos:definition "A substance liable to cause soil contamination."@en ;
+    skos:exactMatch inrae:c_13420,
+        iso11074:3.91 ;
+    skos:prefLabel "contaminant"@en .
+
+benchmarks:contaminated-site a skos:Concept ;
+    skos:definition "A delineated area of one or several plots with confirmed presence of soil contamination caused by point-source anthropogenic activities."@en ;
+    skos:exactMatch iso11074:3.92 ;
+    skos:prefLabel "contaminated site"@en .
+
+benchmarks:cooperatives a skos:Concept ;
+    skos:definition "Coperatives are organizations that represent the interests of farmers, agricultural producers, foresters, and/or urban planners, advocating for policies and providing education and services to support agriculture and rural communities. Examples (regional-European):Copa-Cogeca, Euopean Dairy Association, European Conservation Agriculture Federation, European Agroforestry Federation, European Landowners’ Organization, Bauernverband."@en ;
+    skos:exactMatch agrovoc:c_10090 ;
+    skos:prefLabel "cooperatives"@en .
+
+benchmarks:decision-makers a skos:Concept ;
+    skos:definition "Actors making decisions related to the overall socio-economic development. Examples: Regional economic commissions, regional banks, government, ministries of planning, finance, economic development, provincial councils, municipalities, urban planning departments."@en ;
+    skos:prefLabel "decision makers"@en .
+
+benchmarks:deforestation a skos:Concept ;
+    skos:definition "The conversion of forest to other land use independently whether human-induced or not."@en ;
+    skos:exactMatch agrovoc:c_15590,
+        inrae:c_3590,
+        gemet:2036 ;
+    skos:prefLabel "deforestation"@en .
+
+benchmarks:disturbance-management a skos:Concept ;
+    skos:definition "Involves (forestry) practices that are aimed at averting/easing disturbances (pre-disturbance management) as well as practices applied to deal with a situation post-disturbance."@en ;
+    skos:prefLabel "disturbance management"@en .
+
+benchmarks:ecosystem-services a skos:Concept ;
+    skos:definition "Indirect contributions of ecosystems to the economic, social,culturaland other benefits that people derive from those ecosystems."@en,
+        "The contributions of ecosystems (i.e. living systems) to human well-being."@en ;
+    skos:exactMatch agrovoc:c_1348040570280,
+        gemet:15138 ;
+    skos:prefLabel "ecosystem services"@en ;
+    skos:related benchmarks:cultural,
+        benchmarks:provisioning,
+        benchmarks:regulation-and-maintenance .
+
+benchmarks:excess-nutrients a skos:Concept ;
+    skos:definition "Presence of nutrients (e.g. nitrogen) in the soil at levels that could potentially cause adverse effects on soil health and water quality."@en ;
+    skos:prefLabel "excess nutrients"@en .
+
+benchmarks:fallow a skos:Concept ;
+    skos:definition "Cropland left idle in order to restore productivity through accumulation of moisture or organic matter. Summer fallow is common in regions of limited rainfall where cereal grains are grown. The soil is tilled for at least one growing season for weed control and decomposition of plant residue."@en ;
+    skos:exactMatch agrovoc:c_34007,
+        inrae:c_2538 ;
+    skos:prefLabel "fallow"@en .
+
+benchmarks:forest a skos:Concept ;
+    skos:definition "Land spanning more than 0.5 hectares with trees higher than 5 meters and a canopy cover of more than 10 percent, or trees able to reach these thresholds in situ. It does not include land that is predominantly under agricultural or urban land use."@en ;
+    skos:exactMatch inrae:c_422,
+        gemet:3406 ;
+    skos:prefLabel "forest"@en .
+
+benchmarks:forest-cover a skos:Concept ;
+    skos:definition "Forest cover is the amount of forest that covers a particular area of land. It does not include land that is predominantly under agricultural or urban land use."@en ;
+    skos:exactMatch agrovoc:c_9000180,
+        inrae:c_3957 ;
+    skos:prefLabel "forest cover"@en .
+
+benchmarks:forest-expansion a skos:Concept ;
+    skos:definition "Expansion of forest on land that, until then, was under a different land use, implies a transformation of land use from non-forest to forest. It includes afforestation which means the establishment of forest through planting and/or deliberate seeding on land and the natural expansion of forest through natural succession on land that, until then, was under a different land use."@en ;
+    skos:prefLabel "forest expansion"@en .
+
+benchmarks:forest-ownership a skos:Concept ;
+    skos:definition "Generally refers to the legal right to freely and exclusively use, control, transfer, or otherwise benefit from a forest. Ownership can be acquired through transfers such as sales, donations, and inheritance."@en ;
+    skos:prefLabel "forest ownership"@en .
+
+benchmarks:forest-private-ownership a skos:Concept ;
+    skos:definition "Forest owned by individuals, families, communities, private co-operatives, corporations and other business entities, religious and private educational institutions, pension or investment funds, NGOs, nature conservation associations and other private institutions."@en ;
+    skos:prefLabel "forest private ownership"@en .
+
+benchmarks:forest-public-ownership a skos:Concept ;
+    skos:definition "Forest owned by the State; or administrative units of the Public Administration; or by institutions or corporations owned by the Public Administration."@en ;
+    skos:prefLabel "forest public ownership"@en .
+
+benchmarks:gardens a skos:Concept ;
+    skos:definition "A piece of land next to a house where flowers and other plants are grown and which often has an area of grass."@en ;
+    skos:exactMatch agrovoc:c_3196 ;
+    skos:prefLabel "gardens"@en .
+
+benchmarks:grassland a skos:Concept ;
+    skos:definition "Land predominantly covered by communities of grassland, grass-like plants and forbs. This class includes permanent grassland and permanent pasture that is not part of a crop rotation (normally for 5 years or more), which can be used to grow grasses and other herbaceous forage naturally (selfseeded) or through cultivation (sown). It may include sparsely occurring trees within a limit of a canopy below 10% and shrubs within a total limit of cover (including trees) of 20%. These can themselves be also grazed, provided that grasses and other herbaceous forage remain predominant as well."@en ;
+    skos:exactMatch inrae:c_6e7e381e,
+        gemet:3733 ;
+    skos:prefLabel "grassland"@en .
+
+benchmarks:grazing-management a skos:Concept ;
+    skos:closeMatch agrovoc:c_3367 ;
+    skos:definition "Grazing management involves balancing the feed requirements of stock against the potential availability and nutritive value of grass or other forages."@en ;
+    skos:exactMatch inrae:c_4044 ;
+    skos:prefLabel "grazing management"@en .
+
+benchmarks:green-corridors a skos:Concept ;
+    skos:definition "Avenues along which wide-ranging animals can travel, plants can propagate, genetic interchange can occur, populations can move in response to environmental changes and natural disasters, and threatened species can be replenished from other areas."@en ;
+    skos:prefLabel "green corridors"@en .
+
+benchmarks:indicator a skos:Concept ;
+    skos:definition "An indicator is a measure by a single or a set of variables that reflects the state or level of a phenomenon of interest."@en ;
+    skos:exactMatch inrae:c_16171,
+        gemet:4196,
+        iso11074:3.219 ;
+    skos:prefLabel "indicator"@en .
+
+benchmarks:initiatives-and-ngos a skos:Concept ;
+    skos:definition "Non-governmental entities who are involved in activities related to the planning, use, and stewardship of land resources, including agriculture, forestry, and environmental conservation, not for profit.Example: NGOs"@en ;
+    skos:prefLabel "initiatives and ngos"@en .
+
+benchmarks:integrated-soil-health-monitoring-framework-ishmf a skos:Concept ;
+    skos:definition "A framework co-created by stakeholders in the BENCHMARKS project to monitor and assess soil health."@en ;
+    skos:prefLabel "integrated soil health monitoring framework (ishmf)"@en .
+
+benchmarks:knowledge-and-education-actors a skos:Concept ;
+    skos:definition "This group consists of academic and research institutions with a focus on soil science, agriculture, forestry or environmental studies, whose aim is to generate new knowledge and understanding related to soil governance issues, including soil health, sustainable land use, and conservation practices, through research, education, and outreach. Examples: Scientist, academics, researchers & students from universities, research institution, secondary education"@en ;
+    skos:prefLabel "knowledge and education actors"@en .
+
+benchmarks:land a skos:Concept ;
+    skos:definition "The surface of the Earth that is not covered by water."@en ;
+    skos:exactMatch agrovoc:c_4172,
+        inrae:c_22714,
+        gemet:4599 ;
+    skos:prefLabel "land"@en .
+
+benchmarks:land-cover a skos:Concept ;
+    skos:definition "LAND COVER(LC) = physical cover (“material”) observed at the earth’s surface. The main classes in the LUCAS land cover nomenclature are as follows:A00 Artificial land B00 Cropland C00 Woodland D00 Shrubland E00 Grassland F00 Bareland G00 Water H00 Wetland"@en,
+        "The physical and biological cover of the earth’s surface."@en ;
+    skos:exactMatch agrovoc:c_37897,
+        inrae:c_0617cfcc,
+        gemet:4612 ;
+    skos:prefLabel "land cover"@en .
+
+benchmarks:land-stewards a skos:Concept ;
+    skos:definition "Land stewards are individuals or organizations responsible for managing and overseeing land use and associated activities in their respective areas. Examples (local-regional):Land owners, managers and users."@en ;
+    skos:prefLabel "land stewards"@en .
+
+benchmarks:land-use a skos:Concept ;
+    skos:definition "The term land use deals with the spatial aspects of all human activities on the land and with the way in which the land surface is adapted, or could be adapted, to serve human needs. (GEMET, AGROVOC) LAND USE (LU) = socio-economic function of the observed earth’s surface (LUCAS) Some examples for land use classes in the LUCAS nomenclature (which are of relevance for BENCHMARKS) are: U110 Agriculture U120 Forestry U150 Hunting U210 Energy production U360 Recreational, leisure and sport U370 Residential U400 Unused"@en ;
+    skos:exactMatch agrovoc:c_4182,
+        inrae:c_22741,
+        gemet:4678 ;
+    skos:prefLabel "land use"@en .
+
+benchmarks:land-use-change a skos:Concept ;
+    skos:definition "A change in the socio-economic function of the earth surface by humans which leads to a change in land cover (e.g. from grassland to cropland, from cropland to forest)."@en ;
+    skos:exactMatch agrovoc:c_fac4b794,
+        inrae:c_3853 ;
+    skos:prefLabel "land-use change"@en .
+
+benchmarks:landscape-heterogeneity a skos:Concept ;
+    skos:definition "The diversity of landscape elements (composition) and the way these elements are distributed, including their relative size and their location in relation to each other strongly influence biodiversity, water cycling and soil erosion."@en ;
+    skos:exactMatch inrae:c_4635 ;
+    skos:prefLabel "landscape heterogeneity"@en .
+
+benchmarks:landscapes a skos:Concept ;
+    skos:definition "Within each region, landscapes have been selected that represent two of the three land uses – agriculture, forestry and urban and will be aligned to individual Case Study Sites (total of 24 case study sites)."@en ;
+    skos:prefLabel "landscapes"@en .
+
+benchmarks:lighthouse-farms a skos:Concept ;
+    skos:definition "Lighthouse farms are existing, commercially viable farms in the real world; they are positive deviants and are ‘already in 2050’ in terms of providing sustainably produced food and ecosystem services."@en ;
+    skos:prefLabel "lighthouse farms"@en .
+
+benchmarks:lighthouses a skos:Concept ;
+    skos:definition "Places for demonstration of solutions, training and communication."@en ;
+    skos:exactMatch agrovoc:c_b23f0bf9 ;
+    skos:prefLabel "lighthouses"@en .
+
+benchmarks:local a skos:Concept ;
+    skos:definition "Within each of these Case Study Sites, a focal site (local scale) has been identified which is an existing long-term experiment (LTE), monitoring site or Lighthouse Farm. These sites provide long term data on management practices, measurements of a range of soil properties and previous research, focusing on one of the three land uses. They showcase best practices for their different land uses."@en ;
+    skos:prefLabel "local"@en .
+
+benchmarks:management-practices-based-on-mp-catalogues-from-t2-3 a skos:Concept ;
+    skos:definition "Based on MP catalogues from T2.3, the following broad classes are listed:Animal management Biodiversitymanagament Carbon and nutrient management Disturbance management Grazing management Pest management Pollutant management Recreational use management Soil management Terrain management Vegeatation management Water management"@en ;
+    skos:prefLabel "management practices [based on mp catalogues from t2.3]"@en .
+
+benchmarks:measurement-reporting-and-verification-mrv a skos:Concept ;
+    skos:definition "MRV refers to a set of processes and activities used to measure, report, and verify data related to specific parameters or indicators."@en ;
+    skos:prefLabel "measurement, reporting, and verification (mrv)"@en .
+
+benchmarks:monocrop a skos:Concept ;
+    skos:definition "The growth of a single crop in a field for a given growing season."@en ;
+    skos:prefLabel "monocrop"@en .
+
+benchmarks:monoculture a skos:Concept ;
+    skos:definition "The growing of a single arable crop species on a field year after year, for at least 10 years."@en ;
+    skos:exactMatch agrovoc:c_4915,
+        inrae:c_3086 ;
+    skos:prefLabel "monoculture"@en .
+
+benchmarks:mrv-actors a skos:Concept ;
+    skos:definition "MRV actors are companies, institutions or initiatives conducting Monitoring, Reporting and Verification (MRV) activities. In the context of soil health they occur at different spatial scales and may include: companies wanting to consider soil health in their value-chain requirements, European member state administrations aiming to include soil health in their monitoring and reporting, European institutions such as the EEA and the JRC, or international initiatives such as FAO, UNEP, IPBES or the UN’s SEEA EA."@en ;
+    skos:prefLabel "mrv actors"@en .
+
+benchmarks:multi-species-system a skos:Concept ;
+    skos:definition "Simultaneous growing of at least two crops within a field."@en ;
+    skos:prefLabel "multi-species system"@en .
+
+benchmarks:multi-stakeholder-process-msp a skos:Concept ;
+    skos:definition "A decision-making body that brings together different stakeholders to collaborate on developing action strategies for soil management problems."@en ;
+    skos:prefLabel "multi-stakeholder process (msp)"@en .
+
+benchmarks:multiple-use-forest a skos:Concept ;
+    skos:definition "Forest where the management objective is a combination of several purposes and where none of them is significantly more important than the other."@en ;
+    skos:prefLabel "multiple use forest"@en .
+
+benchmarks:natural-capital a skos:Concept ;
+    skos:definition "Refers to both the living (e.g. fish stocks, forests) and non-living (e.g. minerals, energy resources) aspects of nature which produce value to people, both directly and indirectly. It is this capital that underpins all other capital in our economy and society. (Natural capital refers to the actual stock of natural assets that provides value whereas ecosystem services refer to the flow of benefits that this stock provides.)"@en ;
+    skos:prefLabel "natural capital (natural assets)"@en .
+
+benchmarks:nature-based-solutions a skos:Concept ;
+    skos:definition "Actions to protect, sustainably manage and restore natural or modified ecosystems, which simultaneously provide human well-being and biodiversity benefits."@en ;
+    skos:exactMatch agrovoc:c_0fafbb81 ;
+    skos:prefLabel "nature-based solutions"@en .
+
+benchmarks:outcome-metrics a skos:Concept ;
+    skos:definition "Monitor and report the extent to which the intervention / practice has delivered on its original objectives. Typically, outcome indicators can show trends and the degree of success, five to ten years after the start of the intervention."@en ;
+    skos:prefLabel "outcome metrics"@en .
+
+benchmarks:parameter a skos:Concept ;
+    skos:definition "1) A quantity in an equation which must be specified beside the independent variables to obtain the solution for the dependent variables.2) A quantity which is constant under a given set of conditions, but may be different under other conditions."@en ;
+    skos:exactMatch inrae:c_17731,
+        gemet:6033 ;
+    skos:prefLabel "parameter"@en .
+
+benchmarks:peri-urban-forests a skos:Concept ;
+    skos:definition "Networks or systems comprising all woodlands, groups of trees, and individual trees located in peri-urban areas (forests, street trees, trees in parks and gardens, and trees in derelict corners)."@en ;
+    skos:prefLabel "peri-urban forests"@en .
+
+benchmarks:pest-management a skos:Concept ;
+    skos:definition "Measures to regulate and manage species defined as a pest; such as animals, fungi, plants or microorganisms that adversely impact plant productivity."@en ;
+    skos:exactMatch agrovoc:c_13262,
+        inrae:c_11909 ;
+    skos:prefLabel "pest management"@en .
+
+benchmarks:ph a skos:Concept ;
+    skos:definition "The soil pH is a measure of its hydrogen ion concentration and indicates the acidity or alkalinity of the soil."@en ;
+    skos:exactMatch agrovoc:c_5753,
+        inrae:c_17430 ;
+    skos:prefLabel "ph"@en .
+
+benchmarks:pollutant a skos:Concept ;
+    skos:definition "Substance or agent present in the soil (or groundwater) which, due to its properties, amount or concentration, causes adverse impacts on soil functions and negatively affects soil biota and other living beings."@en ;
+    skos:exactMatch inrae:c_4274,
+        gemet:6395,
+        iso11074:3.328 ;
+    skos:prefLabel "pollutant"@en .
+
+benchmarks:pollutant-management a skos:Concept ;
+    skos:definition "Practices aimed at extracting, degrading, transforming or containing pollutants and subsequently minimizing their release into the environment."@en ;
+    skos:prefLabel "pollutant management"@en .
+
+benchmarks:practice-metrics a skos:Concept ;
+    skos:definition "Define which management practices/interventions can be implemented to respond to the objective set out in the context. Practice metrics can be monitored directly, for example by quantifying the uptake of a particular practice or introduction of a new technology."@en ;
+    skos:prefLabel "practice metrics"@en .
+
+benchmarks:production-forest a skos:Concept ;
+    skos:definition "Forest where the management objective is production of wood, fibre, bio-energy and/or non wood forest products."@en ;
+    skos:exactMatch inrae:c_1778 ;
+    skos:prefLabel "production forest"@en .
+
+benchmarks:protection-forest a skos:Concept ;
+    skos:definition "Forest where the management objective is protection ofsoiland water, or conservation of biological diversity."@en ;
+    skos:prefLabel "protection forest"@en .
+
+benchmarks:prova-1 a skos:Concept ;
+    skos:definition "A dynamic complex of plant, animal, and micro-organism communities and their non-living environment interacting as a functional unit."@en ;
+    skos:exactMatch inrae:c_8373,
+        gemet:2519 ;
+    skos:prefLabel "ecosystem"@en .
+
+benchmarks:public-actors a skos:Concept ;
+    skos:definition "This group consists of public institutions at both national and international levels responsible for developing and implementing policies and regulations related to soil governance and environmental protection. Examples (national-European): Members of parliament (MPs), Member of the European parliament (MEPs), policy officers, ministries, etc. Examples (local-regional): Municipalities, Mayors, town planners."@en ;
+    skos:prefLabel "public actors"@en .
+
+benchmarks:recreational-use-management a skos:Concept ;
+    skos:definition "Management practices which concern the recreational use of an area (such as spatial planning, temporal restrictions or maintenance of recreational areas)."@en ;
+    skos:prefLabel "recreational use management"@en .
+
+benchmarks:reforestation a skos:Concept ;
+    skos:definition "Re-establishment of forest through planting and/or deliberate seeding on land classified as forest."@en ;
+    skos:exactMatch agrovoc:c_13802,
+        inrae:c_2952,
+        gemet:6979 ;
+    skos:prefLabel "reforestation"@en .
+
+benchmarks:regeneration a skos:Concept ;
+    skos:definition "An intentional activity aimed at reversing soil from degraded to healthy condition."@en ;
+    skos:exactMatch agrovoc:c_6486,
+        gemet:7057 ;
+    skos:prefLabel "regeneration"@en .
+
+benchmarks:regions a skos:Concept ;
+    skos:definition "BENCHMARKS has identified 17 different administrative regions across Europe. Each region provides a combination of all three land uses. The spatial extent of the regions varies due to the natural diversity of region sizes in Europe."@en ;
+    skos:prefLabel "regions"@en .
+
+benchmarks:result-metrics a skos:Concept ;
+    skos:definition "Are useful to monitor and report a change in the short term as a result of the implementation of a practice/new technology. Typically, result-based indicators can show trends and indications of the degree of success, over a two- to five-year period following the intervention."@en ;
+    skos:prefLabel "result metrics"@en .
+
+benchmarks:salt-affected-soil a skos:Concept ;
+    skos:definition "Soil that has been adversely affected by the presence of soluble salts, with or without high amounts of exchangeable sodium."@en ;
+    skos:prefLabel "salt-affected soil"@en .
+
+benchmarks:sample a skos:Concept ;
+    skos:definition "Sample-based measurements of indicators are primarily applied at the local scale, thereby providing the most detailed scale of assessment, but this comes at a cost, which must be considered for any monitoring system. The type of sample measurements will vary depending on the objective and context of the monitoring system and spatial extent at which the stakeholder is focused."@en ;
+    skos:exactMatch inrae:c_16732,
+        iso11074:3.398 ;
+    skos:prefLabel "sample"@en .
+
+benchmarks:soil a skos:Concept ;
+    skos:definition "Soil, the biologically active, porous medium that has developed in the uppermost layer of Earth’s crust and is one of the principal substrata of life on Earth. Soil is a complex, dynamic, and living system that is formed over time through the interaction of physical, chemical, and biological processes. It is composed of mineral particles of varying sizes, organic matter, water, and air, all of which interact to form a matrix that supports plant growth and provides a habitat for soil organisms."@en,
+        "The top layer of the Earth’s crust situated between the bedrock and the land surface, which is composed of mineral particles, organic matter, water, air and living organisms."@en ;
+    skos:exactMatch agrovoc:c_7156,
+        inrae:c_1524,
+        gemet:7843,
+        iso11074:3.448 ;
+    skos:prefLabel "soil"@en ;
+    skos:related benchmarks:cultural,
+        benchmarks:provisioning,
+        benchmarks:regulation-and-maintenance .
+
+benchmarks:soil-biodiversity a skos:Concept ;
+    skos:definition "The variability of living organisms in soil and the ecological complexes of which they are part; this includes taxonomic and functional diversity within species, between species and of ecosystems."@en ;
+    skos:exactMatch inrae:c_642,
+        gemet:15296 ;
+    skos:prefLabel "soil biodiversity"@en ;
+    skos:related benchmarks:biodiversity .
+
+benchmarks:soil-capability a skos:Concept ;
+    skos:definition "The intrinsic capacity of a soil to deliver/fulfill soil functions."@en ;
+    skos:exactMatch gemet:7848 ;
+    skos:prefLabel "soil capability"@en .
+
+benchmarks:soil-condition a skos:Concept ;
+    skos:definition "Soil condition refers to the state of the soil, which includes its physical, chemical, and biological characteristics and the processes and interactions that connect them; and which in turn determine the capacity of the soil to support ecosystem services."@en ;
+    skos:exactMatch gemet:7851 ;
+    skos:prefLabel "soil condition"@en .
+
+benchmarks:soil-contamination a skos:Concept ;
+    skos:definition "The presence of a chemical or substance in the soil in a concentration that may be harmful to human health or the environment."@en ;
+    skos:exactMatch inrae:c_c62d3822,
+        gemet:15298 ;
+    skos:prefLabel "soil contamination"@en .
+
+benchmarks:soil-degradation a skos:Concept ;
+    skos:definition "Negative process often accelerated by human activities (improper soil use and cultivation practices, soil sealing) that leads to deterioration of soil properties and functions or destruction of soil as a whole, e.g. compaction, erosion, salinisation."@en ;
+    skos:exactMatch agrovoc:c_7168,
+        inrae:c_960,
+        gemet:7857 ;
+    skos:prefLabel "soil degradation"@en .
+
+benchmarks:soil-descriptor a skos:Concept ;
+    skos:definition "A parameter describing a physical, chemical, or biological characteristic of soil health."@en ;
+    skos:prefLabel "soil descriptor"@en .
+
+benchmarks:soil-district a skos:Concept ;
+    skos:definition "The part of the territory of a Member State, as delimited by that Member State in accordance with this Directive."@en ;
+    skos:prefLabel "soil district"@en .
+
+benchmarks:soil-ecosystem-services a skos:Concept ;
+    skos:definition "Soil Ecosystem Services is the soil-related subset of ecosystem services, directly and quantifiably controlled or provided by soils and their chemical, physical and biological properties, processes and functions."@en ;
+    skos:prefLabel "soil ecosystem services"@en .
+
+benchmarks:soil-erosion a skos:Concept ;
+    skos:closeMatch agrovoc:c_2651 ;
+    skos:definition "The wearing away of the land surface by water, wind, ice, gravity or other natural or anthropogenic agents that abrade, detach and remove soil particles or rock material from one point on the earth’s surface, for deposition elsewhere."@en ;
+    skos:exactMatch inrae:c_1543,
+        gemet:7858 ;
+    skos:prefLabel "soil erosion"@en .
+
+benchmarks:soil-fertility a skos:Concept ;
+    skos:definition "The ability of the soil to supply essential plant nutrients and soil water in adequate amounts and proportions for plant growth and reproduction in the absence of toxic substances which may inhibit plant growth. Characterized by favourable chemical, physical, and biological properties as a habitat for plant growth."@en ;
+    skos:exactMatch agrovoc:c_7170,
+        inrae:c_1975,
+        gemet:7860,
+        iso11074:3.451 ;
+    skos:prefLabel "soil fertility"@en .
+
+benchmarks:soil-functions a skos:Concept ;
+    skos:definition "Are one or a combination of soil processes that underpin the dynamics of the ecosystem structure and/or composition and can give rise to ecosystem services. Examples: Bio-remediation and filtration/sequestration/storage/accumulation by microorganisms, algae, plants and animals, control of erosion rates, buffering of mass movements, weathering processes, decomposition, maintenence and regulation by inorganic natural chemical and physical processes."@en ;
+    skos:exactMatch agrovoc:c_e5629cbd ;
+    skos:prefLabel "soil functions"@en ;
+    skos:related benchmarks:carbon-sequestration-and-climate-regulation,
+        benchmarks:disease-and-pest-regulation,
+        benchmarks:habitat-provision,
+        benchmarks:nutrient-cycling,
+        benchmarks:water-regulation-and-purification .
+
+benchmarks:soil-health-advocates a skos:Concept ;
+    skos:definition "Actors representing the demand for (healthy) soils that are not playing any other active role. Examples: Consumers, Environmental NGOs, local communities, industry and business"@en ;
+    skos:prefLabel "soil health advocates"@en .
+
+benchmarks:soil-health-assessment a skos:Concept ;
+    skos:definition "The evaluation of the health of the soil based on the measurement or estimation of soil descriptors."@en ;
+    skos:prefLabel "soil health assessment"@en .
+
+benchmarks:soil-health-index a skos:Concept ;
+    skos:definition "Integration of multiple soil indicators into one single score to estimate soil health."@en ;
+    skos:prefLabel "soil health index"@en .
+
+benchmarks:soil-health-indicators a skos:Concept ;
+    skos:definition "The European Comission identifies 8 indicators in the soil mission implementation plan:1.Presence of pollutants, excess nutrients and salts 2.Soil organic carbon (SOC) 3.Soil structure including soil bulk density and absence of soil sealing and erosion 4.Soil biodiversity 5.Soil nutrients and acidity (pH) 6.Vegetation cover 7.Landscape heterogeneity 8.Forest cover"@en ;
+    skos:prefLabel "soil health indicators"@en .
+
+benchmarks:soil-management a skos:Concept ;
+    skos:definition "The application of variuos practices to protect soil and enhance its performance. It includes soil conservation, soil amendment, and optimal soil health."@en ;
+    skos:exactMatch agrovoc:c_7176,
+        inrae:c_3542 ;
+    skos:prefLabel "soil management"@en .
+
+benchmarks:soil-management-practices a skos:Concept ;
+    skos:definition "Practices that impact the physical, chemical or biological qualities of a soil."@en ;
+    skos:prefLabel "soil management practices"@en .
+
+benchmarks:soil-nutrients a skos:Concept ;
+    skos:definition "Soil nutrients include the macronutrients nitrogen (N), phosphorus (P), potassium (K), calcium (Ca),magnesium (Mg) and sulphur (S). In addition, the soil supplies micronutrients (boron, copper, iron,manganese, chloride, molybdenum, zinc), whose concentrations in plants are typically one or two orders of magnitude less than those of macronutrients."@en ;
+    skos:prefLabel "soil nutrients"@en .
+
+benchmarks:soil-organic-carbon-soc a skos:Concept ;
+    skos:definition "Soil organic carbon (SOC) is the carbon located in soils, resulting from the degradation of organic matter (such as vegetation litter) by soil organisms."@en ;
+    skos:exactMatch agrovoc:c_389fe908,
+        inrae:c_13665 ;
+    skos:prefLabel "soil organic carbon"@en ;
+    skos:related benchmarks:soil-organic-carbon-stock .
+
+benchmarks:soil-processes a skos:Concept ;
+    skos:definition "Soil processes are the interactions among physical, chemical and biological soil components underlying soil functions and associated ecosystem services."@en ;
+    skos:exactMatch iso11074:3.464 ;
+    skos:prefLabel "soil processes"@en .
+
+benchmarks:soil-productivity a skos:Concept ;
+    skos:closeMatch agrovoc:c_7170 ;
+    skos:definition "The capacity of a soil to produce plant biomass, providing food, feed, fibre, wood, fuel and ornemental resources within natural or managed ecosystem boundaries."@en ;
+    skos:exactMatch iso11074:3.465 ;
+    skos:prefLabel "soil productivity"@en .
+
+benchmarks:soil-properties a skos:Concept ;
+    skos:definition "Chemical, physical, or biological characteristics of a soil which can be dynamic (e.g., soil organic matter, water and nutrient holding capacity) or inherent (e.g., soil texture, parent material)."@en ;
+    skos:exactMatch agrovoc:c_330883 ;
+    skos:prefLabel "soil properties"@en .
+
+benchmarks:soil-protection a skos:Concept ;
+    skos:definition "Measures for long-term maintenance or restoration of soils and soil functions realized at different levels (personal, local, national, continental)."@en ;
+    skos:exactMatch inrae:c_3587,
+        iso11074:3.463 ;
+    skos:prefLabel "soil protection"@en .
+
+benchmarks:soil-quality a skos:Concept ;
+    skos:definition "The degree to which the inherent properties of a soil facilitate user-defined soil functions. A soil with ‘high soil quality’ can deliver the desired functions, whereas a soil with ‘low soil quality’ can only deliver those functions at sub-optimal rates."@en ;
+    skos:exactMatch agrovoc:c_a9645d28,
+        inrae:c_661,
+        gemet:7884,
+        iso11074:3.466 ;
+    skos:prefLabel "soil quality"@en .
+
+benchmarks:soil-regulator a skos:Concept ;
+    skos:definition "Actors that regulate and decide on soil resources. Examples: National/regional legislators, International organisations (UN, FAO, etc.) that help upon request."@en ;
+    skos:prefLabel "soil regulator"@en .
+
+benchmarks:soil-resilience a skos:Concept ;
+    skos:definition "The capacity of a soil to recover its functional capacity after a disturbance."@en ;
+    skos:prefLabel "soil resilience"@en .
+
+benchmarks:soil-sealing a skos:Concept ;
+    skos:closeMatch inrae:c_11338 ;
+    skos:definition "The destruction or covering of soil by buildings, constructions and layers, or other bodies of artificial material which may be very slowly permeable to water (e.g. asphalt, concrete, etc.), causing a deterioration or loss of one or more soil functions."@en ;
+    skos:exactMatch agrovoc:c_f9554e7c ;
+    skos:prefLabel "soil sealing"@en .
+
+benchmarks:soil-security a skos:Concept ;
+    skos:definition "Soil security has been defined as the maintenance or improvement of the world’s soil resources so that they can provide sufficient food, fibre, and fresh water, contribute to energy sustainability and climate stability, maintain biodiversity, and deliver overall environmental protection and ecosystem services."@en ;
+    skos:exactMatch agrovoc:c_f42c0d0e ;
+    skos:prefLabel "soil security"@en .
+
+benchmarks:soil-stewards a skos:Concept ;
+    skos:definition "Actors that govern soil (management) and preserve soil health. Examples: Farmer associations, land managers, urban planners, scientists"@en ;
+    skos:prefLabel "soil stewards"@en .
+
+benchmarks:soil-structure a skos:Concept ;
+    skos:definition "The arrangement of soil particles into aggregates which form structural units. Size, shape, and distinctness are used to describe soil structure."@en ;
+    skos:exactMatch agrovoc:c_7196,
+        inrae:c_11453,
+        gemet:7895,
+        iso11074:3.475 ;
+    skos:prefLabel "soil structure"@en .
+
+benchmarks:soil-threat a skos:Concept ;
+    skos:definition "Soil threats are processes that could degrade (some of) the functions of soils and the services that soils provide. Examples of soil threats are: acidification, compaction, contamination (pollution), decline in soil organic matter, decline in soil biodiversity, desertification, erosion, flooding and water logging, landslides, salinization."@en ;
+    skos:prefLabel "soil threat"@en .
+
+benchmarks:space a skos:Concept ;
+    skos:definition "Space indicator measurements refer to digital technologies, such as the application of remote sensing or satellite technology, which allows for the assessment of many applicable indicators across a range of scales. These indicators are often considered proxies for field-based “sample” assessments where the budget or logistics do not allow for detailed local measurement, or the scale of assessment does not require it."@en ;
+    skos:exactMatch agrovoc:c_330769 ;
+    skos:prefLabel "space"@en .
+
+benchmarks:stakeholder a skos:Concept ;
+    skos:definition "Individuals, groups, or organizations with a vested interest in or affected by a project or initiative."@en ;
+    skos:prefLabel "stakeholder"@en .
+
+benchmarks:stats a skos:Concept ;
+    skos:definition "Stats based indicator measurements aim to utilise and harmonise data from existing datasets, as they exist in many countries, and at EU or global level providing a huge amount of information relating to soil health. The first domain of stats data includes spatial soil information derived from interpolation or modelling of sample data (e.g. LUCAS – topsoil layer maps or SoilGrids – globla soil property and class maps). The second domain of stats data involves soil management information. Often, such information is lacking for sample data, and it forms a bottleneck in upscaling soil indicators from sample locations to landscape scale and beyond. A final domain of stats data involves derived soil information. Often, modelling and scenario analyses underpin such data. The purpose of processing can vary from understanding the variability of spatial soil information (e.g., frequency distributions across soil types, and assessing relative performance) to understanding the impact of soil health and/or management on soil-based ecosystem services (e.g.,soil erosion risk mapping) and establishing the potential for, or thresholds of aspired soil health outcomes (e.g.,soil organic carbon sequestration potential)."@en ;
+    skos:prefLabel "stats"@en .
+
+benchmarks:supply-chain-actors-or-private-actors a skos:Concept ;
+    skos:definition "Private actors who are involved in activities related to the planning, use, and stewardship of land resources, including agriculture, forestry, and environmental conservation, for profit. Examples: Input suppliers, processors, distributors and retailers, technologists, financial and industry partners"@en ;
+    skos:prefLabel "supply chain actors (or private actors?)"@en .
+
+benchmarks:technosols-including-constructed-technosols a skos:Concept ;
+    skos:definition "Soils with strong human influence that either contain significant amount of artefacts or have a sealed layer."@en ;
+    skos:prefLabel "technosols (including constructed technosols)"@en .
+
+benchmarks:terrain-management a skos:Concept ;
+    skos:definition "Terrain management practices are principally used to reduce the slope of agricultural land in order to create plots that can be more easily cultivated, reducing water flow over the soil surface and thereby preventing erosion and enhancing infiltration."@en ;
+    skos:prefLabel "terrain management"@en .
+
+benchmarks:threshold a skos:Concept ;
+    skos:definition "Thresholds help to benchmark the state of a given soil compared to a potential for a given land use x pedo-climatic condition to assess the performance of the system being monitored."@en ;
+    skos:exactMatch iso11074:3.534 ;
+    skos:prefLabel "threshold"@en .
+
+benchmarks:urban-agriculture a skos:Concept ;
+    skos:definition "Integration of urban agriculture and food systems within cities, including the growing/producing of food, feed or fibre in and around cities."@en ;
+    skos:exactMatch agrovoc:c_35707 ;
+    skos:prefLabel "urban agriculture"@en .
+
+benchmarks:urban-forestry a skos:Concept ;
+    skos:definition "Urban forestry is an integrated concept, defined as the art, science, and technology of managing trees and forest resources in and around community ecosystems for the psychological, sociological, aesthetic economic, and environmental benefits trees provide society."@en ;
+    skos:exactMatch agrovoc:c_32620,
+        inrae:c_2266 ;
+    skos:prefLabel "urban forestry"@en .
+
+benchmarks:urban-green-infrastructures a skos:Concept ;
+    skos:definition "A strategically planned network of natural and semi-natural areas with other environmental features, designed and managed to deliver a wide range of ecosystem services, while also enhancing biodiversity. Green infrastructures in urban areas consist of vegetated green surfaces, such as parks, trees and small forests, grasslands, but also private gardens or cemeteries."@en ;
+    skos:prefLabel "urban green infrastructures"@en .
+
+benchmarks:urban-parks a skos:Concept ;
+    skos:definition "A place with vegetation, located within the city with a recreative use."@en ;
+    skos:prefLabel "urban parks"@en .
+
+benchmarks:urban-system a skos:Concept ;
+    skos:definition "Urban ecosystems are cities and the surrounding, socio-ecological systems where most people live (Maes, et. al. 2016). They are very peculiar ecosystem types: they are almost completely artificial but they include, in different proportions, all other ecosystem types (forests, lakes and rivers and agricultural areas can all be part of urban fringe) and they are strongly influenced by human activities."@en ;
+    skos:prefLabel "urban system"@en .
+
+benchmarks:urban-urbanized-areas a skos:Concept ;
+    skos:definition "Areas, including cities but also smaller urban settlements and suburban areas, developed for residential, industrial or recreational purposes."@en ;
+    skos:prefLabel "urban/ urbanized areas"@en .
+
+benchmarks:vegetation-cover a skos:Concept ;
+    skos:closeMatch inrae:c_3326 ;
+    skos:definition "The presence of, annual duration and diversity of the vegetation cover and its net primary productivity is essential for soil health, providing energy and nutrients for soil biodiversity, carbon inputs to soil organic matter, and also reducing erosion and surface runoff. A more diverse and long duration cover indicates conditions favourable to soil biodiversity and health and increasing vegetation cover is also valuable for urban settings."@en ;
+    skos:exactMatch gemet:8908 ;
+    skos:prefLabel "vegetation cover"@en .
+
+benchmarks:vegetation-management a skos:Concept ;
+    skos:definition "Practices aimed at managing (growing, cultivating, removing) above-ground biomass for a specific purpose."@en ;
+    skos:prefLabel "vegetation management"@en .
+
+benchmarks:water-management a skos:Concept ;
+    skos:definition "Water management in annual and perennial croplands involves the management of water inputs through irrigation and water removals through drainage."@en ;
+    skos:exactMatch agrovoc:c_8320,
+        inrae:c_5013,
+        gemet:9195 ;
+    skos:prefLabel "water management"@en .
+
+benchmarks:weighting-factor a skos:Concept ;
+    skos:definition "Reflects the importance of the criteria to the context of a given assessment. Can be determined by the user."@en ;
+    skos:prefLabel "weighting factor"@en .
+
+benchmarks:biodiversity a skos:Concept ;
+    skos:definition "The variability among living organisms from all sources including, inter alia, terrestrial, marine and other aquatic ecosystems and the ecological complexes of which they are part; this includes diversity within species, between species and of ecosystems."@en ;
+    skos:exactMatch agrovoc:c_33949,
+        inrae:c_5836,
+        gemet:827,
+        iso11074:3.45 ;
+    skos:prefLabel "biodiversity"@en .
+
+benchmarks:bulk-density a skos:Concept ;
+    skos:definition "The dry mass of soil per unit bulk volume of soil, expressed as g/cm3, usually given on an oven-dry (105° C) basis."@en ;
+    skos:exactMatch inrae:c_991,
+        iso11074:3.62 ;
+    skos:prefLabel "bulk density"@en ;
+    skos:related benchmarks:bulk-density .
+
+benchmarks:carbon-sequestration-and-climate-regulation a skos:Concept ;
+    skos:definition "Carbon and climate regulation includes soil processes that contribute to the retention of carbon in the soil and regulate the release of major greenhouse gases. The function can be defined by three main groups of processes which take place in the soil:(1) Decomposition(2) Biochemical transformation(3) Resource reallocation"@en ;
+    skos:prefLabel "carbon sequestration and climate regulation"@en .
+
+benchmarks:disease-and-pest-regulation a skos:Concept ;
+    skos:definition "The Disease and pest management function represents the capacity of soils to prevent the establishment and development of soil-borne plant pathogens and pests despite their presence in the field, the availability of a susceptible plant host, and a suitable environment."@en ;
+    skos:prefLabel "disease and pest regulation"@en .
+
+benchmarks:habitat-provision a skos:Concept ;
+    skos:definition "Habitat provision refers to the capacity of soil to create and sustain suitable habitats for a wide range of organisms, including microorganisms, plants, and animals. It encompasses the physical, chemical, and biological characteristics of the soil environment that enable the establishment and maintenance of diverse communities."@en ;
+    skos:prefLabel "habitat provision"@en .
+
+benchmarks:nutrient-cycling a skos:Concept ;
+    skos:closeMatch agrovoc:c_12869 ;
+    skos:definition "Nutrient Cycling is defined as the capacity of a soil to take up and recycle nutrients from different inputs (e.g., plant residues, manure) and to support the uptake of nutrients from soil minerals and organic matter, water and air by plants and the soil community."@en ;
+    skos:prefLabel "nutrient cycling"@en .
+
+benchmarks:soil-organic-carbon-stock a skos:Concept ;
+    skos:definition "The mass of carbon (C) stored in the soil organic matter (SOM) per area."@en ;
+    skos:prefLabel "soil organic carbon stock"@en .
+
+benchmarks:water-regulation-and-purification a skos:Concept ;
+    skos:definition "Water regulation: The capacity of the soil to receive, store and conduct water for subsequent use and to prevent droughts, flooding and erosion. Water purification: The capacity of the soil to extract, degrade, transform or contain harmful compounds."@en ;
+    skos:prefLabel "water regulation and purification"@en .
+
+benchmarks:cultural a skos:Concept ;
+    skos:definition "All the non-material, and normally non-rival and non-consumptive, outputs of ecosystems (biotic and abiotic) that affect physical and mental states of people. Examples: aesthetic experience, symbolic or religious/sacred meaning, existence value, entertainment, education/knowledge."@en ;
+    skos:prefLabel "cultural"@en .
+
+benchmarks:provisioning a skos:Concept ;
+    skos:definition "Covers all nutritional, non-nutritional material and energetic outputs from living systems as well as abiotic outputs (including water). Examples: Cultivated and wild plants, reared and wild animals, genetic material, groundwater, mineral substances"@en ;
+    skos:prefLabel "provisioning"@en .
+
+benchmarks:regulation-and-maintenance a skos:Concept ;
+    skos:definition "All the ways in which living organisms can mediate or moderate the ambient environment that affects human health, safety or comfort, together with abiotic equivalents. Examples: Bio-remediation and filtration/sequestration/storage/accumulation by microorganisms, algae, plants and animals, control of erosion rates, buffering of mass movements, weathering processes, decomposition, maintenence and regulation by inorganic natural chemical and physical processes"@en ;
+    skos:prefLabel "regulation and maintenance"@en .
+

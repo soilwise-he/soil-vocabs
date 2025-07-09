@@ -1,0 +1,155 @@
+concept,prefLabel
+http://w3id.org/glosis/model/layerhorizon/aluminiumProperty,aluminium
+http://w3id.org/glosis/model/layerhorizon/biologicalAbundanceProperty,biological abundance
+http://w3id.org/glosis/model/layerhorizon/biologicalFeaturesProperty,biological features
+http://w3id.org/glosis/model/layerhorizon/boundaryDistinctnessProperty,boundary distinctness
+http://w3id.org/glosis/model/layerhorizon/boundaryTopographyProperty,boundary topography
+http://w3id.org/glosis/model/layerhorizon/bulkDensityFineEarthProperty,bulk density fine earth
+http://w3id.org/glosis/model/layerhorizon/bulkDensityMineralProperty,bulk density mineral
+http://w3id.org/glosis/model/layerhorizon/bulkDensityPeatProperty,bulk density peat
+http://w3id.org/glosis/model/layerhorizon/bulkDensityWholeSoilProperty,bulk density whole soil
+http://w3id.org/glosis/model/layerhorizon/cadmiumProperty,cadmium
+http://w3id.org/glosis/model/layerhorizon/carbonInorganicProperty,carbon inorganic
+http://w3id.org/glosis/model/layerhorizon/carbonatesContentProperty,carbonates content
+http://w3id.org/glosis/model/layerhorizon/carbonatesFormsProperty,carbonates forms
+http://w3id.org/glosis/model/layerhorizon/cationExchangeCapacityEffectiveProperty,cation exchange capacity effective
+http://w3id.org/glosis/model/layerhorizon/cationExchangeCapacityProperty,cation exchange capacity
+http://w3id.org/glosis/model/layerhorizon/cationExchangeCapacitycSoilProperty,cation exchange capacityc soil
+http://w3id.org/glosis/model/layerhorizon/cationsSumProperty,cations sum
+http://w3id.org/glosis/model/layerhorizon/cementationContinuityProperty,cementation continuity
+http://w3id.org/glosis/model/layerhorizon/cementationDegreeProperty,cementation degree
+http://w3id.org/glosis/model/layerhorizon/cementationFabricProperty,cementation fabric
+http://w3id.org/glosis/model/layerhorizon/cementationNatureProperty,cementation nature
+http://w3id.org/glosis/model/layerhorizon/coatingAbundanceProperty,coating abundance
+http://w3id.org/glosis/model/layerhorizon/coatingContrastProperty,coating contrast
+http://w3id.org/glosis/model/layerhorizon/coatingFormProperty,coating form
+http://w3id.org/glosis/model/layerhorizon/coatingLocationProperty,coating location
+http://w3id.org/glosis/model/layerhorizon/coatingNatureProperty,coating nature
+http://w3id.org/glosis/model/layerhorizon/consistenceDryProperty,consistence dry
+http://w3id.org/glosis/model/layerhorizon/consistenceMoistProperty,consistence moist
+http://w3id.org/glosis/model/layerhorizon/dryConsistencyProperty,dry consistency
+http://w3id.org/glosis/model/layerhorizon/effectiveCecProperty,effective cec
+http://w3id.org/glosis/model/layerhorizon/electricalConductivityProperty,electrical conductivity
+http://w3id.org/glosis/model/layerhorizon/fragmentsClassProperty,fragments class
+http://w3id.org/glosis/model/layerhorizon/gypsumContentProperty,gypsum content
+http://w3id.org/glosis/model/layerhorizon/gypsumFormsProperty,gypsum forms
+http://w3id.org/glosis/model/layerhorizon/gypsumProperty,gypsum
+http://w3id.org/glosis/model/layerhorizon/gypsumWeightProperty,gypsum weight
+http://w3id.org/glosis/model/layerhorizon/hydraulicConductivityProperty,hydraulic conductivity
+http://w3id.org/glosis/model/layerhorizon/manganeseProperty,manganese
+http://w3id.org/glosis/model/layerhorizon/mineralConcAbundanceProperty,mineral conc abundance
+http://w3id.org/glosis/model/layerhorizon/mineralConcColourProperty,mineral conc colour
+http://w3id.org/glosis/model/layerhorizon/mineralConcHardnessProperty,mineral conc hardness
+http://w3id.org/glosis/model/layerhorizon/mineralConcKindProperty,mineral conc kind
+http://w3id.org/glosis/model/layerhorizon/mineralConcNatureProperty,mineral conc nature
+http://w3id.org/glosis/model/layerhorizon/mineralConcShapeProperty,mineral conc shape
+http://w3id.org/glosis/model/layerhorizon/mineralConcSizeProperty,mineral conc sizee
+http://w3id.org/glosis/model/layerhorizon/mineralConcVolumeProperty,mineral conc volume
+http://w3id.org/glosis/model/layerhorizon/mineralContentProperty,mineral content
+http://w3id.org/glosis/model/layerhorizon/mineralFragmentsProperty,mineral fragments
+http://w3id.org/glosis/model/layerhorizon/moistConsistencyProperty,moist consistency
+http://w3id.org/glosis/model/layerhorizon/moistureContentProperty,moisture content
+http://w3id.org/glosis/model/layerhorizon/molybdenumProperty,molybdenum
+http://w3id.org/glosis/model/layerhorizon/mottlesAbundanceProperty,mottles abundance
+http://w3id.org/glosis/model/layerhorizon/mottlesBoundaryClassificationProperty,mottles boundary classification
+http://w3id.org/glosis/model/layerhorizon/mottlesColourProperty,mottles colour
+http://w3id.org/glosis/model/layerhorizon/mottlesContrastProperty,mottles contrast
+http://w3id.org/glosis/model/layerhorizon/mottlesPresenceProperty,mottles presence
+http://w3id.org/glosis/model/layerhorizon/mottlesSizeProperty,mottles size
+http://w3id.org/glosis/model/layerhorizon/organicMatterProperty,organic matter
+http://w3id.org/glosis/model/layerhorizon/oxalateExtractableOpticalDensityProperty,oxalate extractable optical density
+http://w3id.org/glosis/model/layerhorizon/particleSizeFractionsSumProperty,particle size fractions sum
+http://w3id.org/glosis/model/layerhorizon/peatDecompostionProperty,peat decompostion
+http://w3id.org/glosis/model/layerhorizon/peatDrainageProperty,peat drainage
+http://w3id.org/glosis/model/layerhorizon/peatVolumeProperty,peat volume
+http://w3id.org/glosis/model/layerhorizon/plasticityProperty,plasticity
+http://w3id.org/glosis/model/layerhorizon/poresAbundanceProperty,pores abundance
+http://w3id.org/glosis/model/layerhorizon/poresSizeProperty,pores size
+http://w3id.org/glosis/model/layerhorizon/porosityClassProperty,porosity class
+http://w3id.org/glosis/model/layerhorizon/porosityProperty,porosity
+http://w3id.org/glosis/model/layerhorizon/rootsAbundanceProperty,roots abundance
+http://w3id.org/glosis/model/layerhorizon/rootsPresenceProperty,roots presence
+http://w3id.org/glosis/model/layerhorizon/saltContentProperty,salt content
+http://w3id.org/glosis/model/layerhorizon/saltProperty,salt
+http://w3id.org/glosis/model/layerhorizon/sandyTextureProperty,sandy texture
+http://w3id.org/glosis/model/layerhorizon/solubleAnionsTotalProperty,soluble anions total
+http://w3id.org/glosis/model/layerhorizon/solubleCationsTotalProperty,soluble cations total
+http://w3id.org/glosis/model/layerhorizon/solubleSaltsProperty,soluble salts
+http://w3id.org/glosis/model/layerhorizon/stickinessProperty,stickiness
+http://w3id.org/glosis/model/layerhorizon/structureGradeProperty,structure grade
+http://w3id.org/glosis/model/layerhorizon/structureSizeProperty,structure size
+http://w3id.org/glosis/model/layerhorizon/textureFieldClassProperty,texture field class
+http://w3id.org/glosis/model/layerhorizon/textureLabClassProperty,texture lab class
+http://w3id.org/glosis/model/layerhorizon/totalCarbonateEquivalentProperty,total carbonate equivalent
+http://w3id.org/glosis/model/layerhorizon/voidsClassificationProperty,voids classification
+http://w3id.org/glosis/model/layerhorizon/voidsDiameterProperty,voids diameter
+http://w3id.org/glosis/model/layerhorizon/wetPlasticityProperty,wet plasticity
+http://w3id.org/glosis/model/layerhorizon/zincProperty,zinc
+http://w3id.org/glosis/model/surface/saltCoverProperty,salt cover
+http://w3id.org/glosis/model/surface/saltPresenceProperty,salt presence
+http://w3id.org/glosis/model/surface/saltThicknessProperty,salt thickness
+http://w3id.org/glosis/model/surface/sealingConsistenceProperty,sealing consistence
+http://w3id.org/glosis/model/surface/sealingThicknessProperty,sealing thickness
+http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty,bare cover abundance
+http://w3id.org/glosis/model/siteplot/cropClassProperty,crop class
+http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty,erosion activity period
+http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty,erosion area affected
+http://w3id.org/glosis/model/siteplot/erosionCategoryProperty,erosion category
+http://w3id.org/glosis/model/siteplot/erosionDegreeProperty,erosion degree
+http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty,erosion total area affected
+http://w3id.org/glosis/model/siteplot/floodDurationProperty,flood duration
+http://w3id.org/glosis/model/siteplot/floodFrequencyProperty,flood frequency
+http://w3id.org/glosis/model/siteplot/geologyProperty,geology
+http://w3id.org/glosis/model/siteplot/grassAbundanceProperty,grass abundance
+http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty,groundwater depth
+http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty,human influence class
+http://w3id.org/glosis/model/siteplot/koeppenClassProperty,koeppen class
+http://w3id.org/glosis/model/siteplot/landUseClassProperty,land use class
+http://w3id.org/glosis/model/siteplot/landformComplexProperty,landform complex
+http://w3id.org/glosis/model/siteplot/lithologyProperty,lithology
+http://w3id.org/glosis/model/siteplot/majorLandFormProperty,major land form
+http://w3id.org/glosis/model/siteplot/parentDepositionProperty,parent deposition
+http://w3id.org/glosis/model/siteplot/parentLithologyProperty,parent lithology
+http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty,parent texture unconsolidated
+http://w3id.org/glosis/model/siteplot/pavedAbundanceProperty,paved abundance
+http://w3id.org/glosis/model/siteplot/physiographyProperty,physiography
+http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty,rock outcrops cover
+http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty,rock outcrops distance
+http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty,shrubs abundance
+http://w3id.org/glosis/model/siteplot/slopeFormProperty,slope form
+http://w3id.org/glosis/model/siteplot/slopeGradientClassProperty,slope gradient class
+http://w3id.org/glosis/model/siteplot/slopeGradientProperty,slope gradient
+http://w3id.org/glosis/model/siteplot/slopeOrientationClassProperty,slope orientation class
+http://w3id.org/glosis/model/siteplot/slopeOrientationProperty,slope orientation
+http://w3id.org/glosis/model/siteplot/slopePathwaysProperty,slope pathways
+http://w3id.org/glosis/model/siteplot/soilCarbonDensityProperty,soil carbon density
+http://w3id.org/glosis/model/siteplot/surfaceAgeProperty,surface age
+http://w3id.org/glosis/model/siteplot/treeDensityProperty,tree density
+http://w3id.org/glosis/model/siteplot/vegetationClassProperty,vegetation class
+http://w3id.org/glosis/model/siteplot/weatherConditionsCurrentProperty,weather conditions current
+http://w3id.org/glosis/model/siteplot/weatherConditionsPastProperty,weather conditions past
+http://w3id.org/glosis/model/siteplot/weatheringRockProperty,weathering rock
+http://w3id.org/glosis/model/profile/profileDescriptionStatusProperty,profile description status
+http://w3id.org/glosis/model/profile/soilTypeProperty,soil type
+http://w3id.org/glosis/model/common/bleachedSandProperty,bleached sand
+http://w3id.org/glosis/model/common/colourDryProperty,colour dry
+http://w3id.org/glosis/model/common/colourMoistProperty,colour moist
+http://w3id.org/glosis/model/common/cracksDepthProperty,cracks depth
+http://w3id.org/glosis/model/common/cracksDistanceProperty,cracks distance
+http://w3id.org/glosis/model/common/cracksWidthProperty,cracks width
+http://w3id.org/glosis/model/common/fragmentCoverProperty,fragment cover
+http://w3id.org/glosis/model/common/fragmentsSizeProperty,fragments size
+http://w3id.org/glosis/model/common/infiltrationRateClassProperty,infiltration rate class
+http://w3id.org/glosis/model/common/infiltrationRateNumericProperty,infiltration rate numeric
+http://w3id.org/glosis/model/common/organicMatterClassProperty,organic matter class
+http://w3id.org/glosis/model/common/rockAbundanceProperty,rock abundance
+http://w3id.org/glosis/model/common/rockShapeProperty,rock shape
+http://w3id.org/glosis/model/common/rockSizeProperty,rock size
+http://w3id.org/glosis/model/common/soilDepthBedrockProperty,soil depth bedrock
+http://w3id.org/glosis/model/common/soilDepthProperty,soil depth
+http://w3id.org/glosis/model/common/soilDepthRootableClassProperty,soil depth rootable class
+http://w3id.org/glosis/model/common/soilDepthRootableProperty,soil depth rootable
+http://w3id.org/glosis/model/common/soilDepthSampledProperty,soil depth sampled
+http://w3id.org/glosis/model/common/textureProperty,texture
+http://w3id.org/glosis/model/common/weatheringFragmentsProperty,weathering fragments
+http://w3id.org/glosis/model/siteplot/forestAbundanceProperty,forest abundance
