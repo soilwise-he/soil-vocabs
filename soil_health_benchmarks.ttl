@@ -3,18 +3,21 @@
 @prefix gemet: <http://www.eionet.europa.eu/gemet/concept/> .
 @prefix inrae: <http://opendata.inrae.fr/thesaurusINRAE/> .
 @prefix iso11074: <https://data.geoscience.earth/ncl/ISO11074v2025/> .
+@prefix she: <https://soilwise-he.github.io/soil-health#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 benchmarks:4036 a skos:Concept ;
     skos:closeMatch agrovoc:c_a9645d28 ;
     skos:definition "Soil health is the ability of a soil, at a specified point in time, to function as a vital living system, within natural or managed ecosystem boundaries and land-use boundaries, to sustain plant and animal productivity and health, maintain or enhance water and air quality and to further provide ecosystem services in the long-term without (increased) trade-offs between ecosystem services."@en,
         "The physical, chemical and biological condition of the soil determining its capacity to function as a vital living system and to provide ecosystem services."@en ;
-    skos:exactMatch inrae:c_2d69fde2 ;
+    skos:exactMatch inrae:c_2d69fde2,
+        she:SoilHealth ;
     skos:prefLabel "soil health"@en .
 
 benchmarks:4068 a skos:Concept ;
     skos:definition "Soil management practices that maintain or enhance the ecosystem services provided by the soil without impairing the functions enabling those services, or being detrimental to other properties of the environment."@en,
         "Sustainable soil management comprises practices that maintain or enhance the provisioning, regulation and maintenance as well as cultural services provided by soils without significantly impairing either the soil functions that enable those services or biodiversity."@en ;
+    skos:exactMatch she:SustainableSoilManagement ;
     skos:prefLabel "sustainable soil management"@en .
 
 benchmarks:4070 a skos:Concept ;
@@ -29,7 +32,8 @@ benchmarks:agriculture a skos:Concept ;
     skos:definition "The production of plants and animals useful to man, involving soil cultivation and the breeding and management of crops and livestock."@en ;
     skos:exactMatch agrovoc:c_203,
         inrae:c_3959,
-        gemet:232 ;
+        gemet:232,
+        she:Agriculture ;
     skos:prefLabel "agriculture"@en .
 
 benchmarks:agroforestry a skos:Concept ;
@@ -51,7 +55,8 @@ benchmarks:animal-management a skos:Concept ;
 benchmarks:arable-land a skos:Concept ;
     skos:definition "Arable land is land worked (ploughed or tilled) regularly, generally under a system of crop rotation."@en ;
     skos:exactMatch agrovoc:c_18948,
-        inrae:c_3071 ;
+        inrae:c_3071,
+        she:ArableLand ;
     skos:prefLabel "arable land"@en .
 
 benchmarks:artefacts a skos:Concept ;
@@ -130,7 +135,8 @@ benchmarks:ecosystem-services a skos:Concept ;
     skos:definition "Indirect contributions of ecosystems to the economic, social,culturaland other benefits that people derive from those ecosystems."@en,
         "The contributions of ecosystems (i.e. living systems) to human well-being."@en ;
     skos:exactMatch agrovoc:c_1348040570280,
-        gemet:15138 ;
+        gemet:15138,
+        she:EcosystemServices ;
     skos:prefLabel "ecosystem services"@en ;
     skos:related benchmarks:cultural,
         benchmarks:provisioning,
@@ -176,13 +182,15 @@ benchmarks:forest-public-ownership a skos:Concept ;
 
 benchmarks:gardens a skos:Concept ;
     skos:definition "A piece of land next to a house where flowers and other plants are grown and which often has an area of grass."@en ;
-    skos:exactMatch agrovoc:c_3196 ;
+    skos:exactMatch agrovoc:c_3196,
+        she:Gardens ;
     skos:prefLabel "gardens"@en .
 
 benchmarks:grassland a skos:Concept ;
     skos:definition "Land predominantly covered by communities of grassland, grass-like plants and forbs. This class includes permanent grassland and permanent pasture that is not part of a crop rotation (normally for 5 years or more), which can be used to grow grasses and other herbaceous forage naturally (selfseeded) or through cultivation (sown). It may include sparsely occurring trees within a limit of a canopy below 10% and shrubs within a total limit of cover (including trees) of 20%. These can themselves be also grazed, provided that grasses and other herbaceous forage remain predominant as well."@en ;
     skos:exactMatch inrae:c_6e7e381e,
-        gemet:3733 ;
+        gemet:3733,
+        she:Grassland ;
     skos:prefLabel "grassland"@en .
 
 benchmarks:grazing-management a skos:Concept ;
@@ -218,7 +226,8 @@ benchmarks:land a skos:Concept ;
     skos:definition "The surface of the Earth that is not covered by water."@en ;
     skos:exactMatch agrovoc:c_4172,
         inrae:c_22714,
-        gemet:4599 ;
+        gemet:4599,
+        she:Land ;
     skos:prefLabel "land"@en .
 
 benchmarks:land-cover a skos:Concept ;
@@ -234,6 +243,7 @@ benchmarks:land-stewards a skos:Concept ;
     skos:prefLabel "land stewards"@en .
 
 benchmarks:land-use a skos:Concept ;
+    skos:closeMatch she:LandUses ;
     skos:definition "The term land use deals with the spatial aspects of all human activities on the land and with the way in which the land surface is adapted, or could be adapted, to serve human needs. (GEMET, AGROVOC) LAND USE (LU) = socio-economic function of the observed earth’s surface (LUCAS) Some examples for land use classes in the LUCAS nomenclature (which are of relevance for BENCHMARKS) are: U110 Agriculture U120 Forestry U150 Hunting U210 Energy production U360 Recreational, leisure and sport U370 Residential U400 Unused"@en ;
     skos:exactMatch agrovoc:c_4182,
         inrae:c_22741,
@@ -341,7 +351,8 @@ benchmarks:pollutant a skos:Concept ;
     skos:definition "Substance or agent present in the soil (or groundwater) which, due to its properties, amount or concentration, causes adverse impacts on soil functions and negatively affects soil biota and other living beings."@en ;
     skos:exactMatch inrae:c_4274,
         gemet:6395,
-        iso11074:3.328 ;
+        iso11074:3.328,
+        she:Pollutant ;
     skos:prefLabel "pollutant"@en .
 
 benchmarks:pollutant-management a skos:Concept ;
@@ -407,6 +418,7 @@ benchmarks:sample a skos:Concept ;
     skos:prefLabel "sample"@en .
 
 benchmarks:soil a skos:Concept ;
+    skos:closeMatch she:Soils ;
     skos:definition "Soil, the biologically active, porous medium that has developed in the uppermost layer of Earth’s crust and is one of the principal substrata of life on Earth. Soil is a complex, dynamic, and living system that is formed over time through the interaction of physical, chemical, and biological processes. It is composed of mineral particles of varying sizes, organic matter, water, and air, all of which interact to form a matrix that supports plant growth and provides a habitat for soil organisms."@en,
         "The top layer of the Earth’s crust situated between the bedrock and the land surface, which is composed of mineral particles, organic matter, water, air and living organisms."@en ;
     skos:exactMatch agrovoc:c_7156,
@@ -421,13 +433,15 @@ benchmarks:soil a skos:Concept ;
 benchmarks:soil-biodiversity a skos:Concept ;
     skos:definition "The variability of living organisms in soil and the ecological complexes of which they are part; this includes taxonomic and functional diversity within species, between species and of ecosystems."@en ;
     skos:exactMatch inrae:c_642,
-        gemet:15296 ;
+        gemet:15296,
+        she:SoilBiodiversity ;
     skos:prefLabel "soil biodiversity"@en ;
     skos:related benchmarks:biodiversity .
 
 benchmarks:soil-capability a skos:Concept ;
     skos:definition "The intrinsic capacity of a soil to deliver/fulfill soil functions."@en ;
-    skos:exactMatch gemet:7848 ;
+    skos:exactMatch gemet:7848,
+        she:SoilCapability ;
     skos:prefLabel "soil capability"@en .
 
 benchmarks:soil-condition a skos:Concept ;
@@ -438,14 +452,16 @@ benchmarks:soil-condition a skos:Concept ;
 benchmarks:soil-contamination a skos:Concept ;
     skos:definition "The presence of a chemical or substance in the soil in a concentration that may be harmful to human health or the environment."@en ;
     skos:exactMatch inrae:c_c62d3822,
-        gemet:15298 ;
+        gemet:15298,
+        she:SoilContamination ;
     skos:prefLabel "soil contamination"@en .
 
 benchmarks:soil-degradation a skos:Concept ;
     skos:definition "Negative process often accelerated by human activities (improper soil use and cultivation practices, soil sealing) that leads to deterioration of soil properties and functions or destruction of soil as a whole, e.g. compaction, erosion, salinisation."@en ;
     skos:exactMatch agrovoc:c_7168,
         inrae:c_960,
-        gemet:7857 ;
+        gemet:7857,
+        she:SoilDegradation ;
     skos:prefLabel "soil degradation"@en .
 
 benchmarks:soil-descriptor a skos:Concept ;
@@ -464,7 +480,8 @@ benchmarks:soil-erosion a skos:Concept ;
     skos:closeMatch agrovoc:c_2651 ;
     skos:definition "The wearing away of the land surface by water, wind, ice, gravity or other natural or anthropogenic agents that abrade, detach and remove soil particles or rock material from one point on the earth’s surface, for deposition elsewhere."@en ;
     skos:exactMatch inrae:c_1543,
-        gemet:7858 ;
+        gemet:7858,
+        she:SoilErosion ;
     skos:prefLabel "soil erosion"@en .
 
 benchmarks:soil-fertility a skos:Concept ;
@@ -472,12 +489,14 @@ benchmarks:soil-fertility a skos:Concept ;
     skos:exactMatch agrovoc:c_7170,
         inrae:c_1975,
         gemet:7860,
-        iso11074:3.451 ;
+        iso11074:3.451,
+        she:SoilFertility ;
     skos:prefLabel "soil fertility"@en .
 
 benchmarks:soil-functions a skos:Concept ;
     skos:definition "Are one or a combination of soil processes that underpin the dynamics of the ecosystem structure and/or composition and can give rise to ecosystem services. Examples: Bio-remediation and filtration/sequestration/storage/accumulation by microorganisms, algae, plants and animals, control of erosion rates, buffering of mass movements, weathering processes, decomposition, maintenence and regulation by inorganic natural chemical and physical processes."@en ;
-    skos:exactMatch agrovoc:c_e5629cbd ;
+    skos:exactMatch agrovoc:c_e5629cbd,
+        she:SoilFunctions ;
     skos:prefLabel "soil functions"@en ;
     skos:related benchmarks:carbon-sequestration-and-climate-regulation,
         benchmarks:disease-and-pest-regulation,
@@ -504,7 +523,8 @@ benchmarks:soil-health-indicators a skos:Concept ;
 benchmarks:soil-management a skos:Concept ;
     skos:definition "The application of variuos practices to protect soil and enhance its performance. It includes soil conservation, soil amendment, and optimal soil health."@en ;
     skos:exactMatch agrovoc:c_7176,
-        inrae:c_3542 ;
+        inrae:c_3542,
+        she:SoilManagement ;
     skos:prefLabel "soil management"@en .
 
 benchmarks:soil-management-practices a skos:Concept ;
@@ -513,18 +533,21 @@ benchmarks:soil-management-practices a skos:Concept ;
 
 benchmarks:soil-nutrients a skos:Concept ;
     skos:definition "Soil nutrients include the macronutrients nitrogen (N), phosphorus (P), potassium (K), calcium (Ca),magnesium (Mg) and sulphur (S). In addition, the soil supplies micronutrients (boron, copper, iron,manganese, chloride, molybdenum, zinc), whose concentrations in plants are typically one or two orders of magnitude less than those of macronutrients."@en ;
+    skos:exactMatch she:SoilNutrients ;
     skos:prefLabel "soil nutrients"@en .
 
 benchmarks:soil-organic-carbon-soc a skos:Concept ;
     skos:definition "Soil organic carbon (SOC) is the carbon located in soils, resulting from the degradation of organic matter (such as vegetation litter) by soil organisms."@en ;
     skos:exactMatch agrovoc:c_389fe908,
-        inrae:c_13665 ;
+        inrae:c_13665,
+        she:SoilOrganicCarbon ;
     skos:prefLabel "soil organic carbon"@en ;
     skos:related benchmarks:soil-organic-carbon-stock .
 
 benchmarks:soil-processes a skos:Concept ;
     skos:definition "Soil processes are the interactions among physical, chemical and biological soil components underlying soil functions and associated ecosystem services."@en ;
-    skos:exactMatch iso11074:3.464 ;
+    skos:exactMatch iso11074:3.464,
+        she:SoilProcesses ;
     skos:prefLabel "soil processes"@en .
 
 benchmarks:soil-productivity a skos:Concept ;
@@ -535,13 +558,15 @@ benchmarks:soil-productivity a skos:Concept ;
 
 benchmarks:soil-properties a skos:Concept ;
     skos:definition "Chemical, physical, or biological characteristics of a soil which can be dynamic (e.g., soil organic matter, water and nutrient holding capacity) or inherent (e.g., soil texture, parent material)."@en ;
-    skos:exactMatch agrovoc:c_330883 ;
+    skos:exactMatch agrovoc:c_330883,
+        she:SoilProperties ;
     skos:prefLabel "soil properties"@en .
 
 benchmarks:soil-protection a skos:Concept ;
     skos:definition "Measures for long-term maintenance or restoration of soils and soil functions realized at different levels (personal, local, national, continental)."@en ;
     skos:exactMatch inrae:c_3587,
-        iso11074:3.463 ;
+        iso11074:3.463,
+        she:SoilProtection ;
     skos:prefLabel "soil protection"@en .
 
 benchmarks:soil-quality a skos:Concept ;
@@ -549,7 +574,8 @@ benchmarks:soil-quality a skos:Concept ;
     skos:exactMatch agrovoc:c_a9645d28,
         inrae:c_661,
         gemet:7884,
-        iso11074:3.466 ;
+        iso11074:3.466,
+        she:SoilQuality ;
     skos:prefLabel "soil quality"@en .
 
 benchmarks:soil-regulator a skos:Concept ;
@@ -563,7 +589,8 @@ benchmarks:soil-resilience a skos:Concept ;
 benchmarks:soil-sealing a skos:Concept ;
     skos:closeMatch inrae:c_11338 ;
     skos:definition "The destruction or covering of soil by buildings, constructions and layers, or other bodies of artificial material which may be very slowly permeable to water (e.g. asphalt, concrete, etc.), causing a deterioration or loss of one or more soil functions."@en ;
-    skos:exactMatch agrovoc:c_f9554e7c ;
+    skos:exactMatch agrovoc:c_f9554e7c,
+        she:SoilSealing ;
     skos:prefLabel "soil sealing"@en .
 
 benchmarks:soil-security a skos:Concept ;
@@ -580,7 +607,8 @@ benchmarks:soil-structure a skos:Concept ;
     skos:exactMatch agrovoc:c_7196,
         inrae:c_11453,
         gemet:7895,
-        iso11074:3.475 ;
+        iso11074:3.475,
+        she:SoilStructure ;
     skos:prefLabel "soil structure"@en .
 
 benchmarks:soil-threat a skos:Concept ;
@@ -589,7 +617,8 @@ benchmarks:soil-threat a skos:Concept ;
 
 benchmarks:space a skos:Concept ;
     skos:definition "Space indicator measurements refer to digital technologies, such as the application of remote sensing or satellite technology, which allows for the assessment of many applicable indicators across a range of scales. These indicators are often considered proxies for field-based “sample” assessments where the budget or logistics do not allow for detailed local measurement, or the scale of assessment does not require it."@en ;
-    skos:exactMatch agrovoc:c_330769 ;
+    skos:exactMatch agrovoc:c_330769,
+        she:Space ;
     skos:prefLabel "space"@en .
 
 benchmarks:stakeholder a skos:Concept ;
@@ -647,7 +676,8 @@ benchmarks:urban-urbanized-areas a skos:Concept ;
 benchmarks:vegetation-cover a skos:Concept ;
     skos:closeMatch inrae:c_3326 ;
     skos:definition "The presence of, annual duration and diversity of the vegetation cover and its net primary productivity is essential for soil health, providing energy and nutrients for soil biodiversity, carbon inputs to soil organic matter, and also reducing erosion and surface runoff. A more diverse and long duration cover indicates conditions favourable to soil biodiversity and health and increasing vegetation cover is also valuable for urban settings."@en ;
-    skos:exactMatch gemet:8908 ;
+    skos:exactMatch gemet:8908,
+        she:VegetationCover ;
     skos:prefLabel "vegetation cover"@en .
 
 benchmarks:vegetation-management a skos:Concept ;
@@ -670,13 +700,15 @@ benchmarks:biodiversity a skos:Concept ;
     skos:exactMatch agrovoc:c_33949,
         inrae:c_5836,
         gemet:827,
-        iso11074:3.45 ;
+        iso11074:3.45,
+        she:Biodiversity ;
     skos:prefLabel "biodiversity"@en .
 
 benchmarks:bulk-density a skos:Concept ;
     skos:definition "The dry mass of soil per unit bulk volume of soil, expressed as g/cm3, usually given on an oven-dry (105° C) basis."@en ;
     skos:exactMatch inrae:c_991,
-        iso11074:3.62 ;
+        iso11074:3.62,
+        she:BulkDensity ;
     skos:prefLabel "bulk density"@en ;
     skos:related benchmarks:bulk-density .
 
@@ -690,11 +722,13 @@ benchmarks:disease-and-pest-regulation a skos:Concept ;
 
 benchmarks:habitat-provision a skos:Concept ;
     skos:definition "Habitat provision refers to the capacity of soil to create and sustain suitable habitats for a wide range of organisms, including microorganisms, plants, and animals. It encompasses the physical, chemical, and biological characteristics of the soil environment that enable the establishment and maintenance of diverse communities."@en ;
+    skos:exactMatch she:HabitatProvision ;
     skos:prefLabel "habitat provision"@en .
 
 benchmarks:nutrient-cycling a skos:Concept ;
     skos:closeMatch agrovoc:c_12869 ;
     skos:definition "Nutrient Cycling is defined as the capacity of a soil to take up and recycle nutrients from different inputs (e.g., plant residues, manure) and to support the uptake of nutrients from soil minerals and organic matter, water and air by plants and the soil community."@en ;
+    skos:exactMatch she:NutrientCycling ;
     skos:prefLabel "nutrient cycling"@en .
 
 benchmarks:soil-organic-carbon-stock a skos:Concept ;
