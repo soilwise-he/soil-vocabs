@@ -101,12 +101,14 @@ benchmarks:citizens a skos:Concept ;
     skos:prefLabel "citizens"@en .
 
 benchmarks:contaminant a skos:Concept ;
+    skos:closeMatch she:Contaminants ;
     skos:definition "A substance liable to cause soil contamination."@en ;
     skos:exactMatch inrae:c_13420,
         iso11074:3.91 ;
     skos:prefLabel "contaminant"@en .
 
 benchmarks:contaminated-site a skos:Concept ;
+    skos:closeMatch she:ContaminatedSites ;
     skos:definition "A delineated area of one or several plots with confirmed presence of soil contamination caused by point-source anthropogenic activities."@en ;
     skos:exactMatch iso11074:3.92 ;
     skos:prefLabel "contaminated site"@en .
@@ -153,6 +155,7 @@ benchmarks:fallow a skos:Concept ;
     skos:prefLabel "fallow"@en .
 
 benchmarks:forest a skos:Concept ;
+    skos:closeMatch she:Forests ;
     skos:definition "Land spanning more than 0.5 hectares with trees higher than 5 meters and a canopy cover of more than 10 percent, or trees able to reach these thresholds in situ. It does not include land that is predominantly under agricultural or urban land use."@en ;
     skos:exactMatch inrae:c_422,
         gemet:3406 ;
@@ -373,6 +376,7 @@ benchmarks:protection-forest a skos:Concept ;
     skos:prefLabel "protection forest"@en .
 
 benchmarks:prova-1 a skos:Concept ;
+    skos:closeMatch she:Ecosystems ;
     skos:definition "A dynamic complex of plant, animal, and micro-organism communities and their non-living environment interacting as a functional unit."@en ;
     skos:exactMatch inrae:c_8373,
         gemet:2519 ;
@@ -445,6 +449,7 @@ benchmarks:soil-capability a skos:Concept ;
     skos:prefLabel "soil capability"@en .
 
 benchmarks:soil-condition a skos:Concept ;
+    skos:closeMatch she:SoilConditions ;
     skos:definition "Soil condition refers to the state of the soil, which includes its physical, chemical, and biological characteristics and the processes and interactions that connect them; and which in turn determine the capacity of the soil to support ecosystem services."@en ;
     skos:exactMatch gemet:7851 ;
     skos:prefLabel "soil condition"@en .
@@ -612,6 +617,7 @@ benchmarks:soil-structure a skos:Concept ;
     skos:prefLabel "soil structure"@en .
 
 benchmarks:soil-threat a skos:Concept ;
+    skos:closeMatch she:SoilThreats ;
     skos:definition "Soil threats are processes that could degrade (some of) the functions of soils and the services that soils provide. Examples of soil threats are: acidification, compaction, contamination (pollution), decline in soil organic matter, decline in soil biodiversity, desertification, erosion, flooding and water logging, landslides, salinization."@en ;
     skos:prefLabel "soil threat"@en .
 
@@ -642,6 +648,7 @@ benchmarks:terrain-management a skos:Concept ;
     skos:prefLabel "terrain management"@en .
 
 benchmarks:threshold a skos:Concept ;
+    skos:closeMatch she:Thresholds ;
     skos:definition "Thresholds help to benchmark the state of a given soil compared to a potential for a given land use x pedo-climatic condition to assess the performance of the system being monitored."@en ;
     skos:exactMatch iso11074:3.534 ;
     skos:prefLabel "threshold"@en .
@@ -732,6 +739,7 @@ benchmarks:nutrient-cycling a skos:Concept ;
     skos:prefLabel "nutrient cycling"@en .
 
 benchmarks:soil-organic-carbon-stock a skos:Concept ;
+    skos:closeMatch she:SOCStocks ;
     skos:definition "The mass of carbon (C) stored in the soil organic matter (SOM) per area."@en ;
     skos:prefLabel "soil organic carbon stock"@en .
 
