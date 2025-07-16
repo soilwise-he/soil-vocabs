@@ -136,10 +136,10 @@ benchmarks:ecosystem-services a skos:Concept ;
 
 ## Script Descriptions
 
-* ​**`glossary_to_skos.py`**​: The main conversion script. Reads a CSV with `term`, `definition`, `url`, and `related` columns and generates a SKOS vocabulary in Turtle format.
-* ​**`interlink_skos.py`**​: The linking script. Takes a Turtle file as input and adds `skos:exactMatch` and `skos:closeMatch` triples by comparing labels against one or more external thesaurus CSV files.
-* ​**`uk2us.py`**​: A helper module that contains a mapping of UK to US English spellings, used by the interlinking script to normalize terms before matching.
-* ​**`requirements.txt`**​: A list of the Python packages (`pandas`, `rdflib`) required to run the scripts.
+* `​glossary_to_skos.py`​: The main conversion script. Reads a CSV with `term`, `definition`, `url`, and `related` columns and generates a SKOS vocabulary in Turtle format.
+* ​`interlink_skos.py`​: The linking script. Takes a Turtle file as input and adds `skos:exactMatch` and `skos:closeMatch` triples by comparing labels against one or more external thesaurus CSV files.
+* ​`uk2us.py`​: A helper module that contains a mapping of UK to US English spellings, used by the interlinking script to normalize terms before matching.
+* ​`requirements.txt`​: A list of the Python packages (`pandas`, `rdflib`) required to run the scripts.
 
 ## Future Work and Contributions
 
