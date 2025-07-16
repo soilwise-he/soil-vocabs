@@ -1,4 +1,4 @@
-# Glossary to SKOS Conversion and Interlinking Utilities
+# Glossary to SKOS Conversion and Interlinking Utilities: an example of Soil Health Benchmarks project
 
 This repository provides a set of Python scripts designed to transform a simple project glossary (in CSV format) into a formal, machine-readable SKOS vocabulary. It also includes tools to interlink this new vocabulary with established external thesauri, enhancing its utility and adherence to FAIR data principles.
 
@@ -97,18 +97,19 @@ python interlink_skos.py <input_ttl_file> <output_linked_ttl_file> <thesaurus_na
 **Example:**
 
 ```
-python interlink_skos.py soil_glossary.ttl soil_glossary_linked.ttl agrovoc gemet inrae
+python interlink_skos.py soil_glossary.ttl soil_health_benchmarks.ttl agrovoc gemet inrae
 ```
 
-This will read `soil_glossary.ttl` and the corresponding CSV files from `../ontovocabs/`, creating a final, enriched file named `soil_glossary_linked.ttl`.
+This will read `soil_glossary.ttl` and the corresponding CSV files from `../ontovocabs/`, creating a final, enriched file named `soil_health_benchmarks.ttl`.
 
 ## Example Output
 
-After running both scripts, the final `.ttl` file will contain entries that look like this. Note the `skos:definition`, internal `skos:related` links, and the external `skos:exactMatch` link to the AGROVOC thesaurus.
+After running both scripts, the final `.ttl` file will contain entries that look like this. Note the `skos:definition`, internal `skos:related` links, and the external `skos:exactMatch` and `skos:closeMatch` link to several thesauri.
 
 ```turtle
 @prefix agrovoc: <http://aims.fao.org/aos/agrovoc/> .
 @prefix benchmarks: <https://soilhealthbenchmarks.eu/glossary/> .
+@prefix gemet: <http://www.eionet.europa.eu/gemet/concept/> .
 @prefix inrae: <http://opendata.inrae.fr/thesaurusINRAE/> .
 @prefix she: <https://soilwise-he.github.io/soil-health#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -120,6 +121,17 @@ benchmarks:4036 a skos:Concept ;
     skos:exactMatch inrae:c_2d69fde2,
         she:SoilHealth ;
     skos:prefLabel "soil health"@en .
+
+benchmarks:ecosystem-services a skos:Concept ;
+    skos:definition "Indirect contributions of ecosystems to the economic, social,culturaland other benefits that people derive from those ecosystems."@en,
+        "The contributions of ecosystems (i.e. living systems) to human well-being."@en ;
+    skos:exactMatch agrovoc:c_1348040570280,
+        gemet:15138,
+        she:EcosystemServices ;
+    skos:prefLabel "ecosystem services"@en ;
+    skos:related benchmarks:cultural,
+        benchmarks:provisioning,
+        benchmarks:regulation-and-maintenance .
 ```
 
 ## Script Descriptions
@@ -133,5 +145,5 @@ benchmarks:4036 a skos:Concept ;
 
 This toolset provides a solid foundation, but there is always room for improvement.
 
-* ​**Term Provenance**​: Currently, the scripts do not capture the source or reference for each term and definition. Future versions could include a `dct:source` property by adding a 'source' column to the input CSV.
+* ​**Term Provenance**​: Currently, the scripts do not capture the source or reference for each term and definition. Future versions could include a `dcterms:source` property by adding a 'source' column to the input CSV.
 * ​**Your Ideas**​: If you have questions, find a bug, or have an idea for an improvement, please **create an issue** in this GitHub repository. We welcome all contributions!
