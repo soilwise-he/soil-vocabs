@@ -1,4 +1,4 @@
-# Glossary to SKOS Conversion and Interlinking Utilities: an example of Soil Health Benchmarks project
+# Glossary to SKOS Conversion and Interlinking Utilities
 
 This repository provides a set of Python scripts designed to transform a simple project glossary (in CSV format) into a formal, machine-readable SKOS vocabulary. It also includes tools to interlink this new vocabulary with established external thesauri, enhancing its utility and adherence to FAIR data principles.
 
