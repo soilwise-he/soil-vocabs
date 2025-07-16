@@ -541,8 +541,7 @@ benchmarks:biodiversity a skos:Concept ;
 
 benchmarks:bulk-density a skos:Concept ;
     skos:definition "The dry mass of soil per unit bulk volume of soil, expressed as g/cm3, usually given on an oven-dry (105° C) basis."@en ;
-    skos:prefLabel "bulk density"@en ;
-    skos:related benchmarks:bulk-density .
+    skos:prefLabel "bulk density"@en .
 
 benchmarks:carbon-sequestration-and-climate-regulation a skos:Concept ;
     skos:definition "Carbon and climate regulation includes soil processes that contribute to the retention of carbon in the soil and regulate the release of major greenhouse gases. The function can be defined by three main groups of processes which take place in the soil:(1) Decomposition(2) Biochemical transformation(3) Resource reallocation"@en ;
