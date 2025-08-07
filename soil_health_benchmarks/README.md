@@ -144,6 +144,22 @@ benchmarks:ecosystem-services a skos:Concept ;
 * ​`uk2us.py`​: A helper module that contains a mapping of UK to US English spellings, used by the interlinking script to normalize terms before matching.
 * ​`requirements.txt`​: A list of the Python packages (`pandas`, `rdflib`) required to run the scripts.
 
+## Next Steps: Displaying Your SKOS Vocabulary
+
+**Creating a `.ttl` file is a great achievement for data interoperability, but it's not easily readable by humans. To make your vocabulary accessible to all project members and stakeholders, you should publish it as an interactive HTML page.
+
+A good web interface for a vocabulary should be:
+
+* ​**Searchable**​: Allow users to find terms quickly.
+* ​**Browsable**​: Let users explore the vocabulary, navigating through hierarchical (`broader`/`narrower`) and associative (`related`) links.
+* ​**Clear**​: Present definitions and relationships in an intuitive way.
+
+There are several ways to achieve this:
+
+* ​**Use a Dedicated Publishing Tool**: Tools like **Skosmos** or **Pubby** are specifically designed to render RDF vocabularies as user-friendly, browsable HTML pages. This is often the quickest and most robust solution.
+* ​**Embed Semantics in a Custom Website**​: If you have an existing project website, you can embed the vocabulary data directly into your HTML pages using **RDFa** or ​**JSON-LD**​. This technique makes the content readable for both humans (in the browser) and machines (for SEO and data integration), perfectly aligning with FAIR principles.
+* ​**Use a Collaborative Management Platform**: For ongoing vocabulary development, a tool like **VocBench** provides a collaborative web-based environment for editing and managing vocabularies, which also includes browsing capabilities.
+
 ## Future Work and Contributions
 
 This toolset provides a solid foundation, but there is always room for improvement.
