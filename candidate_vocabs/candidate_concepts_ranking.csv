@@ -1,0 +1,1094 @@
+uri,total_count,columns
+https://soilwise-he.github.io/soil-health#MicrobialBiomass,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Leptosols,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Clay,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilPollution,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilDegradation,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilOrganicCarbon,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilOrganicMatter,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#CationExchangeCapacity,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Bioturbation,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilSolution,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Adsorption,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Mesofauna,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilWaterContent,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AggregateStability,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilTexture,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Evapotranspiration,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#MineralFertilisers,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Sand,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Entisols,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilStructure,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Topsoil,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Subsoil,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#ParentMaterial,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AgriculturalSoils,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilErosion,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Cambisols,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Lixisols,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#HydraulicConductivity,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Alfisols,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilProperties,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilpH,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilFertility,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilTemperature,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AvailableWaterCapacity,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Ammonia,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilStability,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Ammonium,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Denitrification,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AmmoniumNitrogen,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilPorosity,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilHorizons,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#BulkDensity,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AnimalManure,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PlantResidues,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Potassium,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Histosols,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Calcisols,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Fluvisols,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#ArableLand,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#ArableSoils,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilAcidification,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilCompaction,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilDepth,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Arsenic,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SandySoils,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilBiodiversity,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#RedoxPotential,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AtmosphericDeposition,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NutrientDepletion,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SubstrateinducedRespiration,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Regosols,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#BaseSaturation,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Roots,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#CoverCrops,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Micronutrients,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#BiologicalActivity,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#BiomassProduction,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Luvisols,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilBiologicalActivity,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Permeability,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilMicrobialActivity,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Cadmium,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PeatSoils,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Peat,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Podzols,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilPhosphorus,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilOrganisms,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilCover,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilRespiration,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Nitrate,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilPenetrationResistance,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PCBs,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Digestate,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilPhysicalProperties,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilAggregation,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilSealing,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NutrientCycling,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilNitrogen,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilAcidity,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilMoistureDeficit,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilAggregates,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Manure,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Manganese,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#MineralSoils,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Collembola,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Phosphates,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#OrganicHorizons,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#TillageErosion,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Waterlogging,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Macronutrients,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Sulphur,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilFauna,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilBiota,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Molybdenum,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Dioxins,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Drainage,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#DrainageSystems,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NitrousOxide,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilEcosystem,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilHealth,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#ForestSoils,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PhosphorusAvailability,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#EnzymaticActivity,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilLoss,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Eutrophication,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilPollutants,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Herbicides,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilHydrology,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Hexachlorobenzene,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilFunctions,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilFormation,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilFlora,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PlantCover,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilContamination,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NitrogenDynamics,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NutrientUptake,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#VOCs,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Tillage,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#MechanicalProperties,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SelectedOrganicCompounds,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#ShearStrength,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#HeavyMetals,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#TillageDepth,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Mineralisation,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilManagement,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Trichloroethylene,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Microplastics,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#WaterSaturation,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#WaterRetention,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#WaterStorage,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Soils,4,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilQuality,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilSurveys,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Protists,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#RootGrowth,4,"gpt-4.1, gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Acidification,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Decomposition,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Kastanozems,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#SoilMicrobialBiomassNitrogen,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Phaeozems,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#Nutrients,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilAggregateStability,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilMatricPotential,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#InterrillErosion,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#AminoAcids,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilMicrobialBiomassCarbon,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SaturatedHydraulicConductivity,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilNutrientAvailability,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Antimicrobials,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PrecompressionStress,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#WaterInfiltration,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilNutrients,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilRestoration,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Compost,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AromaticHydrocarbons,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Desertification,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#ClayContent,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#SOCStocks,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#LandDegradation,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#BiochemicalProcesses,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#GullyErosion,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#Stagnosols,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#RillErosion,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#ClayMinerals,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#BiologicalIndicators,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#MatricPotential,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#CarbonStocks,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Sodification,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilVariability,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Boron,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilFunctionIndicators,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#LandProductivity,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SewageSludge,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Calcium,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Gleysols,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#WindErosionRate,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#CarbonCycle,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NitrateNitrogenLeaching,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#CarbonSequestration,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#BiologicalProductivity,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#OrganochlorinePesticides,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#CationExchange,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilCarbonStocks,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#ChemicalStability,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Chernozems,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#MineralWeathering,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Chromium,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Ciliates,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilMinerals,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilPhysicalDegradation,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilMicrobialRespiration,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#PlatyStructure,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Litterfall,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Dieldrin,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#SurfaceRunoff,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#MicrobialCommunityStructure,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Cobalt,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#MicrobialImmobilisation,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Microfauna,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#SoilParticles,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Necromass,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Contaminants,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilChemicalProperties,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#BaseCations,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilBiologicalProperties,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilContaminants,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#NutrientRelease,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#WaterholdingCapacity,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilFoodWebs,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Cropland,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#CompactionSusceptibility,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilAnimalDiversity,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#PlantNutrientLeaching,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#AirCapacity,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#NutrientTurnover,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#RainwaterInfiltration,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#RootingDepth,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilCrusting,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Urea,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NitricAcid,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AmmoniumBasedFertilizers,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Earthworms,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Mites,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#MicronutrientAvailability,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Sedimentation,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Magnesium,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#ElectricConductivity,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilPAvailability,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Zinc,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NutrientBufferingCapacity,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#NLeaching,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilMechanicalBehaviour,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Gullies,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilLayers,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#OrganicMatterAccumulation,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Podsols,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#AnthropogenicErosion,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Fertiliser,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#OrganicMaterial,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Metalloids,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NImmobilisation,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilFaunalCommunities,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#NitrogenAvailability,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilCarbonPools,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Macrofauna,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilNutrientAccumulation,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#ForestLand,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#MicrobialCarbon,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SOCDecomposition,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SOMCNRatio,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#FrostHeave,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#Necrosols,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#GasExchange,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilCarbonCycle,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#FungalBiomass,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#MicrobialCommunityComposition,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Fungi,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Stratification,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Grassland,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilNAvailability,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Groundwater,3,"gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#GroundwaterRecharge,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#RootTurnover,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#BulkSoils,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#RiverFloodplainSoils,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilDegradationProcess,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#NitrateSorption,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilCarbonStorage,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Nickel,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#ChemicalPersistence,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Hyphae,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Immobilisation,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilCationContent,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#PAccumulation,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#BaitlaminaMethod,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Landslides,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#ClayMineralogy,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilRemediation,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Lead,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#CarbonPool,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Denitrifiers,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Litter,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#LandUseIntensity,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#CarbonInput,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#CultivatedSoils,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Stones,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#StoneContent,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Trafficability,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#NStorage,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#NutrientStorage,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Mercury,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SurfaceWater,3,"gpt-4o, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AmmoniaOxidisers,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Microorganisms,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#CSequestration,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#VegetationCover,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Nematodes,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NPRatios,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#NitricOxide,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PotassiumCations,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilSalinisation,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#OrganicCompounds,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilProduction,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#Oxides,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Toluene,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NFertilisation,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#PollutantDistribution,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#NitrateN,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#FungalMycelia,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SubsoilDeformation,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilTypes,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Salts,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilPhysicalFunctions,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilCapability,3,"gpt-4.1, gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#Sodium,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#OrganicPollutants,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#PWeathering,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#NDeposition,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#MacroSoilInvertebrates,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#AirExchange,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#ForestFloors,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SoilProcesses,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#CarbonAvailability,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#LitterBags,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#SulphuricAcid,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#OrganicSolids,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#TrophicGroups,3,"gpt-4.1, keywords, thesauri"
+https://soilwise-he.github.io/soil-health#MineralCompounds,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#ErodedMaterial,3,"gpt-4.1, gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#AbioticEnvironment,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Abundance,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Acids,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Carbon,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Water,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AgriculturalIntensification,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AgriculturalLand,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Biodiversity,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AgriculturalLandManagement,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Respiration,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AgriculturalPolicies,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AgriculturalPractices,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#MullHumusForm,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Agriculture,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Urbanisation,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Air,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AirQuality,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Algae,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#FoodProduction,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Aluminium,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Plants,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Vegetation,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#EcosystemServices,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#EnvironmentalDegradation,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AnimalHealth,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AnimalProducts,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#HumicOhHorizon,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Animals,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Antibiotics,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PoreGeometry,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#FoodSecurity,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AquaticEcosystems,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilNutrientPools,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Albeluvisols,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#WaterConservation,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Archaea,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#EphemeralGullyErosion,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SurfacePermeability,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#ExchangeableSodium,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilOrganicCarbonPool,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#Atmosphere,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SubsurfaceFlow,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Bacteria,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#FossilSoils,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#EcosystemFunctions,2,"gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#RelictSoils,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Contamination,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilNutrientLoss,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#HydrologicalCycle,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Productivity,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Cultivation,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SolubleSaltConcentration,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilTexturalClasses,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilProtection,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PoreContinuity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilMatrix,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#PersistentOrganicPollutants,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#BuildingConstruction,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#EnvironmentalQuality,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Buildings,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AcidNeutralizationCapacity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#PedogenicProcesses,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#WaterPurification,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#RegulatingServices,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#HotWaterExtractableCarbon,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Catchments,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilPhysicalStructure,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilTemperatureFluctuations,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#OrganicLayer,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#ChemicalEquilibrium,2,"gpt-4o, thesauri"
+https://soilwise-he.github.io/soil-health#SoilRehabilitation,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#MineralisableNitrogen,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Chlorophyll,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilSurface,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#HumanHealth,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#MagnesiumCations,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilFunctioning,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#Climate,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#ClimateChange,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#ClimateResilience,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#ClimateChangeMitigation,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#ClimateRegulation,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SpeciesDiversity,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#UnsaturatedHydraulicConductivity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#AcidPrecipitation,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#ConiferousForests,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Consistency,2,"gpt-4.1, thesauri"
+https://soilwise-he.github.io/soil-health#SoilCNRatios,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Consumption,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Tetrachloroethylene,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Liming,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Continent,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AllochthonousMaterials,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#CropResidueInput,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#ContinentalClimate,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AlluvialDeposits,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#PlantNutrients,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#Cooling,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Copper,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#WaterStorageCapacity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#CropGrowth,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#LandCoverChange,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#CropProduction,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilBufferCapacity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#AirPermeability,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Crops,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilBuffering,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilErodibility,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#NaturalSoils,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#DNAExtraction,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Iron,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Dams,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SOCLosses,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#DeciduousForests,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#TopsoilCompaction,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilBiochemicalProcesses,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#CalciumCations,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Disturbance,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Distribution,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#CoarseMineralFragmentContent,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SubsoilCompaction,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#DrinkingWater,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Drought,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AzonalSoils,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#DryCleaning,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#BacterialBiomass,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilAcidNeutralisingCapacity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Drying,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Earth,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#EcologicalIndicators,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Ecology,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#EcosystemDiversity,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#DDT,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#EcosystemFunctioning,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#EcosystemHealth,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilDwellingOrganisms,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#EcosystemRestoration,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PipingErosion,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#EcosystemStability,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Ecosystems,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilBiomass,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#PCDD,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Energy,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Microbiome,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PhysicalSoilParameters,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#EnvironmentalConditions,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#EnvironmentalFactors,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Methane,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#EnvironmentalPollution,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Infrastructure,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilFaunaBiomass,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilOrganismAbundance,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Rooting,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Eubacteria,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#GreenhouseGasEmissions,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#OrganicResidueCover,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Forests,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Farmers,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PAHs,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#PerfluorooctanoicAcid,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#FertiliserApplication,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Ploughing,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Field,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#FieldScale,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PCDF,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Flagellates,2,"gpt-4.1, thesauri"
+https://soilwise-he.github.io/soil-health#PDeposition,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#HorizonBoundaries,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#PFAS,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#FloodRisk,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PRunoff,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Hortisols,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Flooding,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#FodderCrops,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PedotransferFunctions,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Foliage,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Food,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PConcentration,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#FoodChain,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#FoodCrops,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilFaunaFunctionalGroups,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#FoodQuality,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#ForestEcosystems,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilBiodiversityIndicators,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#ForestGrowth,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SOCClayRatio,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SOCContents,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#ForestStands,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Forestry,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilBiologicalFunctions,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilNContent,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#CDynamics,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#SOMChemicalComposition,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#FunctionalDiversity,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NTransformationProcesses,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#SoilAnionContent,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SecondarySalinisation,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#HeavyMetalStorage,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#AnimalTrampling,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#SheetwashErosion,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Habitat,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Harbours,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Harvesting,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilMicroorganismDiversity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Size,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Herbivores,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilErosionByWind,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilOrganismCommunities,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#LitterDecomposition,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#HumanBeings,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#LitterLayer,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilOrganismBiomass,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#ProtectedAreas,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilOrganismBiodiversity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#ManureApplication,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#Hydrogen,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PoreDiameters,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilChemicalDegradation,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#PoreVolume,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#GroundwaterTableDepth,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Industry,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Springtails,2,"gpt-4.1, thesauri"
+https://soilwise-he.github.io/soil-health#TotalSoilOrganicCarbonPool,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#PotassiumAvailability,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#PotentialEnzymeActivity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#TotalNContent,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#IntensiveAgriculture,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#IntensiveLandUse,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#MountainAreas,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Lakes,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#TextureClasses,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Land,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilFunctionalCapacity,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#Runoff,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#LandManagement,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilSealingIndicators,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#CalciumAvailability,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Landsat,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#CambicLuvisols,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#ChemicalMobility,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Leaves,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#LivestockTrampling,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#SubsurfaceErosion,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#ForestTopsoils,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Volatility,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#ElementCycling,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Mapping,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Fluxes,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#MediterraneanClimate,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Acidifiers,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Region,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#MetalTransfer,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Metals,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SurfaceWaterlogging,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#TechnogenicSubstrateSoils,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#AluminiumOxideContent,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Microbes,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AluminiumRelease,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#AluminiumToBaseCationsRatio,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#RiskAssessment,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#DispersibleClay,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#AluminiumToxicity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Overgrazing,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#DrainedOrganicSoils,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#UrbanSoils,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Anecics,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#WaterRunoff,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#PollutedSoils,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Mining,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#CarbonSources,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#Traffic,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Dinitrogen,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#WaterFlux,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#VinylChloride,2,"gpt-4.1, thesauri"
+https://soilwise-he.github.io/soil-health#Nanoparticles,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NutrientLimitations,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#NaturalEnvironment,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Policy,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#AvailableIons,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#NutrientExcesses,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Bacterivores,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Winter,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#WaterCapacity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Weather,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Pastures,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Oxygen,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#FreezeThawCycles,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#MicrobialBiomassIndicators,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilSolutionIons,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Waste,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#MineralNutrientLeaching,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#PlantGrowth,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#MineralTopsoil,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#TaxonomicCommunityComposition,2,"gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#MineralisationRate,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#EarthwormAbundance,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Plastics,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NRetentionCapacity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#DiffuseSoilPollution,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#PointSources,2,"gpt-4.1, thesauri"
+https://soilwise-he.github.io/soil-health#Swimming,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Pollutant,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NetBiomeProductivity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#PopulationDensity,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#BelowgroundBiologicalDiversity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Precipitation,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NutrientDynamics,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Fungivores,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Shape,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NutrientExchange,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#PrimaryProductivity,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NutrientInputs,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#ProductionIncrease,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#MagnesiumAvailability,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SuperficialMineralHorizon,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilStructuralAttributes,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#NitrogenSources,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#UrbanSprawl,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Recreation,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#BiomassProductivity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#BaseCationLoss,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#StratifiedSoils,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Woodland,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Rivers,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#RootCrops,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#LimingNeed,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#InternalSoilStrength,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilNitrogenLosses,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#SoilTypologicalClassification,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilPoreFunctions,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilFaunaBurrowing,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Structure,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#SemiaridClimate,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilPollutionIndicator,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilStructuralParameters,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#TolerableSoilLoss,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Shrinkage,2,"gpt-4.1, thesauri"
+https://soilwise-he.github.io/soil-health#SoilAggregateResistanceIndex,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#RawSoils,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SlopingLand,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#DecompositionStatus,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#TotalPContent,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#PlasticSoilDeformation,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#StructuralSoilStability,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#NUptake,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#SoilBiotaActivity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilBiodiversityLoss,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilrelatedEcosystemServices,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#RockType,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilSealingRate,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#TreeGrowth,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#IronOxideContent,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Wind,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#HydrogenIons,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#ImpermeableMaterials,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#EssentialMicronutrient,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#ImperviousSoils,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Imperviousness,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#FabricOfOrganicHorizons,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#NRetentionFraction,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#MassBalanceIndicators,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#MassSoilMovements,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilStructureDegradation,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#ArableCroppingSystems,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#FineRootLengthDistributions,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#BaseCationAvailability,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#BelowgroundBiologicalActivity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#WaterRegulation,2,"gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#CarbonStorageCapacity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Wood,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#Endogeics,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Epigeics,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#IntrinsicSoilProperties,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#PointSourceSoilPollution,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilCarbonLoss,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#Space,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SpatialData,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#PlantAvailableNContents,2,"gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#NematodeReletiveAbundance,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Stabilisation,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilChemicalFunctions,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SulphurDioxide,2,"gpt-4.1, thesauri"
+https://soilwise-he.github.io/soil-health#SensitiveSoils,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#SoilEcologicalFunctions,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Taxonomy,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#NutrientMobilisationCapacity,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Time,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilOrganicMatterAdditions,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#ArtificialisedSoils,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#BTEX,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#WaterExchange,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#UrbanAreas,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#CriticalNLoads,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#DiffusePollutionIndicators,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Oxic,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#WaterQuality,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilStateIndicators,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#LandDegradationIndicators,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#Wheat,2,"keywords, thesauri"
+https://soilwise-he.github.io/soil-health#SoilSensitivity,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#NDissolution,2,"gpt-4o, keywords"
+https://soilwise-he.github.io/soil-health#PercolatingSoilSolution,2,"gpt-4.1, gpt-4o"
+https://soilwise-he.github.io/soil-health#SoilPStatus,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#NLosses,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#TopsoilDeformation,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#BacteriaProportion,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#Slopes,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#PhysicochemicalProcesses,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#LandUnit,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#DustInfiltration,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#SOCTurnover,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#NonpointSoilPollution,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#Sludges,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#SoilServices,2,"gpt-4.1, keywords"
+https://soilwise-he.github.io/soil-health#Approaches,1,thesauri
+https://soilwise-he.github.io/soil-health#AquaticOrganisms,1,thesauri
+https://soilwise-he.github.io/soil-health#Biomaterials,1,keywords
+https://soilwise-he.github.io/soil-health#TerrestrialEcosystems,1,keywords
+https://soilwise-he.github.io/soil-health#Asphalt,1,thesauri
+https://soilwise-he.github.io/soil-health#AssessmentCriteria,1,thesauri
+https://soilwise-he.github.io/soil-health#Benzene,1,thesauri
+https://soilwise-he.github.io/soil-health#AgriculturalSubsidies,1,keywords
+https://soilwise-he.github.io/soil-health#BlueLight,1,thesauri
+https://soilwise-he.github.io/soil-health#DegradedSoils,1,keywords
+https://soilwise-he.github.io/soil-health#Catches,1,thesauri
+https://soilwise-he.github.io/soil-health#TerrestrialLayer,1,keywords
+https://soilwise-he.github.io/soil-health#SoilExcavation,1,keywords
+https://soilwise-he.github.io/soil-health#SoilParameters,1,keywords
+https://soilwise-he.github.io/soil-health#CropYields,1,keywords
+https://soilwise-he.github.io/soil-health#Concrete,1,thesauri
+https://soilwise-he.github.io/soil-health#Trichloroethane,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#FibreProduction,1,keywords
+https://soilwise-he.github.io/soil-health#CriticalLevel,1,thesauri
+https://soilwise-he.github.io/soil-health#CropQuality,1,thesauri
+https://soilwise-he.github.io/soil-health#CriticalConcentrations,1,keywords
+https://soilwise-he.github.io/soil-health#CulturalServices,1,thesauri
+https://soilwise-he.github.io/soil-health#TopsoilNitrogenConcentration,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#DegradedLand,1,thesauri
+https://soilwise-he.github.io/soil-health#DeskStudy,1,thesauri
+https://soilwise-he.github.io/soil-health#FunctionalGroups,1,keywords
+https://soilwise-he.github.io/soil-health#SoilConditions,1,keywords
+https://soilwise-he.github.io/soil-health#SoilLossRates,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#RegionalConditions,1,keywords
+https://soilwise-he.github.io/soil-health#EnvironmentalCompartments,1,keywords
+https://soilwise-he.github.io/soil-health#ErodedSoil,1,thesauri
+https://soilwise-he.github.io/soil-health#EnergyTransformations,1,keywords
+https://soilwise-he.github.io/soil-health#ExploratoryInvestigation,1,thesauri
+https://soilwise-he.github.io/soil-health#HighNutrientStatus,1,keywords
+https://soilwise-he.github.io/soil-health#ExtremeRainfall,1,thesauri
+https://soilwise-he.github.io/soil-health#Leaf,1,keywords
+https://soilwise-he.github.io/soil-health#FlashFloods,1,thesauri
+https://soilwise-he.github.io/soil-health#Action,1,keywords
+https://soilwise-he.github.io/soil-health#OrganicManagement,1,keywords
+https://soilwise-he.github.io/soil-health#HeavyRainfall,1,keywords
+https://soilwise-he.github.io/soil-health#SoilFormationRates,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#AdjacentProperties,1,keywords
+https://soilwise-he.github.io/soil-health#NematodeFeedingTypes,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#Gardens,1,thesauri
+https://soilwise-he.github.io/soil-health#Intensity,1,keywords
+https://soilwise-he.github.io/soil-health#SoilErosionByWater,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ShearEffects,1,keywords
+https://soilwise-he.github.io/soil-health#HumanWellbeing,1,thesauri
+https://soilwise-he.github.io/soil-health#SoilErosionRates,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SOCSequestrationPotentials,1,keywords
+https://soilwise-he.github.io/soil-health#PlantsRooting,1,keywords
+https://soilwise-he.github.io/soil-health#Inputs,1,thesauri
+https://soilwise-he.github.io/soil-health#Intake,1,thesauri
+https://soilwise-he.github.io/soil-health#LandUseEfficiency,1,keywords
+https://soilwise-he.github.io/soil-health#Process,1,keywords
+https://soilwise-he.github.io/soil-health#Country,1,keywords
+https://soilwise-he.github.io/soil-health#PhosphorusAmount,1,keywords
+https://soilwise-he.github.io/soil-health#LandTake,1,thesauri
+https://soilwise-he.github.io/soil-health#LandscapeScale,1,thesauri
+https://soilwise-he.github.io/soil-health#MonitoredNutrients,1,keywords
+https://soilwise-he.github.io/soil-health#Measurements,1,keywords
+https://soilwise-he.github.io/soil-health#CompactionProcesses,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#UnsustainableLandUse,1,keywords
+https://soilwise-he.github.io/soil-health#ArableCrops,1,keywords
+https://soilwise-he.github.io/soil-health#MainInvestigation,1,thesauri
+https://soilwise-he.github.io/soil-health#Emissions,1,keywords
+https://soilwise-he.github.io/soil-health#SustainableSoilManagement,1,keywords
+https://soilwise-he.github.io/soil-health#AgriculturalFields,1,keywords
+https://soilwise-he.github.io/soil-health#NDVIMethod,1,keywords
+https://soilwise-he.github.io/soil-health#Deformation,1,keywords
+https://soilwise-he.github.io/soil-health#SpatialGradients,1,keywords
+https://soilwise-he.github.io/soil-health#LongtermChange,1,keywords
+https://soilwise-he.github.io/soil-health#AnnualSoilLoss,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#MountainousAreas,1,thesauri
+https://soilwise-he.github.io/soil-health#Municipality,1,thesauri
+https://soilwise-he.github.io/soil-health#VapourIntrusion,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#Nature,1,thesauri
+https://soilwise-he.github.io/soil-health#ForestNutritionalQuality,1,keywords
+https://soilwise-he.github.io/soil-health#EarthwormRichness,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#Anoxic,1,keywords
+https://soilwise-he.github.io/soil-health#Ethylbenzene,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#Omnivores,1,thesauri
+https://soilwise-he.github.io/soil-health#Overflow,1,thesauri
+https://soilwise-he.github.io/soil-health#OrganicMaterialQuality,1,keywords
+https://soilwise-he.github.io/soil-health#SoilPLoss,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#PlantHealth,1,thesauri
+https://soilwise-he.github.io/soil-health#PlantPart,1,thesauri
+https://soilwise-he.github.io/soil-health#Backfills,1,keywords
+https://soilwise-he.github.io/soil-health#HumanmadeOrganicPollutants,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#StressIntensity,1,keywords
+https://soilwise-he.github.io/soil-health#PollutantExposure,1,thesauri
+https://soilwise-he.github.io/soil-health#NonagriculturalSystems,1,keywords
+https://soilwise-he.github.io/soil-health#Predators,1,thesauri
+https://soilwise-he.github.io/soil-health#PreliminaryInvestigation,1,thesauri
+https://soilwise-he.github.io/soil-health#PhosphorusRunoff,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilIndicators,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#Recultivation,1,keywords
+https://soilwise-he.github.io/soil-health#ProvisioningServices,1,thesauri
+https://soilwise-he.github.io/soil-health#GreenhouseGases,1,keywords
+https://soilwise-he.github.io/soil-health#SoilStiffness,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#RiskLevel,1,thesauri
+https://soilwise-he.github.io/soil-health#RiverSedimentation,1,thesauri
+https://soilwise-he.github.io/soil-health#SoilPContent,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ContinuousLoading,1,keywords
+https://soilwise-he.github.io/soil-health#MediterraneanBasin,1,keywords
+https://soilwise-he.github.io/soil-health#RuralAreas,1,thesauri
+https://soilwise-he.github.io/soil-health#SoilDistributions,1,keywords
+https://soilwise-he.github.io/soil-health#DrierConditions,1,keywords
+https://soilwise-he.github.io/soil-health#SoilDeformation,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#PollutionPatternAnalyses,1,keywords
+https://soilwise-he.github.io/soil-health#SewageFarms,1,thesauri
+https://soilwise-he.github.io/soil-health#SoilFormingMineral,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#Modelling,1,keywords
+https://soilwise-he.github.io/soil-health#NMineralisationRate,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#AgriculturalLandUses,1,keywords
+https://soilwise-he.github.io/soil-health#SoilSequestrationPotential,1,gpt-4o
+https://soilwise-he.github.io/soil-health#SoilBiologicalDegradation,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilSealingLimits,1,gpt-4o
+https://soilwise-he.github.io/soil-health#SustainableIrrigation,1,keywords
+https://soilwise-he.github.io/soil-health#AcidForestSoils,1,gpt-4o
+https://soilwise-he.github.io/soil-health#CAPIndicators,1,keywords
+https://soilwise-he.github.io/soil-health#PotentialSoilErosionRate,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#PotWorms,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#BelowgroundCompartment,1,keywords
+https://soilwise-he.github.io/soil-health#SoilNutrientStatus,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#EarthwormFrequency,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilScreeningValues,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#StaticStress,1,keywords
+https://soilwise-he.github.io/soil-health#CommercialAreas,1,keywords
+https://soilwise-he.github.io/soil-health#FermentedOfHorizon,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#LivestockTramplingErosion,1,gpt-4o
+https://soilwise-he.github.io/soil-health#NDynamics,1,keywords
+https://soilwise-he.github.io/soil-health#SoilOrganicCarbonCycling,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ImperviousSurfaces,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#FunctionalOrganismGroups,1,gpt-4o
+https://soilwise-he.github.io/soil-health#DynamicSoilAttributes,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#HighPersistence,1,keywords
+https://soilwise-he.github.io/soil-health#WaterErosionFrequency,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#LargeScaleModelling,1,keywords
+https://soilwise-he.github.io/soil-health#DissolvedAluminiumConcentrations,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SubstrateinducedRespirationMethod,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#CollembolaFrequency,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ManagementRegime,1,keywords
+https://soilwise-he.github.io/soil-health#SoilPConcentration,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#MineralNTotalConcentration,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#MonitoredHeavyMetals,1,keywords
+https://soilwise-he.github.io/soil-health#NitrousOxideRelease,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#StandardDocumentation,1,keywords
+https://soilwise-he.github.io/soil-health#GrowingSeason,1,keywords
+https://soilwise-he.github.io/soil-health#MicroarthropodAmount,1,keywords
+https://soilwise-he.github.io/soil-health#SoilCriticalLevels,1,gpt-4o
+https://soilwise-he.github.io/soil-health#IndustrialAreas,1,keywords
+https://soilwise-he.github.io/soil-health#Stiffness,1,thesauri
+https://soilwise-he.github.io/soil-health#SealedSoilArea,1,gpt-4o
+https://soilwise-he.github.io/soil-health#Strain,1,thesauri
+https://soilwise-he.github.io/soil-health#SaturatedMacropores,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#HumidTemperateClimates,1,keywords
+https://soilwise-he.github.io/soil-health#ManganeseToxicity,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SupportingServices,1,thesauri
+https://soilwise-he.github.io/soil-health#Swelling,1,thesauri
+https://soilwise-he.github.io/soil-health#SoilDwellingOrganismHabitat,1,gpt-4o
+https://soilwise-he.github.io/soil-health#Xylenes,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilCationExchangeProcesses,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ToxicityTesting,1,keywords
+https://soilwise-he.github.io/soil-health#TolerableDailyIntake,1,thesauri
+https://soilwise-he.github.io/soil-health#ShallowSoils,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#TopsoilPhosphorousConcentration,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilEcologicalDegradation,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#NLimitation,1,keywords
+https://soilwise-he.github.io/soil-health#VirginCompressionRange,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ExposureModels,1,keywords
+https://soilwise-he.github.io/soil-health#RecentSoils,1,gpt-4o
+https://soilwise-he.github.io/soil-health#SoilInvertebrateFeedingActivities,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#NaturalProcesses,1,keywords
+https://soilwise-he.github.io/soil-health#SoilLossRatesByWater,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilCommunityHealth,1,keywords
+https://soilwise-he.github.io/soil-health#LowNutrientContent,1,keywords
+https://soilwise-he.github.io/soil-health#SoilThreatIndicators,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#YieldDevelopment,1,keywords
+https://soilwise-he.github.io/soil-health#StaticSoilAttributes,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#WaterSecurity,1,thesauri
+https://soilwise-he.github.io/soil-health#HumanActivities,1,keywords
+https://soilwise-he.github.io/soil-health#DynamicSoilGasFluxes,1,gpt-4o
+https://soilwise-he.github.io/soil-health#EcologicalProcesses,1,keywords
+https://soilwise-he.github.io/soil-health#InherentSoilProperties,1,gpt-4o
+https://soilwise-he.github.io/soil-health#NonagriculturalEcosystems,1,keywords
+https://soilwise-he.github.io/soil-health#SoilPStatusIndicators,1,gpt-4o
+https://soilwise-he.github.io/soil-health#SOCChemicalComposition,1,keywords
+https://soilwise-he.github.io/soil-health#Width,1,thesauri
+https://soilwise-he.github.io/soil-health#PlantAvailablePContents,1,gpt-4o
+https://soilwise-he.github.io/soil-health#OrganicSoilNStock,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#NaturalAreas,1,keywords
+https://soilwise-he.github.io/soil-health#GeologicalSoilFormationRates,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#MechanicalSeedbedPreparation,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#Amoebae,1,keywords
+https://soilwise-he.github.io/soil-health#NitrogenousFertiliserNeed,1,keywords
+https://soilwise-he.github.io/soil-health#IonMobility,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#LandDegradationProcesses,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#LayerThickness,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoildwellingSpecies,1,gpt-4o
+https://soilwise-he.github.io/soil-health#FunctionalMethods,1,keywords
+https://soilwise-he.github.io/soil-health#ArableCropping,1,keywords
+https://soilwise-he.github.io/soil-health#InherentSoilAttributes,1,gpt-4o
+https://soilwise-he.github.io/soil-health#ActiveSoilLife,1,gpt-4o
+https://soilwise-he.github.io/soil-health#RegionalSoilMapping,1,keywords
+https://soilwise-he.github.io/soil-health#Yield,1,keywords
+https://soilwise-he.github.io/soil-health#NSurplus,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#NcontainingMinerals,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#Incubation,1,keywords
+https://soilwise-he.github.io/soil-health#NematodeAbundance,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#UnsustainableLandManagement,1,keywords
+https://soilwise-he.github.io/soil-health#NematodeRichness,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#NutrientConcentrationAnalysis,1,keywords
+https://soilwise-he.github.io/soil-health#UrbanFabric,1,keywords
+https://soilwise-he.github.io/soil-health#HydrologicalOrigin,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ActualPrecompressionStress,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#AnthropogenicProcesses,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ArtificialSurfaces,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#DerivedSoilProperties,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#FutureManagement,1,keywords
+https://soilwise-he.github.io/soil-health#DissolvedTotalInorganicNConcentration,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#NaturalFactors,1,keywords
+https://soilwise-he.github.io/soil-health#Enchytraeids,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#GeologicalOrigin,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#GrossNutrientBalance,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#OxygenConsumedByMicrobialRespiration,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#PlantUptake,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#PLosses,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#PInputs,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#OrganicFarms,1,keywords
+https://soilwise-he.github.io/soil-health#PolyfluorinatedCompounds,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#LandUses,1,keywords
+https://soilwise-he.github.io/soil-health#YieldResponse,1,keywords
+https://soilwise-he.github.io/soil-health#CommonAgriculturalPractices,1,keywords
+https://soilwise-he.github.io/soil-health#ModellingApproaches,1,keywords
+https://soilwise-he.github.io/soil-health#FluorescenceMeasurements,1,keywords
+https://soilwise-he.github.io/soil-health#MaritimeClimate,1,keywords
+https://soilwise-he.github.io/soil-health#RillErosionFrequency,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#FoliageNPRatio,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#InterrillErosionFrequency,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#TopographicOrigin,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#CarbonAmount,1,keywords
+https://soilwise-he.github.io/soil-health#NFertiliserInputs,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#CropType,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilSamples,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#VulnerabilityLimit,1,keywords
+https://soilwise-he.github.io/soil-health#DeadOrganicComponents,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#DecomposerActivity,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#PFertilisation,1,keywords
+https://soilwise-he.github.io/soil-health#Sentinel2,1,keywords
+https://soilwise-he.github.io/soil-health#StabilisingProcesses,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#HighSoilMoistureContent,1,keywords
+https://soilwise-he.github.io/soil-health#EarlySpring,1,keywords
+https://soilwise-he.github.io/soil-health#RecompressionRange,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ReactiveAvailablePStock,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#RateOfLossOfTopsoilMass,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#GroundwaterReproduction,1,keywords
+https://soilwise-he.github.io/soil-health#OrganicSoilImprovers,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilConservationValue,1,keywords
+https://soilwise-he.github.io/soil-health#ContaminantInputs,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#TotalReactiveSoilMicrosurface,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#BackgroundConcentrations,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SmearingEffects,1,keywords
+https://soilwise-he.github.io/soil-health#ArtificialNonagriculturalVegetatedAreas,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#VerticalBurrowers,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#Badlands,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#AnalyticalMethodologies,1,keywords
+https://soilwise-he.github.io/soil-health#Human,1,keywords
+https://soilwise-he.github.io/soil-health#WetDeposits,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#YoungSoils,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#TopsoilCompactionParameters,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilRigidityRatio,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#BelowgroundFoodWeb,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#TolerableSoilLossRates,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#Settlements,1,keywords
+https://soilwise-he.github.io/soil-health#CropProductivity,1,keywords
+https://soilwise-he.github.io/soil-health#ExternalMechanicalForces,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#PhysicalDisturbance,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ManureInputs,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ParticleArrangement,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#FaunalDroppings,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#TransferModels,1,keywords
+https://soilwise-he.github.io/soil-health#PhytophagousNematodes,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#PitfallTraps,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#LabileFractionOfTotalSoilOrganicCarbonPool,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilNutrientContents,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#Character,1,keywords
+https://soilwise-he.github.io/soil-health#LabileFractionOfSOCContent,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilNutrientThresholds,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#Machines,1,keywords
+https://soilwise-he.github.io/soil-health#ReactiveIons,1,keywords
+https://soilwise-he.github.io/soil-health#PSupply,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ClimaticChanges,1,keywords
+https://soilwise-he.github.io/soil-health#Mobility,1,keywords
+https://soilwise-he.github.io/soil-health#NInputs,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#Floods,1,keywords
+https://soilwise-he.github.io/soil-health#MorphologicalSoilParameters,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#Cemeteries,1,keywords
+https://soilwise-he.github.io/soil-health#NematodeFrequency,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#PPPLeaching,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilLossInDepth,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#Pressures,1,keywords
+https://soilwise-he.github.io/soil-health#PlantSpeciesDiversity,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#PlantPUptake,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#FungiProportion,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#LowConcentrations,1,keywords
+https://soilwise-he.github.io/soil-health#CropYieldLosses,1,keywords
+https://soilwise-he.github.io/soil-health#Mines,1,keywords
+https://soilwise-he.github.io/soil-health#OffsiteSoilLosses,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilThreats,1,keywords
+https://soilwise-he.github.io/soil-health#FineRootWeightDistributions,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#FineRootDiameterDistributions,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#FertiliserAddition,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#PollutantInputs,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilAttributes,1,keywords
+https://soilwise-he.github.io/soil-health#NitrogenAmount,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#GullyErosionFrequency,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilOutputs,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ImperviousAreas,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilThresholds,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ClimaticOrigin,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ChemicalInput,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#Societies,1,keywords
+https://soilwise-he.github.io/soil-health#BiologicallyMediatedProcesses,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#LandCultivation,1,keywords
+https://soilwise-he.github.io/soil-health#UnlimedAgriculturalLand,1,keywords
+https://soilwise-he.github.io/soil-health#HormonalResidues,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#AnimalResidues,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ArrangementOfHumusConstituents,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#ArtificialisedLand,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#FilterFunction,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#DryDeposits,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#DensifiedAggregates,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#GroundwaterBodies,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#DNAYield,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#RetentionProcesses,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#BindingForces,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SoilInputs,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SealedSoil,1,gpt-4.1
+https://soilwise-he.github.io/soil-health#SealedSurfaces,1,gpt-4.1
