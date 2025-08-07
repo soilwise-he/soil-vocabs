@@ -146,7 +146,7 @@ benchmarks:ecosystem-services a skos:Concept ;
 
 ## Next Steps: Displaying Your SKOS Vocabulary
 
-**Creating a `.ttl` file is a great achievement for data interoperability, but it's not easily readable by humans. To make your vocabulary accessible to all project members and stakeholders, you should publish it as an interactive HTML page.
+Creating a `.ttl` file is a great achievement for data interoperability, but it's not easily readable by humans. To make your vocabulary accessible to all project members and stakeholders, you should publish it as an interactive HTML page.
 
 A good web interface for a vocabulary should be:
 
