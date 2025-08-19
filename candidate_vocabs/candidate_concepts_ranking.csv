@@ -1,4 +1,4 @@
-uri,total_count,columns
+uri,total_count,sources
 https://soilwise-he.github.io/soil-health#MicrobialBiomass,4,"gpt-4.1, gpt-4o, keywords, thesauri"
 https://soilwise-he.github.io/soil-health#Leptosols,4,"gpt-4.1, gpt-4o, keywords, thesauri"
 https://soilwise-he.github.io/soil-health#Clay,4,"gpt-4.1, gpt-4o, keywords, thesauri"
