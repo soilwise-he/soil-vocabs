@@ -67,4 +67,4 @@ she:blkDensF_fe-co-unkn_Property a owl:NamedIndividual ,
                               sosa:ObservableProperty ,
                               she:BlkDensF_fe-co-unkn_Concept .
 
-she:blkDensF_fe-co-unkn_Property skos:related glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-unkn .
+she:blkDensF_fe-co-unkn_Property she:hasProcedure glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-unkn .
