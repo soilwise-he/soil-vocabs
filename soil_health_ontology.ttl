@@ -13,8 +13,12 @@ she:SoilProperty a owl:Class .
 she:SoilPhysicalProperty a owl:Class ;
     rdfs:subClassOf she:SoilProperty .
 
+she:ObservableSoilProperty a owl:Class ;
+    rdfs:subClassOf she:SoilProperty .
+
 she:BulkDensity a owl:Class ;
-    rdfs:subClassOf she:SoilPhysicalProperty .
+    rdfs:subClassOf she:SoilPhysicalProperty ;
+    rdfs:subClassOf she:ObservableSoilProperty .
 
 she:BulkDensityFineEarthConcept a owl:Class ;
     rdfs:subClassOf she:BulkDensity .
