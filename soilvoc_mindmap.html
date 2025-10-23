@@ -83,6 +83,17 @@
             border-left-color: #764ba2;
         }
         
+        .concept-header.highlighted {
+            background: #ffc107;
+            border-left-color: #ff9800;
+            animation: pulse 1s ease-in-out;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
         .concept-header.no-children {
             cursor: default;
             border-left-color: #adb5bd;
@@ -223,11 +234,84 @@
             box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
         
+        .search-results {
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .search-results.show {
+            display: block;
+        }
+        
+        .search-result-item {
+            padding: 10px 15px;
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .search-result-item:hover {
+            background: #f8f9fa;
+            border-color: #667eea;
+            transform: translateX(5px);
+        }
+        
+        .search-result-label {
+            font-weight: 500;
+            color: #212529;
+        }
+        
+        .search-result-notation {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+        
+        .search-result-path {
+            font-size: 0.85em;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+        
+        .search-info {
+            padding: 10px 15px;
+            background: #e7f3ff;
+            border: 1px solid #b8daff;
+            border-radius: 6px;
+            color: #004085;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
         .no-results {
             text-align: center;
             padding: 40px;
             color: #6c757d;
             font-style: italic;
+        }
+        
+        .clear-search {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: #667eea;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.2s ease;
+        }
+        
+        .clear-search:hover {
+            background: #764ba2;
         }
     </style>
 </head>
@@ -239,7 +323,8 @@
         </div>
         
         <div class="search-box">
-            <input type="text" class="search-input" id="searchInput" placeholder="Search concepts...">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search all concepts by label or notation...">
+            <div class="search-results" id="searchResults"></div>
         </div>
         
         <div class="mindmap" id="mindmap">
@@ -5066,6 +5151,28 @@
         
         let allConcepts = [];
         let uniqueConceptUris = new Set();
+        let conceptMap = new Map(); // Maps URI to concept object with path info
+        
+        function buildConceptMap(concepts, path = []) {
+            concepts.forEach(concept => {
+                const currentPath = [...path, concept];
+                
+                // Store concept with its path
+                if (!conceptMap.has(concept.uri)) {
+                    conceptMap.set(concept.uri, {
+                        concept: concept,
+                        path: currentPath
+                    });
+                }
+                
+                uniqueConceptUris.add(concept.uri);
+                allConcepts.push(concept);
+                
+                if (concept.narrower && concept.narrower.length > 0) {
+                    buildConceptMap(concept.narrower, currentPath);
+                }
+            });
+        }
         
         function countConcepts(concepts) {
             concepts.forEach(concept => {
@@ -5175,52 +5282,152 @@
         }
         
         function searchConcepts() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const concepts = document.querySelectorAll('.concept');
-            let visibleCount = 0;
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+            const searchResultsDiv = document.getElementById('searchResults');
             
-            concepts.forEach(concept => {
-                const label = concept.querySelector('.concept-label').textContent.toLowerCase();
-                const notation = concept.querySelector('.concept-notation');
-                const notationText = notation ? notation.textContent.toLowerCase() : '';
+            if (searchTerm === '') {
+                searchResultsDiv.classList.remove('show');
+                searchResultsDiv.innerHTML = '';
+                clearHighlights();
+                return;
+            }
+            
+            // Search in all concepts
+            const matches = [];
+            conceptMap.forEach((data, uri) => {
+                const concept = data.concept;
+                const label = concept.label.toLowerCase();
+                const notation = concept.notation ? concept.notation.toLowerCase() : '';
                 
-                if (searchTerm === '' || label.includes(searchTerm) || notationText.includes(searchTerm)) {
-                    concept.style.display = '';
-                    visibleCount++;
-                } else {
-                    concept.style.display = 'none';
+                if (label.includes(searchTerm) || notation.includes(searchTerm)) {
+                    matches.push({
+                        uri: uri,
+                        concept: concept,
+                        path: data.path
+                    });
                 }
             });
             
-            // Show "no results" message if needed
-            const mindmapDiv = document.getElementById('mindmap');
-            let noResultsDiv = document.getElementById('noResults');
-            
-            if (visibleCount === 0 && searchTerm !== '') {
-                if (!noResultsDiv) {
-                    noResultsDiv = document.createElement('div');
-                    noResultsDiv.id = 'noResults';
-                    noResultsDiv.className = 'no-results';
-                    noResultsDiv.textContent = 'No concepts found matching your search.';
-                    mindmapDiv.appendChild(noResultsDiv);
-                }
-            } else if (noResultsDiv) {
-                noResultsDiv.remove();
+            // Display results
+            if (matches.length > 0) {
+                let html = `<div class="search-info">Found ${matches.length} matching concept(s). Click to navigate.</div>`;
+                
+                matches.forEach(match => {
+                    const pathLabels = match.path.map(c => c.notation ? `${c.notation} ${c.label}` : c.label).join(' → ');
+                    const notation = match.concept.notation ? `<span class="search-result-notation">${match.concept.notation}</span>` : '';
+                    
+                    html += `
+                        <div class="search-result-item" onclick="navigateToConcept('${match.uri}')">
+                            <div class="search-result-label">
+                                ${notation}${match.concept.label}
+                            </div>
+                            <div class="search-result-path">${pathLabels}</div>
+                        </div>
+                    `;
+                });
+                
+                html += `<div class="clear-search" onclick="clearSearch()">Clear Search</div>`;
+                searchResultsDiv.innerHTML = html;
+                searchResultsDiv.classList.add('show');
+            } else {
+                searchResultsDiv.innerHTML = `
+                    <div class="search-info">No concepts found matching "${searchTerm}".</div>
+                    <div class="clear-search" onclick="clearSearch()">Clear Search</div>
+                `;
+                searchResultsDiv.classList.add('show');
             }
         }
         
+        function navigateToConcept(targetUri) {
+            // Get the path to this concept
+            const conceptData = conceptMap.get(targetUri);
+            if (!conceptData) return;
+            
+            // First, collapse everything
+            document.querySelectorAll('.concept-children.expanded').forEach(el => {
+                el.classList.remove('expanded');
+            });
+            document.querySelectorAll('.concept-header.active').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.toggle-icon.expanded').forEach(el => {
+                el.classList.remove('expanded');
+            });
+            document.querySelectorAll('.concept-definition.show').forEach(el => {
+                el.classList.remove('show');
+            });
+            
+            // Clear previous highlights
+            clearHighlights();
+            
+            // Expand the path to the target concept
+            const path = conceptData.path;
+            for (let i = 0; i < path.length - 1; i++) {
+                const conceptUri = path[i].uri;
+                const conceptElement = document.querySelector(`.concept[data-uri="${conceptUri}"]`);
+                
+                if (conceptElement) {
+                    const header = conceptElement.querySelector('.concept-header');
+                    const children = conceptElement.querySelector('.concept-children');
+                    const icon = header.querySelector('.toggle-icon');
+                    
+                    if (children && !children.classList.contains('expanded')) {
+                        children.classList.add('expanded');
+                        header.classList.add('active');
+                        icon.classList.add('expanded');
+                    }
+                }
+            }
+            
+            // Highlight and scroll to the target concept
+            const targetElement = document.querySelector(`.concept[data-uri="${targetUri}"]`);
+            if (targetElement) {
+                const targetHeader = targetElement.querySelector('.concept-header');
+                targetHeader.classList.add('highlighted');
+                
+                // Show definition if exists
+                const definition = targetElement.querySelector('.concept-definition');
+                if (definition) {
+                    definition.classList.add('show');
+                }
+                
+                // Scroll to the target
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Remove highlight after animation
+                setTimeout(() => {
+                    targetHeader.classList.remove('highlighted');
+                }, 2000);
+            }
+        }
+        
+        function clearHighlights() {
+            document.querySelectorAll('.concept-header.highlighted').forEach(el => {
+                el.classList.remove('highlighted');
+            });
+        }
+        
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            searchConcepts();
+        }
+        
         // Initialize
+        buildConceptMap(vocabularyData.top_concepts);
         renderMindmap();
         renderStats();
         
-        // Search functionality
-        document.getElementById('searchInput').addEventListener('input', searchConcepts);
+        // Search functionality with debounce
+        let searchTimeout;
+        document.getElementById('searchInput').addEventListener('input', () => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(searchConcepts, 300);
+        });
         
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
-                document.getElementById('searchInput').value = '';
-                searchConcepts();
+                clearSearch();
             }
         });
     </script>
