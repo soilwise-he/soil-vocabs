@@ -1243,6 +1243,7 @@ she:CDynamics a skos:Concept ;
 
 she:CO2 a skos:Concept ;
     agrontology:hasSymbol "CO₂"@en ;
+    skos:prefLabel "carbon dioxide"@en ;
     dcterms:source she:IPCC2019b,
         she:Olson2014 ;
     she:isConvertedTo [ agrontology:usesProcess she:CarbonSequestration ;
@@ -4091,10 +4092,6 @@ she:SoilCrusting a skos:Concept ;
     obo:RO_0002336 she:SoilPhysicalDegradation ;
     skos:prefLabel "soil crusting"@en .
 
-she:SoilDegradationProcess a skos:Concept ;
-    skos:narrower she:SoilSalinisation ;
-    skos:prefLabel "soil degradation process"@en .
-
 she:SoilDistributions a skos:Concept ;
     sorelm:hasScale she:Continent,
         she:Country,
@@ -4171,6 +4168,7 @@ she:SoilLossRatesByWater a skos:Concept ;
     skos:prefLabel "soil loss rates by water"@en .
 
 she:SoilManagement a skos:Concept ;
+    agrontology:affects she:StateOfSoils ;
     dcterms:source she:Vogel2020 ;
     skos:exactMatch agrovoc:c_7176,
         inrae:c_3542 ;
@@ -6572,9 +6570,11 @@ she:OxygenConsumedByMicrobialRespiration a skos:Concept ;
     skos:prefLabel "oxygen consumed by microbial respiration"@en .
 
 she:PCDD a skos:Concept ;
+    skos:prefLabel "polychlorinated dibenzo-p-dioxins"@en ;
     agrontology:hasAbbreviation "PCDD"@en .
 
 she:PCDF a skos:Concept ;
+    skos:prefLabel "polychlorinated dibenzofurans"@en ;
     agrontology:hasAbbreviation "PCDF"@en .
 
 she:PCriticalLevels a skos:Concept ;
@@ -9926,6 +9926,7 @@ she:AromaticHydrocarbons a skos:Concept ;
 
 she:BTEX a skos:Concept ;
     agrontology:hasAbbreviation "BTEX"@en ;
+    skos:prefLabel "BTEX (benzene, toluene, ethylbenzene, xylene)"@en ;
     sio:SIO_000128 [ rdf:object she:Groundwater,
                 she:UrbanSoils ;
             prov:atLocation she:LargeScaleCleaningFacilities ] ;
@@ -9997,6 +9998,8 @@ she:CriticalLevel a skos:Concept ;
 
 she:DDT a skos:Concept ;
     agrontology:hasAbbreviation "DDT"@en ;
+    skos:altLabel "dichlorodiphenyltrichloroethane"@en ;
+    skos:prefLabel "DDT"@en ;
     agrontology:hasProperty she:AccumulationInSoil,
         she:LowMobility ;
     skos:broader she:OrganochlorinePesticides,
@@ -10530,7 +10533,6 @@ she:Subsoil a skos:Concept ;
     skos:related she:FreezeThawCycles .
 
 she:SustainableSoilManagement a skos:Concept ;
-    agrontology:affects she:StateOfSoils ;
     obo:T4FS_0000577 she:StateOfSoils ;
     skos:definition "Sustainable soil management is the best use of its properties."@en ;
     skos:prefLabel "sustainable soil management"@en ;
@@ -10746,6 +10748,7 @@ she:OrganicCompounds a skos:Concept ;
     skos:prefLabel "organic compounds"@en .
 
 she:PAHs a skos:Concept ;
+    skos:prefLabel "polycyclic aromatic hydrocarbons"@en ;
     agrontology:hasAbbreviation "PAHs"@en ;
     agrontology:hasProperty she:NaturallyOccurring ;
     sio:SIO_000128 she:ForestFireSoils ;
@@ -11145,6 +11148,7 @@ she:OrganicPollutants a skos:Concept ;
     skos:prefLabel "organic pollutants"@en .
 
 she:PFAS a skos:Concept ;
+    skos:prefLabel "per- and polyfluoroalkyl substances"@en ;
     agrontology:hasAbbreviation "PFAS"@en ;
     agrontology:hasProperty she:HighPersistence ;
     agrontology:isIncludedIn she:OrganicCompounds ;
@@ -11521,7 +11525,7 @@ she:SoilTexture a skos:Concept ;
 
 she:StateOfSoils a skos:Concept ;
     agrontology:isAffectedBy she:ClimaticConditions,
-        she:SustainableSoilManagement ;
+        she:SoilManagement ;
     sio:equivalentTo she:SoilConditions ;
     skos:altLabel "state of soil"@en ;
     skos:prefLabel "state of soils"@en ;
@@ -12897,8 +12901,7 @@ she:SoilSalinisation a skos:Concept ;
     obo:OAE_0000025 she:Human ;
     obo:RO_0002212 she:SoilFertility ;
     skos:altLabel "salinisation"@en ;
-    skos:broader she:SoilDegradationProcess,
-        she:SoilThreatIndicators ;
+    skos:broader she:SoilThreatIndicators ;
     skos:definition "Soil salinisation is the increase in soluble salt concentration in soil."@en ;
     skos:prefLabel "soil salinisation"@en ;
     skos:related she:SolubleSaltConcentration .

@@ -1,4 +1,4 @@
-concept,prefLabel,altLabels
+URI,prefLabel,altLabel_abbreviation
 https://soilwise-he.github.io/soil-health#AbioticEnvironment,abiotic environment,
 https://soilwise-he.github.io/soil-health#Abundance,abundance,
 https://soilwise-he.github.io/soil-health#AbundanceOfSpeciesPopulations,abundance of species populations,abundance of species population
@@ -127,7 +127,7 @@ https://soilwise-he.github.io/soil-health#AvailableIons,available ions,available
 https://soilwise-he.github.io/soil-health#AvailableWaterCapacity,available water capacity,
 https://soilwise-he.github.io/soil-health#AveragePesticideConsumptionPerUnitAreaOfAgriculturalLand,average pesticide consumption per unit area of agricultural land,
 https://soilwise-he.github.io/soil-health#AzonalSoils,azonal soils,azonal soil
-https://soilwise-he.github.io/soil-health#BTEX,,
+https://soilwise-he.github.io/soil-health#BTEX,"BTEX (benzene, toluene, ethylbenzene, xylene)",BTEX
 https://soilwise-he.github.io/soil-health#Backfills,backfills,backfill
 https://soilwise-he.github.io/soil-health#BackgroundConcentrations,background concentrations,background concentration
 https://soilwise-he.github.io/soil-health#BackgroundLevels,background levels,background level;background values
@@ -171,7 +171,7 @@ https://soilwise-he.github.io/soil-health#BulkDensity,bulk density,
 https://soilwise-he.github.io/soil-health#BulkSoils,bulk soils,bulk soil
 https://soilwise-he.github.io/soil-health#CAPIndicators,CAP indicators,CAP indicator
 https://soilwise-he.github.io/soil-health#CDynamics,C dynamics,
-https://soilwise-he.github.io/soil-health#CO2,,
+https://soilwise-he.github.io/soil-health#CO2,carbon dioxide,
 https://soilwise-he.github.io/soil-health#CO2Loss,CO₂ loss,
 https://soilwise-he.github.io/soil-health#CSequestration,C sequestration,
 https://soilwise-he.github.io/soil-health#Cadmium,cadmium,
@@ -313,7 +313,7 @@ https://soilwise-he.github.io/soil-health#CulturalServices,cultural services,cul
 https://soilwise-he.github.io/soil-health#CurrentHarmfulPractices,current harmful practices,current harmful practice
 https://soilwise-he.github.io/soil-health#CurrentSoilManagement,current soil management,
 https://soilwise-he.github.io/soil-health#CyclicStress,cyclic stress,
-https://soilwise-he.github.io/soil-health#DDT,,
+https://soilwise-he.github.io/soil-health#DDT,DDT,dichlorodiphenyltrichloroethane;DDT
 https://soilwise-he.github.io/soil-health#DNAExtraction,DNA extraction,
 https://soilwise-he.github.io/soil-health#DNAYield,DNA yield,
 https://soilwise-he.github.io/soil-health#DNAbasedBacteriaExtraction,DNA-based bacteria extraction,
@@ -649,7 +649,7 @@ https://soilwise-he.github.io/soil-health#HormonalResidues,hormonal residues,hor
 https://soilwise-he.github.io/soil-health#Hortisols,hortisols,cultivated soils in gardens;hortisol
 https://soilwise-he.github.io/soil-health#HotSpots,hot spots,hot spot
 https://soilwise-he.github.io/soil-health#HotSummers,hot summers,hot summer
-https://soilwise-he.github.io/soil-health#HotWaterExtractableCarbon,hot water extractable carbon,
+https://soilwise-he.github.io/soil-health#HotWaterExtractableCarbon,hot water extractable carbon,HWC
 https://soilwise-he.github.io/soil-health#Human,human,
 https://soilwise-he.github.io/soil-health#HumanActivities,human activities,human activity
 https://soilwise-he.github.io/soil-health#HumanBeings,human beings,human being
@@ -1035,16 +1035,16 @@ https://soilwise-he.github.io/soil-health#Oxic,oxic,
 https://soilwise-he.github.io/soil-health#Oxides,oxides,oxide
 https://soilwise-he.github.io/soil-health#Oxygen,oxygen,
 https://soilwise-he.github.io/soil-health#OxygenConsumedByMicrobialRespiration,oxygen consumed by microbial respiration,
-https://soilwise-he.github.io/soil-health#PAHs,,
+https://soilwise-he.github.io/soil-health#PAHs,polycyclic aromatic hydrocarbons,PAHs
 https://soilwise-he.github.io/soil-health#PAccumulation,P accumulation,
-https://soilwise-he.github.io/soil-health#PCBs,polychlorinated biphenyls,
-https://soilwise-he.github.io/soil-health#PCDD,,
-https://soilwise-he.github.io/soil-health#PCDF,,
+https://soilwise-he.github.io/soil-health#PCBs,polychlorinated biphenyls,PCBs
+https://soilwise-he.github.io/soil-health#PCDD,polychlorinated dibenzo-p-dioxins,PCDD
+https://soilwise-he.github.io/soil-health#PCDF,polychlorinated dibenzofurans,PCDF
 https://soilwise-he.github.io/soil-health#PConcentration,P concentration,
 https://soilwise-he.github.io/soil-health#PCriticalLevels,P critical levels,P critical level
 https://soilwise-he.github.io/soil-health#PDeposition,P deposition,
 https://soilwise-he.github.io/soil-health#PDynamics,P dynamics,
-https://soilwise-he.github.io/soil-health#PFAS,,
+https://soilwise-he.github.io/soil-health#PFAS,per- and polyfluoroalkyl substances,PFAS
 https://soilwise-he.github.io/soil-health#PFertilisation,P fertilisation,
 https://soilwise-he.github.io/soil-health#PFertiliserInputs,P fertiliser inputs,P fertiliser input
 https://soilwise-he.github.io/soil-health#PInputs,P inputs,P input
@@ -1073,7 +1073,7 @@ https://soilwise-he.github.io/soil-health#PedogenicProcesses,pedogenic processes
 https://soilwise-he.github.io/soil-health#PedotransferFunctions,pedo-transfer functions,pedo-transfer function
 https://soilwise-he.github.io/soil-health#People,people,
 https://soilwise-he.github.io/soil-health#PercolatingSoilSolution,percolating soil solution,
-https://soilwise-he.github.io/soil-health#PerfluorooctanoicAcid,perfluorooctanoic acid,
+https://soilwise-he.github.io/soil-health#PerfluorooctanoicAcid,perfluorooctanoic acid,PFOA
 https://soilwise-he.github.io/soil-health#PerformanceMonitoringEvaluationFramework,performance monitoring and evaluation framework,
 https://soilwise-he.github.io/soil-health#PermanentGullying,permanent gullying,
 https://soilwise-he.github.io/soil-health#PermanentLoads,permanent loads,permanent load
@@ -1105,7 +1105,7 @@ https://soilwise-he.github.io/soil-health#PlantNutrientLeaching,plant nutrient l
 https://soilwise-he.github.io/soil-health#PlantNutrients,plant nutrients,plant nutrient
 https://soilwise-he.github.io/soil-health#PlantPUptake,plant P uptake,
 https://soilwise-he.github.io/soil-health#PlantPart,plant part,
-https://soilwise-he.github.io/soil-health#PlantProtectionProducts,plant protection products,plant protection product
+https://soilwise-he.github.io/soil-health#PlantProtectionProducts,plant protection products,plant protection product;PPPs
 https://soilwise-he.github.io/soil-health#PlantResidues,plant residues,plant residue
 https://soilwise-he.github.io/soil-health#PlantSpeciesDiversity,plant species diversity,
 https://soilwise-he.github.io/soil-health#PlantSpeciesOfOrigin,plant species of origin,
@@ -1142,7 +1142,7 @@ https://soilwise-he.github.io/soil-health#PollutedSoils,polluted soils,polluted 
 https://soilwise-he.github.io/soil-health#PollutionDestination,pollution destination,
 https://soilwise-he.github.io/soil-health#PollutionPatternAnalyses,pollution pattern analyses,pollution pattern analysis
 https://soilwise-he.github.io/soil-health#PollutionSources,pollution sources,pollution source
-https://soilwise-he.github.io/soil-health#PolyfluorinatedCompounds,polyfluorinated compounds,polyfluorinated compound
+https://soilwise-he.github.io/soil-health#PolyfluorinatedCompounds,polyfluorinated compounds,polyfluorinated compound;PFCs
 https://soilwise-he.github.io/soil-health#PoorDrainage,poor drainage,
 https://soilwise-he.github.io/soil-health#PoorDrainageConditions,poor drainage conditions,poor drainage condition
 https://soilwise-he.github.io/soil-health#PoorDrainageMaintenance,poor drainage maintenance,
@@ -1389,7 +1389,6 @@ https://soilwise-he.github.io/soil-health#SoilCriticalLevels,soil critical level
 https://soilwise-he.github.io/soil-health#SoilCrusting,soil crusting,
 https://soilwise-he.github.io/soil-health#SoilDeformation,soil deformation,
 https://soilwise-he.github.io/soil-health#SoilDegradation,soil degradation,
-https://soilwise-he.github.io/soil-health#SoilDegradationProcess,soil degradation process,
 https://soilwise-he.github.io/soil-health#SoilDepth,soil depth,
 https://soilwise-he.github.io/soil-health#SoilDistributions,soil distributions,soil distribution
 https://soilwise-he.github.io/soil-health#SoilDwellingOrganismHabitat,soil dwelling organism habitat,
@@ -1468,10 +1467,10 @@ https://soilwise-he.github.io/soil-health#SoilNutrientPools,soil nutrient pools,
 https://soilwise-he.github.io/soil-health#SoilNutrientStatus,soil nutrient status,
 https://soilwise-he.github.io/soil-health#SoilNutrientThresholds,soil nutrient thresholds,soil nutrient threshold
 https://soilwise-he.github.io/soil-health#SoilNutrients,soil nutrients,soil nutrient
-https://soilwise-he.github.io/soil-health#SoilOrganicCarbon,soil organic carbon,
+https://soilwise-he.github.io/soil-health#SoilOrganicCarbon,soil organic carbon,SOC
 https://soilwise-he.github.io/soil-health#SoilOrganicCarbonCycling,soil organic carbon cycling,
 https://soilwise-he.github.io/soil-health#SoilOrganicCarbonPool,soil organic carbon pool,
-https://soilwise-he.github.io/soil-health#SoilOrganicMatter,soil organic matter,
+https://soilwise-he.github.io/soil-health#SoilOrganicMatter,soil organic matter,SOM
 https://soilwise-he.github.io/soil-health#SoilOrganicMatterAdditions,soil organic matter additions,soil organic matter addition
 https://soilwise-he.github.io/soil-health#SoilOrganismAbundance,soil organism abundance,
 https://soilwise-he.github.io/soil-health#SoilOrganismBiodiversity,soil organism biodiversity,
@@ -1523,7 +1522,7 @@ https://soilwise-he.github.io/soil-health#SoilRisk,soil risk,
 https://soilwise-he.github.io/soil-health#SoilSalinisation,soil salinisation,salinisation
 https://soilwise-he.github.io/soil-health#SoilSamples,soil samples,soil sample
 https://soilwise-he.github.io/soil-health#SoilSamplingSites,soil sampling sites,soil sampling site
-https://soilwise-he.github.io/soil-health#SoilScreeningValues,soil screening values,soil screening value
+https://soilwise-he.github.io/soil-health#SoilScreeningValues,soil screening values,soil screening value;SSVs
 https://soilwise-he.github.io/soil-health#SoilSealing,soil sealing,
 https://soilwise-he.github.io/soil-health#SoilSealingBaselines,soil sealing baselines,soil sealing baseline
 https://soilwise-he.github.io/soil-health#SoilSealingChange,soil sealing change,
@@ -1726,7 +1725,7 @@ https://soilwise-he.github.io/soil-health#UrbanSprawl,urban sprawl,
 https://soilwise-he.github.io/soil-health#UrbanZonePopulationGrowth,urban zone population growth,
 https://soilwise-he.github.io/soil-health#Urbanisation,urbanisation,
 https://soilwise-he.github.io/soil-health#Urea,urea,
-https://soilwise-he.github.io/soil-health#VOCs,volatile organic compounds,volatile organic compound
+https://soilwise-he.github.io/soil-health#VOCs,volatile organic compounds,volatile organic compound;VOCs
 https://soilwise-he.github.io/soil-health#VapourIntrusion,vapour intrusion,
 https://soilwise-he.github.io/soil-health#Vegetation,vegetation,
 https://soilwise-he.github.io/soil-health#VegetationCover,vegetation cover,
