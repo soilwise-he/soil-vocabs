@@ -4,6 +4,8 @@ Convert GloSIS ontology to SKOS-based vocabulary
 """
 import re
 from collections import defaultdict
+from rdflib import Graph, Namespace, URIRef, Literal
+from rdflib.namespace import SKOS, RDF
 
 def camel_to_label(camel_str):
     """Convert CamelCase to space-separated label (lowercase)"""
@@ -51,42 +53,34 @@ def parse_glosis_common(ttl_file):
     return classes_with_props, classes_without_props
 
 def generate_skos_ttl(classes_with_props, output_file):
-    """Generate SKOS-based TTL file"""
+    """Generate SKOS-based TTL file using rdflib"""
 
-    ttl_content = """@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix sosa:  <http://www.w3.org/ns/sosa/> .
-@prefix glosis_cm: <http://w3id.org/glosis/model/common/> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix schema: <http://schema.org/> .
-@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
-@prefix she: <http://example.org/soil-he/vocab/> .
+    # Create a new graph
+    g = Graph()
 
-<http://example.org/soil-he/vocab/glosis_common>
-        a                skos:ConceptScheme ;
-        dct:title "GlOSIS Common - SKOS Vocabulary"@en ;
-        dct:description "SKOS-based vocabulary derived from GLOSIS Common ontology"@en ;
-        dct:source <http://w3id.org/glosis/model/common> ;
-        dct:created "2025-11-13"^^<http://www.w3.org/2001/XMLSchema#date> .
+    # Define namespaces
+    SHE = Namespace("https://soilwise-he.github.io/soil-health#")
+    GLOSIS_CM = Namespace("http://w3id.org/glosis/model/common/")
 
-"""
+    # Bind prefixes
+    g.bind("she", SHE)
+    g.bind("glosis_cm", GLOSIS_CM)
+    g.bind("skos", SKOS)
 
     # Generate SKOS concepts
     for cls, prop in sorted(classes_with_props.items()):
         label = camel_to_label(cls)
 
-        ttl_content += f"""she:{cls}
-        a skos:Concept ;
-        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
-        skos:prefLabel "{label}"@en ;
-        skos:exactMatch glosis_cm:{prop} ;
-        rdfs:seeAlso glosis_cm:{cls} .
+        concept_uri = SHE[cls]
+        property_uri = GLOSIS_CM[prop]
 
-"""
+        # Add triples for the concept
+        g.add((concept_uri, RDF.type, SKOS.Concept))
+        g.add((concept_uri, SKOS.prefLabel, Literal(label, lang="en")))
+        g.add((concept_uri, SKOS.exactMatch, property_uri))
 
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write(ttl_content)
+    # Serialize to file
+    g.serialize(destination=output_file, format='turtle')
 
 def main():
     input_file = '/home/user/soil-vocabs/ontovocabs/glosis/glosis_common.ttl'
