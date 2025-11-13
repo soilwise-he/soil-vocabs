@@ -82,9 +82,94 @@ def generate_skos_ttl(classes_with_props, output_file):
     # Serialize to file
     g.serialize(destination=output_file, format='turtle')
 
+def generate_hierarchical_skos_ttl(classes_with_props, output_file):
+    """Generate hierarchical SKOS-based TTL file with broader/narrower relationships"""
+
+    # Create a new graph
+    g = Graph()
+
+    # Define namespaces
+    SHE = Namespace("https://soilwise-he.github.io/soil-health#")
+    GLOSIS_CM = Namespace("http://w3id.org/glosis/model/common/")
+
+    # Bind prefixes
+    g.bind("she", SHE)
+    g.bind("glosis_cm", GLOSIS_CM)
+    g.bind("skos", SKOS)
+
+    # Define hierarchical structure
+    hierarchies = {
+        'SoilColour': {
+            'label': 'soil colour',
+            'narrower': ['ColourDry', 'ColourMoist'],
+            'has_property': False  # This is a grouping concept, no property match
+        },
+        'SoilDepth': {
+            'label': 'soil depth',
+            'narrower': ['SoilDepthBedrock', 'SoilDepthRootable', 'SoilDepthRootableClass', 'SoilDepthSampled'],
+            'has_property': True  # SoilDepth itself exists with a property
+        },
+        'InfiltrationRate': {
+            'label': 'infiltration rate',
+            'narrower': ['InfiltrationRateClass', 'InfiltrationRateNumeric'],
+            'has_property': False
+        },
+        'SoilCracks': {
+            'label': 'soil cracks',
+            'narrower': ['CracksDepth', 'CracksDistance', 'CracksWidth'],
+            'has_property': False
+        },
+        'RockProperties': {
+            'label': 'rock properties',
+            'narrower': ['RockAbundance', 'RockShape', 'RockSize'],
+            'has_property': False
+        },
+        'FragmentProperties': {
+            'label': 'fragment properties',
+            'narrower': ['FragmentCover', 'FragmentsSize', 'WeatheringFragments'],
+            'has_property': False
+        }
+    }
+
+    # Track which concepts are part of hierarchies
+    concepts_in_hierarchies = set()
+    for hierarchy in hierarchies.values():
+        concepts_in_hierarchies.update(hierarchy['narrower'])
+
+    # Generate SKOS concepts for all original classes
+    for cls, prop in sorted(classes_with_props.items()):
+        label = camel_to_label(cls)
+        concept_uri = SHE[cls]
+        property_uri = GLOSIS_CM[prop]
+
+        # Add triples for the concept
+        g.add((concept_uri, RDF.type, SKOS.Concept))
+        g.add((concept_uri, SKOS.prefLabel, Literal(label, lang="en")))
+        g.add((concept_uri, SKOS.exactMatch, property_uri))
+
+    # Add hierarchical relationships
+    for broader_concept, hierarchy_info in hierarchies.items():
+        broader_uri = SHE[broader_concept]
+
+        # Add broader concept if it doesn't have its own property (i.e., it's a grouping concept)
+        if not hierarchy_info['has_property']:
+            g.add((broader_uri, RDF.type, SKOS.Concept))
+            g.add((broader_uri, SKOS.prefLabel, Literal(hierarchy_info['label'], lang="en")))
+
+        # Add narrower relationships
+        for narrower_concept in hierarchy_info['narrower']:
+            if narrower_concept in classes_with_props:
+                narrower_uri = SHE[narrower_concept]
+                g.add((broader_uri, SKOS.narrower, narrower_uri))
+                g.add((narrower_uri, SKOS.broader, broader_uri))
+
+    # Serialize to file
+    g.serialize(destination=output_file, format='turtle')
+
 def main():
     input_file = '/home/user/soil-vocabs/ontovocabs/glosis/glosis_common.ttl'
     output_file = '/home/user/soil-vocabs/ontovocabs/glosis/glosis_common_skos.ttl'
+    hierarchical_output_file = '/home/user/soil-vocabs/ontovocabs/glosis/glosis_common_skos_hierarchical.ttl'
 
     print("Parsing glosis_common.ttl...")
     classes_with_props, classes_without_props = parse_glosis_common(input_file)
@@ -103,9 +188,41 @@ def main():
     for cls in sorted(classes_without_props):
         print(f"  - {cls}")
 
-    print(f"\nGenerating SKOS vocabulary file: {output_file}")
+    print(f"\nGenerating flat SKOS vocabulary file: {output_file}")
     generate_skos_ttl(classes_with_props, output_file)
-    print("Done!")
+
+    print(f"\nGenerating hierarchical SKOS vocabulary file: {hierarchical_output_file}")
+    print("\nHierarchical structure:")
+    print("  - SoilColour (broader)")
+    print("    - ColourDry (narrower)")
+    print("    - ColourMoist (narrower)")
+    print("  - SoilDepth (broader, has own property)")
+    print("    - SoilDepthBedrock (narrower)")
+    print("    - SoilDepthRootable (narrower)")
+    print("    - SoilDepthRootableClass (narrower)")
+    print("    - SoilDepthSampled (narrower)")
+    print("  - InfiltrationRate (broader)")
+    print("    - InfiltrationRateClass (narrower)")
+    print("    - InfiltrationRateNumeric (narrower)")
+    print("  - SoilCracks (broader)")
+    print("    - CracksDepth (narrower)")
+    print("    - CracksDistance (narrower)")
+    print("    - CracksWidth (narrower)")
+    print("  - RockProperties (broader)")
+    print("    - RockAbundance (narrower)")
+    print("    - RockShape (narrower)")
+    print("    - RockSize (narrower)")
+    print("  - FragmentProperties (broader)")
+    print("    - FragmentCover (narrower)")
+    print("    - FragmentsSize (narrower)")
+    print("    - WeatheringFragments (narrower)")
+    print("\n  Standalone concepts (no hierarchy):")
+    print("    - Texture")
+    print("    - BleachedSand")
+    print("    - OrganicMatterClass")
+
+    generate_hierarchical_skos_ttl(classes_with_props, hierarchical_output_file)
+    print("\nDone!")
 
 if __name__ == '__main__':
     main()
