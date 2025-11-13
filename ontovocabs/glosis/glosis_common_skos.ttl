@@ -1,0 +1,164 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix sosa:  <http://www.w3.org/ns/sosa/> .
+@prefix glosis_cm: <http://w3id.org/glosis/model/common/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix she: <http://example.org/soil-he/vocab/> .
+
+<http://example.org/soil-he/vocab/glosis_common>
+        a                skos:ConceptScheme ;
+        dct:title "GlOSIS Common - SKOS Vocabulary"@en ;
+        dct:description "SKOS-based vocabulary derived from GLOSIS Common ontology"@en ;
+        dct:source <http://w3id.org/glosis/model/common> ;
+        dct:created "2025-11-13"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+she:BleachedSand
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "bleached sand"@en ;
+        skos:exactMatch glosis_cm:bleachedSandProperty ;
+        rdfs:seeAlso glosis_cm:BleachedSand .
+
+she:ColourDry
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "colour dry"@en ;
+        skos:exactMatch glosis_cm:colourDryProperty ;
+        rdfs:seeAlso glosis_cm:ColourDry .
+
+she:ColourMoist
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "colour moist"@en ;
+        skos:exactMatch glosis_cm:colourMoistProperty ;
+        rdfs:seeAlso glosis_cm:ColourMoist .
+
+she:CracksDepth
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "cracks depth"@en ;
+        skos:exactMatch glosis_cm:cracksDepthProperty ;
+        rdfs:seeAlso glosis_cm:CracksDepth .
+
+she:CracksDistance
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "cracks distance"@en ;
+        skos:exactMatch glosis_cm:cracksDistanceProperty ;
+        rdfs:seeAlso glosis_cm:CracksDistance .
+
+she:CracksWidth
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "cracks width"@en ;
+        skos:exactMatch glosis_cm:cracksWidthProperty ;
+        rdfs:seeAlso glosis_cm:CracksWidth .
+
+she:FragmentCover
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "fragment cover"@en ;
+        skos:exactMatch glosis_cm:fragmentCoverProperty ;
+        rdfs:seeAlso glosis_cm:FragmentCover .
+
+she:FragmentsSize
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "fragments size"@en ;
+        skos:exactMatch glosis_cm:fragmentsSizeProperty ;
+        rdfs:seeAlso glosis_cm:FragmentsSize .
+
+she:InfiltrationRateClass
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "infiltration rate class"@en ;
+        skos:exactMatch glosis_cm:infiltrationRateClassProperty ;
+        rdfs:seeAlso glosis_cm:InfiltrationRateClass .
+
+she:InfiltrationRateNumeric
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "infiltration rate numeric"@en ;
+        skos:exactMatch glosis_cm:infiltrationRateNumericProperty ;
+        rdfs:seeAlso glosis_cm:InfiltrationRateNumeric .
+
+she:OrganicMatterClass
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "organic matter class"@en ;
+        skos:exactMatch glosis_cm:organicMatterClassProperty ;
+        rdfs:seeAlso glosis_cm:OrganicMatterClass .
+
+she:RockAbundance
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "rock abundance"@en ;
+        skos:exactMatch glosis_cm:rockAbundanceProperty ;
+        rdfs:seeAlso glosis_cm:RockAbundance .
+
+she:RockShape
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "rock shape"@en ;
+        skos:exactMatch glosis_cm:rockShapeProperty ;
+        rdfs:seeAlso glosis_cm:RockShape .
+
+she:RockSize
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "rock size"@en ;
+        skos:exactMatch glosis_cm:rockSizeProperty ;
+        rdfs:seeAlso glosis_cm:RockSize .
+
+she:SoilDepth
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "soil depth"@en ;
+        skos:exactMatch glosis_cm:soilDepthProperty ;
+        rdfs:seeAlso glosis_cm:SoilDepth .
+
+she:SoilDepthBedrock
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "soil depth bedrock"@en ;
+        skos:exactMatch glosis_cm:soilDepthBedrockProperty ;
+        rdfs:seeAlso glosis_cm:SoilDepthBedrock .
+
+she:SoilDepthRootable
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "soil depth rootable"@en ;
+        skos:exactMatch glosis_cm:soilDepthRootableProperty ;
+        rdfs:seeAlso glosis_cm:SoilDepthRootable .
+
+she:SoilDepthRootableClass
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "soil depth rootable class"@en ;
+        skos:exactMatch glosis_cm:soilDepthRootableClassProperty ;
+        rdfs:seeAlso glosis_cm:SoilDepthRootableClass .
+
+she:SoilDepthSampled
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "soil depth sampled"@en ;
+        skos:exactMatch glosis_cm:soilDepthSampledProperty ;
+        rdfs:seeAlso glosis_cm:SoilDepthSampled .
+
+she:Texture
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "texture"@en ;
+        skos:exactMatch glosis_cm:textureProperty ;
+        rdfs:seeAlso glosis_cm:Texture .
+
+she:WeatheringFragments
+        a skos:Concept ;
+        skos:inScheme <http://example.org/soil-he/vocab/glosis_common> ;
+        skos:prefLabel "weathering fragments"@en ;
+        skos:exactMatch glosis_cm:weatheringFragmentsProperty ;
+        rdfs:seeAlso glosis_cm:WeatheringFragments .
+
