@@ -1,0 +1,24 @@
+@prefix glosis: <http://w3id.org/glosis/model/surface/> .
+@prefix she: <https://soilwise-he.github.io/soil-health#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+she:SaltCover a skos:Concept ;
+    skos:exactMatch glosis:saltCoverProperty ;
+    skos:prefLabel "salt cover"@en .
+
+she:SaltPresence a skos:Concept ;
+    skos:exactMatch glosis:saltPresenceProperty ;
+    skos:prefLabel "salt presence"@en .
+
+she:SaltThickness a skos:Concept ;
+    skos:exactMatch glosis:saltThicknessProperty ;
+    skos:prefLabel "salt thickness"@en .
+
+she:SealingConsistence a skos:Concept ;
+    skos:exactMatch glosis:sealingConsistenceProperty ;
+    skos:prefLabel "sealing consistence"@en .
+
+she:SealingThickness a skos:Concept ;
+    skos:exactMatch glosis:sealingThicknessProperty ;
+    skos:prefLabel "sealing thickness"@en .
+
