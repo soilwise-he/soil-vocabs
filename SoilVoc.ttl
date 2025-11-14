@@ -1029,11 +1029,11 @@ she:SoilCollapsing a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil collapsing"@en .
 
-she:SoilColor a skos:Concept ;
+she:SoilColour a skos:Concept ;
     skos:broader she:SoilPhysicalProperty ;
     skos:exactMatch spp:SoilColor ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil color"@en .
+    skos:prefLabel "soil colour"@en .
 
 she:SoilCompactability a skos:Concept ;
     skos:broader she:SoilPhysicalProperty ;
@@ -4202,7 +4202,7 @@ she:SoilPhysicalProperty a skos:Concept ;
         she:SoilClayMineralogy,
         she:SoilCohesion,
         she:SoilCohesiveness,
-        she:SoilColor,
+        she:SoilColour,
         she:SoilCompactability,
         she:SoilCompressibility,
         she:SoilConsistence,
