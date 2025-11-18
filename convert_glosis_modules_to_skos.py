@@ -259,9 +259,9 @@ def get_module_hierarchies(module_name, classes_with_props):
 def process_module(module_name, prefix, prefix_uri):
     """Process a single GloSIS module"""
 
-    input_file = f'/home/user/soil-vocabs/ontovocabs/glosis/glosis_{module_name}.ttl'
-    output_file = f'/home/user/soil-vocabs/ontovocabs/glosis/glosis_{module_name}_skos.ttl'
-    hierarchical_output_file = f'/home/user/soil-vocabs/ontovocabs/glosis/glosis_{module_name}_skos_hierarchical.ttl'
+    input_file = f'/home/user/soil-vocabs/ontovocabs/glosis/glosis_ori/glosis_{module_name}.ttl'
+    output_file = f'/home/user/soil-vocabs/ontovocabs/glosis/glosis_skos/glosis_{module_name}_skos.ttl'
+    hierarchical_output_file = f'/home/user/soil-vocabs/ontovocabs/glosis/glosis_skos_hier/glosis_{module_name}_skos_hierarchical.ttl'
 
     print(f"\n{'='*60}")
     print(f"Processing module: {module_name}")

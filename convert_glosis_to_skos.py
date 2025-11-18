@@ -167,9 +167,9 @@ def generate_hierarchical_skos_ttl(classes_with_props, output_file):
     g.serialize(destination=output_file, format='turtle')
 
 def main():
-    input_file = '/home/user/soil-vocabs/ontovocabs/glosis/glosis_common.ttl'
-    output_file = '/home/user/soil-vocabs/ontovocabs/glosis/glosis_common_skos.ttl'
-    hierarchical_output_file = '/home/user/soil-vocabs/ontovocabs/glosis/glosis_common_skos_hierarchical.ttl'
+    input_file = '/home/user/soil-vocabs/ontovocabs/glosis/glosis_ori/glosis_common.ttl'
+    output_file = '/home/user/soil-vocabs/ontovocabs/glosis/glosis_skos/glosis_common_skos.ttl'
+    hierarchical_output_file = '/home/user/soil-vocabs/ontovocabs/glosis/glosis_skos_hier/glosis_common_skos_hierarchical.ttl'
 
     print("Parsing glosis_common.ttl...")
     classes_with_props, classes_without_props = parse_glosis_common(input_file)
