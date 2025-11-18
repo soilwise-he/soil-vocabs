@@ -6,7 +6,22 @@ she:ProfileDescriptionStatus a skos:Concept ;
     skos:exactMatch glosis:profileDescriptionStatusProperty ;
     skos:prefLabel "profile description status"@en .
 
+she:SoilClassificationFAO a skos:Concept ;
+    skos:broader she:SoilClassification ;
+    skos:prefLabel "soil classification fao"@en .
+
+she:SoilClassificationUSDA a skos:Concept ;
+    skos:broader she:SoilClassification ;
+    skos:prefLabel "soil classification usda"@en .
+
+she:SoilClassificationWRB a skos:Concept ;
+    skos:broader she:SoilClassification ;
+    skos:prefLabel "soil classification wrb"@en .
+
 she:SoilClassification a skos:Concept ;
     skos:exactMatch glosis:soilTypeProperty ;
+    skos:narrower she:SoilClassificationFAO,
+        she:SoilClassificationUSDA,
+        she:SoilClassificationWRB ;
     skos:prefLabel "soil classification"@en .
 

@@ -73,8 +73,16 @@ def generate_skos_ttl(classes_with_props, output_file, module_prefix_uri):
 
     g.serialize(destination=output_file, format='turtle')
 
-def generate_hierarchical_skos_ttl(classes_with_props, output_file, module_prefix_uri, hierarchies):
-    """Generate hierarchical SKOS-based TTL file with broader/narrower relationships"""
+def generate_hierarchical_skos_ttl(classes_with_props, output_file, module_prefix_uri, hierarchies, additional_concepts=None):
+    """Generate hierarchical SKOS-based TTL file with broader/narrower relationships
+
+    Args:
+        classes_with_props: Dict of classes that have observable properties
+        output_file: Output file path
+        module_prefix_uri: URI for the module namespace
+        hierarchies: Dict defining hierarchical relationships
+        additional_concepts: Dict of additional concepts to include without exactMatch
+    """
 
     g = Graph()
 
@@ -85,7 +93,10 @@ def generate_hierarchical_skos_ttl(classes_with_props, output_file, module_prefi
     g.bind("glosis", MODULE)
     g.bind("skos", SKOS)
 
-    # Generate SKOS concepts for all original classes
+    # Track all concepts (with and without properties)
+    all_concepts = set(classes_with_props.keys())
+
+    # Generate SKOS concepts for all original classes with properties
     for cls, prop in sorted(classes_with_props.items()):
         label = camel_to_label(cls)
         concept_uri = SHE[cls]
@@ -94,6 +105,14 @@ def generate_hierarchical_skos_ttl(classes_with_props, output_file, module_prefi
         g.add((concept_uri, RDF.type, SKOS.Concept))
         g.add((concept_uri, SKOS.prefLabel, Literal(label, lang="en")))
         g.add((concept_uri, SKOS.exactMatch, property_uri))
+
+    # Add additional concepts (without exactMatch)
+    if additional_concepts:
+        for cls, label in additional_concepts.items():
+            concept_uri = SHE[cls]
+            g.add((concept_uri, RDF.type, SKOS.Concept))
+            g.add((concept_uri, SKOS.prefLabel, Literal(label, lang="en")))
+            all_concepts.add(cls)
 
     # Add hierarchical relationships
     for broader_concept, hierarchy_info in hierarchies.items():
@@ -106,12 +125,27 @@ def generate_hierarchical_skos_ttl(classes_with_props, output_file, module_prefi
 
         # Add narrower relationships
         for narrower_concept in hierarchy_info['narrower']:
-            if narrower_concept in classes_with_props:
+            if narrower_concept in all_concepts:
                 narrower_uri = SHE[narrower_concept]
                 g.add((broader_uri, SKOS.narrower, narrower_uri))
                 g.add((narrower_uri, SKOS.broader, broader_uri))
 
     g.serialize(destination=output_file, format='turtle')
+
+def get_additional_concepts(module_name):
+    """Define additional concepts (without observable properties) to include in hierarchical SKOS"""
+
+    additional = {}
+
+    if module_name == 'profile':
+        # These are subclasses of SoilClassification but don't have their own properties
+        additional = {
+            'SoilClassificationUSDA': 'soil classification usda',
+            'SoilClassificationFAO': 'soil classification fao',
+            'SoilClassificationWRB': 'soil classification wrb'
+        }
+
+    return additional
 
 def get_module_hierarchies(module_name, classes_with_props):
     """Define hierarchies for each module based on class naming patterns"""
@@ -219,18 +253,8 @@ def get_module_hierarchies(module_name, classes_with_props):
             }
         }
 
-    # Filter out hierarchies where narrower concepts don't exist in classes_with_props
-    filtered_hierarchies = {}
-    for broader, info in hierarchies.items():
-        existing_narrower = [n for n in info['narrower'] if n in classes_with_props]
-        if existing_narrower:
-            filtered_hierarchies[broader] = {
-                'label': info['label'],
-                'narrower': existing_narrower,
-                'has_property': info.get('has_property', False)
-            }
-
-    return filtered_hierarchies
+    # Return hierarchies without filtering - filtering will be done in process_module
+    return hierarchies
 
 def process_module(module_name, prefix, prefix_uri):
     """Process a single GloSIS module"""
@@ -258,14 +282,29 @@ def process_module(module_name, prefix, prefix_uri):
 
     # Generate hierarchical SKOS
     hierarchies = get_module_hierarchies(module_name, classes_with_props)
+    additional_concepts = get_additional_concepts(module_name)
+
+    # Filter hierarchies to only include narrower concepts that exist
+    all_available_concepts = set(classes_with_props.keys()) | set(additional_concepts.keys())
+    filtered_hierarchies = {}
+    for broader, info in hierarchies.items():
+        existing_narrower = [n for n in info['narrower'] if n in all_available_concepts]
+        if existing_narrower or info.get('has_property', False):
+            filtered_hierarchies[broader] = {
+                'label': info['label'],
+                'narrower': existing_narrower,
+                'has_property': info.get('has_property', False)
+            }
 
     print(f"Generating hierarchical SKOS: {hierarchical_output_file}")
-    if hierarchies:
-        print(f"  With {len(hierarchies)} hierarchies:")
-        for broader, info in hierarchies.items():
+    if filtered_hierarchies:
+        print(f"  With {len(filtered_hierarchies)} hierarchies:")
+        for broader, info in filtered_hierarchies.items():
             print(f"    - {broader} ({len(info['narrower'])} narrower concepts)")
+    if additional_concepts:
+        print(f"  With {len(additional_concepts)} additional concepts (without exactMatch)")
 
-    generate_hierarchical_skos_ttl(classes_with_props, hierarchical_output_file, prefix_uri, hierarchies)
+    generate_hierarchical_skos_ttl(classes_with_props, hierarchical_output_file, prefix_uri, filtered_hierarchies, additional_concepts)
 
     print(f"✓ Module {module_name} completed")
 
