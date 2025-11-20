@@ -7,18 +7,6 @@ she:AcidityExchangeable a skos:Concept ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Aciexc ;
     skos:prefLabel "acidity exchangeable"@en .
 
-she:AluminiumExchangeableBases a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Aluexc ;
-    skos:prefLabel "aluminium exchangeable bases"@en .
-
-she:AluminiumExtractableElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Aluext ;
-    skos:prefLabel "aluminium extractable elements"@en .
-
-she:AluminiumTotalElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Alutot ;
-    skos:prefLabel "aluminium total elements"@en .
-
 she:AvailableWaterHoldingCapacity a skos:Concept ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Avavol ;
     skos:prefLabel "available water holding capacity"@en .
@@ -27,105 +15,17 @@ she:BaseSaturation a skos:Concept ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Bascal ;
     skos:prefLabel "base saturation"@en .
 
-she:BiologicalAbundance a skos:Concept ;
-    skos:exactMatch glosis_lh:biologicalAbundanceProperty ;
-    skos:prefLabel "biological abundance"@en .
-
-she:BiologicalFeatures a skos:Concept ;
-    skos:exactMatch glosis_lh:biologicalFeaturesProperty ;
-    skos:prefLabel "biological features"@en .
-
-she:BoronExtractableElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Borext ;
-    skos:prefLabel "boron extractable elements"@en .
-
-she:BoronTotalElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Bortot ;
-    skos:prefLabel "boron total elements"@en .
-
-she:BoundaryDistinctness a skos:Concept ;
-    skos:exactMatch glosis_lh:boundaryDistinctnessProperty ;
-    skos:prefLabel "boundary distinctness"@en .
-
-she:BoundaryTopography a skos:Concept ;
-    skos:exactMatch glosis_lh:boundaryTopographyProperty ;
-    skos:prefLabel "boundary topography"@en .
-
-she:CadmiumExtractableElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cad ;
-    skos:prefLabel "cadmium extractable elements"@en .
-
-she:CadmiumTotalElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cad ;
-    skos:prefLabel "cadmium total elements"@en .
-
-she:CalciumExchangeableBases a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Calexc ;
-    skos:prefLabel "calcium exchangeable bases"@en .
-
-she:CalciumExtractableElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Calext ;
-    skos:prefLabel "calcium extractable elements"@en .
-
-she:CalciumTotalElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Caltot ;
-    skos:prefLabel "calcium total elements"@en .
-
-she:CarbonatesContent a skos:Concept ;
-    skos:exactMatch glosis_lh:carbonatesContentProperty ;
-    skos:prefLabel "carbonates content"@en .
-
-she:CarbonatesForms a skos:Concept ;
-    skos:exactMatch glosis_lh:carbonatesFormsProperty ;
-    skos:prefLabel "carbonates forms"@en .
-
-she:CationExchangeCapacity a skos:Concept ;
-    skos:exactMatch glosis_lh:cationExchangeCapacityProperty ;
-    skos:prefLabel "cation exchange capacity"@en .
-
-she:CationExchangeCapacityEffective a skos:Concept ;
-    skos:exactMatch glosis_lh:cationExchangeCapacityEffectiveProperty ;
-    skos:prefLabel "cation exchange capacity effective"@en .
-
-she:CationExchangeCapacitycSoil a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-CEC ;
-    skos:prefLabel "cation exchange capacityc soil"@en .
-
 she:CationsSum a skos:Concept ;
     skos:exactMatch glosis_lh:cationsSumProperty ;
     skos:prefLabel "cations sum"@en .
-
-she:CementationContinuity a skos:Concept ;
-    skos:exactMatch glosis_lh:cementationContinuityProperty ;
-    skos:prefLabel "cementation continuity"@en .
-
-she:CementationNature a skos:Concept ;
-    skos:exactMatch glosis_lh:cementationNatureProperty ;
-    skos:prefLabel "cementation nature"@en .
 
 she:CoarseFragments a skos:Concept ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-CoaFra ;
     skos:prefLabel "coarse fragments"@en .
 
-she:CoatingForm a skos:Concept ;
-    skos:exactMatch glosis_lh:coatingFormProperty ;
-    skos:prefLabel "coating form"@en .
-
-she:CoatingLocation a skos:Concept ;
-    skos:exactMatch glosis_lh:coatingLocationProperty ;
-    skos:prefLabel "coating location"@en .
-
-she:ConsistenceMoist a skos:Concept ;
-    skos:exactMatch glosis_lh:consistenceMoistProperty ;
-    skos:prefLabel "consistence moist"@en .
-
-she:CopperExtractableElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Copext ;
-    skos:prefLabel "copper extractable elements"@en .
-
-she:CopperTotalElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Coptot ;
-    skos:prefLabel "copper total elements"@en .
+she:DryConsistency a skos:Concept ;
+    skos:exactMatch glosis_lh:dryConsistencyProperty ;
+    skos:prefLabel "dry consistency"@en .
 
 she:EffectiveCec a skos:Concept ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-ECEC ;
@@ -139,10 +39,6 @@ she:FragmentsClass a skos:Concept ;
     skos:exactMatch glosis_lh:fragmentsClassProperty ;
     skos:prefLabel "fragments class"@en .
 
-she:GypsumContent a skos:Concept ;
-    skos:exactMatch glosis_lh:gypsumContentProperty ;
-    skos:prefLabel "gypsum content"@en .
-
 she:HydraulicConductivity a skos:Concept ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Hydcond ;
     skos:prefLabel "hydraulic conductivity"@en .
@@ -150,58 +46,6 @@ she:HydraulicConductivity a skos:Concept ;
 she:HydrogenExchangeableBases a skos:Concept ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Hydexc ;
     skos:prefLabel "hydrogen exchangeable bases"@en .
-
-she:IronExtractableElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Iroext ;
-    skos:prefLabel "iron extractable elements"@en .
-
-she:IronTotalElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Irotot ;
-    skos:prefLabel "iron total elements"@en .
-
-she:MagnesiumExchangeableBases a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Magexc ;
-    skos:prefLabel "magnesium exchangeable bases"@en .
-
-she:MagnesiumExtractableElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Magext ;
-    skos:prefLabel "magnesium extractable elements"@en .
-
-she:MagnesiumTotalElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Magtot ;
-    skos:prefLabel "magnesium total elements"@en .
-
-she:ManganeseExchangeableBases a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mantot ;
-    skos:prefLabel "manganese exchangeable bases"@en .
-
-she:ManganeseExtractableElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Manext ;
-    skos:prefLabel "manganese extractable elements"@en .
-
-she:ManganeseTotalElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mantot ;
-    skos:prefLabel "manganese total elements"@en .
-
-she:MineralConcAbundance a skos:Concept ;
-    skos:exactMatch glosis_lh:mineralConcAbundanceProperty ;
-    skos:prefLabel "mineral conc abundance"@en .
-
-she:MineralConcColour a skos:Concept ;
-    skos:exactMatch glosis_lh:mineralConcColourProperty ;
-    skos:prefLabel "mineral conc colour"@en .
-
-she:MineralConcHardness a skos:Concept ;
-    skos:exactMatch glosis_lh:mineralConcHardnessProperty ;
-    skos:prefLabel "mineral conc hardness"@en .
-
-she:MineralConcSize a skos:Concept ;
-    skos:exactMatch glosis_lh:mineralConcSizeProperty ;
-    skos:prefLabel "mineral conc size"@en .
-
-she:MineralConcVolume a skos:Concept ;
-    skos:exactMatch glosis_lh:mineralConcVolumeProperty ;
-    skos:prefLabel "mineral conc volume"@en .
 
 she:MineralContent a skos:Concept ;
     skos:exactMatch glosis_lh:mineralContentProperty ;
@@ -211,29 +55,9 @@ she:MineralFragments a skos:Concept ;
     skos:exactMatch glosis_lh:mineralFragmentsProperty ;
     skos:prefLabel "mineral fragments"@en .
 
-she:MoistConsistency a skos:Concept ;
-    skos:exactMatch glosis_lh:moistConsistencyProperty ;
-    skos:prefLabel "moist consistency"@en .
-
 she:MoistureContent a skos:Concept ;
     skos:exactMatch glosis_lh:moistureContentProperty ;
     skos:prefLabel "moisture content"@en .
-
-she:MolybdenumExtractableElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mol ;
-    skos:prefLabel "molybdenum extractable elements"@en .
-
-she:MolybdenumTotalElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mol ;
-    skos:prefLabel "molybdenum total elements"@en .
-
-she:MottlesBoundaryClassification a skos:Concept ;
-    skos:exactMatch glosis_lh:mottlesBoundaryClassificationProperty ;
-    skos:prefLabel "mottles boundary classification"@en .
-
-she:MottlesContrast a skos:Concept ;
-    skos:exactMatch glosis_lh:mottlesContrastProperty ;
-    skos:prefLabel "mottles contrast"@en .
 
 she:NitrogenTotal a skos:Concept ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Nittot ;
@@ -251,121 +75,21 @@ she:PH a skos:Concept ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-pH ;
     skos:prefLabel "ph"@en .
 
-she:PeatDecompostion a skos:Concept ;
-    skos:exactMatch glosis_lh:peatDecompostionProperty ;
-    skos:prefLabel "peat decompostion"@en .
-
-she:PeatDrainage a skos:Concept ;
-    skos:exactMatch glosis_lh:peatDrainageProperty ;
-    skos:prefLabel "peat drainage"@en .
-
-she:PeatVolume a skos:Concept ;
-    skos:exactMatch glosis_lh:peatVolumeProperty ;
-    skos:prefLabel "peat volume"@en .
-
-she:PhosphorusExtractableElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Phoext ;
-    skos:prefLabel "phosphorus extractable elements"@en .
-
-she:PhosphorusRetention a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Phoret ;
-    skos:prefLabel "phosphorus retention"@en .
-
-she:PhosphorusTotalElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Photot ;
-    skos:prefLabel "phosphorus total elements"@en .
+she:ParticleSizeFractionsSum a skos:Concept ;
+    skos:exactMatch glosis_lh:particleSizeFractionsSumProperty ;
+    skos:prefLabel "particle size fractions sum"@en .
 
 she:Plasticity a skos:Concept ;
     skos:exactMatch glosis_lh:plasticityProperty ;
     skos:prefLabel "plasticity"@en .
 
-she:PoresAbundance a skos:Concept ;
-    skos:exactMatch glosis_lh:poresAbundanceProperty ;
-    skos:prefLabel "pores abundance"@en .
-
-she:PoresSize a skos:Concept ;
-    skos:exactMatch glosis_lh:poresSizeProperty ;
-    skos:prefLabel "pores size"@en .
-
-she:Porosity a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Por ;
-    skos:prefLabel "porosity"@en .
-
-she:PorosityClass a skos:Concept ;
-    skos:exactMatch glosis_lh:porosityClassProperty ;
-    skos:prefLabel "porosity class"@en .
-
-she:PotassiumExchangeableBases a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Potexc ;
-    skos:prefLabel "potassium exchangeable bases"@en .
-
-she:PotassiumExtractableElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Potext ;
-    skos:prefLabel "potassium extractable elements"@en .
-
-she:PotassiumTotalElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Pottot ;
-    skos:prefLabel "potassium total elements"@en .
-
-she:RootsAbundance a skos:Concept ;
-    skos:exactMatch glosis_lh:rootsAbundanceProperty ;
-    skos:prefLabel "roots abundance"@en .
-
-she:Salt a skos:Concept ;
-    skos:exactMatch glosis_lh:saltProperty ;
-    skos:prefLabel "salt"@en .
-
-she:SaltContent a skos:Concept ;
-    skos:exactMatch glosis_lh:saltContentProperty ;
-    skos:prefLabel "salt content"@en .
-
 she:SandyTexture a skos:Concept ;
     skos:exactMatch glosis_lh:sandyTextureProperty ;
     skos:prefLabel "sandy texture"@en .
 
-she:SodiumExchangeableBases a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sodexp ;
-    skos:prefLabel "sodium exchangeable bases"@en .
-
-she:SodiumExtractableElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sodext ;
-    skos:prefLabel "sodium extractable elements"@en .
-
-she:SodiumTotalElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sodtot ;
-    skos:prefLabel "sodium total elements"@en .
-
-she:SolubleAnionsTotal a skos:Concept ;
-    skos:exactMatch glosis_lh:solubleAnionsTotalProperty ;
-    skos:prefLabel "soluble anions total"@en .
-
-she:SolubleCationsTotal a skos:Concept ;
-    skos:exactMatch glosis_lh:solubleCationsTotalProperty ;
-    skos:prefLabel "soluble cations total"@en .
-
-she:SolubleSalts a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Solsal ;
-    skos:prefLabel "soluble salts"@en .
-
 she:Stickiness a skos:Concept ;
     skos:exactMatch glosis_lh:stickinessProperty ;
     skos:prefLabel "stickiness"@en .
-
-she:SulfurExtractableElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sulext ;
-    skos:prefLabel "sulfur extractable elements"@en .
-
-she:SulfurTotalElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sultot ;
-    skos:prefLabel "sulfur total elements"@en .
-
-she:TextureFieldClass a skos:Concept ;
-    skos:exactMatch glosis_lh:textureFieldClassProperty ;
-    skos:prefLabel "texture field class"@en .
-
-she:TextureLabClass a skos:Concept ;
-    skos:exactMatch glosis_lh:textureLabClassProperty ;
-    skos:prefLabel "texture lab class"@en .
 
 she:TotalCarbonateEquivalent a skos:Concept ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Ccetot ;
@@ -375,13 +99,50 @@ she:WetPlasticity a skos:Concept ;
     skos:exactMatch glosis_lh:wetPlasticityProperty ;
     skos:prefLabel "wet plasticity"@en .
 
-she:ZincExtractableElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Zinext ;
-    skos:prefLabel "zinc extractable elements"@en .
+she:AluminiumExchangeableBases a skos:Concept ;
+    skos:broader she:Aluminium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Aluexc ;
+    skos:prefLabel "aluminium exchangeable bases"@en .
 
-she:ZincTotalElements a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Zin ;
-    skos:prefLabel "zinc total elements"@en .
+she:AluminiumExtractableElements a skos:Concept ;
+    skos:broader she:Aluminium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Aluext ;
+    skos:prefLabel "aluminium extractable elements"@en .
+
+she:AluminiumTotalElements a skos:Concept ;
+    skos:broader she:Aluminium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Alutot ;
+    skos:prefLabel "aluminium total elements"@en .
+
+she:BiologicalAbundance a skos:Concept ;
+    skos:broader she:Biological ;
+    skos:exactMatch glosis_lh:biologicalAbundanceProperty ;
+    skos:prefLabel "biological abundance"@en .
+
+she:BiologicalFeatures a skos:Concept ;
+    skos:broader she:Biological ;
+    skos:exactMatch glosis_lh:biologicalFeaturesProperty ;
+    skos:prefLabel "biological features"@en .
+
+she:BoronExtractableElements a skos:Concept ;
+    skos:broader she:Boron ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Borext ;
+    skos:prefLabel "boron extractable elements"@en .
+
+she:BoronTotalElements a skos:Concept ;
+    skos:broader she:Boron ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Bortot ;
+    skos:prefLabel "boron total elements"@en .
+
+she:BoundaryDistinctness a skos:Concept ;
+    skos:broader she:Boundary ;
+    skos:exactMatch glosis_lh:boundaryDistinctnessProperty ;
+    skos:prefLabel "boundary distinctness"@en .
+
+she:BoundaryTopography a skos:Concept ;
+    skos:broader she:Boundary ;
+    skos:exactMatch glosis_lh:boundaryTopographyProperty ;
+    skos:prefLabel "boundary topography"@en .
 
 she:BulkDensityFineEarth a skos:Concept ;
     skos:broader she:BulkDensity ;
@@ -403,6 +164,31 @@ she:BulkDensityWholeSoil a skos:Concept ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-BulDfine ;
     skos:prefLabel "bulk density whole soil"@en .
 
+she:CadmiumExtractableElements a skos:Concept ;
+    skos:broader she:Cadmium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cad ;
+    skos:prefLabel "cadmium extractable elements"@en .
+
+she:CadmiumTotalElements a skos:Concept ;
+    skos:broader she:Cadmium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cad ;
+    skos:prefLabel "cadmium total elements"@en .
+
+she:CalciumExchangeableBases a skos:Concept ;
+    skos:broader she:Calcium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Calexc ;
+    skos:prefLabel "calcium exchangeable bases"@en .
+
+she:CalciumExtractableElements a skos:Concept ;
+    skos:broader she:Calcium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Calext ;
+    skos:prefLabel "calcium extractable elements"@en .
+
+she:CalciumTotalElements a skos:Concept ;
+    skos:broader she:Calcium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Caltot ;
+    skos:prefLabel "calcium total elements"@en .
+
 she:CarbonInorganic a skos:Concept ;
     skos:broader she:Carbon ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Carinorg ;
@@ -418,6 +204,31 @@ she:CarbonTotal a skos:Concept ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cartot ;
     skos:prefLabel "carbon total"@en .
 
+she:CarbonatesContent a skos:Concept ;
+    skos:broader she:Carbonates ;
+    skos:exactMatch glosis_lh:carbonatesContentProperty ;
+    skos:prefLabel "carbonates content"@en .
+
+she:CarbonatesForms a skos:Concept ;
+    skos:broader she:Carbonates ;
+    skos:exactMatch glosis_lh:carbonatesFormsProperty ;
+    skos:prefLabel "carbonates forms"@en .
+
+she:CationExchangeCapacityEffective a skos:Concept ;
+    skos:broader she:CationExchangeCapacity ;
+    skos:exactMatch glosis_lh:cationExchangeCapacityEffectiveProperty ;
+    skos:prefLabel "cation exchange capacity effective"@en .
+
+she:CationExchangeCapacitycSoil a skos:Concept ;
+    skos:broader she:CationExchangeCapacity ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-CEC ;
+    skos:prefLabel "cation exchange capacityc soil"@en .
+
+she:CementationContinuity a skos:Concept ;
+    skos:broader she:Cementation ;
+    skos:exactMatch glosis_lh:cementationContinuityProperty ;
+    skos:prefLabel "cementation continuity"@en .
+
 she:CementationDegree a skos:Concept ;
     skos:broader she:Cementation ;
     skos:exactMatch glosis_lh:cementationDegreeProperty ;
@@ -427,6 +238,11 @@ she:CementationFabric a skos:Concept ;
     skos:broader she:Cementation ;
     skos:exactMatch glosis_lh:cementationFabricProperty ;
     skos:prefLabel "cementation fabric"@en .
+
+she:CementationNature a skos:Concept ;
+    skos:broader she:Cementation ;
+    skos:exactMatch glosis_lh:cementationNatureProperty ;
+    skos:prefLabel "cementation nature"@en .
 
 she:CoatingAbundance a skos:Concept ;
     skos:broader she:Coating ;
@@ -438,6 +254,16 @@ she:CoatingContrast a skos:Concept ;
     skos:exactMatch glosis_lh:coatingContrastProperty ;
     skos:prefLabel "coating contrast"@en .
 
+she:CoatingForm a skos:Concept ;
+    skos:broader she:Coating ;
+    skos:exactMatch glosis_lh:coatingFormProperty ;
+    skos:prefLabel "coating form"@en .
+
+she:CoatingLocation a skos:Concept ;
+    skos:broader she:Coating ;
+    skos:exactMatch glosis_lh:coatingLocationProperty ;
+    skos:prefLabel "coating location"@en .
+
 she:CoatingNature a skos:Concept ;
     skos:broader she:Coating ;
     skos:exactMatch glosis_lh:coatingNatureProperty ;
@@ -448,10 +274,25 @@ she:ConsistenceDry a skos:Concept ;
     skos:exactMatch glosis_lh:consistenceDryProperty ;
     skos:prefLabel "consistence dry"@en .
 
-she:DryConsistency a skos:Concept ;
+she:ConsistenceMoist a skos:Concept ;
     skos:broader she:Consistency ;
-    skos:exactMatch glosis_lh:dryConsistencyProperty ;
-    skos:prefLabel "dry consistency"@en .
+    skos:exactMatch glosis_lh:consistenceMoistProperty ;
+    skos:prefLabel "consistence moist"@en .
+
+she:CopperExtractableElements a skos:Concept ;
+    skos:broader she:Copper ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Copext ;
+    skos:prefLabel "copper extractable elements"@en .
+
+she:CopperTotalElements a skos:Concept ;
+    skos:broader she:Copper ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Coptot ;
+    skos:prefLabel "copper total elements"@en .
+
+she:GypsumContent a skos:Concept ;
+    skos:broader she:Gypsum ;
+    skos:exactMatch glosis_lh:gypsumContentProperty ;
+    skos:prefLabel "gypsum content"@en .
 
 she:GypsumForms a skos:Concept ;
     skos:broader she:Gypsum ;
@@ -462,6 +303,61 @@ she:GypsumWeight a skos:Concept ;
     skos:broader she:Gypsum ;
     skos:exactMatch glosis_lh:gypsumWeightProperty ;
     skos:prefLabel "gypsum weight"@en .
+
+she:IronExtractableElements a skos:Concept ;
+    skos:broader she:Iron ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Iroext ;
+    skos:prefLabel "iron extractable elements"@en .
+
+she:IronTotalElements a skos:Concept ;
+    skos:broader she:Iron ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Irotot ;
+    skos:prefLabel "iron total elements"@en .
+
+she:MagnesiumExchangeableBases a skos:Concept ;
+    skos:broader she:Magnesium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Magexc ;
+    skos:prefLabel "magnesium exchangeable bases"@en .
+
+she:MagnesiumExtractableElements a skos:Concept ;
+    skos:broader she:Magnesium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Magext ;
+    skos:prefLabel "magnesium extractable elements"@en .
+
+she:MagnesiumTotalElements a skos:Concept ;
+    skos:broader she:Magnesium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Magtot ;
+    skos:prefLabel "magnesium total elements"@en .
+
+she:ManganeseExchangeableBases a skos:Concept ;
+    skos:broader she:Manganese ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mantot ;
+    skos:prefLabel "manganese exchangeable bases"@en .
+
+she:ManganeseExtractableElements a skos:Concept ;
+    skos:broader she:Manganese ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Manext ;
+    skos:prefLabel "manganese extractable elements"@en .
+
+she:ManganeseTotalElements a skos:Concept ;
+    skos:broader she:Manganese ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mantot ;
+    skos:prefLabel "manganese total elements"@en .
+
+she:MineralConcAbundance a skos:Concept ;
+    skos:broader she:MineralConcretions ;
+    skos:exactMatch glosis_lh:mineralConcAbundanceProperty ;
+    skos:prefLabel "mineral conc abundance"@en .
+
+she:MineralConcColour a skos:Concept ;
+    skos:broader she:MineralConcretions ;
+    skos:exactMatch glosis_lh:mineralConcColourProperty ;
+    skos:prefLabel "mineral conc colour"@en .
+
+she:MineralConcHardness a skos:Concept ;
+    skos:broader she:MineralConcretions ;
+    skos:exactMatch glosis_lh:mineralConcHardnessProperty ;
+    skos:prefLabel "mineral conc hardness"@en .
 
 she:MineralConcKind a skos:Concept ;
     skos:broader she:MineralConcretions ;
@@ -478,15 +374,50 @@ she:MineralConcShape a skos:Concept ;
     skos:exactMatch glosis_lh:mineralConcShapeProperty ;
     skos:prefLabel "mineral conc shape"@en .
 
+she:MineralConcSize a skos:Concept ;
+    skos:broader she:MineralConcretions ;
+    skos:exactMatch glosis_lh:mineralConcSizeProperty ;
+    skos:prefLabel "mineral conc size"@en .
+
+she:MineralConcVolume a skos:Concept ;
+    skos:broader she:MineralConcretions ;
+    skos:exactMatch glosis_lh:mineralConcVolumeProperty ;
+    skos:prefLabel "mineral conc volume"@en .
+
+she:MoistConsistency a skos:Concept ;
+    skos:broader she:Consistency ;
+    skos:exactMatch glosis_lh:moistConsistencyProperty ;
+    skos:prefLabel "moist consistency"@en .
+
+she:MolybdenumExtractableElements a skos:Concept ;
+    skos:broader she:Molybdenum ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mol ;
+    skos:prefLabel "molybdenum extractable elements"@en .
+
+she:MolybdenumTotalElements a skos:Concept ;
+    skos:broader she:Molybdenum ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mol ;
+    skos:prefLabel "molybdenum total elements"@en .
+
 she:MottlesAbundance a skos:Concept ;
     skos:broader she:Mottles ;
     skos:exactMatch glosis_lh:mottlesAbundanceProperty ;
     skos:prefLabel "mottles abundance"@en .
 
+she:MottlesBoundaryClassification a skos:Concept ;
+    skos:broader she:Mottles ;
+    skos:exactMatch glosis_lh:mottlesBoundaryClassificationProperty ;
+    skos:prefLabel "mottles boundary classification"@en .
+
 she:MottlesColour a skos:Concept ;
     skos:broader she:Mottles ;
     skos:exactMatch glosis_lh:mottlesColourProperty ;
     skos:prefLabel "mottles colour"@en .
+
+she:MottlesContrast a skos:Concept ;
+    skos:broader she:Mottles ;
+    skos:exactMatch glosis_lh:mottlesContrastProperty ;
+    skos:prefLabel "mottles contrast"@en .
 
 she:MottlesPresence a skos:Concept ;
     skos:broader she:Mottles ;
@@ -498,23 +429,110 @@ she:MottlesSize a skos:Concept ;
     skos:exactMatch glosis_lh:mottlesSizeProperty ;
     skos:prefLabel "mottles size"@en .
 
-she:ParticleSizeAnalysis a skos:Concept ;
-    skos:narrower she:ParticleSizeFractionsSum ;
-    skos:prefLabel "particle size analysis"@en .
+she:PeatDecompostion a skos:Concept ;
+    skos:broader she:Peat ;
+    skos:exactMatch glosis_lh:peatDecompostionProperty ;
+    skos:prefLabel "peat decompostion"@en .
 
-she:ParticleSizeFractionsSum a skos:Concept ;
-    skos:broader she:ParticleSizeAnalysis ;
-    skos:exactMatch glosis_lh:particleSizeFractionsSumProperty ;
-    skos:prefLabel "particle size fractions sum"@en .
+she:PeatDrainage a skos:Concept ;
+    skos:broader she:Peat ;
+    skos:exactMatch glosis_lh:peatDrainageProperty ;
+    skos:prefLabel "peat drainage"@en .
 
-she:Roots a skos:Concept ;
-    skos:narrower she:RootsPresence ;
-    skos:prefLabel "roots"@en .
+she:PeatVolume a skos:Concept ;
+    skos:broader she:Peat ;
+    skos:exactMatch glosis_lh:peatVolumeProperty ;
+    skos:prefLabel "peat volume"@en .
+
+she:PhosphorusExtractableElements a skos:Concept ;
+    skos:broader she:Phosphorus ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Phoext ;
+    skos:prefLabel "phosphorus extractable elements"@en .
+
+she:PhosphorusRetention a skos:Concept ;
+    skos:broader she:Phosphorus ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Phoret ;
+    skos:prefLabel "phosphorus retention"@en .
+
+she:PhosphorusTotalElements a skos:Concept ;
+    skos:broader she:Phosphorus ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Photot ;
+    skos:prefLabel "phosphorus total elements"@en .
+
+she:PoresAbundance a skos:Concept ;
+    skos:broader she:Pores ;
+    skos:exactMatch glosis_lh:poresAbundanceProperty ;
+    skos:prefLabel "pores abundance"@en .
+
+she:PoresSize a skos:Concept ;
+    skos:broader she:Pores ;
+    skos:exactMatch glosis_lh:poresSizeProperty ;
+    skos:prefLabel "pores size"@en .
+
+she:PorosityClass a skos:Concept ;
+    skos:broader she:Porosity ;
+    skos:exactMatch glosis_lh:porosityClassProperty ;
+    skos:prefLabel "porosity class"@en .
+
+she:PotassiumExchangeableBases a skos:Concept ;
+    skos:broader she:Potassium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Potexc ;
+    skos:prefLabel "potassium exchangeable bases"@en .
+
+she:PotassiumExtractableElements a skos:Concept ;
+    skos:broader she:Potassium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Potext ;
+    skos:prefLabel "potassium extractable elements"@en .
+
+she:PotassiumTotalElements a skos:Concept ;
+    skos:broader she:Potassium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Pottot ;
+    skos:prefLabel "potassium total elements"@en .
+
+she:RootsAbundance a skos:Concept ;
+    skos:broader she:Roots ;
+    skos:exactMatch glosis_lh:rootsAbundanceProperty ;
+    skos:prefLabel "roots abundance"@en .
 
 she:RootsPresence a skos:Concept ;
     skos:broader she:Roots ;
     skos:exactMatch glosis_lh:rootsPresenceProperty ;
     skos:prefLabel "roots presence"@en .
+
+she:SaltContent a skos:Concept ;
+    skos:broader she:Salt ;
+    skos:exactMatch glosis_lh:saltContentProperty ;
+    skos:prefLabel "salt content"@en .
+
+she:SodiumExchangeableBases a skos:Concept ;
+    skos:broader she:Sodium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sodexp ;
+    skos:prefLabel "sodium exchangeable bases"@en .
+
+she:SodiumExtractableElements a skos:Concept ;
+    skos:broader she:Sodium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sodext ;
+    skos:prefLabel "sodium extractable elements"@en .
+
+she:SodiumTotalElements a skos:Concept ;
+    skos:broader she:Sodium ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sodtot ;
+    skos:prefLabel "sodium total elements"@en .
+
+she:SolubleAnionsTotal a skos:Concept ;
+    skos:broader she:Soluble ;
+    skos:exactMatch glosis_lh:solubleAnionsTotalProperty ;
+    skos:prefLabel "soluble anions total"@en .
+
+she:SolubleCationsTotal a skos:Concept ;
+    skos:broader she:Soluble ;
+    skos:exactMatch glosis_lh:solubleCationsTotalProperty ;
+    skos:prefLabel "soluble cations total"@en .
+
+she:SolubleSalts a skos:Concept ;
+    skos:broader she:Soluble ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Solsal ;
+    skos:prefLabel "soluble salts"@en .
 
 she:StructureGrade a skos:Concept ;
     skos:broader she:Structure ;
@@ -526,6 +544,26 @@ she:StructureSize a skos:Concept ;
     skos:exactMatch glosis_lh:structureSizeProperty ;
     skos:prefLabel "structure size"@en .
 
+she:SulfurExtractableElements a skos:Concept ;
+    skos:broader she:Sulfur ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sulext ;
+    skos:prefLabel "sulfur extractable elements"@en .
+
+she:SulfurTotalElements a skos:Concept ;
+    skos:broader she:Sulfur ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sultot ;
+    skos:prefLabel "sulfur total elements"@en .
+
+she:TextureFieldClass a skos:Concept ;
+    skos:broader she:Texture ;
+    skos:exactMatch glosis_lh:textureFieldClassProperty ;
+    skos:prefLabel "texture field class"@en .
+
+she:TextureLabClass a skos:Concept ;
+    skos:broader she:Texture ;
+    skos:exactMatch glosis_lh:textureLabClassProperty ;
+    skos:prefLabel "texture lab class"@en .
+
 she:VoidsClassification a skos:Concept ;
     skos:broader she:Voids ;
     skos:exactMatch glosis_lh:voidsClassificationProperty ;
@@ -536,31 +574,108 @@ she:VoidsDiameter a skos:Concept ;
     skos:exactMatch glosis_lh:voidsDiameterProperty ;
     skos:prefLabel "voids diameter"@en .
 
-she:Cementation a skos:Concept ;
-    skos:narrower she:CementationDegree,
-        she:CementationFabric ;
-    skos:prefLabel "cementation"@en .
+she:ZincExtractableElements a skos:Concept ;
+    skos:broader she:Zinc ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Zinext ;
+    skos:prefLabel "zinc extractable elements"@en .
 
-she:Consistency a skos:Concept ;
-    skos:narrower she:ConsistenceDry,
-        she:DryConsistency ;
-    skos:prefLabel "consistency"@en .
+she:ZincTotalElements a skos:Concept ;
+    skos:broader she:Zinc ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Zin ;
+    skos:prefLabel "zinc total elements"@en .
 
-she:Gypsum a skos:Concept ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Gyp ;
-    skos:narrower she:GypsumForms,
-        she:GypsumWeight ;
-    skos:prefLabel "gypsum"@en .
+she:Biological a skos:Concept ;
+    skos:narrower she:BiologicalAbundance,
+        she:BiologicalFeatures ;
+    skos:prefLabel "biological"@en .
+
+she:Boron a skos:Concept ;
+    skos:narrower she:BoronExtractableElements,
+        she:BoronTotalElements ;
+    skos:prefLabel "boron"@en .
+
+she:Boundary a skos:Concept ;
+    skos:narrower she:BoundaryDistinctness,
+        she:BoundaryTopography ;
+    skos:prefLabel "boundary"@en .
+
+she:Cadmium a skos:Concept ;
+    skos:narrower she:CadmiumExtractableElements,
+        she:CadmiumTotalElements ;
+    skos:prefLabel "cadmium"@en .
+
+she:Carbonates a skos:Concept ;
+    skos:narrower she:CarbonatesContent,
+        she:CarbonatesForms ;
+    skos:prefLabel "carbonates"@en .
+
+she:CationExchangeCapacity a skos:Concept ;
+    skos:exactMatch glosis_lh:cationExchangeCapacityProperty ;
+    skos:narrower she:CationExchangeCapacityEffective,
+        she:CationExchangeCapacitycSoil ;
+    skos:prefLabel "cation exchange capacity"@en .
+
+she:Copper a skos:Concept ;
+    skos:narrower she:CopperExtractableElements,
+        she:CopperTotalElements ;
+    skos:prefLabel "copper"@en .
+
+she:Iron a skos:Concept ;
+    skos:narrower she:IronExtractableElements,
+        she:IronTotalElements ;
+    skos:prefLabel "iron"@en .
+
+she:Molybdenum a skos:Concept ;
+    skos:narrower she:MolybdenumExtractableElements,
+        she:MolybdenumTotalElements ;
+    skos:prefLabel "molybdenum"@en .
+
+she:Pores a skos:Concept ;
+    skos:narrower she:PoresAbundance,
+        she:PoresSize ;
+    skos:prefLabel "pores"@en .
+
+she:Roots a skos:Concept ;
+    skos:narrower she:RootsAbundance,
+        she:RootsPresence ;
+    skos:prefLabel "roots"@en .
 
 she:Structure a skos:Concept ;
     skos:narrower she:StructureGrade,
         she:StructureSize ;
     skos:prefLabel "structure"@en .
 
+she:Sulfur a skos:Concept ;
+    skos:narrower she:SulfurExtractableElements,
+        she:SulfurTotalElements ;
+    skos:prefLabel "sulfur"@en .
+
+she:Texture a skos:Concept ;
+    skos:narrower she:TextureFieldClass,
+        she:TextureLabClass ;
+    skos:prefLabel "texture"@en .
+
 she:Voids a skos:Concept ;
     skos:narrower she:VoidsClassification,
         she:VoidsDiameter ;
     skos:prefLabel "voids"@en .
+
+she:Zinc a skos:Concept ;
+    skos:narrower she:ZincExtractableElements,
+        she:ZincTotalElements ;
+    skos:prefLabel "zinc"@en .
+
+she:Aluminium a skos:Concept ;
+    skos:narrower she:AluminiumExchangeableBases,
+        she:AluminiumExtractableElements,
+        she:AluminiumTotalElements ;
+    skos:prefLabel "aluminium"@en .
+
+she:Calcium a skos:Concept ;
+    skos:narrower she:CalciumExchangeableBases,
+        she:CalciumExtractableElements,
+        she:CalciumTotalElements ;
+    skos:prefLabel "calcium"@en .
 
 she:Carbon a skos:Concept ;
     skos:narrower she:CarbonInorganic,
@@ -568,17 +683,74 @@ she:Carbon a skos:Concept ;
         she:CarbonTotal ;
     skos:prefLabel "carbon"@en .
 
-she:Coating a skos:Concept ;
-    skos:narrower she:CoatingAbundance,
-        she:CoatingContrast,
-        she:CoatingNature ;
-    skos:prefLabel "coating"@en .
+she:Consistency a skos:Concept ;
+    skos:narrower she:ConsistenceDry,
+        she:ConsistenceMoist,
+        she:MoistConsistency ;
+    skos:prefLabel "consistency"@en .
 
-she:MineralConcretions a skos:Concept ;
-    skos:narrower she:MineralConcKind,
-        she:MineralConcNature,
-        she:MineralConcShape ;
-    skos:prefLabel "mineral concretions"@en .
+she:Gypsum a skos:Concept ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Gyp ;
+    skos:narrower she:GypsumContent,
+        she:GypsumForms,
+        she:GypsumWeight ;
+    skos:prefLabel "gypsum"@en .
+
+she:Magnesium a skos:Concept ;
+    skos:narrower she:MagnesiumExchangeableBases,
+        she:MagnesiumExtractableElements,
+        she:MagnesiumTotalElements ;
+    skos:prefLabel "magnesium"@en .
+
+she:Manganese a skos:Concept ;
+    skos:narrower she:ManganeseExchangeableBases,
+        she:ManganeseExtractableElements,
+        she:ManganeseTotalElements ;
+    skos:prefLabel "manganese"@en .
+
+she:Peat a skos:Concept ;
+    skos:narrower she:PeatDecompostion,
+        she:PeatDrainage,
+        she:PeatVolume ;
+    skos:prefLabel "peat"@en .
+
+she:Phosphorus a skos:Concept ;
+    skos:narrower she:PhosphorusExtractableElements,
+        she:PhosphorusRetention,
+        she:PhosphorusTotalElements ;
+    skos:prefLabel "phosphorus"@en .
+
+she:Porosity a skos:Concept ;
+    skos:broader she:Porosity ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Por ;
+    skos:narrower she:Porosity,
+        she:PorosityClass ;
+    skos:prefLabel "porosity"@en .
+
+she:Potassium a skos:Concept ;
+    skos:narrower she:PotassiumExchangeableBases,
+        she:PotassiumExtractableElements,
+        she:PotassiumTotalElements ;
+    skos:prefLabel "potassium"@en .
+
+she:Salt a skos:Concept ;
+    skos:broader she:Salt ;
+    skos:exactMatch glosis_lh:saltProperty ;
+    skos:narrower she:Salt,
+        she:SaltContent ;
+    skos:prefLabel "salt"@en .
+
+she:Sodium a skos:Concept ;
+    skos:narrower she:SodiumExchangeableBases,
+        she:SodiumExtractableElements,
+        she:SodiumTotalElements ;
+    skos:prefLabel "sodium"@en .
+
+she:Soluble a skos:Concept ;
+    skos:narrower she:SolubleAnionsTotal,
+        she:SolubleCationsTotal,
+        she:SolubleSalts ;
+    skos:prefLabel "soluble"@en .
 
 she:BulkDensity a skos:Concept ;
     skos:narrower she:BulkDensityFineEarth,
@@ -587,10 +759,38 @@ she:BulkDensity a skos:Concept ;
         she:BulkDensityWholeSoil ;
     skos:prefLabel "bulk density"@en .
 
+she:Cementation a skos:Concept ;
+    skos:narrower she:CementationContinuity,
+        she:CementationDegree,
+        she:CementationFabric,
+        she:CementationNature ;
+    skos:prefLabel "cementation"@en .
+
+she:Coating a skos:Concept ;
+    skos:narrower she:CoatingAbundance,
+        she:CoatingContrast,
+        she:CoatingForm,
+        she:CoatingLocation,
+        she:CoatingNature ;
+    skos:prefLabel "coating"@en .
+
 she:Mottles a skos:Concept ;
     skos:narrower she:MottlesAbundance,
+        she:MottlesBoundaryClassification,
         she:MottlesColour,
+        she:MottlesContrast,
         she:MottlesPresence,
         she:MottlesSize ;
     skos:prefLabel "mottles"@en .
+
+she:MineralConcretions a skos:Concept ;
+    skos:narrower she:MineralConcAbundance,
+        she:MineralConcColour,
+        she:MineralConcHardness,
+        she:MineralConcKind,
+        she:MineralConcNature,
+        she:MineralConcShape,
+        she:MineralConcSize,
+        she:MineralConcVolume ;
+    skos:prefLabel "mineral concretions"@en .
 

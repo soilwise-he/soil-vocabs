@@ -6,22 +6,6 @@ she:CropClass a skos:Concept ;
     skos:exactMatch glosis_sp:cropClassProperty ;
     skos:prefLabel "crop class"@en .
 
-she:ErosionActivityPeriod a skos:Concept ;
-    skos:exactMatch glosis_sp:erosionActivityPeriodProperty ;
-    skos:prefLabel "erosion activity period"@en .
-
-she:ErosionTotalAreaAffected a skos:Concept ;
-    skos:exactMatch glosis_sp:erosionTotalAreaAffectedProperty ;
-    skos:prefLabel "erosion total area affected"@en .
-
-she:FloodDuration a skos:Concept ;
-    skos:exactMatch glosis_sp:floodDurationProperty ;
-    skos:prefLabel "flood duration"@en .
-
-she:FloodFrequency a skos:Concept ;
-    skos:exactMatch glosis_sp:floodFrequencyProperty ;
-    skos:prefLabel "flood frequency"@en .
-
 she:Geology a skos:Concept ;
     skos:exactMatch glosis_sp:geologyProperty ;
     skos:prefLabel "geology"@en .
@@ -37,14 +21,6 @@ she:HumanInfluenceClass a skos:Concept ;
 she:KoeppenClass a skos:Concept ;
     skos:exactMatch glosis_sp:koeppenClassProperty ;
     skos:prefLabel "koeppen class"@en .
-
-she:LandUseClass a skos:Concept ;
-    skos:exactMatch glosis_sp:landUseClassProperty ;
-    skos:prefLabel "land use class"@en .
-
-she:LandUseShrubs a skos:Concept ;
-    skos:exactMatch glosis_sp:shrubsAbundanceProperty ;
-    skos:prefLabel "land use shrubs"@en .
 
 she:LandformComplex a skos:Concept ;
     skos:exactMatch glosis_sp:landformComplexProperty ;
@@ -62,18 +38,6 @@ she:Physiography a skos:Concept ;
     skos:exactMatch glosis_sp:physiographyProperty ;
     skos:prefLabel "physiography"@en .
 
-she:RockOutcropsCover a skos:Concept ;
-    skos:exactMatch glosis_sp:rockOutcropsCoverProperty ;
-    skos:prefLabel "rock outcrops cover"@en .
-
-she:RockOutcropsDistance a skos:Concept ;
-    skos:exactMatch glosis_sp:rockOutcropsDistanceProperty ;
-    skos:prefLabel "rock outcrops distance"@en .
-
-she:SlopePathways a skos:Concept ;
-    skos:exactMatch glosis_sp:slopePathwaysProperty ;
-    skos:prefLabel "slope pathways"@en .
-
 she:SoilCarbonDensity a skos:Concept ;
     skos:exactMatch glosis_sp:soilCarbonDensityProperty ;
     skos:prefLabel "soil carbon density"@en .
@@ -90,17 +54,10 @@ she:VegetationClass a skos:Concept ;
     skos:exactMatch glosis_sp:vegetationClassProperty ;
     skos:prefLabel "vegetation class"@en .
 
-she:WeatherCurrent a skos:Concept ;
-    skos:exactMatch glosis_sp:weatherConditionsCurrentProperty ;
-    skos:prefLabel "weather current"@en .
-
-she:WeatherPast a skos:Concept ;
-    skos:exactMatch glosis_sp:weatherConditionsPastProperty ;
-    skos:prefLabel "weather past"@en .
-
-she:WeatheringRock a skos:Concept ;
-    skos:exactMatch glosis_sp:weatheringRockProperty ;
-    skos:prefLabel "weathering rock"@en .
+she:ErosionActivityPeriod a skos:Concept ;
+    skos:broader she:ErosionProperties ;
+    skos:exactMatch glosis_sp:erosionActivityPeriodProperty ;
+    skos:prefLabel "erosion activity period"@en .
 
 she:ErosionAreaAffected a skos:Concept ;
     skos:broader she:ErosionProperties ;
@@ -117,10 +74,30 @@ she:ErosionDegree a skos:Concept ;
     skos:exactMatch glosis_sp:erosionDegreeProperty ;
     skos:prefLabel "erosion degree"@en .
 
+she:ErosionTotalAreaAffected a skos:Concept ;
+    skos:broader she:ErosionProperties ;
+    skos:exactMatch glosis_sp:erosionTotalAreaAffectedProperty ;
+    skos:prefLabel "erosion total area affected"@en .
+
+she:FloodDuration a skos:Concept ;
+    skos:broader she:Flood ;
+    skos:exactMatch glosis_sp:floodDurationProperty ;
+    skos:prefLabel "flood duration"@en .
+
+she:FloodFrequency a skos:Concept ;
+    skos:broader she:Flood ;
+    skos:exactMatch glosis_sp:floodFrequencyProperty ;
+    skos:prefLabel "flood frequency"@en .
+
 she:LandUseBareCover a skos:Concept ;
     skos:broader she:LandUse ;
     skos:exactMatch glosis_sp:bareCoverAbundanceProperty ;
     skos:prefLabel "land use bare cover"@en .
+
+she:LandUseClass a skos:Concept ;
+    skos:broader she:LandUse ;
+    skos:exactMatch glosis_sp:landUseClassProperty ;
+    skos:prefLabel "land use class"@en .
 
 she:LandUseForest a skos:Concept ;
     skos:broader she:LandUse ;
@@ -131,6 +108,11 @@ she:LandUseGrass a skos:Concept ;
     skos:broader she:LandUse ;
     skos:exactMatch glosis_sp:grassAbundanceProperty ;
     skos:prefLabel "land use grass"@en .
+
+she:LandUseShrubs a skos:Concept ;
+    skos:broader she:LandUse ;
+    skos:exactMatch glosis_sp:shrubsAbundanceProperty ;
+    skos:prefLabel "land use shrubs"@en .
 
 she:ParentDeposition a skos:Concept ;
     skos:broader she:ParentMaterial ;
@@ -147,42 +129,84 @@ she:ParentTextureUnconsolidated a skos:Concept ;
     skos:exactMatch glosis_sp:parentTextureUnconsolidatedProperty ;
     skos:prefLabel "parent texture unconsolidated"@en .
 
+she:RockOutcropsCover a skos:Concept ;
+    skos:broader she:RockOutcrops ;
+    skos:exactMatch glosis_sp:rockOutcropsCoverProperty ;
+    skos:prefLabel "rock outcrops cover"@en .
+
+she:RockOutcropsDistance a skos:Concept ;
+    skos:broader she:RockOutcrops ;
+    skos:exactMatch glosis_sp:rockOutcropsDistanceProperty ;
+    skos:prefLabel "rock outcrops distance"@en .
+
 she:SlopeForm a skos:Concept ;
     skos:broader she:SlopeProperties ;
     skos:exactMatch glosis_sp:slopeFormProperty ;
     skos:prefLabel "slope form"@en .
 
-she:SlopeGradientClass a skos:Concept ;
+she:SlopePathways a skos:Concept ;
     skos:broader she:SlopeProperties ;
+    skos:exactMatch glosis_sp:slopePathwaysProperty ;
+    skos:prefLabel "slope pathways"@en .
+
+she:WeatherCurrent a skos:Concept ;
+    skos:broader she:Weather ;
+    skos:exactMatch glosis_sp:weatherConditionsCurrentProperty ;
+    skos:prefLabel "weather current"@en .
+
+she:WeatherPast a skos:Concept ;
+    skos:broader she:Weather ;
+    skos:exactMatch glosis_sp:weatherConditionsPastProperty ;
+    skos:prefLabel "weather past"@en .
+
+she:WeatheringRock a skos:Concept ;
+    skos:broader she:Weather ;
+    skos:exactMatch glosis_sp:weatheringRockProperty ;
+    skos:prefLabel "weathering rock"@en .
+
+she:Flood a skos:Concept ;
+    skos:narrower she:FloodDuration,
+        she:FloodFrequency ;
+    skos:prefLabel "flood"@en .
+
+she:RockOutcrops a skos:Concept ;
+    skos:narrower she:RockOutcropsCover,
+        she:RockOutcropsDistance ;
+    skos:prefLabel "rock outcrops"@en .
+
+she:SlopeGradient a skos:Concept ;
+    skos:narrower she:SlopeGradientClass,
+        she:SlopeGradientNumeric ;
+    skos:prefLabel "slope gradient"@en .
+
+she:SlopeGradientClass a skos:Concept ;
+    skos:broader she:SlopeGradient,
+        she:SlopeProperties ;
     skos:exactMatch glosis_sp:slopeGradientClassProperty ;
     skos:prefLabel "slope gradient class"@en .
 
 she:SlopeGradientNumeric a skos:Concept ;
-    skos:broader she:SlopeProperties ;
+    skos:broader she:SlopeGradient,
+        she:SlopeProperties ;
     skos:exactMatch glosis_sp:slopeGradientProperty ;
     skos:prefLabel "slope gradient numeric"@en .
 
+she:SlopeOrientation a skos:Concept ;
+    skos:narrower she:SlopeOrientationClass,
+        she:SlopeOrientationNumeric ;
+    skos:prefLabel "slope orientation"@en .
+
 she:SlopeOrientationClass a skos:Concept ;
-    skos:broader she:SlopeProperties ;
+    skos:broader she:SlopeOrientation,
+        she:SlopeProperties ;
     skos:exactMatch glosis_sp:slopeOrientationClassProperty ;
     skos:prefLabel "slope orientation class"@en .
 
 she:SlopeOrientationNumeric a skos:Concept ;
-    skos:broader she:SlopeProperties ;
+    skos:broader she:SlopeOrientation,
+        she:SlopeProperties ;
     skos:exactMatch glosis_sp:slopeOrientationProperty ;
     skos:prefLabel "slope orientation numeric"@en .
-
-she:ErosionProperties a skos:Concept ;
-    skos:narrower she:ErosionAreaAffected,
-        she:ErosionCategory,
-        she:ErosionDegree ;
-    skos:prefLabel "erosion properties"@en .
-
-she:LandUse a skos:Concept ;
-    skos:narrower she:LandUseBareCover,
-        she:LandUseForest,
-        she:LandUseGrass ;
-    skos:prefLabel "land use"@en .
 
 she:ParentMaterial a skos:Concept ;
     skos:narrower she:ParentDeposition,
@@ -190,11 +214,34 @@ she:ParentMaterial a skos:Concept ;
         she:ParentTextureUnconsolidated ;
     skos:prefLabel "parent material"@en .
 
+she:Weather a skos:Concept ;
+    skos:narrower she:WeatherCurrent,
+        she:WeatherPast,
+        she:WeatheringRock ;
+    skos:prefLabel "weather"@en .
+
+she:ErosionProperties a skos:Concept ;
+    skos:narrower she:ErosionActivityPeriod,
+        she:ErosionAreaAffected,
+        she:ErosionCategory,
+        she:ErosionDegree,
+        she:ErosionTotalAreaAffected ;
+    skos:prefLabel "erosion properties"@en .
+
+she:LandUse a skos:Concept ;
+    skos:narrower she:LandUseBareCover,
+        she:LandUseClass,
+        she:LandUseForest,
+        she:LandUseGrass,
+        she:LandUseShrubs ;
+    skos:prefLabel "land use"@en .
+
 she:SlopeProperties a skos:Concept ;
     skos:narrower she:SlopeForm,
         she:SlopeGradientClass,
         she:SlopeGradientNumeric,
         she:SlopeOrientationClass,
-        she:SlopeOrientationNumeric ;
+        she:SlopeOrientationNumeric,
+        she:SlopePathways ;
     skos:prefLabel "slope properties"@en .
 

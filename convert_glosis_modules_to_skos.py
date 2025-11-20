@@ -209,22 +209,47 @@ def get_module_hierarchies(module_name, classes_with_props):
         hierarchies = {
             'SlopeProperties': {
                 'label': 'slope properties',
-                'narrower': ['SlopeOrientationClass', 'SlopeOrientationNumeric', 'SlopeForm', 'SlopeGradientClass', 'SlopeGradientNumeric'],
+                'narrower': ['SlopeOrientationClass', 'SlopeOrientationNumeric', 'SlopeForm', 'SlopeGradientClass', 'SlopeGradientNumeric', 'SlopePathways'],
+                'has_property': False
+            },
+            'SlopeGradient': {
+                'label': 'slope gradient',
+                'narrower': ['SlopeGradientClass', 'SlopeGradientNumeric'],
+                'has_property': False
+            },
+            'SlopeOrientation': {
+                'label': 'slope orientation',
+                'narrower': ['SlopeOrientationClass', 'SlopeOrientationNumeric'],
                 'has_property': False
             },
             'ErosionProperties': {
                 'label': 'erosion properties',
-                'narrower': ['ErosionCategory', 'ErosionAreaAffected', 'ErosionDegree'],
+                'narrower': ['ErosionCategory', 'ErosionAreaAffected', 'ErosionDegree', 'ErosionActivityPeriod', 'ErosionTotalAreaAffected'],
                 'has_property': False
             },
             'LandUse': {
                 'label': 'land use',
-                'narrower': ['LandUseGrass', 'LandUseBareCover', 'LandUseForest'],
+                'narrower': ['LandUseGrass', 'LandUseBareCover', 'LandUseForest', 'LandUseClass', 'LandUseShrubs'],
                 'has_property': False
             },
             'ParentMaterial': {
                 'label': 'parent material',
                 'narrower': ['ParentTextureUnconsolidated', 'ParentLithology', 'ParentDeposition'],
+                'has_property': False
+            },
+            'RockOutcrops': {
+                'label': 'rock outcrops',
+                'narrower': ['RockOutcropsCover', 'RockOutcropsDistance'],
+                'has_property': False
+            },
+            'Flood': {
+                'label': 'flood',
+                'narrower': ['FloodDuration', 'FloodFrequency'],
+                'has_property': False
+            },
+            'Weather': {
+                'label': 'weather',
+                'narrower': ['WeatherCurrent', 'WeatherPast', 'WeatheringRock'],
                 'has_property': False
             }
         }
@@ -250,24 +275,29 @@ def get_module_hierarchies(module_name, classes_with_props):
                 'narrower': ['CarbonInorganic', 'CarbonOrganic', 'CarbonTotal'],
                 'has_property': False
             },
+            'Carbonates': {
+                'label': 'carbonates',
+                'narrower': ['CarbonatesContent', 'CarbonatesForms'],
+                'has_property': False
+            },
             'Mottles': {
                 'label': 'mottles',
-                'narrower': ['MottlesPresence', 'MottlesColour', 'MottlesSize', 'MottlesAbundance'],
+                'narrower': ['MottlesPresence', 'MottlesColour', 'MottlesSize', 'MottlesAbundance', 'MottlesBoundaryClassification', 'MottlesContrast'],
                 'has_property': False
             },
             'Coating': {
                 'label': 'coating',
-                'narrower': ['CoatingNature', 'CoatingContrast', 'CoatingAbundance'],
+                'narrower': ['CoatingNature', 'CoatingContrast', 'CoatingAbundance', 'CoatingForm', 'CoatingLocation'],
                 'has_property': False
             },
             'MineralConcretions': {
                 'label': 'mineral concretions',
-                'narrower': ['MineralConcKind', 'MineralConcNature', 'MineralConcShape'],
+                'narrower': ['MineralConcKind', 'MineralConcNature', 'MineralConcShape', 'MineralConcAbundance', 'MineralConcColour', 'MineralConcHardness', 'MineralConcSize', 'MineralConcVolume'],
                 'has_property': False
             },
             'Cementation': {
                 'label': 'cementation',
-                'narrower': ['CementationDegree', 'CementationFabric'],
+                'narrower': ['CementationDegree', 'CementationFabric', 'CementationContinuity', 'CementationNature'],
                 'has_property': False
             },
             'Structure': {
@@ -282,22 +312,142 @@ def get_module_hierarchies(module_name, classes_with_props):
             },
             'Consistency': {
                 'label': 'consistency',
-                'narrower': ['DryConsistency', 'ConsistenceDry'],
+                'narrower': ['ConsistenceDry', 'ConsistenceMoist', 'MoistConsistency'],
                 'has_property': False
             },
             'Roots': {
                 'label': 'roots',
-                'narrower': ['RootsPresence'],
+                'narrower': ['RootsPresence', 'RootsAbundance'],
                 'has_property': False
             },
             'Gypsum': {
                 'label': 'gypsum',
-                'narrower': ['GypsumForms', 'GypsumWeight'],
-                'has_property': False
+                'narrower': ['GypsumForms', 'GypsumWeight', 'GypsumContent'],
+                'has_property': True
             },
             'ParticleSizeAnalysis': {
                 'label': 'particle size analysis',
-                'narrower': ['Sand', 'Silt', 'ParticleSizeFractionsSum'],
+                'narrower': ['Sand', 'Silt'],
+                'has_property': False
+            },
+            'Texture': {
+                'label': 'texture',
+                'narrower': ['TextureFieldClass', 'TextureLabClass'],
+                'has_property': False
+            },
+            'Pores': {
+                'label': 'pores',
+                'narrower': ['PoresAbundance', 'PoresSize'],
+                'has_property': False
+            },
+            'Porosity': {
+                'label': 'porosity',
+                'narrower': ['Porosity', 'PorosityClass'],
+                'has_property': False
+            },
+            'Boundary': {
+                'label': 'boundary',
+                'narrower': ['BoundaryDistinctness', 'BoundaryTopography'],
+                'has_property': False
+            },
+            'Biological': {
+                'label': 'biological',
+                'narrower': ['BiologicalAbundance', 'BiologicalFeatures'],
+                'has_property': False
+            },
+            'Peat': {
+                'label': 'peat',
+                'narrower': ['PeatDecompostion', 'PeatDrainage', 'PeatVolume'],
+                'has_property': False
+            },
+            'Aluminium': {
+                'label': 'aluminium',
+                'narrower': ['AluminiumExchangeableBases', 'AluminiumExtractableElements', 'AluminiumTotalElements'],
+                'has_property': False
+            },
+            'Boron': {
+                'label': 'boron',
+                'narrower': ['BoronExtractableElements', 'BoronTotalElements'],
+                'has_property': False
+            },
+            'Cadmium': {
+                'label': 'cadmium',
+                'narrower': ['CadmiumExtractableElements', 'CadmiumTotalElements'],
+                'has_property': False
+            },
+            'Calcium': {
+                'label': 'calcium',
+                'narrower': ['CalciumExchangeableBases', 'CalciumExtractableElements', 'CalciumTotalElements'],
+                'has_property': False
+            },
+            'Copper': {
+                'label': 'copper',
+                'narrower': ['CopperExtractableElements', 'CopperTotalElements'],
+                'has_property': False
+            },
+            'Iron': {
+                'label': 'iron',
+                'narrower': ['IronExtractableElements', 'IronTotalElements'],
+                'has_property': False
+            },
+            'Magnesium': {
+                'label': 'magnesium',
+                'narrower': ['MagnesiumExchangeableBases', 'MagnesiumExtractableElements', 'MagnesiumTotalElements'],
+                'has_property': False
+            },
+            'Manganese': {
+                'label': 'manganese',
+                'narrower': ['ManganeseExchangeableBases', 'ManganeseExtractableElements', 'ManganeseTotalElements'],
+                'has_property': False
+            },
+            'Molybdenum': {
+                'label': 'molybdenum',
+                'narrower': ['MolybdenumExtractableElements', 'MolybdenumTotalElements'],
+                'has_property': False
+            },
+            'Phosphorus': {
+                'label': 'phosphorus',
+                'narrower': ['PhosphorusExtractableElements', 'PhosphorusRetention', 'PhosphorusTotalElements'],
+                'has_property': False
+            },
+            'Potassium': {
+                'label': 'potassium',
+                'narrower': ['PotassiumExchangeableBases', 'PotassiumExtractableElements', 'PotassiumTotalElements'],
+                'has_property': False
+            },
+            'Sodium': {
+                'label': 'sodium',
+                'narrower': ['SodiumExchangeableBases', 'SodiumExtractableElements', 'SodiumTotalElements'],
+                'has_property': False
+            },
+            'Sulfur': {
+                'label': 'sulfur',
+                'narrower': ['SulfurExtractableElements', 'SulfurTotalElements'],
+                'has_property': False
+            },
+            'Zinc': {
+                'label': 'zinc',
+                'narrower': ['ZincExtractableElements', 'ZincTotalElements'],
+                'has_property': False
+            },
+            'CationExchangeCapacity': {
+                'label': 'cation exchange capacity',
+                'narrower': ['CationExchangeCapacityEffective', 'CationExchangeCapacitycSoil'],
+                'has_property': True
+            },
+            'Salt': {
+                'label': 'salt',
+                'narrower': ['Salt', 'SaltContent'],
+                'has_property': False
+            },
+            'Soluble': {
+                'label': 'soluble',
+                'narrower': ['SolubleAnionsTotal', 'SolubleCationsTotal', 'SolubleSalts'],
+                'has_property': False
+            },
+            'Flood': {
+                'label': 'flood',
+                'narrower': ['FloodDuration', 'FloodFrequency'],
                 'has_property': False
             }
         }
