@@ -36,12 +36,19 @@ def parse_glosis_module(ttl_file, prefix):
 
         if class_block_match:
             class_block = class_block_match.group(0)
-            # Find property in this block
+
+            # First, check for property in the same module
             prop_match = re.search(rf'owl:hasValue\s+{prefix}:(\w+Property)', class_block)
             if prop_match:
                 prop_name = prop_match.group(1)
                 if prop_name in properties:
-                    class_to_property[cls] = prop_name
+                    class_to_property[cls] = (prop_name, prefix)
+            else:
+                # Check for property in glosis_cl module (code lists)
+                cl_prop_match = re.search(r'owl:hasValue\s+glosis_cl:([\w-]+)', class_block)
+                if cl_prop_match:
+                    cl_prop_name = cl_prop_match.group(1)
+                    class_to_property[cls] = (cl_prop_name, 'glosis_cl')
 
     # Separate classes with and without properties
     classes_with_props = {cls: prop for cls, prop in class_to_property.items()}
@@ -56,16 +63,31 @@ def generate_skos_ttl(classes_with_props, output_file, module_prefix_uri, module
 
     SHE = Namespace("https://soilwise-he.github.io/soil-health#")
     MODULE = Namespace(module_prefix_uri)
+    GLOSIS_CL = Namespace("http://w3id.org/glosis/model/codelists/")
 
     g.bind("she", SHE)
     g.bind(module_prefix, MODULE)
     g.bind("skos", SKOS)
 
-    for cls, prop in sorted(classes_with_props.items()):
-        label = camel_to_label(cls)
+    # Check if any glosis_cl properties are used
+    has_cl_props = any(isinstance(prop, tuple) and prop[1] == 'glosis_cl' for prop in classes_with_props.values())
+    if has_cl_props:
+        g.bind("glosis_cl", GLOSIS_CL)
 
+    for cls, prop_info in sorted(classes_with_props.items()):
+        label = camel_to_label(cls)
         concept_uri = SHE[cls]
-        property_uri = MODULE[prop]
+
+        # Handle both old format (string) and new format (tuple)
+        if isinstance(prop_info, tuple):
+            prop_name, prop_prefix = prop_info
+            if prop_prefix == 'glosis_cl':
+                property_uri = GLOSIS_CL[prop_name]
+            else:
+                property_uri = MODULE[prop_name]
+        else:
+            # Old format for backward compatibility
+            property_uri = MODULE[prop_info]
 
         g.add((concept_uri, RDF.type, SKOS.Concept))
         g.add((concept_uri, SKOS.prefLabel, Literal(label, lang="en")))
@@ -89,19 +111,35 @@ def generate_hierarchical_skos_ttl(classes_with_props, output_file, module_prefi
 
     SHE = Namespace("https://soilwise-he.github.io/soil-health#")
     MODULE = Namespace(module_prefix_uri)
+    GLOSIS_CL = Namespace("http://w3id.org/glosis/model/codelists/")
 
     g.bind("she", SHE)
     g.bind(module_prefix, MODULE)
     g.bind("skos", SKOS)
 
+    # Check if any glosis_cl properties are used
+    has_cl_props = any(isinstance(prop, tuple) and prop[1] == 'glosis_cl' for prop in classes_with_props.values())
+    if has_cl_props:
+        g.bind("glosis_cl", GLOSIS_CL)
+
     # Track all concepts (with and without properties)
     all_concepts = set(classes_with_props.keys())
 
     # Generate SKOS concepts for all original classes with properties
-    for cls, prop in sorted(classes_with_props.items()):
+    for cls, prop_info in sorted(classes_with_props.items()):
         label = camel_to_label(cls)
         concept_uri = SHE[cls]
-        property_uri = MODULE[prop]
+
+        # Handle both old format (string) and new format (tuple)
+        if isinstance(prop_info, tuple):
+            prop_name, prop_prefix = prop_info
+            if prop_prefix == 'glosis_cl':
+                property_uri = GLOSIS_CL[prop_name]
+            else:
+                property_uri = MODULE[prop_name]
+        else:
+            # Old format for backward compatibility
+            property_uri = MODULE[prop_info]
 
         g.add((concept_uri, RDF.type, SKOS.Concept))
         g.add((concept_uri, SKOS.prefLabel, Literal(label, lang="en")))
@@ -202,6 +240,16 @@ def get_module_hierarchies(module_name, classes_with_props):
 
     elif module_name == 'layer_horizon':
         hierarchies = {
+            'BulkDensity': {
+                'label': 'bulk density',
+                'narrower': ['BulkDensityFineEarth', 'BulkDensityMineral', 'BulkDensityPeat', 'BulkDensityWholeSoil'],
+                'has_property': False
+            },
+            'Carbon': {
+                'label': 'carbon',
+                'narrower': ['CarbonInorganic', 'CarbonOrganic', 'CarbonTotal'],
+                'has_property': False
+            },
             'Mottles': {
                 'label': 'mottles',
                 'narrower': ['MottlesPresence', 'MottlesColour', 'MottlesSize', 'MottlesAbundance'],
