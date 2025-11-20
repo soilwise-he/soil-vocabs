@@ -49,7 +49,7 @@ def parse_glosis_module(ttl_file, prefix):
 
     return classes_with_props, classes_without_props
 
-def generate_skos_ttl(classes_with_props, output_file, module_prefix_uri):
+def generate_skos_ttl(classes_with_props, output_file, module_prefix_uri, module_prefix):
     """Generate flat SKOS-based TTL file using rdflib"""
 
     g = Graph()
@@ -58,7 +58,7 @@ def generate_skos_ttl(classes_with_props, output_file, module_prefix_uri):
     MODULE = Namespace(module_prefix_uri)
 
     g.bind("she", SHE)
-    g.bind("glosis", MODULE)
+    g.bind(module_prefix, MODULE)
     g.bind("skos", SKOS)
 
     for cls, prop in sorted(classes_with_props.items()):
@@ -73,7 +73,7 @@ def generate_skos_ttl(classes_with_props, output_file, module_prefix_uri):
 
     g.serialize(destination=output_file, format='turtle')
 
-def generate_hierarchical_skos_ttl(classes_with_props, output_file, module_prefix_uri, hierarchies, additional_concepts=None):
+def generate_hierarchical_skos_ttl(classes_with_props, output_file, module_prefix_uri, hierarchies, module_prefix, additional_concepts=None):
     """Generate hierarchical SKOS-based TTL file with broader/narrower relationships
 
     Args:
@@ -81,6 +81,7 @@ def generate_hierarchical_skos_ttl(classes_with_props, output_file, module_prefi
         output_file: Output file path
         module_prefix_uri: URI for the module namespace
         hierarchies: Dict defining hierarchical relationships
+        module_prefix: Prefix string to use for the module namespace
         additional_concepts: Dict of additional concepts to include without exactMatch
     """
 
@@ -90,7 +91,7 @@ def generate_hierarchical_skos_ttl(classes_with_props, output_file, module_prefi
     MODULE = Namespace(module_prefix_uri)
 
     g.bind("she", SHE)
-    g.bind("glosis", MODULE)
+    g.bind(module_prefix, MODULE)
     g.bind("skos", SKOS)
 
     # Track all concepts (with and without properties)
@@ -278,7 +279,7 @@ def process_module(module_name, prefix, prefix_uri):
 
     # Generate flat SKOS
     print(f"\nGenerating flat SKOS: {output_file}")
-    generate_skos_ttl(classes_with_props, output_file, prefix_uri)
+    generate_skos_ttl(classes_with_props, output_file, prefix_uri, prefix)
 
     # Generate hierarchical SKOS
     hierarchies = get_module_hierarchies(module_name, classes_with_props)
@@ -304,7 +305,7 @@ def process_module(module_name, prefix, prefix_uri):
     if additional_concepts:
         print(f"  With {len(additional_concepts)} additional concepts (without exactMatch)")
 
-    generate_hierarchical_skos_ttl(classes_with_props, hierarchical_output_file, prefix_uri, filtered_hierarchies, additional_concepts)
+    generate_hierarchical_skos_ttl(classes_with_props, hierarchical_output_file, prefix_uri, filtered_hierarchies, prefix, additional_concepts)
 
     print(f"✓ Module {module_name} completed")
 

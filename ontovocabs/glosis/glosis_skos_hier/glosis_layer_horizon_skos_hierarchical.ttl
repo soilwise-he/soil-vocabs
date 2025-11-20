@@ -1,273 +1,273 @@
-@prefix glosis: <http://w3id.org/glosis/model/layerhorizon/> .
+@prefix glosis_lh: <http://w3id.org/glosis/model/layerhorizon/> .
 @prefix she: <https://soilwise-he.github.io/soil-health#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 she:BiologicalAbundance a skos:Concept ;
-    skos:exactMatch glosis:biologicalAbundanceProperty ;
+    skos:exactMatch glosis_lh:biologicalAbundanceProperty ;
     skos:prefLabel "biological abundance"@en .
 
 she:BiologicalFeatures a skos:Concept ;
-    skos:exactMatch glosis:biologicalFeaturesProperty ;
+    skos:exactMatch glosis_lh:biologicalFeaturesProperty ;
     skos:prefLabel "biological features"@en .
 
 she:BoundaryDistinctness a skos:Concept ;
-    skos:exactMatch glosis:boundaryDistinctnessProperty ;
+    skos:exactMatch glosis_lh:boundaryDistinctnessProperty ;
     skos:prefLabel "boundary distinctness"@en .
 
 she:BoundaryTopography a skos:Concept ;
-    skos:exactMatch glosis:boundaryTopographyProperty ;
+    skos:exactMatch glosis_lh:boundaryTopographyProperty ;
     skos:prefLabel "boundary topography"@en .
 
 she:BulkDensityMineral a skos:Concept ;
-    skos:exactMatch glosis:bulkDensityMineralProperty ;
+    skos:exactMatch glosis_lh:bulkDensityMineralProperty ;
     skos:prefLabel "bulk density mineral"@en .
 
 she:BulkDensityPeat a skos:Concept ;
-    skos:exactMatch glosis:bulkDensityPeatProperty ;
+    skos:exactMatch glosis_lh:bulkDensityPeatProperty ;
     skos:prefLabel "bulk density peat"@en .
 
 she:CarbonatesContent a skos:Concept ;
-    skos:exactMatch glosis:carbonatesContentProperty ;
+    skos:exactMatch glosis_lh:carbonatesContentProperty ;
     skos:prefLabel "carbonates content"@en .
 
 she:CarbonatesForms a skos:Concept ;
-    skos:exactMatch glosis:carbonatesFormsProperty ;
+    skos:exactMatch glosis_lh:carbonatesFormsProperty ;
     skos:prefLabel "carbonates forms"@en .
 
 she:CationExchangeCapacity a skos:Concept ;
-    skos:exactMatch glosis:cationExchangeCapacityProperty ;
+    skos:exactMatch glosis_lh:cationExchangeCapacityProperty ;
     skos:prefLabel "cation exchange capacity"@en .
 
 she:CationExchangeCapacityEffective a skos:Concept ;
-    skos:exactMatch glosis:cationExchangeCapacityEffectiveProperty ;
+    skos:exactMatch glosis_lh:cationExchangeCapacityEffectiveProperty ;
     skos:prefLabel "cation exchange capacity effective"@en .
 
 she:CationsSum a skos:Concept ;
-    skos:exactMatch glosis:cationsSumProperty ;
+    skos:exactMatch glosis_lh:cationsSumProperty ;
     skos:prefLabel "cations sum"@en .
 
 she:CementationContinuity a skos:Concept ;
-    skos:exactMatch glosis:cementationContinuityProperty ;
+    skos:exactMatch glosis_lh:cementationContinuityProperty ;
     skos:prefLabel "cementation continuity"@en .
 
 she:CementationNature a skos:Concept ;
-    skos:exactMatch glosis:cementationNatureProperty ;
+    skos:exactMatch glosis_lh:cementationNatureProperty ;
     skos:prefLabel "cementation nature"@en .
 
 she:CoatingForm a skos:Concept ;
-    skos:exactMatch glosis:coatingFormProperty ;
+    skos:exactMatch glosis_lh:coatingFormProperty ;
     skos:prefLabel "coating form"@en .
 
 she:CoatingLocation a skos:Concept ;
-    skos:exactMatch glosis:coatingLocationProperty ;
+    skos:exactMatch glosis_lh:coatingLocationProperty ;
     skos:prefLabel "coating location"@en .
 
 she:ConsistenceMoist a skos:Concept ;
-    skos:exactMatch glosis:consistenceMoistProperty ;
+    skos:exactMatch glosis_lh:consistenceMoistProperty ;
     skos:prefLabel "consistence moist"@en .
 
 she:FragmentsClass a skos:Concept ;
-    skos:exactMatch glosis:fragmentsClassProperty ;
+    skos:exactMatch glosis_lh:fragmentsClassProperty ;
     skos:prefLabel "fragments class"@en .
 
 she:GypsumContent a skos:Concept ;
-    skos:exactMatch glosis:gypsumContentProperty ;
+    skos:exactMatch glosis_lh:gypsumContentProperty ;
     skos:prefLabel "gypsum content"@en .
 
 she:MineralConcAbundance a skos:Concept ;
-    skos:exactMatch glosis:mineralConcAbundanceProperty ;
+    skos:exactMatch glosis_lh:mineralConcAbundanceProperty ;
     skos:prefLabel "mineral conc abundance"@en .
 
 she:MineralConcColour a skos:Concept ;
-    skos:exactMatch glosis:mineralConcColourProperty ;
+    skos:exactMatch glosis_lh:mineralConcColourProperty ;
     skos:prefLabel "mineral conc colour"@en .
 
 she:MineralConcHardness a skos:Concept ;
-    skos:exactMatch glosis:mineralConcHardnessProperty ;
+    skos:exactMatch glosis_lh:mineralConcHardnessProperty ;
     skos:prefLabel "mineral conc hardness"@en .
 
 she:MineralConcSize a skos:Concept ;
-    skos:exactMatch glosis:mineralConcSizeProperty ;
+    skos:exactMatch glosis_lh:mineralConcSizeProperty ;
     skos:prefLabel "mineral conc size"@en .
 
 she:MineralConcVolume a skos:Concept ;
-    skos:exactMatch glosis:mineralConcVolumeProperty ;
+    skos:exactMatch glosis_lh:mineralConcVolumeProperty ;
     skos:prefLabel "mineral conc volume"@en .
 
 she:MineralContent a skos:Concept ;
-    skos:exactMatch glosis:mineralContentProperty ;
+    skos:exactMatch glosis_lh:mineralContentProperty ;
     skos:prefLabel "mineral content"@en .
 
 she:MineralFragments a skos:Concept ;
-    skos:exactMatch glosis:mineralFragmentsProperty ;
+    skos:exactMatch glosis_lh:mineralFragmentsProperty ;
     skos:prefLabel "mineral fragments"@en .
 
 she:MoistConsistency a skos:Concept ;
-    skos:exactMatch glosis:moistConsistencyProperty ;
+    skos:exactMatch glosis_lh:moistConsistencyProperty ;
     skos:prefLabel "moist consistency"@en .
 
 she:MoistureContent a skos:Concept ;
-    skos:exactMatch glosis:moistureContentProperty ;
+    skos:exactMatch glosis_lh:moistureContentProperty ;
     skos:prefLabel "moisture content"@en .
 
 she:MottlesBoundaryClassification a skos:Concept ;
-    skos:exactMatch glosis:mottlesBoundaryClassificationProperty ;
+    skos:exactMatch glosis_lh:mottlesBoundaryClassificationProperty ;
     skos:prefLabel "mottles boundary classification"@en .
 
 she:MottlesContrast a skos:Concept ;
-    skos:exactMatch glosis:mottlesContrastProperty ;
+    skos:exactMatch glosis_lh:mottlesContrastProperty ;
     skos:prefLabel "mottles contrast"@en .
 
 she:OxalateExtractableOpticalDensity a skos:Concept ;
-    skos:exactMatch glosis:oxalateExtractableOpticalDensityProperty ;
+    skos:exactMatch glosis_lh:oxalateExtractableOpticalDensityProperty ;
     skos:prefLabel "oxalate extractable optical density"@en .
 
 she:PeatDecompostion a skos:Concept ;
-    skos:exactMatch glosis:peatDecompostionProperty ;
+    skos:exactMatch glosis_lh:peatDecompostionProperty ;
     skos:prefLabel "peat decompostion"@en .
 
 she:PeatDrainage a skos:Concept ;
-    skos:exactMatch glosis:peatDrainageProperty ;
+    skos:exactMatch glosis_lh:peatDrainageProperty ;
     skos:prefLabel "peat drainage"@en .
 
 she:PeatVolume a skos:Concept ;
-    skos:exactMatch glosis:peatVolumeProperty ;
+    skos:exactMatch glosis_lh:peatVolumeProperty ;
     skos:prefLabel "peat volume"@en .
 
 she:Plasticity a skos:Concept ;
-    skos:exactMatch glosis:plasticityProperty ;
+    skos:exactMatch glosis_lh:plasticityProperty ;
     skos:prefLabel "plasticity"@en .
 
 she:PoresAbundance a skos:Concept ;
-    skos:exactMatch glosis:poresAbundanceProperty ;
+    skos:exactMatch glosis_lh:poresAbundanceProperty ;
     skos:prefLabel "pores abundance"@en .
 
 she:PoresSize a skos:Concept ;
-    skos:exactMatch glosis:poresSizeProperty ;
+    skos:exactMatch glosis_lh:poresSizeProperty ;
     skos:prefLabel "pores size"@en .
 
 she:PorosityClass a skos:Concept ;
-    skos:exactMatch glosis:porosityClassProperty ;
+    skos:exactMatch glosis_lh:porosityClassProperty ;
     skos:prefLabel "porosity class"@en .
 
 she:RootsAbundance a skos:Concept ;
-    skos:exactMatch glosis:rootsAbundanceProperty ;
+    skos:exactMatch glosis_lh:rootsAbundanceProperty ;
     skos:prefLabel "roots abundance"@en .
 
 she:Salt a skos:Concept ;
-    skos:exactMatch glosis:saltProperty ;
+    skos:exactMatch glosis_lh:saltProperty ;
     skos:prefLabel "salt"@en .
 
 she:SaltContent a skos:Concept ;
-    skos:exactMatch glosis:saltContentProperty ;
+    skos:exactMatch glosis_lh:saltContentProperty ;
     skos:prefLabel "salt content"@en .
 
 she:SandyTexture a skos:Concept ;
-    skos:exactMatch glosis:sandyTextureProperty ;
+    skos:exactMatch glosis_lh:sandyTextureProperty ;
     skos:prefLabel "sandy texture"@en .
 
 she:SolubleAnionsTotal a skos:Concept ;
-    skos:exactMatch glosis:solubleAnionsTotalProperty ;
+    skos:exactMatch glosis_lh:solubleAnionsTotalProperty ;
     skos:prefLabel "soluble anions total"@en .
 
 she:SolubleCationsTotal a skos:Concept ;
-    skos:exactMatch glosis:solubleCationsTotalProperty ;
+    skos:exactMatch glosis_lh:solubleCationsTotalProperty ;
     skos:prefLabel "soluble cations total"@en .
 
 she:Stickiness a skos:Concept ;
-    skos:exactMatch glosis:stickinessProperty ;
+    skos:exactMatch glosis_lh:stickinessProperty ;
     skos:prefLabel "stickiness"@en .
 
 she:TextureFieldClass a skos:Concept ;
-    skos:exactMatch glosis:textureFieldClassProperty ;
+    skos:exactMatch glosis_lh:textureFieldClassProperty ;
     skos:prefLabel "texture field class"@en .
 
 she:TextureLabClass a skos:Concept ;
-    skos:exactMatch glosis:textureLabClassProperty ;
+    skos:exactMatch glosis_lh:textureLabClassProperty ;
     skos:prefLabel "texture lab class"@en .
 
 she:WetPlasticity a skos:Concept ;
-    skos:exactMatch glosis:wetPlasticityProperty ;
+    skos:exactMatch glosis_lh:wetPlasticityProperty ;
     skos:prefLabel "wet plasticity"@en .
 
 she:CementationDegree a skos:Concept ;
     skos:broader she:Cementation ;
-    skos:exactMatch glosis:cementationDegreeProperty ;
+    skos:exactMatch glosis_lh:cementationDegreeProperty ;
     skos:prefLabel "cementation degree"@en .
 
 she:CementationFabric a skos:Concept ;
     skos:broader she:Cementation ;
-    skos:exactMatch glosis:cementationFabricProperty ;
+    skos:exactMatch glosis_lh:cementationFabricProperty ;
     skos:prefLabel "cementation fabric"@en .
 
 she:CoatingAbundance a skos:Concept ;
     skos:broader she:Coating ;
-    skos:exactMatch glosis:coatingAbundanceProperty ;
+    skos:exactMatch glosis_lh:coatingAbundanceProperty ;
     skos:prefLabel "coating abundance"@en .
 
 she:CoatingContrast a skos:Concept ;
     skos:broader she:Coating ;
-    skos:exactMatch glosis:coatingContrastProperty ;
+    skos:exactMatch glosis_lh:coatingContrastProperty ;
     skos:prefLabel "coating contrast"@en .
 
 she:CoatingNature a skos:Concept ;
     skos:broader she:Coating ;
-    skos:exactMatch glosis:coatingNatureProperty ;
+    skos:exactMatch glosis_lh:coatingNatureProperty ;
     skos:prefLabel "coating nature"@en .
 
 she:ConsistenceDry a skos:Concept ;
     skos:broader she:Consistency ;
-    skos:exactMatch glosis:consistenceDryProperty ;
+    skos:exactMatch glosis_lh:consistenceDryProperty ;
     skos:prefLabel "consistence dry"@en .
 
 she:DryConsistency a skos:Concept ;
     skos:broader she:Consistency ;
-    skos:exactMatch glosis:dryConsistencyProperty ;
+    skos:exactMatch glosis_lh:dryConsistencyProperty ;
     skos:prefLabel "dry consistency"@en .
 
 she:GypsumForms a skos:Concept ;
     skos:broader she:Gypsum ;
-    skos:exactMatch glosis:gypsumFormsProperty ;
+    skos:exactMatch glosis_lh:gypsumFormsProperty ;
     skos:prefLabel "gypsum forms"@en .
 
 she:GypsumWeight a skos:Concept ;
     skos:broader she:Gypsum ;
-    skos:exactMatch glosis:gypsumWeightProperty ;
+    skos:exactMatch glosis_lh:gypsumWeightProperty ;
     skos:prefLabel "gypsum weight"@en .
 
 she:MineralConcKind a skos:Concept ;
     skos:broader she:MineralConcretions ;
-    skos:exactMatch glosis:mineralConcKindProperty ;
+    skos:exactMatch glosis_lh:mineralConcKindProperty ;
     skos:prefLabel "mineral conc kind"@en .
 
 she:MineralConcNature a skos:Concept ;
     skos:broader she:MineralConcretions ;
-    skos:exactMatch glosis:mineralConcNatureProperty ;
+    skos:exactMatch glosis_lh:mineralConcNatureProperty ;
     skos:prefLabel "mineral conc nature"@en .
 
 she:MineralConcShape a skos:Concept ;
     skos:broader she:MineralConcretions ;
-    skos:exactMatch glosis:mineralConcShapeProperty ;
+    skos:exactMatch glosis_lh:mineralConcShapeProperty ;
     skos:prefLabel "mineral conc shape"@en .
 
 she:MottlesAbundance a skos:Concept ;
     skos:broader she:Mottles ;
-    skos:exactMatch glosis:mottlesAbundanceProperty ;
+    skos:exactMatch glosis_lh:mottlesAbundanceProperty ;
     skos:prefLabel "mottles abundance"@en .
 
 she:MottlesColour a skos:Concept ;
     skos:broader she:Mottles ;
-    skos:exactMatch glosis:mottlesColourProperty ;
+    skos:exactMatch glosis_lh:mottlesColourProperty ;
     skos:prefLabel "mottles colour"@en .
 
 she:MottlesPresence a skos:Concept ;
     skos:broader she:Mottles ;
-    skos:exactMatch glosis:mottlesPresenceProperty ;
+    skos:exactMatch glosis_lh:mottlesPresenceProperty ;
     skos:prefLabel "mottles presence"@en .
 
 she:MottlesSize a skos:Concept ;
     skos:broader she:Mottles ;
-    skos:exactMatch glosis:mottlesSizeProperty ;
+    skos:exactMatch glosis_lh:mottlesSizeProperty ;
     skos:prefLabel "mottles size"@en .
 
 she:ParticleSizeAnalysis a skos:Concept ;
@@ -276,7 +276,7 @@ she:ParticleSizeAnalysis a skos:Concept ;
 
 she:ParticleSizeFractionsSum a skos:Concept ;
     skos:broader she:ParticleSizeAnalysis ;
-    skos:exactMatch glosis:particleSizeFractionsSumProperty ;
+    skos:exactMatch glosis_lh:particleSizeFractionsSumProperty ;
     skos:prefLabel "particle size fractions sum"@en .
 
 she:Roots a skos:Concept ;
@@ -285,27 +285,27 @@ she:Roots a skos:Concept ;
 
 she:RootsPresence a skos:Concept ;
     skos:broader she:Roots ;
-    skos:exactMatch glosis:rootsPresenceProperty ;
+    skos:exactMatch glosis_lh:rootsPresenceProperty ;
     skos:prefLabel "roots presence"@en .
 
 she:StructureGrade a skos:Concept ;
     skos:broader she:Structure ;
-    skos:exactMatch glosis:structureGradeProperty ;
+    skos:exactMatch glosis_lh:structureGradeProperty ;
     skos:prefLabel "structure grade"@en .
 
 she:StructureSize a skos:Concept ;
     skos:broader she:Structure ;
-    skos:exactMatch glosis:structureSizeProperty ;
+    skos:exactMatch glosis_lh:structureSizeProperty ;
     skos:prefLabel "structure size"@en .
 
 she:VoidsClassification a skos:Concept ;
     skos:broader she:Voids ;
-    skos:exactMatch glosis:voidsClassificationProperty ;
+    skos:exactMatch glosis_lh:voidsClassificationProperty ;
     skos:prefLabel "voids classification"@en .
 
 she:VoidsDiameter a skos:Concept ;
     skos:broader she:Voids ;
-    skos:exactMatch glosis:voidsDiameterProperty ;
+    skos:exactMatch glosis_lh:voidsDiameterProperty ;
     skos:prefLabel "voids diameter"@en .
 
 she:Cementation a skos:Concept ;

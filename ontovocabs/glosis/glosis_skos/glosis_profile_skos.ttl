@@ -1,12 +1,12 @@
-@prefix glosis: <http://w3id.org/glosis/model/profile/> .
+@prefix glosis_pr: <http://w3id.org/glosis/model/profile/> .
 @prefix she: <https://soilwise-he.github.io/soil-health#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 she:ProfileDescriptionStatus a skos:Concept ;
-    skos:exactMatch glosis:profileDescriptionStatusProperty ;
+    skos:exactMatch glosis_pr:profileDescriptionStatusProperty ;
     skos:prefLabel "profile description status"@en .
 
 she:SoilClassification a skos:Concept ;
-    skos:exactMatch glosis:soilTypeProperty ;
+    skos:exactMatch glosis_pr:soilTypeProperty ;
     skos:prefLabel "soil classification"@en .
 
