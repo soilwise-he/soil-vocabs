@@ -1,7 +1,3 @@
-# ignore some .csv files
-subkg_soil_*.csv
-strategy_comparison_summary_*.csv
-
 # config
 config
 
