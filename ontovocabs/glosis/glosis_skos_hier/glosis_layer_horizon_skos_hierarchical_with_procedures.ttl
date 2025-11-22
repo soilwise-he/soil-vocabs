@@ -5,6 +5,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 she:AcidityExchangeable a skos:Concept ;
+    skos:definition "Exchangeable acidity represents the amount of hydrogen (H⁺) and aluminum (Al³⁺) ions adsorbed onto soil particles that can be exchanged with the soil solution. It is a key factor in determining soil liming requirements and improving nutrient availability in acidic soils. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Aciexc ;
     skos:prefLabel "acidity exchangeable"@en ;
     she:hasProcedure she:acidityExchangeableProcedure-ExchAcid_ph0-kcl1m,
@@ -16,6 +17,7 @@ she:AcidityExchangeable a skos:Concept ;
         she:acidityExchangeableProcedure-ExchAcid_ph8-unkn .
 
 she:AvailableWaterHoldingCapacity a skos:Concept ;
+    skos:definition "Available water capacity (AWC) measures the volume of water soil can retain between field capacity and the permanent wilting point. It represents the water accessible to plants for uptake. High AWC supports better plant growth, while low AWC may necessitate irrigation. Source: USDA NRCS."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Avavol ;
     skos:prefLabel "available water holding capacity"@en ;
     she:hasProcedure she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc100wp,
@@ -23,16 +25,19 @@ she:AvailableWaterHoldingCapacity a skos:Concept ;
         she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc300wp .
 
 she:BaseSaturation a skos:Concept ;
+    skos:definition "Base saturation represents the percentage of the soil's cation exchange capacity (CEC) occupied by basic cations such as calcium (Ca²⁺), magnesium (Mg²⁺), potassium (K⁺), and sodium (Na⁺). Higher base saturation typically correlates with higher fertility and a greater ability to supply essential nutrients to plants. This parameter also influences soil pH buffering capacity. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Bascal ;
     skos:prefLabel "base saturation"@en ;
     she:hasProcedure she:baseSaturationProcedure-BSat_calcul-cec,
         she:baseSaturationProcedure-BSat_calcul-ecec .
 
 she:CationsSum a skos:Concept ;
+    skos:definition "The Cations Sum Property calculates the total concentration of exchangeable cations (e.g., Ca²⁺, Mg²⁺, K⁺, Na⁺) in the soil. It helps determine soil fertility and salinity and is commonly expressed in milliequivalents per 100 grams of soil. Source: Soil Science Society of America (SSSA) Glossary."@en ;
     skos:exactMatch glosis_lh:cationsSumProperty ;
     skos:prefLabel "cations sum"@en .
 
 she:CoarseFragments a skos:Concept ;
+    skos:definition "Coarse fragments are soil particles larger than 2 mm in diameter, such as gravel, cobbles, and stones. They affect soil porosity, water infiltration, and root penetration. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-CoaFra ;
     skos:prefLabel "coarse fragments"@en ;
     she:hasProcedure she:coarseFragmentsProcedure-CrsFrg_fld,
@@ -40,16 +45,19 @@ she:CoarseFragments a skos:Concept ;
         she:coarseFragmentsProcedure-CrsFrg_lab .
 
 she:DryConsistency a skos:Concept ;
+    skos:definition "The Dry Consistency Property is synonymous with the Consistence Dry Property, focusing on the soil's resistance to breaking apart or deforming when dry. It indicates the soil's mechanical strength and susceptibility to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:dryConsistencyProperty ;
     skos:prefLabel "dry consistency"@en .
 
 she:EffectiveCec a skos:Concept ;
+    skos:definition "ECEC is the sum of exchangeable cations in soil at its natural pH. It provides a measure of the soil’s fertility under acidic conditions, as it considers both base cations and exchangeable aluminum. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-ECEC ;
     skos:prefLabel "effective cec"@en ;
     she:hasProcedure she:effectiveCecProcedure-EffCEC_calcul-b,
         she:effectiveCecProcedure-EffCEC_calcul-ba .
 
 she:ElectricalConductivity a skos:Concept ;
+    skos:definition "Electrical conductivity (EC) measures the ability of soil to conduct an electrical current, which is directly related to the concentration of soluble salts. It is an essential indicator of soil salinity and is used to assess soil's suitability for crop growth. High EC levels can reduce plant water uptake and affect germination, while low levels indicate low salinity and better soil health. Source: USDA NRCS."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Eleccond ;
     skos:prefLabel "electrical conductivity"@en ;
     she:hasProcedure she:electricalConductivityProcedure-EC_ratio1-1,
@@ -60,10 +68,12 @@ she:ElectricalConductivity a skos:Concept ;
         she:electricalConductivityProcedure-ECe_sat .
 
 she:FragmentsClass a skos:Concept ;
+    skos:definition "The Fragments Class Property categorizes the size, shape, and quantity of coarse fragments (e.g., gravel, stones) present in the soil. These fragments affect soil porosity, water retention, and root penetration. The classification includes gravelly, stony, or bouldery soils. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:fragmentsClassProperty ;
     skos:prefLabel "fragments class"@en .
 
 she:HydraulicConductivity a skos:Concept ;
+    skos:definition "Hydraulic conductivity refers to the rate at which water moves through soil pores under a unit hydraulic gradient. It reflects the soil's ability to transmit water, influenced by texture, structure, and porosity. Soils with high hydraulic conductivity, like sandy soils, allow rapid water movement, while clayey soils exhibit slower water flow. This property is critical for understanding water infiltration, drainage, and irrigation management. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Hydcond ;
     skos:prefLabel "hydraulic conductivity"@en ;
     she:hasProcedure she:hydraulicConductivityProcedure-KSat_calcul-ptf,
@@ -75,6 +85,7 @@ she:HydraulicConductivity a skos:Concept ;
         she:hydraulicConductivityProcedure-Ksat_invbhole .
 
 she:HydrogenExchangeableBases a skos:Concept ;
+    skos:definition "Hydrogen ions bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Hydexc ;
     skos:prefLabel "hydrogen exchangeable bases"@en ;
     she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
@@ -90,14 +101,17 @@ she:HydrogenExchangeableBases a skos:Concept ;
         she:exchangeableBasesProcedure-ExchBases_ph8-unkn .
 
 she:MineralContent a skos:Concept ;
+    skos:definition "The Mineral Content Property evaluates the overall abundance of mineral particles in soil, including sand, silt, and clay fractions. It provides essential information about soil texture, fertility, and parent material. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:mineralContentProperty ;
     skos:prefLabel "mineral content"@en .
 
 she:MineralFragments a skos:Concept ;
+    skos:definition "The Mineral Fragments Property refers to the presence and characteristics of coarse mineral particles (e.g., gravel, pebbles, stones) in the soil. These fragments influence soil drainage, root penetration, and overall physical structure. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:mineralFragmentsProperty ;
     skos:prefLabel "mineral fragments"@en .
 
 she:MoistureContent a skos:Concept ;
+    skos:definition "The Moisture Content Property measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:moistureContentProperty ;
     skos:prefLabel "moisture content"@en ;
     she:hasProcedure she:moistureContentProcedure-VMC_calcul-ptf,
@@ -111,6 +125,7 @@ she:MoistureContent a skos:Concept ;
         she:moistureContentProcedure-VMC_ud-co .
 
 she:NitrogenTotal a skos:Concept ;
+    skos:definition "Total nitrogen encompasses all nitrogen forms in soil, including organic nitrogen in humus and inorganic nitrogen such as ammonium (NH₄⁺) and nitrate (NO₃⁻). Nitrogen is essential for plant growth, being a vital component of amino acids, proteins, and chlorophyll. Total nitrogen is a key indicator of soil fertility and its capacity to sustain long-term crop productivity. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Nittot ;
     skos:prefLabel "nitrogen total"@en ;
     she:hasProcedure she:nitrogenTotalProcedure-TotalN_bremner,
@@ -126,6 +141,7 @@ she:NitrogenTotal a skos:Concept ;
         she:nitrogenTotalProcedure-TotalN_tn08 .
 
 she:OrganicMatter a skos:Concept ;
+    skos:definition "Soil organic matter is composed of decomposed plant and animal residues, living soil organisms, and humus. It improves soil structure, water retention, nutrient supply, and microbial activity, making it critical for sustainable agriculture and soil health. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Orgmat ;
     skos:prefLabel "organic matter"@en ;
     she:hasProcedure she:organicMatterProcedure-FulAcidC_unkn,
@@ -134,10 +150,12 @@ she:OrganicMatter a skos:Concept ;
         she:organicMatterProcedure-TotHumC_unkn .
 
 she:OxalateExtractableOpticalDensity a skos:Concept ;
+    skos:definition "The Oxalate Extractable Optical Density Property measures the concentration of poorly crystalline forms of iron, aluminum, and organic matter in soil, often associated with volcanic soils. It is determined using ammonium oxalate extraction. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
     skos:exactMatch glosis_lh:oxalateExtractableOpticalDensityProperty ;
     skos:prefLabel "oxalate extractable optical density"@en .
 
 she:PH a skos:Concept ;
+    skos:definition "Soil pH measures the concentration of hydrogen ions (H⁺) in the soil solution, indicating its acidity or alkalinity on a scale from 1 to 14. Neutral soils have a pH of 7, while values below 7 are acidic and above are alkaline. Soil pH significantly affects nutrient availability, microbial activity, and plant growth. For instance, nutrients like phosphorus are most available in a pH range of 6 to 7. Lime or sulfur applications can adjust soil pH to optimize conditions for crops. Source: USDA Natural Resources Conservation Service (NRCS)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-pH ;
     skos:prefLabel "ph"@en ;
     she:hasProcedure she:pHProcedure-pHCaCl2,
@@ -147,22 +165,27 @@ she:PH a skos:Concept ;
         she:pHProcedure-pHNaF .
 
 she:ParticleSizeFractionsSum a skos:Concept ;
+    skos:definition "The Particle Size Fractions Sum refers to the total proportion of sand, silt, and clay particles in soil, expressed as a percentage. It ensures the sum of individual particle size fractions adds up to 100%, a check for accurate soil texture analysis. Particle size distribution impacts water retention, permeability, and soil structure. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:particleSizeFractionsSumProperty ;
     skos:prefLabel "particle size fractions sum"@en .
 
 she:Plasticity a skos:Concept ;
+    skos:definition "The Plasticity Property measures the soil's ability to deform under stress without cracking or breaking, especially when wet. It is influenced by clay content and mineralogy and is important for engineering and agricultural applications. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:plasticityProperty ;
     skos:prefLabel "plasticity"@en .
 
 she:SandyTexture a skos:Concept ;
+    skos:definition "The Sandy Texture Property refers to soil dominated by sand particles (0.05–2.0 mm in diameter). Sandy soils are well-drained, low in nutrients, and prone to drought due to poor water retention. Source: Soil Science Society of America (SSSA) Glossary."@en ;
     skos:exactMatch glosis_lh:sandyTextureProperty ;
     skos:prefLabel "sandy texture"@en .
 
 she:Stickiness a skos:Concept ;
+    skos:definition "The Stickiness Property measures the soil’s tendency to adhere to surfaces or objects when wet. It is influenced by clay content and organic matter and affects soil workability and machinery use. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:stickinessProperty ;
     skos:prefLabel "stickiness"@en .
 
 she:TotalCarbonateEquivalent a skos:Concept ;
+    skos:definition "The total calcium carbonate equivalent measures the full capacity of soil to neutralize acidity, considering all forms of carbonate and bicarbonate minerals. It is essential for managing soil pH and nutrient availability in acidic soils. Source: FAO Soil Bulletin."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Ccetot ;
     skos:prefLabel "total carbonate equivalent"@en ;
     she:hasProcedure she:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc,
@@ -195,11 +218,13 @@ she:TotalCarbonateEquivalent a skos:Concept ;
         she:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc .
 
 she:WetPlasticity a skos:Concept ;
+    skos:definition "The Wet Plasticity Property measures the soil’s ability to deform under pressure when saturated. Wet plasticity is influenced by clay mineralogy and is important for understanding soil behavior under wet conditions. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:wetPlasticityProperty ;
     skos:prefLabel "wet plasticity"@en .
 
 she:AluminiumExchangeableBases a skos:Concept ;
     skos:broader she:Aluminium ;
+    skos:definition "Aluminium ions bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Aluexc ;
     skos:prefLabel "aluminium exchangeable bases"@en ;
     she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
@@ -216,6 +241,7 @@ she:AluminiumExchangeableBases a skos:Concept ;
 
 she:AluminiumExtractableElements a skos:Concept ;
     skos:broader she:Aluminium ;
+    skos:definition "Aluminium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Aluext ;
     skos:prefLabel "aluminium extractable elements"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
@@ -246,6 +272,7 @@ she:AluminiumExtractableElements a skos:Concept ;
 
 she:AluminiumTotalElements a skos:Concept ;
     skos:broader she:Aluminium ;
+    skos:definition "Total concentration of aluminium in the soil, including both soluble and insoluble forms, typically measured after complete digestion of the soil sample."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Alutot ;
     skos:prefLabel "aluminium total elements"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
@@ -270,16 +297,19 @@ she:AluminiumTotalElements a skos:Concept ;
 
 she:BiologicalAbundance a skos:Concept ;
     skos:broader she:Biological ;
+    skos:definition "The Biological Abundance Property evaluates the presence and quantity of soil organisms, such as microbes, insects, and earthworms. This property reflects soil health, nutrient cycling, and organic matter decomposition, which are vital for maintaining soil fertility. Source: Lavelle, P., & Spain, A.V. (2001). Soil Ecology."@en ;
     skos:exactMatch glosis_lh:biologicalAbundanceProperty ;
     skos:prefLabel "biological abundance"@en .
 
 she:BiologicalFeatures a skos:Concept ;
     skos:broader she:Biological ;
+    skos:definition "The Biological Features Property examines qualitative aspects of soil biological activity, including the types of organisms present, their diversity, and their roles in soil ecosystems. It encompasses processes like nitrogen fixation, organic matter decomposition, and bioturbation. Source: Soil Science Society of America (SSSA) Glossary."@en ;
     skos:exactMatch glosis_lh:biologicalFeaturesProperty ;
     skos:prefLabel "biological features"@en .
 
 she:BoronExtractableElements a skos:Concept ;
     skos:broader she:Boron ;
+    skos:definition "Boron bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Borext ;
     skos:prefLabel "boron extractable elements"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
@@ -310,6 +340,7 @@ she:BoronExtractableElements a skos:Concept ;
 
 she:BoronTotalElements a skos:Concept ;
     skos:broader she:Boron ;
+    skos:definition "Total boron includes all boron forms in soil, crucial for plant cell wall formation and reproductive processes. Deficiency can impair growth, while toxicity is a risk in arid soils or with excessive irrigation. Source: Havlin et al. (2014)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Bortot ;
     skos:prefLabel "boron total elements"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
@@ -334,16 +365,19 @@ she:BoronTotalElements a skos:Concept ;
 
 she:BoundaryDistinctness a skos:Concept ;
     skos:broader she:Boundary ;
+    skos:definition "The Boundary Distinctness Property describes the sharpness of transitions between soil horizons. Boundaries can range from abrupt (clear demarcation) to diffuse (gradual blending), providing insights into soil formation processes and profile development. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:boundaryDistinctnessProperty ;
     skos:prefLabel "boundary distinctness"@en .
 
 she:BoundaryTopography a skos:Concept ;
     skos:broader she:Boundary ;
+    skos:definition "The Boundary Topography Property characterizes the shape of soil horizon boundaries, which may be smooth, wavy, irregular, or broken. It reflects processes like erosion, deposition, or biological activity that influence horizon development. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:boundaryTopographyProperty ;
     skos:prefLabel "boundary topography"@en .
 
 she:BulkDensityFineEarth a skos:Concept ;
     skos:broader she:BulkDensity ;
+    skos:definition "This parameter measures the bulk density of the soil fraction smaller than 2 mm (excluding rocks and coarse fragments). It is used to assess the physical properties of soil related to root growth, water movement, and compaction. Source: Soil Science Society of America."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-BulDfine ;
     skos:prefLabel "bulk density fine earth"@en ;
     she:hasProcedure she:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-fc,
@@ -359,16 +393,19 @@ she:BulkDensityFineEarth a skos:Concept ;
 
 she:BulkDensityMineral a skos:Concept ;
     skos:broader she:BulkDensity ;
+    skos:definition "The Bulk Density of Mineral Soil refers specifically to the density of the mineral portion of the soil, excluding organic matter. It provides insights into the physical state and compaction of mineral-dominated soils, influencing water movement and root growth. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:bulkDensityMineralProperty ;
     skos:prefLabel "bulk density mineral"@en .
 
 she:BulkDensityPeat a skos:Concept ;
     skos:broader she:BulkDensity ;
+    skos:definition "The Bulk Density of Peat measures the mass of dry organic soil (peat) per unit volume. Peat soils typically have low bulk density due to their high organic matter content and porosity, which significantly affects their water retention and drainage characteristics. Source: Rydin, H., & Jeglum, J. (2006). The Biology of Peatlands."@en ;
     skos:exactMatch glosis_lh:bulkDensityPeatProperty ;
     skos:prefLabel "bulk density peat"@en .
 
 she:BulkDensityWholeSoil a skos:Concept ;
     skos:broader she:BulkDensity ;
+    skos:definition "This parameter measures the bulk density of the soil fraction smaller than 2 mm (excluding rocks and coarse fragments). It is used to assess the physical properties of soil related to root growth, water movement, and compaction. Source: Soil Science Society of America."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-BulDfine ;
     skos:prefLabel "bulk density whole soil"@en ;
     she:hasProcedure she:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-fc,
@@ -382,6 +419,7 @@ she:BulkDensityWholeSoil a skos:Concept ;
 
 she:CadmiumExtractableElements a skos:Concept ;
     skos:broader she:Cadmium ;
+    skos:definition "Cadmium is a heavy metal present in trace amounts in soils, often introduced through industrial pollution or phosphate fertilizers. It is toxic to plants, animals, and humans even at low concentrations. Monitoring cadmium levels is crucial to ensure soil safety and reduce contamination risks in the food chain. Source: Sparks, D.L. (2003)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cad ;
     skos:prefLabel "cadmium extractable elements"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
@@ -412,6 +450,7 @@ she:CadmiumExtractableElements a skos:Concept ;
 
 she:CadmiumTotalElements a skos:Concept ;
     skos:broader she:Cadmium ;
+    skos:definition "Cadmium is a heavy metal present in trace amounts in soils, often introduced through industrial pollution or phosphate fertilizers. It is toxic to plants, animals, and humans even at low concentrations. Monitoring cadmium levels is crucial to ensure soil safety and reduce contamination risks in the food chain. Source: Sparks, D.L. (2003)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cad ;
     skos:prefLabel "cadmium total elements"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
@@ -436,6 +475,7 @@ she:CadmiumTotalElements a skos:Concept ;
 
 she:CalciumExchangeableBases a skos:Concept ;
     skos:broader she:Calcium ;
+    skos:definition "Calcium bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Calexc ;
     skos:prefLabel "calcium exchangeable bases"@en ;
     she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
@@ -452,6 +492,7 @@ she:CalciumExchangeableBases a skos:Concept ;
 
 she:CalciumExtractableElements a skos:Concept ;
     skos:broader she:Calcium ;
+    skos:definition "Calcium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Calext ;
     skos:prefLabel "calcium extractable elements"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
@@ -482,6 +523,7 @@ she:CalciumExtractableElements a skos:Concept ;
 
 she:CalciumTotalElements a skos:Concept ;
     skos:broader she:Calcium ;
+    skos:definition "Total calcium in soil includes all forms, from exchangeable calcium to calcium in minerals. It is essential for plant cell wall structure, enzyme activation, and soil aggregation. Calcium levels influence soil pH and nutrient availability. Source: Havlin et al. (2014)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Caltot ;
     skos:prefLabel "calcium total elements"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
@@ -506,6 +548,7 @@ she:CalciumTotalElements a skos:Concept ;
 
 she:CarbonInorganic a skos:Concept ;
     skos:broader she:Carbon ;
+    skos:definition "Inorganic carbon in soil primarily consists of carbonates like calcium carbonate and magnesium carbonate. It contributes to soil pH buffering and is a significant feature of arid and calcareous soils. Excess inorganic carbon can immobilize certain nutrients, requiring careful management in agricultural systems. Source: Soil Science Society of America."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Carinorg ;
     skos:prefLabel "carbon inorganic"@en ;
     she:hasProcedure she:carbonInorganicProcedure-InOrgC_calcul-caco3,
@@ -513,6 +556,7 @@ she:CarbonInorganic a skos:Concept ;
 
 she:CarbonOrganic a skos:Concept ;
     skos:broader she:Carbon ;
+    skos:definition "Organic carbon refers to the carbon component of soil organic matter, derived from decomposed plant and microbial residues. It serves as a key energy source for soil microbes and influences nutrient cycling, soil structure, and water retention. Organic carbon is a primary indicator of soil fertility and health. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Carorg ;
     skos:prefLabel "carbon organic"@en ;
     she:hasProcedure she:carbonOrganicProcedure-OrgC_acid-dc,
@@ -542,6 +586,7 @@ she:CarbonOrganic a skos:Concept ;
 
 she:CarbonTotal a skos:Concept ;
     skos:broader she:Carbon ;
+    skos:definition "Total carbon in soil includes both organic carbon (from plant and microbial residues) and inorganic carbon (primarily carbonates). It is a fundamental component of soil organic matter, influencing soil fertility, structure, and water retention. High carbon levels are associated with better soil health and productivity. Source: USDA NRCS."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cartot ;
     skos:prefLabel "carbon total"@en ;
     she:hasProcedure she:carbonTotalProcedure-TotC_calcul-ic-oc,
@@ -552,21 +597,25 @@ she:CarbonTotal a skos:Concept ;
 
 she:CarbonatesContent a skos:Concept ;
     skos:broader she:Carbonates ;
+    skos:definition "The Carbonates Content Property quantifies the concentration of carbonate minerals (e.g., CaCO₃, MgCO₃) in soil. These compounds influence soil pH, fertility, and structure, and are prevalent in calcareous soils. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:carbonatesContentProperty ;
     skos:prefLabel "carbonates content"@en .
 
 she:CarbonatesForms a skos:Concept ;
     skos:broader she:Carbonates ;
+    skos:definition "The Carbonates Forms Property describes the types of carbonate minerals present in soil, such as calcite, dolomite, or aragonite. These forms impact soil chemistry, fertility, and physical characteristics differently depending on their composition and solubility. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
     skos:exactMatch glosis_lh:carbonatesFormsProperty ;
     skos:prefLabel "carbonates forms"@en .
 
 she:CationExchangeCapacityEffective a skos:Concept ;
     skos:broader she:CationExchangeCapacity ;
+    skos:definition "The Effective Cation Exchange Capacity (ECEC) measures the ability of soil to hold and exchange cations at a given pH, often near field conditions. It provides insight into soil fertility, nutrient availability, and buffering capacity in acidic soils. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:cationExchangeCapacityEffectiveProperty ;
     skos:prefLabel "cation exchange capacity effective"@en .
 
 she:CationExchangeCapacitycSoil a skos:Concept ;
     skos:broader she:CationExchangeCapacity ;
+    skos:definition "CEC measures the soil’s ability to hold and exchange positively charged ions (cations). It is a critical indicator of soil fertility, as higher CEC values imply greater capacity to retain essential nutrients like calcium, magnesium, and potassium. Clayey and organic-rich soils typically exhibit higher CEC. Source: Soil Science Society of America."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-CEC ;
     skos:prefLabel "cation exchange capacityc soil"@en ;
     she:hasProcedure she:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-cacl2,
@@ -591,61 +640,73 @@ she:CationExchangeCapacitycSoil a skos:Concept ;
 
 she:CementationContinuity a skos:Concept ;
     skos:broader she:Cementation ;
+    skos:definition "The Cementation Continuity Property describes the extent to which soil particles are bound together by cementing agents, such as calcium carbonate, iron oxides, or silica. Cementation affects soil permeability, root penetration, and the development of soil horizons. Continuity can be classified as continuous, discontinuous, or patchy. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:cementationContinuityProperty ;
     skos:prefLabel "cementation continuity"@en .
 
 she:CementationDegree a skos:Concept ;
     skos:broader she:Cementation ;
+    skos:definition "The Cementation Degree Property measures how strongly soil particles are bonded by cementing agents. It ranges from weakly cemented (friable) to strongly cemented (hard). This property influences soil strength and its suitability for agricultural and engineering purposes. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:cementationDegreeProperty ;
     skos:prefLabel "cementation degree"@en .
 
 she:CementationFabric a skos:Concept ;
     skos:broader she:Cementation ;
+    skos:definition "The Cementation Fabric Property examines the texture, structure, and arrangement of cementing materials within the soil. It provides insights into soil formation processes and the mechanical stability of the soil matrix. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:cementationFabricProperty ;
     skos:prefLabel "cementation fabric"@en .
 
 she:CementationNature a skos:Concept ;
     skos:broader she:Cementation ;
+    skos:definition "The Cementation Nature Property identifies the specific type of material responsible for binding soil particles, such as carbonates, silica, or iron oxides. Understanding this helps in soil classification and predicting behavior under varying environmental conditions. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:cementationNatureProperty ;
     skos:prefLabel "cementation nature"@en .
 
 she:CoatingAbundance a skos:Concept ;
     skos:broader she:Coating ;
+    skos:definition "The Coating Abundance Property evaluates the quantity of coatings on soil particles, such as organic matter, clay, or iron oxides. Coatings influence soil color, nutrient availability, and water movement. The abundance is typically classified as few, common, or many. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:coatingAbundanceProperty ;
     skos:prefLabel "coating abundance"@en .
 
 she:CoatingContrast a skos:Concept ;
     skos:broader she:Coating ;
+    skos:definition "The Coating Contrast Property assesses the visual distinction between coatings on soil particles and the underlying material. High contrast indicates significant differences in composition or color, providing clues about soil processes like illuviation or biological activity. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:coatingContrastProperty ;
     skos:prefLabel "coating contrast"@en .
 
 she:CoatingForm a skos:Concept ;
     skos:broader she:Coating ;
+    skos:definition "The Coating Form Property describes the shape and distribution of coatings on soil particles, such as patchy, continuous, or layered. These forms are indicative of soil genesis and chemical weathering processes. Source: Soil Science Society of America (SSSA) Glossary."@en ;
     skos:exactMatch glosis_lh:coatingFormProperty ;
     skos:prefLabel "coating form"@en .
 
 she:CoatingLocation a skos:Concept ;
     skos:broader she:Coating ;
+    skos:definition "The Coating Location Property identifies where coatings are found within the soil profile, such as along root channels, pore spaces, or on particle surfaces. This property helps determine the movement of water and nutrients in the soil. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:coatingLocationProperty ;
     skos:prefLabel "coating location"@en .
 
 she:CoatingNature a skos:Concept ;
     skos:broader she:Coating ;
+    skos:definition "The Coating Nature Property examines the composition of soil coatings, such as organic, clay, or iron-rich coatings. The nature of these coatings can influence nutrient retention, soil color, and water dynamics. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:coatingNatureProperty ;
     skos:prefLabel "coating nature"@en .
 
 she:ConsistenceDry a skos:Concept ;
     skos:broader she:Consistency ;
+    skos:definition "The Consistence Dry Property evaluates the soil's behavior when dry, including its resistance to deformation or crumbling. It ranges from loose to hard and provides information about soil compaction and management practices. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:consistenceDryProperty ;
     skos:prefLabel "consistence dry"@en .
 
 she:ConsistenceMoist a skos:Concept ;
     skos:broader she:Consistency ;
+    skos:definition "The Consistence Moist Property assesses how soil responds to pressure when moist. Categories include friable, firm, or plastic. This property is essential for understanding soil workability and water retention. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:consistenceMoistProperty ;
     skos:prefLabel "consistence moist"@en .
 
 she:CopperExtractableElements a skos:Concept ;
     skos:broader she:Copper ;
+    skos:definition "Copper bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Copext ;
     skos:prefLabel "copper extractable elements"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
@@ -676,6 +737,7 @@ she:CopperExtractableElements a skos:Concept ;
 
 she:CopperTotalElements a skos:Concept ;
     skos:broader she:Copper ;
+    skos:definition "Total copper comprises all soil copper, including bound and free forms. Copper is vital for plant enzyme activation and metabolic processes. Deficiencies can lead to reduced growth and yields, while excess copper may inhibit root development. Source: Soil Science Society of America."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Coptot ;
     skos:prefLabel "copper total elements"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
@@ -700,21 +762,25 @@ she:CopperTotalElements a skos:Concept ;
 
 she:GypsumContent a skos:Concept ;
     skos:broader she:Gypsum ;
+    skos:definition "The Gypsum Content Property quantifies the amount of gypsum (calcium sulfate dihydrate) present in the soil. Gypsum affects soil structure, water infiltration, and nutrient availability, especially in arid and semi-arid regions. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:gypsumContentProperty ;
     skos:prefLabel "gypsum content"@en .
 
 she:GypsumForms a skos:Concept ;
     skos:broader she:Gypsum ;
+    skos:definition "The Gypsum Forms Property describes the morphology of gypsum within the soil, such as crystals, veins, or nodules. The form indicates the processes of soil formation and water movement in gypsum-rich soils. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:gypsumFormsProperty ;
     skos:prefLabel "gypsum forms"@en .
 
 she:GypsumWeight a skos:Concept ;
     skos:broader she:Gypsum ;
+    skos:definition "The Gypsum Weight Property measures the mass of gypsum in the soil profile. This value helps evaluate the potential for soil salinity issues and influences decisions for agricultural or land reclamation practices. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:gypsumWeightProperty ;
     skos:prefLabel "gypsum weight"@en .
 
 she:IronExtractableElements a skos:Concept ;
     skos:broader she:Iron ;
+    skos:definition "Iron bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Iroext ;
     skos:prefLabel "iron extractable elements"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
@@ -745,6 +811,7 @@ she:IronExtractableElements a skos:Concept ;
 
 she:IronTotalElements a skos:Concept ;
     skos:broader she:Iron ;
+    skos:definition "Total iron includes all iron forms in the soil, from soluble ferrous iron (Fe²⁺) to insoluble ferric iron (Fe³⁺). Iron is essential for plant chlorophyll synthesis and various enzymatic reactions. Deficiency, often seen in alkaline soils, results in chlorosis, while excessive iron can cause toxicity in acidic soils. Source: Soil Chemistry by Bohn et al."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Irotot ;
     skos:prefLabel "iron total elements"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
@@ -769,6 +836,7 @@ she:IronTotalElements a skos:Concept ;
 
 she:MagnesiumExchangeableBases a skos:Concept ;
     skos:broader she:Magnesium ;
+    skos:definition "Magnesium bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Magexc ;
     skos:prefLabel "magnesium exchangeable bases"@en ;
     she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
@@ -785,6 +853,7 @@ she:MagnesiumExchangeableBases a skos:Concept ;
 
 she:MagnesiumExtractableElements a skos:Concept ;
     skos:broader she:Magnesium ;
+    skos:definition "Magnesium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Magext ;
     skos:prefLabel "magnesium extractable elements"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
@@ -815,6 +884,7 @@ she:MagnesiumExtractableElements a skos:Concept ;
 
 she:MagnesiumTotalElements a skos:Concept ;
     skos:broader she:Magnesium ;
+    skos:definition "Total magnesium in soil includes exchangeable, soluble, and mineral-bound forms. Magnesium is essential for chlorophyll synthesis, enzyme activation, and nutrient transport in plants. Its availability is influenced by soil pH and texture. Source: Havlin et al. (2014)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Magtot ;
     skos:prefLabel "magnesium total elements"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
@@ -839,6 +909,7 @@ she:MagnesiumTotalElements a skos:Concept ;
 
 she:ManganeseExchangeableBases a skos:Concept ;
     skos:broader she:Manganese ;
+    skos:definition "Total manganese refers to all forms of manganese in the soil, which is critical for photosynthesis, enzyme activation, and nitrogen metabolism in plants. Manganese deficiencies or toxicities are influenced by soil pH, with deficiencies occurring in high-pH soils and toxicities in low-pH, waterlogged soils.  Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mantot ;
     skos:prefLabel "manganese exchangeable bases"@en ;
     she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
@@ -855,6 +926,7 @@ she:ManganeseExchangeableBases a skos:Concept ;
 
 she:ManganeseExtractableElements a skos:Concept ;
     skos:broader she:Manganese ;
+    skos:definition "Manganese bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Manext ;
     skos:prefLabel "manganese extractable elements"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
@@ -885,6 +957,7 @@ she:ManganeseExtractableElements a skos:Concept ;
 
 she:ManganeseTotalElements a skos:Concept ;
     skos:broader she:Manganese ;
+    skos:definition "Total manganese refers to all forms of manganese in the soil, which is critical for photosynthesis, enzyme activation, and nitrogen metabolism in plants. Manganese deficiencies or toxicities are influenced by soil pH, with deficiencies occurring in high-pH soils and toxicities in low-pH, waterlogged soils.  Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mantot ;
     skos:prefLabel "manganese total elements"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
@@ -909,51 +982,61 @@ she:ManganeseTotalElements a skos:Concept ;
 
 she:MineralConcAbundance a skos:Concept ;
     skos:broader she:MineralConcretions ;
+    skos:definition "The Mineral Concentration Abundance Property evaluates the amount of specific minerals, such as quartz, feldspar, or mica, in the soil. This property provides insights into soil parent material and fertility. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:mineralConcAbundanceProperty ;
     skos:prefLabel "mineral conc abundance"@en .
 
 she:MineralConcColour a skos:Concept ;
     skos:broader she:MineralConcretions ;
+    skos:definition "The Mineral Concentration Colour Property describes the color of concentrated mineral deposits in the soil, such as iron oxides (red) or manganese nodules (black). It helps identify soil processes like oxidation or leaching. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:mineralConcColourProperty ;
     skos:prefLabel "mineral conc colour"@en .
 
 she:MineralConcHardness a skos:Concept ;
     skos:broader she:MineralConcretions ;
+    skos:definition "The Mineral Concentration Hardness Property assesses the physical hardness of mineral deposits in soil. Hardness influences soil strength and resistance to erosion or mechanical disruption. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
     skos:exactMatch glosis_lh:mineralConcHardnessProperty ;
     skos:prefLabel "mineral conc hardness"@en .
 
 she:MineralConcKind a skos:Concept ;
     skos:broader she:MineralConcretions ;
+    skos:definition "The Mineral Concentration Kind Property identifies the specific type of mineral concentrations found in soil, such as gypsum, calcite, or hematite. This classification aids in understanding soil genesis and chemistry. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:mineralConcKindProperty ;
     skos:prefLabel "mineral conc kind"@en .
 
 she:MineralConcNature a skos:Concept ;
     skos:broader she:MineralConcretions ;
+    skos:definition "The Mineral Concentration Nature Property examines the origin and composition of concentrated minerals in soil. It provides clues about weathering, leaching, and other pedogenic processes. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:mineralConcNatureProperty ;
     skos:prefLabel "mineral conc nature"@en .
 
 she:MineralConcShape a skos:Concept ;
     skos:broader she:MineralConcretions ;
+    skos:definition "The Mineral Concentration Shape Property describes the physical shape of mineral accumulations, such as rounded, angular, or irregular. These shapes help infer soil formation processes and transport history. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:mineralConcShapeProperty ;
     skos:prefLabel "mineral conc shape"@en .
 
 she:MineralConcSize a skos:Concept ;
     skos:broader she:MineralConcretions ;
+    skos:definition "The Mineral Concentration Size Property measures the dimensions of concentrated mineral deposits in soil, typically expressed in millimeters. Size categories range from small grains to large nodules or concretions. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:mineralConcSizeProperty ;
     skos:prefLabel "mineral conc size"@en .
 
 she:MineralConcVolume a skos:Concept ;
     skos:broader she:MineralConcretions ;
+    skos:definition "The Mineral Concentration Volume Property quantifies the proportion of soil volume occupied by mineral concentrations. It is used to assess the impact of these materials on soil structure and permeability. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:mineralConcVolumeProperty ;
     skos:prefLabel "mineral conc volume"@en .
 
 she:MoistConsistency a skos:Concept ;
     skos:broader she:Consistency ;
+    skos:definition "The Moist Consistency Property evaluates the soil's behavior under pressure when moist. Categories include friable, firm, or plastic. It provides insights into soil workability and its ability to support plant growth. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:moistConsistencyProperty ;
     skos:prefLabel "moist consistency"@en .
 
 she:MolybdenumExtractableElements a skos:Concept ;
     skos:broader she:Molybdenum ;
+    skos:definition "Molybdenum is a micronutrient essential for plant enzymes involved in nitrogen fixation and nitrate reduction. Deficiency, often observed in acidic soils, can lead to stunted growth and poor nitrogen utilization. Its availability increases with higher pH, making liming a common solution for molybdenum deficiencies. Source: Havlin et al. (2014)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mol ;
     skos:prefLabel "molybdenum extractable elements"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
@@ -984,6 +1067,7 @@ she:MolybdenumExtractableElements a skos:Concept ;
 
 she:MolybdenumTotalElements a skos:Concept ;
     skos:broader she:Molybdenum ;
+    skos:definition "Molybdenum is a micronutrient essential for plant enzymes involved in nitrogen fixation and nitrate reduction. Deficiency, often observed in acidic soils, can lead to stunted growth and poor nitrogen utilization. Its availability increases with higher pH, making liming a common solution for molybdenum deficiencies. Source: Havlin et al. (2014)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mol ;
     skos:prefLabel "molybdenum total elements"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
@@ -1008,51 +1092,61 @@ she:MolybdenumTotalElements a skos:Concept ;
 
 she:MottlesAbundance a skos:Concept ;
     skos:broader she:Mottles ;
+    skos:definition "The Mottles Abundance Property describes the frequency of mottling (spots of contrasting color) in soil horizons. Mottling indicates variations in soil aeration, drainage, or water saturation. Abundance is typically classified as few, common, or many. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:mottlesAbundanceProperty ;
     skos:prefLabel "mottles abundance"@en .
 
 she:MottlesBoundaryClassification a skos:Concept ;
     skos:broader she:Mottles ;
+    skos:definition "The Mottles Boundary Classification Property assesses the sharpness and distinctness of boundaries between mottled and non-mottled areas within the soil. It provides clues about soil processes such as oxidation-reduction reactions. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:mottlesBoundaryClassificationProperty ;
     skos:prefLabel "mottles boundary classification"@en .
 
 she:MottlesColour a skos:Concept ;
     skos:broader she:Mottles ;
+    skos:definition "The Mottles Colour Property evaluates the color of soil mottles, often indicative of oxidation states of iron or manganese. For example, reddish colors suggest oxidation, while gray colors indicate reduction and poor drainage. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:mottlesColourProperty ;
     skos:prefLabel "mottles colour"@en .
 
 she:MottlesContrast a skos:Concept ;
     skos:broader she:Mottles ;
+    skos:definition "The Mottles Contrast Property measures the visual distinction between mottles and the surrounding soil matrix. High contrast indicates stark differences, often linked to fluctuating water tables or drainage issues. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:mottlesContrastProperty ;
     skos:prefLabel "mottles contrast"@en .
 
 she:MottlesPresence a skos:Concept ;
     skos:broader she:Mottles ;
+    skos:definition "The Mottles Presence Property refers to the existence of mottles in soil, often signaling periodic water saturation, drainage problems, or fluctuating redox conditions. This property is essential for wetland delineation and soil health assessment. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:mottlesPresenceProperty ;
     skos:prefLabel "mottles presence"@en .
 
 she:MottlesSize a skos:Concept ;
     skos:broader she:Mottles ;
+    skos:definition "The Mottles Size Property describes the dimensions of soil mottles, typically classified as fine, medium, or coarse. The size reflects the intensity and scale of soil processes such as oxidation and reduction. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:mottlesSizeProperty ;
     skos:prefLabel "mottles size"@en .
 
 she:PeatDecompostion a skos:Concept ;
     skos:broader she:Peat ;
+    skos:definition "The Peat Decomposition Property evaluates the degree of decomposition in organic soils or peat. Categories include fibric (least decomposed), hemic (moderately decomposed), and sapric (highly decomposed), which influence soil fertility and drainage. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:peatDecompostionProperty ;
     skos:prefLabel "peat decompostion"@en .
 
 she:PeatDrainage a skos:Concept ;
     skos:broader she:Peat ;
+    skos:definition "The Peat Drainage Property assesses the water removal capacity in peat soils, essential for determining their suitability for agriculture, conservation, or other uses. Poorly drained peat often accumulates organic material due to low decomposition rates. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:peatDrainageProperty ;
     skos:prefLabel "peat drainage"@en .
 
 she:PeatVolume a skos:Concept ;
     skos:broader she:Peat ;
+    skos:definition "The Peat Volume Property quantifies the proportion of peat material in a given soil volume. It is critical for land use planning, carbon sequestration assessments, and wetland management. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:peatVolumeProperty ;
     skos:prefLabel "peat volume"@en .
 
 she:PhosphorusExtractableElements a skos:Concept ;
     skos:broader she:Phosphorus ;
+    skos:definition "Phosphorus bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Phoext ;
     skos:prefLabel "phosphorus extractable elements"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
@@ -1083,6 +1177,7 @@ she:PhosphorusExtractableElements a skos:Concept ;
 
 she:PhosphorusRetention a skos:Concept ;
     skos:broader she:Phosphorus ;
+    skos:definition "Phosphorus retention measures a soil's capacity to adsorb and hold phosphorus, influenced by soil texture, pH, and mineralogy. While high retention reduces leaching, it may also limit phosphorus availability to plants. Understanding phosphorus retention helps optimize fertilization and minimize environmental impacts. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Phoret ;
     skos:prefLabel "phosphorus retention"@en ;
     she:hasProcedure she:phosphorusRetentionProcedure-RetentP_blakemore,
@@ -1090,6 +1185,7 @@ she:PhosphorusRetention a skos:Concept ;
 
 she:PhosphorusTotalElements a skos:Concept ;
     skos:broader she:Phosphorus ;
+    skos:definition "Total phosphorus includes all forms of phosphorus in the soil, both organic and inorganic. While only a fraction is plant-available, total phosphorus serves as a long-term reserve for crop nutrition. Adequate phosphorus levels are crucial for energy transfer, photosynthesis, and root development in plants. Source: Soil Chemistry by Bohn et al."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Photot ;
     skos:prefLabel "phosphorus total elements"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
@@ -1114,21 +1210,25 @@ she:PhosphorusTotalElements a skos:Concept ;
 
 she:PoresAbundance a skos:Concept ;
     skos:broader she:Pores ;
+    skos:definition "The Pores Abundance Property describes the quantity of soil pores, ranging from few to many. It influences water infiltration, root growth, and soil aeration. Pore abundance is crucial for assessing soil health and productivity. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:poresAbundanceProperty ;
     skos:prefLabel "pores abundance"@en .
 
 she:PoresSize a skos:Concept ;
     skos:broader she:Pores ;
+    skos:definition "The Pores Size Property categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:poresSizeProperty ;
     skos:prefLabel "pores size"@en .
 
 she:PorosityClass a skos:Concept ;
     skos:broader she:Porosity ;
+    skos:definition "The Porosity Class Property classifies soil by the proportion of pore spaces, typically expressed as a percentage. Classes include high, medium, or low porosity, influencing water and air movement in the soil. Source: Soil Science Society of America (SSSA) Glossary."@en ;
     skos:exactMatch glosis_lh:porosityClassProperty ;
     skos:prefLabel "porosity class"@en .
 
 she:PotassiumExchangeableBases a skos:Concept ;
     skos:broader she:Potassium ;
+    skos:definition "Potassium bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Potexc ;
     skos:prefLabel "potassium exchangeable bases"@en ;
     she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
@@ -1145,6 +1245,7 @@ she:PotassiumExchangeableBases a skos:Concept ;
 
 she:PotassiumExtractableElements a skos:Concept ;
     skos:broader she:Potassium ;
+    skos:definition "Potassium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Potext ;
     skos:prefLabel "potassium extractable elements"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
@@ -1175,6 +1276,7 @@ she:PotassiumExtractableElements a skos:Concept ;
 
 she:PotassiumTotalElements a skos:Concept ;
     skos:broader she:Potassium ;
+    skos:definition "Total potassium includes all forms of potassium in soil, such as mineral-bound, exchangeable, and water-soluble potassium. It plays a vital role in plant growth by regulating water balance, enzyme activation, and photosynthesis. While only a fraction of total potassium is readily available to plants, it serves as a reserve to replenish exchangeable potassium over time. Adequate potassium levels improve crop yield, quality, and resistance to stress. Source: Soil Science Society of America."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Pottot ;
     skos:prefLabel "potassium total elements"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
@@ -1199,21 +1301,25 @@ she:PotassiumTotalElements a skos:Concept ;
 
 she:RootsAbundance a skos:Concept ;
     skos:broader she:Roots ;
+    skos:definition "The Roots Abundance Property describes the quantity of plant roots within a soil profile, typically categorized as few, common, or many. Root abundance reflects plant-soil interactions, soil fertility, and the physical structure that supports vegetation. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:rootsAbundanceProperty ;
     skos:prefLabel "roots abundance"@en .
 
 she:RootsPresence a skos:Concept ;
     skos:broader she:Roots ;
+    skos:definition "The Roots Presence Property identifies whether roots are visible in a soil profile or horizon. It indicates biological activity, soil health, and the suitability of the soil for plant growth. Roots are commonly observed during soil surveys and are classified by type and density. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:rootsPresenceProperty ;
     skos:prefLabel "roots presence"@en .
 
 she:SaltContent a skos:Concept ;
     skos:broader she:Salt ;
+    skos:definition "The Salt Content Property measures the concentration of soluble salts in soil, critical for assessing salinity. Excess salts can hinder plant growth by affecting osmotic potential, leading to reduced water uptake by roots. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:saltContentProperty ;
     skos:prefLabel "salt content"@en .
 
 she:SodiumExchangeableBases a skos:Concept ;
     skos:broader she:Sodium ;
+    skos:definition "Sodium bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sodexp ;
     skos:prefLabel "sodium exchangeable bases"@en ;
     she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
@@ -1230,6 +1336,7 @@ she:SodiumExchangeableBases a skos:Concept ;
 
 she:SodiumExtractableElements a skos:Concept ;
     skos:broader she:Sodium ;
+    skos:definition "Sodium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sodext ;
     skos:prefLabel "sodium extractable elements"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
@@ -1260,6 +1367,7 @@ she:SodiumExtractableElements a skos:Concept ;
 
 she:SodiumTotalElements a skos:Concept ;
     skos:broader she:Sodium ;
+    skos:definition "Total sodium includes all sodium present in soil, both soluble and bound. Excess sodium can lead to sodicity, which disrupts soil structure, reduces permeability, and impairs plant growth. Monitoring sodium levels is crucial for managing soil salinity in arid and irrigated regions. Source: Bohn, H.L., et al. (2001). Soil Chemistry."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sodtot ;
     skos:prefLabel "sodium total elements"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
@@ -1284,16 +1392,19 @@ she:SodiumTotalElements a skos:Concept ;
 
 she:SolubleAnionsTotal a skos:Concept ;
     skos:broader she:Soluble ;
+    skos:definition "The Soluble Anions Total Property measures the concentration of anions (e.g., chloride, sulfate, nitrate) in soil solution. High levels may indicate salinity, nutrient availability, or contamination. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
     skos:exactMatch glosis_lh:solubleAnionsTotalProperty ;
     skos:prefLabel "soluble anions total"@en .
 
 she:SolubleCationsTotal a skos:Concept ;
     skos:broader she:Soluble ;
+    skos:definition "The Soluble Cations Total Property evaluates the sum of cations (e.g., sodium, potassium, calcium, magnesium) in soil solution. It is an indicator of soil salinity, fertility, and chemical balance. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:solubleCationsTotalProperty ;
     skos:prefLabel "soluble cations total"@en .
 
 she:SolubleSalts a skos:Concept ;
     skos:broader she:Soluble ;
+    skos:definition "Soluble salts refer to dissolved salts in the soil solution, primarily composed of sodium, calcium, magnesium, chloride, and sulfate ions. Excessive soluble salts cause salinity, which can impair plant water uptake and lead to osmotic stress. EC testing helps monitor salinity levels for effective management. Source: Soil Science Society of America."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Solsal ;
     skos:prefLabel "soluble salts"@en ;
     she:hasProcedure she:solubleSaltsProcedure-SlbAn_calcul-unkn,
@@ -1301,16 +1412,19 @@ she:SolubleSalts a skos:Concept ;
 
 she:StructureGrade a skos:Concept ;
     skos:broader she:Structure ;
+    skos:definition "The Structure Grade Property assesses the development and stability of soil aggregates, classified as weak, moderate, or strong. It reflects soil tilth, aeration, and resistance to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:structureGradeProperty ;
     skos:prefLabel "structure grade"@en .
 
 she:StructureSize a skos:Concept ;
     skos:broader she:Structure ;
+    skos:definition "The Structure Size Property describes the dimensions of soil aggregates or structural units, such as granular, blocky, or platy. Structure size affects root penetration, water infiltration, and soil stability. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:structureSizeProperty ;
     skos:prefLabel "structure size"@en .
 
 she:SulfurExtractableElements a skos:Concept ;
     skos:broader she:Sulfur ;
+    skos:definition "Sulfur bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sulext ;
     skos:prefLabel "sulfur extractable elements"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
@@ -1341,6 +1455,7 @@ she:SulfurExtractableElements a skos:Concept ;
 
 she:SulfurTotalElements a skos:Concept ;
     skos:broader she:Sulfur ;
+    skos:definition "Total sulfur in soil includes both organic and inorganic forms, such as sulfates and sulfur in organic matter. Sulfur is essential for protein synthesis and enzyme functions in plants. Deficiency leads to stunted growth and yellowing of leaves. Total sulfur provides insight into the soil's potential to release plant-available sulfur over time, critical for sustaining crop health. Source: Havlin, J.L., et al. (2014). Soil Fertility and Fertilizers."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sultot ;
     skos:prefLabel "sulfur total elements"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
@@ -1365,26 +1480,31 @@ she:SulfurTotalElements a skos:Concept ;
 
 she:TextureFieldClass a skos:Concept ;
     skos:broader she:Texture ;
+    skos:definition "The Texture Field Class Property categorizes soil texture based on the relative proportions of sand, silt, and clay, as assessed by field methods like the ribbon test. Field classes include sandy loam, clay loam, etc. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:textureFieldClassProperty ;
     skos:prefLabel "texture field class"@en .
 
 she:TextureLabClass a skos:Concept ;
     skos:broader she:Texture ;
+    skos:definition "The Texture Lab Class Property defines soil texture using laboratory-determined particle size distributions. This property provides a precise classification of soil as sand, silt, or clay using standard methods. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:textureLabClassProperty ;
     skos:prefLabel "texture lab class"@en .
 
 she:VoidsClassification a skos:Concept ;
     skos:broader she:Voids ;
+    skos:definition "The Voids Classification Property categorizes voids or pores in the soil based on size, shape, and arrangement. These voids are critical for water movement, air circulation, and root penetration. They are classified into macropores (large), mesopores (medium), and micropores (small). Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:voidsClassificationProperty ;
     skos:prefLabel "voids classification"@en .
 
 she:VoidsDiameter a skos:Concept ;
     skos:broader she:Voids ;
+    skos:definition "The Voids Diameter Property refers to the size of void spaces in soil, which can range from macro-voids (larger pores) to micro-voids (tiny pores). Voids diameter impacts soil aeration, water retention, and drainage. Source: Soil Science Society of America (SSSA) Glossary."@en ;
     skos:exactMatch glosis_lh:voidsDiameterProperty ;
     skos:prefLabel "voids diameter"@en .
 
 she:ZincExtractableElements a skos:Concept ;
     skos:broader she:Zinc ;
+    skos:definition "Zinc bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Zinext ;
     skos:prefLabel "zinc extractable elements"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
@@ -1415,6 +1535,7 @@ she:ZincExtractableElements a skos:Concept ;
 
 she:ZincTotalElements a skos:Concept ;
     skos:broader she:Zinc ;
+    skos:definition "Zinc is a micronutrient essential for plant enzyme systems, protein synthesis, and growth regulation. Deficiency is common in calcareous soils and results in stunted growth and chlorosis. Zinc fertilizers or soil pH adjustments can address deficiencies. Source: Havlin et al. (2014)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Zin ;
     skos:prefLabel "zinc total elements"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
@@ -2435,6 +2556,7 @@ she:Carbonates a skos:Concept ;
     skos:prefLabel "carbonates"@en .
 
 she:CationExchangeCapacity a skos:Concept ;
+    skos:definition "The Cation Exchange Capacity (CEC) measures the soil's total capacity to hold and exchange positively charged ions (cations). It is influenced by clay and organic matter content and is a critical indicator of soil fertility and nutrient retention. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:cationExchangeCapacityProperty ;
     skos:narrower she:CationExchangeCapacityEffective,
         she:CationExchangeCapacitycSoil ;
@@ -2515,6 +2637,7 @@ she:Consistency a skos:Concept ;
     skos:prefLabel "consistency"@en .
 
 she:Gypsum a skos:Concept ;
+    skos:definition "The gypsum content, expressed as weight, refers to the soil’s calcium sulfate levels. Gypsum improves soil structure, alleviates sodicity, and enhances water infiltration. It is commonly applied to saline-sodic soils for reclamation. Source: FAO Soil Bulletin."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Gyp ;
     skos:narrower she:GypsumContent,
         she:GypsumForms,
@@ -2554,6 +2677,7 @@ she:Phosphorus a skos:Concept ;
 
 she:Porosity a skos:Concept ;
     skos:broader she:Porosity ;
+    skos:definition "Porosity refers to the percentage of soil volume occupied by pores or voids, which hold air and water. It directly impacts water infiltration, drainage, and root growth. Soils with high porosity are better suited for crop cultivation, as they provide good aeration and water availability. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Por ;
     skos:narrower she:Porosity,
         she:PorosityClass ;
@@ -2568,6 +2692,7 @@ she:Potassium a skos:Concept ;
 
 she:Salt a skos:Concept ;
     skos:broader she:Salt ;
+    skos:definition "The Salt Property encompasses all forms of salts present in soil, including sodium chloride, calcium sulfate, and magnesium sulfate. It influences soil chemistry, structure, and plant tolerance to salinity. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:saltProperty ;
     skos:narrower she:Salt,
         she:SaltContent ;
