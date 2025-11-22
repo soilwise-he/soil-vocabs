@@ -18,331 +18,6 @@ she:AcidityExchangeable a skos:Concept ;
         she:acidityExchangeableProcedure-ExchAcid_ph8-bacl2tea,
         she:acidityExchangeableProcedure-ExchAcid_ph8-unkn .
 
-she:AvailableWaterHoldingCapacity a skos:Concept ;
-    skos:definition "Available water capacity (AWC) measures the volume of water soil can retain between field capacity and the permanent wilting point. It represents the water accessible to plants for uptake. High AWC supports better plant growth, while low AWC may necessitate irrigation. Source: USDA NRCS."@en ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Avavol ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "available water holding capacity"@en ;
-    she:hasProcedure she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc100wp,
-        she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc200wp,
-        she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc300wp .
-
-she:BaseSaturation a skos:Concept ;
-    skos:definition "Base saturation represents the percentage of the soil's cation exchange capacity (CEC) occupied by basic cations such as calcium (Ca²⁺), magnesium (Mg²⁺), potassium (K⁺), and sodium (Na⁺). Higher base saturation typically correlates with higher fertility and a greater ability to supply essential nutrients to plants. This parameter also influences soil pH buffering capacity. Source: Brady & Weil (2017)."@en ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Bascal ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "base saturation"@en ;
-    she:hasProcedure she:baseSaturationProcedure-BSat_calcul-cec,
-        she:baseSaturationProcedure-BSat_calcul-ecec .
-
-she:BleachedSand a skos:Concept ;
-    skos:definition "The Bleached Sand property refers to the physical characteristic of sandy soil that has undergone a bleaching process due to leaching, where minerals such as iron and other elements have been removed by water. This process often occurs in areas with high rainfall, leading to a soil that appears lighter in color. Bleached sand typically indicates low fertility and poor nutrient-holding capacity due to the lack of iron and other nutrients that are washed away. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall."@en ;
-    skos:exactMatch <http://w3id.org/glosis/model/common/bleachedSandProperty> ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "bleached sand"@en .
-
-she:CationsSum a skos:Concept ;
-    skos:definition "The Cations Sum Property calculates the total concentration of exchangeable cations (e.g., Ca²⁺, Mg²⁺, K⁺, Na⁺) in the soil. It helps determine soil fertility and salinity and is commonly expressed in milliequivalents per 100 grams of soil. Source: Soil Science Society of America (SSSA) Glossary."@en ;
-    skos:exactMatch glosis_lh:cationsSumProperty ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "cations sum"@en .
-
-she:CoarseFragments a skos:Concept ;
-    skos:definition "Coarse fragments are soil particles larger than 2 mm in diameter, such as gravel, cobbles, and stones. They affect soil porosity, water infiltration, and root penetration. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-CoaFra ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "coarse fragments"@en ;
-    she:hasProcedure she:coarseFragmentsProcedure-CrsFrg_fld,
-        she:coarseFragmentsProcedure-CrsFrg_fldcls,
-        she:coarseFragmentsProcedure-CrsFrg_lab .
-
-she:CropClass a skos:Concept ;
-    skos:definition "Crop Class Property refers to the categorization of land based on the type of crops cultivated. This property is used to assess soil management practices and land productivity, as different crops require specific soil conditions for optimal growth. Source: FAO, 'Guidelines for Soil Profile Description'"@en ;
-    skos:exactMatch <http://w3id.org/glosis/model/siteplot/cropClassProperty> ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "crop class"@en .
-
-she:DryConsistency a skos:Concept ;
-    skos:definition "The Dry Consistency Property is synonymous with the Consistence Dry Property, focusing on the soil's resistance to breaking apart or deforming when dry. It indicates the soil's mechanical strength and susceptibility to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
-    skos:exactMatch glosis_lh:dryConsistencyProperty ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "dry consistency"@en .
-
-she:EffectiveCec a skos:Concept ;
-    skos:definition "ECEC is the sum of exchangeable cations in soil at its natural pH. It provides a measure of the soil’s fertility under acidic conditions, as it considers both base cations and exchangeable aluminum. Source: Brady & Weil (2017)."@en ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-ECEC ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "effective cec"@en ;
-    she:hasProcedure she:effectiveCecProcedure-EffCEC_calcul-b,
-        she:effectiveCecProcedure-EffCEC_calcul-ba .
-
-she:ElectricalConductivity a skos:Concept ;
-    skos:definition "Electrical conductivity (EC) measures the ability of soil to conduct an electrical current, which is directly related to the concentration of soluble salts. It is an essential indicator of soil salinity and is used to assess soil's suitability for crop growth. High EC levels can reduce plant water uptake and affect germination, while low levels indicate low salinity and better soil health. Source: USDA NRCS."@en ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Eleccond ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "electrical conductivity"@en ;
-    she:hasProcedure she:electricalConductivityProcedure-EC_ratio1-1,
-        she:electricalConductivityProcedure-EC_ratio1-10,
-        she:electricalConductivityProcedure-EC_ratio1-2,
-        she:electricalConductivityProcedure-EC_ratio1-2.5,
-        she:electricalConductivityProcedure-EC_ratio1-5,
-        she:electricalConductivityProcedure-ECe_sat .
-
-she:FragmentsClass a skos:Concept ;
-    skos:definition "The Fragments Class Property categorizes the size, shape, and quantity of coarse fragments (e.g., gravel, stones) present in the soil. These fragments affect soil porosity, water retention, and root penetration. The classification includes gravelly, stony, or bouldery soils. Source: Soil Survey Manual (USDA, 2017)."@en ;
-    skos:exactMatch glosis_lh:fragmentsClassProperty ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "fragments class"@en .
-
-she:Geology a skos:Concept ;
-    skos:definition "Geology Property refers to the underlying geological composition of an area, including rock types, mineral content, and geological processes. The geology of a region influences soil formation, structure, fertility, and drainage properties. Source: AGI, 'Encyclopedia of Geology'"@en ;
-    skos:exactMatch <http://w3id.org/glosis/model/siteplot/geologyProperty> ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "geology"@en .
-
-she:GroundwaterDepth a skos:Concept ;
-    skos:definition "Groundwater Depth Property indicates the depth from the soil surface to the water table, which affects soil moisture levels, plant growth, and root penetration. Shallow groundwater can influence soil salinity and nutrient availability, while deep groundwater may limit water access for plants. Source: USDA NRCS, 'Groundwater and Soil'"@en ;
-    skos:exactMatch <http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty> ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "groundwater depth"@en .
-
-she:HumanInfluenceClass a skos:Concept ;
-    skos:definition "Human Influence Class Property classifies the extent of human impact on a landscape or ecosystem, ranging from minimal disturbance to high levels of modification. This classification helps in understanding the effects of urbanization, agriculture, or industrial activity on soil properties and ecosystem functions. Source: FAO, 'Land Degradation Assessment in Drylands'"@en ;
-    skos:exactMatch <http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty> ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "human influence class"@en .
-
-she:HydraulicConductivity a skos:Concept ;
-    skos:definition "Hydraulic conductivity refers to the rate at which water moves through soil pores under a unit hydraulic gradient. It reflects the soil's ability to transmit water, influenced by texture, structure, and porosity. Soils with high hydraulic conductivity, like sandy soils, allow rapid water movement, while clayey soils exhibit slower water flow. This property is critical for understanding water infiltration, drainage, and irrigation management. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils."@en ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Hydcond ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "hydraulic conductivity"@en ;
-    she:hasProcedure she:hydraulicConductivityProcedure-KSat_calcul-ptf,
-        she:hydraulicConductivityProcedure-KSat_calcul-ptf-genuchten,
-        she:hydraulicConductivityProcedure-KSat_calcul-ptf-saxton,
-        she:hydraulicConductivityProcedure-Ksat_bhole,
-        she:hydraulicConductivityProcedure-Ksat_column,
-        she:hydraulicConductivityProcedure-Ksat_dblring,
-        she:hydraulicConductivityProcedure-Ksat_invbhole .
-
-she:HydrogenExchangeableBases a skos:Concept ;
-    skos:definition "Hydrogen ions bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Hydexc ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "hydrogen exchangeable bases"@en ;
-    she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
-        she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3,
-        she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec,
-        she:exchangeableBasesProcedure-ExchBases_ph0-cohex,
-        she:exchangeableBasesProcedure-ExchBases_ph0-nh4cl,
-        she:exchangeableBasesProcedure-ExchBases_ph7-nh4oac,
-        she:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-aas,
-        she:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-fp,
-        she:exchangeableBasesProcedure-ExchBases_ph7-unkn,
-        she:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea,
-        she:exchangeableBasesProcedure-ExchBases_ph8-unkn .
-
-she:KoeppenClass a skos:Concept ;
-    skos:definition "Koeppen Class Property refers to the classification of climate zones based on temperature and precipitation patterns, as defined by the Köppen climate classification system. This classification directly influences soil temperature, moisture content, and vegetation types, which in turn affect soil formation and properties. Source: Köppen, W., 'Geiger's Climate Maps'"@en ;
-    skos:exactMatch <http://w3id.org/glosis/model/siteplot/koeppenClassProperty> ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "koeppen class"@en .
-
-she:LandformComplex a skos:Concept ;
-    skos:definition "Landform Complex Property describes a region with multiple interrelated landforms such as ridges, valleys, and hills. This property is essential for understanding how diverse landforms within a landscape influence soil distribution, water flow, and erosion patterns, ultimately affecting soil management strategies. Source: FAO, 'Soil Formation and Classification'"@en ;
-    skos:exactMatch <http://w3id.org/glosis/model/siteplot/landformComplexProperty> ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "landform complex"@en .
-
-she:Lithology a skos:Concept ;
-    skos:definition "Lithology Property refers to the physical characteristics of the parent material, such as the mineral composition, texture, and structure of the underlying rocks or sediments. The lithology of an area influences soil formation by affecting drainage, nutrient content, and the ability of the soil to support vegetation. Source: AGI, 'Encyclopedia of Geology'"@en ;
-    skos:exactMatch <http://w3id.org/glosis/model/siteplot/lithologyProperty> ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "lithology"@en .
-
-she:MajorLandForm a skos:Concept ;
-    skos:definition "Major Land Form Property refers to the significant physical features of the land, such as mountains, valleys, and plateaus, that influence soil development and landscape processes. These landforms shape the flow of water, sediment transport, and nutrient cycling, directly affecting the types of soils that form in different regions. Source: FAO, 'World Soil Resources Report'"@en ;
-    skos:exactMatch <http://w3id.org/glosis/model/siteplot/majorLandFormProperty> ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "major land form"@en .
-
-she:MineralContent a skos:Concept ;
-    skos:definition "The Mineral Content Property evaluates the overall abundance of mineral particles in soil, including sand, silt, and clay fractions. It provides essential information about soil texture, fertility, and parent material. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
-    skos:exactMatch glosis_lh:mineralContentProperty ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "mineral content"@en .
-
-she:MineralFragments a skos:Concept ;
-    skos:definition "The Mineral Fragments Property refers to the presence and characteristics of coarse mineral particles (e.g., gravel, pebbles, stones) in the soil. These fragments influence soil drainage, root penetration, and overall physical structure. Source: Soil Survey Manual (USDA, 2017)."@en ;
-    skos:exactMatch glosis_lh:mineralFragmentsProperty ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "mineral fragments"@en .
-
-she:MoistureContent a skos:Concept ;
-    skos:definition "The Moisture Content Property measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
-    skos:exactMatch glosis_lh:moistureContentProperty ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "moisture content"@en ;
-    she:hasProcedure she:moistureContentProcedure-VMC_calcul-ptf,
-        she:moistureContentProcedure-VMC_calcul-ptf-brookscorey,
-        she:moistureContentProcedure-VMC_d,
-        she:moistureContentProcedure-VMC_d-cl,
-        she:moistureContentProcedure-VMC_d-cl-ww,
-        she:moistureContentProcedure-VMC_d-ww,
-        she:moistureContentProcedure-VMC_ud,
-        she:moistureContentProcedure-VMC_ud-cl,
-        she:moistureContentProcedure-VMC_ud-co .
-
-she:NitrogenTotal a skos:Concept ;
-    skos:definition "Total nitrogen encompasses all nitrogen forms in soil, including organic nitrogen in humus and inorganic nitrogen such as ammonium (NH₄⁺) and nitrate (NO₃⁻). Nitrogen is essential for plant growth, being a vital component of amino acids, proteins, and chlorophyll. Total nitrogen is a key indicator of soil fertility and its capacity to sustain long-term crop productivity. Source: Brady & Weil (2017)."@en ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Nittot ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "nitrogen total"@en ;
-    she:hasProcedure she:nitrogenTotalProcedure-TotalN_bremner,
-        she:nitrogenTotalProcedure-TotalN_calcul,
-        she:nitrogenTotalProcedure-TotalN_calcul-oc10,
-        she:nitrogenTotalProcedure-TotalN_dc,
-        she:nitrogenTotalProcedure-TotalN_h2so4,
-        she:nitrogenTotalProcedure-TotalN_kjeldahl,
-        she:nitrogenTotalProcedure-TotalN_kjeldahl-nh4,
-        she:nitrogenTotalProcedure-TotalN_nelson,
-        she:nitrogenTotalProcedure-TotalN_tn04,
-        she:nitrogenTotalProcedure-TotalN_tn06,
-        she:nitrogenTotalProcedure-TotalN_tn08 .
-
-she:OrganicMatter a skos:Concept ;
-    skos:definition "Soil organic matter is composed of decomposed plant and animal residues, living soil organisms, and humus. It improves soil structure, water retention, nutrient supply, and microbial activity, making it critical for sustainable agriculture and soil health. Source: Brady & Weil (2017)."@en ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Orgmat ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "organic matter"@en ;
-    she:hasProcedure she:organicMatterProcedure-FulAcidC_unkn,
-        she:organicMatterProcedure-HumAcidC_unkn,
-        she:organicMatterProcedure-OrgM_calcul-oc1.73,
-        she:organicMatterProcedure-TotHumC_unkn .
-
-she:OrganicMatterClass a skos:Concept ;
-    skos:definition "The Organic Matter Class property classifies soil based on the amount and quality of organic matter it contains. Soils with high organic matter are usually fertile, retain moisture better, and support more biological activity. This classification helps in determining soil health and suitability for agricultural purposes. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall."@en ;
-    skos:exactMatch <http://w3id.org/glosis/model/common/organicMatterClassProperty> ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "organic matter class"@en .
-
-she:OxalateExtractableOpticalDensity a skos:Concept ;
-    skos:definition "The Oxalate Extractable Optical Density Property measures the concentration of poorly crystalline forms of iron, aluminum, and organic matter in soil, often associated with volcanic soils. It is determined using ammonium oxalate extraction. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
-    skos:exactMatch glosis_lh:oxalateExtractableOpticalDensityProperty ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "oxalate extractable optical density"@en .
-
-she:PH a skos:Concept ;
-    skos:definition "Soil pH measures the concentration of hydrogen ions (H⁺) in the soil solution, indicating its acidity or alkalinity on a scale from 1 to 14. Neutral soils have a pH of 7, while values below 7 are acidic and above are alkaline. Soil pH significantly affects nutrient availability, microbial activity, and plant growth. For instance, nutrients like phosphorus are most available in a pH range of 6 to 7. Lime or sulfur applications can adjust soil pH to optimize conditions for crops. Source: USDA Natural Resources Conservation Service (NRCS)."@en ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-pH ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "ph"@en ;
-    she:hasProcedure she:pHProcedure-pHCaCl2,
-        she:pHProcedure-pHH2O,
-        she:pHProcedure-pHKCl,
-        she:pHProcedure-pHKCl_sat,
-        she:pHProcedure-pHNaF .
-
-she:ParticleSizeFractionsSum a skos:Concept ;
-    skos:definition "The Particle Size Fractions Sum refers to the total proportion of sand, silt, and clay particles in soil, expressed as a percentage. It ensures the sum of individual particle size fractions adds up to 100%, a check for accurate soil texture analysis. Particle size distribution impacts water retention, permeability, and soil structure. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
-    skos:exactMatch glosis_lh:particleSizeFractionsSumProperty ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "particle size fractions sum"@en .
-
-she:Physiography a skos:Concept ;
-    skos:definition "Physiography Property describes the physical characteristics of a landscape, including its landforms, slopes, and elevation. These features influence soil properties such as drainage, erosion, and moisture retention, helping to determine soil suitability for various land uses. Source: FAO, 'Soil Geography and Mapping'"@en ;
-    skos:exactMatch <http://w3id.org/glosis/model/siteplot/physiographyProperty> ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "physiography"@en .
-
-she:Plasticity a skos:Concept ;
-    skos:definition "The Plasticity Property measures the soil's ability to deform under stress without cracking or breaking, especially when wet. It is influenced by clay content and mineralogy and is important for engineering and agricultural applications. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
-    skos:exactMatch glosis_lh:plasticityProperty ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "plasticity"@en .
-
-she:ProfileDescriptionStatus a skos:Concept ;
-    skos:definition "The Profile Description Status Property indicates the level of detail and accuracy in documenting the features of a soil profile, including its horizons, texture, structure, and other observable characteristics. This property ensures that the soil profile description meets standards for completeness, enabling reliable classification and analysis. It is a critical aspect of soil studies, providing the basis for land-use planning, environmental assessment, and agricultural decision-making. Source: Schoeneberger, P.J., Wysocki, D.A., Benham, E.C., & Soil Survey Staff. (2012). Field Book for Describing and Sampling Soils. USDA-NRCS."@en ;
-    skos:exactMatch <http://w3id.org/glosis/model/profile/profileDescriptionStatusProperty> ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "profile description status"@en .
-
-she:SandyTexture a skos:Concept ;
-    skos:definition "The Sandy Texture Property refers to soil dominated by sand particles (0.05–2.0 mm in diameter). Sandy soils are well-drained, low in nutrients, and prone to drought due to poor water retention. Source: Soil Science Society of America (SSSA) Glossary."@en ;
-    skos:exactMatch glosis_lh:sandyTextureProperty ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "sandy texture"@en .
-
-she:SoilCarbonDensity a skos:Concept ;
-    skos:definition "Soil Carbon Density Property measures the amount of organic carbon stored in a given volume of soil, typically expressed in tons per hectare. This property is a key indicator of soil health, as organic carbon influences soil fertility, structure, and microbial activity, and plays a major role in carbon sequestration to mitigate climate change. Source: IPCC, 'Guidelines for National Greenhouse Gas Inventories'"@en ;
-    skos:exactMatch <http://w3id.org/glosis/model/siteplot/soilCarbonDensityProperty> ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil carbon density"@en .
-
-she:Stickiness a skos:Concept ;
-    skos:definition "The Stickiness Property measures the soil’s tendency to adhere to surfaces or objects when wet. It is influenced by clay content and organic matter and affects soil workability and machinery use. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
-    skos:exactMatch glosis_lh:stickinessProperty ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "stickiness"@en .
-
-she:SurfaceAge a skos:Concept ;
-    skos:definition "Surface Age Property refers to the estimated age of a surface layer of soil or landform, which is important for understanding the degree of soil weathering, development, and fertility. Older surfaces may have more developed soils, while younger surfaces may be less fertile and more prone to erosion. Source: FAO, 'Soil Formation and Evolution'"@en ;
-    skos:exactMatch <http://w3id.org/glosis/model/siteplot/surfaceAgeProperty> ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "surface age"@en .
-
-she:TotalCarbonateEquivalent a skos:Concept ;
-    skos:definition "The total calcium carbonate equivalent measures the full capacity of soil to neutralize acidity, considering all forms of carbonate and bicarbonate minerals. It is essential for managing soil pH and nutrient availability in acidic soils. Source: FAO Soil Bulletin."@en ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Ccetot ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "total carbonate equivalent"@en ;
-    she:hasProcedure she:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc,
-        she:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-nodc,
-        she:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-unkn,
-        she:totalCarbonateEquivalentProcedure-CaCO3_acid-dc,
-        she:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-dc,
-        she:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-nodc,
-        she:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-unkn,
-        she:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-dc,
-        she:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-nodc,
-        she:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-unkn,
-        she:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-dc,
-        she:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-nodc,
-        she:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-unkn,
-        she:totalCarbonateEquivalentProcedure-CaCO3_acid-nodc,
-        she:totalCarbonateEquivalentProcedure-CaCO3_acid-unkn,
-        she:totalCarbonateEquivalentProcedure-CaCO3_ca01,
-        she:totalCarbonateEquivalentProcedure-CaCO3_ca02,
-        she:totalCarbonateEquivalentProcedure-CaCO3_ca03,
-        she:totalCarbonateEquivalentProcedure-CaCO3_ca04,
-        she:totalCarbonateEquivalentProcedure-CaCO3_ca05,
-        she:totalCarbonateEquivalentProcedure-CaCO3_ca06,
-        she:totalCarbonateEquivalentProcedure-CaCO3_ca07,
-        she:totalCarbonateEquivalentProcedure-CaCO3_ca08,
-        she:totalCarbonateEquivalentProcedure-CaCO3_ca09,
-        she:totalCarbonateEquivalentProcedure-CaCO3_ca10,
-        she:totalCarbonateEquivalentProcedure-CaCO3_ca11,
-        she:totalCarbonateEquivalentProcedure-CaCO3_ca12,
-        she:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc .
-
-she:TreeDensity a skos:Concept ;
-    skos:definition "Tree Density Property refers to the number of trees per unit area, usually expressed as trees per hectare. High tree density is often associated with forested ecosystems that contribute to soil fertility through organic matter inputs, root structures that stabilize the soil, and enhanced moisture retention. Source: FAO, 'Forest Resources Assessment'"@en ;
-    skos:exactMatch <http://w3id.org/glosis/model/siteplot/treeDensityProperty> ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "tree density"@en .
-
-she:VegetationClass a skos:Concept ;
-    skos:definition "Vegetation Class Property refers to the categorization of vegetation types based on species composition and structure, such as forests, grasslands, and wetlands. The class of vegetation affects soil fertility, microbial activity, and water retention, which in turn influences agricultural potential and ecosystem services. Source: FAO, 'Vegetation and Land Use in Arid Zones'"@en ;
-    skos:exactMatch <http://w3id.org/glosis/model/siteplot/vegetationClassProperty> ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "vegetation class"@en .
-
-she:WetPlasticity a skos:Concept ;
-    skos:definition "The Wet Plasticity Property measures the soil’s ability to deform under pressure when saturated. Wet plasticity is influenced by clay mineralogy and is important for understanding soil behavior under wet conditions. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
-    skos:exactMatch glosis_lh:wetPlasticityProperty ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "wet plasticity"@en .
-
 she:AerationPorosity a skos:Concept ;
     skos:broader she:SoilPorosityIndex ;
     skos:exactMatch spp:AerationPorosity ;
@@ -503,6 +178,23 @@ she:AttractiveForce a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "attractive force"@en .
 
+she:AvailableWaterHoldingCapacity a skos:Concept ;
+    skos:definition "Available water capacity (AWC) measures the volume of water soil can retain between field capacity and the permanent wilting point. It represents the water accessible to plants for uptake. High AWC supports better plant growth, while low AWC may necessitate irrigation. Source: USDA NRCS."@en ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Avavol ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "available water holding capacity"@en ;
+    she:hasProcedure she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc100wp,
+        she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc200wp,
+        she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc300wp .
+
+she:BaseSaturation a skos:Concept ;
+    skos:definition "Base saturation represents the percentage of the soil's cation exchange capacity (CEC) occupied by basic cations such as calcium (Ca²⁺), magnesium (Mg²⁺), potassium (K⁺), and sodium (Na⁺). Higher base saturation typically correlates with higher fertility and a greater ability to supply essential nutrients to plants. This parameter also influences soil pH buffering capacity. Source: Brady & Weil (2017)."@en ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Bascal ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "base saturation"@en ;
+    she:hasProcedure she:baseSaturationProcedure-BSat_calcul-cec,
+        she:baseSaturationProcedure-BSat_calcul-ecec .
+
 she:Biochannel a skos:Concept ;
     skos:broader she:SoilPore ;
     skos:exactMatch spp:Biochannel ;
@@ -528,6 +220,12 @@ she:BiologicalNitrogenFixation a skos:Concept ;
     skos:exactMatch spp:BiologicalNitrogenFixation ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "biological nitrogen fixation"@en .
+
+she:BleachedSand a skos:Concept ;
+    skos:definition "The Bleached Sand property refers to the physical characteristic of sandy soil that has undergone a bleaching process due to leaching, where minerals such as iron and other elements have been removed by water. This process often occurs in areas with high rainfall, leading to a soil that appears lighter in color. Bleached sand typically indicates low fertility and poor nutrient-holding capacity due to the lack of iron and other nutrients that are washed away. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall."@en ;
+    skos:exactMatch <http://w3id.org/glosis/model/common/bleachedSandProperty> ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "bleached sand"@en .
 
 she:BoronExtractableElements a skos:Concept ;
     skos:broader she:Boron ;
@@ -910,6 +608,12 @@ she:CationExchangeCapacitycSoil a skos:Concept ;
         she:cationExchangeCapacitySoilProcedure-CEC_ph8-nh4oac,
         she:cationExchangeCapacitySoilProcedure-CEC_ph8-unkn .
 
+she:CationsSum a skos:Concept ;
+    skos:definition "The Cations Sum Property calculates the total concentration of exchangeable cations (e.g., Ca²⁺, Mg²⁺, K⁺, Na⁺) in the soil. It helps determine soil fertility and salinity and is commonly expressed in milliequivalents per 100 grams of soil. Source: Soil Science Society of America (SSSA) Glossary."@en ;
+    skos:exactMatch glosis_lh:cationsSumProperty ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "cations sum"@en .
+
 she:CementationContinuity a skos:Concept ;
     skos:broader she:Cementation ;
     skos:definition "The Cementation Continuity Property describes the extent to which soil particles are bound together by cementing agents, such as calcium carbonate, iron oxides, or silica. Cementation affects soil permeability, root penetration, and the development of soil horizons. Continuity can be classified as continuous, discontinuous, or patchy. Source: FAO (2006). Guidelines for Soil Description."@en ;
@@ -955,6 +659,15 @@ she:Climate a skos:Concept ;
     skos:exactMatch spp:Climate ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "climate"@en .
+
+she:CoarseFragments a skos:Concept ;
+    skos:definition "Coarse fragments are soil particles larger than 2 mm in diameter, such as gravel, cobbles, and stones. They affect soil porosity, water infiltration, and root penetration. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-CoaFra ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "coarse fragments"@en ;
+    she:hasProcedure she:coarseFragmentsProcedure-CrsFrg_fld,
+        she:coarseFragmentsProcedure-CrsFrg_fldcls,
+        she:coarseFragmentsProcedure-CrsFrg_lab .
 
 she:CoarseSand a skos:Concept ;
     skos:broader she:Sand ;
@@ -1146,6 +859,12 @@ she:Crop a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "crop"@en .
 
+she:CropClass a skos:Concept ;
+    skos:definition "Crop Class Property refers to the categorization of land based on the type of crops cultivated. This property is used to assess soil management practices and land productivity, as different crops require specific soil conditions for optimal growth. Source: FAO, 'Guidelines for Soil Profile Description'"@en ;
+    skos:exactMatch <http://w3id.org/glosis/model/siteplot/cropClassProperty> ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "crop class"@en .
+
 she:CropResidueMulch a skos:Concept ;
     skos:broader she:Mulch ;
     skos:exactMatch spp:CropResidueMulch ;
@@ -1182,6 +901,12 @@ she:DrainageToGroundwater a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "drainage to groundwater"@en .
 
+she:DryConsistency a skos:Concept ;
+    skos:definition "The Dry Consistency Property is synonymous with the Consistence Dry Property, focusing on the soil's resistance to breaking apart or deforming when dry. It indicates the soil's mechanical strength and susceptibility to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
+    skos:exactMatch glosis_lh:dryConsistencyProperty ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "dry consistency"@en .
+
 she:DrySoilBulkDensity a skos:Concept ;
     skos:broader she:SoilBulkDensity ;
     skos:exactMatch spp:DrySoilBulkDensity ;
@@ -1193,6 +918,26 @@ she:Earthworm a skos:Concept ;
     skos:exactMatch spp:Earthworm ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "earthworm"@en .
+
+she:EffectiveCec a skos:Concept ;
+    skos:definition "ECEC is the sum of exchangeable cations in soil at its natural pH. It provides a measure of the soil’s fertility under acidic conditions, as it considers both base cations and exchangeable aluminum. Source: Brady & Weil (2017)."@en ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-ECEC ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "effective cec"@en ;
+    she:hasProcedure she:effectiveCecProcedure-EffCEC_calcul-b,
+        she:effectiveCecProcedure-EffCEC_calcul-ba .
+
+she:ElectricalConductivity a skos:Concept ;
+    skos:definition "Electrical conductivity (EC) measures the ability of soil to conduct an electrical current, which is directly related to the concentration of soluble salts. It is an essential indicator of soil salinity and is used to assess soil's suitability for crop growth. High EC levels can reduce plant water uptake and affect germination, while low levels indicate low salinity and better soil health. Source: USDA NRCS."@en ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Eleccond ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "electrical conductivity"@en ;
+    she:hasProcedure she:electricalConductivityProcedure-EC_ratio1-1,
+        she:electricalConductivityProcedure-EC_ratio1-10,
+        she:electricalConductivityProcedure-EC_ratio1-2,
+        she:electricalConductivityProcedure-EC_ratio1-2.5,
+        she:electricalConductivityProcedure-EC_ratio1-5,
+        she:electricalConductivityProcedure-ECe_sat .
 
 she:ErosionActivityPeriod a skos:Concept ;
     skos:broader she:ErosionProperties ;
@@ -1310,6 +1055,12 @@ she:FragmentCover a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "fragment cover"@en .
 
+she:FragmentsClass a skos:Concept ;
+    skos:definition "The Fragments Class Property categorizes the size, shape, and quantity of coarse fragments (e.g., gravel, stones) present in the soil. These fragments affect soil porosity, water retention, and root penetration. The classification includes gravelly, stony, or bouldery soils. Source: Soil Survey Manual (USDA, 2017)."@en ;
+    skos:exactMatch glosis_lh:fragmentsClassProperty ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "fragments class"@en .
+
 she:FragmentsSize a skos:Concept ;
     skos:broader she:FragmentProperties ;
     skos:definition "The Fragments Size property refers to the dimensions of rock or mineral fragments present in the soil. These fragments are categorized based on their size, ranging from small gravel particles to larger stones and boulders. Larger fragments tend to reduce soil fertility, inhibit root growth, and decrease water retention. Smaller fragments, in contrast, contribute to soil texture and permeability. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ;
@@ -1328,6 +1079,12 @@ she:Frost a skos:Concept ;
     skos:exactMatch spp:Frost ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "frost"@en .
+
+she:Geology a skos:Concept ;
+    skos:definition "Geology Property refers to the underlying geological composition of an area, including rock types, mineral content, and geological processes. The geology of a region influences soil formation, structure, fertility, and drainage properties. Source: AGI, 'Encyclopedia of Geology'"@en ;
+    skos:exactMatch <http://w3id.org/glosis/model/siteplot/geologyProperty> ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "geology"@en .
 
 she:GeometricMeanDiameter a skos:Concept ;
     skos:broader she:SoilAggregationIndex ;
@@ -1352,6 +1109,12 @@ she:GroundCover a skos:Concept ;
     skos:exactMatch spp:GroundCover ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "ground cover"@en .
+
+she:GroundwaterDepth a skos:Concept ;
+    skos:definition "Groundwater Depth Property indicates the depth from the soil surface to the water table, which affects soil moisture levels, plant growth, and root penetration. Shallow groundwater can influence soil salinity and nutrient availability, while deep groundwater may limit water access for plants. Source: USDA NRCS, 'Groundwater and Soil'"@en ;
+    skos:exactMatch <http://w3id.org/glosis/model/siteplot/groundwaterDepthProperty> ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "groundwater depth"@en .
 
 she:GypsumContent a skos:Concept ;
     skos:broader she:Gypsum ;
@@ -1385,6 +1148,42 @@ she:HarshConsistence a skos:Concept ;
     skos:exactMatch spp:HarshConsistence ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "harsh consistence"@en .
+
+she:HumanInfluenceClass a skos:Concept ;
+    skos:definition "Human Influence Class Property classifies the extent of human impact on a landscape or ecosystem, ranging from minimal disturbance to high levels of modification. This classification helps in understanding the effects of urbanization, agriculture, or industrial activity on soil properties and ecosystem functions. Source: FAO, 'Land Degradation Assessment in Drylands'"@en ;
+    skos:exactMatch <http://w3id.org/glosis/model/siteplot/humanInfluenceClassProperty> ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "human influence class"@en .
+
+she:HydraulicConductivity a skos:Concept ;
+    skos:definition "Hydraulic conductivity refers to the rate at which water moves through soil pores under a unit hydraulic gradient. It reflects the soil's ability to transmit water, influenced by texture, structure, and porosity. Soils with high hydraulic conductivity, like sandy soils, allow rapid water movement, while clayey soils exhibit slower water flow. This property is critical for understanding water infiltration, drainage, and irrigation management. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils."@en ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Hydcond ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "hydraulic conductivity"@en ;
+    she:hasProcedure she:hydraulicConductivityProcedure-KSat_calcul-ptf,
+        she:hydraulicConductivityProcedure-KSat_calcul-ptf-genuchten,
+        she:hydraulicConductivityProcedure-KSat_calcul-ptf-saxton,
+        she:hydraulicConductivityProcedure-Ksat_bhole,
+        she:hydraulicConductivityProcedure-Ksat_column,
+        she:hydraulicConductivityProcedure-Ksat_dblring,
+        she:hydraulicConductivityProcedure-Ksat_invbhole .
+
+she:HydrogenExchangeableBases a skos:Concept ;
+    skos:definition "Hydrogen ions bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Hydexc ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "hydrogen exchangeable bases"@en ;
+    she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
+        she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3,
+        she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec,
+        she:exchangeableBasesProcedure-ExchBases_ph0-cohex,
+        she:exchangeableBasesProcedure-ExchBases_ph0-nh4cl,
+        she:exchangeableBasesProcedure-ExchBases_ph7-nh4oac,
+        she:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-aas,
+        she:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-fp,
+        she:exchangeableBasesProcedure-ExchBases_ph7-unkn,
+        she:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea,
+        she:exchangeableBasesProcedure-ExchBases_ph8-unkn .
 
 she:IndexBasedOnTextureAndCementingAgents a skos:Concept ;
     skos:broader she:SoilStructureIndirectIndex ;
@@ -1567,6 +1366,12 @@ she:Irrigation a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "irrigation"@en .
 
+she:KoeppenClass a skos:Concept ;
+    skos:definition "Koeppen Class Property refers to the classification of climate zones based on temperature and precipitation patterns, as defined by the Köppen climate classification system. This classification directly influences soil temperature, moisture content, and vegetation types, which in turn affect soil formation and properties. Source: Köppen, W., 'Geiger's Climate Maps'"@en ;
+    skos:exactMatch <http://w3id.org/glosis/model/siteplot/koeppenClassProperty> ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "koeppen class"@en .
+
 she:LabileSolute a skos:Concept ;
     skos:broader she:NonconservativeSolute ;
     skos:exactMatch spp:LabileSolute ;
@@ -1608,6 +1413,12 @@ she:LandUseShrubs a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "land use shrubs"@en .
 
+she:LandformComplex a skos:Concept ;
+    skos:definition "Landform Complex Property describes a region with multiple interrelated landforms such as ridges, valleys, and hills. This property is essential for understanding how diverse landforms within a landscape influence soil distribution, water flow, and erosion patterns, ultimately affecting soil management strategies. Source: FAO, 'Soil Formation and Classification'"@en ;
+    skos:exactMatch <http://w3id.org/glosis/model/siteplot/landformComplexProperty> ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "landform complex"@en .
+
 she:LiquidConsistence a skos:Concept ;
     skos:broader she:SoilConsistence ;
     skos:exactMatch spp:LiquidConsistence ;
@@ -1625,6 +1436,12 @@ she:LiquidWasteDisposal a skos:Concept ;
     skos:exactMatch spp:LiquidWasteDisposal ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "liquid waste disposal"@en .
+
+she:Lithology a skos:Concept ;
+    skos:definition "Lithology Property refers to the physical characteristics of the parent material, such as the mineral composition, texture, and structure of the underlying rocks or sediments. The lithology of an area influences soil formation by affecting drainage, nutrient content, and the ability of the soil to support vegetation. Source: AGI, 'Encyclopedia of Geology'"@en ;
+    skos:exactMatch <http://w3id.org/glosis/model/siteplot/lithologyProperty> ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "lithology"@en .
 
 she:LongitudinalDispersion a skos:Concept ;
     skos:broader she:SoilSoluteDispersiveTransport ;
@@ -1713,6 +1530,12 @@ she:MagnesiumTotalElements a skos:Concept ;
         she:totalElementsProcedure-Total_xrf,
         she:totalElementsProcedure-Total_xrf-p,
         she:totalElementsProcedure-Total_xtf-t .
+
+she:MajorLandForm a skos:Concept ;
+    skos:definition "Major Land Form Property refers to the significant physical features of the land, such as mountains, valleys, and plateaus, that influence soil development and landscape processes. These landforms shape the flow of water, sediment transport, and nutrient cycling, directly affecting the types of soils that form in different regions. Source: FAO, 'World Soil Resources Report'"@en ;
+    skos:exactMatch <http://w3id.org/glosis/model/siteplot/majorLandFormProperty> ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "major land form"@en .
 
 she:ManganeseExchangeableBases a skos:Concept ;
     skos:broader she:Manganese ;
@@ -1876,6 +1699,18 @@ she:MineralConcVolume a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "mineral conc volume"@en .
 
+she:MineralContent a skos:Concept ;
+    skos:definition "The Mineral Content Property evaluates the overall abundance of mineral particles in soil, including sand, silt, and clay fractions. It provides essential information about soil texture, fertility, and parent material. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
+    skos:exactMatch glosis_lh:mineralContentProperty ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "mineral content"@en .
+
+she:MineralFragments a skos:Concept ;
+    skos:definition "The Mineral Fragments Property refers to the presence and characteristics of coarse mineral particles (e.g., gravel, pebbles, stones) in the soil. These fragments influence soil drainage, root penetration, and overall physical structure. Source: Soil Survey Manual (USDA, 2017)."@en ;
+    skos:exactMatch glosis_lh:mineralFragmentsProperty ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "mineral fragments"@en .
+
 she:Mist a skos:Concept ;
     skos:broader she:Precipitation ;
     skos:exactMatch spp:Mist ;
@@ -1894,6 +1729,21 @@ she:MoistConsistency a skos:Concept ;
     skos:exactMatch glosis_lh:moistConsistencyProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "moist consistency"@en .
+
+she:MoistureContent a skos:Concept ;
+    skos:definition "The Moisture Content Property measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
+    skos:exactMatch glosis_lh:moistureContentProperty ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "moisture content"@en ;
+    she:hasProcedure she:moistureContentProcedure-VMC_calcul-ptf,
+        she:moistureContentProcedure-VMC_calcul-ptf-brookscorey,
+        she:moistureContentProcedure-VMC_d,
+        she:moistureContentProcedure-VMC_d-cl,
+        she:moistureContentProcedure-VMC_d-cl-ww,
+        she:moistureContentProcedure-VMC_d-ww,
+        she:moistureContentProcedure-VMC_ud,
+        she:moistureContentProcedure-VMC_ud-cl,
+        she:moistureContentProcedure-VMC_ud-co .
 
 she:MolybdenumExtractableElements a skos:Concept ;
     skos:broader she:Molybdenum ;
@@ -2013,6 +1863,23 @@ she:NighttimeCooling a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "nighttime cooling"@en .
 
+she:NitrogenTotal a skos:Concept ;
+    skos:definition "Total nitrogen encompasses all nitrogen forms in soil, including organic nitrogen in humus and inorganic nitrogen such as ammonium (NH₄⁺) and nitrate (NO₃⁻). Nitrogen is essential for plant growth, being a vital component of amino acids, proteins, and chlorophyll. Total nitrogen is a key indicator of soil fertility and its capacity to sustain long-term crop productivity. Source: Brady & Weil (2017)."@en ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Nittot ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "nitrogen total"@en ;
+    she:hasProcedure she:nitrogenTotalProcedure-TotalN_bremner,
+        she:nitrogenTotalProcedure-TotalN_calcul,
+        she:nitrogenTotalProcedure-TotalN_calcul-oc10,
+        she:nitrogenTotalProcedure-TotalN_dc,
+        she:nitrogenTotalProcedure-TotalN_h2so4,
+        she:nitrogenTotalProcedure-TotalN_kjeldahl,
+        she:nitrogenTotalProcedure-TotalN_kjeldahl-nh4,
+        she:nitrogenTotalProcedure-TotalN_nelson,
+        she:nitrogenTotalProcedure-TotalN_tn04,
+        she:nitrogenTotalProcedure-TotalN_tn06,
+        she:nitrogenTotalProcedure-TotalN_tn08 .
+
 she:NoTill a skos:Concept ;
     skos:broader she:SoilManagement ;
     skos:exactMatch spp:NoTill ;
@@ -2037,6 +1904,22 @@ she:NormalStress a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "normal stress"@en .
 
+she:OrganicMatter a skos:Concept ;
+    skos:definition "Soil organic matter is composed of decomposed plant and animal residues, living soil organisms, and humus. It improves soil structure, water retention, nutrient supply, and microbial activity, making it critical for sustainable agriculture and soil health. Source: Brady & Weil (2017)."@en ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Orgmat ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "organic matter"@en ;
+    she:hasProcedure she:organicMatterProcedure-FulAcidC_unkn,
+        she:organicMatterProcedure-HumAcidC_unkn,
+        she:organicMatterProcedure-OrgM_calcul-oc1.73,
+        she:organicMatterProcedure-TotHumC_unkn .
+
+she:OrganicMatterClass a skos:Concept ;
+    skos:definition "The Organic Matter Class property classifies soil based on the amount and quality of organic matter it contains. Soils with high organic matter are usually fertile, retain moisture better, and support more biological activity. This classification helps in determining soil health and suitability for agricultural purposes. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall."@en ;
+    skos:exactMatch <http://w3id.org/glosis/model/common/organicMatterClassProperty> ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "organic matter class"@en .
+
 she:OsmoticPressure a skos:Concept ;
     skos:broader she:Pressure ;
     skos:exactMatch spp:OsmoticPressure ;
@@ -2054,6 +1937,23 @@ she:OverlandFlow a skos:Concept ;
     skos:exactMatch spp:OverlandFlow ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "overland flow"@en .
+
+she:OxalateExtractableOpticalDensity a skos:Concept ;
+    skos:definition "The Oxalate Extractable Optical Density Property measures the concentration of poorly crystalline forms of iron, aluminum, and organic matter in soil, often associated with volcanic soils. It is determined using ammonium oxalate extraction. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
+    skos:exactMatch glosis_lh:oxalateExtractableOpticalDensityProperty ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "oxalate extractable optical density"@en .
+
+she:PH a skos:Concept ;
+    skos:definition "Soil pH measures the concentration of hydrogen ions (H⁺) in the soil solution, indicating its acidity or alkalinity on a scale from 1 to 14. Neutral soils have a pH of 7, while values below 7 are acidic and above are alkaline. Soil pH significantly affects nutrient availability, microbial activity, and plant growth. For instance, nutrients like phosphorus are most available in a pH range of 6 to 7. Lime or sulfur applications can adjust soil pH to optimize conditions for crops. Source: USDA Natural Resources Conservation Service (NRCS)."@en ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-pH ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "ph"@en ;
+    she:hasProcedure she:pHProcedure-pHCaCl2,
+        she:pHProcedure-pHH2O,
+        she:pHProcedure-pHKCl,
+        she:pHProcedure-pHKCl_sat,
+        she:pHProcedure-pHNaF .
 
 she:ParentDeposition a skos:Concept ;
     skos:broader she:ParentMaterial ;
@@ -2081,6 +1981,12 @@ she:ParticleRepulsion a skos:Concept ;
     skos:exactMatch spp:ParticleRepulsion ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "particle repulsion"@en .
+
+she:ParticleSizeFractionsSum a skos:Concept ;
+    skos:definition "The Particle Size Fractions Sum refers to the total proportion of sand, silt, and clay particles in soil, expressed as a percentage. It ensures the sum of individual particle size fractions adds up to 100%, a check for accurate soil texture analysis. Particle size distribution impacts water retention, permeability, and soil structure. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
+    skos:exactMatch glosis_lh:particleSizeFractionsSumProperty ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "particle size fractions sum"@en .
 
 she:ParticleToParticleFriction a skos:Concept ;
     skos:broader she:Force ;
@@ -2218,6 +2124,12 @@ she:PhosphorusTotalElements a skos:Concept ;
         she:totalElementsProcedure-Total_xrf-p,
         she:totalElementsProcedure-Total_xtf-t .
 
+she:Physiography a skos:Concept ;
+    skos:definition "Physiography Property describes the physical characteristics of a landscape, including its landforms, slopes, and elevation. These features influence soil properties such as drainage, erosion, and moisture retention, helping to determine soil suitability for various land uses. Source: FAO, 'Soil Geography and Mapping'"@en ;
+    skos:exactMatch <http://w3id.org/glosis/model/siteplot/physiographyProperty> ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "physiography"@en .
+
 she:PlantAvailableWaterContent a skos:Concept ;
     skos:broader she:SoilWaterContent ;
     skos:exactMatch spp:PlantAvailableWaterContent ;
@@ -2235,6 +2147,12 @@ she:PlasticConsistence a skos:Concept ;
     skos:exactMatch spp:PlasticConsistence ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "plastic consistence"@en .
+
+she:Plasticity a skos:Concept ;
+    skos:definition "The Plasticity Property measures the soil's ability to deform under stress without cracking or breaking, especially when wet. It is influenced by clay content and mineralogy and is important for engineering and agricultural applications. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
+    skos:exactMatch glosis_lh:plasticityProperty ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "plasticity"@en .
 
 she:PoresAbundance a skos:Concept ;
     skos:broader she:Pores ;
@@ -2338,6 +2256,12 @@ she:ProfileControlledWaterInfiltration a skos:Concept ;
     skos:exactMatch spp:ProfileControlledWaterInfiltration ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "profile controlled water infiltration"@en .
+
+she:ProfileDescriptionStatus a skos:Concept ;
+    skos:definition "The Profile Description Status Property indicates the level of detail and accuracy in documenting the features of a soil profile, including its horizons, texture, structure, and other observable characteristics. This property ensures that the soil profile description meets standards for completeness, enabling reliable classification and analysis. It is a critical aspect of soil studies, providing the basis for land-use planning, environmental assessment, and agricultural decision-making. Source: Schoeneberger, P.J., Wysocki, D.A., Benham, E.C., & Soil Survey Staff. (2012). Field Book for Describing and Sampling Soils. USDA-NRCS."@en ;
+    skos:exactMatch <http://w3id.org/glosis/model/profile/profileDescriptionStatusProperty> ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "profile description status"@en .
 
 she:Radiation a skos:Concept ;
     skos:broader she:MeteorologicalProperty ;
@@ -2481,6 +2405,12 @@ she:SaltThickness a skos:Concept ;
     skos:exactMatch <http://w3id.org/glosis/model/surface/saltThicknessProperty> ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "salt thickness"@en .
+
+she:SandyTexture a skos:Concept ;
+    skos:definition "The Sandy Texture Property refers to soil dominated by sand particles (0.05–2.0 mm in diameter). Sandy soils are well-drained, low in nutrients, and prone to drought due to poor water retention. Source: Soil Science Society of America (SSSA) Glossary."@en ;
+    skos:exactMatch glosis_lh:sandyTextureProperty ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "sandy texture"@en .
 
 she:SaturatedHydraulicConductivity a skos:Concept ;
     skos:broader she:SoilHydraulicConductivity ;
@@ -2801,6 +2731,12 @@ she:SoilBufferingCapacity a skos:Concept ;
     skos:exactMatch spp:SoilBufferingCapacity ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil buffering capacity"@en .
+
+she:SoilCarbonDensity a skos:Concept ;
+    skos:definition "Soil Carbon Density Property measures the amount of organic carbon stored in a given volume of soil, typically expressed in tons per hectare. This property is a key indicator of soil health, as organic carbon influences soil fertility, structure, and microbial activity, and plays a major role in carbon sequestration to mitigate climate change. Source: IPCC, 'Guidelines for National Greenhouse Gas Inventories'"@en ;
+    skos:exactMatch <http://w3id.org/glosis/model/siteplot/soilCarbonDensityProperty> ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "soil carbon density"@en .
 
 she:SoilChannel a skos:Concept ;
     skos:broader she:SoilPore ;
@@ -4122,6 +4058,12 @@ she:SolubleSalts a skos:Concept ;
     she:hasProcedure she:solubleSaltsProcedure-SlbAn_calcul-unkn,
         she:solubleSaltsProcedure-SlbCat_calcul-unkn .
 
+she:Stickiness a skos:Concept ;
+    skos:definition "The Stickiness Property measures the soil’s tendency to adhere to surfaces or objects when wet. It is influenced by clay content and organic matter and affects soil workability and machinery use. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
+    skos:exactMatch glosis_lh:stickinessProperty ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "stickiness"@en .
+
 she:StickyConsistence a skos:Concept ;
     skos:broader she:SoilConsistence ;
     skos:exactMatch spp:StickyConsistence ;
@@ -4212,6 +4154,12 @@ she:SulfurTotalElements a skos:Concept ;
         she:totalElementsProcedure-Total_xrf-p,
         she:totalElementsProcedure-Total_xtf-t .
 
+she:SurfaceAge a skos:Concept ;
+    skos:definition "Surface Age Property refers to the estimated age of a surface layer of soil or landform, which is important for understanding the degree of soil weathering, development, and fertility. Older surfaces may have more developed soils, while younger surfaces may be less fertile and more prone to erosion. Source: FAO, 'Soil Formation and Evolution'"@en ;
+    skos:exactMatch <http://w3id.org/glosis/model/siteplot/surfaceAgeProperty> ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "surface age"@en .
+
 she:SurfaceAggregationRatio a skos:Concept ;
     skos:broader she:SoilStructureIndirectIndex ;
     skos:exactMatch spp:SurfaceAggregationRatio ;
@@ -4268,6 +4216,40 @@ she:TextureLabClass a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "texture lab class"@en .
 
+she:TotalCarbonateEquivalent a skos:Concept ;
+    skos:definition "The total calcium carbonate equivalent measures the full capacity of soil to neutralize acidity, considering all forms of carbonate and bicarbonate minerals. It is essential for managing soil pH and nutrient availability in acidic soils. Source: FAO Soil Bulletin."@en ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Ccetot ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "total carbonate equivalent"@en ;
+    she:hasProcedure she:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc,
+        she:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-nodc,
+        she:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-unkn,
+        she:totalCarbonateEquivalentProcedure-CaCO3_acid-dc,
+        she:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-dc,
+        she:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-nodc,
+        she:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-unkn,
+        she:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-dc,
+        she:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-nodc,
+        she:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-unkn,
+        she:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-dc,
+        she:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-nodc,
+        she:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-unkn,
+        she:totalCarbonateEquivalentProcedure-CaCO3_acid-nodc,
+        she:totalCarbonateEquivalentProcedure-CaCO3_acid-unkn,
+        she:totalCarbonateEquivalentProcedure-CaCO3_ca01,
+        she:totalCarbonateEquivalentProcedure-CaCO3_ca02,
+        she:totalCarbonateEquivalentProcedure-CaCO3_ca03,
+        she:totalCarbonateEquivalentProcedure-CaCO3_ca04,
+        she:totalCarbonateEquivalentProcedure-CaCO3_ca05,
+        she:totalCarbonateEquivalentProcedure-CaCO3_ca06,
+        she:totalCarbonateEquivalentProcedure-CaCO3_ca07,
+        she:totalCarbonateEquivalentProcedure-CaCO3_ca08,
+        she:totalCarbonateEquivalentProcedure-CaCO3_ca09,
+        she:totalCarbonateEquivalentProcedure-CaCO3_ca10,
+        she:totalCarbonateEquivalentProcedure-CaCO3_ca11,
+        she:totalCarbonateEquivalentProcedure-CaCO3_ca12,
+        she:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc .
+
 she:TotalSoilMoisturePotential a skos:Concept ;
     skos:broader she:SoilMoisturePotential ;
     skos:exactMatch spp:TotalSoilMoisturePotential ;
@@ -4292,6 +4274,12 @@ she:Tree a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "tree"@en .
 
+she:TreeDensity a skos:Concept ;
+    skos:definition "Tree Density Property refers to the number of trees per unit area, usually expressed as trees per hectare. High tree density is often associated with forested ecosystems that contribute to soil fertility through organic matter inputs, root structures that stabilize the soil, and enhanced moisture retention. Source: FAO, 'Forest Resources Assessment'"@en ;
+    skos:exactMatch <http://w3id.org/glosis/model/siteplot/treeDensityProperty> ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "tree density"@en .
+
 she:UnsaturatedHydraulicConductivity a skos:Concept ;
     skos:broader she:SoilHydraulicConductivity ;
     skos:exactMatch spp:UnsaturatedHydraulicConductivity ;
@@ -4309,6 +4297,12 @@ she:VariableCharge a skos:Concept ;
     skos:exactMatch spp:VariableCharge ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "variable charge"@en .
+
+she:VegetationClass a skos:Concept ;
+    skos:definition "Vegetation Class Property refers to the categorization of vegetation types based on species composition and structure, such as forests, grasslands, and wetlands. The class of vegetation affects soil fertility, microbial activity, and water retention, which in turn influences agricultural potential and ecosystem services. Source: FAO, 'Vegetation and Land Use in Arid Zones'"@en ;
+    skos:exactMatch <http://w3id.org/glosis/model/siteplot/vegetationClassProperty> ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "vegetation class"@en .
 
 she:VoidRatio a skos:Concept ;
     skos:broader she:SoilPorosity ;
@@ -4405,6 +4399,12 @@ she:WeatheringRock a skos:Concept ;
     skos:exactMatch <http://w3id.org/glosis/model/siteplot/weatheringRockProperty> ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "weathering rock"@en .
+
+she:WetPlasticity a skos:Concept ;
+    skos:definition "The Wet Plasticity Property measures the soil’s ability to deform under pressure when saturated. Wet plasticity is influenced by clay mineralogy and is important for understanding soil behavior under wet conditions. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
+    skos:exactMatch glosis_lh:wetPlasticityProperty ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "wet plasticity"@en .
 
 she:WetSoilBulkDensity a skos:Concept ;
     skos:broader she:SoilBulkDensity ;
@@ -7006,6 +7006,15 @@ she:Stress a skos:Concept ;
         she:TangentialStress ;
     skos:prefLabel "stress"@en .
 
+she:nitrogenTotalProcedure-TotalN_dc a skos:Concept ;
+    skos:definition "Dry combustion" ;
+    skos:exactMatch glosis_proc:nitrogenTotalProcedure-TotalN_dc ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:nitrogenTotalProcedure-TotalN_dc-ht-dumas,
+        she:nitrogenTotalProcedure-TotalN_dc-ht-leco,
+        she:nitrogenTotalProcedure-TotalN_dc-spec ;
+    skos:prefLabel "TotalN_dc"@en .
+
 she:AirProperty a skos:Concept ;
     skos:broader she:Property ;
     skos:exactMatch spp:AirProperty ;
@@ -7159,15 +7168,6 @@ she:Weather a skos:Concept ;
         she:WeatheringRock ;
     skos:prefLabel "weather"@en .
 
-she:nitrogenTotalProcedure-TotalN_dc a skos:Concept ;
-    skos:definition "Dry combustion" ;
-    skos:exactMatch glosis_proc:nitrogenTotalProcedure-TotalN_dc ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:nitrogenTotalProcedure-TotalN_dc-ht-dumas,
-        she:nitrogenTotalProcedure-TotalN_dc-ht-leco,
-        she:nitrogenTotalProcedure-TotalN_dc-spec ;
-    skos:prefLabel "TotalN_dc"@en .
-
 she:Coating a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:CoatingAbundance,
@@ -7283,6 +7283,17 @@ she:Substance a skos:Concept ;
         she:WaterSubstance ;
     skos:prefLabel "substance"@en ;
     skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
+
+she:pHProcedure-pHKCl a skos:Concept ;
+    skos:definition "pHKCl (soil reaction) in a soil/KCl solution (0.01-1 M)" ;
+    skos:exactMatch glosis_proc:pHProcedure-pHKCl ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:pHProcedure-pHKCl_ratio1-1,
+        she:pHProcedure-pHKCl_ratio1-10,
+        she:pHProcedure-pHKCl_ratio1-2,
+        she:pHProcedure-pHKCl_ratio1-2.5,
+        she:pHProcedure-pHKCl_ratio1-5 ;
+    skos:prefLabel "pHKCl"@en .
 
 she:LandUse a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -7475,16 +7486,29 @@ she:exchangeableBasesProcedure-ExchBases_ph8-unkn a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "ExchBases_ph8-unk"@en .
 
-she:pHProcedure-pHKCl a skos:Concept ;
-    skos:definition "pHKCl (soil reaction) in a soil/KCl solution (0.01-1 M)" ;
-    skos:exactMatch glosis_proc:pHProcedure-pHKCl ;
+she:pHProcedure-pHCaCl2 a skos:Concept ;
+    skos:definition "pHCaCl2 (soil reaction) in a soil/CaCl2 solution (0.01-1 M)" ;
+    skos:exactMatch glosis_proc:pHProcedure-pHCaCl2 ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:pHProcedure-pHKCl_ratio1-1,
-        she:pHProcedure-pHKCl_ratio1-10,
-        she:pHProcedure-pHKCl_ratio1-2,
-        she:pHProcedure-pHKCl_ratio1-2.5,
-        she:pHProcedure-pHKCl_ratio1-5 ;
-    skos:prefLabel "pHKCl"@en .
+    skos:narrower she:pHProcedure-pHCaCl2_ratio1-1,
+        she:pHProcedure-pHCaCl2_ratio1-10,
+        she:pHProcedure-pHCaCl2_ratio1-2,
+        she:pHProcedure-pHCaCl2_ratio1-2.5,
+        she:pHProcedure-pHCaCl2_ratio1-5,
+        she:pHProcedure-pHCaCl2_sat ;
+    skos:prefLabel "pHCaCl2"@en .
+
+she:pHProcedure-pHNaF a skos:Concept ;
+    skos:definition "pHNaF (soil reaction) in a soil/NaF solution (0.01-1 M)" ;
+    skos:exactMatch glosis_proc:pHProcedure-pHNaF ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:pHProcedure-pHNaF_ratio1-1,
+        she:pHProcedure-pHNaF_ratio1-10,
+        she:pHProcedure-pHNaF_ratio1-2,
+        she:pHProcedure-pHNaF_ratio1-2.5,
+        she:pHProcedure-pHNaF_ratio1-5,
+        she:pHProcedure-pHNaF_sat ;
+    skos:prefLabel "pHNaF"@en .
 
 she:Force a skos:Concept ;
     skos:broader she:Process ;
@@ -7552,29 +7576,18 @@ she:SoilDensity a skos:Concept ;
         she:SoilTrueDensity ;
     skos:prefLabel "soil density"@en .
 
-she:pHProcedure-pHCaCl2 a skos:Concept ;
-    skos:definition "pHCaCl2 (soil reaction) in a soil/CaCl2 solution (0.01-1 M)" ;
-    skos:exactMatch glosis_proc:pHProcedure-pHCaCl2 ;
+she:pHProcedure-pHH2O a skos:Concept ;
+    skos:definition "pHH2O (soil reaction) in a soil/water solution" ;
+    skos:exactMatch glosis_proc:pHProcedure-pHH2O ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:pHProcedure-pHCaCl2_ratio1-1,
-        she:pHProcedure-pHCaCl2_ratio1-10,
-        she:pHProcedure-pHCaCl2_ratio1-2,
-        she:pHProcedure-pHCaCl2_ratio1-2.5,
-        she:pHProcedure-pHCaCl2_ratio1-5,
-        she:pHProcedure-pHCaCl2_sat ;
-    skos:prefLabel "pHCaCl2"@en .
-
-she:pHProcedure-pHNaF a skos:Concept ;
-    skos:definition "pHNaF (soil reaction) in a soil/NaF solution (0.01-1 M)" ;
-    skos:exactMatch glosis_proc:pHProcedure-pHNaF ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:pHProcedure-pHNaF_ratio1-1,
-        she:pHProcedure-pHNaF_ratio1-10,
-        she:pHProcedure-pHNaF_ratio1-2,
-        she:pHProcedure-pHNaF_ratio1-2.5,
-        she:pHProcedure-pHNaF_ratio1-5,
-        she:pHProcedure-pHNaF_sat ;
-    skos:prefLabel "pHNaF"@en .
+    skos:narrower she:pHProcedure-pHH2O_ratio1-1,
+        she:pHProcedure-pHH2O_ratio1-10,
+        she:pHProcedure-pHH2O_ratio1-2,
+        she:pHProcedure-pHH2O_ratio1-2.5,
+        she:pHProcedure-pHH2O_ratio1-5,
+        she:pHProcedure-pHH2O_sat,
+        she:pHProcedure-pHH2O_unkn-spec ;
+    skos:prefLabel "pHH2O"@en .
 
 she:MineralConcretions a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -7657,19 +7670,6 @@ she:SoilSubstance a skos:Concept ;
         she:SoilPore,
         she:SoilSurfaceSeal ;
     skos:prefLabel "soil substance"@en .
-
-she:pHProcedure-pHH2O a skos:Concept ;
-    skos:definition "pHH2O (soil reaction) in a soil/water solution" ;
-    skos:exactMatch glosis_proc:pHProcedure-pHH2O ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:pHProcedure-pHH2O_ratio1-1,
-        she:pHProcedure-pHH2O_ratio1-10,
-        she:pHProcedure-pHH2O_ratio1-2,
-        she:pHProcedure-pHH2O_ratio1-2.5,
-        she:pHProcedure-pHH2O_ratio1-5,
-        she:pHProcedure-pHH2O_sat,
-        she:pHProcedure-pHH2O_unkn-spec ;
-    skos:prefLabel "pHH2O"@en .
 
 she:SoilManagement a skos:Concept ;
     skos:broader she:HumanActivity ;
@@ -8286,8 +8286,12 @@ she:SoilPhysicalProperty a skos:Concept ;
     skos:prefLabel "soil physical property"@en .
 
 <https://soilwise-he.github.io/soil-health> a skos:ConceptScheme ;
-    skos:hasTopConcept she:Aluminium,
+    skos:hasTopConcept she:AcidityExchangeable,
+        she:Aluminium,
+        she:AvailableWaterHoldingCapacity,
+        she:BaseSaturation,
         she:Biological,
+        she:BleachedSand,
         she:Boron,
         she:Boundary,
         she:BulkDensity,
@@ -8296,40 +8300,70 @@ she:SoilPhysicalProperty a skos:Concept ;
         she:Carbon,
         she:Carbonates,
         she:CationExchangeCapacity,
+        she:CationsSum,
         she:Cementation,
+        she:CoarseFragments,
         she:Coating,
         she:Consistency,
         she:Copper,
+        she:CropClass,
+        she:DryConsistency,
+        she:EffectiveCec,
+        she:ElectricalConductivity,
         she:ErosionProperties,
         she:Flood,
         she:FragmentProperties,
+        she:FragmentsClass,
+        she:Geology,
+        she:GroundwaterDepth,
         she:Gypsum,
         she:HumanActivity,
+        she:HumanInfluenceClass,
+        she:HydraulicConductivity,
+        she:HydrogenExchangeableBases,
         she:InfiltrationRate,
         she:Iron,
+        she:KoeppenClass,
         she:LandUse,
+        she:LandformComplex,
+        she:Lithology,
         she:Magnesium,
+        she:MajorLandForm,
         she:Manganese,
         she:MineralConcretions,
+        she:MineralContent,
+        she:MineralFragments,
+        she:MoistureContent,
         she:Molybdenum,
         she:Mottles,
+        she:NitrogenTotal,
+        she:OrganicMatter,
+        she:OrganicMatterClass,
+        she:OxalateExtractableOpticalDensity,
+        she:PH,
         she:ParentMaterial,
+        she:ParticleSizeFractionsSum,
         she:Peat,
         she:Phenomena,
         she:Phosphorus,
+        she:Physiography,
+        she:Plasticity,
         she:Pores,
         she:Potassium,
         she:Process,
+        she:ProfileDescriptionStatus,
         she:Property,
         she:RockOutcrops,
         she:RockProperties,
         she:Roots,
         she:SaltProperties,
+        she:SandyTexture,
         she:SealingProperties,
         she:SlopeGradient,
         she:SlopeOrientation,
         she:SlopeProperties,
         she:Sodium,
+        she:SoilCarbonDensity,
         she:SoilClassification,
         she:SoilColour,
         she:SoilCracks,
@@ -8345,17 +8379,18 @@ she:SoilPhysicalProperty a skos:Concept ;
         she:SoilWaterAdsorption,
         she:SoilWaterRetention,
         she:Soluble,
+        she:Stickiness,
         she:Structure,
         she:Substance,
         she:Sulfur,
+        she:SurfaceAge,
         she:Texture,
+        she:TotalCarbonateEquivalent,
+        she:TreeDensity,
+        she:VegetationClass,
         she:Voids,
         she:WaterPressure,
         she:Weather,
-        she:Zinc,
-        she:nitrogenTotalProcedure-TotalN_dc,
-        she:pHProcedure-pHCaCl2,
-        she:pHProcedure-pHH2O,
-        she:pHProcedure-pHKCl,
-        she:pHProcedure-pHNaF .
+        she:WetPlasticity,
+        she:Zinc .
 
