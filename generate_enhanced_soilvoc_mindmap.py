@@ -147,7 +147,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
 
         body {{
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5a8e6b 0%, #8b6f47 100%);
             min-height: 100vh;
             padding: 20px;
         }}
@@ -155,27 +155,31 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
         .container {{
             max-width: 1400px;
             margin: 0 auto;
-            background: white;
+            background: #faf8f3;
             border-radius: 12px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             overflow: hidden;
         }}
 
         .header {{
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4a7c59 0%, #5a8e6b 100%);
             color: white;
-            padding: 30px;
+            padding: 40px;
             text-align: center;
+            border-bottom: 4px solid #8b6f47;
         }}
 
         .header h1 {{
-            font-size: 2em;
-            margin-bottom: 10px;
+            font-size: 2.5em;
+            margin-bottom: 12px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }}
 
         .header p {{
-            opacity: 0.9;
-            font-size: 1.1em;
+            opacity: 0.95;
+            font-size: 1.15em;
+            font-weight: 300;
         }}
 
         .mindmap {{
@@ -197,45 +201,47 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
             display: flex;
             align-items: center;
             padding: 12px 16px;
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
+            background: #ffffff;
+            border-left: 4px solid #5a8e6b;
             border-radius: 6px;
             cursor: pointer;
             transition: all 0.2s ease;
             margin-bottom: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
         }}
 
         .concept-header.procedure {{
-            background: #fff3cd;
-            border-left-color: #ffc107;
+            background: #fff8e8;
+            border-left-color: #d4a259;
         }}
 
         .concept-header.procedure:hover {{
-            background: #ffe69c;
-            border-left-color: #ff9800;
+            background: #ffedc9;
+            border-left-color: #c4923f;
         }}
 
         .concept-header:hover {{
-            background: #e9ecef;
-            border-left-color: #764ba2;
+            background: #f0f5f1;
+            border-left-color: #4a7c59;
             transform: translateX(5px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }}
 
         .concept-header.active {{
-            background: #667eea;
+            background: #5a8e6b;
             color: white;
-            border-left-color: #764ba2;
+            border-left-color: #4a7c59;
         }}
 
         .concept-header.procedure.active {{
-            background: #ffc107;
-            color: #000;
-            border-left-color: #ff9800;
+            background: #d4a259;
+            color: #2c1810;
+            border-left-color: #c4923f;
         }}
 
         .concept-header.highlighted {{
-            background: #ffc107;
-            border-left-color: #ff9800;
+            background: #d4a259;
+            border-left-color: #c4923f;
             animation: pulse 1s ease-in-out;
         }}
 
@@ -246,16 +252,17 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
 
         .concept-header.no-children {{
             cursor: default;
-            border-left-color: #adb5bd;
+            border-left-color: #a8b5a3;
         }}
 
         .concept-header.no-children:hover {{
-            background: #f8f9fa;
+            background: #ffffff;
             transform: none;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
         }}
 
         .concept-header.procedure.no-children:hover {{
-            background: #fff3cd;
+            background: #fff8e8;
             transform: none;
         }}
 
@@ -291,8 +298,8 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
         }}
 
         .copy-uri-btn {{
-            background: rgba(102, 126, 234, 0.1);
-            color: #667eea;
+            background: rgba(90, 142, 107, 0.1);
+            color: #4a7c59;
             padding: 4px 8px;
             border-radius: 4px;
             font-size: 0.8em;
@@ -303,9 +310,9 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
         }}
 
         .copy-uri-btn:hover {{
-            background: #667eea;
+            background: #5a8e6b;
             color: white;
-            border-color: #667eea;
+            border-color: #5a8e6b;
         }}
 
         .concept-header.active .copy-uri-btn {{
@@ -318,8 +325,8 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
         }}
 
         .concept-notation {{
-            background: rgba(102, 126, 234, 0.1);
-            color: #667eea;
+            background: rgba(90, 142, 107, 0.15);
+            color: #3d6b4d;
             padding: 4px 10px;
             border-radius: 4px;
             font-size: 0.9em;
@@ -333,8 +340,8 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
         }}
 
         .concept-count {{
-            background: rgba(102, 126, 234, 0.1);
-            color: #667eea;
+            background: rgba(90, 142, 107, 0.15);
+            color: #3d6b4d;
             padding: 4px 10px;
             border-radius: 12px;
             font-size: 0.85em;
@@ -348,7 +355,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
 
         .concept-children {{
             margin-left: 30px;
-            border-left: 2px solid #e9ecef;
+            border-left: 2px solid #d4e0cf;
             padding-left: 20px;
             display: none;
         }}
@@ -360,12 +367,13 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
         .concept-definition {{
             margin: 5px 0 10px 54px;
             padding: 10px 15px;
-            background: #f8f9fa;
+            background: #f0f5f1;
             border-radius: 4px;
             font-size: 0.9em;
-            color: #495057;
+            color: #3d5a3f;
             font-style: italic;
             display: none;
+            border-left: 3px solid #a8b5a3;
         }}
 
         .concept-definition.show {{
@@ -375,11 +383,11 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
         .exact-match-info {{
             margin: 5px 0 10px 54px;
             padding: 8px 12px;
-            background: #e7f3ff;
-            border-left: 3px solid #0066cc;
+            background: #e8f4f0;
+            border-left: 3px solid #4a7c59;
             border-radius: 4px;
             font-size: 0.85em;
-            color: #004085;
+            color: #2c4a35;
             display: none;
         }}
 
@@ -388,19 +396,19 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
         }}
 
         .exact-match-link {{
-            color: #0066cc;
+            color: #4a7c59;
             text-decoration: underline;
             cursor: pointer;
             font-weight: 500;
         }}
 
         .exact-match-link:hover {{
-            color: #004085;
+            color: #3d6b4d;
         }}
 
         .procedure-badge {{
-            background: #ffc107;
-            color: #000;
+            background: #d4a259;
+            color: #2c1810;
             padding: 2px 8px;
             border-radius: 4px;
             font-size: 0.75em;
@@ -412,8 +420,8 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
         .procedures-section {{
             margin: 5px 0 10px 54px;
             padding: 10px 15px;
-            background: #fff8e1;
-            border-left: 3px solid #ffc107;
+            background: #fff8e8;
+            border-left: 3px solid #d4a259;
             border-radius: 4px;
             font-size: 0.9em;
             display: none;
@@ -425,7 +433,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
 
         .procedures-title {{
             font-weight: 600;
-            color: #f57c00;
+            color: #8b6f47;
             margin-bottom: 8px;
         }}
 
@@ -437,8 +445,8 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
 
         .stats {{
             padding: 20px 40px;
-            background: #f8f9fa;
-            border-top: 1px solid #dee2e6;
+            background: linear-gradient(135deg, #f0f5f1 0%, #f5f1e8 100%);
+            border-top: 3px solid #8b6f47;
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
@@ -452,34 +460,37 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
         .stat-value {{
             font-size: 2em;
             font-weight: bold;
-            color: #667eea;
+            color: #5a8e6b;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
         }}
 
         .stat-label {{
-            color: #6c757d;
+            color: #6b5840;
             font-size: 0.9em;
             margin-top: 5px;
+            font-weight: 500;
         }}
 
         .search-box {{
             padding: 20px 40px;
-            background: #f8f9fa;
-            border-bottom: 1px solid #dee2e6;
+            background: linear-gradient(135deg, #f5f1e8 0%, #f0f5f1 100%);
+            border-bottom: 2px solid #d4e0cf;
         }}
 
         .search-input {{
             width: 100%;
             padding: 12px 20px;
             font-size: 1em;
-            border: 2px solid #dee2e6;
+            border: 2px solid #d4e0cf;
             border-radius: 6px;
             transition: all 0.2s ease;
+            background: white;
         }}
 
         .search-input:focus {{
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            border-color: #5a8e6b;
+            box-shadow: 0 0 0 3px rgba(90, 142, 107, 0.15);
         }}
 
         .search-results {{
@@ -494,7 +505,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
         .search-result-item {{
             padding: 10px 15px;
             background: white;
-            border: 1px solid #dee2e6;
+            border: 1px solid #d4e0cf;
             border-radius: 6px;
             margin-bottom: 8px;
             cursor: pointer;
@@ -502,20 +513,21 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
         }}
 
         .search-result-item:hover {{
-            background: #f8f9fa;
-            border-color: #667eea;
+            background: #f0f5f1;
+            border-color: #5a8e6b;
             transform: translateX(5px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }}
 
         .search-result-label {{
             font-weight: 500;
-            color: #212529;
+            color: #2c3e2d;
         }}
 
         .search-result-notation {{
             display: inline-block;
-            background: rgba(102, 126, 234, 0.1);
-            color: #667eea;
+            background: rgba(90, 142, 107, 0.15);
+            color: #3d6b4d;
             padding: 2px 8px;
             border-radius: 3px;
             font-size: 0.85em;
@@ -525,16 +537,16 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
 
         .search-result-path {{
             font-size: 0.85em;
-            color: #6c757d;
+            color: #6b5840;
             margin-top: 5px;
         }}
 
         .search-info {{
             padding: 10px 15px;
-            background: #e7f3ff;
-            border: 1px solid #b8daff;
+            background: #e8f4f0;
+            border: 1px solid #a8cbba;
             border-radius: 6px;
-            color: #004085;
+            color: #2c4a35;
             font-size: 0.9em;
             margin-bottom: 10px;
         }}
@@ -542,7 +554,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
         .no-results {{
             text-align: center;
             padding: 40px;
-            color: #6c757d;
+            color: #6b5840;
             font-style: italic;
         }}
 
@@ -550,7 +562,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
             display: inline-block;
             margin-top: 10px;
             padding: 8px 16px;
-            background: #667eea;
+            background: #5a8e6b;
             color: white;
             border-radius: 6px;
             cursor: pointer;
@@ -559,14 +571,15 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
         }}
 
         .clear-search:hover {{
-            background: #764ba2;
+            background: #4a7c59;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
         }}
 
         .toast {{
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #28a745;
+            background: #5a8e6b;
             color: white;
             padding: 12px 24px;
             border-radius: 6px;
@@ -585,8 +598,8 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
 <body>
     <div class="container">
         <div class="header">
-            <h1>SoilVoc</h1>
-            <p>Interactive SKOS Vocabulary Mind Map with Procedures</p>
+            <h1>🌱 SoilVoc</h1>
+            <p>Interactive Soil Vocabulary Thesaurus · SoilWise-HE Project</p>
         </div>
 
         <div class="search-box">
