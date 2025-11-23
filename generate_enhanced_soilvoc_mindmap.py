@@ -69,7 +69,8 @@ def parse_skos_vocabulary_enhanced(ttl_file_path):
         definition = g.value(concept_uri, SKOS.definition)
         notation = g.value(concept_uri, SKOS.notation)
 
-        label = str(pref_label or alt_label or concept_uri.split('/')[-1].split('#')[-1])
+        label = str(pref_label or concept_uri.split('/')[-1].split('#')[-1])
+        alt_label_str = str(alt_label) if alt_label else None
 
         # Get exactMatch links
         exact_matches = []
@@ -102,6 +103,7 @@ def parse_skos_vocabulary_enhanced(ttl_file_path):
         concept_info = {
             'uri': str(concept_uri),
             'label': label,
+            'altLabel': alt_label_str,
             'notation': str(notation) if notation else None,
             'definition': str(definition) if definition else None,
             'exactMatch': exact_matches,
@@ -277,6 +279,15 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
             flex: 1;
             font-weight: 500;
             font-size: 1.05em;
+        }}
+
+        .concept-alt-label {{
+            display: block;
+            font-size: 0.85em;
+            font-weight: 400;
+            color: #6c757d;
+            font-style: italic;
+            margin-top: 2px;
         }}
 
         .copy-uri-btn {{
@@ -681,6 +692,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
 
             const notation = concept.notation ? `<span class="concept-notation">${{concept.notation}}</span>` : '';
             const procedureBadge = concept.isProcedure ? '<span class="procedure-badge">Procedure</span>' : '';
+            const altLabelHtml = concept.altLabel ? `<span class="concept-alt-label">${{concept.altLabel}}</span>` : '';
             const childrenCount = hasNarrower ? concept.narrower.length + (hasProcedures ? concept.procedures.length : 0) : (hasProcedures ? concept.procedures.length : 0);
             const count = hasChildren ? `<span class="concept-count">${{childrenCount}}</span>` : '';
             const noChildClass = !isClickable ? 'no-children' : '';
@@ -692,7 +704,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
                     <div class="concept-header ${{noChildClass}} ${{procedureClass}}" onclick="toggleConcept(this)">
                         <span class="toggle-icon">${{toggleIcon}}</span>
                         ${{notation}}
-                        <span class="concept-label">${{concept.label}}${{procedureBadge}}</span>
+                        <span class="concept-label">${{concept.label}}${{procedureBadge}}${{altLabelHtml}}</span>
                         <button class="copy-uri-btn" onclick="event.stopPropagation(); copyToClipboard('${{concept.uri}}')">📋 Copy URI</button>
                         ${{count}}
                     </div>
@@ -828,9 +840,10 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
             conceptMap.forEach((data, uri) => {{
                 const concept = data.concept;
                 const label = concept.label.toLowerCase();
+                const altLabel = concept.altLabel ? concept.altLabel.toLowerCase() : '';
                 const notation = concept.notation ? concept.notation.toLowerCase() : '';
 
-                if (label.includes(searchTerm) || notation.includes(searchTerm)) {{
+                if (label.includes(searchTerm) || altLabel.includes(searchTerm) || notation.includes(searchTerm)) {{
                     matches.push({{
                         uri: uri,
                         concept: concept,
