@@ -673,12 +673,17 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
             const hasNarrower = concept.narrower && concept.narrower.length > 0;
             const hasProcedures = concept.procedures && concept.procedures.length > 0;
             const hasChildren = hasNarrower || hasProcedures;
+            const hasDefinition = concept.definition !== null && concept.definition !== undefined;
+            const hasExactMatch = concept.exactMatch && concept.exactMatch.length > 0;
+
+            // Concept is clickable if it has children OR has definition/exactMatch
+            const isClickable = hasChildren || hasDefinition || hasExactMatch;
 
             const notation = concept.notation ? `<span class="concept-notation">${{concept.notation}}</span>` : '';
             const procedureBadge = concept.isProcedure ? '<span class="procedure-badge">Procedure</span>' : '';
             const childrenCount = hasNarrower ? concept.narrower.length + (hasProcedures ? concept.procedures.length : 0) : (hasProcedures ? concept.procedures.length : 0);
             const count = hasChildren ? `<span class="concept-count">${{childrenCount}}</span>` : '';
-            const noChildClass = hasChildren ? '' : 'no-children';
+            const noChildClass = !isClickable ? 'no-children' : '';
             const procedureClass = concept.isProcedure ? 'procedure' : '';
             const toggleIcon = hasChildren ? '▶' : '●';
 
@@ -727,14 +732,23 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
         }}
 
         function toggleConcept(header) {{
-            if (header.classList.contains('no-children')) return;
-
             const concept = header.parentElement;
             const children = concept.querySelectorAll(':scope > .concept-children');
             const definition = concept.querySelector(':scope > .concept-definition');
             const exactMatch = concept.querySelector(':scope > .exact-match-info');
             const procedures = concept.querySelector(':scope > .procedures-section');
             const icon = header.querySelector('.toggle-icon');
+
+            // Check if there's anything to show
+            const hasChildren = children.length > 0;
+            const hasDefinition = definition !== null;
+            const hasExactMatch = exactMatch !== null;
+            const hasProcedures = procedures !== null;
+
+            // If no children and no info to display, do nothing
+            if (!hasChildren && !hasDefinition && !hasExactMatch && !hasProcedures) {{
+                return;
+            }}
 
             const isExpanding = !header.classList.contains('active');
 
@@ -743,7 +757,9 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
             }});
 
             header.classList.toggle('active');
-            icon.classList.toggle('expanded');
+            if (hasChildren || hasProcedures) {{
+                icon.classList.toggle('expanded');
+            }}
 
             if (definition) {{
                 definition.classList.toggle('show');
