@@ -1083,12 +1083,13 @@ she:ExternalLoad a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "external load"@en .
 
-she:FertilizerUse a skos:Concept ;
-    skos:altLabel "fertilizer uses"@en ;
+she:FertiliserUse a skos:Concept ;
+    skos:altLabel "fertilizer use"@en,
+        "fertilizer uses"@en ;
     skos:broader she:SoilManagement ;
     skos:exactMatch spp:FertilizerUse ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "fertilizer use"@en .
+    skos:prefLabel "fertiliser use"@en .
 
 she:FineSand a skos:Concept ;
     skos:altLabel "fine sands"@en ;
@@ -1184,7 +1185,7 @@ she:Geology a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "geology"@en .
 
-she:GeometricMeanDiameter a skos:Concept ;
+she:GeometricMeanDiametre a skos:Concept ;
     skos:altLabel "geometric mean diameters"@en ;
     skos:broader she:SoilAggregationIndex ;
     skos:exactMatch spp:GeometricMeanDiameter ;
@@ -1756,7 +1757,7 @@ she:MatrixPore a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "matrix pore"@en .
 
-she:MeanWeightDiameter a skos:Concept ;
+she:MeanWeightDiametre a skos:Concept ;
     skos:altLabel "mean weight diameters"@en ;
     skos:broader she:SoilAggregationIndex ;
     skos:exactMatch spp:MeanWeightDiameter ;
@@ -2637,12 +2638,13 @@ she:SaturatedHydraulicConductivity a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "saturated hydraulic conductivity"@en .
 
-she:SaturatedVaporPressure a skos:Concept ;
-    skos:altLabel "saturated vapor pressures"@en ;
-    skos:broader she:SoilVaporPressure ;
+she:SaturatedVapourPressure a skos:Concept ;
+    skos:altLabel "saturated vapor pressure"@en,
+        "saturated vapor pressures"@en ;
+    skos:broader she:SoilVapourPressure ;
     skos:exactMatch spp:SaturatedVaporPressure ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "saturated vapor pressure"@en .
+    skos:prefLabel "saturated vapour pressure"@en .
 
 she:SaturatedWaterFlow a skos:Concept ;
     skos:altLabel "saturated water flows"@en ;
@@ -3080,13 +3082,6 @@ she:SoilCollapsing a skos:Concept ;
     skos:exactMatch spp:SoilCollapsing ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil collapsing"@en .
-
-she:SoilColor a skos:Concept ;
-    skos:altLabel "soil colors"@en ;
-    skos:broader she:SoilPhysicalProperty ;
-    skos:exactMatch spp:SoilColor ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil color"@en .
 
 she:SoilCompactability a skos:Concept ;
     skos:altLabel "soil compactabilities"@en ;
@@ -3632,12 +3627,13 @@ she:SoilNutrientHoldingCapacity a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil nutrient holding capacity"@en .
 
-she:SoilNutrientImmobilization a skos:Concept ;
-    skos:altLabel "soil nutrient immobilizatia"@en ;
+she:SoilNutrientImmobilisation a skos:Concept ;
+    skos:altLabel "soil nutrient immobilizatia"@en,
+        "soil nutrient immobilization"@en ;
     skos:broader she:SoilChemicalProcess ;
     skos:exactMatch spp:SoilNutrientImmobilization ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil nutrient immobilization"@en .
+    skos:prefLabel "soil nutrient immobilisation"@en .
 
 she:SoilNutrientRetention a skos:Concept ;
     skos:altLabel "soil nutrient retentia"@en ;
@@ -4408,7 +4404,7 @@ she:SoilWaterDiffusivity a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil water diffusivity"@en .
 
-she:SoilWaterEvaporationRate a skos:Concept ;
+she:SoilWaterEvapourationRate a skos:Concept ;
     skos:altLabel "soil water evaporation rates"@en ;
     skos:broader she:SoilWaterTransmissionIndex ;
     skos:exactMatch spp:SoilWaterEvaporationRate ;
@@ -4565,12 +4561,13 @@ she:StructureSize a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "structure size"@en .
 
-she:SulfurExtractableElements a skos:Concept ;
-    skos:broader she:Sulfur ;
+she:SulphurExtractableElements a skos:Concept ;
+    skos:altLabel "sulfur extractable elements"@en ;
+    skos:broader she:Sulphur ;
     skos:definition "Sulfur bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sulext ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "sulfur extractable elements"@en ;
+    skos:prefLabel "sulphur extractable elements"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
@@ -4597,12 +4594,13 @@ she:SulfurExtractableElements a skos:Concept ;
         she:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         she:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-she:SulfurTotalElements a skos:Concept ;
-    skos:broader she:Sulfur ;
+she:SulphurTotalElements a skos:Concept ;
+    skos:altLabel "sulfur total elements"@en ;
+    skos:broader she:Sulphur ;
     skos:definition "Total sulfur in soil includes both organic and inorganic forms, such as sulfates and sulfur in organic matter. Sulfur is essential for protein synthesis and enzyme functions in plants. Deficiency leads to stunted growth and yellowing of leaves. Total sulfur provides insight into the soil's potential to release plant-available sulfur over time, critical for sustaining crop health. Source: Havlin, J.L., et al. (2014). Soil Fertility and Fertilizers."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sultot ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "sulfur total elements"@en ;
+    skos:prefLabel "sulphur total elements"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
@@ -4804,7 +4802,7 @@ she:VoidsClassification a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "voids classification"@en .
 
-she:VoidsDiameter a skos:Concept ;
+she:VoidsDiametre a skos:Concept ;
     skos:altLabel "voids diameters"@en ;
     skos:broader she:Voids ;
     skos:definition "The Voids Diameter Property refers to the size of void spaces in soil, which can range from macro-voids (larger pores) to micro-voids (tiny pores). Voids diameter impacts soil aeration, water retention, and drainage. Source: Soil Science Society of America (SSSA) Glossary."@en ;
@@ -6362,12 +6360,12 @@ she:AirTemperature a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "air temperature"@en .
 
-she:Evaporation a skos:Concept ;
+she:Evapouration a skos:Concept ;
     skos:altLabel "evaporatia"@en ;
     skos:broader she:WaterInterchange ;
     skos:exactMatch spp:Evaporation ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SoilWaterEvaporation ;
+    skos:narrower she:SoilWaterEvapouration ;
     skos:prefLabel "evaporation"@en .
 
 she:Filtration a skos:Concept ;
@@ -6851,9 +6849,9 @@ she:SoilWaterAvailability a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil water availability"@en .
 
-she:SoilWaterEvaporation a skos:Concept ;
+she:SoilWaterEvapouration a skos:Concept ;
     skos:altLabel "soil water evaporatia"@en ;
-    skos:broader she:Evaporation,
+    skos:broader she:Evapouration,
         she:SoilWaterPhysicalProcess ;
     skos:exactMatch spp:SoilWaterEvaporation ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -7127,13 +7125,6 @@ she:SoilChemicalReaction a skos:Concept ;
         she:SoilOxidationReductionReaction ;
     skos:prefLabel "soil chemical reaction"@en .
 
-she:SoilColour a skos:Concept ;
-    skos:altLabel "soil colours"@en ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:ColourDry,
-        she:ColourMoist ;
-    skos:prefLabel "soil colour"@en .
-
 she:SoilCrackingPhysicalProperty a skos:Concept ;
     skos:altLabel "soil cracking physical properties"@en ;
     skos:broader she:SoilPhysicalProperty ;
@@ -7305,14 +7296,15 @@ she:SoilSwelling a skos:Concept ;
         she:InterparticleSwelling ;
     skos:prefLabel "soil swelling"@en .
 
-she:SoilVaporPressure a skos:Concept ;
-    skos:altLabel "soil vapor pressures"@en ;
+she:SoilVapourPressure a skos:Concept ;
+    skos:altLabel "soil vapor pressure"@en,
+        "soil vapor pressures"@en ;
     skos:broader she:Pressure,
         she:SoilPhysicalProperty ;
     skos:exactMatch spp:SoilVaporPressure ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SaturatedVaporPressure ;
-    skos:prefLabel "soil vapor pressure"@en .
+    skos:narrower she:SaturatedVapourPressure ;
+    skos:prefLabel "soil vapour pressure"@en .
 
 she:SoilWaterFlow a skos:Concept ;
     skos:altLabel "soil water flows"@en ;
@@ -7357,12 +7349,13 @@ she:Structure a skos:Concept ;
         she:StructureSize ;
     skos:prefLabel "structure"@en .
 
-she:Sulfur a skos:Concept ;
-    skos:altLabel "sulfurs"@en ;
+she:Sulphur a skos:Concept ;
+    skos:altLabel "sulfur"@en,
+        "sulfurs"@en ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SulfurExtractableElements,
-        she:SulfurTotalElements ;
-    skos:prefLabel "sulfur"@en .
+    skos:narrower she:SulphurExtractableElements,
+        she:SulphurTotalElements ;
+    skos:prefLabel "sulphur"@en .
 
 she:Texture a skos:Concept ;
     skos:altLabel "textures"@en ;
@@ -7385,7 +7378,7 @@ she:Vegetation a skos:Concept ;
 she:Voids a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:VoidsClassification,
-        she:VoidsDiameter ;
+        she:VoidsDiametre ;
     skos:prefLabel "voids"@en .
 
 she:WasteDisposal a skos:Concept ;
@@ -7623,6 +7616,17 @@ she:SoilClassification a skos:Concept ;
         she:SoilClassificationUSDA,
         she:SoilClassificationWRB ;
     skos:prefLabel "soil classification"@en .
+
+she:SoilColour a skos:Concept ;
+    skos:altLabel "soil color"@en,
+        "soil colors"@en,
+        "soil colours"@en ;
+    skos:broader she:SoilPhysicalProperty ;
+    skos:exactMatch spp:SoilColor ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:ColourDry,
+        she:ColourMoist ;
+    skos:prefLabel "soil colour"@en .
 
 she:SoilCompression a skos:Concept ;
     skos:altLabel "soil compressia"@en ;
@@ -8075,7 +8079,7 @@ she:Pressure a skos:Concept ;
     skos:narrower she:AtmosphericPressure,
         she:OsmoticPressure,
         she:OverBurdenPressure,
-        she:SoilVaporPressure,
+        she:SoilVapourPressure,
         she:Stress ;
     skos:prefLabel "pressure"@en .
 
@@ -8096,8 +8100,8 @@ she:SoilAggregationIndex a skos:Concept ;
     skos:broader she:SoilStructureIndex ;
     skos:exactMatch spp:SoilAggregationIndex ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:GeometricMeanDiameter,
-        she:MeanWeightDiameter,
+    skos:narrower she:GeometricMeanDiametre,
+        she:MeanWeightDiametre,
         she:PercentWaterStableAggregation,
         she:SoilAggregateSizeDistribution,
         she:SoilAggregateStrength ;
@@ -8288,7 +8292,7 @@ she:SoilWaterTransmissionIndex a skos:Concept ;
     skos:narrower she:SoilDrainage,
         she:SoilHydraulicConductivity,
         she:SoilHydraulicGradient,
-        she:SoilWaterEvaporationRate,
+        she:SoilWaterEvapourationRate,
         she:SoilWaterInfiltrationCapacity,
         she:SoilWaterInfiltrationRate ;
     skos:prefLabel "soil water transmission index"@en .
@@ -8582,7 +8586,7 @@ she:SoilManagement a skos:Concept ;
     skos:broader she:HumanActivity ;
     skos:exactMatch spp:SoilManagement ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:FertilizerUse,
+    skos:narrower she:FertiliserUse,
         she:Irrigation,
         she:MulchFarming,
         she:Mulching,
@@ -8614,8 +8618,8 @@ she:WaterInterchange a skos:Concept ;
     skos:broader she:PlanetaryPhenomena ;
     skos:exactMatch spp:WaterInterchange ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:Evaporation,
-        she:Evapotranspiration,
+    skos:narrower she:Evapotranspiration,
+        she:Evapouration,
         she:Interflow,
         she:OverlandFlow,
         she:Percolation,
@@ -8722,7 +8726,7 @@ she:SoilWaterPhysicalProcess a skos:Concept ;
         she:SoilMoistureMovement,
         she:SoilThawing,
         she:SoilWaterCondensation,
-        she:SoilWaterEvaporation,
+        she:SoilWaterEvapouration,
         she:SoilWaterInfiltration,
         she:SoilWaterLoss,
         she:SoilWaterMovement,
@@ -9088,7 +9092,7 @@ she:SoilChemicalProcess a skos:Concept ;
         she:SoilDesertification,
         she:SoilMineralization,
         she:SoilNegativeAdsorption,
-        she:SoilNutrientImmobilization,
+        she:SoilNutrientImmobilisation,
         she:SoilOxygenConsumption,
         she:SoilSalinization,
         she:SoilSorption ;
@@ -9200,7 +9204,7 @@ she:SoilPhysicalProperty a skos:Concept ;
         she:SoilClayMineralogy,
         she:SoilCohesion,
         she:SoilCohesiveness,
-        she:SoilColor,
+        she:SoilColour,
         she:SoilCompactability,
         she:SoilCompressibility,
         she:SoilConsistence,
@@ -9241,7 +9245,7 @@ she:SoilPhysicalProperty a skos:Concept ;
         she:SoilTrafficability,
         she:SoilTransportability,
         she:SoilType,
-        she:SoilVaporPressure,
+        she:SoilVapourPressure,
         she:SoilViscosity,
         she:SoilVolume,
         she:SoilWaterPhysicalProperty ;
@@ -9344,7 +9348,7 @@ she:SoilPhysicalProperty a skos:Concept ;
         she:Stickiness,
         she:Structure,
         she:Substance,
-        she:Sulfur,
+        she:Sulphur,
         she:SurfaceAge,
         she:Texture,
         she:TotalCarbonateEquivalent,
