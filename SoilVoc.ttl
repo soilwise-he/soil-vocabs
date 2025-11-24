@@ -273,11 +273,11 @@ she:ExternalLoad a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "external load"@en .
 
-she:FertilizerUse a skos:Concept ;
+she:FertiliserUse a skos:Concept ;
     skos:broader she:SoilManagement ;
     skos:exactMatch spp:FertilizerUse ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "fertilizer use"@en .
+    skos:prefLabel "fertiliser use"@en .
 
 she:FineSand a skos:Concept ;
     skos:broader she:Sand ;
@@ -327,11 +327,11 @@ she:Frost a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "frost"@en .
 
-she:GeometricMeanDiameter a skos:Concept ;
+she:GeometricMeanDiametre a skos:Concept ;
     skos:broader she:SoilAggregationIndex ;
     skos:exactMatch spp:GeometricMeanDiameter ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "geometric mean diameter"@en .
+    skos:prefLabel "geometric mean diametre"@en .
 
 she:Grass a skos:Concept ;
     skos:broader she:Vegetation ;
@@ -513,11 +513,11 @@ she:MatrixPore a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "matrix pore"@en .
 
-she:MeanWeightDiameter a skos:Concept ;
+she:MeanWeightDiametre a skos:Concept ;
     skos:broader she:SoilAggregationIndex ;
     skos:exactMatch spp:MeanWeightDiameter ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "mean weight diameter"@en .
+    skos:prefLabel "mean weight diametre"@en .
 
 she:MechanicalRatio a skos:Concept ;
     skos:broader she:SoilStructureIndirectIndex ;
@@ -759,11 +759,11 @@ she:SaturatedHydraulicConductivity a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "saturated hydraulic conductivity"@en .
 
-she:SaturatedVaporPressure a skos:Concept ;
-    skos:broader she:SoilVaporPressure ;
+she:SaturatedVapourPressure a skos:Concept ;
+    skos:broader she:SoilVapourPressure ;
     skos:exactMatch spp:SaturatedVaporPressure ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "saturated vapor pressure"@en .
+    skos:prefLabel "saturated vapour pressure"@en .
 
 she:SaturatedWaterFlow a skos:Concept ;
     skos:broader she:SoilWaterFlow ;
@@ -1485,11 +1485,11 @@ she:SoilNutrientHoldingCapacity a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil nutrient holding capacity"@en .
 
-she:SoilNutrientImmobilization a skos:Concept ;
+she:SoilNutrientImmobilisation a skos:Concept ;
     skos:broader she:SoilChemicalProcess ;
     skos:exactMatch spp:SoilNutrientImmobilization ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil nutrient immobilization"@en .
+    skos:prefLabel "soil nutrient immobilisation"@en .
 
 she:SoilNutrientRetention a skos:Concept ;
     skos:exactMatch spp:SoilNutrientRetention ;
@@ -2151,11 +2151,11 @@ she:SoilWaterDiffusivity a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil water diffusivity"@en .
 
-she:SoilWaterEvaporationRate a skos:Concept ;
+she:SoilWaterEvapourationRate a skos:Concept ;
     skos:broader she:SoilWaterTransmissionIndex ;
     skos:exactMatch spp:SoilWaterEvaporationRate ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil water evaporation rate"@en .
+    skos:prefLabel "soil water evapouration rate"@en .
 
 she:SoilWaterInfiltrationRate a skos:Concept ;
     skos:broader she:SoilWaterTransmissionIndex ;
@@ -2435,12 +2435,12 @@ she:AirTemperature a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "air temperature"@en .
 
-she:Evaporation a skos:Concept ;
+she:Evapouration a skos:Concept ;
     skos:broader she:WaterInterchange ;
     skos:exactMatch spp:Evaporation ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SoilWaterEvaporation ;
-    skos:prefLabel "evaporation"@en .
+    skos:narrower she:SoilWaterEvapouration ;
+    skos:prefLabel "evapouration"@en .
 
 she:Filtration a skos:Concept ;
     skos:broader she:SoilEngineeringFunction,
@@ -2841,12 +2841,12 @@ she:SoilWaterAvailability a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil water availability"@en .
 
-she:SoilWaterEvaporation a skos:Concept ;
-    skos:broader she:Evaporation,
+she:SoilWaterEvapouration a skos:Concept ;
+    skos:broader she:Evapouration,
         she:SoilWaterPhysicalProcess ;
     skos:exactMatch spp:SoilWaterEvaporation ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil water evaporation"@en .
+    skos:prefLabel "soil water evapouration"@en .
 
 she:SoilWaterHoldingCapacity a skos:Concept ;
     skos:broader she:SoilPhysicalCapacity,
@@ -3122,13 +3122,13 @@ she:SoilSwelling a skos:Concept ;
         she:InterparticleSwelling ;
     skos:prefLabel "soil swelling"@en .
 
-she:SoilVaporPressure a skos:Concept ;
+she:SoilVapourPressure a skos:Concept ;
     skos:broader she:Pressure,
         she:SoilPhysicalProperty ;
     skos:exactMatch spp:SoilVaporPressure ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SaturatedVaporPressure ;
-    skos:prefLabel "soil vapor pressure"@en .
+    skos:narrower she:SaturatedVapourPressure ;
+    skos:prefLabel "soil vapour pressure"@en .
 
 she:SoilWaterFlow a skos:Concept ;
     skos:broader she:SoilWaterMovement ;
@@ -3597,7 +3597,7 @@ she:Pressure a skos:Concept ;
     skos:narrower she:AtmosphericPressure,
         she:OsmoticPressure,
         she:OverBurdenPressure,
-        she:SoilVaporPressure,
+        she:SoilVapourPressure,
         she:Stress ;
     skos:prefLabel "pressure"@en .
 
@@ -3616,8 +3616,8 @@ she:SoilAggregationIndex a skos:Concept ;
     skos:broader she:SoilStructureIndex ;
     skos:exactMatch spp:SoilAggregationIndex ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:GeometricMeanDiameter,
-        she:MeanWeightDiameter,
+    skos:narrower she:GeometricMeanDiametre,
+        she:MeanWeightDiametre,
         she:PercentWaterStableAggregation,
         she:SoilAggregateSizeDistribution,
         she:SoilAggregateStrength ;
@@ -3746,7 +3746,7 @@ she:SoilWaterTransmissionIndex a skos:Concept ;
     skos:narrower she:SoilDrainage,
         she:SoilHydraulicConductivity,
         she:SoilHydraulicGradient,
-        she:SoilWaterEvaporationRate,
+        she:SoilWaterEvapourationRate,
         she:SoilWaterInfiltrationCapacity,
         she:SoilWaterInfiltrationRate ;
     skos:prefLabel "soil water transmission index"@en .
@@ -3903,7 +3903,7 @@ she:SoilManagement a skos:Concept ;
     skos:broader she:HumanActivity ;
     skos:exactMatch spp:SoilManagement ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:FertilizerUse,
+    skos:narrower she:FertiliserUse,
         she:Irrigation,
         she:MulchFarming,
         she:Mulching,
@@ -3933,7 +3933,7 @@ she:WaterInterchange a skos:Concept ;
     skos:broader she:PlanetaryPhenomena ;
     skos:exactMatch spp:WaterInterchange ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:Evaporation,
+    skos:narrower she:Evapouration,
         she:Evapotranspiration,
         she:Interflow,
         she:OverlandFlow,
@@ -4036,7 +4036,7 @@ she:SoilWaterPhysicalProcess a skos:Concept ;
         she:SoilMoistureMovement,
         she:SoilThawing,
         she:SoilWaterCondensation,
-        she:SoilWaterEvaporation,
+        she:SoilWaterEvapouration,
         she:SoilWaterInfiltration,
         she:SoilWaterLoss,
         she:SoilWaterMovement,
@@ -4094,7 +4094,7 @@ she:SoilChemicalProcess a skos:Concept ;
         she:SoilDesertification,
         she:SoilMineralization,
         she:SoilNegativeAdsorption,
-        she:SoilNutrientImmobilization,
+        she:SoilNutrientImmobilisation,
         she:SoilOxygenConsumption,
         she:SoilSalinization,
         she:SoilSorption ;
@@ -4243,7 +4243,7 @@ she:SoilPhysicalProperty a skos:Concept ;
         she:SoilTrafficability,
         she:SoilTransportability,
         she:SoilType,
-        she:SoilVaporPressure,
+        she:SoilVapourPressure,
         she:SoilViscosity,
         she:SoilVolume,
         she:SoilWaterPhysicalProperty ;
