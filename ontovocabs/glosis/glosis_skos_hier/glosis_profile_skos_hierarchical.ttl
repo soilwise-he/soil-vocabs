@@ -3,27 +3,30 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 she:ProfileDescriptionStatus a skos:Concept ;
-    skos:definition "The Profile Description Status Property indicates the level of detail and accuracy in documenting the features of a soil profile, including its horizons, texture, structure, and other observable characteristics. This property ensures that the soil profile description meets standards for completeness, enabling reliable classification and analysis. It is a critical aspect of soil studies, providing the basis for land-use planning, environmental assessment, and agricultural decision-making. Source: Schoeneberger, P.J., Wysocki, D.A., Benham, E.C., & Soil Survey Staff. (2012). Field Book for Describing and Sampling Soils. USDA-NRCS."@en ;
+    skos:definition "The Profile Description Status indicates the level of detail and accuracy in documenting the features of a soil profile, including its horizons, texture, structure, and other observable characteristics. This property ensures that the soil profile description meets standards for completeness, enabling reliable classification and analysis. It is a critical aspect of soil studies, providing the basis for land-use planning, environmental assessment, and agricultural decision-making. Source: Schoeneberger, P.J., Wysocki, D.A., Benham, E.C., & Soil Survey Staff. (2012). Field Book for Describing and Sampling Soils. USDA-NRCS."@en ;
     skos:exactMatch glosis_pr:profileDescriptionStatusProperty ;
     skos:prefLabel "profile description status"@en .
 
 she:SoilClassificationFAO a skos:Concept ;
     skos:broader she:SoilClassification ;
-    skos:prefLabel "soil classification fao"@en .
+    skos:prefLabel "soil classification FAO"@en .
 
 she:SoilClassificationUSDA a skos:Concept ;
     skos:broader she:SoilClassification ;
-    skos:prefLabel "soil classification usda"@en .
+    skos:prefLabel "soil classification USDA"@en .
 
 she:SoilClassificationWRB a skos:Concept ;
     skos:broader she:SoilClassification ;
-    skos:prefLabel "soil classification wrb"@en .
+    skos:prefLabel "soil classification WRB"@en .
 
 she:SoilClassification a skos:Concept ;
-    skos:definition "The Soil Type Property categorizes soils based on their physical, chemical, and mineralogical characteristics, as well as their formation processes. It identifies specific soil types, such as sandy, loamy, or clayey soils, or more detailed classifications like Mollisols, Alfisols, or Vertisols, depending on the classification system used (e.g., USDA Soil Taxonomy or FAO WRB). Understanding soil type is essential for predicting soil behavior, determining suitable land uses, and managing resources effectively. Source: USDA-NRCS (1999). Soil Taxonomy: A Basic System of Soil Classification for Making and Interpreting Soil Surveys; FAO (2015). World Reference Base for Soil Resources. "@en ;
-    skos:exactMatch glosis_pr:soilTypeProperty ;
     skos:narrower she:SoilClassificationFAO,
         she:SoilClassificationUSDA,
         she:SoilClassificationWRB ;
     skos:prefLabel "soil classification"@en .
+
+she:SoilType a skos:Concept ;
+    skos:definition "The Soil Type categorizes soils based on their physical, chemical, and mineralogical characteristics, as well as their formation processes. It identifies specific soil types, such as sandy, loamy, or clayey soils, or more detailed classifications like Mollisols, Alfisols, or Vertisols, depending on the classification system used (e.g., USDA Soil Taxonomy or FAO WRB). Understanding soil type is essential for predicting soil behavior, determining suitable land uses, and managing resources effectively. Source: USDA-NRCS (1999). Soil Taxonomy: A Basic System of Soil Classification for Making and Interpreting Soil Surveys; FAO (2015). World Reference Base for Soil Resources. "@en ;
+    skos:exactMatch glosis_pr:soilTypeProperty ;
+    skos:prefLabel "soil type"@en .
 

@@ -1557,11 +1557,11 @@ she:SoilOxygenDiffusionRate a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil oxygen diffusion rate"@en .
 
-she:SoilPH a skos:Concept ;
+she:SoilpH a skos:Concept ;
     skos:broader she:SoilChemicalProperty ;
     skos:exactMatch spp:SoilPH ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil p h"@en .
+    skos:prefLabel "soil pH"@en .
 
 she:SoilPackingArrangement a skos:Concept ;
     skos:broader she:SoilPhysicalProperty ;
