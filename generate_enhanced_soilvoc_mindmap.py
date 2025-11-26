@@ -1033,7 +1033,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
 
 # Main execution
 if __name__ == '__main__':
-    ttl_file = 'SoilVoc.ttl'
+    ttl_file = 'SoilVoc_merged.ttl'
 
     try:
         print(f"Parsing SKOS vocabulary from: {ttl_file}")
