@@ -16459,17 +16459,6 @@
                   ]
                 },
                 {
-                  "uri": "https://soilwise-he.github.io/soil-health#SoilPH",
-                  "label": "SoilPH",
-                  "altLabel": null,
-                  "notation": null,
-                  "definition": null,
-                  "exactMatch": [],
-                  "isProcedure": false,
-                  "procedures": [],
-                  "narrower": []
-                },
-                {
                   "uri": "https://soilwise-he.github.io/soil-health#SoilReactivity",
                   "label": "soil reactivity",
                   "altLabel": null,
@@ -16515,6 +16504,491 @@
                   ],
                   "isProcedure": false,
                   "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilpH",
+                  "label": "soil pH",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Soil pH measures the concentration of hydrogen ions (H\u207a) in the soil solution, indicating its acidity or alkalinity on a scale from 1 to 14. Neutral soils have a pH of 7, while values below 7 are acidic and above are alkaline. Soil pH significantly affects nutrient availability, microbial activity, and plant growth. For instance, nutrients like phosphorus are most available in a pH range of 6 to 7. Lime or sulfur applications can adjust soil pH to optimize conditions for crops. Source: USDA Natural Resources Conservation Service (NRCS).",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-pH",
+                      "label": "physioChemicalPropertyCode-pH"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2",
+                      "label": "pHCaCl2",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHCaCl2 (soil reaction) in a soil/CaCl2 solution (0.01-1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2",
+                          "label": "pHProcedure-pHCaCl2"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": [
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_ratio1-1",
+                          "label": "pHCaCl2_ratio1-1",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHCaCl2 (soil reaction) in 1:1 soil/1 M CaCl2 solution (1 M)",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_ratio1-1",
+                              "label": "pHProcedure-pHCaCl2_ratio1-1"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_ratio1-10",
+                          "label": "pHCaCl2_ratio1-10",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHCaCl2 (soil reaction) in 1:10 soil/CaCl2 solution (0.01-1 M)",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_ratio1-10",
+                              "label": "pHProcedure-pHCaCl2_ratio1-10"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_ratio1-2",
+                          "label": "pHCaCl2_ratio1-2",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHCaCl2 (soil reaction) in 1:2 soil/CaCl2 solution (0.01-1 M)",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_ratio1-2",
+                              "label": "pHProcedure-pHCaCl2_ratio1-2"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_ratio1-2.5",
+                          "label": "pHCaCl2_ratio1-2.5",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHCaCl2 (soil reaction) in 1:2.5 soil/CaCl2 solution (0.01-1 M)",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_ratio1-2.5",
+                              "label": "pHProcedure-pHCaCl2_ratio1-2.5"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_ratio1-5",
+                          "label": "pHCaCl2_ratio1-5",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHCaCl2 (soil reaction) in 1:5 soil/CaCl2 solution (0.01-1 M)",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_ratio1-5",
+                              "label": "pHProcedure-pHCaCl2_ratio1-5"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_sat",
+                          "label": "pHCaCl2_sat",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHCaCl2 (soil reaction) in saturated paste",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_sat",
+                              "label": "pHProcedure-pHCaCl2_sat"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        }
+                      ]
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O",
+                      "label": "pHH2O",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHH2O (soil reaction) in a soil/water solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O",
+                          "label": "pHProcedure-pHH2O"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": [
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_ratio1-1",
+                          "label": "pHH2O_ratio1-1",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHH2O (soil reaction) in 1:1 soil/water solution",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_ratio1-1",
+                              "label": "pHProcedure-pHH2O_ratio1-1"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_ratio1-10",
+                          "label": "pHH2O_ratio1-10",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHH2O (soil reaction) in 1:10 soil/water solution",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_ratio1-10",
+                              "label": "pHProcedure-pHH2O_ratio1-10"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_ratio1-2",
+                          "label": "pHH2O_ratio1-2",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHH2O (soil reaction) in 1:2 soil/water solution",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_ratio1-2",
+                              "label": "pHProcedure-pHH2O_ratio1-2"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_ratio1-2.5",
+                          "label": "pHH2O_ratio1-2.5",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHH2O (soil reaction) in 1:2.5 soil/water solution",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_ratio1-2.5",
+                              "label": "pHProcedure-pHH2O_ratio1-2.5"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_ratio1-5",
+                          "label": "pHH2O_ratio1-5",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHH2O (soil reaction) in 1:5 soil/water solution",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_ratio1-5",
+                              "label": "pHProcedure-pHH2O_ratio1-5"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_sat",
+                          "label": "pHH2O_sat",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHH2O (soil reaction) in water saturated paste",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_sat",
+                              "label": "pHProcedure-pHH2O_sat"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_unkn-spec",
+                          "label": "pHH2O_unkn-spec",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "Spectrally measured and converted to pHH2O (soil reaction) in unknown soil/water solution",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_unkn-spec",
+                              "label": "pHProcedure-pHH2O_unkn-spec"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        }
+                      ]
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl",
+                      "label": "pHKCl",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHKCl (soil reaction) in a soil/KCl solution (0.01-1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl",
+                          "label": "pHProcedure-pHKCl"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": [
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_ratio1-1",
+                          "label": "pHKCl_ratio1-1",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHKCl (soil reaction) in 1:1 soil/KCl solution (1 M)",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_ratio1-1",
+                              "label": "pHProcedure-pHKCl_ratio1-1"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_ratio1-10",
+                          "label": "pHKCl_ratio1-10",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHKCl (soil reaction) in 1:10 soil/KCl solution (0.01-1 M)",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_ratio1-10",
+                              "label": "pHProcedure-pHKCl_ratio1-10"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_ratio1-2",
+                          "label": "pHKCl_ratio1-2",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHKCl (soil reaction) in 1:2 soil/KCl solution (0.01-1 M)",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_ratio1-2",
+                              "label": "pHProcedure-pHKCl_ratio1-2"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_ratio1-2.5",
+                          "label": "pHKCl_ratio1-2.5",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHKCl (soil reaction) in 1:2.5 soil/KCl solution (0.01-1 M)",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_ratio1-2.5",
+                              "label": "pHProcedure-pHKCl_ratio1-2.5"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_ratio1-5",
+                          "label": "pHKCl_ratio1-5",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHKCl (soil reaction) in 1:5 soil/KCl solution (0.01-1 M)",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_ratio1-5",
+                              "label": "pHProcedure-pHKCl_ratio1-5"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        }
+                      ]
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_sat",
+                      "label": "pHKCl_sat",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHKCl (soil reaction) in saturated paste",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_sat",
+                          "label": "pHProcedure-pHKCl_sat"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF",
+                      "label": "pHNaF",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHNaF (soil reaction) in a soil/NaF solution (0.01-1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF",
+                          "label": "pHProcedure-pHNaF"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": [
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_ratio1-1",
+                          "label": "pHNaF_ratio1-1",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHNaF (soil reaction) in 1:1 soil/NaF solution (1 M)",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_ratio1-1",
+                              "label": "pHProcedure-pHNaF_ratio1-1"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_ratio1-10",
+                          "label": "pHNaF_ratio1-10",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHNaF (soil reaction) in 1:10 soil/NaF solution (0.01-1 M)",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_ratio1-10",
+                              "label": "pHProcedure-pHNaF_ratio1-10"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_ratio1-2",
+                          "label": "pHNaF_ratio1-2",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHNaF (soil reaction) in 1:2 soil/NaF solution (0.01-1 M)",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_ratio1-2",
+                              "label": "pHProcedure-pHNaF_ratio1-2"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_ratio1-2.5",
+                          "label": "pHNaF_ratio1-2.5",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHNaF (soil reaction) in 1:2.5 soil/NaF solution (0.01-1 M)",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_ratio1-2.5",
+                              "label": "pHProcedure-pHNaF_ratio1-2.5"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_ratio1-5",
+                          "label": "pHNaF_ratio1-5",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHNaF (soil reaction) in 1:5 soil/NaF solution (0.01-1 M)",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_ratio1-5",
+                              "label": "pHProcedure-pHNaF_ratio1-5"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_sat",
+                          "label": "pHNaF_sat",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "pHNaF (soil reaction) in saturated paste",
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_sat",
+                              "label": "pHProcedure-pHNaF_sat"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        }
+                      ]
+                    }
+                  ],
                   "narrower": []
                 }
               ]
@@ -24339,491 +24813,6 @@
       ],
       "isProcedure": false,
       "procedures": [],
-      "narrower": []
-    },
-    {
-      "uri": "https://soilwise-he.github.io/soil-health#SoilpH",
-      "label": "soil pH",
-      "altLabel": null,
-      "notation": null,
-      "definition": "Soil pH measures the concentration of hydrogen ions (H\u207a) in the soil solution, indicating its acidity or alkalinity on a scale from 1 to 14. Neutral soils have a pH of 7, while values below 7 are acidic and above are alkaline. Soil pH significantly affects nutrient availability, microbial activity, and plant growth. For instance, nutrients like phosphorus are most available in a pH range of 6 to 7. Lime or sulfur applications can adjust soil pH to optimize conditions for crops. Source: USDA Natural Resources Conservation Service (NRCS).",
-      "exactMatch": [
-        {
-          "uri": "http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-pH",
-          "label": "physioChemicalPropertyCode-pH"
-        }
-      ],
-      "isProcedure": false,
-      "procedures": [
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2",
-          "label": "pHCaCl2",
-          "altLabel": null,
-          "notation": null,
-          "definition": "pHCaCl2 (soil reaction) in a soil/CaCl2 solution (0.01-1 M)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2",
-              "label": "pHProcedure-pHCaCl2"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_ratio1-1",
-              "label": "pHCaCl2_ratio1-1",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHCaCl2 (soil reaction) in 1:1 soil/1 M CaCl2 solution (1 M)",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_ratio1-1",
-                  "label": "pHProcedure-pHCaCl2_ratio1-1"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_ratio1-10",
-              "label": "pHCaCl2_ratio1-10",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHCaCl2 (soil reaction) in 1:10 soil/CaCl2 solution (0.01-1 M)",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_ratio1-10",
-                  "label": "pHProcedure-pHCaCl2_ratio1-10"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_ratio1-2",
-              "label": "pHCaCl2_ratio1-2",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHCaCl2 (soil reaction) in 1:2 soil/CaCl2 solution (0.01-1 M)",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_ratio1-2",
-                  "label": "pHProcedure-pHCaCl2_ratio1-2"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_ratio1-2.5",
-              "label": "pHCaCl2_ratio1-2.5",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHCaCl2 (soil reaction) in 1:2.5 soil/CaCl2 solution (0.01-1 M)",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_ratio1-2.5",
-                  "label": "pHProcedure-pHCaCl2_ratio1-2.5"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_ratio1-5",
-              "label": "pHCaCl2_ratio1-5",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHCaCl2 (soil reaction) in 1:5 soil/CaCl2 solution (0.01-1 M)",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_ratio1-5",
-                  "label": "pHProcedure-pHCaCl2_ratio1-5"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_sat",
-              "label": "pHCaCl2_sat",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHCaCl2 (soil reaction) in saturated paste",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_sat",
-                  "label": "pHProcedure-pHCaCl2_sat"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            }
-          ]
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O",
-          "label": "pHH2O",
-          "altLabel": null,
-          "notation": null,
-          "definition": "pHH2O (soil reaction) in a soil/water solution",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O",
-              "label": "pHProcedure-pHH2O"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_ratio1-1",
-              "label": "pHH2O_ratio1-1",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHH2O (soil reaction) in 1:1 soil/water solution",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_ratio1-1",
-                  "label": "pHProcedure-pHH2O_ratio1-1"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_ratio1-10",
-              "label": "pHH2O_ratio1-10",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHH2O (soil reaction) in 1:10 soil/water solution",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_ratio1-10",
-                  "label": "pHProcedure-pHH2O_ratio1-10"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_ratio1-2",
-              "label": "pHH2O_ratio1-2",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHH2O (soil reaction) in 1:2 soil/water solution",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_ratio1-2",
-                  "label": "pHProcedure-pHH2O_ratio1-2"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_ratio1-2.5",
-              "label": "pHH2O_ratio1-2.5",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHH2O (soil reaction) in 1:2.5 soil/water solution",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_ratio1-2.5",
-                  "label": "pHProcedure-pHH2O_ratio1-2.5"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_ratio1-5",
-              "label": "pHH2O_ratio1-5",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHH2O (soil reaction) in 1:5 soil/water solution",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_ratio1-5",
-                  "label": "pHProcedure-pHH2O_ratio1-5"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_sat",
-              "label": "pHH2O_sat",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHH2O (soil reaction) in water saturated paste",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_sat",
-                  "label": "pHProcedure-pHH2O_sat"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_unkn-spec",
-              "label": "pHH2O_unkn-spec",
-              "altLabel": null,
-              "notation": null,
-              "definition": "Spectrally measured and converted to pHH2O (soil reaction) in unknown soil/water solution",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_unkn-spec",
-                  "label": "pHProcedure-pHH2O_unkn-spec"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            }
-          ]
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl",
-          "label": "pHKCl",
-          "altLabel": null,
-          "notation": null,
-          "definition": "pHKCl (soil reaction) in a soil/KCl solution (0.01-1 M)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl",
-              "label": "pHProcedure-pHKCl"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_ratio1-1",
-              "label": "pHKCl_ratio1-1",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHKCl (soil reaction) in 1:1 soil/KCl solution (1 M)",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_ratio1-1",
-                  "label": "pHProcedure-pHKCl_ratio1-1"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_ratio1-10",
-              "label": "pHKCl_ratio1-10",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHKCl (soil reaction) in 1:10 soil/KCl solution (0.01-1 M)",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_ratio1-10",
-                  "label": "pHProcedure-pHKCl_ratio1-10"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_ratio1-2",
-              "label": "pHKCl_ratio1-2",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHKCl (soil reaction) in 1:2 soil/KCl solution (0.01-1 M)",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_ratio1-2",
-                  "label": "pHProcedure-pHKCl_ratio1-2"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_ratio1-2.5",
-              "label": "pHKCl_ratio1-2.5",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHKCl (soil reaction) in 1:2.5 soil/KCl solution (0.01-1 M)",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_ratio1-2.5",
-                  "label": "pHProcedure-pHKCl_ratio1-2.5"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_ratio1-5",
-              "label": "pHKCl_ratio1-5",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHKCl (soil reaction) in 1:5 soil/KCl solution (0.01-1 M)",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_ratio1-5",
-                  "label": "pHProcedure-pHKCl_ratio1-5"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            }
-          ]
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_sat",
-          "label": "pHKCl_sat",
-          "altLabel": null,
-          "notation": null,
-          "definition": "pHKCl (soil reaction) in saturated paste",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_sat",
-              "label": "pHProcedure-pHKCl_sat"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF",
-          "label": "pHNaF",
-          "altLabel": null,
-          "notation": null,
-          "definition": "pHNaF (soil reaction) in a soil/NaF solution (0.01-1 M)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF",
-              "label": "pHProcedure-pHNaF"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_ratio1-1",
-              "label": "pHNaF_ratio1-1",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHNaF (soil reaction) in 1:1 soil/NaF solution (1 M)",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_ratio1-1",
-                  "label": "pHProcedure-pHNaF_ratio1-1"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_ratio1-10",
-              "label": "pHNaF_ratio1-10",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHNaF (soil reaction) in 1:10 soil/NaF solution (0.01-1 M)",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_ratio1-10",
-                  "label": "pHProcedure-pHNaF_ratio1-10"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_ratio1-2",
-              "label": "pHNaF_ratio1-2",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHNaF (soil reaction) in 1:2 soil/NaF solution (0.01-1 M)",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_ratio1-2",
-                  "label": "pHProcedure-pHNaF_ratio1-2"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_ratio1-2.5",
-              "label": "pHNaF_ratio1-2.5",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHNaF (soil reaction) in 1:2.5 soil/NaF solution (0.01-1 M)",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_ratio1-2.5",
-                  "label": "pHProcedure-pHNaF_ratio1-2.5"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_ratio1-5",
-              "label": "pHNaF_ratio1-5",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHNaF (soil reaction) in 1:5 soil/NaF solution (0.01-1 M)",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_ratio1-5",
-                  "label": "pHProcedure-pHNaF_ratio1-5"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_sat",
-              "label": "pHNaF_sat",
-              "altLabel": null,
-              "notation": null,
-              "definition": "pHNaF (soil reaction) in saturated paste",
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_sat",
-                  "label": "pHProcedure-pHNaF_sat"
-                }
-              ],
-              "isProcedure": true,
-              "procedures": [],
-              "narrower": []
-            }
-          ]
-        }
-      ],
       "narrower": []
     },
     {

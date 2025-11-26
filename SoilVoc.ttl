@@ -3697,7 +3697,7 @@ she:SoilChemicalProperty a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:SoilChargeProperty,
         she:SoilChemicalCapacity,
-        she:SoilPH,
+        she:SoilpH,
         she:SoilReactivity,
         she:SoilRedoxPotential,
         she:SoilSalinity ;
