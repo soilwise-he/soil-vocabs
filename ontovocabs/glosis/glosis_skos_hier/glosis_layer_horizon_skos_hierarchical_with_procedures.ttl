@@ -5,6 +5,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 she:AcidityExchangeable a skos:Concept ;
+    skos:broader she:ExchangeableCation ;
     skos:definition "Exchangeable acidity represents the amount of hydrogen (H⁺) and aluminum (Al³⁺) ions adsorbed onto soil particles that can be exchanged with the soil solution. It is a key factor in determining soil liming requirements and improving nutrient availability in acidic soils. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Aciexc ;
     skos:prefLabel "acidity exchangeable"@en ;
@@ -17,6 +18,7 @@ she:AcidityExchangeable a skos:Concept ;
         she:acidityExchangeableProcedure-ExchAcid_ph8-unkn .
 
 she:AvailableWaterHoldingCapacity a skos:Concept ;
+    skos:broader she:SoilWaterHoldingCapacity ;
     skos:definition "Available water capacity (AWC) measures the volume of water soil can retain between field capacity and the permanent wilting point. It represents the water accessible to plants for uptake. High AWC supports better plant growth, while low AWC may necessitate irrigation. Source: USDA NRCS."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Avavol ;
     skos:prefLabel "available water holding capacity"@en ;
@@ -32,34 +34,38 @@ she:BaseSaturation a skos:Concept ;
         she:baseSaturationProcedure-BSat_calcul-ecec .
 
 she:CationsSum a skos:Concept ;
-    skos:definition "The Cations Sum Property calculates the total concentration of exchangeable cations (e.g., Ca²⁺, Mg²⁺, K⁺, Na⁺) in the soil. It helps determine soil fertility and salinity and is commonly expressed in milliequivalents per 100 grams of soil. Source: Soil Science Society of America (SSSA) Glossary."@en ;
+    skos:broader she:ExchangeableCation ;
+    skos:definition "The Cations Sum calculates the total concentration of exchangeable cations (e.g., Ca²⁺, Mg²⁺, K⁺, Na⁺) in the soil. It helps determine soil fertility and salinity and is commonly expressed in milliequivalents per 100 grams of soil. Source: Soil Science Society of America (SSSA) Glossary."@en ;
     skos:exactMatch glosis_lh:cationsSumProperty ;
     skos:prefLabel "cations sum"@en .
 
-she:CoarseFragments a skos:Concept ;
+she:CoarseFragment a skos:Concept ;
+    skos:broader she:SoilParticle ;
     skos:definition "Coarse fragments are soil particles larger than 2 mm in diameter, such as gravel, cobbles, and stones. They affect soil porosity, water infiltration, and root penetration. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-CoaFra ;
-    skos:prefLabel "coarse fragments"@en ;
+    skos:prefLabel "coarse fragment"@en ;
     she:hasProcedure she:coarseFragmentsProcedure-CrsFrg_fld,
         she:coarseFragmentsProcedure-CrsFrg_fldcls,
         she:coarseFragmentsProcedure-CrsFrg_lab .
 
 she:DryConsistency a skos:Concept ;
-    skos:definition "The Dry Consistency Property is synonymous with the Consistence Dry Property, focusing on the soil's resistance to breaking apart or deforming when dry. It indicates the soil's mechanical strength and susceptibility to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
+    skos:broader she:SoilConsistence ;
+    skos:definition "The Dry Consistency is synonymous with the Consistence Dry Property, focusing on the soil's resistance to breaking apart or deforming when dry. It indicates the soil's mechanical strength and susceptibility to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:dryConsistencyProperty ;
     skos:prefLabel "dry consistency"@en .
 
-she:EffectiveCec a skos:Concept ;
+she:EffectiveCEC a skos:Concept ;
+    skos:broader she:CationExchangeCapacity ;
     skos:definition "ECEC is the sum of exchangeable cations in soil at its natural pH. It provides a measure of the soil’s fertility under acidic conditions, as it considers both base cations and exchangeable aluminum. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-ECEC ;
-    skos:prefLabel "effective cec"@en ;
+    skos:prefLabel "effective CEC"@en ;
     she:hasProcedure she:effectiveCecProcedure-EffCEC_calcul-b,
         she:effectiveCecProcedure-EffCEC_calcul-ba .
 
-she:ElectricalConductivity a skos:Concept ;
+she:SoilElectricalConductivity a skos:Concept ;
     skos:definition "Electrical conductivity (EC) measures the ability of soil to conduct an electrical current, which is directly related to the concentration of soluble salts. It is an essential indicator of soil salinity and is used to assess soil's suitability for crop growth. High EC levels can reduce plant water uptake and affect germination, while low levels indicate low salinity and better soil health. Source: USDA NRCS."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Eleccond ;
-    skos:prefLabel "electrical conductivity"@en ;
+    skos:prefLabel "soil electrical conductivity"@en ;
     she:hasProcedure she:electricalConductivityProcedure-EC_ratio1-1,
         she:electricalConductivityProcedure-EC_ratio1-10,
         she:electricalConductivityProcedure-EC_ratio1-2,
@@ -67,15 +73,15 @@ she:ElectricalConductivity a skos:Concept ;
         she:electricalConductivityProcedure-EC_ratio1-5,
         she:electricalConductivityProcedure-ECe_sat .
 
-she:FragmentsClass a skos:Concept ;
-    skos:definition "The Fragments Class Property categorizes the size, shape, and quantity of coarse fragments (e.g., gravel, stones) present in the soil. These fragments affect soil porosity, water retention, and root penetration. The classification includes gravelly, stony, or bouldery soils. Source: Soil Survey Manual (USDA, 2017)."@en ;
+she:FragmentClass a skos:Concept ;
+    skos:definition "The Fragments Class categorizes the size, shape, and quantity of coarse fragments (e.g., gravel, stones) present in the soil. These fragments affect soil porosity, water retention, and root penetration. The classification includes gravelly, stony, or bouldery soils. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:fragmentsClassProperty ;
-    skos:prefLabel "fragments class"@en .
+    skos:prefLabel "fragment class"@en .
 
-she:HydraulicConductivity a skos:Concept ;
+she:SoilHydraulicConductivity a skos:Concept ;
     skos:definition "Hydraulic conductivity refers to the rate at which water moves through soil pores under a unit hydraulic gradient. It reflects the soil's ability to transmit water, influenced by texture, structure, and porosity. Soils with high hydraulic conductivity, like sandy soils, allow rapid water movement, while clayey soils exhibit slower water flow. This property is critical for understanding water infiltration, drainage, and irrigation management. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Hydcond ;
-    skos:prefLabel "hydraulic conductivity"@en ;
+    skos:prefLabel "soil hydraulic conductivity"@en ;
     she:hasProcedure she:hydraulicConductivityProcedure-KSat_calcul-ptf,
         she:hydraulicConductivityProcedure-KSat_calcul-ptf-genuchten,
         she:hydraulicConductivityProcedure-KSat_calcul-ptf-saxton,
@@ -101,17 +107,24 @@ she:HydrogenExchangeableBases a skos:Concept ;
         she:exchangeableBasesProcedure-ExchBases_ph8-unkn .
 
 she:MineralContent a skos:Concept ;
-    skos:definition "The Mineral Content Property evaluates the overall abundance of mineral particles in soil, including sand, silt, and clay fractions. It provides essential information about soil texture, fertility, and parent material. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
+    skos:broader she:MineralParticle ;
+    skos:definition "The Mineral Content evaluates the overall abundance of mineral particles in soil, including sand, silt, and clay fractions. It provides essential information about soil texture, fertility, and parent material. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:mineralContentProperty ;
     skos:prefLabel "mineral content"@en .
 
-she:MineralFragments a skos:Concept ;
-    skos:definition "The Mineral Fragments Property refers to the presence and characteristics of coarse mineral particles (e.g., gravel, pebbles, stones) in the soil. These fragments influence soil drainage, root penetration, and overall physical structure. Source: Soil Survey Manual (USDA, 2017)."@en ;
+she:MineralFragment a skos:Concept ;
+    skos:broader she:MineralParticle ;
+    skos:definition "The Mineral Fragments refers to the presence and characteristics of coarse mineral particles (e.g., gravel, pebbles, stones) in the soil. These fragments influence soil drainage, root penetration, and overall physical structure. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:mineralFragmentsProperty ;
-    skos:prefLabel "mineral fragments"@en .
+    skos:prefLabel "mineral fragment"@en .
+
+she:MineralParticle a skos:Concept ;
+    skos:prefLabel "mineral particle"@en ;
+    skos:narrower she:MineralContent,
+        she:MineralFragment .
 
 she:MoistureContent a skos:Concept ;
-    skos:definition "The Moisture Content Property measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
+    skos:definition "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:moistureContentProperty ;
     skos:prefLabel "moisture content"@en ;
     she:hasProcedure she:moistureContentProcedure-VMC_calcul-ptf,
@@ -140,47 +153,49 @@ she:NitrogenTotal a skos:Concept ;
         she:nitrogenTotalProcedure-TotalN_tn06,
         she:nitrogenTotalProcedure-TotalN_tn08 .
 
-she:OrganicMatter a skos:Concept ;
+she:SoilOrganicMatter a skos:Concept ;
     skos:definition "Soil organic matter is composed of decomposed plant and animal residues, living soil organisms, and humus. It improves soil structure, water retention, nutrient supply, and microbial activity, making it critical for sustainable agriculture and soil health. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Orgmat ;
-    skos:prefLabel "organic matter"@en ;
+    skos:prefLabel "soil organic matter"@en ;
     she:hasProcedure she:organicMatterProcedure-FulAcidC_unkn,
         she:organicMatterProcedure-HumAcidC_unkn,
         she:organicMatterProcedure-OrgM_calcul-oc1.73,
         she:organicMatterProcedure-TotHumC_unkn .
 
 she:OxalateExtractableOpticalDensity a skos:Concept ;
-    skos:definition "The Oxalate Extractable Optical Density Property measures the concentration of poorly crystalline forms of iron, aluminum, and organic matter in soil, often associated with volcanic soils. It is determined using ammonium oxalate extraction. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
+    skos:definition "The Oxalate Extractable Optical Density measures the concentration of poorly crystalline forms of iron, aluminum, and organic matter in soil, often associated with volcanic soils. It is determined using ammonium oxalate extraction. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
     skos:exactMatch glosis_lh:oxalateExtractableOpticalDensityProperty ;
     skos:prefLabel "oxalate extractable optical density"@en .
 
-she:PH a skos:Concept ;
+she:SoilpH a skos:Concept ;
     skos:definition "Soil pH measures the concentration of hydrogen ions (H⁺) in the soil solution, indicating its acidity or alkalinity on a scale from 1 to 14. Neutral soils have a pH of 7, while values below 7 are acidic and above are alkaline. Soil pH significantly affects nutrient availability, microbial activity, and plant growth. For instance, nutrients like phosphorus are most available in a pH range of 6 to 7. Lime or sulfur applications can adjust soil pH to optimize conditions for crops. Source: USDA Natural Resources Conservation Service (NRCS)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-pH ;
-    skos:prefLabel "ph"@en ;
+    skos:prefLabel "soil pH"@en ;
     she:hasProcedure she:pHProcedure-pHCaCl2,
         she:pHProcedure-pHH2O,
         she:pHProcedure-pHKCl,
         she:pHProcedure-pHKCl_sat,
         she:pHProcedure-pHNaF .
 
-she:ParticleSizeFractionsSum a skos:Concept ;
+she:ParticleSizeFractionSum a skos:Concept ;
+    skos:broader she:SoilParticle ;
     skos:definition "The Particle Size Fractions Sum refers to the total proportion of sand, silt, and clay particles in soil, expressed as a percentage. It ensures the sum of individual particle size fractions adds up to 100%, a check for accurate soil texture analysis. Particle size distribution impacts water retention, permeability, and soil structure. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:particleSizeFractionsSumProperty ;
-    skos:prefLabel "particle size fractions sum"@en .
+    skos:prefLabel "particle size fraction sum"@en .
 
-she:Plasticity a skos:Concept ;
-    skos:definition "The Plasticity Property measures the soil's ability to deform under stress without cracking or breaking, especially when wet. It is influenced by clay content and mineralogy and is important for engineering and agricultural applications. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
+she:SoilPlasticity a skos:Concept ;
+    skos:definition "The Plasticity measures the soil's ability to deform under stress without cracking or breaking, especially when wet. It is influenced by clay content and mineralogy and is important for engineering and agricultural applications. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:plasticityProperty ;
-    skos:prefLabel "plasticity"@en .
+    skos:prefLabel "soil plasticity"@en .
 
 she:SandyTexture a skos:Concept ;
-    skos:definition "The Sandy Texture Property refers to soil dominated by sand particles (0.05–2.0 mm in diameter). Sandy soils are well-drained, low in nutrients, and prone to drought due to poor water retention. Source: Soil Science Society of America (SSSA) Glossary."@en ;
+    skos:broader she:SoilTexture ;
+    skos:definition "The Sandy Texture refers to soil dominated by sand particles (0.05–2.0 mm in diameter). Sandy soils are well-drained, low in nutrients, and prone to drought due to poor water retention. Source: Soil Science Society of America (SSSA) Glossary."@en ;
     skos:exactMatch glosis_lh:sandyTextureProperty ;
     skos:prefLabel "sandy texture"@en .
 
 she:Stickiness a skos:Concept ;
-    skos:definition "The Stickiness Property measures the soil’s tendency to adhere to surfaces or objects when wet. It is influenced by clay content and organic matter and affects soil workability and machinery use. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
+    skos:definition "The Stickiness measures the soil’s tendency to adhere to surfaces or objects when wet. It is influenced by clay content and organic matter and affects soil workability and machinery use. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:stickinessProperty ;
     skos:prefLabel "stickiness"@en .
 
@@ -218,15 +233,16 @@ she:TotalCarbonateEquivalent a skos:Concept ;
         she:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc .
 
 she:WetPlasticity a skos:Concept ;
-    skos:definition "The Wet Plasticity Property measures the soil’s ability to deform under pressure when saturated. Wet plasticity is influenced by clay mineralogy and is important for understanding soil behavior under wet conditions. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
+    skos:broader she:SoilPlasticity ;
+    skos:definition "The Wet Plasticity measures the soil’s ability to deform under pressure when saturated. Wet plasticity is influenced by clay mineralogy and is important for understanding soil behavior under wet conditions. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:wetPlasticityProperty ;
     skos:prefLabel "wet plasticity"@en .
 
-she:AluminiumExchangeableBases a skos:Concept ;
+she:AluminiumExchangeableBase a skos:Concept ;
     skos:broader she:Aluminium ;
     skos:definition "Aluminium ions bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Aluexc ;
-    skos:prefLabel "aluminium exchangeable bases"@en ;
+    skos:prefLabel "aluminium exchangeable base"@en ;
     she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec,
@@ -239,11 +255,11 @@ she:AluminiumExchangeableBases a skos:Concept ;
         she:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea,
         she:exchangeableBasesProcedure-ExchBases_ph8-unkn .
 
-she:AluminiumExtractableElements a skos:Concept ;
+she:AluminiumExtractableElement a skos:Concept ;
     skos:broader she:Aluminium ;
     skos:definition "Aluminium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Aluext ;
-    skos:prefLabel "aluminium extractable elements"@en ;
+    skos:prefLabel "aluminium extractable element"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
@@ -270,11 +286,11 @@ she:AluminiumExtractableElements a skos:Concept ;
         she:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         she:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-she:AluminiumTotalElements a skos:Concept ;
+she:AluminiumTotalElement a skos:Concept ;
     skos:broader she:Aluminium ;
     skos:definition "Total concentration of aluminium in the soil, including both soluble and insoluble forms, typically measured after complete digestion of the soil sample."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Alutot ;
-    skos:prefLabel "aluminium total elements"@en ;
+    skos:prefLabel "aluminium total element"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
@@ -296,22 +312,22 @@ she:AluminiumTotalElements a skos:Concept ;
         she:totalElementsProcedure-Total_xtf-t .
 
 she:BiologicalAbundance a skos:Concept ;
-    skos:broader she:Biological ;
-    skos:definition "The Biological Abundance Property evaluates the presence and quantity of soil organisms, such as microbes, insects, and earthworms. This property reflects soil health, nutrient cycling, and organic matter decomposition, which are vital for maintaining soil fertility. Source: Lavelle, P., & Spain, A.V. (2001). Soil Ecology."@en ;
+    skos:broader she:SoilBiology ;
+    skos:definition "The Biological Abundance evaluates the presence and quantity of soil organisms, such as microbes, insects, and earthworms. This property reflects soil health, nutrient cycling, and organic matter decomposition, which are vital for maintaining soil fertility. Source: Lavelle, P., & Spain, A.V. (2001). Soil Ecology."@en ;
     skos:exactMatch glosis_lh:biologicalAbundanceProperty ;
     skos:prefLabel "biological abundance"@en .
 
 she:BiologicalFeatures a skos:Concept ;
-    skos:broader she:Biological ;
-    skos:definition "The Biological Features Property examines qualitative aspects of soil biological activity, including the types of organisms present, their diversity, and their roles in soil ecosystems. It encompasses processes like nitrogen fixation, organic matter decomposition, and bioturbation. Source: Soil Science Society of America (SSSA) Glossary."@en ;
+    skos:broader she:SoilBiology ;
+    skos:definition "The Biological Features examines qualitative aspects of soil biological activity, including the types of organisms present, their diversity, and their roles in soil ecosystems. It encompasses processes like nitrogen fixation, organic matter decomposition, and bioturbation. Source: Soil Science Society of America (SSSA) Glossary."@en ;
     skos:exactMatch glosis_lh:biologicalFeaturesProperty ;
     skos:prefLabel "biological features"@en .
 
-she:BoronExtractableElements a skos:Concept ;
+she:BoronExtractableElement a skos:Concept ;
     skos:broader she:Boron ;
     skos:definition "Boron bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Borext ;
-    skos:prefLabel "boron extractable elements"@en ;
+    skos:prefLabel "boron extractable element"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
@@ -338,11 +354,11 @@ she:BoronExtractableElements a skos:Concept ;
         she:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         she:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-she:BoronTotalElements a skos:Concept ;
+she:BoronTotalElement a skos:Concept ;
     skos:broader she:Boron ;
     skos:definition "Total boron includes all boron forms in soil, crucial for plant cell wall formation and reproductive processes. Deficiency can impair growth, while toxicity is a risk in arid soils or with excessive irrigation. Source: Havlin et al. (2014)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Bortot ;
-    skos:prefLabel "boron total elements"@en ;
+    skos:prefLabel "boron total element"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
@@ -364,19 +380,19 @@ she:BoronTotalElements a skos:Concept ;
         she:totalElementsProcedure-Total_xtf-t .
 
 she:BoundaryDistinctness a skos:Concept ;
-    skos:broader she:Boundary ;
-    skos:definition "The Boundary Distinctness Property describes the sharpness of transitions between soil horizons. Boundaries can range from abrupt (clear demarcation) to diffuse (gradual blending), providing insights into soil formation processes and profile development. Source: Soil Survey Manual (USDA, 2017)."@en ;
+    skos:broader she:SoilHorizonBoundary ;
+    skos:definition "The Boundary Distinctness describes the sharpness of transitions between soil horizons. Boundaries can range from abrupt (clear demarcation) to diffuse (gradual blending), providing insights into soil formation processes and profile development. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:boundaryDistinctnessProperty ;
     skos:prefLabel "boundary distinctness"@en .
 
 she:BoundaryTopography a skos:Concept ;
-    skos:broader she:Boundary ;
-    skos:definition "The Boundary Topography Property characterizes the shape of soil horizon boundaries, which may be smooth, wavy, irregular, or broken. It reflects processes like erosion, deposition, or biological activity that influence horizon development. Source: FAO (2006). Guidelines for Soil Description."@en ;
+    skos:broader she:SoilHorizonBoundary ;
+    skos:definition "The Boundary Topography characterizes the shape of soil horizon boundaries, which may be smooth, wavy, irregular, or broken. It reflects processes like erosion, deposition, or biological activity that influence horizon development. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:boundaryTopographyProperty ;
     skos:prefLabel "boundary topography"@en .
 
 she:BulkDensityFineEarth a skos:Concept ;
-    skos:broader she:BulkDensity ;
+    skos:broader she:SoilBulkDensity ;
     skos:definition "This parameter measures the bulk density of the soil fraction smaller than 2 mm (excluding rocks and coarse fragments). It is used to assess the physical properties of soil related to root growth, water movement, and compaction. Source: Soil Science Society of America."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-BulDfine ;
     skos:prefLabel "bulk density fine earth"@en ;
@@ -392,19 +408,19 @@ she:BulkDensityFineEarth a skos:Concept ;
         she:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-od .
 
 she:BulkDensityMineral a skos:Concept ;
-    skos:broader she:BulkDensity ;
+    skos:broader she:SoilBulkDensity ;
     skos:definition "The Bulk Density of Mineral Soil refers specifically to the density of the mineral portion of the soil, excluding organic matter. It provides insights into the physical state and compaction of mineral-dominated soils, influencing water movement and root growth. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:bulkDensityMineralProperty ;
     skos:prefLabel "bulk density mineral"@en .
 
 she:BulkDensityPeat a skos:Concept ;
-    skos:broader she:BulkDensity ;
+    skos:broader she:SoilBulkDensity ;
     skos:definition "The Bulk Density of Peat measures the mass of dry organic soil (peat) per unit volume. Peat soils typically have low bulk density due to their high organic matter content and porosity, which significantly affects their water retention and drainage characteristics. Source: Rydin, H., & Jeglum, J. (2006). The Biology of Peatlands."@en ;
     skos:exactMatch glosis_lh:bulkDensityPeatProperty ;
     skos:prefLabel "bulk density peat"@en .
 
 she:BulkDensityWholeSoil a skos:Concept ;
-    skos:broader she:BulkDensity ;
+    skos:broader she:SoilBulkDensity ;
     skos:definition "This parameter measures the bulk density of the soil fraction smaller than 2 mm (excluding rocks and coarse fragments). It is used to assess the physical properties of soil related to root growth, water movement, and compaction. Source: Soil Science Society of America."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-BulDfine ;
     skos:prefLabel "bulk density whole soil"@en ;
@@ -417,11 +433,11 @@ she:BulkDensityWholeSoil a skos:Concept ;
         she:bulkDensityWholeSoilProcedure-BlkDensW_we-rpl-unkn,
         she:bulkDensityWholeSoilProcedure-BlkDensW_we-unkn .
 
-she:CadmiumExtractableElements a skos:Concept ;
+she:CadmiumExtractableElement a skos:Concept ;
     skos:broader she:Cadmium ;
     skos:definition "Cadmium is a heavy metal present in trace amounts in soils, often introduced through industrial pollution or phosphate fertilizers. It is toxic to plants, animals, and humans even at low concentrations. Monitoring cadmium levels is crucial to ensure soil safety and reduce contamination risks in the food chain. Source: Sparks, D.L. (2003)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cad ;
-    skos:prefLabel "cadmium extractable elements"@en ;
+    skos:prefLabel "cadmium extractable element"@en ;
     she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
@@ -448,11 +464,11 @@ she:CadmiumExtractableElements a skos:Concept ;
         she:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         she:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-she:CadmiumTotalElements a skos:Concept ;
+she:CadmiumTotalElement a skos:Concept ;
     skos:broader she:Cadmium ;
     skos:definition "Cadmium is a heavy metal present in trace amounts in soils, often introduced through industrial pollution or phosphate fertilizers. It is toxic to plants, animals, and humans even at low concentrations. Monitoring cadmium levels is crucial to ensure soil safety and reduce contamination risks in the food chain. Source: Sparks, D.L. (2003)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cad ;
-    skos:prefLabel "cadmium total elements"@en ;
+    skos:prefLabel "cadmium total element"@en ;
     she:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
@@ -473,11 +489,11 @@ she:CadmiumTotalElements a skos:Concept ;
         she:totalElementsProcedure-Total_xrf-p,
         she:totalElementsProcedure-Total_xtf-t .
 
-she:CalciumExchangeableBases a skos:Concept ;
+she:CalciumExchangeableBase a skos:Concept ;
     skos:broader she:Calcium ;
     skos:definition "Calcium bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Calexc ;
-    skos:prefLabel "calcium exchangeable bases"@en ;
+    skos:prefLabel "calcium exchangeable base"@en ;
     she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec,
@@ -546,19 +562,19 @@ she:CalciumTotalElements a skos:Concept ;
         she:totalElementsProcedure-Total_xrf-p,
         she:totalElementsProcedure-Total_xtf-t .
 
-she:CarbonInorganic a skos:Concept ;
-    skos:broader she:Carbon ;
+she:SoilInorganicCarbon a skos:Concept ;
+    skos:broader she:SoilInorganicComponent ;
     skos:definition "Inorganic carbon in soil primarily consists of carbonates like calcium carbonate and magnesium carbonate. It contributes to soil pH buffering and is a significant feature of arid and calcareous soils. Excess inorganic carbon can immobilize certain nutrients, requiring careful management in agricultural systems. Source: Soil Science Society of America."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Carinorg ;
-    skos:prefLabel "carbon inorganic"@en ;
+    skos:prefLabel "soil inorganic carbon"@en ;
     she:hasProcedure she:carbonInorganicProcedure-InOrgC_calcul-caco3,
         she:carbonInorganicProcedure-InOrgC_calcul-tc-oc .
 
-she:CarbonOrganic a skos:Concept ;
-    skos:broader she:Carbon ;
+she:SoilOrganicCarbon a skos:Concept ;
+    skos:broader she:SoilOrganicMatter ;
     skos:definition "Organic carbon refers to the carbon component of soil organic matter, derived from decomposed plant and microbial residues. It serves as a key energy source for soil microbes and influences nutrient cycling, soil structure, and water retention. Organic carbon is a primary indicator of soil fertility and health. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Carorg ;
-    skos:prefLabel "carbon organic"@en ;
+    skos:prefLabel "soil organic carbon"@en ;
     she:hasProcedure she:carbonOrganicProcedure-OrgC_acid-dc,
         she:carbonOrganicProcedure-OrgC_acid-dc-ht,
         she:carbonOrganicProcedure-OrgC_acid-dc-ht-analyser,
@@ -584,11 +600,11 @@ she:CarbonOrganic a skos:Concept ;
         she:carbonOrganicProcedure-OrgC_wc-cro3-tiurin,
         she:carbonOrganicProcedure-OrgC_wc-cro3-walkleyblack .
 
-she:CarbonTotal a skos:Concept ;
-    skos:broader she:Carbon ;
+she:SoilTotalCarbon a skos:Concept ;
+    skos:narrower she:SoilOrganicCarbon, she:SoilInorganicCarbon ;
     skos:definition "Total carbon in soil includes both organic carbon (from plant and microbial residues) and inorganic carbon (primarily carbonates). It is a fundamental component of soil organic matter, influencing soil fertility, structure, and water retention. High carbon levels are associated with better soil health and productivity. Source: USDA NRCS."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cartot ;
-    skos:prefLabel "carbon total"@en ;
+    skos:prefLabel "soil total carbon"@en ;
     she:hasProcedure she:carbonTotalProcedure-TotC_calcul-ic-oc,
         she:carbonTotalProcedure-TotC_dc-ht,
         she:carbonTotalProcedure-TotC_dc-ht-analyser,
@@ -2530,20 +2546,20 @@ she:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc a skos:Concept ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc ;
     skos:prefLabel "CaCO3_calcul-tc-oc"@en .
 
-she:Biological a skos:Concept ;
+she:SoilBiology a skos:Concept ;
     skos:narrower she:BiologicalAbundance,
         she:BiologicalFeatures ;
-    skos:prefLabel "biological"@en .
+    skos:prefLabel "soil biology"@en .
 
 she:Boron a skos:Concept ;
-    skos:narrower she:BoronExtractableElements,
-        she:BoronTotalElements ;
+    skos:narrower she:BoronExtractableElement,
+        she:BoronTotalElement ;
     skos:prefLabel "boron"@en .
 
-she:Boundary a skos:Concept ;
+she:SoilHorizonBoundary a skos:Concept ;
     skos:narrower she:BoundaryDistinctness,
         she:BoundaryTopography ;
-    skos:prefLabel "boundary"@en .
+    skos:prefLabel "soil horizon boundary"@en .
 
 she:Cadmium a skos:Concept ;
     skos:narrower she:CadmiumExtractableElements,
@@ -2613,15 +2629,15 @@ she:Zinc a skos:Concept ;
     skos:prefLabel "zinc"@en .
 
 she:Aluminium a skos:Concept ;
-    skos:narrower she:AluminiumExchangeableBases,
-        she:AluminiumExtractableElements,
-        she:AluminiumTotalElements ;
+    skos:narrower she:AluminiumExchangeableBase,
+        she:AluminiumExtractableElement,
+        she:AluminiumTotalElement ;
     skos:prefLabel "aluminium"@en .
 
 she:Calcium a skos:Concept ;
-    skos:narrower she:CalciumExchangeableBases,
-        she:CalciumExtractableElements,
-        she:CalciumTotalElements ;
+    skos:narrower she:CalciumExchangeableBase,
+        she:CalciumExtractableElement,
+        she:CalciumTotalElement ;
     skos:prefLabel "calcium"@en .
 
 she:Carbon a skos:Concept ;
@@ -2675,13 +2691,10 @@ she:Phosphorus a skos:Concept ;
         she:PhosphorusTotalElements ;
     skos:prefLabel "phosphorus"@en .
 
-she:Porosity a skos:Concept ;
-    skos:broader she:Porosity ;
+she:SoilPorosity a skos:Concept ;
     skos:definition "Porosity refers to the percentage of soil volume occupied by pores or voids, which hold air and water. It directly impacts water infiltration, drainage, and root growth. Soils with high porosity are better suited for crop cultivation, as they provide good aeration and water availability. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Por ;
-    skos:narrower she:Porosity,
-        she:PorosityClass ;
-    skos:prefLabel "porosity"@en ;
+    skos:prefLabel "soil porosity"@en ;
     she:hasProcedure she:porosityProcedure-Poros_calcul-pf0 .
 
 she:Potassium a skos:Concept ;
@@ -2710,12 +2723,12 @@ she:Soluble a skos:Concept ;
         she:SolubleSalts ;
     skos:prefLabel "soluble"@en .
 
-she:BulkDensity a skos:Concept ;
+she:SoilBulkDensity a skos:Concept ;
     skos:narrower she:BulkDensityFineEarth,
         she:BulkDensityMineral,
         she:BulkDensityPeat,
         she:BulkDensityWholeSoil ;
-    skos:prefLabel "bulk density"@en .
+    skos:prefLabel "soil bulk density"@en .
 
 she:Cementation a skos:Concept ;
     skos:narrower she:CementationContinuity,
