@@ -1033,7 +1033,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
 
 # Main execution
 if __name__ == '__main__':
-    ttl_file = 'SoilVoc_merged.ttl'
+    ttl_file = 'SoilVoc.ttl'
 
     try:
         print(f"Parsing SKOS vocabulary from: {ttl_file}")
@@ -1042,7 +1042,7 @@ if __name__ == '__main__':
         print(f"Found ConceptScheme: {vocabulary['scheme_label']}")
         print(f"Number of top concepts: {len(vocabulary['top_concepts'])}")
 
-        output_file = 'soilvoc_mindmap.html'
+        output_file = 'index.html'
         generate_html_mindmap_enhanced(vocabulary, output_file)
 
         print(f"\nSuccess! Open {output_file} in your web browser to view the enhanced interactive mind map.")
