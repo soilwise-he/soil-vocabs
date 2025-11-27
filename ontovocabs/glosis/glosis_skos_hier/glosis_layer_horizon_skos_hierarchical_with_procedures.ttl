@@ -613,15 +613,15 @@ she:SoilTotalCarbon a skos:Concept ;
 
 she:CarbonatesContent a skos:Concept ;
     skos:broader she:Carbonates ;
-    skos:definition "The Carbonates Content Property quantifies the concentration of carbonate minerals (e.g., CaCO₃, MgCO₃) in soil. These compounds influence soil pH, fertility, and structure, and are prevalent in calcareous soils. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
+    skos:definition "The Carbonates Content quantifies the concentration of carbonate minerals (e.g., CaCO₃, MgCO₃) in soil. These compounds influence soil pH, fertility, and structure, and are prevalent in calcareous soils. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:carbonatesContentProperty ;
     skos:prefLabel "carbonates content"@en .
 
-she:CarbonatesForms a skos:Concept ;
+she:CarbonatesForm a skos:Concept ;
     skos:broader she:Carbonates ;
-    skos:definition "The Carbonates Forms Property describes the types of carbonate minerals present in soil, such as calcite, dolomite, or aragonite. These forms impact soil chemistry, fertility, and physical characteristics differently depending on their composition and solubility. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
+    skos:definition "The Carbonates Forms describes the types of carbonate minerals present in soil, such as calcite, dolomite, or aragonite. These forms impact soil chemistry, fertility, and physical characteristics differently depending on their composition and solubility. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
     skos:exactMatch glosis_lh:carbonatesFormsProperty ;
-    skos:prefLabel "carbonates forms"@en .
+    skos:prefLabel "carbonates form"@en .
 
 she:CationExchangeCapacityEffective a skos:Concept ;
     skos:broader she:CationExchangeCapacity ;
