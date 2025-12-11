@@ -124,7 +124,7 @@ def parse_skos_vocabulary_enhanced(ttl_file_path):
     return vocabulary
 
 
-def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap.html'):
+def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
     """
     Generate an enhanced interactive HTML mind map from the vocabulary data.
 
