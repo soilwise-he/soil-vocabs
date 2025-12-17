@@ -186,12 +186,6 @@ she:CalciumExtractableElement skos:broader she:Calcium .
 
 she:CalciumTotalElement skos:broader she:Calcium .
 
-she:CarbonInorganic skos:broader she:Carbon .
-
-she:CarbonOrganic skos:broader she:Carbon .
-
-she:CarbonTotal skos:broader she:Carbon .
-
 she:CarbonatesContent a skos:Concept ;
     skos:broader she:Carbonates ;
     skos:definition "The Carbonates Content quantifies the concentration of carbonate minerals (e.g., CaCO₃, MgCO₃) in soil. These compounds influence soil pH, fertility, and structure, and are prevalent in calcareous soils. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
@@ -230,28 +224,28 @@ she:CationsSum a skos:Concept ;
 
 she:CementationContinuity a skos:Concept ;
     skos:broader she:Cementation ;
-    skos:definition "The Cementation Continuity Property describes the extent to which soil particles are bound together by cementing agents, such as calcium carbonate, iron oxides, or silica. Cementation affects soil permeability, root penetration, and the development of soil horizons. Continuity can be classified as continuous, discontinuous, or patchy. Source: FAO (2006). Guidelines for Soil Description."@en ;
+    skos:definition "The Cementation Continuity describes the extent to which soil particles are bound together by cementing agents, such as calcium carbonate, iron oxides, or silica. Cementation affects soil permeability, root penetration, and the development of soil horizons. Continuity can be classified as continuous, discontinuous, or patchy. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:cementationContinuityProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "cementation continuity"@en .
 
 she:CementationDegree a skos:Concept ;
     skos:broader she:Cementation ;
-    skos:definition "The Cementation Degree Property measures how strongly soil particles are bonded by cementing agents. It ranges from weakly cemented (friable) to strongly cemented (hard). This property influences soil strength and its suitability for agricultural and engineering purposes. Source: Soil Survey Manual (USDA, 2017)."@en ;
+    skos:definition "The Cementation Degree measures how strongly soil particles are bonded by cementing agents. It ranges from weakly cemented (friable) to strongly cemented (hard). This property influences soil strength and its suitability for agricultural and engineering purposes. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:cementationDegreeProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "cementation degree"@en .
 
 she:CementationFabric a skos:Concept ;
     skos:broader she:Cementation ;
-    skos:definition "The Cementation Fabric Property examines the texture, structure, and arrangement of cementing materials within the soil. It provides insights into soil formation processes and the mechanical stability of the soil matrix. Source: FAO (2006). Guidelines for Soil Description."@en ;
+    skos:definition "The Cementation Fabric examines the texture, structure, and arrangement of cementing materials within the soil. It provides insights into soil formation processes and the mechanical stability of the soil matrix. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:cementationFabricProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "cementation fabric"@en .
 
 she:CementationNature a skos:Concept ;
     skos:broader she:Cementation ;
-    skos:definition "The Cementation Nature Property identifies the specific type of material responsible for binding soil particles, such as carbonates, silica, or iron oxides. Understanding this helps in soil classification and predicting behavior under varying environmental conditions. Source: Soil Survey Manual (USDA, 2017)."@en ;
+    skos:definition "The Cementation Nature identifies the specific type of material responsible for binding soil particles, such as carbonates, silica, or iron oxides. Understanding this helps in soil classification and predicting behavior under varying environmental conditions. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:cementationNatureProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "cementation nature"@en .
@@ -281,36 +275,36 @@ she:CoarseSand a skos:Concept ;
     skos:prefLabel "coarse sand"@en .
 
 she:CoatingAbundance a skos:Concept ;
-    skos:broader she:Coating ;
-    skos:definition "The Coating Abundance Property evaluates the quantity of coatings on soil particles, such as organic matter, clay, or iron oxides. Coatings influence soil color, nutrient availability, and water movement. The abundance is typically classified as few, common, or many. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
+    skos:broader she:SoilCoating ;
+    skos:definition "The Coating Abundance evaluates the quantity of coatings on soil particles, such as organic matter, clay, or iron oxides. Coatings influence soil color, nutrient availability, and water movement. The abundance is typically classified as few, common, or many. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:coatingAbundanceProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "coating abundance"@en .
 
 she:CoatingContrast a skos:Concept ;
-    skos:broader she:Coating ;
-    skos:definition "The Coating Contrast Property assesses the visual distinction between coatings on soil particles and the underlying material. High contrast indicates significant differences in composition or color, providing clues about soil processes like illuviation or biological activity. Source: FAO (2006). Guidelines for Soil Description."@en ;
+    skos:broader she:SoilCoating ;
+    skos:definition "The Coating Contrast assesses the visual distinction between coatings on soil particles and the underlying material. High contrast indicates significant differences in composition or color, providing clues about soil processes like illuviation or biological activity. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:coatingContrastProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "coating contrast"@en .
 
 she:CoatingForm a skos:Concept ;
-    skos:broader she:Coating ;
-    skos:definition "The Coating Form Property describes the shape and distribution of coatings on soil particles, such as patchy, continuous, or layered. These forms are indicative of soil genesis and chemical weathering processes. Source: Soil Science Society of America (SSSA) Glossary."@en ;
+    skos:broader she:SoilCoating ;
+    skos:definition "The Coating Form describes the shape and distribution of coatings on soil particles, such as patchy, continuous, or layered. These forms are indicative of soil genesis and chemical weathering processes. Source: Soil Science Society of America (SSSA) Glossary."@en ;
     skos:exactMatch glosis_lh:coatingFormProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "coating form"@en .
 
 she:CoatingLocation a skos:Concept ;
-    skos:broader she:Coating ;
-    skos:definition "The Coating Location Property identifies where coatings are found within the soil profile, such as along root channels, pore spaces, or on particle surfaces. This property helps determine the movement of water and nutrients in the soil. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
+    skos:broader she:SoilCoating ;
+    skos:definition "The Coating Location identifies where coatings are found within the soil profile, such as along root channels, pore spaces, or on particle surfaces. This property helps determine the movement of water and nutrients in the soil. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:coatingLocationProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "coating location"@en .
 
 she:CoatingNature a skos:Concept ;
-    skos:broader she:Coating ;
-    skos:definition "The Coating Nature Property examines the composition of soil coatings, such as organic, clay, or iron-rich coatings. The nature of these coatings can influence nutrient retention, soil color, and water dynamics. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
+    skos:broader she:SoilCoating ;
+    skos:definition "The Coating Nature examines the composition of soil coatings, such as organic, clay, or iron-rich coatings. The nature of these coatings can influence nutrient retention, soil color, and water dynamics. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:coatingNatureProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "coating nature"@en .
@@ -334,15 +328,15 @@ she:ConservativeSolute a skos:Concept ;
     skos:prefLabel "conservative solute"@en .
 
 she:ConsistenceDry a skos:Concept ;
-    skos:broader she:Consistency ;
-    skos:definition "The Consistence Dry Property evaluates the soil's behavior when dry, including its resistance to deformation or crumbling. It ranges from loose to hard and provides information about soil compaction and management practices. Source: Soil Survey Manual (USDA, 2017)."@en ;
+    skos:broader she:SoilConsistence ;
+    skos:definition "The Consistence Dry evaluates the soil's behavior when dry, including its resistance to deformation or crumbling. It ranges from loose to hard and provides information about soil compaction and management practices. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:consistenceDryProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "consistence dry"@en .
 
 she:ConsistenceMoist a skos:Concept ;
-    skos:broader she:Consistency ;
-    skos:definition "The Consistence Moist Property assesses how soil responds to pressure when moist. Categories include friable, firm, or plastic. This property is essential for understanding soil workability and water retention. Source: Soil Survey Manual (USDA, 2017)."@en ;
+    skos:broader she:SoilConsistence ;
+    skos:definition "The Consistence Moist assesses how soil responds to pressure when moist. Categories include friable, firm, or plastic. This property is essential for understanding soil workability and water retention. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:consistenceMoistProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "consistence moist"@en .
@@ -570,21 +564,21 @@ she:GroundwaterDepth a skos:Concept ;
 
 she:GypsumContent a skos:Concept ;
     skos:broader she:Gypsum ;
-    skos:definition "The Gypsum Content Property quantifies the amount of gypsum (calcium sulfate dihydrate) present in the soil. Gypsum affects soil structure, water infiltration, and nutrient availability, especially in arid and semi-arid regions. Source: FAO (2006). Guidelines for Soil Description."@en ;
+    skos:definition "The Gypsum Content quantifies the amount of gypsum (calcium sulfate dihydrate) present in the soil. Gypsum affects soil structure, water infiltration, and nutrient availability, especially in arid and semi-arid regions. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:gypsumContentProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "gypsum content"@en .
 
 she:GypsumForms a skos:Concept ;
     skos:broader she:Gypsum ;
-    skos:definition "The Gypsum Forms Property describes the morphology of gypsum within the soil, such as crystals, veins, or nodules. The form indicates the processes of soil formation and water movement in gypsum-rich soils. Source: FAO (2006). Guidelines for Soil Description."@en ;
+    skos:definition "The Gypsum Forms describes the morphology of gypsum within the soil, such as crystals, veins, or nodules. The form indicates the processes of soil formation and water movement in gypsum-rich soils. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:gypsumFormsProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "gypsum forms"@en .
 
 she:GypsumWeight a skos:Concept ;
     skos:broader she:Gypsum ;
-    skos:definition "The Gypsum Weight Property measures the mass of gypsum in the soil profile. This value helps evaluate the potential for soil salinity issues and influences decisions for agricultural or land reclamation practices. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
+    skos:definition "The Gypsum Weight measures the mass of gypsum in the soil profile. This value helps evaluate the potential for soil salinity issues and influences decisions for agricultural or land reclamation practices. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:gypsumWeightProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "gypsum weight"@en .
@@ -834,57 +828,57 @@ she:Microbe a skos:Concept ;
     skos:prefLabel "microbe"@en .
 
 she:MineralConcAbundance a skos:Concept ;
-    skos:broader she:MineralConcretions ;
-    skos:definition "The Mineral Concentration Abundance Property evaluates the amount of specific minerals, such as quartz, feldspar, or mica, in the soil. This property provides insights into soil parent material and fertility. Source: FAO (2006). Guidelines for Soil Description."@en ;
+    skos:broader she:MineralConcentration ;
+    skos:definition "The Mineral Concentration Abundance evaluates the amount of specific minerals, such as quartz, feldspar, or mica, in the soil. This property provides insights into soil parent material and fertility. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:mineralConcAbundanceProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "mineral conc abundance"@en .
 
 she:MineralConcColour a skos:Concept ;
-    skos:broader she:MineralConcretions ;
-    skos:definition "The Mineral Concentration Colour Property describes the color of concentrated mineral deposits in the soil, such as iron oxides (red) or manganese nodules (black). It helps identify soil processes like oxidation or leaching. Source: Soil Survey Manual (USDA, 2017)."@en ;
+    skos:broader she:MineralConcentration ;
+    skos:definition "The Mineral Concentration Colour describes the color of concentrated mineral deposits in the soil, such as iron oxides (red) or manganese nodules (black). It helps identify soil processes like oxidation or leaching. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:mineralConcColourProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "mineral conc colour"@en .
 
 she:MineralConcHardness a skos:Concept ;
-    skos:broader she:MineralConcretions ;
-    skos:definition "The Mineral Concentration Hardness Property assesses the physical hardness of mineral deposits in soil. Hardness influences soil strength and resistance to erosion or mechanical disruption. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
+    skos:broader she:MineralConcentration ;
+    skos:definition "The Mineral Concentration Hardness assesses the physical hardness of mineral deposits in soil. Hardness influences soil strength and resistance to erosion or mechanical disruption. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
     skos:exactMatch glosis_lh:mineralConcHardnessProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "mineral conc hardness"@en .
 
 she:MineralConcKind a skos:Concept ;
-    skos:broader she:MineralConcretions ;
-    skos:definition "The Mineral Concentration Kind Property identifies the specific type of mineral concentrations found in soil, such as gypsum, calcite, or hematite. This classification aids in understanding soil genesis and chemistry. Source: FAO (2006). Guidelines for Soil Description."@en ;
+    skos:broader she:MineralConcentration ;
+    skos:definition "The Mineral Concentration Kind identifies the specific type of mineral concentrations found in soil, such as gypsum, calcite, or hematite. This classification aids in understanding soil genesis and chemistry. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:mineralConcKindProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "mineral conc kind"@en .
 
 she:MineralConcNature a skos:Concept ;
-    skos:broader she:MineralConcretions ;
-    skos:definition "The Mineral Concentration Nature Property examines the origin and composition of concentrated minerals in soil. It provides clues about weathering, leaching, and other pedogenic processes. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
+    skos:broader she:MineralConcentration ;
+    skos:definition "The Mineral Concentration Nature examines the origin and composition of concentrated minerals in soil. It provides clues about weathering, leaching, and other pedogenic processes. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:mineralConcNatureProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "mineral conc nature"@en .
 
 she:MineralConcShape a skos:Concept ;
-    skos:broader she:MineralConcretions ;
-    skos:definition "The Mineral Concentration Shape Property describes the physical shape of mineral accumulations, such as rounded, angular, or irregular. These shapes help infer soil formation processes and transport history. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
+    skos:broader she:MineralConcentration ;
+    skos:definition "The Mineral Concentration Shape describes the physical shape of mineral accumulations, such as rounded, angular, or irregular. These shapes help infer soil formation processes and transport history. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:mineralConcShapeProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "mineral conc shape"@en .
 
 she:MineralConcSize a skos:Concept ;
-    skos:broader she:MineralConcretions ;
-    skos:definition "The Mineral Concentration Size Property measures the dimensions of concentrated mineral deposits in soil, typically expressed in millimeters. Size categories range from small grains to large nodules or concretions. Source: FAO (2006). Guidelines for Soil Description."@en ;
+    skos:broader she:MineralConcentration ;
+    skos:definition "The Mineral Concentration Size measures the dimensions of concentrated mineral deposits in soil, typically expressed in millimeters. Size categories range from small grains to large nodules or concretions. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:mineralConcSizeProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "mineral conc size"@en .
 
 she:MineralConcVolume a skos:Concept ;
-    skos:broader she:MineralConcretions ;
-    skos:definition "The Mineral Concentration Volume Property quantifies the proportion of soil volume occupied by mineral concentrations. It is used to assess the impact of these materials on soil structure and permeability. Source: Soil Survey Manual (USDA, 2017)."@en ;
+    skos:broader she:MineralConcentration ;
+    skos:definition "The Mineral Concentration Volume quantifies the proportion of soil volume occupied by mineral concentrations. It is used to assess the impact of these materials on soil structure and permeability. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:mineralConcVolumeProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "mineral conc volume"@en .
@@ -916,50 +910,50 @@ she:ModulusOfRupture a skos:Concept ;
     skos:prefLabel "modulus of rupture"@en .
 
 she:MoistConsistency a skos:Concept ;
-    skos:broader she:Consistency ;
-    skos:definition "The Moist Consistency Property evaluates the soil's behavior under pressure when moist. Categories include friable, firm, or plastic. It provides insights into soil workability and its ability to support plant growth. Source: FAO (2006). Guidelines for Soil Description."@en ;
+    skos:broader she:SoilConsistency ;
+    skos:definition "The Moist Consistency evaluates the soil's behavior under pressure when moist. Categories include friable, firm, or plastic. It provides insights into soil workability and its ability to support plant growth. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:moistConsistencyProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "moist consistency"@en .
 
 she:MottlesAbundance a skos:Concept ;
-    skos:broader she:Mottles ;
-    skos:definition "The Mottles Abundance Property describes the frequency of mottling (spots of contrasting color) in soil horizons. Mottling indicates variations in soil aeration, drainage, or water saturation. Abundance is typically classified as few, common, or many. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
+    skos:broader she:SoilMottle ;
+    skos:definition "The Mottles Abundance describes the frequency of mottling (spots of contrasting color) in soil horizons. Mottling indicates variations in soil aeration, drainage, or water saturation. Abundance is typically classified as few, common, or many. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:mottlesAbundanceProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "mottles abundance"@en .
 
 she:MottlesBoundaryClassification a skos:Concept ;
-    skos:broader she:Mottles ;
-    skos:definition "The Mottles Boundary Classification Property assesses the sharpness and distinctness of boundaries between mottled and non-mottled areas within the soil. It provides clues about soil processes such as oxidation-reduction reactions. Source: FAO (2006). Guidelines for Soil Description."@en ;
+    skos:broader she:SoilMottle ;
+    skos:definition "The Mottles Boundary Classification assesses the sharpness and distinctness of boundaries between mottled and non-mottled areas within the soil. It provides clues about soil processes such as oxidation-reduction reactions. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:mottlesBoundaryClassificationProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "mottles boundary classification"@en .
 
 she:MottlesColour a skos:Concept ;
-    skos:broader she:Mottles ;
-    skos:definition "The Mottles Colour Property evaluates the color of soil mottles, often indicative of oxidation states of iron or manganese. For example, reddish colors suggest oxidation, while gray colors indicate reduction and poor drainage. Source: Soil Survey Manual (USDA, 2017)."@en ;
+    skos:broader she:SoilMottle ;
+    skos:definition "The Mottles Colour evaluates the color of soil mottles, often indicative of oxidation states of iron or manganese. For example, reddish colors suggest oxidation, while gray colors indicate reduction and poor drainage. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:mottlesColourProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "mottles colour"@en .
 
 she:MottlesContrast a skos:Concept ;
-    skos:broader she:Mottles ;
-    skos:definition "The Mottles Contrast Property measures the visual distinction between mottles and the surrounding soil matrix. High contrast indicates stark differences, often linked to fluctuating water tables or drainage issues. Source: FAO (2006). Guidelines for Soil Description."@en ;
+    skos:broader she:SoilMottle ;
+    skos:definition "The Mottles Contrast measures the visual distinction between mottles and the surrounding soil matrix. High contrast indicates stark differences, often linked to fluctuating water tables or drainage issues. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:mottlesContrastProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "mottles contrast"@en .
 
 she:MottlesPresence a skos:Concept ;
-    skos:broader she:Mottles ;
-    skos:definition "The Mottles Presence Property refers to the existence of mottles in soil, often signaling periodic water saturation, drainage problems, or fluctuating redox conditions. This property is essential for wetland delineation and soil health assessment. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
+    skos:broader she:SoilMottle ;
+    skos:definition "The Mottles Presence refers to the existence of mottles in soil, often signaling periodic water saturation, drainage problems, or fluctuating redox conditions. This property is essential for wetland delineation and soil health assessment. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:mottlesPresenceProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "mottles presence"@en .
 
 she:MottlesSize a skos:Concept ;
-    skos:broader she:Mottles ;
-    skos:definition "The Mottles Size Property describes the dimensions of soil mottles, typically classified as fine, medium, or coarse. The size reflects the intensity and scale of soil processes such as oxidation and reduction. Source: FAO (2006). Guidelines for Soil Description."@en ;
+    skos:broader she:SoilMottle ;
+    skos:definition "The Mottles Size describes the dimensions of soil mottles, typically classified as fine, medium, or coarse. The size reflects the intensity and scale of soil processes such as oxidation and reduction. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:mottlesSizeProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "mottles size"@en .
@@ -1078,21 +1072,21 @@ she:PavementStability a skos:Concept ;
 
 she:PeatDecompostion a skos:Concept ;
     skos:broader she:Peat ;
-    skos:definition "The Peat Decomposition Property evaluates the degree of decomposition in organic soils or peat. Categories include fibric (least decomposed), hemic (moderately decomposed), and sapric (highly decomposed), which influence soil fertility and drainage. Source: Soil Survey Manual (USDA, 2017)."@en ;
+    skos:definition "The Peat Decomposition evaluates the degree of decomposition in organic soils or peat. Categories include fibric (least decomposed), hemic (moderately decomposed), and sapric (highly decomposed), which influence soil fertility and drainage. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:peatDecompostionProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "peat decompostion"@en .
 
 she:PeatDrainage a skos:Concept ;
     skos:broader she:Peat ;
-    skos:definition "The Peat Drainage Property assesses the water removal capacity in peat soils, essential for determining their suitability for agriculture, conservation, or other uses. Poorly drained peat often accumulates organic material due to low decomposition rates. Source: FAO (2006). Guidelines for Soil Description."@en ;
+    skos:definition "The Peat Drainage assesses the water removal capacity in peat soils, essential for determining their suitability for agriculture, conservation, or other uses. Poorly drained peat often accumulates organic material due to low decomposition rates. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:peatDrainageProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "peat drainage"@en .
 
 she:PeatVolume a skos:Concept ;
     skos:broader she:Peat ;
-    skos:definition "The Peat Volume Property quantifies the proportion of peat material in a given soil volume. It is critical for land use planning, carbon sequestration assessments, and wetland management. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
+    skos:definition "The Peat Volume quantifies the proportion of peat material in a given soil volume. It is critical for land use planning, carbon sequestration assessments, and wetland management. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:peatVolumeProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "peat volume"@en .
@@ -1158,24 +1152,21 @@ she:PlasticConsistence a skos:Concept ;
     skos:prefLabel "plastic consistence"@en .
 
 she:PoresAbundance a skos:Concept ;
-    skos:broader she:Pores ;
-    skos:definition "The Pores Abundance Property describes the quantity of soil pores, ranging from few to many. It influences water infiltration, root growth, and soil aeration. Pore abundance is crucial for assessing soil health and productivity. Source: Soil Survey Manual (USDA, 2017)."@en ;
+    skos:broader she:SoilPore ;
+    skos:definition "The Pores Abundance describes the quantity of soil pores, ranging from few to many. It influences water infiltration, root growth, and soil aeration. Pore abundance is crucial for assessing soil health and productivity. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:poresAbundanceProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "pores abundance"@en .
 
 she:PoresSize a skos:Concept ;
-    skos:broader she:Pores ;
-    skos:definition "The Pores Size Property categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
+    skos:broader she:SoilPore ;
+    skos:definition "The Pores Size categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:poresSizeProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "pores size"@en .
 
-she:Porosity skos:narrower she:PorosityClass .
-
 she:PorosityClass a skos:Concept ;
-    skos:broader she:Porosity ;
-    skos:definition "The Porosity Class Property classifies soil by the proportion of pore spaces, typically expressed as a percentage. Classes include high, medium, or low porosity, influencing water and air movement in the soil. Source: Soil Science Society of America (SSSA) Glossary."@en ;
+    skos:definition "The Porosity Class classifies soil by the proportion of pore spaces, typically expressed as a percentage. Classes include high, medium, or low porosity, influencing water and air movement in the soil. Source: Soil Science Society of America (SSSA) Glossary."@en ;
     skos:exactMatch glosis_lh:porosityClassProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "porosity class"@en .
@@ -1269,12 +1260,6 @@ she:RockSize a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "rock size"@en .
 
-she:Root a skos:Concept ;
-    skos:broader she:PlantPart ;
-    skos:exactMatch spp:Root ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "root"@en .
-
 she:RootBiomass a skos:Concept ;
     skos:broader she:Biomass ;
     skos:exactMatch spp:RootBiomass ;
@@ -1282,22 +1267,22 @@ she:RootBiomass a skos:Concept ;
     skos:prefLabel "root biomass"@en .
 
 she:RootsAbundance a skos:Concept ;
-    skos:broader she:Roots ;
-    skos:definition "The Roots Abundance Property describes the quantity of plant roots within a soil profile, typically categorized as few, common, or many. Root abundance reflects plant-soil interactions, soil fertility, and the physical structure that supports vegetation. Source: Soil Survey Manual (USDA, 2017)."@en ;
+    skos:broader she:Root ;
+    skos:definition "The Roots Abundance describes the quantity of plant roots within a soil profile, typically categorized as few, common, or many. Root abundance reflects plant-soil interactions, soil fertility, and the physical structure that supports vegetation. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:rootsAbundanceProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "roots abundance"@en .
 
 she:RootsPresence a skos:Concept ;
-    skos:broader she:Roots ;
-    skos:definition "The Roots Presence Property identifies whether roots are visible in a soil profile or horizon. It indicates biological activity, soil health, and the suitability of the soil for plant growth. Roots are commonly observed during soil surveys and are classified by type and density. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
+    skos:broader she:Root ;
+    skos:definition "The Roots Presence identifies whether roots are visible in a soil profile or horizon. It indicates biological activity, soil health, and the suitability of the soil for plant growth. Roots are commonly observed during soil surveys and are classified by type and density. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:rootsPresenceProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "roots presence"@en .
 
 she:SaltContent a skos:Concept ;
-    skos:broader she:Salt ;
-    skos:definition "The Salt Content Property measures the concentration of soluble salts in soil, critical for assessing salinity. Excess salts can hinder plant growth by affecting osmotic potential, leading to reduced water uptake by roots. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
+    skos:broader she:SolubleSalts ;
+    skos:definition "The Salt Content measures the concentration of soluble salts in soil, critical for assessing salinity. Excess salts can hinder plant growth by affecting osmotic potential, leading to reduced water uptake by roots. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:saltContentProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "salt content"@en .
@@ -1705,12 +1690,6 @@ she:SoilCompressibility a skos:Concept ;
     skos:exactMatch spp:SoilCompressibility ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil compressibility"@en .
-
-she:SoilConsistency a skos:Concept ;
-    skos:broader she:SoilPhysicalProperty ;
-    skos:exactMatch spp:SoilConsistency ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil consistency"@en .
 
 she:SoilConsolidation a skos:Concept ;
     skos:broader she:SoilCompression ;
@@ -2703,12 +2682,6 @@ she:SoilStructuralStability a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil structural stability"@en .
 
-she:SoilStructure a skos:Concept ;
-    skos:broader she:SoilPhysicalProperty ;
-    skos:exactMatch spp:SoilStructure ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil structure"@en .
-
 she:SoilSurfaceAge a skos:Concept ;
     skos:broader she:SoilAge ;
     skos:definition "Surface Age refers to the estimated age of a surface layer of soil or landform, which is important for understanding the degree of soil weathering, development, and fertility. Older surfaces may have more developed soils, while younger surfaces may be less fertile and more prone to erosion. Source: FAO, 'Soil Formation and Evolution'"@en ;
@@ -2795,12 +2768,6 @@ she:SoilViscosity a skos:Concept ;
     skos:exactMatch spp:SoilViscosity ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil viscosity"@en .
-
-she:SoilVoid a skos:Concept ;
-    skos:broader she:SoilPorePhysicalProperty ;
-    skos:exactMatch spp:SoilVoid ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil void"@en .
 
 she:SoilVolume a skos:Concept ;
     skos:broader she:SoilPhysicalProperty ;
@@ -2954,15 +2921,15 @@ she:SoilWetness a skos:Concept ;
     skos:prefLabel "soil wetness"@en .
 
 she:SolubleAnionsTotal a skos:Concept ;
-    skos:broader she:Soluble ;
-    skos:definition "The Soluble Anions Total Property measures the concentration of anions (e.g., chloride, sulfate, nitrate) in soil solution. High levels may indicate salinity, nutrient availability, or contamination. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
+    skos:broader she:SoilSolutionSolute ;
+    skos:definition "The Soluble Anions Total measures the concentration of anions (e.g., chloride, sulfate, nitrate) in soil solution. High levels may indicate salinity, nutrient availability, or contamination. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
     skos:exactMatch glosis_lh:solubleAnionsTotalProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soluble anions total"@en .
 
 she:SolubleCationsTotal a skos:Concept ;
-    skos:broader she:Soluble ;
-    skos:definition "The Soluble Cations Total Property evaluates the sum of cations (e.g., sodium, potassium, calcium, magnesium) in soil solution. It is an indicator of soil salinity, fertility, and chemical balance. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
+    skos:broader she:SoilSolutionSolute ;
+    skos:definition "The Soluble Cations Total evaluates the sum of cations (e.g., sodium, potassium, calcium, magnesium) in soil solution. It is an indicator of soil salinity, fertility, and chemical balance. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:solubleCationsTotalProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soluble cations total"@en .
@@ -2992,15 +2959,15 @@ she:StructuralPorosity a skos:Concept ;
     skos:prefLabel "structural porosity"@en .
 
 she:StructureGrade a skos:Concept ;
-    skos:broader she:Structure ;
-    skos:definition "The Structure Grade Property assesses the development and stability of soil aggregates, classified as weak, moderate, or strong. It reflects soil tilth, aeration, and resistance to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
+    skos:broader she:SoilStructure ;
+    skos:definition "The Structure Grade assesses the development and stability of soil aggregates, classified as weak, moderate, or strong. It reflects soil tilth, aeration, and resistance to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:structureGradeProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "structure grade"@en .
 
 she:StructureSize a skos:Concept ;
-    skos:broader she:Structure ;
-    skos:definition "The Structure Size Property describes the dimensions of soil aggregates or structural units, such as granular, blocky, or platy. Structure size affects root penetration, water infiltration, and soil stability. Source: FAO (2006). Guidelines for Soil Description."@en ;
+    skos:broader she:SoilStructure ;
+    skos:definition "The Structure Size describes the dimensions of soil aggregates or structural units, such as granular, blocky, or platy. Structure size affects root penetration, water infiltration, and soil stability. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:structureSizeProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "structure size"@en .
@@ -3048,15 +3015,13 @@ she:TexturalPorosity a skos:Concept ;
     skos:prefLabel "textural porosity"@en .
 
 she:TextureFieldClass a skos:Concept ;
-    skos:broader she:Texture ;
-    skos:definition "The Texture Field Class Property categorizes soil texture based on the relative proportions of sand, silt, and clay, as assessed by field methods like the ribbon test. Field classes include sandy loam, clay loam, etc. Source: Soil Survey Manual (USDA, 2017)."@en ;
+    skos:definition "The Texture Field Class categorizes soil texture based on the relative proportions of sand, silt, and clay, as assessed by field methods like the ribbon test. Field classes include sandy loam, clay loam, etc. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:textureFieldClassProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "texture field class"@en .
 
 she:TextureLabClass a skos:Concept ;
-    skos:broader she:Texture ;
-    skos:definition "The Texture Lab Class Property defines soil texture using laboratory-determined particle size distributions. This property provides a precise classification of soil as sand, silt, or clay using standard methods. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
+    skos:definition "The Texture Lab Class defines soil texture using laboratory-determined particle size distributions. This property provides a precise classification of soil as sand, silt, or clay using standard methods. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:textureLabClassProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "texture lab class"@en .
@@ -3117,15 +3082,15 @@ she:VoidRatio a skos:Concept ;
     skos:prefLabel "void ratio"@en .
 
 she:VoidsClassification a skos:Concept ;
-    skos:broader she:Voids ;
-    skos:definition "The Voids Classification Property categorizes voids or pores in the soil based on size, shape, and arrangement. These voids are critical for water movement, air circulation, and root penetration. They are classified into macropores (large), mesopores (medium), and micropores (small). Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
+    skos:broader she:SoilVoid ;
+    skos:definition "The Voids Classification categorizes voids or pores in the soil based on size, shape, and arrangement. These voids are critical for water movement, air circulation, and root penetration. They are classified into macropores (large), mesopores (medium), and micropores (small). Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:voidsClassificationProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "voids classification"@en .
 
 she:VoidsDiameter a skos:Concept ;
-    skos:broader she:Voids ;
-    skos:definition "The Voids Diameter Property refers to the size of void spaces in soil, which can range from macro-voids (larger pores) to micro-voids (tiny pores). Voids diameter impacts soil aeration, water retention, and drainage. Source: Soil Science Society of America (SSSA) Glossary."@en ;
+    skos:broader she:SoilVoid ;
+    skos:definition "The Voids Diameter refers to the size of void spaces in soil, which can range from macro-voids (larger pores) to micro-voids (tiny pores). Voids diameter impacts soil aeration, water retention, and drainage. Source: Soil Science Society of America (SSSA) Glossary."@en ;
     skos:exactMatch glosis_lh:voidsDiameterProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "voids diameter"@en .
@@ -3669,133 +3634,133 @@ she:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-cacl2 a skos:Concept ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-cacl2 ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph-unkn-cacl2"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-lioac a skos:Concept ;
     skos:definition "CEC at unknown buffer, in 0.5 M Li-acetate exchange solution" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-lioac ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph-unkn-lioac"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-m3 a skos:Concept ;
     skos:definition "CEC at unknown buffer, in Mehlich III exchange solution" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-m3 ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph-unkn-m3"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph0-ag-thioura a skos:Concept ;
     skos:definition "CEC unbuffered at pH of the soil, in 0.01 M Ag-thioura exchange solution" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-ag-thioura ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph0-ag-thioura"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph0-bacl2 a skos:Concept ;
     skos:definition "CEC unbuffered at pH o the soil, in 0.5 M BaCl2 exchange solution (0.1.1.0 M)" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-bacl2 ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph0-bacl2"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph0-cohex a skos:Concept ;
     skos:definition "CEC unbuffered at pH of the soil, in Cobalt(III) hexamine chloride solution 0,0166M (Cohex) [Co[NH3]6]Cl3 ), ISO 23470 (2007)  exchange solution" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-cohex ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph0-cohex"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph0-kcl a skos:Concept ;
     skos:definition "CEC unbuffered at pH of the soil, in 1 M KCl exchange solution" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-kcl ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph0-kcl"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4cl a skos:Concept ;
     skos:definition "CEC unbuffered at pH of the soil, in 1 M NH4-chloride exchange solution (0.2-1.0 M)" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4cl ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph0-nh4cl"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4oac a skos:Concept ;
     skos:definition "CEC unbuffered at pH of the soil, in 1 M NH4-acetate (NH4OAc) exchange solution (0.25-1.0 M)" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4oac ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph0-nh4oac"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph0-unkn a skos:Concept ;
     skos:definition "CEC unbuffered at pH of the soil, in unknown exchange solution" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-unkn ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph0-unk"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph7-edta a skos:Concept ;
     skos:definition "CEC buffered at pH 7, in 0.1 M Li-EDTA exchange solution" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph7-edta ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph7-edta"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph7-nh4oac a skos:Concept ;
     skos:definition "CEC buffered at pH 7, in 1 M NH4-acetate (NH4OAc) exchange solution (0.25-1.0 M)" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph7-nh4oac ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph7-nh4oac"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph7-unkn a skos:Concept ;
     skos:definition "CEC buffered at pH 7, in unknown exchange solution" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph7-unkn ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph7-unk"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph8-bacl2tea a skos:Concept ;
     skos:definition "CEC buffered at pH 8.0-8.5, in 0.5 M BaCl2-TEA exchange solution (0.1.1.0 M)" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-bacl2tea ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph8-bacl2tea"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph8-baoac a skos:Concept ;
     skos:definition "CEC buffered at pH 8.0-8.5, in 0.5 M Ba-acetate exchange solution" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-baoac ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph8-baoac"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph8-licl2tea a skos:Concept ;
     skos:definition "CEC buffered at pH 8.0-8.5, in 0.5 M Li-chloride - TEA exchange solution" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-licl2tea ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph8-licl2tea"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph8-naoac a skos:Concept ;
     skos:definition "CEC buffered at pH 8.0-8.5, in 1 M Na-acetate exchange solution" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-naoac ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph8-naoac"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph8-nh4oac a skos:Concept ;
     skos:definition "CEC buffered at pH 8.0-8.5, in 1 M NH4-acetate exchange solution (0.25-1.0 M)" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-nh4oac ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph8-nh4oac"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:cationExchangeCapacitySoilProcedure-CEC_ph8-unkn a skos:Concept ;
     skos:definition "CEC buffered at pH 8.0-8.5, in unknown exchange solution" ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-unkn ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "CEC_ph8-unk"@en ;
-    she:isProcedureOf she:CationExchangeCapacitycSoil .
+    she:isProcedureOf she:CationExchangeCapacitySoil .
 
 she:coarseFragmentsProcedure-CrsFrg_fld a skos:Concept ;
     skos:definition "Particles > 2 mm observed in the field. May include concretions and very hard aggregates" ;
@@ -4807,6 +4772,13 @@ she:SoilCompaction a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil compaction"@en .
 
+she:SoilConsistency a skos:Concept ;
+    skos:broader she:SoilPhysicalProperty ;
+    skos:exactMatch spp:SoilConsistency ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:MoistConsistency ;
+    skos:prefLabel "soil consistency"@en .
+
 she:SoilCracking a skos:Concept ;
     skos:broader she:SoilFailure,
         she:SoilPhysicalProcess ;
@@ -4941,13 +4913,6 @@ she:SoilRelativeDensity a skos:Concept ;
     skos:exactMatch spp:SoilRelativeDensity ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil relative density"@en .
-
-she:SoilSolution a skos:Concept ;
-    skos:broader she:SoilComponent,
-        she:SoilLiquid ;
-    skos:exactMatch spp:SoilSolution ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil solution"@en .
 
 she:SoilStability a skos:Concept ;
     skos:broader she:SoilPhysicalProperty ;
@@ -5188,17 +5153,19 @@ she:Plant a skos:Concept ;
         she:Vegetation ;
     skos:prefLabel "plant"@en .
 
-she:Pores a skos:Concept ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:PoresAbundance,
-        she:PoresSize ;
-    skos:prefLabel "pores"@en .
-
 she:RockOutcrops a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:RockOutcropsCover,
         she:RockOutcropsDistance ;
     skos:prefLabel "rock outcrops"@en .
+
+she:Root a skos:Concept ;
+    skos:broader she:PlantPart ;
+    skos:exactMatch spp:Root ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:RootsAbundance,
+        she:RootsPresence ;
+    skos:prefLabel "root"@en .
 
 she:RootGrowth a skos:Concept ;
     skos:broader she:PlantProcess,
@@ -5207,12 +5174,6 @@ she:RootGrowth a skos:Concept ;
     skos:exactMatch spp:RootGrowth ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "root growth"@en .
-
-she:Roots a skos:Concept ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:RootsAbundance,
-        she:RootsPresence ;
-    skos:prefLabel "roots"@en .
 
 she:SoilAbsorption a skos:Concept ;
     skos:broader she:SoilPhysicalProcess ;
@@ -5392,6 +5353,22 @@ she:SoilSoluteDispersiveTransport a skos:Concept ;
         she:TransverseDispersion ;
     skos:prefLabel "soil solute dispersive transport"@en .
 
+she:SoilSolution a skos:Concept ;
+    skos:broader she:SoilComponent,
+        she:SoilLiquid ;
+    skos:exactMatch spp:SoilSolution ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:SoilSolutionSolute ;
+    skos:prefLabel "soil solution"@en .
+
+she:SoilStructure a skos:Concept ;
+    skos:broader she:SoilPhysicalProperty ;
+    skos:exactMatch spp:SoilStructure ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:StructureGrade,
+        she:StructureSize ;
+    skos:prefLabel "soil structure"@en .
+
 she:SoilSurfaceCharge a skos:Concept ;
     skos:broader she:SoilChargeProperty ;
     skos:exactMatch spp:SoilSurfaceCharge ;
@@ -5431,6 +5408,14 @@ she:SoilVapourPressure a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:SaturatedVapourPressure ;
     skos:prefLabel "soil vapour pressure"@en .
+
+she:SoilVoid a skos:Concept ;
+    skos:broader she:SoilPorePhysicalProperty ;
+    skos:exactMatch spp:SoilVoid ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:VoidsClassification,
+        she:VoidsDiameter ;
+    skos:prefLabel "soil void"@en .
 
 she:SoilWaterFlow a skos:Concept ;
     skos:broader she:SoilWaterMovement ;
@@ -5472,32 +5457,11 @@ she:SoilWetting a skos:Concept ;
         she:SoilSlowWetting ;
     skos:prefLabel "soil wetting"@en .
 
-she:SolubleSalts a skos:Concept ;
-    skos:broader she:Soluble ;
-    skos:definition "Soluble salts refer to dissolved salts in the soil solution, primarily composed of sodium, calcium, magnesium, chloride, and sulfate ions. Excessive soluble salts cause salinity, which can impair plant water uptake and lead to osmotic stress. EC testing helps monitor salinity levels for effective management. Source: Soil Science Society of America."@en ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Solsal ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soluble salts"@en ;
-    she:hasProcedure she:solubleSaltsProcedure-SlbAn_calcul-unkn,
-        she:solubleSaltsProcedure-SlbCat_calcul-unkn .
-
-she:Structure a skos:Concept ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:StructureGrade,
-        she:StructureSize ;
-    skos:prefLabel "structure"@en .
-
 she:Sulfur a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:SulfurExtractableElements,
         she:SulfurTotalElements ;
     skos:prefLabel "sulfur"@en .
-
-she:Texture a skos:Concept ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:TextureFieldClass,
-        she:TextureLabClass ;
-    skos:prefLabel "texture"@en .
 
 she:Vegetation a skos:Concept ;
     skos:broader she:Plant ;
@@ -5506,12 +5470,6 @@ she:Vegetation a skos:Concept ;
     skos:narrower she:Grass,
         she:Tree ;
     skos:prefLabel "vegetation"@en .
-
-she:Voids a skos:Concept ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:VoidsClassification,
-        she:VoidsDiameter ;
-    skos:prefLabel "voids"@en .
 
 she:WasteDisposal a skos:Concept ;
     skos:broader she:SoilEngineeringFunction,
@@ -5560,13 +5518,6 @@ she:AvailableWaterHoldingCapacity a skos:Concept ;
         she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc200wp,
         she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc300wp .
 
-she:Carbon a skos:Concept ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:CarbonInorganic,
-        she:CarbonOrganic,
-        she:CarbonTotal ;
-    skos:prefLabel "carbon"@en .
-
 she:Carbonates a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:CarbonatesContent,
@@ -5581,7 +5532,7 @@ she:CationExchangeCapacity a skos:Concept ;
         glosis_lh:cationExchangeCapacityProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:CationExchangeCapacityEffective,
-        she:CationExchangeCapacitycSoil,
+        she:CationExchangeCapacitySoil,
         she:EffectiveCEC ;
     skos:prefLabel "cation exchange capacity"@en .
 
@@ -5594,13 +5545,6 @@ she:CoarseFragment a skos:Concept ;
     she:hasProcedure she:coarseFragmentsProcedure-CrsFrg_fld,
         she:coarseFragmentsProcedure-CrsFrg_fldcls,
         she:coarseFragmentsProcedure-CrsFrg_lab .
-
-she:Consistency a skos:Concept ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:ConsistenceDry,
-        she:ConsistenceMoist,
-        she:MoistConsistency ;
-    skos:prefLabel "consistency"@en .
 
 she:HumanActivity a skos:Concept ;
     skos:exactMatch spp:HumanActivity ;
@@ -5832,6 +5776,14 @@ she:SoilSolutePhysicalProperty a skos:Concept ;
         she:SoilSoluteFluxDensity ;
     skos:prefLabel "soil solute physical property"@en .
 
+she:SoilSolutionSolute a skos:Concept ;
+    skos:broader she:SoilSolution ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:SolubleAnionsTotal,
+        she:SolubleCationsTotal,
+        she:SolubleSalts ;
+    skos:prefLabel "soil solution solute"@en .
+
 she:SoilStrain a skos:Concept ;
     skos:broader she:SoilDeformation ;
     skos:exactMatch spp:SoilStrain ;
@@ -5894,13 +5846,6 @@ she:SoilWaterMovement a skos:Concept ;
         she:SoilWaterTransmission,
         she:SoilWaterTransport ;
     skos:prefLabel "soil water movement"@en .
-
-she:Soluble a skos:Concept ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SolubleAnionsTotal,
-        she:SolubleCationsTotal,
-        she:SolubleSalts ;
-    skos:prefLabel "soluble"@en .
 
 she:Stress a skos:Concept ;
     skos:broader she:Pressure ;
@@ -6132,6 +6077,17 @@ she:SoilVolumeChange a skos:Concept ;
         she:SoilSwelling ;
     skos:prefLabel "soil volume change"@en .
 
+she:SolubleSalts a skos:Concept ;
+    skos:broader she:Salt,
+        she:SoilSolutionSolute ;
+    skos:definition "Soluble salts refer to dissolved salts in the soil solution, primarily composed of sodium, calcium, magnesium, chloride, and sulfate ions. Excessive soluble salts cause salinity, which can impair plant water uptake and lead to osmotic stress. EC testing helps monitor salinity levels for effective management. Source: Soil Science Society of America."@en ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Solsal ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:SaltContent ;
+    skos:prefLabel "soluble salts"@en ;
+    she:hasProcedure she:solubleSaltsProcedure-SlbAn_calcul-unkn,
+        she:solubleSaltsProcedure-SlbCat_calcul-unkn .
+
 she:Calcium a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:CalciumExchangeableBase,
@@ -6140,15 +6096,6 @@ she:Calcium a skos:Concept ;
         she:CalciumTotalElement,
         she:CalciumTotalElements ;
     skos:prefLabel "calcium"@en .
-
-she:Coating a skos:Concept ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:CoatingAbundance,
-        she:CoatingContrast,
-        she:CoatingForm,
-        she:CoatingLocation,
-        she:CoatingNature ;
-    skos:prefLabel "coating"@en .
 
 she:LivingEntity a skos:Concept ;
     skos:broader she:Substance ;
@@ -6185,14 +6132,14 @@ she:Property a skos:Concept ;
 
 she:Salt a skos:Concept ;
     skos:broader she:Salt ;
-    skos:definition "The Salt Property encompasses all forms of salts present in soil, including sodium chloride, calcium sulfate, and magnesium sulfate. It influences soil chemistry, structure, and plant tolerance to salinity. Source: FAO (2006). Guidelines for Soil Description."@en ;
+    skos:definition "The Salt encompasses all forms of salts present in soil, including sodium chloride, calcium sulfate, and magnesium sulfate. It influences soil chemistry, structure, and plant tolerance to salinity. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:saltProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:Salt,
-        she:SaltContent,
         she:SaltCover,
         she:SaltPresence,
-        she:SaltThickness ;
+        she:SaltThickness,
+        she:SolubleSalts ;
     skos:prefLabel "salt"@en .
 
 she:SoilAggregationIndex a skos:Concept ;
@@ -6216,6 +6163,15 @@ she:SoilAirPhysicalProcess a skos:Concept ;
         she:SoilGaseousEmission,
         she:SoilGaseousExchange ;
     skos:prefLabel "soil air physical process"@en .
+
+she:SoilCoating a skos:Concept ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:CoatingAbundance,
+        she:CoatingContrast,
+        she:CoatingForm,
+        she:CoatingLocation,
+        she:CoatingNature ;
+    skos:prefLabel "soil coating"@en .
 
 she:SoilEnvironmentalFunction a skos:Concept ;
     skos:broader she:SoilFunction ;
@@ -6310,16 +6266,6 @@ she:pHProcedure-pHKCl a skos:Concept ;
     skos:prefLabel "pHKCl"@en ;
     she:isProcedureOf she:SoilpH .
 
-she:Mottles a skos:Concept ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:MottlesAbundance,
-        she:MottlesBoundaryClassification,
-        she:MottlesColour,
-        she:MottlesContrast,
-        she:MottlesPresence,
-        she:MottlesSize ;
-    skos:prefLabel "mottles"@en .
-
 she:PlantProcess a skos:Concept ;
     skos:broader she:Process ;
     skos:exactMatch spp:PlantProcess ;
@@ -6393,6 +6339,16 @@ she:SoilMoisturePotential a skos:Concept ;
         she:SoilPressurePotential,
         she:TotalSoilMoisturePotential ;
     skos:prefLabel "soil moisture potential"@en .
+
+she:SoilMottle a skos:Concept ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:MottlesAbundance,
+        she:MottlesBoundaryClassification,
+        she:MottlesColour,
+        she:MottlesContrast,
+        she:MottlesPresence,
+        she:MottlesSize ;
+    skos:prefLabel "soil mottle"@en .
 
 she:SoilSoluteTransport a skos:Concept ;
     skos:exactMatch spp:SoilSoluteTransport ;
@@ -6652,19 +6608,6 @@ she:SoilBiologicalProcess a skos:Concept ;
         she:SoilOxygenConsumption ;
     skos:prefLabel "soil biological process"@en .
 
-she:SoilConsistence a skos:Concept ;
-    skos:broader she:SoilPhysicalProperty ;
-    skos:exactMatch spp:SoilConsistence ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:DryConsistency,
-        she:FriableConsistence,
-        she:HarshConsistence,
-        she:LiquidConsistence,
-        she:PlasticConsistence,
-        she:SoftConsistence,
-        she:StickyConsistence ;
-    skos:prefLabel "soil consistence"@en .
-
 she:SoilDensity a skos:Concept ;
     skos:broader she:SoilPhysicalProperty ;
     skos:exactMatch spp:SoilDensity ;
@@ -6720,7 +6663,7 @@ she:BulkDensityWholeSoil a skos:Concept ;
         she:bulkDensityWholeSoilProcedure-BlkDensW_we-rpl-unkn,
         she:bulkDensityWholeSoilProcedure-BlkDensW_we-unkn .
 
-she:MineralConcretions a skos:Concept ;
+she:MineralConcentration a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:MineralConcAbundance,
         she:MineralConcColour,
@@ -6730,7 +6673,7 @@ she:MineralConcretions a skos:Concept ;
         she:MineralConcShape,
         she:MineralConcSize,
         she:MineralConcVolume ;
-    skos:prefLabel "mineral concretions"@en .
+    skos:prefLabel "mineral concentration"@en .
 
 she:PlanetaryPhenomena a skos:Concept ;
     skos:broader she:Phenomena ;
@@ -6830,6 +6773,21 @@ she:MoistureContent a skos:Concept ;
         she:moistureContentProcedure-VMC_ud,
         she:moistureContentProcedure-VMC_ud-cl,
         she:moistureContentProcedure-VMC_ud-co .
+
+she:SoilConsistence a skos:Concept ;
+    skos:broader she:SoilPhysicalProperty ;
+    skos:exactMatch spp:SoilConsistence ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:ConsistenceDry,
+        she:ConsistenceMoist,
+        she:DryConsistency,
+        she:FriableConsistence,
+        she:HarshConsistence,
+        she:LiquidConsistence,
+        she:PlasticConsistence,
+        she:SoftConsistence,
+        she:StickyConsistence ;
+    skos:prefLabel "soil consistence"@en .
 
 she:SoilManagement a skos:Concept ;
     skos:broader she:HumanActivity ;
@@ -7188,25 +7146,6 @@ she:SoilAgriculturalFunction a skos:Concept ;
         she:SoilRespiration,
         she:SoilWaterAvailability ;
     skos:prefLabel "soil agricultural function"@en .
-
-she:SoilPore a skos:Concept ;
-    skos:broader she:SoilSubstance ;
-    skos:exactMatch spp:SoilPore ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:Biochannel,
-        she:InteraggregatePore,
-        she:InterstructuralPore,
-        she:IntraaggregatePore,
-        she:MatrixPore,
-        she:NonMatrixPore,
-        she:SoilChannel,
-        she:SoilMacropore,
-        she:SoilMesopore,
-        she:SoilMicropore,
-        she:SoilPreferentialFlowPath,
-        she:StructuralPore,
-        she:TexturalPore ;
-    skos:prefLabel "soil pore"@en .
 
 she:extractableElementsProcedure-Extr_ap14 a skos:Concept ;
     skos:definition "Method of Saunders and Metelerkamp (anion-exch. resin). Particularly used for available P." ;
@@ -8149,6 +8088,27 @@ she:SoilComponent a skos:Concept ;
         she:SoilWater ;
     skos:prefLabel "soil component"@en .
 
+she:SoilPore a skos:Concept ;
+    skos:broader she:SoilSubstance ;
+    skos:exactMatch spp:SoilPore ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:Biochannel,
+        she:InteraggregatePore,
+        she:InterstructuralPore,
+        she:IntraaggregatePore,
+        she:MatrixPore,
+        she:NonMatrixPore,
+        she:PoresAbundance,
+        she:PoresSize,
+        she:SoilChannel,
+        she:SoilMacropore,
+        she:SoilMesopore,
+        she:SoilMicropore,
+        she:SoilPreferentialFlowPath,
+        she:StructuralPore,
+        she:TexturalPore ;
+    skos:prefLabel "soil pore"@en .
+
 she:AluminiumTotalElement a skos:Concept ;
     skos:broader she:Aluminium ;
     skos:definition "Total concentration of aluminium in the soil, including both soluble and insoluble forms, typically measured after complete digestion of the soil sample."@en ;
@@ -8253,12 +8213,12 @@ she:CalciumTotalElements a skos:Concept ;
         she:totalElementsProcedure-Total_xrf-p,
         she:totalElementsProcedure-Total_xtf-t .
 
-she:CationExchangeCapacitycSoil a skos:Concept ;
+she:CationExchangeCapacitySoil a skos:Concept ;
     skos:broader she:CationExchangeCapacity ;
     skos:definition "CEC measures the soil’s ability to hold and exchange positively charged ions (cations). It is a critical indicator of soil fertility, as higher CEC values imply greater capacity to retain essential nutrients like calcium, magnesium, and potassium. Clayey and organic-rich soils typically exhibit higher CEC. Source: Soil Science Society of America."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-CEC ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "cation exchange capacityc soil"@en ;
+    skos:prefLabel "cation exchange capacity soil"@en ;
     she:hasProcedure she:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-cacl2,
         she:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-lioac,
         she:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-m3,
@@ -9168,11 +9128,8 @@ she:SoilPhysicalProperty a skos:Concept ;
         she:Boron,
         she:Cadmium,
         she:Calcium,
-        she:Carbon,
         she:Carbonates,
         she:Cementation,
-        she:Coating,
-        she:Consistency,
         she:Copper,
         she:CropClass,
         she:Fragment,
@@ -9191,11 +9148,10 @@ she:SoilPhysicalProperty a skos:Concept ;
         she:Magnesium,
         she:MajorLandForm,
         she:Manganese,
-        she:MineralConcretions,
+        she:MineralConcentration,
         she:MineralParticle,
         she:MoistureContent,
         she:Molybdenum,
-        she:Mottles,
         she:NitrogenTotal,
         she:OxalateExtractableOpticalDensity,
         she:ParentMaterial,
@@ -9203,13 +9159,12 @@ she:SoilPhysicalProperty a skos:Concept ;
         she:Phenomena,
         she:Phosphorus,
         she:Physiography,
-        she:Pores,
+        she:PorosityClass,
         she:Potassium,
         she:Process,
         she:ProfileDescriptionStatus,
         she:Property,
         she:RockOutcrops,
-        she:Roots,
         she:Slope,
         she:SlopeGradientClass,
         she:SlopeOrientationClass,
@@ -9217,11 +9172,13 @@ she:SoilPhysicalProperty a skos:Concept ;
         she:SoilAge,
         she:SoilBiology,
         she:SoilClassification,
+        she:SoilCoating,
         she:SoilDepthRootableClass,
         she:SoilFluidRetention,
         she:SoilFluidTransport,
         she:SoilFunction,
         she:SoilHorizonBoundary,
+        she:SoilMottle,
         she:SoilNutrientRetention,
         she:SoilOrganicMatterClass,
         she:SoilParticleMovement,
@@ -9233,15 +9190,13 @@ she:SoilPhysicalProperty a skos:Concept ;
         she:SoilWaterAdsorption,
         she:SoilWaterInfiltrationRateClass,
         she:SoilWaterRetention,
-        she:Soluble,
         she:Stickiness,
-        she:Structure,
         she:Substance,
         she:Sulfur,
-        she:Texture,
+        she:TextureFieldClass,
+        she:TextureLabClass,
         she:TotalCarbonateEquivalent,
         she:VegetationClass,
-        she:Voids,
         she:WaterPressure,
         she:Zinc .
 
