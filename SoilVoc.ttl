@@ -390,7 +390,7 @@ she:DrainageToGroundwater a skos:Concept ;
     skos:prefLabel "drainage to groundwater"@en .
 
 she:DryConsistency a skos:Concept ;
-    skos:broader she:SoilConsistence ;
+    skos:broader she:SoilConsistency ;
     skos:definition "The Dry Consistency is synonymous with the Consistence Dry Property, focusing on the soil's resistance to breaking apart or deforming when dry. It indicates the soil's mechanical strength and susceptibility to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:dryConsistencyProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -4649,13 +4649,6 @@ she:SoilCompaction a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil compaction"@en .
 
-she:SoilConsistency a skos:Concept ;
-    skos:broader she:SoilPhysicalProperty ;
-    skos:exactMatch spp:SoilConsistency ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:MoistConsistency ;
-    skos:prefLabel "soil consistency"@en .
-
 she:SoilCracking a skos:Concept ;
     skos:broader she:SoilFailure,
         she:SoilPhysicalProcess ;
@@ -4920,6 +4913,7 @@ she:WaterQuality a skos:Concept ;
     skos:prefLabel "water quality"@en .
 
 she:BaseSaturation a skos:Concept ;
+    skos:broader she:SoilChemicalProperty ;
     skos:definition "Base saturation represents the percentage of the soil's cation exchange capacity (CEC) occupied by basic cations such as calcium (Ca²⁺), magnesium (Mg²⁺), potassium (K⁺), and sodium (Na⁺). Higher base saturation typically correlates with higher fertility and a greater ability to supply essential nutrients to plants. This parameter also influences soil pH buffering capacity. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Bascal ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -4936,6 +4930,7 @@ she:Biomass a skos:Concept ;
     skos:prefLabel "biomass"@en .
 
 she:Boron a skos:Concept ;
+    skos:broader she:MicroNutrients ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:BoronExtractableElement,
         she:BoronTotalElement ;
@@ -4950,6 +4945,7 @@ she:ChemicalSubstance a skos:Concept ;
     skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:Copper a skos:Concept ;
+    skos:broader she:MicroNutrients ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:CopperExtractableElements,
         she:CopperTotalElements ;
@@ -4981,6 +4977,7 @@ she:Flood a skos:Concept ;
     skos:prefLabel "flood"@en .
 
 she:Iron a skos:Concept ;
+    skos:broader she:MicroNutrients ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:IronExtractableElements,
         she:IronTotalElements ;
@@ -4993,10 +4990,17 @@ she:MineralParticle a skos:Concept ;
     skos:prefLabel "mineral particle"@en .
 
 she:Molybdenum a skos:Concept ;
+    skos:broader she:MicroNutrients ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:MolybdenumExtractableElements,
         she:MolybdenumTotalElements ;
     skos:prefLabel "molybdenum"@en .
+
+she:Nitrogen a skos:Concept ;
+    skos:broader she:MacroNutrients ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:NitrogenTotal ;
+    skos:prefLabel "nitrogen"@en .
 
 she:NonconservativeSolute a skos:Concept ;
     skos:broader she:SoilSolute ;
@@ -5090,6 +5094,14 @@ she:SoilColour a skos:Concept ;
     skos:narrower she:SoilColourDry,
         she:SoilColourMoist ;
     skos:prefLabel "soil colour"@en .
+
+she:SoilConsistency a skos:Concept ;
+    skos:broader she:SoilPhysicalProperty ;
+    skos:exactMatch spp:SoilConsistency ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:DryConsistency,
+        she:MoistConsistency ;
+    skos:prefLabel "soil consistency"@en .
 
 she:SoilCrackingPhysicalProperty a skos:Concept ;
     skos:broader she:SoilPhysicalProperty ;
@@ -5328,10 +5340,17 @@ she:SoilWetting a skos:Concept ;
     skos:prefLabel "soil wetting"@en .
 
 she:Sulfur a skos:Concept ;
+    skos:broader she:MacroNutrients ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:SulfurExtractableElements,
         she:SulfurTotalElements ;
     skos:prefLabel "sulfur"@en .
+
+she:ToxicElement a skos:Concept ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:Aluminium,
+        she:Cadmium ;
+    skos:prefLabel "toxic element"@en .
 
 she:Vegetation a skos:Concept ;
     skos:broader she:Plant ;
@@ -5358,12 +5377,14 @@ she:Weather a skos:Concept ;
     skos:prefLabel "weather"@en .
 
 she:Zinc a skos:Concept ;
+    skos:broader she:MicroNutrients ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:ZincExtractableElements,
         she:ZincTotalElements ;
     skos:prefLabel "zinc"@en .
 
 she:Aluminium a skos:Concept ;
+    skos:broader she:ToxicElement ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:AluminiumExchangeableBase,
         she:AluminiumExtractableElement,
@@ -5418,6 +5439,7 @@ she:LandCover a skos:Concept ;
     skos:prefLabel "land cover"@en .
 
 she:Magnesium a skos:Concept ;
+    skos:broader she:MicroNutrients ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:MagnesiumExchangeableBases,
         she:MagnesiumExtractableElements,
@@ -5425,6 +5447,7 @@ she:Magnesium a skos:Concept ;
     skos:prefLabel "magnesium"@en .
 
 she:Manganese a skos:Concept ;
+    skos:broader she:MicroNutrients ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:ManganeseExchangeableBases,
         she:ManganeseExtractableElements,
@@ -5446,6 +5469,7 @@ she:Peat a skos:Concept ;
     skos:prefLabel "peat"@en .
 
 she:Phosphorus a skos:Concept ;
+    skos:broader she:MacroNutrients ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:PhosphorusExtractableElements,
         she:PhosphorusRetention,
@@ -5453,6 +5477,7 @@ she:Phosphorus a skos:Concept ;
     skos:prefLabel "phosphorus"@en .
 
 she:Potassium a skos:Concept ;
+    skos:broader she:MacroNutrients ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:PotassiumExchangeableBases,
         she:PotassiumExtractableElements,
@@ -5721,6 +5746,7 @@ she:Animal a skos:Concept ;
     skos:prefLabel "animal"@en .
 
 she:Cadmium a skos:Concept ;
+    skos:broader she:ToxicElement ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:CadmiumExtractableElement,
         she:CadmiumExtractableElements,
@@ -5903,6 +5929,7 @@ she:SolubleSalts a skos:Concept ;
         she:solubleSaltsProcedure-SlbCat_calcul-unkn .
 
 she:Calcium a skos:Concept ;
+    skos:broader she:MacroNutrients ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:CalciumExchangeableBase,
         she:CalciumExtractableElement,
@@ -5921,6 +5948,15 @@ she:LivingEntity a skos:Concept ;
         she:PlantPart ;
     skos:prefLabel "living entity"@en ;
     skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
+
+she:MacroNutrients a skos:Concept ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:Calcium,
+        she:Nitrogen,
+        she:Phosphorus,
+        she:Potassium,
+        she:Sulfur ;
+    skos:prefLabel "macro nutrient"@en .
 
 she:Pressure a skos:Concept ;
     skos:broader she:Force ;
@@ -6093,18 +6129,6 @@ she:SoilBulkDensity a skos:Concept ;
         she:DrySoilBulkDensity,
         she:WetSoilBulkDensity ;
     skos:prefLabel "soil bulk density"@en .
-
-she:SoilChemicalProperty a skos:Concept ;
-    skos:broader she:SoilProperty ;
-    skos:exactMatch spp:SoilChemicalProperty ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SoilChargeProperty,
-        she:SoilChemicalCapacity,
-        she:SoilReactivity,
-        she:SoilRedoxPotential,
-        she:SoilSalinity,
-        she:SoilpH ;
-    skos:prefLabel "soil chemical property"@en .
 
 she:SoilElectricalConductivity a skos:Concept ;
     skos:broader she:SoilPhysicalProperty ;
@@ -6362,6 +6386,17 @@ she:Force a skos:Concept ;
     skos:prefLabel "force"@en ;
     skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
+she:MicroNutrients a skos:Concept ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:Boron,
+        she:Copper,
+        she:Iron,
+        she:Magnesium,
+        she:Manganese,
+        she:Molybdenum,
+        she:Zinc ;
+    skos:prefLabel "micro nutrient"@en .
+
 she:SoilAggregatePhysicalProperty a skos:Concept ;
     skos:broader she:SoilPhysicalProperty ;
     skos:exactMatch spp:SoilAggregatePhysicalProperty ;
@@ -6387,6 +6422,19 @@ she:SoilBiologicalProcess a skos:Concept ;
         she:SoilMicrobialActivity,
         she:SoilOxygenConsumption ;
     skos:prefLabel "soil biological process"@en .
+
+she:SoilChemicalProperty a skos:Concept ;
+    skos:broader she:SoilProperty ;
+    skos:exactMatch spp:SoilChemicalProperty ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:BaseSaturation,
+        she:SoilChargeProperty,
+        she:SoilChemicalCapacity,
+        she:SoilReactivity,
+        she:SoilRedoxPotential,
+        she:SoilSalinity,
+        she:SoilpH ;
+    skos:prefLabel "soil chemical property"@en .
 
 she:SoilDensity a skos:Concept ;
     skos:broader she:SoilPhysicalProperty ;
@@ -6483,6 +6531,20 @@ she:SoilChemicalDegradativeProcess a skos:Concept ;
         she:SoilSurfaceSealing ;
     skos:prefLabel "soil chemical degradative process"@en .
 
+she:SoilConsistence a skos:Concept ;
+    skos:broader she:SoilPhysicalProperty ;
+    skos:exactMatch spp:SoilConsistence ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:ConsistenceDry,
+        she:ConsistenceMoist,
+        she:FriableConsistence,
+        she:HarshConsistence,
+        she:LiquidConsistence,
+        she:PlasticConsistence,
+        she:SoftConsistence,
+        she:StickyConsistence ;
+    skos:prefLabel "soil consistence"@en .
+
 she:SoilMoistureContent a skos:Concept ;
     skos:broader she:SoilWaterPhysicalProperty ;
     skos:exactMatch spp:SoilMoistureContent ;
@@ -6553,21 +6615,6 @@ she:MoistureContent a skos:Concept ;
         she:moistureContentProcedure-VMC_ud,
         she:moistureContentProcedure-VMC_ud-cl,
         she:moistureContentProcedure-VMC_ud-co .
-
-she:SoilConsistence a skos:Concept ;
-    skos:broader she:SoilPhysicalProperty ;
-    skos:exactMatch spp:SoilConsistence ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:ConsistenceDry,
-        she:ConsistenceMoist,
-        she:DryConsistency,
-        she:FriableConsistence,
-        she:HarshConsistence,
-        she:LiquidConsistence,
-        she:PlasticConsistence,
-        she:SoftConsistence,
-        she:StickyConsistence ;
-    skos:prefLabel "soil consistence"@en .
 
 she:SoilManagement a skos:Concept ;
     skos:exactMatch spp:SoilManagement ;
@@ -6787,10 +6834,12 @@ she:ManganeseExchangeableBases a skos:Concept ;
         she:exchangeableBasesProcedure-ExchBases_ph8-unkn .
 
 she:NitrogenTotal a skos:Concept ;
+    skos:broader she:Nitrogen ;
     skos:definition "Total nitrogen encompasses all nitrogen forms in soil, including organic nitrogen in humus and inorganic nitrogen such as ammonium (NH₄⁺) and nitrate (NO₃⁻). Nitrogen is essential for plant growth, being a vital component of amino acids, proteins, and chlorophyll. Total nitrogen is a key indicator of soil fertility and its capacity to sustain long-term crop productivity. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Nittot ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "nitrogen total"@en ;
+    she:broader she:Nitrogen ;
     she:hasProcedure she:nitrogenTotalProcedure-TotalN_bremner,
         she:nitrogenTotalProcedure-TotalN_calcul,
         she:nitrogenTotalProcedure-TotalN_calcul-oc10,
@@ -8903,15 +8952,9 @@ she:SoilPhysicalProperty a skos:Concept ;
     skos:prefLabel "soil physical property"@en .
 
 <https://soilwise-he.github.io/soil-health> a skos:ConceptScheme ;
-    skos:hasTopConcept she:Aluminium,
-        she:BaseSaturation,
-        she:Boron,
-        she:Cadmium,
-        she:Calcium,
-        she:Carbonates,
+    skos:hasTopConcept she:Carbonates,
         she:Cementation,
         she:ChemicalSubstance,
-        she:Copper,
         she:CropClass,
         she:Force,
         she:Fragment,
@@ -8921,31 +8964,26 @@ she:SoilPhysicalProperty a skos:Concept ;
         she:Gypsum,
         she:HumanInfluenceClass,
         she:HydrogenExchangeableBases,
-        she:Iron,
         she:KoeppenClass,
         she:LandUse,
         she:LandUseClass,
         she:LandformComplex,
         she:Lithology,
         she:LivingEntity,
-        she:Magnesium,
+        she:MacroNutrients,
         she:MajorLandForm,
-        she:Manganese,
         she:MaterialThing,
+        she:MicroNutrients,
         she:MineralConcentration,
         she:MineralParticle,
         she:MoistureContent,
-        she:Molybdenum,
-        she:NitrogenTotal,
         she:OxalateExtractableOpticalDensity,
         she:ParentMaterial,
         she:Peat,
-        she:Phosphorus,
         she:Physiography,
         she:PlanetaryPhenomena,
         she:PlantProcess,
         she:PorosityClass,
-        she:Potassium,
         she:ProfileDescriptionStatus,
         she:RockOutcrops,
         she:Slope,
@@ -8979,10 +9017,9 @@ she:SoilPhysicalProperty a skos:Concept ;
         she:SoilWaterInfiltrationRateClass,
         she:SoilWaterRetention,
         she:Stickiness,
-        she:Sulfur,
         she:TextureFieldClass,
         she:TextureLabClass,
         she:TotalCarbonateEquivalent,
-        she:VegetationClass,
-        she:Zinc .
+        she:ToxicElement,
+        she:VegetationClass .
 

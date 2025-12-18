@@ -27,6 +27,7 @@ she:AvailableWaterHoldingCapacity a skos:Concept ;
         she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc300wp .
 
 she:BaseSaturation a skos:Concept ;
+    skos:broader she:SoilChemicalProperty ;
     skos:definition "Base saturation represents the percentage of the soil's cation exchange capacity (CEC) occupied by basic cations such as calcium (Ca²⁺), magnesium (Mg²⁺), potassium (K⁺), and sodium (Na⁺). Higher base saturation typically correlates with higher fertility and a greater ability to supply essential nutrients to plants. This parameter also influences soil pH buffering capacity. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Bascal ;
     skos:prefLabel "base saturation"@en ;
@@ -49,7 +50,7 @@ she:CoarseFragment a skos:Concept ;
         she:coarseFragmentsProcedure-CrsFrg_lab .
 
 she:DryConsistency a skos:Concept ;
-    skos:broader she:SoilConsistence ;
+    skos:broader she:SoilConsistency ;
     skos:definition "The Dry Consistency is synonymous with the Consistence Dry Property, focusing on the soil's resistance to breaking apart or deforming when dry. It indicates the soil's mechanical strength and susceptibility to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:dryConsistencyProperty ;
     skos:prefLabel "dry consistency"@en .
@@ -138,6 +139,7 @@ she:MoistureContent a skos:Concept ;
         she:moistureContentProcedure-VMC_ud-co .
 
 she:NitrogenTotal a skos:Concept ;
+    she:broader she:Nitrogen ;
     skos:definition "Total nitrogen encompasses all nitrogen forms in soil, including organic nitrogen in humus and inorganic nitrogen such as ammonium (NH₄⁺) and nitrate (NO₃⁻). Nitrogen is essential for plant growth, being a vital component of amino acids, proteins, and chlorophyll. Total nitrogen is a key indicator of soil fertility and its capacity to sustain long-term crop productivity. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Nittot ;
     skos:prefLabel "nitrogen total"@en ;
@@ -152,6 +154,10 @@ she:NitrogenTotal a skos:Concept ;
         she:nitrogenTotalProcedure-TotalN_tn04,
         she:nitrogenTotalProcedure-TotalN_tn06,
         she:nitrogenTotalProcedure-TotalN_tn08 .
+
+she:Nitrogen a skos:Concept ;
+    skos:prefLabel "nitrogen"@en ;
+    skos:narrower she:NitrogenTotal .
 
 she:SoilOrganicMatter a skos:Concept ;
     skos:definition "Soil organic matter is composed of decomposed plant and animal residues, living soil organisms, and humus. It improves soil structure, water retention, nutrient supply, and microbial activity, making it critical for sustainable agriculture and soil health. Source: Brady & Weil (2017)."@en ;
@@ -2638,10 +2644,6 @@ she:Calcium a skos:Concept ;
         she:CalciumTotalElement ;
     skos:prefLabel "calcium"@en .
 
-she:SoilConsistency a skos:Concept ;
-    skos:narrower she:MoistConsistency ;
-    skos:prefLabel "soil consistency"@en .
-
 she:Gypsum a skos:Concept ;
     skos:definition "The gypsum content, expressed as weight, refers to the soil’s calcium sulfate levels. Gypsum improves soil structure, alleviates sodicity, and enhances water infiltration. It is commonly applied to saline-sodic soils for reclamation. Source: FAO Soil Bulletin."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Gyp ;
@@ -3082,3 +3084,25 @@ she:totalElementsProcedure-Total_xtf-t a skos:Concept ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_xtf-t ;
     skos:prefLabel "Total_xtf-t"@en .
 
+she:MicroNutrients a skos:Concept ;
+    skos:narrower she:Boron,
+        she:Copper,
+        she:Iron,
+        she:Molybdenum,
+        she:Magnesium,
+        she:Manganese,
+        she:Zinc ;
+    skos:prefLabel "micro nutrient"@en .
+
+she:MacroNutrients a skos:Concept ;
+    skos:narrower she:Calcium,
+        she:Phosphorus,
+        she:Nitrogen,
+        she:Potassium,
+        she:Sulfur ;
+    skos:prefLabel "macro nutrient"@en .
+
+she:ToxicElement a skos:Concept ;
+    skos:narrower she:Cadmium,
+        she:Aluminium ;
+    skos:prefLabel "toxic element"@en .
