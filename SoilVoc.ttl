@@ -160,10 +160,6 @@ she:CEC a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "c e c"@en .
 
-she:CadmiumExtractableElements skos:broader she:Cadmium .
-
-she:CadmiumTotalElements skos:broader she:Cadmium .
-
 she:CalciumExtractableElement skos:broader she:Calcium .
 
 she:CalciumTotalElement skos:broader she:Calcium .
@@ -4936,6 +4932,13 @@ she:Boron a skos:Concept ;
         she:BoronTotalElement ;
     skos:prefLabel "boron"@en .
 
+she:Cadmium a skos:Concept ;
+    skos:broader she:ToxicElement ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:CadmiumExtractableElement,
+        she:CadmiumTotalElement ;
+    skos:prefLabel "cadmium"@en .
+
 she:ChemicalSubstance a skos:Concept ;
     skos:exactMatch spp:ChemicalSubstance ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -5744,15 +5747,6 @@ she:Animal a skos:Concept ;
         she:SoilAnimal,
         she:Worm ;
     skos:prefLabel "animal"@en .
-
-she:Cadmium a skos:Concept ;
-    skos:broader she:ToxicElement ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:CadmiumExtractableElement,
-        she:CadmiumExtractableElements,
-        she:CadmiumTotalElement,
-        she:CadmiumTotalElements ;
-    skos:prefLabel "cadmium"@en .
 
 she:Cementation a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;

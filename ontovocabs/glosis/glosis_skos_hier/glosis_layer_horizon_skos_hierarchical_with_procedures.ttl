@@ -2570,8 +2570,8 @@ she:SoilHorizonBoundary a skos:Concept ;
     skos:prefLabel "soil horizon boundary"@en .
 
 she:Cadmium a skos:Concept ;
-    skos:narrower she:CadmiumExtractableElements,
-        she:CadmiumTotalElements ;
+    skos:narrower she:CadmiumExtractableElement,
+        she:CadmiumTotalElement ;
     skos:prefLabel "cadmium"@en .
 
 she:Carbonates a skos:Concept ;
