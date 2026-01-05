@@ -65,7 +65,8 @@ she:SoilSurfaceAge a skos:Concept ;
 
 she:SoilAge a skos:Concept ;
     skos:narrower she:SoilSurfaceAge ;
-    skos:prefLabel "soil age"@en .
+    skos:prefLabel "soil age"@en ;
+    skos:altLabel "age of soil"@en .
 
 she:TreeDensity a skos:Concept ;
     skos:broader she:Tree ;

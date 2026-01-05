@@ -4571,6 +4571,7 @@ she:SoilAeration a skos:Concept ;
     skos:prefLabel "soil aeration"@en .
 
 she:SoilAge a skos:Concept ;
+    skos:altLabel "age of soil"@en ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:SoilSurfaceAge ;
     skos:prefLabel "soil age"@en .
