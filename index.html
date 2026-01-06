@@ -490,8 +490,8 @@
   "scheme_label": "soil-health",
   "top_concepts": [
     {
-      "uri": "https://soilwise-he.github.io/soil-health#Carbonates",
-      "label": "carbonates",
+      "uri": "https://soilwise-he.github.io/soil-health#Carbonate",
+      "label": "carbonate",
       "altLabel": null,
       "notation": null,
       "definition": null,
@@ -500,11 +500,11 @@
       "procedures": [],
       "narrower": [
         {
-          "uri": "https://soilwise-he.github.io/soil-health#CarbonatesContent",
-          "label": "carbonates content",
+          "uri": "https://soilwise-he.github.io/soil-health#CarbonateContent",
+          "label": "carbonate content",
           "altLabel": null,
           "notation": null,
-          "definition": "The Carbonates Content quantifies the concentration of carbonate minerals (e.g., CaCO\u2083, MgCO\u2083) in soil. These compounds influence soil pH, fertility, and structure, and are prevalent in calcareous soils. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils.",
+          "definition": "The Carbonate Content quantifies the concentration of carbonate minerals (e.g., CaCO\u2083, MgCO\u2083) in soil. These compounds influence soil pH, fertility, and structure, and are prevalent in calcareous soils. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils.",
           "exactMatch": [
             {
               "uri": "http://w3id.org/glosis/model/layerhorizon/carbonatesContentProperty",
@@ -516,11 +516,11 @@
           "narrower": []
         },
         {
-          "uri": "https://soilwise-he.github.io/soil-health#CarbonatesForm",
-          "label": "carbonates form",
+          "uri": "https://soilwise-he.github.io/soil-health#CarbonateForm",
+          "label": "carbonate form",
           "altLabel": null,
           "notation": null,
-          "definition": "The Carbonates Forms describes the types of carbonate minerals present in soil, such as calcite, dolomite, or aragonite. These forms impact soil chemistry, fertility, and physical characteristics differently depending on their composition and solubility. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.",
+          "definition": "The Carbonate Form describes the types of carbonate minerals present in soil, such as calcite, dolomite, or aragonite. These forms impact soil chemistry, fertility, and physical characteristics differently depending on their composition and solubility. Source: Sparks, D.L. (2003). Environmental Soil Chemistry.",
           "exactMatch": [
             {
               "uri": "http://w3id.org/glosis/model/layerhorizon/carbonatesFormsProperty",
@@ -532,14 +532,468 @@
           "narrower": []
         },
         {
-          "uri": "https://soilwise-he.github.io/soil-health#CarbonatesForms",
-          "label": "CarbonatesForms",
+          "uri": "https://soilwise-he.github.io/soil-health#TotalCarbonateEquivalent",
+          "label": "total carbonate equivalent",
           "altLabel": null,
           "notation": null,
-          "definition": null,
-          "exactMatch": [],
+          "definition": "The total calcium carbonate equivalent measures the full capacity of soil to neutralize acidity, considering all forms of carbonate and bicarbonate minerals. It is essential for managing soil pH and nutrient availability in acidic soils. Source: FAO Soil Bulletin.",
+          "exactMatch": [
+            {
+              "uri": "http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Ccetot",
+              "label": "physioChemicalPropertyCode-Ccetot"
+            }
+          ],
           "isProcedure": false,
-          "procedures": [],
+          "procedures": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc",
+              "label": "CaCO3_acid-ch3cooh-dc",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Dissolution of carbonates by Acetic acid [CH3COOH], external heat (dry combustion)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-nodc",
+              "label": "CaCO3_acid-ch3cooh-nodc",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Dissolution of carbonates by Acetic acid [CH3COOH], no external (no dry combustion)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-nodc",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-nodc"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-unkn",
+              "label": "CaCO3_acid-ch3cooh-unk",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Dissolution of carbonates by Acetic acid [CH3COOH], external heat unknown",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-unkn",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-unkn"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-dc",
+              "label": "CaCO3_acid-dc",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Dissolution of carbonates by acid, external heat (dry combustion)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-dc",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-dc"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-dc",
+              "label": "CaCO3_acid-h2so4-dc",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Dissolution of carbonates by Sulfuric acid [H2SO4], external heat (dry combustion)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-dc",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-dc"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-nodc",
+              "label": "CaCO3_acid-h2so4-nodc",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Dissolution of carbonates by Sulfuric acid [H2SO4], no external (no dry combustion)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-nodc",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-nodc"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-unkn",
+              "label": "CaCO3_acid-h2so4-unk",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Dissolution of carbonates by Sulfuric acid [H2SO4], external heat unknown",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-unkn",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-unkn"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-dc",
+              "label": "CaCO3_acid-h3po4-dc",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Dissolution of carbonates by Phosphoric acid [H3PO4], external heat (dry combustion)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-dc",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-dc"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-nodc",
+              "label": "CaCO3_acid-h3po4-nodc",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Dissolution of carbonates by Phosphoric acid [H3PO4], no external (no dry combustion)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-nodc",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-nodc"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-unkn",
+              "label": "CaCO3_acid-h3po4-unk",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Dissolution of carbonates by Phosphoric acid [H3PO4], external heat unknown",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-unkn",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-unkn"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-dc",
+              "label": "CaCO3_acid-hcl-dc",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Dissolution of carbonates by Hydrochloric acid [HCl], or Perchloric acid [HClO4], external heat (dry combustion)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-dc",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-dc"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-nodc",
+              "label": "CaCO3_acid-hcl-nodc",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Dissolution of carbonates by Hydrochloric acid [HCl], or Perchloric acid [HClO4], no external (no dry combustion)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-nodc",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-nodc"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-unkn",
+              "label": "CaCO3_acid-hcl-unk",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Dissolution of carbonates by Hydrochloric acid [HCl], or Perchloric acid [HClO4], external heat unknown",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-unkn",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-unkn"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-nodc",
+              "label": "CaCO3_acid-nodc",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Dissolution of carbonates by acid, no external (no dry combustion)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-nodc",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-nodc"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-unkn",
+              "label": "CaCO3_acid-unk",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Dissolution of carbonates by acid, external heat unknown",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-unkn",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-unkn"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca01",
+              "label": "CaCO3_ca01",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Method of Scheibler (volumetric)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca01",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_ca01"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca02",
+              "label": "CaCO3_ca02",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Method of Wesemael",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca02",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_ca02"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca03",
+              "label": "CaCO3_ca03",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Method of Piper (HCl)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca03",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_ca03"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca04",
+              "label": "CaCO3_ca04",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Calcimeter method (volumetric after adition of dilute acid)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca04",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_ca04"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca05",
+              "label": "CaCO3_ca05",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Gravimetric (USDA Agr. Hdbk 60-/- method Richards et al., 1954)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca05",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_ca05"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca06",
+              "label": "CaCO3_ca06",
+              "altLabel": null,
+              "notation": null,
+              "definition": "H3PO4 acid at 80C, conductometric in NaOH (Schlichting & Blume, 1966)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca06",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_ca06"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca07",
+              "label": "CaCO3_ca07",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Pressure calcimeter (Nelson, 1982)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca07",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_ca07"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca08",
+              "label": "CaCO3_ca08",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Bernard calcimeter (Total CaCO3)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca08",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_ca08"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca09",
+              "label": "CaCO3_ca09",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Carbonates: H3PO4 treatment at 80 deg. C and CO2 measurement like TOC (OC13), transformation into CaCO3 (Schlichting et al. 1995)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca09",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_ca09"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca10",
+              "label": "CaCO3_ca10",
+              "altLabel": null,
+              "notation": null,
+              "definition": "CaCO3 Equivalent, CO2 evolution after HCl treatment. Gravimetric",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca10",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_ca10"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca11",
+              "label": "CaCO3_ca11",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Black, 1965-HCl",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca11",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_ca11"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca12",
+              "label": "CaCO3_ca12",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Treatment with H2SO4 N/2 acid followed by titration with NaOH N/2 in presence of an indicator",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca12",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_ca12"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc",
+              "label": "CaCO3_calcul-tc-oc",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Indirect estimate: inorganic carbon divided by 0.12 (computed as total carbon minus organic carbon)",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc",
+                  "label": "totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc"
+                }
+              ],
+              "isProcedure": true,
+              "procedures": [],
+              "narrower": []
+            }
+          ],
           "narrower": []
         }
       ]
@@ -27018,471 +27472,6 @@
       ],
       "isProcedure": false,
       "procedures": [],
-      "narrower": []
-    },
-    {
-      "uri": "https://soilwise-he.github.io/soil-health#TotalCarbonateEquivalent",
-      "label": "total carbonate equivalent",
-      "altLabel": null,
-      "notation": null,
-      "definition": "The total calcium carbonate equivalent measures the full capacity of soil to neutralize acidity, considering all forms of carbonate and bicarbonate minerals. It is essential for managing soil pH and nutrient availability in acidic soils. Source: FAO Soil Bulletin.",
-      "exactMatch": [
-        {
-          "uri": "http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Ccetot",
-          "label": "physioChemicalPropertyCode-Ccetot"
-        }
-      ],
-      "isProcedure": false,
-      "procedures": [
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc",
-          "label": "CaCO3_acid-ch3cooh-dc",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Dissolution of carbonates by Acetic acid [CH3COOH], external heat (dry combustion)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-nodc",
-          "label": "CaCO3_acid-ch3cooh-nodc",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Dissolution of carbonates by Acetic acid [CH3COOH], no external (no dry combustion)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-nodc",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-nodc"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-unkn",
-          "label": "CaCO3_acid-ch3cooh-unk",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Dissolution of carbonates by Acetic acid [CH3COOH], external heat unknown",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-unkn",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-unkn"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-dc",
-          "label": "CaCO3_acid-dc",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Dissolution of carbonates by acid, external heat (dry combustion)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-dc",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-dc"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-dc",
-          "label": "CaCO3_acid-h2so4-dc",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Dissolution of carbonates by Sulfuric acid [H2SO4], external heat (dry combustion)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-dc",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-dc"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-nodc",
-          "label": "CaCO3_acid-h2so4-nodc",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Dissolution of carbonates by Sulfuric acid [H2SO4], no external (no dry combustion)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-nodc",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-nodc"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-unkn",
-          "label": "CaCO3_acid-h2so4-unk",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Dissolution of carbonates by Sulfuric acid [H2SO4], external heat unknown",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-unkn",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-unkn"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-dc",
-          "label": "CaCO3_acid-h3po4-dc",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Dissolution of carbonates by Phosphoric acid [H3PO4], external heat (dry combustion)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-dc",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-dc"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-nodc",
-          "label": "CaCO3_acid-h3po4-nodc",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Dissolution of carbonates by Phosphoric acid [H3PO4], no external (no dry combustion)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-nodc",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-nodc"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-unkn",
-          "label": "CaCO3_acid-h3po4-unk",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Dissolution of carbonates by Phosphoric acid [H3PO4], external heat unknown",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-unkn",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-unkn"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-dc",
-          "label": "CaCO3_acid-hcl-dc",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Dissolution of carbonates by Hydrochloric acid [HCl], or Perchloric acid [HClO4], external heat (dry combustion)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-dc",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-dc"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-nodc",
-          "label": "CaCO3_acid-hcl-nodc",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Dissolution of carbonates by Hydrochloric acid [HCl], or Perchloric acid [HClO4], no external (no dry combustion)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-nodc",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-nodc"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-unkn",
-          "label": "CaCO3_acid-hcl-unk",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Dissolution of carbonates by Hydrochloric acid [HCl], or Perchloric acid [HClO4], external heat unknown",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-unkn",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-unkn"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-nodc",
-          "label": "CaCO3_acid-nodc",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Dissolution of carbonates by acid, no external (no dry combustion)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-nodc",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-nodc"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_acid-unkn",
-          "label": "CaCO3_acid-unk",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Dissolution of carbonates by acid, external heat unknown",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_acid-unkn",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_acid-unkn"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca01",
-          "label": "CaCO3_ca01",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Method of Scheibler (volumetric)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca01",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_ca01"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca02",
-          "label": "CaCO3_ca02",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Method of Wesemael",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca02",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_ca02"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca03",
-          "label": "CaCO3_ca03",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Method of Piper (HCl)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca03",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_ca03"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca04",
-          "label": "CaCO3_ca04",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Calcimeter method (volumetric after adition of dilute acid)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca04",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_ca04"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca05",
-          "label": "CaCO3_ca05",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Gravimetric (USDA Agr. Hdbk 60-/- method Richards et al., 1954)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca05",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_ca05"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca06",
-          "label": "CaCO3_ca06",
-          "altLabel": null,
-          "notation": null,
-          "definition": "H3PO4 acid at 80C, conductometric in NaOH (Schlichting & Blume, 1966)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca06",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_ca06"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca07",
-          "label": "CaCO3_ca07",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Pressure calcimeter (Nelson, 1982)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca07",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_ca07"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca08",
-          "label": "CaCO3_ca08",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Bernard calcimeter (Total CaCO3)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca08",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_ca08"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca09",
-          "label": "CaCO3_ca09",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Carbonates: H3PO4 treatment at 80 deg. C and CO2 measurement like TOC (OC13), transformation into CaCO3 (Schlichting et al. 1995)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca09",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_ca09"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca10",
-          "label": "CaCO3_ca10",
-          "altLabel": null,
-          "notation": null,
-          "definition": "CaCO3 Equivalent, CO2 evolution after HCl treatment. Gravimetric",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca10",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_ca10"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca11",
-          "label": "CaCO3_ca11",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Black, 1965-HCl",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca11",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_ca11"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_ca12",
-          "label": "CaCO3_ca12",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Treatment with H2SO4 N/2 acid followed by titration with NaOH N/2 in presence of an indicator",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_ca12",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_ca12"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc",
-          "label": "CaCO3_calcul-tc-oc",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Indirect estimate: inorganic carbon divided by 0.12 (computed as total carbon minus organic carbon)",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/procedure/totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc",
-              "label": "totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc"
-            }
-          ],
-          "isProcedure": true,
-          "procedures": [],
-          "narrower": []
-        }
-      ],
       "narrower": []
     },
     {

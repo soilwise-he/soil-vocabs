@@ -164,21 +164,19 @@ she:CalciumExtractableElement skos:broader she:Calcium .
 
 she:CalciumTotalElement skos:broader she:Calcium .
 
-she:CarbonatesContent a skos:Concept ;
-    skos:broader she:Carbonates ;
-    skos:definition "The Carbonates Content quantifies the concentration of carbonate minerals (e.g., CaCO₃, MgCO₃) in soil. These compounds influence soil pH, fertility, and structure, and are prevalent in calcareous soils. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
+she:CarbonateContent a skos:Concept ;
+    skos:broader she:Carbonate ;
+    skos:definition "The Carbonate Content quantifies the concentration of carbonate minerals (e.g., CaCO₃, MgCO₃) in soil. These compounds influence soil pH, fertility, and structure, and are prevalent in calcareous soils. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:carbonatesContentProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "carbonates content"@en .
+    skos:prefLabel "carbonate content"@en .
 
-she:CarbonatesForm a skos:Concept ;
-    skos:broader she:Carbonates ;
-    skos:definition "The Carbonates Forms describes the types of carbonate minerals present in soil, such as calcite, dolomite, or aragonite. These forms impact soil chemistry, fertility, and physical characteristics differently depending on their composition and solubility. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
+she:CarbonateForm a skos:Concept ;
+    skos:broader she:Carbonate ;
+    skos:definition "The Carbonate Form describes the types of carbonate minerals present in soil, such as calcite, dolomite, or aragonite. These forms impact soil chemistry, fertility, and physical characteristics differently depending on their composition and solubility. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
     skos:exactMatch glosis_lh:carbonatesFormsProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "carbonates form"@en .
-
-she:CarbonatesForms skos:broader she:Carbonates .
+    skos:prefLabel "carbonate form"@en .
 
 she:CationExchange a skos:Concept ;
     skos:broader she:IonExchange ;
@@ -5405,12 +5403,12 @@ she:AvailableWaterHoldingCapacity a skos:Concept ;
         she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc200wp,
         she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc300wp .
 
-she:Carbonates a skos:Concept ;
+she:Carbonate a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:CarbonatesContent,
-        she:CarbonatesForm,
-        she:CarbonatesForms ;
-    skos:prefLabel "carbonates"@en .
+    skos:narrower she:CarbonateContent,
+        she:CarbonateForm,
+        she:TotalCarbonateEquivalent ;
+    skos:prefLabel "carbonate"@en .
 
 she:CationExchangeCapacity a skos:Concept ;
     skos:broader she:SoilChemicalCapacity ;
@@ -8856,6 +8854,7 @@ she:SoilOrganicCarbon a skos:Concept ;
         she:carbonOrganicProcedure-OrgC_wc-cro3-walkleyblack .
 
 she:TotalCarbonateEquivalent a skos:Concept ;
+    skos:broader she:Carbonate ;
     skos:definition "The total calcium carbonate equivalent measures the full capacity of soil to neutralize acidity, considering all forms of carbonate and bicarbonate minerals. It is essential for managing soil pH and nutrient availability in acidic soils. Source: FAO Soil Bulletin."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Ccetot ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -8947,7 +8946,7 @@ she:SoilPhysicalProperty a skos:Concept ;
     skos:prefLabel "soil physical property"@en .
 
 <https://soilwise-he.github.io/soil-health> a skos:ConceptScheme ;
-    skos:hasTopConcept she:Carbonates,
+    skos:hasTopConcept she:Carbonate,
         she:Cementation,
         she:ChemicalSubstance,
         she:CropClass,
@@ -9014,7 +9013,6 @@ she:SoilPhysicalProperty a skos:Concept ;
         she:Stickiness,
         she:TextureFieldClass,
         she:TextureLabClass,
-        she:TotalCarbonateEquivalent,
         she:ToxicElement,
         she:VegetationClass .
 
