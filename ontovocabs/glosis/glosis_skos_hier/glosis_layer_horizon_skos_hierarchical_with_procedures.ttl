@@ -1417,19 +1417,19 @@ she:SodiumTotalElements a skos:Concept ;
         she:totalElementsProcedure-Total_xtf-t .
 
 she:SolubleAnionsTotal a skos:Concept ;
-    skos:broader she:SoilSolutionSolute ;
+    skos:broader she:SoilSolutes ;
     skos:definition "The Soluble Anions Total measures the concentration of anions (e.g., chloride, sulfate, nitrate) in soil solution. High levels may indicate salinity, nutrient availability, or contamination. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
     skos:exactMatch glosis_lh:solubleAnionsTotalProperty ;
     skos:prefLabel "soluble anions total"@en .
 
 she:SolubleCationsTotal a skos:Concept ;
-    skos:broader she:SoilSolutionSolute ;
+    skos:broader she:SoilSolutes ;
     skos:definition "The Soluble Cations Total evaluates the sum of cations (e.g., sodium, potassium, calcium, magnesium) in soil solution. It is an indicator of soil salinity, fertility, and chemical balance. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:solubleCationsTotalProperty ;
     skos:prefLabel "soluble cations total"@en .
 
 she:SolubleSalts a skos:Concept ;
-    skos:broader she:SoilSolutionSolute, she:Salt ;
+    skos:broader she:SoilSolutes, she:Salt ;
     skos:narrower she:SaltContent ;
     skos:definition "Soluble salts refer to dissolved salts in the soil solution, primarily composed of sodium, calcium, magnesium, chloride, and sulfate ions. Excessive soluble salts cause salinity, which can impair plant water uptake and lead to osmotic stress. EC testing helps monitor salinity levels for effective management. Source: Soil Science Society of America."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Solsal ;
@@ -2641,8 +2641,8 @@ she:Aluminium a skos:Concept ;
 
 she:Calcium a skos:Concept ;
     skos:narrower she:CalciumExchangeableBase,
-        she:CalciumExtractableElement,
-        she:CalciumTotalElement ;
+        she:CalciumExtractableElements,
+        she:CalciumTotalElements ;
     skos:prefLabel "calcium"@en .
 
 she:Gypsum a skos:Concept ;
@@ -2709,12 +2709,12 @@ she:Sodium a skos:Concept ;
         she:SodiumTotalElements ;
     skos:prefLabel "sodium"@en .
 
-she:SoilSolutionSolute a skos:Concept ;
+she:SoilSolutes a skos:Concept ;
     skos:narrower she:SolubleAnionsTotal,
         she:SolubleCationsTotal,
         she:SolubleSalts ;
     skos:broader she:SoilSolution ;
-    skos:prefLabel "soil solution solute"@en .
+    skos:prefLabel "soil solutes"@en .
 
 she:SoilBulkDensity a skos:Concept ;
     skos:narrower she:BulkDensityFineEarth,
@@ -3085,7 +3085,7 @@ she:totalElementsProcedure-Total_xtf-t a skos:Concept ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_xtf-t ;
     skos:prefLabel "Total_xtf-t"@en .
 
-she:MicroNutrients a skos:Concept ;
+she:Micronutrients a skos:Concept ;
     skos:narrower she:Boron,
         she:Copper,
         she:Iron,
@@ -3093,17 +3093,17 @@ she:MicroNutrients a skos:Concept ;
         she:Magnesium,
         she:Manganese,
         she:Zinc ;
-    skos:prefLabel "micro nutrient"@en .
+    skos:prefLabel "micronutrients"@en .
 
-she:MacroNutrients a skos:Concept ;
+she:Macronutrients a skos:Concept ;
     skos:narrower she:Calcium,
         she:Phosphorus,
         she:Nitrogen,
         she:Potassium,
         she:Sulfur ;
-    skos:prefLabel "macro nutrient"@en .
+    skos:prefLabel "macronutrients"@en .
 
-she:ToxicElement a skos:Concept ;
+she:ToxicElements a skos:Concept ;
     skos:narrower she:Cadmium,
         she:Aluminium ;
-    skos:prefLabel "toxic element"@en .
+    skos:prefLabel "toxic elements"@en .

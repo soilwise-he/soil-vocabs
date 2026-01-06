@@ -99,12 +99,6 @@ she:BurrowingAnimal a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "burrowing animal"@en .
 
-she:CEC a skos:Concept ;
-    skos:broader she:SoilChemicalCapacity ;
-    skos:exactMatch spp:CEC ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "c e c"@en .
-
 she:CationExchange a skos:Concept ;
     skos:broader she:IonExchange ;
     skos:exactMatch spp:CationExchange ;
@@ -3307,8 +3301,7 @@ she:SoilChemicalCapacity a skos:Concept ;
     skos:broader she:SoilChemicalProperty ;
     skos:exactMatch spp:SoilChemicalCapacity ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:CEC,
-        she:CationExchangeCapacity,
+    skos:narrower she:CationExchangeCapacity,
         she:SoilBufferingCapacity,
         she:SoilFilteringCapacity ;
     skos:prefLabel "soil chemical capacity"@en .
