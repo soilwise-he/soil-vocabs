@@ -500,9 +500,9 @@
       "procedures": [],
       "narrower": [
         {
-          "uri": "https://soilwise-he.github.io/soil-health#CarbonateContent",
-          "label": "carbonate content",
-          "altLabel": null,
+          "uri": "https://soilwise-he.github.io/soil-health#CarbonateContents",
+          "label": "carbonate contents",
+          "altLabel": "carbonate content",
           "notation": null,
           "definition": "The Carbonate Content quantifies the concentration of carbonate minerals (e.g., CaCO\u2083, MgCO\u2083) in soil. These compounds influence soil pH, fertility, and structure, and are prevalent in calcareous soils. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils.",
           "exactMatch": [
@@ -1303,6 +1303,62 @@
       "narrower": []
     },
     {
+      "uri": "https://soilwise-he.github.io/soil-health#EcosystemServices",
+      "label": "ecosystem services",
+      "altLabel": null,
+      "notation": null,
+      "definition": null,
+      "exactMatch": [],
+      "isProcedure": false,
+      "procedures": [],
+      "narrower": [
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#CulturalServices",
+          "label": "cultural services",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#ProvisioningServices",
+          "label": "provisioning services",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#RegulatingServices",
+          "label": "regulating services",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SupportingServices",
+          "label": "supporting services",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        }
+      ]
+    },
+    {
       "uri": "https://soilwise-he.github.io/soil-health#Force",
       "label": "force",
       "altLabel": null,
@@ -1891,9 +1947,9 @@
       ],
       "narrower": [
         {
-          "uri": "https://soilwise-he.github.io/soil-health#GypsumContent",
-          "label": "gypsum content",
-          "altLabel": null,
+          "uri": "https://soilwise-he.github.io/soil-health#GypsumContents",
+          "label": "gypsum contents",
+          "altLabel": "gypsum content",
           "notation": null,
           "definition": "The Gypsum Content quantifies the amount of gypsum (calcium sulfate dihydrate) present in the soil. Gypsum affects soil structure, water infiltration, and nutrient availability, especially in arid and semi-arid regions. Source: FAO (2006). Guidelines for Soil Description.",
           "exactMatch": [
@@ -2164,87 +2220,6 @@
       "isProcedure": false,
       "procedures": [],
       "narrower": []
-    },
-    {
-      "uri": "https://soilwise-he.github.io/soil-health#LandUse",
-      "label": "land use",
-      "altLabel": null,
-      "notation": null,
-      "definition": null,
-      "exactMatch": [
-        {
-          "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#LandUse",
-          "label": "LandUse"
-        }
-      ],
-      "isProcedure": false,
-      "procedures": [],
-      "narrower": [
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#LandUseBareCover",
-          "label": "land use bare cover",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Bare Cover Abundance refers to the extent of land area without vegetation or artificial cover, such as bare soil or rocky surfaces. High proportions of bare cover increase the risk of soil erosion and desertification, particularly in areas with poor vegetation or human disturbance. Source: FAO, 'Land Use and Land Cover Classification'",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty",
-              "label": "bareCoverAbundanceProperty"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#LandUseForest",
-          "label": "land use forest",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Forest Abundance refers to the proportion or extent of land covered by forest vegetation in a given area. It is often quantified as the percentage of land area dominated by tree species, reflecting the ecological importance of forests in influencing soil fertility, moisture retention, and biodiversity. Forested areas typically contribute to soil formation and stabilization through leaf litter and root systems that reduce erosion. Source: FAO, 'Forest Resources Assessment'",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/siteplot/forestAbundanceProperty",
-              "label": "forestAbundanceProperty"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#LandUseGrasses",
-          "label": "land use grasses",
-          "altLabel": "land use grass",
-          "notation": null,
-          "definition": "Grass Abundance indicates the extent or percentage of land covered by grasses or herbaceous plants. This property is important for understanding land productivity, grazing capacity, and soil health, as grasses play a key role in preventing soil erosion, enhancing organic matter content, and maintaining soil structure. Source: FAO, 'Grassland Ecosystems and Management'",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/siteplot/grassAbundanceProperty",
-              "label": "grassAbundanceProperty"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#LandUseShrubs",
-          "label": "land use shrubs",
-          "altLabel": "land use shrub",
-          "notation": null,
-          "definition": "Shrubs Abundance refers to the extent or abundance of shrub vegetation in a given area. Shrubs influence soil structure by reducing erosion, improving soil organic matter through leaf litter, and enhancing nutrient cycling. They are also indicators of ecosystem health in many terrestrial environments. Source: FAO, 'Vegetation and Land Use in Arid Zones'",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty",
-              "label": "shrubsAbundanceProperty"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        }
-      ]
     },
     {
       "uri": "https://soilwise-he.github.io/soil-health#LandUseClass",
@@ -12335,9 +12310,9 @@
       "procedures": [],
       "narrower": [
         {
-          "uri": "https://soilwise-he.github.io/soil-health#MineralContent",
-          "label": "mineral content",
-          "altLabel": null,
+          "uri": "https://soilwise-he.github.io/soil-health#MineralContents",
+          "label": "mineral contents",
+          "altLabel": "mineral content",
           "notation": null,
           "definition": "The Mineral Content evaluates the overall abundance of mineral particles in soil, including sand, silt, and clay fractions. It provides essential information about soil texture, fertility, and parent material. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.",
           "exactMatch": [
@@ -12369,9 +12344,9 @@
       ]
     },
     {
-      "uri": "https://soilwise-he.github.io/soil-health#MoistureContent",
-      "label": "moisture content",
-      "altLabel": null,
+      "uri": "https://soilwise-he.github.io/soil-health#MoistureContents",
+      "label": "moisture contents",
+      "altLabel": "moisture content",
       "notation": null,
       "definition": "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.",
       "exactMatch": [
@@ -12528,6 +12503,160 @@
         }
       ],
       "narrower": []
+    },
+    {
+      "uri": "https://soilwise-he.github.io/soil-health#NonsoilIndicators",
+      "label": "non-soil indicators",
+      "altLabel": null,
+      "notation": null,
+      "definition": null,
+      "exactMatch": [],
+      "isProcedure": false,
+      "procedures": [],
+      "narrower": [
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#EnvironmentalFactors",
+          "label": "environmental factors",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#ExternalFactors",
+          "label": "external factors",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#Climate",
+              "label": "climate",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Climate",
+                  "label": "Climate"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#Emissions",
+              "label": "emissions",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#Inputs",
+              "label": "inputs",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#LandUse",
+              "label": "land use",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#LandUse",
+                  "label": "LandUse"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#LandUseBareCover",
+                  "label": "land use bare cover",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Bare Cover Abundance refers to the extent of land area without vegetation or artificial cover, such as bare soil or rocky surfaces. High proportions of bare cover increase the risk of soil erosion and desertification, particularly in areas with poor vegetation or human disturbance. Source: FAO, 'Land Use and Land Cover Classification'",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty",
+                      "label": "bareCoverAbundanceProperty"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#LandUseForest",
+                  "label": "land use forest",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Forest Abundance refers to the proportion or extent of land covered by forest vegetation in a given area. It is often quantified as the percentage of land area dominated by tree species, reflecting the ecological importance of forests in influencing soil fertility, moisture retention, and biodiversity. Forested areas typically contribute to soil formation and stabilization through leaf litter and root systems that reduce erosion. Source: FAO, 'Forest Resources Assessment'",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/siteplot/forestAbundanceProperty",
+                      "label": "forestAbundanceProperty"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#LandUseGrasses",
+                  "label": "land use grasses",
+                  "altLabel": "land use grass",
+                  "notation": null,
+                  "definition": "Grass Abundance indicates the extent or percentage of land covered by grasses or herbaceous plants. This property is important for understanding land productivity, grazing capacity, and soil health, as grasses play a key role in preventing soil erosion, enhancing organic matter content, and maintaining soil structure. Source: FAO, 'Grassland Ecosystems and Management'",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/siteplot/grassAbundanceProperty",
+                      "label": "grassAbundanceProperty"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#LandUseShrubs",
+                  "label": "land use shrubs",
+                  "altLabel": "land use shrub",
+                  "notation": null,
+                  "definition": "Shrubs Abundance refers to the extent or abundance of shrub vegetation in a given area. Shrubs influence soil structure by reducing erosion, improving soil organic matter through leaf litter, and enhancing nutrient cycling. They are also indicators of ecosystem health in many terrestrial environments. Source: FAO, 'Vegetation and Land Use in Arid Zones'",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty",
+                      "label": "shrubsAbundanceProperty"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "uri": "https://soilwise-he.github.io/soil-health#OxalateExtractableOpticalDensity",
@@ -13536,9 +13665,9 @@
           ],
           "narrower": [
             {
-              "uri": "https://soilwise-he.github.io/soil-health#SaltContent",
-              "label": "salt content",
-              "altLabel": null,
+              "uri": "https://soilwise-he.github.io/soil-health#SaltContents",
+              "label": "salt contents",
+              "altLabel": "salt content",
               "notation": null,
               "definition": "The Salt Content measures the concentration of soluble salts in soil, critical for assessing salinity. Excess salts can hinder plant growth by affecting osmotic potential, leading to reduced water uptake by roots. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils.",
               "exactMatch": [
@@ -14903,9 +15032,9 @@
       "procedures": [],
       "narrower": [
         {
-          "uri": "https://soilwise-he.github.io/soil-health#SoilAgriculturalFunction",
-          "label": "soil agricultural function",
-          "altLabel": null,
+          "uri": "https://soilwise-he.github.io/soil-health#SoilAgriculturalFunctions",
+          "label": "soil agricultural functions",
+          "altLabel": "soil agricultural function",
           "notation": null,
           "definition": null,
           "exactMatch": [
@@ -15129,9 +15258,9 @@
           ]
         },
         {
-          "uri": "https://soilwise-he.github.io/soil-health#SoilEngineeringFunction",
-          "label": "soil engineering function",
-          "altLabel": null,
+          "uri": "https://soilwise-he.github.io/soil-health#SoilEngineeringFunctions",
+          "label": "soil engineering functions",
+          "altLabel": "soil engineering function",
           "notation": null,
           "definition": null,
           "exactMatch": [
@@ -15372,9 +15501,9 @@
           ]
         },
         {
-          "uri": "https://soilwise-he.github.io/soil-health#SoilEnvironmentalFunction",
-          "label": "soil environmental function",
-          "altLabel": null,
+          "uri": "https://soilwise-he.github.io/soil-health#SoilEnvironmentalFunctions",
+          "label": "soil environmental functions",
+          "altLabel": "soil environmental function",
           "notation": null,
           "definition": null,
           "exactMatch": [
@@ -15486,6 +15615,162 @@
           ]
         }
       ]
+    },
+    {
+      "uri": "https://soilwise-he.github.io/soil-health#SoilFunctionIndicators",
+      "label": "soil function indicators",
+      "altLabel": null,
+      "notation": null,
+      "definition": null,
+      "exactMatch": [],
+      "isProcedure": false,
+      "procedures": [],
+      "narrower": [
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#BiomassProductivity",
+          "label": "biomass productivity",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#CarbonStorageCapacity",
+          "label": "carbon storage capacity",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#GroundwaterReproduction",
+          "label": "groundwater reproduction",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#HabitatProvisionCapacity",
+          "label": "habitat provision capacity",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#NutrientBufferingCapacity",
+          "label": "nutrient buffering capacity",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#NutrientMobilisationCapacity",
+          "label": "nutrient mobilisation capacity",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilMoistureDeficit",
+          "label": "soil moisture deficit",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#WaterStorageCapacity",
+          "label": "water storage capacity",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        }
+      ]
+    },
+    {
+      "uri": "https://soilwise-he.github.io/soil-health#SoilFunctions",
+      "label": "soil functions",
+      "altLabel": null,
+      "notation": null,
+      "definition": null,
+      "exactMatch": [],
+      "isProcedure": false,
+      "procedures": [],
+      "narrower": [
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilBiologicalFunctions",
+          "label": "soil biological functions",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilChemicalFunctions",
+          "label": "soil chemical functions",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilPhysicalFunctions",
+          "label": "soil physical functions",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        }
+      ]
+    },
+    {
+      "uri": "https://soilwise-he.github.io/soil-health#SoilHealth",
+      "label": "soil health",
+      "altLabel": null,
+      "notation": null,
+      "definition": "Soil health is the level to which soil functions are fulfilled.",
+      "exactMatch": [],
+      "isProcedure": false,
+      "procedures": [],
+      "narrower": []
     },
     {
       "uri": "https://soilwise-he.github.io/soil-health#SoilHorizonBoundary",
@@ -16491,7 +16776,52 @@
                   ],
                   "isProcedure": false,
                   "procedures": [],
-                  "narrower": []
+                  "narrower": [
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#SoilBiologicalDegradation",
+                      "label": "soil biological degradation",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": null,
+                      "exactMatch": [],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#SoilChemicalDegradation",
+                      "label": "soil chemical degradation",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": null,
+                      "exactMatch": [],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#SoilEcologicalDegradation",
+                      "label": "soil ecological degradation",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": null,
+                      "exactMatch": [],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#SoilPhysicalDegradation",
+                      "label": "soil physical degradation",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": null,
+                      "exactMatch": [],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
+                    }
+                  ]
                 },
                 {
                   "uri": "https://soilwise-he.github.io/soil-health#SoilLeaching",
@@ -17613,7 +17943,52 @@
                   ],
                   "isProcedure": false,
                   "procedures": [],
-                  "narrower": []
+                  "narrower": [
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#SoilBiologicalDegradation",
+                      "label": "soil biological degradation",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": null,
+                      "exactMatch": [],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#SoilChemicalDegradation",
+                      "label": "soil chemical degradation",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": null,
+                      "exactMatch": [],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#SoilEcologicalDegradation",
+                      "label": "soil ecological degradation",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": null,
+                      "exactMatch": [],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#SoilPhysicalDegradation",
+                      "label": "soil physical degradation",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": null,
+                      "exactMatch": [],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
+                    }
+                  ]
                 },
                 {
                   "uri": "https://soilwise-he.github.io/soil-health#SoilErosion",
@@ -18500,7 +18875,2119 @@
     {
       "uri": "https://soilwise-he.github.io/soil-health#SoilProperties",
       "label": "soil properties",
-      "altLabel": "soil property",
+      "altLabel": null,
+      "notation": null,
+      "definition": null,
+      "exactMatch": [],
+      "isProcedure": false,
+      "procedures": [],
+      "narrower": [
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#DerivedSoilProperties",
+          "label": "derived soil properties",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#Adsorption",
+              "label": "adsorption",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#CationExchangeCapacity",
+              "label": "cation exchange capacity",
+              "altLabel": null,
+              "notation": null,
+              "definition": "The Cation Exchange Capacity (CEC) measures the soil's total capacity to hold and exchange positively charged ions (cations). It is influenced by clay and organic matter content and is a critical indicator of soil fertility and nutrient retention. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils.",
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#CationExchangeCapacity",
+                  "label": "CationExchangeCapacity"
+                },
+                {
+                  "uri": "http://w3id.org/glosis/model/layerhorizon/cationExchangeCapacityProperty",
+                  "label": "cationExchangeCapacityProperty"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#CationExchangeCapacityEffective",
+                  "label": "cation exchange capacity effective",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "The Effective Cation Exchange Capacity (ECEC) measures the ability of soil to hold and exchange cations at a given pH, often near field conditions. It provides insight into soil fertility, nutrient availability, and buffering capacity in acidic soils. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/layerhorizon/cationExchangeCapacityEffectiveProperty",
+                      "label": "cationExchangeCapacityEffectiveProperty"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#CationExchangeCapacitySoil",
+                  "label": "cation exchange capacity soil",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "CEC measures the soil\u2019s ability to hold and exchange positively charged ions (cations). It is a critical indicator of soil fertility, as higher CEC values imply greater capacity to retain essential nutrients like calcium, magnesium, and potassium. Clayey and organic-rich soils typically exhibit higher CEC. Source: Soil Science Society of America.",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-CEC",
+                      "label": "physioChemicalPropertyCode-CEC"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph-unkn-cacl2",
+                      "label": "CEC_ph-unkn-cacl2",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC at unknown buffer, in 0.1 M CaCl2 exchange solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph-unkn-cacl2",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph-unkn-cacl2"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph-unkn-lioac",
+                      "label": "CEC_ph-unkn-lioac",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC at unknown buffer, in 0.5 M Li-acetate exchange solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph-unkn-lioac",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph-unkn-lioac"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph-unkn-m3",
+                      "label": "CEC_ph-unkn-m3",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC at unknown buffer, in Mehlich III exchange solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph-unkn-m3",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph-unkn-m3"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph0-ag-thioura",
+                      "label": "CEC_ph0-ag-thioura",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC unbuffered at pH of the soil, in 0.01 M Ag-thioura exchange solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph0-ag-thioura",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph0-ag-thioura"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph0-bacl2",
+                      "label": "CEC_ph0-bacl2",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC unbuffered at pH o the soil, in 0.5 M BaCl2 exchange solution (0.1.1.0 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph0-bacl2",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph0-bacl2"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph0-cohex",
+                      "label": "CEC_ph0-cohex",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC unbuffered at pH of the soil, in Cobalt(III) hexamine chloride solution 0,0166M (Cohex) [Co[NH3]6]Cl3 ), ISO 23470 (2007)  exchange solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph0-cohex",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph0-cohex"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph0-kcl",
+                      "label": "CEC_ph0-kcl",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC unbuffered at pH of the soil, in 1 M KCl exchange solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph0-kcl",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph0-kcl"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph0-nh4cl",
+                      "label": "CEC_ph0-nh4cl",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC unbuffered at pH of the soil, in 1 M NH4-chloride exchange solution (0.2-1.0 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph0-nh4cl",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph0-nh4cl"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph0-nh4oac",
+                      "label": "CEC_ph0-nh4oac",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC unbuffered at pH of the soil, in 1 M NH4-acetate (NH4OAc) exchange solution (0.25-1.0 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph0-nh4oac",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph0-nh4oac"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph0-unkn",
+                      "label": "CEC_ph0-unk",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC unbuffered at pH of the soil, in unknown exchange solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph0-unkn",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph0-unkn"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph7-edta",
+                      "label": "CEC_ph7-edta",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC buffered at pH 7, in 0.1 M Li-EDTA exchange solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph7-edta",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph7-edta"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph7-nh4oac",
+                      "label": "CEC_ph7-nh4oac",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC buffered at pH 7, in 1 M NH4-acetate (NH4OAc) exchange solution (0.25-1.0 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph7-nh4oac",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph7-nh4oac"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph7-unkn",
+                      "label": "CEC_ph7-unk",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC buffered at pH 7, in unknown exchange solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph7-unkn",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph7-unkn"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph8-bacl2tea",
+                      "label": "CEC_ph8-bacl2tea",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC buffered at pH 8.0-8.5, in 0.5 M BaCl2-TEA exchange solution (0.1.1.0 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph8-bacl2tea",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph8-bacl2tea"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph8-baoac",
+                      "label": "CEC_ph8-baoac",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC buffered at pH 8.0-8.5, in 0.5 M Ba-acetate exchange solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph8-baoac",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph8-baoac"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph8-licl2tea",
+                      "label": "CEC_ph8-licl2tea",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC buffered at pH 8.0-8.5, in 0.5 M Li-chloride - TEA exchange solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph8-licl2tea",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph8-licl2tea"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph8-naoac",
+                      "label": "CEC_ph8-naoac",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC buffered at pH 8.0-8.5, in 1 M Na-acetate exchange solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph8-naoac",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph8-naoac"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph8-nh4oac",
+                      "label": "CEC_ph8-nh4oac",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC buffered at pH 8.0-8.5, in 1 M NH4-acetate exchange solution (0.25-1.0 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph8-nh4oac",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph8-nh4oac"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#cationExchangeCapacitySoilProcedure-CEC_ph8-unkn",
+                      "label": "CEC_ph8-unk",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "CEC buffered at pH 8.0-8.5, in unknown exchange solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/cationExchangeCapacitySoilProcedure-CEC_ph8-unkn",
+                          "label": "cationExchangeCapacitySoilProcedure-CEC_ph8-unkn"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    }
+                  ],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#EffectiveCEC",
+                  "label": "effective CEC",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "ECEC is the sum of exchangeable cations in soil at its natural pH. It provides a measure of the soil\u2019s fertility under acidic conditions, as it considers both base cations and exchangeable aluminum. Source: Brady & Weil (2017).",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-ECEC",
+                      "label": "physioChemicalPropertyCode-ECEC"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#effectiveCecProcedure-EffCEC_calcul-b",
+                      "label": "EffCEC_calcul-b",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "Sum of exchangeable bases (Ca, Mg, K, Na) without exchangeable acidity (H+Al), see ExchBases and ExchAcids for methods",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/effectiveCecProcedure-EffCEC_calcul-b",
+                          "label": "effectiveCecProcedure-EffCEC_calcul-b"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#effectiveCecProcedure-EffCEC_calcul-ba",
+                      "label": "EffCEC_calcul-ba",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "Sum of exchangeable bases (Ca, Mg, K, Na) plus exchangeable acidity (H+Al), see ExchBases and ExchAcids for methods",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/effectiveCecProcedure-EffCEC_calcul-ba",
+                          "label": "effectiveCecProcedure-EffCEC_calcul-ba"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    }
+                  ],
+                  "narrower": []
+                }
+              ]
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#ElectricConductivity",
+              "label": "electric conductivity",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#Erodibility",
+              "label": "erodibility",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#HydraulicConductivity",
+              "label": "hydraulic conductivity",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#RootingDepth",
+              "label": "rooting depth",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilAggregateStability",
+              "label": "soil aggregate stability",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilAggregateStability",
+                  "label": "SoilAggregateStability"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilPorosity",
+              "label": "soil porosity",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Porosity refers to the percentage of soil volume occupied by pores or voids, which hold air and water. It directly impacts water infiltration, drainage, and root growth. Soils with high porosity are better suited for crop cultivation, as they provide good aeration and water availability. Source: Brady & Weil (2017).",
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilPorosity",
+                  "label": "SoilPorosity"
+                },
+                {
+                  "uri": "http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Por",
+                  "label": "physioChemicalPropertyCode-Por"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#porosityProcedure-Poros_calcul-pf0",
+                  "label": "Poros_calcul-pf0",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Porosity calculated from volumetric moisture content at pF 0 (1 cm)",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/porosityProcedure-Poros_calcul-pf0",
+                      "label": "porosityProcedure-Poros_calcul-pf0"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                }
+              ],
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#AirFilledPorosity",
+                  "label": "air filled porosity",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#AirFilledPorosity",
+                      "label": "AirFilledPorosity"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#AirPorosity",
+                  "label": "air porosity",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#AirPorosity",
+                      "label": "AirPorosity"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#AirRatio",
+                  "label": "air ratio",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#AirRatio",
+                      "label": "AirRatio"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#InterAggregatePorosity",
+                  "label": "inter aggregate porosity",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#InterAggregatePorosity",
+                      "label": "InterAggregatePorosity"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#IntraAggregatePorosity",
+                  "label": "intra aggregate porosity",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#IntraAggregatePorosity",
+                      "label": "IntraAggregatePorosity"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#Macroporosity",
+                  "label": "macroporosity",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Macroporosity",
+                      "label": "Macroporosity"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#StructuralPorosity",
+                  "label": "structural porosity",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#StructuralPorosity",
+                      "label": "StructuralPorosity"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#TexturalPorosity",
+                  "label": "textural porosity",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#TexturalPorosity",
+                      "label": "TexturalPorosity"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#TotalPorosity",
+                  "label": "total porosity",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#TotalPorosity",
+                      "label": "TotalPorosity"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#VoidRatio",
+                  "label": "void ratio",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#VoidRatio",
+                      "label": "VoidRatio"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                }
+              ]
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#WaterInfiltration",
+              "label": "water infiltration",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#WaterRunoff",
+              "label": "water runoff",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            }
+          ]
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#ObservableSoilProperties",
+          "label": "observable soil properties",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#BulkDensity",
+              "label": "bulk density",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#ClayMineralogy",
+              "label": "clay mineralogy",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilAnionContent",
+              "label": "soil anion content",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#Acidifiers",
+                  "label": "acidifiers",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#Salts",
+                  "label": "salts",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilContaminants",
+                  "label": "soil contaminants",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilNutrients",
+                  "label": "soil nutrients",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                }
+              ]
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilBiota",
+              "label": "soil biota",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilBiota",
+                  "label": "SoilBiota"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#Macrofauna",
+                  "label": "macrofauna",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#Mesofauna",
+                  "label": "mesofauna",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#Microfauna",
+                  "label": "microfauna",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#Microorganisms",
+                  "label": "microorganisms",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                }
+              ]
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilCationContent",
+              "label": "soil cation content",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#Acidifiers",
+                  "label": "acidifiers",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#Salts",
+                  "label": "salts",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilContaminants",
+                  "label": "soil contaminants",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilNutrients",
+                  "label": "soil nutrients",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                }
+              ]
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilDepth",
+              "label": "soil depth",
+              "altLabel": null,
+              "notation": null,
+              "definition": "The Soil Depth measures the vertical distance from the soil surface to an impenetrable layer, such as bedrock or a hardpan. Soil depth is a crucial factor influencing root development, water storage, and plant growth. Shallow soils may limit root growth, while deep soils can support more extensive root systems. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall.",
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilDepth",
+                  "label": "SoilDepth"
+                },
+                {
+                  "uri": "http://w3id.org/glosis/model/common/soilDepthProperty",
+                  "label": "soilDepthProperty"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilDepthBedrock",
+                  "label": "soil depth bedrock",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "The Soil Depth Bedrock refers to the distance from the soil surface to the underlying bedrock layer. This measurement is important for understanding the soil's capacity to support plant growth, as soils with shallow bedrock tend to have limited rooting depth, affecting water retention and nutrient availability. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations.",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/common/soilDepthBedrockProperty",
+                      "label": "soilDepthBedrockProperty"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilDepthRootable",
+                  "label": "soil depth rootable",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "The Soil Depth Rootable refers to the actual vertical depth of soil that can support plant roots, excluding any non-rootable layers such as bedrock or a water-impervious horizon. This depth is crucial for determining the suitability of land for agriculture and vegetation. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America.",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/common/soilDepthRootableProperty",
+                      "label": "soilDepthRootableProperty"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilDepthSampled",
+                  "label": "soil depth sampled",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "The Soil Depth Sampled indicates the specific depth of the soil profile that has been sampled for analysis. This property is important for understanding the representativeness of the sample, as different soil horizons may vary significantly in properties such as texture, fertility, and moisture content. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America.",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/common/soilDepthSampledProperty",
+                      "label": "soilDepthSampledProperty"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                }
+              ]
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilNitrogen",
+              "label": "soil nitrogen",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilOrganicCarbon",
+              "label": "soil organic carbon",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Organic carbon refers to the carbon component of soil organic matter, derived from decomposed plant and microbial residues. It serves as a key energy source for soil microbes and influences nutrient cycling, soil structure, and water retention. Organic carbon is a primary indicator of soil fertility and health. Source: Brady & Weil (2017).",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carorg",
+                  "label": "physioChemicalPropertyCode-Carorg"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_acid-dc",
+                  "label": "OrgC_acid-dc",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Acidified dry combustion or dry oxidation methods (after removal of carbonates)",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_acid-dc",
+                      "label": "carbonOrganicProcedure-OrgC_acid-dc"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_acid-dc-ht",
+                  "label": "OrgC_acid-dc-ht",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Acidified. Dry combustion at 1200 C and colometric CO2 measurement (Schlichting et al. 1995)",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_acid-dc-ht",
+                      "label": "carbonOrganicProcedure-OrgC_acid-dc-ht"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_acid-dc-ht-analyser",
+                  "label": "OrgC_acid-dc-ht-analyser",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Acidified. Furnace combustion (e.g., LECO combustion analyzer, Dumas method)",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_acid-dc-ht-analyser",
+                      "label": "carbonOrganicProcedure-OrgC_acid-dc-ht-analyser"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_acid-dc-lt",
+                  "label": "OrgC_acid-dc-lt",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Acidified. Dry combustion at 500 C",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_acid-dc-lt",
+                      "label": "carbonOrganicProcedure-OrgC_acid-dc-lt"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_acid-dc-lt-loi",
+                  "label": "OrgC_acid-dc-lt-loi",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Acidified. Loss on ignition (NL)",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_acid-dc-lt-loi",
+                      "label": "carbonOrganicProcedure-OrgC_acid-dc-lt-loi"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_acid-dc-mt",
+                  "label": "OrgC_acid-dc-mt",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Acidified. Dry combustion at 840 C",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_acid-dc-mt",
+                      "label": "carbonOrganicProcedure-OrgC_acid-dc-mt"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_acid-dc-spec",
+                  "label": "OrgC_acid-dc-spec",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Spectrally measured and converted to Acidified dry combustion or dry oxidation methods (after removal of carbonates)",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_acid-dc-spec",
+                      "label": "carbonOrganicProcedure-OrgC_acid-dc-spec"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_calcul-tc-ic",
+                  "label": "OrgC_calcul-tc-ic",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Calculated as total carbon minus inorganic carbon",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_calcul-tc-ic",
+                      "label": "carbonOrganicProcedure-OrgC_calcul-tc-ic"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_dc",
+                  "label": "OrgC_dc",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Unacidified. Dry combustion or dry oxidation methods (without prior removal of carbonates)",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_dc",
+                      "label": "carbonOrganicProcedure-OrgC_dc"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_dc-ht",
+                  "label": "OrgC_dc-ht",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Unacidified. Dry combustion at high temperature (e.g. 1200 C and colometric CO2 measurement (Schlichting et al. 1995)",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_dc-ht",
+                      "label": "carbonOrganicProcedure-OrgC_dc-ht"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_dc-ht-analyser",
+                  "label": "OrgC_dc-ht-analyser",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Unacidified. Dry combustion by furnace (e.g., LECO combustion analyzer, Dumas method). Is total Carbon?",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_dc-ht-analyser",
+                      "label": "carbonOrganicProcedure-OrgC_dc-ht-analyser"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_dc-lt",
+                  "label": "OrgC_dc-lt",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Unacidified. Dry combustion at low temperature e.g. 500 C",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_dc-lt",
+                      "label": "carbonOrganicProcedure-OrgC_dc-lt"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_dc-lt-loi",
+                  "label": "OrgC_dc-lt-loi",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Unacidified. Loss on ignition (NL) is total Organic Carbon",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_dc-lt-loi",
+                      "label": "carbonOrganicProcedure-OrgC_dc-lt-loi"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_dc-mt",
+                  "label": "OrgC_dc-mt",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Unacidified. Dry combustion at medium temperature e.g. 840 C",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_dc-mt",
+                      "label": "carbonOrganicProcedure-OrgC_dc-mt"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_dc-spec",
+                  "label": "OrgC_dc-spec",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Spectrally measured and converted to Unacidified Dry combustion or dry oxidation methods",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_dc-spec",
+                      "label": "carbonOrganicProcedure-OrgC_dc-spec"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_wc",
+                  "label": "OrgC_wc",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Wet oxidation or wet combustion methods",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_wc",
+                      "label": "carbonOrganicProcedure-OrgC_wc"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_wc-cro3-jackson",
+                  "label": "OrgC_wc-cro3-jackso",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Wet oxidation according to Jackson (1958) with chromic acid digestion",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_wc-cro3-jackson",
+                      "label": "carbonOrganicProcedure-OrgC_wc-cro3-jackson"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_wc-cro3-kalembra",
+                  "label": "OrgC_wc-cro3-kalembra",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Wet oxidation according to Kalembra and Jenkinson (1973) with acid dichromate",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_wc-cro3-kalembra",
+                      "label": "carbonOrganicProcedure-OrgC_wc-cro3-kalembra"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_wc-cro3-knopp",
+                  "label": "OrgC_wc-cro3-knopp",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Wet oxidation according to Knopp with chromic acid and gravimetric determination of CO2",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_wc-cro3-knopp",
+                      "label": "carbonOrganicProcedure-OrgC_wc-cro3-knopp"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_wc-cro3-kurmies",
+                  "label": "OrgC_wc-cro3-kurmies",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Wet oxidation according to Kurmies with K2Cr2O7+H2SO4",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_wc-cro3-kurmies",
+                      "label": "carbonOrganicProcedure-OrgC_wc-cro3-kurmies"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_wc-cro3-nelson",
+                  "label": "OrgC_wc-cro3-nelso",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Wet oxidation according to Nelson and Sommers (1996)",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_wc-cro3-nelson",
+                      "label": "carbonOrganicProcedure-OrgC_wc-cro3-nelson"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_wc-cro3-nrcs6a1c",
+                  "label": "OrgC_wc-cro3-nrcs6a1c",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Wet oxidation according to USDA-NRCS method 6A1c with acid dichromate digestion, FeSO4 titration, automatic titrator",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_wc-cro3-nrcs6a1c",
+                      "label": "carbonOrganicProcedure-OrgC_wc-cro3-nrcs6a1c"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_wc-cro3-tiurin",
+                  "label": "OrgC_wc-cro3-tiuri",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Wet oxidation according to Tiurin with K-dichromate",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_wc-cro3-tiurin",
+                      "label": "carbonOrganicProcedure-OrgC_wc-cro3-tiurin"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#carbonOrganicProcedure-OrgC_wc-cro3-walkleyblack",
+                  "label": "OrgC_wc-cro3-walkleyblack",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Walkley-Black method (chromic acid digestion)",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/carbonOrganicProcedure-OrgC_wc-cro3-walkleyblack",
+                      "label": "carbonOrganicProcedure-OrgC_wc-cro3-walkleyblack"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                }
+              ],
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilCarbonDensity",
+                  "label": "soil carbon density",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Soil Carbon Density measures the amount of organic carbon stored in a given volume of soil, typically expressed in tons per hectare. This property is a key indicator of soil health, as organic carbon influences soil fertility, structure, and microbial activity, and plays a major role in carbon sequestration to mitigate climate change. Source: IPCC, 'Guidelines for National Greenhouse Gas Inventories'",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/siteplot/soilCarbonDensityProperty",
+                      "label": "soilCarbonDensityProperty"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                }
+              ]
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilPhosphorus",
+              "label": "soil phosphorus",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilStructure",
+              "label": "soil structure",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilStructure",
+                  "label": "SoilStructure"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#StructureGrade",
+                  "label": "structure grade",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "The Structure Grade assesses the development and stability of soil aggregates, classified as weak, moderate, or strong. It reflects soil tilth, aeration, and resistance to erosion. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/layerhorizon/structureGradeProperty",
+                      "label": "structureGradeProperty"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#StructureSize",
+                  "label": "structure size",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "The Structure Size describes the dimensions of soil aggregates or structural units, such as granular, blocky, or platy. Structure size affects root penetration, water infiltration, and soil stability. Source: FAO (2006). Guidelines for Soil Description.",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/layerhorizon/structureSizeProperty",
+                      "label": "structureSizeProperty"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                }
+              ]
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilTemperature",
+              "label": "soil temperature",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilTemperature",
+                  "label": "SoilTemperature"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilTexturalClasses",
+              "label": "soil textural classes",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilWaterContents",
+              "label": "soil water content",
+              "altLabel": "soil water content",
+              "notation": null,
+              "definition": null,
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilWaterContent",
+                  "label": "SoilWaterContent"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#PlantAvailableWaterContents",
+                  "label": "plant available water contents",
+                  "altLabel": "plant available water content",
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#PlantAvailableWaterContent",
+                      "label": "PlantAvailableWaterContent"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilImmobileWaterContents",
+                  "label": "soil immobile water contents",
+                  "altLabel": "soil immobile water content",
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilImmobileWaterContent",
+                      "label": "SoilImmobileWaterContent"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilMobileWaterContents",
+                  "label": "soil mobile water contents",
+                  "altLabel": "soil mobile water content",
+                  "notation": null,
+                  "definition": null,
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilMobileWaterContent",
+                      "label": "SoilMobileWaterContent"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                }
+              ]
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilpH",
+              "label": "soil pH",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Soil pH measures the concentration of hydrogen ions (H\u207a) in the soil solution, indicating its acidity or alkalinity on a scale from 1 to 14. Neutral soils have a pH of 7, while values below 7 are acidic and above are alkaline. Soil pH significantly affects nutrient availability, microbial activity, and plant growth. For instance, nutrients like phosphorus are most available in a pH range of 6 to 7. Lime or sulfur applications can adjust soil pH to optimize conditions for crops. Source: USDA Natural Resources Conservation Service (NRCS).",
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilPH",
+                  "label": "SoilPH"
+                },
+                {
+                  "uri": "http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-pH",
+                  "label": "physioChemicalPropertyCode-pH"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2",
+                  "label": "pHCaCl2",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "pHCaCl2 (soil reaction) in a soil/CaCl2 solution (0.01-1 M)",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2",
+                      "label": "pHProcedure-pHCaCl2"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": [
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_ratio1-1",
+                      "label": "pHCaCl2_ratio1-1",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHCaCl2 (soil reaction) in 1:1 soil/1 M CaCl2 solution (1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_ratio1-1",
+                          "label": "pHProcedure-pHCaCl2_ratio1-1"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_ratio1-10",
+                      "label": "pHCaCl2_ratio1-10",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHCaCl2 (soil reaction) in 1:10 soil/CaCl2 solution (0.01-1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_ratio1-10",
+                          "label": "pHProcedure-pHCaCl2_ratio1-10"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_ratio1-2",
+                      "label": "pHCaCl2_ratio1-2",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHCaCl2 (soil reaction) in 1:2 soil/CaCl2 solution (0.01-1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_ratio1-2",
+                          "label": "pHProcedure-pHCaCl2_ratio1-2"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_ratio1-2.5",
+                      "label": "pHCaCl2_ratio1-2.5",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHCaCl2 (soil reaction) in 1:2.5 soil/CaCl2 solution (0.01-1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_ratio1-2.5",
+                          "label": "pHProcedure-pHCaCl2_ratio1-2.5"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_ratio1-5",
+                      "label": "pHCaCl2_ratio1-5",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHCaCl2 (soil reaction) in 1:5 soil/CaCl2 solution (0.01-1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_ratio1-5",
+                          "label": "pHProcedure-pHCaCl2_ratio1-5"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHCaCl2_sat",
+                      "label": "pHCaCl2_sat",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHCaCl2 (soil reaction) in saturated paste",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHCaCl2_sat",
+                          "label": "pHProcedure-pHCaCl2_sat"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    }
+                  ]
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O",
+                  "label": "pHH2O",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "pHH2O (soil reaction) in a soil/water solution",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O",
+                      "label": "pHProcedure-pHH2O"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": [
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_ratio1-1",
+                      "label": "pHH2O_ratio1-1",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHH2O (soil reaction) in 1:1 soil/water solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_ratio1-1",
+                          "label": "pHProcedure-pHH2O_ratio1-1"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_ratio1-10",
+                      "label": "pHH2O_ratio1-10",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHH2O (soil reaction) in 1:10 soil/water solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_ratio1-10",
+                          "label": "pHProcedure-pHH2O_ratio1-10"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_ratio1-2",
+                      "label": "pHH2O_ratio1-2",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHH2O (soil reaction) in 1:2 soil/water solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_ratio1-2",
+                          "label": "pHProcedure-pHH2O_ratio1-2"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_ratio1-2.5",
+                      "label": "pHH2O_ratio1-2.5",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHH2O (soil reaction) in 1:2.5 soil/water solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_ratio1-2.5",
+                          "label": "pHProcedure-pHH2O_ratio1-2.5"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_ratio1-5",
+                      "label": "pHH2O_ratio1-5",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHH2O (soil reaction) in 1:5 soil/water solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_ratio1-5",
+                          "label": "pHProcedure-pHH2O_ratio1-5"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_sat",
+                      "label": "pHH2O_sat",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHH2O (soil reaction) in water saturated paste",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_sat",
+                          "label": "pHProcedure-pHH2O_sat"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHH2O_unkn-spec",
+                      "label": "pHH2O_unkn-spec",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "Spectrally measured and converted to pHH2O (soil reaction) in unknown soil/water solution",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHH2O_unkn-spec",
+                          "label": "pHProcedure-pHH2O_unkn-spec"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    }
+                  ]
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl",
+                  "label": "pHKCl",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "pHKCl (soil reaction) in a soil/KCl solution (0.01-1 M)",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl",
+                      "label": "pHProcedure-pHKCl"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": [
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_ratio1-1",
+                      "label": "pHKCl_ratio1-1",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHKCl (soil reaction) in 1:1 soil/KCl solution (1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_ratio1-1",
+                          "label": "pHProcedure-pHKCl_ratio1-1"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_ratio1-10",
+                      "label": "pHKCl_ratio1-10",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHKCl (soil reaction) in 1:10 soil/KCl solution (0.01-1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_ratio1-10",
+                          "label": "pHProcedure-pHKCl_ratio1-10"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_ratio1-2",
+                      "label": "pHKCl_ratio1-2",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHKCl (soil reaction) in 1:2 soil/KCl solution (0.01-1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_ratio1-2",
+                          "label": "pHProcedure-pHKCl_ratio1-2"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_ratio1-2.5",
+                      "label": "pHKCl_ratio1-2.5",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHKCl (soil reaction) in 1:2.5 soil/KCl solution (0.01-1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_ratio1-2.5",
+                          "label": "pHProcedure-pHKCl_ratio1-2.5"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_ratio1-5",
+                      "label": "pHKCl_ratio1-5",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHKCl (soil reaction) in 1:5 soil/KCl solution (0.01-1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_ratio1-5",
+                          "label": "pHProcedure-pHKCl_ratio1-5"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    }
+                  ]
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHKCl_sat",
+                  "label": "pHKCl_sat",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "pHKCl (soil reaction) in saturated paste",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHKCl_sat",
+                      "label": "pHProcedure-pHKCl_sat"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF",
+                  "label": "pHNaF",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "pHNaF (soil reaction) in a soil/NaF solution (0.01-1 M)",
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF",
+                      "label": "pHProcedure-pHNaF"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": [
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_ratio1-1",
+                      "label": "pHNaF_ratio1-1",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHNaF (soil reaction) in 1:1 soil/NaF solution (1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_ratio1-1",
+                          "label": "pHProcedure-pHNaF_ratio1-1"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_ratio1-10",
+                      "label": "pHNaF_ratio1-10",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHNaF (soil reaction) in 1:10 soil/NaF solution (0.01-1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_ratio1-10",
+                          "label": "pHProcedure-pHNaF_ratio1-10"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_ratio1-2",
+                      "label": "pHNaF_ratio1-2",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHNaF (soil reaction) in 1:2 soil/NaF solution (0.01-1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_ratio1-2",
+                          "label": "pHProcedure-pHNaF_ratio1-2"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_ratio1-2.5",
+                      "label": "pHNaF_ratio1-2.5",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHNaF (soil reaction) in 1:2.5 soil/NaF solution (0.01-1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_ratio1-2.5",
+                          "label": "pHProcedure-pHNaF_ratio1-2.5"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_ratio1-5",
+                      "label": "pHNaF_ratio1-5",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHNaF (soil reaction) in 1:5 soil/NaF solution (0.01-1 M)",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_ratio1-5",
+                          "label": "pHProcedure-pHNaF_ratio1-5"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#pHProcedure-pHNaF_sat",
+                      "label": "pHNaF_sat",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "pHNaF (soil reaction) in saturated paste",
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/pHProcedure-pHNaF_sat",
+                          "label": "pHProcedure-pHNaF_sat"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    }
+                  ]
+                }
+              ],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#StoneContent",
+              "label": "stone content",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            }
+          ]
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilBiologicalProperties",
+          "label": "soil biological properties",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilChemicalProperties",
+          "label": "soil chemical properties",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilPhysicalProperties",
+          "label": "soil physical properties",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        }
+      ]
+    },
+    {
+      "uri": "https://soilwise-he.github.io/soil-health#SoilProperty",
+      "label": "soil property",
+      "altLabel": null,
       "notation": null,
       "definition": null,
       "exactMatch": [
@@ -18513,9 +21000,9 @@
       "procedures": [],
       "narrower": [
         {
-          "uri": "https://soilwise-he.github.io/soil-health#SoilChemicalProperties",
-          "label": "soil chemical properties",
-          "altLabel": "soil chemical property",
+          "uri": "https://soilwise-he.github.io/soil-health#SoilChemicalProperty",
+          "label": "soil chemical property",
+          "altLabel": null,
           "notation": null,
           "definition": null,
           "exactMatch": [
@@ -19687,9 +22174,9 @@
           ]
         },
         {
-          "uri": "https://soilwise-he.github.io/soil-health#SoilPhysicalProperties",
-          "label": "soil physical properties",
-          "altLabel": "soil physical property",
+          "uri": "https://soilwise-he.github.io/soil-health#SoilPhysicalProperty",
+          "label": "soil physical property",
+          "altLabel": null,
           "notation": null,
           "definition": null,
           "exactMatch": [
@@ -19878,9 +22365,9 @@
                   "narrower": []
                 },
                 {
-                  "uri": "https://soilwise-he.github.io/soil-health#SoilAirContent",
-                  "label": "soil air content",
-                  "altLabel": null,
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilAirContents",
+                  "label": "soil air contents",
+                  "altLabel": "soil air content",
                   "notation": null,
                   "definition": null,
                   "exactMatch": [
@@ -19910,9 +22397,9 @@
                   "narrower": []
                 },
                 {
-                  "uri": "https://soilwise-he.github.io/soil-health#SoilOxygenContent",
-                  "label": "soil oxygen content",
-                  "altLabel": null,
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilOxygenContents",
+                  "label": "soil oxygen contents",
+                  "altLabel": "soil oxygen content",
                   "notation": null,
                   "definition": null,
                   "exactMatch": [
@@ -20251,9 +22738,9 @@
               ]
             },
             {
-              "uri": "https://soilwise-he.github.io/soil-health#SoilContent",
-              "label": "soil content",
-              "altLabel": null,
+              "uri": "https://soilwise-he.github.io/soil-health#SoilContents",
+              "label": "soil contents",
+              "altLabel": "soil content",
               "notation": null,
               "definition": null,
               "exactMatch": [
@@ -20282,9 +22769,9 @@
                   "narrower": []
                 },
                 {
-                  "uri": "https://soilwise-he.github.io/soil-health#SoilAirContent",
-                  "label": "soil air content",
-                  "altLabel": null,
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilAirContents",
+                  "label": "soil air contents",
+                  "altLabel": "soil air content",
                   "notation": null,
                   "definition": null,
                   "exactMatch": [
@@ -20298,9 +22785,9 @@
                   "narrower": []
                 },
                 {
-                  "uri": "https://soilwise-he.github.io/soil-health#SoilClayContent",
-                  "label": "soil clay content",
-                  "altLabel": null,
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilClayContents",
+                  "label": "soil clay contents",
+                  "altLabel": "soil clay content",
                   "notation": null,
                   "definition": null,
                   "exactMatch": [
@@ -20330,9 +22817,9 @@
                   "narrower": []
                 },
                 {
-                  "uri": "https://soilwise-he.github.io/soil-health#SoilGravelContent",
-                  "label": "soil gravel content",
-                  "altLabel": null,
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilGravelContents",
+                  "label": "soil gravel contents",
+                  "altLabel": "soil gravel content",
                   "notation": null,
                   "definition": null,
                   "exactMatch": [
@@ -20346,9 +22833,9 @@
                   "narrower": []
                 },
                 {
-                  "uri": "https://soilwise-he.github.io/soil-health#SoilOrganicMatterContent",
-                  "label": "soil organic matter content",
-                  "altLabel": null,
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilOrganicMatterContents",
+                  "label": "soil organic matter contents",
+                  "altLabel": "soil organic matter content",
                   "notation": null,
                   "definition": null,
                   "exactMatch": [
@@ -20378,9 +22865,9 @@
                   "narrower": []
                 },
                 {
-                  "uri": "https://soilwise-he.github.io/soil-health#SoilOxygenContent",
-                  "label": "soil oxygen content",
-                  "altLabel": null,
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilOxygenContents",
+                  "label": "soil oxygen contents",
+                  "altLabel": "soil oxygen content",
                   "notation": null,
                   "definition": null,
                   "exactMatch": [
@@ -20394,9 +22881,9 @@
                   "narrower": []
                 },
                 {
-                  "uri": "https://soilwise-he.github.io/soil-health#SoilSandContent",
-                  "label": "soil sand content",
-                  "altLabel": null,
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilSandContents",
+                  "label": "soil sand contents",
+                  "altLabel": "soil sand content",
                   "notation": null,
                   "definition": null,
                   "exactMatch": [
@@ -20410,9 +22897,9 @@
                   "narrower": []
                 },
                 {
-                  "uri": "https://soilwise-he.github.io/soil-health#SoilSiltContent",
-                  "label": "soil silt content",
-                  "altLabel": null,
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilSiltContents",
+                  "label": "soil silt contents",
+                  "altLabel": "soil silt content",
                   "notation": null,
                   "definition": null,
                   "exactMatch": [
@@ -23025,9 +25512,9 @@
                   "narrower": []
                 },
                 {
-                  "uri": "https://soilwise-he.github.io/soil-health#SoilMoistureContent",
-                  "label": "soil moisture content",
-                  "altLabel": null,
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilMoistureContents",
+                  "label": "soil moisture contents",
+                  "altLabel": "soil moisture content",
                   "notation": null,
                   "definition": null,
                   "exactMatch": [
@@ -23040,9 +25527,9 @@
                   "procedures": [],
                   "narrower": [
                     {
-                      "uri": "https://soilwise-he.github.io/soil-health#AntecedentSoilMoistureContent",
-                      "label": "antecedent soil moisture content",
-                      "altLabel": null,
+                      "uri": "https://soilwise-he.github.io/soil-health#AntecedentSoilMoistureContents",
+                      "label": "antecedent soil moisture contents",
+                      "altLabel": "antecedent soil moisture content",
                       "notation": null,
                       "definition": null,
                       "exactMatch": [
@@ -23136,9 +25623,9 @@
                       "narrower": []
                     },
                     {
-                      "uri": "https://soilwise-he.github.io/soil-health#SoilGravimetricMoistureContent",
-                      "label": "soil gravimetric moisture content",
-                      "altLabel": null,
+                      "uri": "https://soilwise-he.github.io/soil-health#SoilGravimetricMoistureContents",
+                      "label": "soil gravimetric moisture contents",
+                      "altLabel": "soil gravimetric moisture content",
                       "notation": null,
                       "definition": null,
                       "exactMatch": [
@@ -23152,9 +25639,9 @@
                       "narrower": []
                     },
                     {
-                      "uri": "https://soilwise-he.github.io/soil-health#SoilVolumetricMoistureContent",
-                      "label": "soil volumetric moisture content",
-                      "altLabel": null,
+                      "uri": "https://soilwise-he.github.io/soil-health#SoilVolumetricMoistureContents",
+                      "label": "soil volumetric moisture contents",
+                      "altLabel": "soil volumetric moisture content",
                       "notation": null,
                       "definition": null,
                       "exactMatch": [
@@ -23379,9 +25866,9 @@
                   "narrower": []
                 },
                 {
-                  "uri": "https://soilwise-he.github.io/soil-health#SoilWaterContent",
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilWaterContents",
                   "label": "soil water content",
-                  "altLabel": null,
+                  "altLabel": "soil water content",
                   "notation": null,
                   "definition": null,
                   "exactMatch": [
@@ -23394,9 +25881,9 @@
                   "procedures": [],
                   "narrower": [
                     {
-                      "uri": "https://soilwise-he.github.io/soil-health#PlantAvailableWaterContent",
-                      "label": "plant available water content",
-                      "altLabel": null,
+                      "uri": "https://soilwise-he.github.io/soil-health#PlantAvailableWaterContents",
+                      "label": "plant available water contents",
+                      "altLabel": "plant available water content",
                       "notation": null,
                       "definition": null,
                       "exactMatch": [
@@ -23410,9 +25897,9 @@
                       "narrower": []
                     },
                     {
-                      "uri": "https://soilwise-he.github.io/soil-health#SoilImmobileWaterContent",
-                      "label": "soil immobile water content",
-                      "altLabel": null,
+                      "uri": "https://soilwise-he.github.io/soil-health#SoilImmobileWaterContents",
+                      "label": "soil immobile water contents",
+                      "altLabel": "soil immobile water content",
                       "notation": null,
                       "definition": null,
                       "exactMatch": [
@@ -23426,9 +25913,9 @@
                       "narrower": []
                     },
                     {
-                      "uri": "https://soilwise-he.github.io/soil-health#SoilMobileWaterContent",
-                      "label": "soil mobile water content",
-                      "altLabel": null,
+                      "uri": "https://soilwise-he.github.io/soil-health#SoilMobileWaterContents",
+                      "label": "soil mobile water contents",
+                      "altLabel": "soil mobile water content",
                       "notation": null,
                       "definition": null,
                       "exactMatch": [
@@ -23778,48 +26265,15 @@
       ]
     },
     {
-      "uri": "https://soilwise-he.github.io/soil-health#SoilSealing",
-      "label": "soil sealing",
+      "uri": "https://soilwise-he.github.io/soil-health#SoilQuality",
+      "label": "soil quality",
       "altLabel": null,
       "notation": null,
       "definition": null,
       "exactMatch": [],
       "isProcedure": false,
       "procedures": [],
-      "narrower": [
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#SoilSealingConsistence",
-          "label": "soil sealing consistence",
-          "altLabel": null,
-          "notation": null,
-          "definition": "The sealing consistence of soil describes the resistance of the soil to the formation of a surface crust or compacted layer, which can impede water infiltration and root penetration. This phenomenon typically occurs in fine-textured soils, such as clays and silts, where the particles are tightly bound, leading to a hardened surface layer upon wetting and drying. Sealing consistence affects water movement and can lead to surface runoff and erosion in agricultural soils. Source: Soil Science Society of America (SSSA). (2008). Glossary of Soil Science Terms. Soil Science Society of America. ",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/surface/sealingConsistenceProperty",
-              "label": "sealingConsistenceProperty"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#SoilSealingThickness",
-          "label": "soil sealing thickness",
-          "altLabel": null,
-          "notation": null,
-          "definition": "The sealing thickness refers to the depth of the compacted or sealed layer within the soil, which is typically a result of intense rainfall, drying, or tillage practices. This layer, which forms in fine-textured soils, can significantly reduce water infiltration and root growth, leading to reduced soil aeration and potential surface runoff. The sealing thickness property is crucial for understanding soil erosion risks and water management in agricultural systems. Source: Pagliai, M., & Vignozzi, N. (2002). Soil Structure and Soil Quality: A Review of the State of the Art. Agriculture, Ecosystems & Environment, 88(3), 77-86. ",
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/surface/sealingThicknessProperty",
-              "label": "sealingThicknessProperty"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        }
-      ]
+      "narrower": []
     },
     {
       "uri": "https://soilwise-he.github.io/soil-health#SoilSolidTransport",
@@ -24338,9 +26792,9 @@
               "narrower": []
             },
             {
-              "uri": "https://soilwise-he.github.io/soil-health#CriticalSoilOrganicMatterContent",
-              "label": "critical soil organic matter content",
-              "altLabel": null,
+              "uri": "https://soilwise-he.github.io/soil-health#CriticalSoilOrganicMatterContents",
+              "label": "critical soil organic matter contents",
+              "altLabel": "critical soil organic matter content",
               "notation": null,
               "definition": null,
               "exactMatch": [
@@ -24941,7 +27395,52 @@
           ],
           "isProcedure": false,
           "procedures": [],
-          "narrower": []
+          "narrower": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#Macrofauna",
+              "label": "macrofauna",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#Mesofauna",
+              "label": "mesofauna",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#Microfauna",
+              "label": "microfauna",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#Microorganisms",
+              "label": "microorganisms",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            }
+          ]
         },
         {
           "uri": "https://soilwise-he.github.io/soil-health#SoilChemical",
@@ -25242,9 +27741,9 @@
                           ],
                           "narrower": [
                             {
-                              "uri": "https://soilwise-he.github.io/soil-health#SaltContent",
-                              "label": "salt content",
-                              "altLabel": null,
+                              "uri": "https://soilwise-he.github.io/soil-health#SaltContents",
+                              "label": "salt contents",
+                              "altLabel": "salt content",
                               "notation": null,
                               "definition": "The Salt Content measures the concentration of soluble salts in soil, critical for assessing salinity. Excess salts can hinder plant growth by affecting osmotic potential, leading to reduced water uptake by roots. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils.",
                               "exactMatch": [
@@ -26314,9 +28813,9 @@
                       ],
                       "narrower": [
                         {
-                          "uri": "https://soilwise-he.github.io/soil-health#SaltContent",
-                          "label": "salt content",
-                          "altLabel": null,
+                          "uri": "https://soilwise-he.github.io/soil-health#SaltContents",
+                          "label": "salt contents",
+                          "altLabel": "salt content",
                           "notation": null,
                           "definition": "The Salt Content measures the concentration of soluble salts in soil, critical for assessing salinity. Excess salts can hinder plant growth by affecting osmotic potential, leading to reduced water uptake by roots. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils.",
                           "exactMatch": [
@@ -26905,6 +29404,280 @@
           "narrower": []
         }
       ]
+    },
+    {
+      "uri": "https://soilwise-he.github.io/soil-health#SoilThreatIndicators",
+      "label": "soil threat indicators",
+      "altLabel": null,
+      "notation": null,
+      "definition": null,
+      "exactMatch": [],
+      "isProcedure": false,
+      "procedures": [],
+      "narrower": [
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SOCLoss",
+          "label": "soil organic carbon loss",
+          "altLabel": "SOC loss",
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#Salinisation",
+          "label": "salinisation",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilAcidification",
+          "label": "soil acidification",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [
+            {
+              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilAcidification",
+              "label": "SoilAcidification"
+            }
+          ],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilBiodiversityLoss",
+          "label": "soil biodiversity loss",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilCompaction",
+          "label": "soil compaction",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [
+            {
+              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilCompaction",
+              "label": "SoilCompaction"
+            }
+          ],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilErosion",
+          "label": "soil erosion",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [
+            {
+              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilErosion",
+              "label": "SoilErosion"
+            }
+          ],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilErosionActivityPeriod",
+              "label": "soil erosion activity period",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Soil Erosion Activity Period refers to the time frame during which soil erosion processes, such as wind or water erosion, are most active in a given area. This period is influenced by climatic conditions, seasonal rainfall, and land use, and it helps in assessing the vulnerability of soils to degradation. Source: USDA NRCS, 'Soil Erosion and Conservation'",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/siteplot/erosionActivityPeriodProperty",
+                  "label": "erosionActivityPeriodProperty"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilErosionAreaAffected",
+              "label": "soil erosion area affected",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Soil Erosion Area Affected refers to the extent of land area that has been impacted by soil erosion processes, such as water or wind erosion. This property is important for evaluating the severity of soil degradation in a given region and helps in identifying areas that require soil conservation measures. Source: USDA NRCS, 'Soil Erosion Research and Technology Transfer'",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/siteplot/erosionAreaAffectedProperty",
+                  "label": "erosionAreaAffectedProperty"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilErosionCategory",
+              "label": "soil erosion category",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Soil Erosion Category classifies the type and severity of erosion in a given area. Categories are often based on the nature of the erosive forces (e.g., water, wind) and the degree of soil loss, ranging from slight to severe. This classification aids in prioritizing conservation efforts and understanding the potential impacts on soil quality. Source: FAO, 'Soil Erosion and Conservation'",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/siteplot/erosionCategoryProperty",
+                  "label": "erosionCategoryProperty"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilErosionDegree",
+              "label": "soil erosion degree",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Soil Erosion Degree refers to the level of intensity or severity of soil erosion in an area, categorized into classes such as slight, moderate, or severe. The degree of erosion helps in assessing the extent of soil degradation and informs decisions on soil conservation and land management. Source: FAO, 'Soil Erosion and Conservation'",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/siteplot/erosionDegreeProperty",
+                  "label": "erosionDegreeProperty"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilErosionTotalAreaAffected",
+              "label": "soil erosion total area affected",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Soil Erosion Total Area Affected quantifies the total land area affected by erosion processes. It is an important measure in understanding the broader impact of erosion on soil health, productivity, and ecosystem services across a landscape. Source: USDA NRCS, 'Soil Erosion and Landscape Analysis'",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/siteplot/erosionTotalAreaAffectedProperty",
+                  "label": "erosionTotalAreaAffectedProperty"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            }
+          ]
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilNutrientLoss",
+          "label": "soil nutrient loss",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilNLoss",
+              "label": "soil nitrogen loss",
+              "altLabel": "soil N loss",
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilPLoss",
+              "label": "soil phosphorus loss",
+              "altLabel": "soil P loss",
+              "notation": null,
+              "definition": null,
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            }
+          ]
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilPollution",
+          "label": "soil pollution",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilSealing",
+          "label": "soil sealing",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilSealingConsistence",
+              "label": "soil sealing consistence",
+              "altLabel": null,
+              "notation": null,
+              "definition": "The sealing consistence of soil describes the resistance of the soil to the formation of a surface crust or compacted layer, which can impede water infiltration and root penetration. This phenomenon typically occurs in fine-textured soils, such as clays and silts, where the particles are tightly bound, leading to a hardened surface layer upon wetting and drying. Sealing consistence affects water movement and can lead to surface runoff and erosion in agricultural soils. Source: Soil Science Society of America (SSSA). (2008). Glossary of Soil Science Terms. Soil Science Society of America. ",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/surface/sealingConsistenceProperty",
+                  "label": "sealingConsistenceProperty"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilSealingThickness",
+              "label": "soil sealing thickness",
+              "altLabel": null,
+              "notation": null,
+              "definition": "The sealing thickness refers to the depth of the compacted or sealed layer within the soil, which is typically a result of intense rainfall, drying, or tillage practices. This layer, which forms in fine-textured soils, can significantly reduce water infiltration and root growth, leading to reduced soil aeration and potential surface runoff. The sealing thickness property is crucial for understanding soil erosion risks and water management in agricultural systems. Source: Pagliai, M., & Vignozzi, N. (2002). Soil Structure and Soil Quality: A Review of the State of the Art. Agriculture, Ecosystems & Environment, 88(3), 77-86. ",
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/surface/sealingThicknessProperty",
+                  "label": "sealingThicknessProperty"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "uri": "https://soilwise-he.github.io/soil-health#SoilThreats",
+      "label": "soil threats",
+      "altLabel": null,
+      "notation": null,
+      "definition": null,
+      "exactMatch": [],
+      "isProcedure": false,
+      "procedures": [],
+      "narrower": []
     },
     {
       "uri": "https://soilwise-he.github.io/soil-health#SoilTotalCarbon",
@@ -29287,6 +32060,87 @@
       "isProcedure": false,
       "procedures": [],
       "narrower": []
+    },
+    {
+      "uri": "https://soilwise-he.github.io/soil-health#LandUse",
+      "label": "land use",
+      "altLabel": null,
+      "notation": null,
+      "definition": null,
+      "exactMatch": [
+        {
+          "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#LandUse",
+          "label": "LandUse"
+        }
+      ],
+      "isProcedure": false,
+      "procedures": [],
+      "narrower": [
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#LandUseBareCover",
+          "label": "land use bare cover",
+          "altLabel": null,
+          "notation": null,
+          "definition": "Bare Cover Abundance refers to the extent of land area without vegetation or artificial cover, such as bare soil or rocky surfaces. High proportions of bare cover increase the risk of soil erosion and desertification, particularly in areas with poor vegetation or human disturbance. Source: FAO, 'Land Use and Land Cover Classification'",
+          "exactMatch": [
+            {
+              "uri": "http://w3id.org/glosis/model/siteplot/bareCoverAbundanceProperty",
+              "label": "bareCoverAbundanceProperty"
+            }
+          ],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#LandUseForest",
+          "label": "land use forest",
+          "altLabel": null,
+          "notation": null,
+          "definition": "Forest Abundance refers to the proportion or extent of land covered by forest vegetation in a given area. It is often quantified as the percentage of land area dominated by tree species, reflecting the ecological importance of forests in influencing soil fertility, moisture retention, and biodiversity. Forested areas typically contribute to soil formation and stabilization through leaf litter and root systems that reduce erosion. Source: FAO, 'Forest Resources Assessment'",
+          "exactMatch": [
+            {
+              "uri": "http://w3id.org/glosis/model/siteplot/forestAbundanceProperty",
+              "label": "forestAbundanceProperty"
+            }
+          ],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#LandUseGrasses",
+          "label": "land use grasses",
+          "altLabel": "land use grass",
+          "notation": null,
+          "definition": "Grass Abundance indicates the extent or percentage of land covered by grasses or herbaceous plants. This property is important for understanding land productivity, grazing capacity, and soil health, as grasses play a key role in preventing soil erosion, enhancing organic matter content, and maintaining soil structure. Source: FAO, 'Grassland Ecosystems and Management'",
+          "exactMatch": [
+            {
+              "uri": "http://w3id.org/glosis/model/siteplot/grassAbundanceProperty",
+              "label": "grassAbundanceProperty"
+            }
+          ],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#LandUseShrubs",
+          "label": "land use shrubs",
+          "altLabel": "land use shrub",
+          "notation": null,
+          "definition": "Shrubs Abundance refers to the extent or abundance of shrub vegetation in a given area. Shrubs influence soil structure by reducing erosion, improving soil organic matter through leaf litter, and enhancing nutrient cycling. They are also indicators of ecosystem health in many terrestrial environments. Source: FAO, 'Vegetation and Land Use in Arid Zones'",
+          "exactMatch": [
+            {
+              "uri": "http://w3id.org/glosis/model/siteplot/shrubsAbundanceProperty",
+              "label": "shrubsAbundanceProperty"
+            }
+          ],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        }
+      ]
     }
   ]
 };
