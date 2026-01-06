@@ -2697,7 +2697,6 @@ she:Potassium a skos:Concept ;
     skos:prefLabel "potassium"@en .
 
 she:Salt a skos:Concept ;
-    skos:broader she:Salt ;
     skos:definition "The Salt encompasses all forms of salts present in soil, including sodium chloride, calcium sulfate, and magnesium sulfate. It influences soil chemistry, structure, and plant tolerance to salinity. Source: FAO (2006). Guidelines for Soil Description."@en ;
     skos:exactMatch glosis_lh:saltProperty ;
     skos:narrower she:SolubleSalts ;
