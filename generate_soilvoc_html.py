@@ -124,7 +124,7 @@ def parse_skos_vocabulary_enhanced(ttl_file_path):
     return vocabulary
 
 
-def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap.html'):
+def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
     """
     Generate an enhanced interactive HTML mind map from the vocabulary data.
 
@@ -137,7 +137,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{vocabulary_data['scheme_label']} - Interactive Mind Map</title>
+    <title>{vocabulary_data['scheme_label']}</title>
     <style>
         * {{
             margin: 0;
@@ -599,7 +599,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='soilvoc_mindmap
     <div class="container">
         <div class="header">
             <h1>🌱 SoilVoc</h1>
-            <p>Interactive Soil Vocabulary Thesaurus · SoilWise-HE Project</p>
+            <p>Interactive Soil Vocabulary · <a href="https://soilwise-he.eu" target="_blank">SoilWise-HE Project</a></p>
         </div>
 
         <div class="search-box">
