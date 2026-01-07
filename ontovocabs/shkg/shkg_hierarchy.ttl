@@ -49,7 +49,7 @@ she:SoilProperties a skos:Concept ;
         she:SoilPhysicalProperties ;
     skos:prefLabel "soil properties" .
 
-she:SoilThreatIndicators a skos:Concept ;
+she:SoilThreats a skos:Concept ;
     skos:narrower she:SOCLoss,
         she:Salinisation,
         she:SoilAcidification,
@@ -59,9 +59,6 @@ she:SoilThreatIndicators a skos:Concept ;
         she:SoilNutrientLoss,
         she:SoilPollution,
         she:SoilSealing ;
-    skos:prefLabel "soil threat indicators" .
-
-she:SoilThreats a skos:Concept ;
     skos:prefLabel "soil threats" .
 
 she:Adsorption a skos:Concept ;

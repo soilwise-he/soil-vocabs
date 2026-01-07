@@ -1,0 +1,508 @@
+[
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#BiologicalFeatures",
+    "new_uri": "https://soilwise-he.github.io/soil-health#BiologicalFeatures",
+    "old_pref": "biological features",
+    "new_pref": "biological features",
+    "added_alt": [
+      "biological feature"
+    ],
+    "action": "add_alt",
+    "notes": "add_singular_alt"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#CarbonateContent",
+    "new_uri": "https://soilwise-he.github.io/soil-health#CarbonateContents",
+    "old_pref": "carbonate content",
+    "new_pref": "carbonate contents",
+    "added_alt": [
+      "carbonate content"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "prefer_plural_lemma"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#CationsSum",
+    "new_uri": "https://soilwise-he.github.io/soil-health#CationSum",
+    "old_pref": "cations sum",
+    "new_pref": "cation sum",
+    "added_alt": [
+      "cations sum"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "wordnet:lex=['noun.cognition', 'noun.group']"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#GypsumContent",
+    "new_uri": "https://soilwise-he.github.io/soil-health#GypsumContents",
+    "old_pref": "gypsum content",
+    "new_pref": "gypsum contents",
+    "added_alt": [
+      "gypsum content"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "prefer_plural_lemma"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#GypsumForms",
+    "new_uri": "https://soilwise-he.github.io/soil-health#GypsumForms",
+    "old_pref": "gypsum forms",
+    "new_pref": "gypsum forms",
+    "added_alt": [
+      "gypsum form"
+    ],
+    "action": "add_alt",
+    "notes": "add_singular_alt"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#LandUseGrass",
+    "new_uri": "https://soilwise-he.github.io/soil-health#LandUseGrasses",
+    "old_pref": "land use grass",
+    "new_pref": "land use grasses",
+    "added_alt": [
+      "land use grass"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "wordnet:lex=['noun.plant']"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#LandUseShrubs",
+    "new_uri": "https://soilwise-he.github.io/soil-health#LandUseShrubs",
+    "old_pref": "land use shrubs",
+    "new_pref": "land use shrubs",
+    "added_alt": [
+      "land use shrub"
+    ],
+    "action": "add_alt",
+    "notes": "add_singular_alt"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#MineralContent",
+    "new_uri": "https://soilwise-he.github.io/soil-health#MineralContents",
+    "old_pref": "mineral content",
+    "new_pref": "mineral contents",
+    "added_alt": [
+      "mineral content"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "prefer_plural_lemma"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#MottlesAbundance",
+    "new_uri": "https://soilwise-he.github.io/soil-health#MottleAbundance",
+    "old_pref": "mottles abundance",
+    "new_pref": "mottle abundance",
+    "added_alt": [
+      "mottles abundance"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "abstract_suffix"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#MottlesBoundaryClassification",
+    "new_uri": "https://soilwise-he.github.io/soil-health#MottleBoundaryClassification",
+    "old_pref": "mottles boundary classification",
+    "new_pref": "mottle boundary classification",
+    "added_alt": [
+      "mottles boundary classification"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "abstract_suffix"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#MottlesColour",
+    "new_uri": "https://soilwise-he.github.io/soil-health#MottleColour",
+    "old_pref": "mottles colour",
+    "new_pref": "mottle colour",
+    "added_alt": [
+      "mottles colour"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "wordnet:ambiguous_lex=['noun.attribute', 'noun.cognition', 'noun.group']; unknown_default_singular"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#MottlesContrast",
+    "new_uri": "https://soilwise-he.github.io/soil-health#MottleContrast",
+    "old_pref": "mottles contrast",
+    "new_pref": "mottle contrast",
+    "added_alt": [
+      "mottles contrast"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "wordnet:lex=['noun.act', 'noun.attribute', 'noun.cognition']"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#MottlesPresence",
+    "new_uri": "https://soilwise-he.github.io/soil-health#MottlePresence",
+    "old_pref": "mottles presence",
+    "new_pref": "mottle presence",
+    "added_alt": [
+      "mottles presence"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "abstract_suffix"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#MottlesSize",
+    "new_uri": "https://soilwise-he.github.io/soil-health#MottleSize",
+    "old_pref": "mottles size",
+    "new_pref": "mottle size",
+    "added_alt": [
+      "mottles size"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "wordnet:ambiguous_lex=['noun.attribute', 'noun.state', 'noun.substance']; unknown_default_singular"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#NoTill",
+    "new_uri": "https://soilwise-he.github.io/soil-health#NoTills",
+    "old_pref": "no till",
+    "new_pref": "no tills",
+    "added_alt": [
+      "no till"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "wordnet:lex=['noun.substance']"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#PoresAbundance",
+    "new_uri": "https://soilwise-he.github.io/soil-health#PoreAbundance",
+    "old_pref": "pores abundance",
+    "new_pref": "pore abundance",
+    "added_alt": [
+      "pores abundance"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "abstract_suffix"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#PoresSize",
+    "new_uri": "https://soilwise-he.github.io/soil-health#PoreSize",
+    "old_pref": "pores size",
+    "new_pref": "pore size",
+    "added_alt": [
+      "pores size"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "wordnet:ambiguous_lex=['noun.attribute', 'noun.state', 'noun.substance']; unknown_default_singular"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#RockOutcropsCover",
+    "new_uri": "https://soilwise-he.github.io/soil-health#RockOutcropCover",
+    "old_pref": "rock outcrops cover",
+    "new_pref": "rock outcrop cover",
+    "added_alt": [
+      "rock outcrops cover"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "wordnet:ambiguous_lex=['noun.act', 'noun.artifact', 'noun.object']; unknown_default_singular"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#RockOutcropsDistance",
+    "new_uri": "https://soilwise-he.github.io/soil-health#RockOutcropDistance",
+    "old_pref": "rock outcrops distance",
+    "new_pref": "rock outcrop distance",
+    "added_alt": [
+      "rock outcrops distance"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "abstract_suffix"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#RootsAbundance",
+    "new_uri": "https://soilwise-he.github.io/soil-health#RootAbundance",
+    "old_pref": "roots abundance",
+    "new_pref": "root abundance",
+    "added_alt": [
+      "roots abundance"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "abstract_suffix"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#RootsPresence",
+    "new_uri": "https://soilwise-he.github.io/soil-health#RootPresence",
+    "old_pref": "roots presence",
+    "new_pref": "root presence",
+    "added_alt": [
+      "roots presence"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "abstract_suffix"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#SaltContent",
+    "new_uri": "https://soilwise-he.github.io/soil-health#SaltContents",
+    "old_pref": "salt content",
+    "new_pref": "salt contents",
+    "added_alt": [
+      "salt content"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "prefer_plural_lemma"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#SlopePathways",
+    "new_uri": "https://soilwise-he.github.io/soil-health#SlopePathways",
+    "old_pref": "slope pathways",
+    "new_pref": "slope pathways",
+    "added_alt": [
+      "slope pathway"
+    ],
+    "action": "add_alt",
+    "notes": "add_singular_alt"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#Snow",
+    "new_uri": "https://soilwise-he.github.io/soil-health#Snows",
+    "old_pref": "snow",
+    "new_pref": "snows",
+    "added_alt": [
+      "snow"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "wordnet:lex=['noun.substance']"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#SolubleAnionsTotal",
+    "new_uri": "https://soilwise-he.github.io/soil-health#SolubleAnionTotal",
+    "old_pref": "soluble anions total",
+    "new_pref": "soluble anion total",
+    "added_alt": [
+      "soluble anions total"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "wordnet:lex=['noun.cognition']"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#SolubleCationsTotal",
+    "new_uri": "https://soilwise-he.github.io/soil-health#SolubleCationTotal",
+    "old_pref": "soluble cations total",
+    "new_pref": "soluble cation total",
+    "added_alt": [
+      "soluble cations total"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "wordnet:lex=['noun.cognition']"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#VoidsClassification",
+    "new_uri": "https://soilwise-he.github.io/soil-health#VoidClassification",
+    "old_pref": "voids classification",
+    "new_pref": "void classification",
+    "added_alt": [
+      "voids classification"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "abstract_suffix"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#VoidsDiameter",
+    "new_uri": "https://soilwise-he.github.io/soil-health#VoidDiameter",
+    "old_pref": "voids diameter",
+    "new_pref": "void diameter",
+    "added_alt": [
+      "voids diameter"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "wordnet:lex=['noun.attribute']"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#Iron",
+    "new_uri": "https://soilwise-he.github.io/soil-health#Irons",
+    "old_pref": "iron",
+    "new_pref": "irons",
+    "added_alt": [
+      "iron"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "wordnet:lex=['noun.substance']"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#MineralParticle",
+    "new_uri": "https://soilwise-he.github.io/soil-health#MineralParticles",
+    "old_pref": "mineral particle",
+    "new_pref": "mineral particles",
+    "added_alt": [
+      "mineral particle"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "prefer_plural_lemma"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#RockOutcrops",
+    "new_uri": "https://soilwise-he.github.io/soil-health#RockOutcrops",
+    "old_pref": "rock outcrops",
+    "new_pref": "rock outcrops",
+    "added_alt": [
+      "rock outcrop"
+    ],
+    "action": "add_alt",
+    "notes": "add_singular_alt"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#SoilSolutes",
+    "new_uri": "https://soilwise-he.github.io/soil-health#SoilSolutes",
+    "old_pref": "soil solutes",
+    "new_pref": "soil solutes",
+    "added_alt": [
+      "soil solute"
+    ],
+    "action": "add_alt",
+    "notes": "add_singular_alt"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#SolubleSalts",
+    "new_uri": "https://soilwise-he.github.io/soil-health#SolubleSalts",
+    "old_pref": "soluble salts",
+    "new_pref": "soluble salts",
+    "added_alt": [
+      "soluble salt"
+    ],
+    "action": "add_alt",
+    "notes": "add_singular_alt"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#Micronutrients",
+    "new_uri": "https://soilwise-he.github.io/soil-health#Micronutrients",
+    "old_pref": "micronutrients",
+    "new_pref": "micronutrients",
+    "added_alt": [
+      "micronutrient"
+    ],
+    "action": "add_alt",
+    "notes": "add_singular_alt"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#MoistureContent",
+    "new_uri": "https://soilwise-he.github.io/soil-health#MoistureContents",
+    "old_pref": "moisture content",
+    "new_pref": "moisture contents",
+    "added_alt": [
+      "moisture content"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "prefer_plural_lemma"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#HydrogenExchangeableBases",
+    "new_uri": "https://soilwise-he.github.io/soil-health#HydrogenExchangeableBases",
+    "old_pref": "hydrogen exchangeable bases",
+    "new_pref": "hydrogen exchangeable bases",
+    "added_alt": [
+      "hydrogen exchangeable base"
+    ],
+    "action": "add_alt",
+    "notes": "add_singular_alt"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#MagnesiumExchangeableBases",
+    "new_uri": "https://soilwise-he.github.io/soil-health#MagnesiumExchangeableBases",
+    "old_pref": "magnesium exchangeable bases",
+    "new_pref": "magnesium exchangeable bases",
+    "added_alt": [
+      "magnesium exchangeable base"
+    ],
+    "action": "add_alt",
+    "notes": "add_singular_alt"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#ManganeseExchangeableBases",
+    "new_uri": "https://soilwise-he.github.io/soil-health#ManganeseExchangeableBases",
+    "old_pref": "manganese exchangeable bases",
+    "new_pref": "manganese exchangeable bases",
+    "added_alt": [
+      "manganese exchangeable base"
+    ],
+    "action": "add_alt",
+    "notes": "add_singular_alt"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#PotassiumExchangeableBases",
+    "new_uri": "https://soilwise-he.github.io/soil-health#PotassiumExchangeableBases",
+    "old_pref": "potassium exchangeable bases",
+    "new_pref": "potassium exchangeable bases",
+    "added_alt": [
+      "potassium exchangeable base"
+    ],
+    "action": "add_alt",
+    "notes": "add_singular_alt"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#SodiumExchangeableBases",
+    "new_uri": "https://soilwise-he.github.io/soil-health#SodiumExchangeableBases",
+    "old_pref": "sodium exchangeable bases",
+    "new_pref": "sodium exchangeable bases",
+    "added_alt": [
+      "sodium exchangeable base"
+    ],
+    "action": "add_alt",
+    "notes": "add_singular_alt"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#AluminiumTotalElement",
+    "new_uri": "https://soilwise-he.github.io/soil-health#AluminiumTotalElements",
+    "old_pref": "aluminium total element",
+    "new_pref": "aluminium total elements",
+    "added_alt": [
+      "aluminium total element"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "prefer_plural_element_phrase"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#BoronTotalElement",
+    "new_uri": "https://soilwise-he.github.io/soil-health#BoronTotalElements",
+    "old_pref": "boron total element",
+    "new_pref": "boron total elements",
+    "added_alt": [
+      "boron total element"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "prefer_plural_element_phrase"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#CadmiumTotalElement",
+    "new_uri": "https://soilwise-he.github.io/soil-health#CadmiumTotalElements",
+    "old_pref": "cadmium total element",
+    "new_pref": "cadmium total elements",
+    "added_alt": [
+      "cadmium total element"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "prefer_plural_element_phrase"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#AluminiumExtractableElement",
+    "new_uri": "https://soilwise-he.github.io/soil-health#AluminiumExtractableElements",
+    "old_pref": "aluminium extractable element",
+    "new_pref": "aluminium extractable elements",
+    "added_alt": [
+      "aluminium extractable element"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "prefer_plural_element_phrase"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#BoronExtractableElement",
+    "new_uri": "https://soilwise-he.github.io/soil-health#BoronExtractableElements",
+    "old_pref": "boron extractable element",
+    "new_pref": "boron extractable elements",
+    "added_alt": [
+      "boron extractable element"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "prefer_plural_element_phrase"
+  },
+  {
+    "old_uri": "https://soilwise-he.github.io/soil-health#CadmiumExtractableElement",
+    "new_uri": "https://soilwise-he.github.io/soil-health#CadmiumExtractableElements",
+    "old_pref": "cadmium extractable element",
+    "new_pref": "cadmium extractable elements",
+    "added_alt": [
+      "cadmium extractable element"
+    ],
+    "action": "swap_pref_and_uri",
+    "notes": "prefer_plural_element_phrase"
+  }
+]
