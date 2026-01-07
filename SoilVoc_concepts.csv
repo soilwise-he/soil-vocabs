@@ -1,4 +1,4 @@
-﻿ID,prefLabel,altLabel,definition,broaderTerm,exactMatch,closeMatch
+﻿ID,prefLabel,altLabel,definition,broader,exactMatch,closeMatch
 https://soilwise-he.github.io/soil-health#Acidifiers,acidifiers,,,soil anion content; soil cation content,,
 https://soilwise-he.github.io/soil-health#AcidityExchangeable,acidity exchangeable,,Exchangeable acidity represents the amount of hydrogen (H⁺) and aluminum (Al³⁺) ions adsorbed onto soil particles that can be exchanged with the soil solution. It is a key factor in determining soil liming requirements and improving nutrient availability in acidic soils. Source: Brady & Weil (2017).,exchangeable cation,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aciexc,
 https://soilwise-he.github.io/soil-health#Adsorption,adsorption,,,derived soil properties,,

@@ -6633,8 +6633,7 @@ she:SoilpH a skos:Concept ;
     skos:exactMatch spp:SoilPH,
         glosis_cl:physioChemicalPropertyCode-pH ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil pH",
-        "soil pH"@en ;
+    skos:prefLabel "soil pH"@en ;
     she:hasProcedure she:pHProcedure-pHCaCl2,
         she:pHProcedure-pHH2O,
         she:pHProcedure-pHKCl,

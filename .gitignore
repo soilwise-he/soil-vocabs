@@ -1,3 +1,6 @@
+# vscode
+.vscode
+
 # config
 config
 
@@ -80,6 +83,10 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+# Local restore artifacts (do not commit)
+.tmp/
+SoilVoc_restored.ttl
 
 # IPython
 profile_default/

@@ -1,0 +1,59 @@
+name: Update index.html from SoilVoc CSV
+
+on:
+  push:
+    paths:
+      - SoilVoc_concepts.csv
+      - restore_soilvoc_from_csv.py
+      - generate_soilvoc_html.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-html:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install rdflib
+
+      - name: Restore TTL (temporary)
+        run: |
+          mkdir -p .tmp
+          python restore_soilvoc_from_csv.py --csv SoilVoc_concepts.csv --out .tmp/SoilVoc_restored.ttl --compare .tmp/does_not_exist.ttl
+
+      - name: Generate index.html
+        run: |
+          python -c "import generate_soilvoc_html as m; v=m.parse_skos_vocabulary_enhanced('.tmp/SoilVoc_restored.ttl'); m.generate_html_mindmap_enhanced(v, 'index.html')"
+
+      - name: Clean up temp TTL
+        run: |
+          rm -rf .tmp
+
+      - name: Commit index.html (if changed)
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "index.html unchanged; nothing to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add index.html
+          git commit -m "Auto-update index.html from SoilVoc_concepts.csv"
+          git push

@@ -14,7 +14,6 @@ import traceback
 
 SHE = Namespace("https://soilwise-he.github.io/soil-health#")
 
-
 def parse_skos_vocabulary_enhanced(ttl_file_path):
     """
     Parse a SKOS vocabulary from a Turtle file and extract the hierarchy with procedures.
