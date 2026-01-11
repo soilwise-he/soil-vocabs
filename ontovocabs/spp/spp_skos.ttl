@@ -239,11 +239,12 @@ she:Evapotranspiration a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "evapotranspiration"@en .
 
-she:ExchangeableCation a skos:Concept ;
+she:ExchangeableCations a skos:Concept ;
+    skos:altLabel "exchangeable cation"@en ;
     skos:broader she:Ions ;
     skos:exactMatch spp:ExchangeableCation ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "exchangeable cation"@en .
+    skos:prefLabel "exchangeable cations"@en .
 
 she:ExternalLoad a skos:Concept ;
     skos:broader she:Force ;
@@ -263,11 +264,12 @@ she:FineSand a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "fine sand"@en .
 
-she:Flood a skos:Concept ;
+she:Floods a skos:Concept ;
+    skos:altLabel "flood"@en ;
     skos:broader she:Inundation ;
     skos:exactMatch spp:Flood ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "flood"@en .
+    skos:prefLabel "floods"@en .
 
 she:FluxControlledWaterInfiltration a skos:Concept ;
     skos:broader she:SoilWaterInfiltration ;
@@ -896,11 +898,12 @@ she:SoilAirPermeability a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil air permeability"@en .
 
-she:SoilAlgalCrust a skos:Concept ;
-    skos:broader she:SoilBiologicalCrust ;
+she:SoilAlgalCrusts a skos:Concept ;
+    skos:altLabel "soil algal crust"@en ;
+    skos:broader she:SoilBiologicalCrusts ;
     skos:exactMatch spp:SoilAlgalCrust ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil algal crust"@en .
+    skos:prefLabel "soil algal crusts"@en .
 
 she:SoilAnionExclusion a skos:Concept ;
     skos:broader she:SoilChemicalProcesses ;
@@ -950,11 +953,12 @@ she:SoilChemical a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil chemical"@en .
 
-she:SoilChemicalCrust a skos:Concept ;
-    skos:broader she:SoilCrust ;
+she:SoilChemicalCrusts a skos:Concept ;
+    skos:altLabel "soil chemical crust"@en ;
+    skos:broader she:SoilCrusts ;
     skos:exactMatch spp:SoilChemicalCrust ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil chemical crust"@en .
+    skos:prefLabel "soil chemical crusts"@en .
 
 she:SoilChemicalTransport a skos:Concept ;
     skos:broader she:SoilAgriculturalFunctions ;
@@ -1029,12 +1033,6 @@ she:SoilConsolidation a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil consolidation"@en .
 
-she:SoilCrack a skos:Concept ;
-    skos:broader she:SoilMacropore ;
-    skos:exactMatch spp:SoilCrack ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil crack"@en .
-
 she:SoilCrackingIntensity a skos:Concept ;
     skos:broader she:SoilCrackingPhysicalProperties ;
     skos:exactMatch spp:SoilCrackingIntensity ;
@@ -1046,6 +1044,13 @@ she:SoilCrackingNumber a skos:Concept ;
     skos:exactMatch spp:SoilCrackingNumber ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil cracking number"@en .
+
+she:SoilCracks a skos:Concept ;
+    skos:altLabel "soil crack"@en ;
+    skos:broader she:SoilMacropore ;
+    skos:exactMatch spp:SoilCrack ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "soil cracks"@en .
 
 she:SoilCrustDensity a skos:Concept ;
     skos:broader she:SoilCrustPhysicalProperties ;
@@ -1071,11 +1076,12 @@ she:SoilDenitrification a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil denitrification"@en .
 
-she:SoilDepositionalCrust a skos:Concept ;
-    skos:broader she:SoilPhysicalCrust ;
+she:SoilDepositionalCrusts a skos:Concept ;
+    skos:altLabel "soil depositional crust"@en ;
+    skos:broader she:SoilPhysicalCrusts ;
     skos:exactMatch spp:SoilDepositionalCrust ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil depositional crust"@en .
+    skos:prefLabel "soil depositional crusts"@en .
 
 she:SoilDepth a skos:Concept ;
     skos:broader she:SoilSpatialProperties ;
@@ -1368,11 +1374,12 @@ she:SoilMicrobialRespiration a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil microbial respiration"@en .
 
-she:SoilMicrobioticCrust a skos:Concept ;
-    skos:broader she:SoilCrust ;
+she:SoilMicrobioticCrusts a skos:Concept ;
+    skos:altLabel "soil microbiotic crust"@en ;
+    skos:broader she:SoilCrusts ;
     skos:exactMatch spp:SoilMicrobioticCrust ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil microbiotic crust"@en .
+    skos:prefLabel "soil microbiotic crusts"@en .
 
 she:SoilMicrofauna a skos:Concept ;
     skos:broader she:SoilFauna ;
@@ -1938,11 +1945,12 @@ she:SoilStructuralChange a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil structural change"@en .
 
-she:SoilStructuralCrust a skos:Concept ;
-    skos:broader she:SoilPhysicalCrust ;
+she:SoilStructuralCrusts a skos:Concept ;
+    skos:altLabel "soil structural crust"@en ;
+    skos:broader she:SoilPhysicalCrusts ;
     skos:exactMatch spp:SoilStructuralCrust ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil structural crust"@en .
+    skos:prefLabel "soil structural crusts"@en .
 
 she:SoilStructuralMovement a skos:Concept ;
     skos:broader she:SoilMovement ;
@@ -2040,11 +2048,12 @@ she:SoilTrueDensity a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil true density"@en .
 
-she:SoilType a skos:Concept ;
+she:SoilTypes a skos:Concept ;
+    skos:altLabel "soil type"@en ;
     skos:broader she:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilType ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil type"@en .
+    skos:prefLabel "soil types"@en .
 
 she:SoilViscosity a skos:Concept ;
     skos:broader she:SoilPhysicalProperties ;
@@ -2366,7 +2375,7 @@ she:Inundation a skos:Concept ;
     skos:broader she:PlanetaryPhenomena ;
     skos:exactMatch spp:Inundation ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:Flood ;
+    skos:narrower she:Floods ;
     skos:prefLabel "inundation"@en .
 
 she:IonExchange a skos:Concept ;
@@ -2381,7 +2390,7 @@ she:Ions a skos:Concept ;
     skos:broader she:ChemicalSubstance ;
     skos:exactMatch spp:Ion ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:ExchangeableCation ;
+    skos:narrower she:ExchangeableCations ;
     skos:prefLabel "ions"@en .
 
 she:LeastLimitingWaterRange a skos:Concept ;
@@ -2519,12 +2528,13 @@ she:SoilBearingCapacity a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil bearing capacity"@en .
 
-she:SoilBiologicalCrust a skos:Concept ;
-    skos:broader she:SoilCrust ;
+she:SoilBiologicalCrusts a skos:Concept ;
+    skos:altLabel "soil biological crust"@en ;
+    skos:broader she:SoilCrusts ;
     skos:exactMatch spp:SoilBiologicalCrust ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SoilAlgalCrust ;
-    skos:prefLabel "soil biological crust"@en .
+    skos:narrower she:SoilAlgalCrusts ;
+    skos:prefLabel "soil biological crusts"@en .
 
 she:SoilCarbonDioxideProduction a skos:Concept ;
     skos:broader she:SoilBiologicalProcesses,
@@ -2904,7 +2914,7 @@ she:SoilMacropore a skos:Concept ;
     skos:exactMatch spp:SoilMacropore ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:SoilBiopore,
-        she:SoilCrack ;
+        she:SoilCracks ;
     skos:prefLabel "soil macropore"@en .
 
 she:SoilMicrobialActivity a skos:Concept ;
@@ -2931,13 +2941,14 @@ she:SoilPermeability a skos:Concept ;
         she:SoilWaterPermeability ;
     skos:prefLabel "soil permeability"@en .
 
-she:SoilPhysicalCrust a skos:Concept ;
-    skos:broader she:SoilCrust ;
+she:SoilPhysicalCrusts a skos:Concept ;
+    skos:altLabel "soil physical crust"@en ;
+    skos:broader she:SoilCrusts ;
     skos:exactMatch spp:SoilPhysicalCrust ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SoilDepositionalCrust,
-        she:SoilStructuralCrust ;
-    skos:prefLabel "soil physical crust"@en .
+    skos:narrower she:SoilDepositionalCrusts,
+        she:SoilStructuralCrusts ;
+    skos:prefLabel "soil physical crusts"@en .
 
 she:SoilPoreContinuity a skos:Concept ;
     skos:broader she:SoilPorePhysicalProperties ;
@@ -3351,15 +3362,16 @@ she:SoilAirPhysicalProperties a skos:Concept ;
         she:SoilOxygenContents ;
     skos:prefLabel "soil air physical properties"@en .
 
-she:SoilCrust a skos:Concept ;
+she:SoilCrusts a skos:Concept ;
+    skos:altLabel "soil crust"@en ;
     skos:broader she:SoilSubstance ;
     skos:exactMatch spp:SoilCrust ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SoilBiologicalCrust,
-        she:SoilChemicalCrust,
-        she:SoilMicrobioticCrust,
-        she:SoilPhysicalCrust ;
-    skos:prefLabel "soil crust"@en .
+    skos:narrower she:SoilBiologicalCrusts,
+        she:SoilChemicalCrusts,
+        she:SoilMicrobioticCrusts,
+        she:SoilPhysicalCrusts ;
+    skos:prefLabel "soil crusts"@en .
 
 she:SoilDeformation a skos:Concept ;
     skos:broader she:SoilPhysicalProcesses ;
@@ -3722,7 +3734,7 @@ she:SoilSubstance a skos:Concept ;
     skos:narrower she:SoilBiota,
         she:SoilChemical,
         she:SoilComponent,
-        she:SoilCrust,
+        she:SoilCrusts,
         she:SoilFauna,
         she:SoilNutrient,
         she:SoilPores,
@@ -4084,7 +4096,7 @@ she:SoilPhysicalProperties a skos:Concept ;
         she:SoilTilth,
         she:SoilTrafficability,
         she:SoilTransportability,
-        she:SoilType,
+        she:SoilTypes,
         she:SoilVapourPressure,
         she:SoilViscosity,
         she:SoilVolume,

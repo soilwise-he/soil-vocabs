@@ -7,6 +7,12 @@ she:ProfileDescriptionStatus a skos:Concept ;
     skos:exactMatch glosis_pr:profileDescriptionStatusProperty ;
     skos:prefLabel "profile description status"@en .
 
+she:SoilTypes a skos:Concept ;
+    skos:altLabel "soil type"@en ;
+    skos:definition "The Soil Type categorizes soils based on their physical, chemical, and mineralogical characteristics, as well as their formation processes. It identifies specific soil types, such as sandy, loamy, or clayey soils, or more detailed classifications like Mollisols, Alfisols, or Vertisols, depending on the classification system used (e.g., USDA Soil Taxonomy or FAO WRB). Understanding soil type is essential for predicting soil behavior, determining suitable land uses, and managing resources effectively. Source: USDA-NRCS (1999). Soil Taxonomy: A Basic System of Soil Classification for Making and Interpreting Soil Surveys; FAO (2015). World Reference Base for Soil Resources. "@en ;
+    skos:exactMatch glosis_pr:soilTypeProperty ;
+    skos:prefLabel "soil types"@en .
+
 she:SoilClassificationFAO a skos:Concept ;
     skos:broader she:SoilClassification ;
     skos:prefLabel "soil classification FAO"@en .
@@ -24,9 +30,4 @@ she:SoilClassification a skos:Concept ;
         she:SoilClassificationUSDA,
         she:SoilClassificationWRB ;
     skos:prefLabel "soil classification"@en .
-
-she:SoilType a skos:Concept ;
-    skos:definition "The Soil Type categorizes soils based on their physical, chemical, and mineralogical characteristics, as well as their formation processes. It identifies specific soil types, such as sandy, loamy, or clayey soils, or more detailed classifications like Mollisols, Alfisols, or Vertisols, depending on the classification system used (e.g., USDA Soil Taxonomy or FAO WRB). Understanding soil type is essential for predicting soil behavior, determining suitable land uses, and managing resources effectively. Source: USDA-NRCS (1999). Soil Taxonomy: A Basic System of Soil Classification for Making and Interpreting Soil Surveys; FAO (2015). World Reference Base for Soil Resources. "@en ;
-    skos:exactMatch glosis_pr:soilTypeProperty ;
-    skos:prefLabel "soil type"@en .
 

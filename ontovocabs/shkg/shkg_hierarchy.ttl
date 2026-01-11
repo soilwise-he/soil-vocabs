@@ -2,25 +2,28 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 she:EcosystemServices a skos:Concept ;
+    skos:altLabel "ecosystem service"@en ;
     skos:narrower she:CulturalServices,
         she:ProvisioningServices,
         she:RegulatingServices,
         she:SupportingServices ;
-    skos:prefLabel "ecosystem services" .
+    skos:prefLabel "ecosystem services"@en .
 
 she:NonsoilIndicators a skos:Concept ;
+    skos:altLabel "non-soil indicator"@en ;
     skos:narrower she:EnvironmentalFactors,
         she:ExternalFactors ;
-    skos:prefLabel "non-soil indicators" .
+    skos:prefLabel "non-soil indicators"@en .
 
 she:SoilDegradation a skos:Concept ;
     skos:narrower she:SoilBiologicalDegradation,
         she:SoilChemicalDegradation,
         she:SoilEcologicalDegradation,
         she:SoilPhysicalDegradation ;
-    skos:prefLabel "soil degradation" .
+    skos:prefLabel "soil degradation"@en .
 
 she:SoilFunctionIndicators a skos:Concept ;
+    skos:altLabel "soil function indicator"@en ;
     skos:narrower she:BiomassProductivity,
         she:CarbonStorageCapacity,
         she:GroundwaterReproduction,
@@ -29,27 +32,30 @@ she:SoilFunctionIndicators a skos:Concept ;
         she:NutrientMobilisationCapacity,
         she:SoilMoistureDeficit,
         she:WaterStorageCapacity ;
-    skos:prefLabel "soil function indicators" .
+    skos:prefLabel "soil function indicators"@en .
 
 she:SoilFunctions a skos:Concept ;
+    skos:altLabel "soil function"@en ;
     skos:narrower she:SoilBiologicalFunctions,
         she:SoilChemicalFunctions,
         she:SoilPhysicalFunctions ;
-    skos:prefLabel "soil functions" .
+    skos:prefLabel "soil functions"@en .
 
 she:SoilHealth a skos:Concept ;
-    skos:definition "Soil health is the level to which soil functions are fulfilled." ;
-    skos:prefLabel "soil health" .
+    skos:definition "Soil health is the level to which soil functions are fulfilled."@en ;
+    skos:prefLabel "soil health"@en .
 
 she:SoilProperties a skos:Concept ;
+    skos:altLabel "soil property"@en ;
     skos:narrower she:DerivedSoilProperties,
         she:ObservableSoilProperties,
         she:SoilBiologicalProperties,
         she:SoilChemicalProperties,
         she:SoilPhysicalProperties ;
-    skos:prefLabel "soil properties" .
+    skos:prefLabel "soil properties"@en .
 
 she:SoilThreats a skos:Concept ;
+    skos:altLabel "soil threat"@en ;
     skos:narrower she:SOCLoss,
         she:Salinisation,
         she:SoilAcidification,
@@ -59,33 +65,35 @@ she:SoilThreats a skos:Concept ;
         she:SoilNutrientLoss,
         she:SoilPollution,
         she:SoilSealing ;
-    skos:prefLabel "soil threats" .
+    skos:prefLabel "soil threats"@en .
 
 she:Adsorption a skos:Concept ;
-    skos:prefLabel "adsorption" .
+    skos:prefLabel "adsorption"@en .
 
 she:BiomassProductivity a skos:Concept ;
-    skos:prefLabel "biomass productivity" .
+    skos:prefLabel "biomass productivity"@en .
 
 she:BulkDensity a skos:Concept ;
-    skos:prefLabel "bulk density" .
+    skos:prefLabel "bulk density"@en .
 
 she:CarbonStorageCapacity a skos:Concept ;
-    skos:prefLabel "carbon storage capacity" .
+    skos:prefLabel "carbon storage capacity"@en .
 
 she:CationExchangeCapacity a skos:Concept ;
-    skos:prefLabel "cation exchange capacity" .
+    skos:prefLabel "cation exchange capacity"@en .
 
 she:ClayMineralogy a skos:Concept ;
-    skos:prefLabel "clay mineralogy" .
+    skos:prefLabel "clay mineralogy"@en .
 
 she:Climate a skos:Concept ;
-    skos:prefLabel "climate" .
+    skos:prefLabel "climate"@en .
 
 she:CulturalServices a skos:Concept ;
-    skos:prefLabel "cultural services" .
+    skos:altLabel "cultural service"@en ;
+    skos:prefLabel "cultural services"@en .
 
 she:DerivedSoilProperties a skos:Concept ;
+    skos:altLabel "derived soil property"@en ;
     skos:narrower she:Adsorption,
         she:CationExchangeCapacity,
         she:ElectricConductivity,
@@ -96,66 +104,72 @@ she:DerivedSoilProperties a skos:Concept ;
         she:SoilPorosity,
         she:WaterInfiltration,
         she:WaterRunoff ;
-    skos:prefLabel "derived soil properties" .
+    skos:prefLabel "derived soil properties"@en .
 
 she:ElectricConductivity a skos:Concept ;
-    skos:prefLabel "electric conductivity" .
+    skos:prefLabel "electric conductivity"@en .
 
 she:Emissions a skos:Concept ;
-    skos:prefLabel "emissions" .
+    skos:altLabel "emission"@en ;
+    skos:prefLabel "emissions"@en .
 
 she:EnvironmentalFactors a skos:Concept ;
-    skos:prefLabel "environmental factors" .
+    skos:altLabel "environmental factor"@en ;
+    skos:prefLabel "environmental factors"@en .
 
 she:Erodibility a skos:Concept ;
-    skos:prefLabel "erodibility" .
+    skos:prefLabel "erodibility"@en .
 
 she:ExternalFactors a skos:Concept ;
+    skos:altLabel "external factor"@en ;
     skos:narrower she:Climate,
         she:Emissions,
         she:Inputs,
         she:LandUse ;
-    skos:prefLabel "external factors" .
+    skos:prefLabel "external factors"@en .
 
 she:GroundwaterReproduction a skos:Concept ;
-    skos:prefLabel "groundwater reproduction" .
+    skos:prefLabel "groundwater reproduction"@en .
 
 she:HabitatProvisionCapacity a skos:Concept ;
-    skos:prefLabel "habitat provision capacity" .
+    skos:prefLabel "habitat provision capacity"@en .
 
 she:HydraulicConductivity a skos:Concept ;
-    skos:prefLabel "hydraulic conductivity" .
+    skos:prefLabel "hydraulic conductivity"@en .
 
 she:Inputs a skos:Concept ;
-    skos:prefLabel "inputs" .
+    skos:altLabel "input"@en ;
+    skos:prefLabel "inputs"@en .
 
 she:LandUse a skos:Concept ;
-    skos:prefLabel "land use" .
+    skos:prefLabel "land use"@en .
 
 she:Macrofauna a skos:Concept ;
-    skos:prefLabel "macrofauna" .
+    skos:prefLabel "macrofauna"@en .
 
 she:Mesofauna a skos:Concept ;
-    skos:prefLabel "mesofauna" .
+    skos:prefLabel "mesofauna"@en .
 
 she:Microfauna a skos:Concept ;
-    skos:prefLabel "microfauna" .
+    skos:prefLabel "microfauna"@en .
 
 she:Microorganisms a skos:Concept ;
-    skos:prefLabel "microorganisms" .
+    skos:altLabel "microorganism"@en ;
+    skos:prefLabel "microorganisms"@en .
 
 she:NutrientBufferingCapacity a skos:Concept ;
-    skos:prefLabel "nutrient buffering capacity" .
+    skos:prefLabel "nutrient buffering capacity"@en .
 
 she:NutrientMobilisationCapacity a skos:Concept ;
-    skos:prefLabel "nutrient mobilisation capacity" .
+    skos:prefLabel "nutrient mobilisation capacity"@en .
 
 she:ObservableSoilProperties a skos:Concept ;
+    skos:altLabel "observable soil property"@en ;
     skos:narrower she:BulkDensity,
         she:ClayMineralogy,
-        she:SoilAnionContent,
+        she:SoilAnionContents,
         she:SoilBiota,
-        she:SoilCationContent,
+        she:SoilCationContents,
         she:SoilDepth,
         she:SoilNitrogen,
         she:SoilOrganicCarbon,
@@ -163,51 +177,56 @@ she:ObservableSoilProperties a skos:Concept ;
         she:SoilStructure,
         she:SoilTemperature,
         she:SoilTexturalClasses,
-        she:SoilWaterContent,
+        she:SoilWaterContents,
         she:SoilpH,
-        she:StoneContent ;
-    skos:prefLabel "observable soil properties" .
+        she:StoneContents ;
+    skos:prefLabel "observable soil properties"@en .
 
 she:ProvisioningServices a skos:Concept ;
-    skos:prefLabel "provisioning services" .
+    skos:altLabel "provisioning service"@en ;
+    skos:prefLabel "provisioning services"@en .
 
 she:RegulatingServices a skos:Concept ;
-    skos:prefLabel "regulating services" .
+    skos:altLabel "regulating service"@en ;
+    skos:prefLabel "regulating services"@en .
 
 she:RootingDepth a skos:Concept ;
-    skos:prefLabel "rooting depth" .
+    skos:prefLabel "rooting depth"@en .
 
 she:SOCLoss a skos:Concept ;
-    skos:altLabel "SOC loss" ;
-    skos:prefLabel "soil organic carbon loss" .
+    skos:altLabel "SOC loss"@en ;
+    skos:prefLabel "soil organic carbon loss"@en .
 
 she:Salinisation a skos:Concept ;
-    skos:prefLabel "salinisation" .
+    skos:prefLabel "salinisation"@en .
 
 she:SoilAcidification a skos:Concept ;
-    skos:prefLabel "soil acidification" .
+    skos:prefLabel "soil acidification"@en .
 
 she:SoilAggregateStability a skos:Concept ;
-    skos:prefLabel "soil aggregate stability" .
+    skos:prefLabel "soil aggregate stability"@en .
 
-she:SoilAnionContent a skos:Concept ;
+she:SoilAnionContents a skos:Concept ;
+    skos:altLabel "soil anion content"@en ;
     skos:narrower she:Acidifiers,
         she:Salts,
         she:SoilContaminants,
         she:SoilNutrients ;
-    skos:prefLabel "soil anion content" .
+    skos:prefLabel "soil anion contents"@en .
 
 she:SoilBiodiversityLoss a skos:Concept ;
-    skos:prefLabel "soil biodiversity loss" .
+    skos:prefLabel "soil biodiversity loss"@en .
 
 she:SoilBiologicalDegradation a skos:Concept ;
-    skos:prefLabel "soil biological degradation" .
+    skos:prefLabel "soil biological degradation"@en .
 
 she:SoilBiologicalFunctions a skos:Concept ;
-    skos:prefLabel "soil biological functions" .
+    skos:altLabel "soil biological function"@en ;
+    skos:prefLabel "soil biological functions"@en .
 
 she:SoilBiologicalProperties a skos:Concept ;
-    skos:prefLabel "soil biological properties" ;
+    skos:altLabel "soil biological property"@en ;
+    skos:prefLabel "soil biological properties"@en ;
     skos:related she:SoilQuality .
 
 she:SoilBiota a skos:Concept ;
@@ -215,123 +234,135 @@ she:SoilBiota a skos:Concept ;
         she:Mesofauna,
         she:Microfauna,
         she:Microorganisms ;
-    skos:prefLabel "soil biota" .
+    skos:prefLabel "soil biota"@en .
 
-she:SoilCationContent a skos:Concept ;
+she:SoilCationContents a skos:Concept ;
+    skos:altLabel "soil cation content"@en ;
     skos:narrower she:Acidifiers,
         she:Salts,
         she:SoilContaminants,
         she:SoilNutrients ;
-    skos:prefLabel "soil cation content" .
+    skos:prefLabel "soil cation contents"@en .
 
 she:SoilChemicalDegradation a skos:Concept ;
-    skos:prefLabel "soil chemical degradation" .
+    skos:prefLabel "soil chemical degradation"@en .
 
 she:SoilChemicalFunctions a skos:Concept ;
-    skos:prefLabel "soil chemical functions" .
+    skos:altLabel "soil chemical function"@en ;
+    skos:prefLabel "soil chemical functions"@en .
 
 she:SoilChemicalProperties a skos:Concept ;
-    skos:prefLabel "soil chemical properties" ;
+    skos:altLabel "soil chemical property"@en ;
+    skos:prefLabel "soil chemical properties"@en ;
     skos:related she:SoilQuality .
 
 she:SoilCompaction a skos:Concept ;
-    skos:prefLabel "soil compaction" .
+    skos:prefLabel "soil compaction"@en .
 
 she:SoilDepth a skos:Concept ;
-    skos:prefLabel "soil depth" .
+    skos:prefLabel "soil depth"@en .
 
 she:SoilEcologicalDegradation a skos:Concept ;
-    skos:prefLabel "soil ecological degradation" .
+    skos:prefLabel "soil ecological degradation"@en .
 
 she:SoilErosion a skos:Concept ;
-    skos:prefLabel "soil erosion" .
+    skos:prefLabel "soil erosion"@en .
 
 she:SoilMoistureDeficit a skos:Concept ;
-    skos:prefLabel "soil moisture deficit" .
+    skos:prefLabel "soil moisture deficit"@en .
 
 she:SoilNLoss a skos:Concept ;
-    skos:altLabel "soil N loss" ;
-    skos:prefLabel "soil nitrogen loss" .
+    skos:altLabel "soil N loss"@en ;
+    skos:prefLabel "soil nitrogen loss"@en .
 
 she:SoilNitrogen a skos:Concept ;
-    skos:prefLabel "soil nitrogen" .
+    skos:prefLabel "soil nitrogen"@en .
 
 she:SoilNutrientLoss a skos:Concept ;
     skos:narrower she:SoilNLoss,
         she:SoilPLoss ;
-    skos:prefLabel "soil nutrient loss" .
+    skos:prefLabel "soil nutrient loss"@en .
 
 she:SoilOrganicCarbon a skos:Concept ;
-    skos:prefLabel "soil organic carbon" .
+    skos:prefLabel "soil organic carbon"@en .
 
 she:SoilPLoss a skos:Concept ;
-    skos:altLabel "soil P loss" ;
-    skos:prefLabel "soil phosphorus loss" .
+    skos:altLabel "soil P loss"@en ;
+    skos:prefLabel "soil phosphorus loss"@en .
 
 she:SoilPhosphorus a skos:Concept ;
-    skos:prefLabel "soil phosphorus" .
+    skos:prefLabel "soil phosphorus"@en .
 
 she:SoilPhysicalDegradation a skos:Concept ;
-    skos:prefLabel "soil physical degradation" .
+    skos:prefLabel "soil physical degradation"@en .
 
 she:SoilPhysicalFunctions a skos:Concept ;
-    skos:prefLabel "soil physical functions" .
+    skos:altLabel "soil physical function"@en ;
+    skos:prefLabel "soil physical functions"@en .
 
 she:SoilPhysicalProperties a skos:Concept ;
-    skos:prefLabel "soil physical properties" ;
+    skos:altLabel "soil physical property"@en ;
+    skos:prefLabel "soil physical properties"@en ;
     skos:related she:SoilQuality .
 
 she:SoilPollution a skos:Concept ;
-    skos:prefLabel "soil pollution" .
+    skos:prefLabel "soil pollution"@en .
 
 she:SoilPorosity a skos:Concept ;
-    skos:prefLabel "soil porosity" .
+    skos:prefLabel "soil porosity"@en .
 
 she:SoilSealing a skos:Concept ;
-    skos:prefLabel "soil sealing" .
+    skos:prefLabel "soil sealing"@en .
 
 she:SoilStructure a skos:Concept ;
-    skos:prefLabel "soil structure" .
+    skos:prefLabel "soil structure"@en .
 
 she:SoilTemperature a skos:Concept ;
-    skos:prefLabel "soil temperature" .
+    skos:prefLabel "soil temperature"@en .
 
 she:SoilTexturalClasses a skos:Concept ;
-    skos:prefLabel "soil textural classes" .
+    skos:altLabel "soil textural class"@en ;
+    skos:prefLabel "soil textural classes"@en .
 
-she:SoilWaterContent a skos:Concept ;
-    skos:prefLabel "soil water content" .
+she:SoilWaterContents a skos:Concept ;
+    skos:altLabel "soil water content"@en ;
+    skos:prefLabel "soil water contents"@en .
 
 she:SoilpH a skos:Concept ;
-    skos:prefLabel "soil pH" .
+    skos:prefLabel "soil pH"@en .
 
-she:StoneContent a skos:Concept ;
-    skos:prefLabel "stone content" .
+she:StoneContents a skos:Concept ;
+    skos:altLabel "stone content"@en ;
+    skos:prefLabel "stone contents"@en .
 
 she:SupportingServices a skos:Concept ;
-    skos:prefLabel "supporting services" .
+    skos:altLabel "supporting service"@en ;
+    skos:prefLabel "supporting services"@en .
 
 she:WaterInfiltration a skos:Concept ;
-    skos:prefLabel "water infiltration" .
+    skos:prefLabel "water infiltration"@en .
 
 she:WaterRunoff a skos:Concept ;
-    skos:prefLabel "water runoff" .
+    skos:prefLabel "water runoff"@en .
 
 she:WaterStorageCapacity a skos:Concept ;
-    skos:prefLabel "water storage capacity" .
+    skos:prefLabel "water storage capacity"@en .
 
 she:Acidifiers a skos:Concept ;
-    skos:prefLabel "acidifiers" .
+    skos:prefLabel "acidifiers"@en .
 
 she:Salts a skos:Concept ;
-    skos:prefLabel "salts" .
+    skos:altLabel "salt"@en ;
+    skos:prefLabel "salts"@en .
 
 she:SoilContaminants a skos:Concept ;
-    skos:prefLabel "soil contaminants" .
+    skos:altLabel "soil contaminant"@en ;
+    skos:prefLabel "soil contaminants"@en .
 
 she:SoilNutrients a skos:Concept ;
-    skos:prefLabel "soil nutrients" .
+    skos:altLabel "soil nutrient"@en ;
+    skos:prefLabel "soil nutrients"@en .
 
 she:SoilQuality a skos:Concept ;
-    skos:prefLabel "soil quality" .
+    skos:prefLabel "soil quality"@en .
 
