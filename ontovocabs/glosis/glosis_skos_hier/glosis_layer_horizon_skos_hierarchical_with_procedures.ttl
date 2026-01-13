@@ -2,6 +2,7 @@
 @prefix glosis_lh: <http://w3id.org/glosis/model/layerhorizon/> .
 @prefix glosis_proc: <http://w3id.org/glosis/model/procedure/> .
 @prefix she: <https://soilwise-he.github.io/soil-health#> .
+@prefix sio: <http://semanticscience.org/resource/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 she:AcidityExchangeable a skos:Concept ;
@@ -58,12 +59,14 @@ she:DryConsistency a skos:Concept ;
     skos:prefLabel "dry consistency"@en .
 
 she:FragmentClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "The Fragments Class categorizes the size, shape, and quantity of coarse fragments (e.g., gravel, stones) present in the soil. These fragments affect soil porosity, water retention, and root penetration. The classification includes gravelly, stony, or bouldery soils. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:fragmentsClassProperty ;
     skos:prefLabel "fragment class"@en .
 
 she:HydrogenExchangeableBases a skos:Concept ;
     skos:altLabel "hydrogen exchangeable base"@en ;
+    skos:broader she:SoilChemicalProperties ;
     skos:definition "Hydrogen ions bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Hydexc ;
     skos:prefLabel "hydrogen exchangeable bases"@en ;
@@ -81,6 +84,7 @@ she:HydrogenExchangeableBases a skos:Concept ;
 
 she:Macronutrients a skos:Concept ;
     skos:altLabel "macronutrient"@en ;
+    skos:broader she:SoilNutrients ;
     skos:narrower she:Calcium,
         she:Nitrogen,
         she:Phosphorus,
@@ -90,6 +94,7 @@ she:Macronutrients a skos:Concept ;
 
 she:Micronutrients a skos:Concept ;
     skos:altLabel "micronutrient"@en ;
+    skos:broader she:SoilNutrients ;
     skos:narrower she:Boron,
         she:Copper,
         she:Iron,
@@ -107,6 +112,7 @@ she:MoistConsistency a skos:Concept ;
 
 she:MoistureContents a skos:Concept ;
     skos:altLabel "moisture content"@en ;
+    skos:broader she:SoilWaterPhysicalProperties ;
     skos:definition "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:moistureContentProperty ;
     skos:prefLabel "moisture contents"@en ;
@@ -121,17 +127,19 @@ she:MoistureContents a skos:Concept ;
         she:moistureContentProcedure-VMC_ud-co .
 
 she:OxalateExtractableOpticalDensity a skos:Concept ;
+    skos:broader she:SoilChemicalProperties ;
     skos:definition "The Oxalate Extractable Optical Density measures the concentration of poorly crystalline forms of iron, aluminum, and organic matter in soil, often associated with volcanic soils. It is determined using ammonium oxalate extraction. Source: Sparks, D.L. (2003). Environmental Soil Chemistry."@en ;
     skos:exactMatch glosis_lh:oxalateExtractableOpticalDensityProperty ;
     skos:prefLabel "oxalate extractable optical density"@en .
 
 she:ParticleSizeFractionSum a skos:Concept ;
-    skos:broader she:SoilParticles ;
+    skos:broader she:SoilParticlePhysicalProperties ;
     skos:definition "The Particle Size Fractions Sum refers to the total proportion of sand, silt, and clay particles in soil, expressed as a percentage. It ensures the sum of individual particle size fractions adds up to 100%, a check for accurate soil texture analysis. Particle size distribution impacts water retention, permeability, and soil structure. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:particleSizeFractionsSumProperty ;
     skos:prefLabel "particle size fraction sum"@en .
 
 she:PorosityClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "The Porosity Class classifies soil by the proportion of pore spaces, typically expressed as a percentage. Classes include high, medium, or low porosity, influencing water and air movement in the soil. Source: Soil Science Society of America (SSSA) Glossary."@en ;
     skos:exactMatch glosis_lh:porosityClassProperty ;
     skos:prefLabel "porosity class"@en .
@@ -172,6 +180,7 @@ she:SoilPorosity a skos:Concept ;
     she:hasProcedure she:porosityProcedure-Poros_calcul-pf0 .
 
 she:SoilTotalCarbon a skos:Concept ;
+    skos:broader she:SoilChemicalProperties ;
     skos:definition "Total carbon in soil includes both organic carbon (from plant and microbial residues) and inorganic carbon (primarily carbonates). It is a fundamental component of soil organic matter, influencing soil fertility, structure, and water retention. High carbon levels are associated with better soil health and productivity. Source: USDA NRCS."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cartot ;
     skos:narrower she:SoilInorganicCarbon,
@@ -194,16 +203,20 @@ she:SoilpH a skos:Concept ;
         she:pHProcedure-pHNaF .
 
 she:Stickiness a skos:Concept ;
+    sio:equivalentTo she:SoilAdhesion ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:definition "The Stickiness measures the soil’s tendency to adhere to surfaces or objects when wet. It is influenced by clay content and organic matter and affects soil workability and machinery use. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:stickinessProperty ;
     skos:prefLabel "stickiness"@en .
 
 she:TextureFieldClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "The Texture Field Class categorizes soil texture based on the relative proportions of sand, silt, and clay, as assessed by field methods like the ribbon test. Field classes include sandy loam, clay loam, etc. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:textureFieldClassProperty ;
     skos:prefLabel "texture field class"@en .
 
 she:TextureLabClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "The Texture Lab Class defines soil texture using laboratory-determined particle size distributions. This property provides a precise classification of soil as sand, silt, or clay using standard methods. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ;
     skos:exactMatch glosis_lh:textureLabClassProperty ;
     skos:prefLabel "texture lab class"@en .
@@ -243,6 +256,7 @@ she:TotalCarbonateEquivalent a skos:Concept ;
         she:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc .
 
 she:ToxicElements a skos:Concept ;
+    skos:broader she:SoilPollution ;
     skos:narrower she:Aluminium,
         she:Cadmium ;
     skos:prefLabel "toxic elements"@en .
@@ -329,14 +343,14 @@ she:AluminiumTotalElements a skos:Concept ;
         she:totalElementsProcedure-Total_xtf-t .
 
 she:BiologicalAbundance a skos:Concept ;
-    skos:broader she:SoilBiology ;
+    skos:broader she:SoilBiologicalProperties ;
     skos:definition "The Biological Abundance evaluates the presence and quantity of soil organisms, such as microbes, insects, and earthworms. This property reflects soil health, nutrient cycling, and organic matter decomposition, which are vital for maintaining soil fertility. Source: Lavelle, P., & Spain, A.V. (2001). Soil Ecology."@en ;
     skos:exactMatch glosis_lh:biologicalAbundanceProperty ;
     skos:prefLabel "biological abundance"@en .
 
 she:BiologicalFeatures a skos:Concept ;
     skos:altLabel "biological feature"@en ;
-    skos:broader she:SoilBiology ;
+    skos:broader she:SoilBiologicalProperties ;
     skos:definition "The Biological Features examines qualitative aspects of soil biological activity, including the types of organisms present, their diversity, and their roles in soil ecosystems. It encompasses processes like nitrogen fixation, organic matter decomposition, and bioturbation. Source: Soil Science Society of America (SSSA) Glossary."@en ;
     skos:exactMatch glosis_lh:biologicalFeaturesProperty ;
     skos:prefLabel "biological features"@en .
@@ -1333,14 +1347,14 @@ she:PotassiumTotalElements a skos:Concept ;
 
 she:RootAbundance a skos:Concept ;
     skos:altLabel "roots abundance"@en ;
-    skos:broader she:Root ;
+    skos:broader she:Roots ;
     skos:definition "The Roots Abundance describes the quantity of plant roots within a soil profile, typically categorized as few, common, or many. Root abundance reflects plant-soil interactions, soil fertility, and the physical structure that supports vegetation. Source: Soil Survey Manual (USDA, 2017)."@en ;
     skos:exactMatch glosis_lh:rootsAbundanceProperty ;
     skos:prefLabel "root abundance"@en .
 
 she:RootPresence a skos:Concept ;
     skos:altLabel "roots presence"@en ;
-    skos:broader she:Root ;
+    skos:broader she:Roots ;
     skos:definition "The Roots Presence identifies whether roots are visible in a soil profile or horizon. It indicates biological activity, soil health, and the suitability of the soil for plant growth. Roots are commonly observed during soil surveys and are classified by type and density. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ;
     skos:exactMatch glosis_lh:rootsPresenceProperty ;
     skos:prefLabel "root presence"@en .
@@ -1569,14 +1583,14 @@ she:SulfurTotalElements a skos:Concept ;
 
 she:VoidClassification a skos:Concept ;
     skos:altLabel "voids classification"@en ;
-    skos:broader she:SoilVoid ;
+    skos:broader she:SoilVoids ;
     skos:definition "The Voids Classification categorizes voids or pores in the soil based on size, shape, and arrangement. These voids are critical for water movement, air circulation, and root penetration. They are classified into macropores (large), mesopores (medium), and micropores (small). Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ;
     skos:exactMatch glosis_lh:voidsClassificationProperty ;
     skos:prefLabel "void classification"@en .
 
 she:VoidDiameter a skos:Concept ;
     skos:altLabel "voids diameter"@en ;
-    skos:broader she:SoilVoid ;
+    skos:broader she:SoilVoids ;
     skos:definition "The Voids Diameter refers to the size of void spaces in soil, which can range from macro-voids (larger pores) to micro-voids (tiny pores). Voids diameter impacts soil aeration, water retention, and drainage. Source: Soil Science Society of America (SSSA) Glossary."@en ;
     skos:exactMatch glosis_lh:voidsDiameterProperty ;
     skos:prefLabel "void diameter"@en .
@@ -2610,6 +2624,7 @@ she:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc a skos:Concept ;
     skos:prefLabel "CaCO3_calcul-tc-oc"@en .
 
 she:MineralParticles a skos:Concept ;
+    skos:broader she:SoilMineralMatter ;
     skos:altLabel "mineral particle"@en ;
     skos:narrower she:MineralContents,
         she:MineralFragments ;
@@ -2619,15 +2634,11 @@ she:Nitrogen a skos:Concept ;
     skos:narrower she:NitrogenTotal ;
     skos:prefLabel "nitrogen"@en .
 
-she:Root a skos:Concept ;
+she:Roots a skos:Concept ;
+    skos:altLabel "root"@en ;
     skos:narrower she:RootAbundance,
         she:RootPresence ;
-    skos:prefLabel "root"@en .
-
-she:SoilBiology a skos:Concept ;
-    skos:narrower she:BiologicalAbundance,
-        she:BiologicalFeatures ;
-    skos:prefLabel "soil biology"@en .
+    skos:prefLabel "roots"@en .
 
 she:SoilConsistence a skos:Concept ;
     skos:narrower she:ConsistenceDry,
@@ -2635,6 +2646,7 @@ she:SoilConsistence a skos:Concept ;
     skos:prefLabel "soil consistence"@en .
 
 she:SoilHorizonBoundary a skos:Concept ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:narrower she:BoundaryDistinctness,
         she:BoundaryTopography ;
     skos:prefLabel "soil horizon boundary"@en .
@@ -2650,10 +2662,12 @@ she:SoilStructure a skos:Concept ;
         she:StructureSize ;
     skos:prefLabel "soil structure"@en .
 
-she:SoilVoid a skos:Concept ;
+she:SoilVoids a skos:Concept ;
+    skos:broader she:SoilPhysicalProperties ;
+    skos:altLabel "soil void"@en ;
     skos:narrower she:VoidClassification,
         she:VoidDiameter ;
-    skos:prefLabel "soil void"@en .
+    skos:prefLabel "soil voids"@en .
 
 she:Boron a skos:Concept ;
     skos:narrower she:BoronExtractableElements,
@@ -2666,6 +2680,7 @@ she:Cadmium a skos:Concept ;
     skos:prefLabel "cadmium"@en .
 
 she:Carbonate a skos:Concept ;
+    skos:broader she:SoilChemicalProperties ;
     skos:narrower she:CarbonateContents,
         she:CarbonateForms ;
     skos:prefLabel "carbonate"@en .
@@ -2684,6 +2699,7 @@ she:Copper a skos:Concept ;
     skos:prefLabel "copper"@en .
 
 she:Gypsum a skos:Concept ;
+    skos:broader she:SoilMineralMatter ;
     skos:definition "The gypsum content, expressed as weight, refers to the soil’s calcium sulfate levels. Gypsum improves soil structure, alleviates sodicity, and enhances water infiltration. It is commonly applied to saline-sodic soils for reclamation. Source: FAO Soil Bulletin."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Gyp ;
     skos:narrower she:GypsumContents,
@@ -2709,12 +2725,14 @@ she:Molybdenum a skos:Concept ;
     skos:prefLabel "molybdenum"@en .
 
 she:Peat a skos:Concept ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:narrower she:PeatDecompostion,
         she:PeatDrainage,
         she:PeatVolume ;
     skos:prefLabel "peat"@en .
 
 she:Sodium a skos:Concept ;
+    skos:broader she:SoilChemicalProperties ;
     skos:narrower she:SodiumExchangeableBases,
         she:SodiumExtractableElements,
         she:SodiumTotalElements ;
@@ -2798,6 +2816,9 @@ she:SoilBulkDensity a skos:Concept ;
         she:BulkDensityPeat,
         she:BulkDensityWholeSoil ;
     skos:prefLabel "soil bulk density"@en .
+
+she:SoilDescription a skos:Concept ;
+    skos:prefLabel "soil description"@en .
 
 she:nitrogenTotalProcedure-TotalN_dc a skos:Concept ;
     skos:definition "Dry combustion" ;
