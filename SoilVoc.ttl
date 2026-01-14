@@ -6144,8 +6144,7 @@ she:LandUse a skos:Concept ;
         she:LandUseForests,
         she:LandUseGrasses,
         she:LandUseShrubs ;
-    skos:prefLabel "land use"@en ;
-    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
+    skos:prefLabel "land use"@en .
 
 she:MaterialThing a skos:Concept ;
     skos:exactMatch spp:MaterialThing ;
