@@ -8,17 +8,17 @@
 
 benchmarks:4036 a skos:Concept ;
     skos:closeMatch agrovoc:c_a9645d28 ;
-    skos:definition "Soil health is the ability of a soil, at a specified point in time, to function as a vital living system, within natural or managed ecosystem boundaries and land-use boundaries, to sustain plant and animal productivity and health, maintain or enhance water and air quality and to further provide ecosystem services in the long-term without (increased) trade-offs between ecosystem services."@en,
-        "The physical, chemical and biological condition of the soil determining its capacity to function as a vital living system and to provide ecosystem services."@en ;
     skos:exactMatch inrae:c_2d69fde2,
         she:SoilHealth ;
-    skos:prefLabel "soil health"@en .
+    skos:prefLabel "soil health"@en ;
+    she:policyDefinition "The physical, chemical and biological condition of the soil determining its capacity to function as a vital living system and to provide ecosystem services."@en ;
+    she:scientificDefinition "Soil health is the ability of a soil, at a specified point in time, to function as a vital living system, within natural or managed ecosystem boundaries and land-use boundaries, to sustain plant and animal productivity and health, maintain or enhance water and air quality and to further provide ecosystem services in the long-term without (increased) trade-offs between ecosystem services."@en .
 
 benchmarks:4068 a skos:Concept ;
-    skos:definition "Soil management practices that maintain or enhance the ecosystem services provided by the soil without impairing the functions enabling those services, or being detrimental to other properties of the environment."@en,
-        "Sustainable soil management comprises practices that maintain or enhance the provisioning, regulation and maintenance as well as cultural services provided by soils without significantly impairing either the soil functions that enable those services or biodiversity."@en ;
     skos:exactMatch she:SustainableSoilManagement ;
-    skos:prefLabel "sustainable soil management"@en .
+    skos:prefLabel "sustainable soil management"@en ;
+    she:policyDefinition "Soil management practices that maintain or enhance the ecosystem services provided by the soil without impairing the functions enabling those services, or being detrimental to other properties of the environment."@en ;
+    she:scientificDefinition "Sustainable soil management comprises practices that maintain or enhance the provisioning, regulation and maintenance as well as cultural services provided by soils without significantly impairing either the soil functions that enable those services or biodiversity."@en .
 
 benchmarks:4070 a skos:Concept ;
     skos:definition "Soils where soil management practices are carried out."@en ;
@@ -85,6 +85,13 @@ benchmarks:built-up-areas a skos:Concept ;
     skos:definition "Built-up area is defined as the presence of buildings (roofed structures)."@en ;
     skos:prefLabel "built-up areas"@en .
 
+benchmarks:bulk-density a skos:Concept ;
+    skos:definition "The dry mass of soil per unit bulk volume of soil, expressed as g/cm3, usually given on an oven-dry (105° C) basis."@en ;
+    skos:exactMatch inrae:c_991,
+        iso11074:3.62,
+        she:BulkDensity ;
+    skos:prefLabel "bulk density"@en .
+
 benchmarks:carbon-and-nutrient-management a skos:Concept ;
     skos:definition "Carbon management refers to a series of practices that aim to retain carbon in thesoiland avoid losses. Nutrient management refers to a series of practices that maintain nutrients in the system and reduce losses (e.g., nitrate leaching)."@en ;
     skos:prefLabel "carbon and nutrient management"@en .
@@ -134,15 +141,15 @@ benchmarks:disturbance-management a skos:Concept ;
     skos:prefLabel "disturbance management"@en .
 
 benchmarks:ecosystem-services a skos:Concept ;
-    skos:definition "Indirect contributions of ecosystems to the economic, social,culturaland other benefits that people derive from those ecosystems."@en,
-        "The contributions of ecosystems (i.e. living systems) to human well-being."@en ;
+    skos:definition "The contributions of ecosystems (i.e. living systems) to human well-being."@en ;
     skos:exactMatch agrovoc:c_1348040570280,
         gemet:15138,
         she:EcosystemServices ;
     skos:prefLabel "ecosystem services"@en ;
     skos:related benchmarks:cultural,
         benchmarks:provisioning,
-        benchmarks:regulation-and-maintenance .
+        benchmarks:regulation-and-maintenance ;
+    she:policyDefinition "Indirect contributions of ecosystems to the economic, social,culturaland other benefits that people derive from those ecosystems."@en .
 
 benchmarks:excess-nutrients a skos:Concept ;
     skos:definition "Presence of nutrients (e.g. nitrogen) in the soil at levels that could potentially cause adverse effects on soil health and water quality."@en ;
@@ -234,12 +241,12 @@ benchmarks:land a skos:Concept ;
     skos:prefLabel "land"@en .
 
 benchmarks:land-cover a skos:Concept ;
-    skos:definition "LAND COVER(LC) = physical cover (“material”) observed at the earth’s surface. The main classes in the LUCAS land cover nomenclature are as follows:A00 Artificial land B00 Cropland C00 Woodland D00 Shrubland E00 Grassland F00 Bareland G00 Water H00 Wetland"@en,
-        "The physical and biological cover of the earth’s surface."@en ;
+    skos:definition "LAND COVER(LC) = physical cover (“material”) observed at the earth’s surface. The main classes in the LUCAS land cover nomenclature are as follows:A00 Artificial land B00 Cropland C00 Woodland D00 Shrubland E00 Grassland F00 Bareland G00 Water H00 Wetland"@en ;
     skos:exactMatch agrovoc:c_37897,
         inrae:c_0617cfcc,
         gemet:4612 ;
-    skos:prefLabel "land cover"@en .
+    skos:prefLabel "land cover"@en ;
+    she:policyDefinition "The physical and biological cover of the earth’s surface."@en .
 
 benchmarks:land-stewards a skos:Concept ;
     skos:definition "Land stewards are individuals or organizations responsible for managing and overseeing land use and associated activities in their respective areas. Examples (local-regional):Land owners, managers and users."@en ;
@@ -423,8 +430,7 @@ benchmarks:sample a skos:Concept ;
 
 benchmarks:soil a skos:Concept ;
     skos:closeMatch she:Soils ;
-    skos:definition "Soil, the biologically active, porous medium that has developed in the uppermost layer of Earth’s crust and is one of the principal substrata of life on Earth. Soil is a complex, dynamic, and living system that is formed over time through the interaction of physical, chemical, and biological processes. It is composed of mineral particles of varying sizes, organic matter, water, and air, all of which interact to form a matrix that supports plant growth and provides a habitat for soil organisms."@en,
-        "The top layer of the Earth’s crust situated between the bedrock and the land surface, which is composed of mineral particles, organic matter, water, air and living organisms."@en ;
+    skos:definition "Soil, the biologically active, porous medium that has developed in the uppermost layer of Earth’s crust and is one of the principal substrata of life on Earth. Soil is a complex, dynamic, and living system that is formed over time through the interaction of physical, chemical, and biological processes. It is composed of mineral particles of varying sizes, organic matter, water, and air, all of which interact to form a matrix that supports plant growth and provides a habitat for soil organisms."@en ;
     skos:exactMatch agrovoc:c_7156,
         inrae:c_1524,
         gemet:7843,
@@ -432,7 +438,8 @@ benchmarks:soil a skos:Concept ;
     skos:prefLabel "soil"@en ;
     skos:related benchmarks:cultural,
         benchmarks:provisioning,
-        benchmarks:regulation-and-maintenance .
+        benchmarks:regulation-and-maintenance ;
+    she:policyDefinition "The top layer of the Earth’s crust situated between the bedrock and the land surface, which is composed of mineral particles, organic matter, water, air and living organisms."@en .
 
 benchmarks:soil-biodiversity a skos:Concept ;
     skos:definition "The variability of living organisms in soil and the ecological complexes of which they are part; this includes taxonomic and functional diversity within species, between species and of ecosystems."@en ;
@@ -710,13 +717,6 @@ benchmarks:biodiversity a skos:Concept ;
         iso11074:3.45,
         she:Biodiversity ;
     skos:prefLabel "biodiversity"@en .
-
-benchmarks:bulk-density a skos:Concept ;
-    skos:definition "The dry mass of soil per unit bulk volume of soil, expressed as g/cm3, usually given on an oven-dry (105° C) basis."@en ;
-    skos:exactMatch inrae:c_991,
-        iso11074:3.62,
-        she:BulkDensity ;
-    skos:prefLabel "bulk density"@en .
 
 benchmarks:carbon-sequestration-and-climate-regulation a skos:Concept ;
     skos:definition "Carbon and climate regulation includes soil processes that contribute to the retention of carbon in the soil and regulate the release of major greenhouse gases. The function can be defined by three main groups of processes which take place in the soil:(1) Decomposition(2) Biochemical transformation(3) Resource reallocation"@en ;
