@@ -3,6 +3,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 she:ProfileDescriptionStatus a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "The Profile Description Status indicates the level of detail and accuracy in documenting the features of a soil profile, including its horizons, texture, structure, and other observable characteristics. This property ensures that the soil profile description meets standards for completeness, enabling reliable classification and analysis. It is a critical aspect of soil studies, providing the basis for land-use planning, environmental assessment, and agricultural decision-making. Source: Schoeneberger, P.J., Wysocki, D.A., Benham, E.C., & Soil Survey Staff. (2012). Field Book for Describing and Sampling Soils. USDA-NRCS."@en ;
     skos:exactMatch glosis_pr:profileDescriptionStatusProperty ;
     skos:prefLabel "profile description status"@en .

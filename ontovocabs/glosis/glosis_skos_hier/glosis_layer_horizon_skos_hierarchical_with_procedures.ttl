@@ -2624,7 +2624,7 @@ she:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc a skos:Concept ;
     skos:prefLabel "CaCO3_calcul-tc-oc"@en .
 
 she:MineralParticles a skos:Concept ;
-    skos:broader she:SoilMineralMatter ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:altLabel "mineral particle"@en ;
     skos:narrower she:MineralContents,
         she:MineralFragments ;
@@ -2699,7 +2699,7 @@ she:Copper a skos:Concept ;
     skos:prefLabel "copper"@en .
 
 she:Gypsum a skos:Concept ;
-    skos:broader she:SoilMineralMatter ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:definition "The gypsum content, expressed as weight, refers to the soil’s calcium sulfate levels. Gypsum improves soil structure, alleviates sodicity, and enhances water infiltration. It is commonly applied to saline-sodic soils for reclamation. Source: FAO Soil Bulletin."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Gyp ;
     skos:narrower she:GypsumContents,
@@ -2780,6 +2780,7 @@ she:Calcium a skos:Concept ;
     skos:prefLabel "calcium"@en .
 
 she:Cementation a skos:Concept ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:narrower she:CementationContinuity,
         she:CementationDegree,
         she:CementationFabric,
@@ -2829,6 +2830,7 @@ she:nitrogenTotalProcedure-TotalN_dc a skos:Concept ;
     skos:prefLabel "TotalN_dc"@en .
 
 she:SoilCoating a skos:Concept ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:narrower she:CoatingAbundance,
         she:CoatingContrast,
         she:CoatingForms,
@@ -2837,6 +2839,7 @@ she:SoilCoating a skos:Concept ;
     skos:prefLabel "soil coating"@en .
 
 she:SoilMottle a skos:Concept ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:narrower she:MottleAbundance,
         she:MottleBoundaryClassification,
         she:MottleColour,
@@ -2933,6 +2936,7 @@ she:pHProcedure-pHNaF a skos:Concept ;
     skos:prefLabel "pHNaF"@en .
 
 she:MineralConcentration a skos:Concept ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:narrower she:MineralConcAbundance,
         she:MineralConcColour,
         she:MineralConcHardness,

@@ -39,11 +39,13 @@ she:SoilCrackWidth a skos:Concept ;
     skos:prefLabel "soil crack width"@en .
 
 she:SoilDepthRootableClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "The Soil Depth Rootable Class classifies soils based on the depth of the rootable zone, which excludes impenetrable layers such as bedrock or compacted horizons. Soils are typically classified as shallow, moderately deep, or deep, depending on the depth of the root zone, which directly affects plant growth. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations."@en ;
     skos:exactMatch glosis_cm:soilDepthRootableClassProperty ;
     skos:prefLabel "soil depth rootable class"@en .
 
 she:SoilOrganicMatterClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "The Soil Organic Matter Class classifies soil based on the amount and quality of organic matter it contains. Soils with high organic matter are usually fertile, retain moisture better, and support more biological activity. This classification helps in determining soil health and suitability for agricultural purposes. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall."@en ;
     skos:exactMatch glosis_cm:organicMatterClassProperty ;
     skos:prefLabel "soil organic matter class"@en .
@@ -54,6 +56,7 @@ she:SoilTexture a skos:Concept ;
     skos:prefLabel "soil texture"@en .
 
 she:SoilWaterInfiltrationRateClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "The Soil Water Infiltration Rate Class classifies the soil’s ability to absorb water based on observed infiltration rates. This classification is typically divided into categories like slow, moderate, or rapid infiltration, based on how quickly water is absorbed into the soil. It is an essential property for understanding drainage, runoff, and irrigation needs. Source: Hillel, D. (2004). Introduction to Soil Physics. Academic Press."@en ;
     skos:exactMatch glosis_cm:infiltrationRateClassProperty ;
     skos:prefLabel "soil water infiltration rate class"@en .
@@ -128,6 +131,7 @@ she:SoilDepth a skos:Concept ;
     skos:prefLabel "soil depth"@en .
 
 she:Fragments a skos:Concept ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:altLabel "fragment"@en ;
     skos:narrower she:FragmentCover,
         she:FragmentSize,

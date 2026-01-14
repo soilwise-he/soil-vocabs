@@ -3,6 +3,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 she:CropClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "Crop Class refers to the categorization of land based on the type of crops cultivated. This property is used to assess soil management practices and land productivity, as different crops require specific soil conditions for optimal growth. Source: FAO, 'Guidelines for Soil Profile Description'"@en ;
     skos:exactMatch glosis_sp:cropClassProperty ;
     skos:prefLabel "crop class"@en .
@@ -13,21 +14,25 @@ she:Geology a skos:Concept ;
     skos:prefLabel "geology"@en .
 
 she:GroundwaterDepth a skos:Concept ;
+    skos:broader she:SoilWaterPhysicalProperties ;
     skos:definition "Groundwater Depth indicates the depth from the soil surface to the water table, which affects soil moisture levels, plant growth, and root penetration. Shallow groundwater can influence soil salinity and nutrient availability, while deep groundwater may limit water access for plants. Source: USDA NRCS, 'Groundwater and Soil'"@en ;
     skos:exactMatch glosis_sp:groundwaterDepthProperty ;
     skos:prefLabel "groundwater depth"@en .
 
 she:HumanInfluenceClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "Human Influence Class classifies the extent of human impact on a landscape or ecosystem, ranging from minimal disturbance to high levels of modification. This classification helps in understanding the effects of urbanization, agriculture, or industrial activity on soil properties and ecosystem functions. Source: FAO, 'Land Degradation Assessment in Drylands'"@en ;
     skos:exactMatch glosis_sp:humanInfluenceClassProperty ;
     skos:prefLabel "human influence class"@en .
 
 she:KoeppenClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "Koeppen Class refers to the classification of climate zones based on temperature and precipitation patterns, as defined by the Köppen climate classification system. This classification directly influences soil temperature, moisture content, and vegetation types, which in turn affect soil formation and properties. Source: Köppen, W., 'Geiger's Climate Maps'"@en ;
     skos:exactMatch glosis_sp:koeppenClassProperty ;
     skos:prefLabel "koeppen class"@en .
 
 she:LandUseClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "Land Use Class refers to the classification of land based on its primary use, such as agricultural, industrial, urban, or natural areas. This property helps assess the impact of land management practices on soil quality, including erosion risks, compaction, and fertility, and is critical for sustainable land-use planning. Source: FAO, 'Land Use and Land Cover Classification'"@en ;
     skos:exactMatch glosis_sp:landUseClassProperty ;
     skos:prefLabel "land use class"@en .
@@ -49,16 +54,22 @@ she:MajorLandForms a skos:Concept ;
     skos:prefLabel "major land forms"@en .
 
 she:Physiography a skos:Concept ;
+    skos:narrower she:LandformComplex,
+        she:MajorLandForms,
+        she:Slope,
+        she:RockOutcrops ;
     skos:definition "Physiography describes the physical characteristics of a landscape, including its landforms, slopes, and elevation. These features influence soil properties such as drainage, erosion, and moisture retention, helping to determine soil suitability for various land uses. Source: FAO, 'Soil Geography and Mapping'"@en ;
     skos:exactMatch glosis_sp:physiographyProperty ;
     skos:prefLabel "physiography"@en .
 
 she:SlopeGradientClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "Slope Gradient Class refers to the classification of slope steepness, such as flat, moderate, or steep, based on its angle. The gradient of a slope influences soil erosion rates, water drainage, and the suitability of land for agriculture, with steeper slopes typically being more prone to erosion. Source: USDA NRCS, 'Soil Erosion and Conservation'"@en ;
     skos:exactMatch glosis_sp:slopeGradientClassProperty ;
     skos:prefLabel "slope gradient class"@en .
 
 she:SlopeOrientationClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "Slope Orientation Class classifies the direction in which a slope faces (north, south, east, west) and can significantly affect local climate conditions, such as sunlight exposure, moisture, and temperature. For instance, south-facing slopes in the Northern Hemisphere receive more sunlight, influencing soil temperature, vegetation types, and soil moisture availability. Source: FAO, 'Soil and Water Conservation'"@en ;
     skos:exactMatch glosis_sp:slopeOrientationClassProperty ;
     skos:prefLabel "slope orientation class"@en .
@@ -70,6 +81,7 @@ she:TreeDensity a skos:Concept ;
     skos:prefLabel "tree density"@en .
 
 she:VegetationClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "Vegetation Class refers to the categorization of vegetation types based on species composition and structure, such as forests, grasslands, and wetlands. The class of vegetation affects soil fertility, microbial activity, and water retention, which in turn influences agricultural potential and ecosystem services. Source: FAO, 'Vegetation and Land Use in Arid Zones'"@en ;
     skos:exactMatch glosis_sp:vegetationClassProperty ;
     skos:prefLabel "vegetation class"@en .
@@ -293,3 +305,8 @@ she:SoilErosion a skos:Concept ;
         she:SoilErosionTotalAreaAffected ;
     skos:prefLabel "soil erosion"@en .
 
+she:SoilFormation a skos:Concept ;
+    skos:narrower she:ParentMaterial,
+        she:SoilAge,
+        she:Lithology ;
+    skos:prefLabel "soil formation"@en .

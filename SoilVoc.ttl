@@ -360,6 +360,7 @@ she:Crop a skos:Concept ;
     skos:prefLabel "crop"@en .
 
 she:CropClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "Crop Class refers to the categorization of land based on the type of crops cultivated. This property is used to assess soil management practices and land productivity, as different crops require specific soil conditions for optimal growth. Source: FAO, 'Guidelines for Soil Profile Description'"@en ;
     skos:exactMatch glosis_sp:cropClassProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -576,6 +577,7 @@ she:GroundCover a skos:Concept ;
     skos:prefLabel "ground cover"@en .
 
 she:GroundwaterDepth a skos:Concept ;
+    skos:broader she:SoilWaterPhysicalProperties ;
     skos:definition "Groundwater Depth indicates the depth from the soil surface to the water table, which affects soil moisture levels, plant growth, and root penetration. Shallow groundwater can influence soil salinity and nutrient availability, while deep groundwater may limit water access for plants. Source: USDA NRCS, 'Groundwater and Soil'"@en ;
     skos:exactMatch glosis_sp:groundwaterDepthProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -627,6 +629,7 @@ she:HarshConsistence a skos:Concept ;
     skos:prefLabel "harsh consistence"@en .
 
 she:HumanInfluenceClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "Human Influence Class classifies the extent of human impact on a landscape or ecosystem, ranging from minimal disturbance to high levels of modification. This classification helps in understanding the effects of urbanization, agriculture, or industrial activity on soil properties and ecosystem functions. Source: FAO, 'Land Degradation Assessment in Drylands'"@en ;
     skos:exactMatch glosis_sp:humanInfluenceClassProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -750,6 +753,7 @@ she:Irrigation a skos:Concept ;
     skos:prefLabel "irrigation"@en .
 
 she:KoeppenClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "Koeppen Class refers to the classification of climate zones based on temperature and precipitation patterns, as defined by the Köppen climate classification system. This classification directly influences soil temperature, moisture content, and vegetation types, which in turn affect soil formation and properties. Source: Köppen, W., 'Geiger's Climate Maps'"@en ;
     skos:exactMatch glosis_sp:koeppenClassProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -770,6 +774,7 @@ she:LandUseBareCover a skos:Concept ;
     skos:prefLabel "land use bare cover"@en .
 
 she:LandUseClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "Land Use Class refers to the classification of land based on its primary use, such as agricultural, industrial, urban, or natural areas. This property helps assess the impact of land management practices on soil quality, including erosion risks, compaction, and fertility, and is critical for sustainable land-use planning. Source: FAO, 'Land Use and Land Cover Classification'"@en ;
     skos:exactMatch glosis_sp:landUseClassProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -800,6 +805,7 @@ she:LandUseShrubs a skos:Concept ;
     skos:prefLabel "land use shrubs"@en .
 
 she:LandformComplex a skos:Concept ;
+    skos:broader she:Physiography ;
     skos:definition "Landform Complex describes a region with multiple interrelated landforms such as ridges, valleys, and hills. This property is essential for understanding how diverse landforms within a landscape influence soil distribution, water flow, and erosion patterns, ultimately affecting soil management strategies. Source: FAO, 'Soil Formation and Classification'"@en ;
     skos:exactMatch glosis_sp:landformComplexProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -824,6 +830,7 @@ she:LiquidWasteDisposal a skos:Concept ;
     skos:prefLabel "liquid waste disposal"@en .
 
 she:Lithology a skos:Concept ;
+    skos:broader she:SoilFormation ;
     skos:definition "Lithology refers to the physical characteristics of the parent material, such as the mineral composition, texture, and structure of the underlying rocks or sediments. The lithology of an area influences soil formation by affecting drainage, nutrient content, and the ability of the soil to support vegetation. Source: AGI, 'Encyclopedia of Geology'"@en ;
     skos:exactMatch glosis_sp:lithologyProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -848,6 +855,7 @@ she:Macroporosity a skos:Concept ;
 
 she:MajorLandForms a skos:Concept ;
     skos:altLabel "major land form"@en ;
+    skos:broader she:Physiography ;
     skos:definition "Major Land Form refers to the significant physical features of the land, such as mountains, valleys, and plateaus, that influence soil development and landscape processes. These landforms shape the flow of water, sediment transport, and nutrient cycling, directly affecting the types of soils that form in different regions. Source: FAO, 'World Soil Resources Report'"@en ;
     skos:exactMatch glosis_sp:majorLandFormProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -1221,12 +1229,6 @@ she:PesticideUse a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "pesticide use"@en .
 
-she:Physiography a skos:Concept ;
-    skos:definition "Physiography describes the physical characteristics of a landscape, including its landforms, slopes, and elevation. These features influence soil properties such as drainage, erosion, and moisture retention, helping to determine soil suitability for various land uses. Source: FAO, 'Soil Geography and Mapping'"@en ;
-    skos:exactMatch glosis_sp:physiographyProperty ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "physiography"@en .
-
 she:PlantAvailableWaterContents a skos:Concept ;
     skos:altLabel "plant available water content"@en ;
     skos:broader she:SoilWaterContents ;
@@ -1276,6 +1278,7 @@ she:ProfileControlledWaterInfiltration a skos:Concept ;
     skos:prefLabel "profile controlled water infiltration"@en .
 
 she:ProfileDescriptionStatus a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "The Profile Description Status indicates the level of detail and accuracy in documenting the features of a soil profile, including its horizons, texture, structure, and other observable characteristics. This property ensures that the soil profile description meets standards for completeness, enabling reliable classification and analysis. It is a critical aspect of soil studies, providing the basis for land-use planning, environmental assessment, and agricultural decision-making. Source: Schoeneberger, P.J., Wysocki, D.A., Benham, E.C., & Soil Survey Staff. (2012). Field Book for Describing and Sampling Soils. USDA-NRCS."@en ;
     skos:exactMatch glosis_pr:profileDescriptionStatusProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -1516,6 +1519,7 @@ she:SlopeForms a skos:Concept ;
     skos:prefLabel "slope forms"@en .
 
 she:SlopeGradientClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "Slope Gradient Class refers to the classification of slope steepness, such as flat, moderate, or steep, based on its angle. The gradient of a slope influences soil erosion rates, water drainage, and the suitability of land for agriculture, with steeper slopes typically being more prone to erosion. Source: USDA NRCS, 'Soil Erosion and Conservation'"@en ;
     skos:exactMatch glosis_sp:slopeGradientClassProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -1529,6 +1533,7 @@ she:SlopeGradientNumeric a skos:Concept ;
     skos:prefLabel "slope gradient numeric"@en .
 
 she:SlopeOrientationClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "Slope Orientation Class classifies the direction in which a slope faces (north, south, east, west) and can significantly affect local climate conditions, such as sunlight exposure, moisture, and temperature. For instance, south-facing slopes in the Northern Hemisphere receive more sunlight, influencing soil temperature, vegetation types, and soil moisture availability. Source: FAO, 'Soil and Water Conservation'"@en ;
     skos:exactMatch glosis_sp:slopeOrientationClassProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -1904,6 +1909,7 @@ she:SoilDepthRootable a skos:Concept ;
     skos:prefLabel "soil depth rootable"@en .
 
 she:SoilDepthRootableClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "The Soil Depth Rootable Class classifies soils based on the depth of the rootable zone, which excludes impenetrable layers such as bedrock or compacted horizons. Soils are typically classified as shallow, moderately deep, or deep, depending on the depth of the root zone, which directly affects plant growth. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations."@en ;
     skos:exactMatch glosis_cm:soilDepthRootableClassProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -2247,6 +2253,12 @@ she:SoilMicropore a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil micropore"@en .
 
+she:SoilMineralMatter a skos:Concept ;
+    skos:broader she:SoilComponent ;
+    skos:exactMatch spp:SoilMineralMatter ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "soil mineral matter"@en .
+
 she:SoilMineralization a skos:Concept ;
     skos:broader she:SoilChemicalProcesses ;
     skos:exactMatch spp:SoilMineralization ;
@@ -2350,6 +2362,7 @@ she:SoilOrganicComponent a skos:Concept ;
     skos:prefLabel "soil organic component"@en .
 
 she:SoilOrganicMatterClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "The Soil Organic Matter Class classifies soil based on the amount and quality of organic matter it contains. Soils with high organic matter are usually fertile, retain moisture better, and support more biological activity. This classification helps in determining soil health and suitability for agricultural purposes. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall."@en ;
     skos:exactMatch glosis_cm:organicMatterClassProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -3021,6 +3034,7 @@ she:SoilWaterEvapourationRate a skos:Concept ;
     skos:prefLabel "soil water evapouration rate"@en .
 
 she:SoilWaterInfiltrationRateClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "The Soil Water Infiltration Rate Class classifies the soil’s ability to absorb water based on observed infiltration rates. This classification is typically divided into categories like slow, moderate, or rapid infiltration, based on how quickly water is absorbed into the soil. It is an essential property for understanding drainage, runoff, and irrigation needs. Source: Hillel, D. (2004). Introduction to Soil Physics. Academic Press."@en ;
     skos:exactMatch glosis_cm:infiltrationRateClassProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -3265,6 +3279,7 @@ she:VariableCharge a skos:Concept ;
     skos:prefLabel "variable charge"@en .
 
 she:VegetationClass a skos:Concept ;
+    skos:broader she:SoilDescription ;
     skos:definition "Vegetation Class refers to the categorization of vegetation types based on species composition and structure, such as forests, grasslands, and wetlands. The class of vegetation affects soil fertility, microbial activity, and water retention, which in turn influences agricultural potential and ecosystem services. Source: FAO, 'Vegetation and Land Use in Arid Zones'"@en ;
     skos:exactMatch glosis_sp:vegetationClassProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -4859,6 +4874,7 @@ she:SoilAeration a skos:Concept ;
 
 she:SoilAge a skos:Concept ;
     skos:altLabel "age of soil"@en ;
+    skos:broader she:SoilFormation ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:SoilSurfaceAge ;
     skos:prefLabel "soil age"@en .
@@ -5295,7 +5311,7 @@ she:Iron a skos:Concept ;
 
 she:MineralParticles a skos:Concept ;
     skos:altLabel "mineral particle"@en ;
-    skos:broader she:SoilMineralMatter ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:MineralContents,
         she:MineralFragments ;
@@ -5349,6 +5365,7 @@ she:Plant a skos:Concept ;
 
 she:RockOutcrops a skos:Concept ;
     skos:altLabel "rock outcrop"@en ;
+    skos:broader she:Physiography ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:RockOutcropCover,
         she:RockOutcropDistance ;
@@ -5491,14 +5508,6 @@ she:SoilMicrobialActivity a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:SoilMicrobialRespiration ;
     skos:prefLabel "soil microbial activity"@en .
-
-she:SoilMineralMatter a skos:Concept ;
-    skos:broader she:SoilComponent ;
-    skos:exactMatch spp:SoilMineralMatter ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:Gypsum,
-        she:MineralParticles ;
-    skos:prefLabel "soil mineral matter"@en .
 
 she:SoilNutrientLoss a skos:Concept ;
     skos:broader she:SoilThreats ;
@@ -5784,6 +5793,7 @@ she:Manganese a skos:Concept ;
     skos:prefLabel "manganese"@en .
 
 she:ParentMaterial a skos:Concept ;
+    skos:broader she:SoilFormation ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:ParentDeposition,
         she:ParentLithology,
@@ -5894,6 +5904,13 @@ she:SoilDrying a skos:Concept ;
         she:SoilRapidDrying,
         she:SoilSlowDrying ;
     skos:prefLabel "soil drying"@en .
+
+she:SoilFormation a skos:Concept ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:Lithology,
+        she:ParentMaterial,
+        she:SoilAge ;
+    skos:prefLabel "soil formation"@en .
 
 she:SoilHeatTransfer a skos:Concept ;
     skos:broader she:SoilHeatMovement ;
@@ -6082,6 +6099,7 @@ she:CationExchangeCapacity a skos:Concept ;
     skos:prefLabel "cation exchange capacity"@en .
 
 she:Cementation a skos:Concept ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:CementationContinuity,
         she:CementationDegree,
@@ -6110,6 +6128,7 @@ she:ExternalFactors a skos:Concept ;
 
 she:Fragments a skos:Concept ;
     skos:altLabel "fragment"@en ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:FragmentCover,
         she:FragmentSize,
@@ -6138,6 +6157,16 @@ she:MaterialThing a skos:Concept ;
     skos:prefLabel "material thing"@en ;
     skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
+she:Physiography a skos:Concept ;
+    skos:definition "Physiography describes the physical characteristics of a landscape, including its landforms, slopes, and elevation. These features influence soil properties such as drainage, erosion, and moisture retention, helping to determine soil suitability for various land uses. Source: FAO, 'Soil Geography and Mapping'"@en ;
+    skos:exactMatch glosis_sp:physiographyProperty ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:LandformComplex,
+        she:MajorLandForms,
+        she:RockOutcrops,
+        she:Slope ;
+    skos:prefLabel "physiography"@en .
+
 she:Rock a skos:Concept ;
     skos:broader she:Fragments ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -6158,6 +6187,7 @@ she:Sand a skos:Concept ;
     skos:prefLabel "sand"@en .
 
 she:Slope a skos:Concept ;
+    skos:broader she:Physiography ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:SlopeForms,
         she:SlopeGradient,
@@ -6228,14 +6258,6 @@ she:SoilDepth a skos:Concept ;
         she:SoilDepthRootable,
         she:SoilDepthSampled ;
     skos:prefLabel "soil depth"@en .
-
-she:SoilDescription a skos:Concept ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:FragmentClass,
-        she:PorosityClass,
-        she:TextureFieldClass,
-        she:TextureLabClass ;
-    skos:prefLabel "soil description"@en .
 
 she:SoilDrainage a skos:Concept ;
     skos:broader she:SoilEngineeringFunctions,
@@ -6425,6 +6447,7 @@ she:SoilBiota a skos:Concept ;
     skos:prefLabel "soil biota"@en .
 
 she:SoilCoating a skos:Concept ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:CoatingAbundance,
         she:CoatingContrast,
@@ -6570,6 +6593,7 @@ she:SoilMoisturePotential a skos:Concept ;
     skos:prefLabel "soil moisture potential"@en .
 
 she:SoilMottle a skos:Concept ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:MottleAbundance,
         she:MottleBoundaryClassification,
@@ -6950,6 +6974,7 @@ she:BulkDensityWholeSoil a skos:Concept ;
         she:bulkDensityWholeSoilProcedure-BlkDensW_we-unkn .
 
 she:MineralConcentration a skos:Concept ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:MineralConcAbundance,
         she:MineralConcColour,
@@ -7187,7 +7212,7 @@ she:DerivedSoilProperties a skos:Concept ;
     skos:prefLabel "derived soil properties"@en .
 
 she:Gypsum a skos:Concept ;
-    skos:broader she:SoilMineralMatter ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:definition "The gypsum content, expressed as weight, refers to the soil’s calcium sulfate levels. Gypsum improves soil structure, alleviates sodicity, and enhances water infiltration. It is commonly applied to saline-sodic soils for reclamation. Source: FAO Soil Bulletin."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Gyp ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -8480,6 +8505,25 @@ she:SoilComponent a skos:Concept ;
         she:SoilWater ;
     skos:prefLabel "soil component"@en .
 
+she:SoilDescription a skos:Concept ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:CropClass,
+        she:FragmentClass,
+        she:HumanInfluenceClass,
+        she:KoeppenClass,
+        she:LandUseClass,
+        she:PorosityClass,
+        she:ProfileDescriptionStatus,
+        she:SlopeGradientClass,
+        she:SlopeOrientationClass,
+        she:SoilDepthRootableClass,
+        she:SoilOrganicMatterClass,
+        she:SoilWaterInfiltrationRateClass,
+        she:TextureFieldClass,
+        she:TextureLabClass,
+        she:VegetationClass ;
+    skos:prefLabel "soil description"@en .
+
 she:SoilPores a skos:Concept ;
     skos:altLabel "soil pore"@en ;
     skos:broader she:SoilSubstance ;
@@ -8927,7 +8971,8 @@ she:SoilWaterPhysicalProperties a skos:Concept ;
     skos:broader she:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilWaterPhysicalProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:MoistureContents,
+    skos:narrower she:GroundwaterDepth,
+        she:MoistureContents,
         she:SoilHydraulicConductivity,
         she:SoilMoistureCharacteristics,
         she:SoilMoistureContents,
@@ -9474,11 +9519,17 @@ she:SoilPhysicalProperties a skos:Concept ;
     skos:broader she:SoilProperties ;
     skos:exactMatch spp:SoilPhysicalProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:Peat,
+    skos:narrower she:Cementation,
+        she:Fragments,
+        she:Gypsum,
+        she:MineralConcentration,
+        she:MineralParticles,
+        she:Peat,
         she:SoilAdhesion,
         she:SoilAggregatePhysicalProperties,
         she:SoilAirPhysicalProperties,
         she:SoilClayMineralogy,
+        she:SoilCoating,
         she:SoilCohesion,
         she:SoilCohesiveness,
         she:SoilColour,
@@ -9498,6 +9549,7 @@ she:SoilPhysicalProperties a skos:Concept ;
         she:SoilHorizonBoundary,
         she:SoilHydraulicDiffusivity,
         she:SoilIntrinsicPermeability,
+        she:SoilMottle,
         she:SoilNutrientAvailability,
         she:SoilPackingArrangement,
         she:SoilParticlePhysicalProperties,
@@ -9533,47 +9585,26 @@ she:SoilPhysicalProperties a skos:Concept ;
     skos:related she:SoilQuality .
 
 <https://soilwise-he.github.io/soil-health> a skos:ConceptScheme ;
-    skos:hasTopConcept she:Cementation,
-        she:ChemicalSubstance,
-        she:CropClass,
+    skos:hasTopConcept she:ChemicalSubstance,
         she:EcosystemServices,
         she:Force,
-        she:Fragments,
         she:Geology,
-        she:GroundwaterDepth,
-        she:HumanInfluenceClass,
-        she:KoeppenClass,
-        she:LandUseClass,
-        she:LandformComplex,
-        she:Lithology,
         she:LivingEntity,
-        she:MajorLandForms,
         she:MaterialThing,
-        she:MineralConcentration,
         she:NonsoilIndicators,
-        she:ParentMaterial,
         she:Physiography,
         she:PlanetaryPhenomena,
         she:PlantProcesses,
-        she:ProfileDescriptionStatus,
-        she:RockOutcrops,
-        she:Slope,
-        she:SlopeGradientClass,
-        she:SlopeOrientationClass,
-        she:SoilAge,
         she:SoilClassification,
-        she:SoilCoating,
-        she:SoilDepthRootableClass,
         she:SoilDescription,
         she:SoilFluidRetention,
         she:SoilFluidTransport,
+        she:SoilFormation,
         she:SoilFunctionIndicators,
         she:SoilFunctions,
         she:SoilHealth,
         she:SoilManagement,
-        she:SoilMottle,
         she:SoilNutrientRetention,
-        she:SoilOrganicMatterClass,
         she:SoilParticleMovement,
         she:SoilPhenomena,
         she:SoilProcesses,
@@ -9585,7 +9616,5 @@ she:SoilPhysicalProperties a skos:Concept ;
         she:SoilSubstance,
         she:SoilThreats,
         she:SoilWaterAdsorption,
-        she:SoilWaterInfiltrationRateClass,
-        she:SoilWaterRetention,
-        she:VegetationClass .
+        she:SoilWaterRetention .
 
