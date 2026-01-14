@@ -1162,7 +1162,7 @@ she:NitrogenTotal a skos:Concept ;
     skos:definition "Total nitrogen encompasses all nitrogen forms in soil, including organic nitrogen in humus and inorganic nitrogen such as ammonium (NH₄⁺) and nitrate (NO₃⁻). Nitrogen is essential for plant growth, being a vital component of amino acids, proteins, and chlorophyll. Total nitrogen is a key indicator of soil fertility and its capacity to sustain long-term crop productivity. Source: Brady & Weil (2017)."@en ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Nittot ;
     skos:prefLabel "nitrogen total"@en ;
-    she:broader she:Nitrogen ;
+    skos:broader she:Nitrogen ;
     she:hasProcedure she:nitrogenTotalProcedure-TotalN_bremner,
         she:nitrogenTotalProcedure-TotalN_calcul,
         she:nitrogenTotalProcedure-TotalN_calcul-oc10,

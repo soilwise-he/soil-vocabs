@@ -549,7 +549,8 @@ she:Geology a skos:Concept ;
     skos:definition "Geology refers to the underlying geological composition of an area, including rock types, mineral content, and geological processes. The geology of a region influences soil formation, structure, fertility, and drainage properties. Source: AGI, 'Encyclopedia of Geology'"@en ;
     skos:exactMatch glosis_sp:geologyProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "geology"@en .
+    skos:prefLabel "geology"@en ;
+    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:GeometricMeanDiametre a skos:Concept ;
     skos:broader she:SoilAggregationIndex ;
@@ -1412,7 +1413,7 @@ she:SaltContents a skos:Concept ;
 
 she:SaltCover a skos:Concept ;
     skos:broader she:Salts ;
-    skos:definition "Salt cover refers to the accumulation of salts on the surface of the soil, often visible as a crystalline crust. This phenomenon occurs when capillary action causes soluble salts to move upwards through the soil, where they crystallize as water evaporates. Salt cover can interfere with seed germination, plant growth, and water infiltration, and is commonly found in arid and semi-arid regions with high evaporation rates. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Education. "@en ;
+    skos:definition "Salt cover refers to the accumulation of salts on the surface of the soil, often visible as a crystalline crust. This phenomenon occurs when capillary action causes soluble salts to move upwards through the soil, where they crystallize as water evaporates. Salt cover can interfere with seed germination, plant growth, and water infiltration, and is commonly found in arid and semi-arid regions with high evaporation rates. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Education."@en ;
     skos:exactMatch glosis_su:saltCoverProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "salt cover"@en .
@@ -1425,7 +1426,7 @@ she:SaltIncrustation a skos:Concept ;
 
 she:SaltPresence a skos:Concept ;
     skos:broader she:Salts ;
-    skos:definition "The salt presence of soil refers to the concentration of soluble salts, such as sodium, calcium, and magnesium, within the soil profile. High salt levels can lead to soil salinity, negatively affecting plant growth by altering water availability and soil structure. The presence of salts is typically measured using electrical conductivity (EC) or specific ion concentration tests. Soils with high salt presence are often found in arid regions where evaporation exceeds precipitation, leading to salt accumulation at or near the surface. Source: Rhoades, J.D., & Kandiah, A. (1992). Soil Salinity Management in Agriculture. Springer. "@en ;
+    skos:definition "The salt presence of soil refers to the concentration of soluble salts, such as sodium, calcium, and magnesium, within the soil profile. High salt levels can lead to soil salinity, negatively affecting plant growth by altering water availability and soil structure. The presence of salts is typically measured using electrical conductivity (EC) or specific ion concentration tests. Soils with high salt presence are often found in arid regions where evaporation exceeds precipitation, leading to salt accumulation at or near the surface. Source: Rhoades, J.D., & Kandiah, A. (1992). Soil Salinity Management in Agriculture. Springer."@en ;
     skos:exactMatch glosis_su:saltPresenceProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "salt presence"@en .
@@ -1438,7 +1439,7 @@ she:SaltSieving a skos:Concept ;
 
 she:SaltThickness a skos:Concept ;
     skos:broader she:Salts ;
-    skos:definition "Salt thickness refers to the depth of the soil profile at which soluble salts are present in significant concentrations. This property is particularly important in regions subject to evaporation and capillary rise, where salts accumulate near the surface or at specific depths. Salt thickness can impact soil fertility and water retention, as the concentrated salts can inhibit root growth and water uptake. This property is commonly determined through soil sampling and electrical conductivity measurements at various depths. Source: United States Salinity Laboratory Staff. (1954). Diagnosis and Improvement of Saline and Alkali Soils. U.S. Department of Agriculture Handbook No. 60. "@en ;
+    skos:definition "Salt thickness refers to the depth of the soil profile at which soluble salts are present in significant concentrations. This property is particularly important in regions subject to evaporation and capillary rise, where salts accumulate near the surface or at specific depths. Salt thickness can impact soil fertility and water retention, as the concentrated salts can inhibit root growth and water uptake. This property is commonly determined through soil sampling and electrical conductivity measurements at various depths. Source: United States Salinity Laboratory Staff. (1954). Diagnosis and Improvement of Saline and Alkali Soils. U.S. Department of Agriculture Handbook No. 60."@en ;
     skos:exactMatch glosis_su:saltThicknessProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "salt thickness"@en .
@@ -2105,7 +2106,8 @@ she:SoilHardsetting a skos:Concept ;
 she:SoilHealth a skos:Concept ;
     skos:definition "Soil health is the level to which soil functions are fulfilled."@en ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil health"@en .
+    skos:prefLabel "soil health"@en ;
+    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:SoilHeatConduction a skos:Concept ;
     skos:broader she:SoilHeatTransfer ;
@@ -2676,14 +2678,14 @@ she:SoilSaturation a skos:Concept ;
 
 she:SoilSealingConsistence a skos:Concept ;
     skos:broader she:SoilSealing ;
-    skos:definition "The sealing consistence of soil describes the resistance of the soil to the formation of a surface crust or compacted layer, which can impede water infiltration and root penetration. This phenomenon typically occurs in fine-textured soils, such as clays and silts, where the particles are tightly bound, leading to a hardened surface layer upon wetting and drying. Sealing consistence affects water movement and can lead to surface runoff and erosion in agricultural soils. Source: Soil Science Society of America (SSSA). (2008). Glossary of Soil Science Terms. Soil Science Society of America. "@en ;
+    skos:definition "The sealing consistence of soil describes the resistance of the soil to the formation of a surface crust or compacted layer, which can impede water infiltration and root penetration. This phenomenon typically occurs in fine-textured soils, such as clays and silts, where the particles are tightly bound, leading to a hardened surface layer upon wetting and drying. Sealing consistence affects water movement and can lead to surface runoff and erosion in agricultural soils. Source: Soil Science Society of America (SSSA). (2008). Glossary of Soil Science Terms. Soil Science Society of America."@en ;
     skos:exactMatch glosis_su:sealingConsistenceProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil sealing consistence"@en .
 
 she:SoilSealingThickness a skos:Concept ;
     skos:broader she:SoilSealing ;
-    skos:definition "The sealing thickness refers to the depth of the compacted or sealed layer within the soil, which is typically a result of intense rainfall, drying, or tillage practices. This layer, which forms in fine-textured soils, can significantly reduce water infiltration and root growth, leading to reduced soil aeration and potential surface runoff. The sealing thickness property is crucial for understanding soil erosion risks and water management in agricultural systems. Source: Pagliai, M., & Vignozzi, N. (2002). Soil Structure and Soil Quality: A Review of the State of the Art. Agriculture, Ecosystems & Environment, 88(3), 77-86. "@en ;
+    skos:definition "The sealing thickness refers to the depth of the compacted or sealed layer within the soil, which is typically a result of intense rainfall, drying, or tillage practices. This layer, which forms in fine-textured soils, can significantly reduce water infiltration and root growth, leading to reduced soil aeration and potential surface runoff. The sealing thickness property is crucial for understanding soil erosion risks and water management in agricultural systems. Source: Pagliai, M., & Vignozzi, N. (2002). Soil Structure and Soil Quality: A Review of the State of the Art. Agriculture, Ecosystems & Environment, 88(3), 77-86."@en ;
     skos:exactMatch glosis_su:sealingThicknessProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil sealing thickness"@en .
@@ -2947,7 +2949,7 @@ she:SoilTrueDensity a skos:Concept ;
 she:SoilTypes a skos:Concept ;
     skos:altLabel "soil type"@en ;
     skos:broader she:SoilPhysicalProperties ;
-    skos:definition "The Soil Type categorizes soils based on their physical, chemical, and mineralogical characteristics, as well as their formation processes. It identifies specific soil types, such as sandy, loamy, or clayey soils, or more detailed classifications like Mollisols, Alfisols, or Vertisols, depending on the classification system used (e.g., USDA Soil Taxonomy or FAO WRB). Understanding soil type is essential for predicting soil behavior, determining suitable land uses, and managing resources effectively. Source: USDA-NRCS (1999). Soil Taxonomy: A Basic System of Soil Classification for Making and Interpreting Soil Surveys; FAO (2015). World Reference Base for Soil Resources. "@en ;
+    skos:definition "The Soil Type categorizes soils based on their physical, chemical, and mineralogical characteristics, as well as their formation processes. It identifies specific soil types, such as sandy, loamy, or clayey soils, or more detailed classifications like Mollisols, Alfisols, or Vertisols, depending on the classification system used (e.g., USDA Soil Taxonomy or FAO WRB). Understanding soil type is essential for predicting soil behavior, determining suitable land uses, and managing resources effectively. Source: USDA-NRCS (1999). Soil Taxonomy: A Basic System of Soil Classification for Making and Interpreting Soil Surveys; FAO (2015). World Reference Base for Soil Resources."@en ;
     skos:exactMatch spp:SoilType,
         glosis_pr:soilTypeProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -4769,6 +4771,12 @@ she:Mulch a skos:Concept ;
     skos:narrower she:CropResidueMulch ;
     skos:prefLabel "mulch"@en .
 
+she:Nitrogen a skos:Concept ;
+    skos:broader she:Macronutrients ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:NitrogenTotal ;
+    skos:prefLabel "nitrogen"@en .
+
 she:Pavements a skos:Concept ;
     skos:altLabel "pavement"@en ;
     skos:broader she:LandCover ;
@@ -5324,12 +5332,6 @@ she:Molybdenum a skos:Concept ;
         she:MolybdenumTotalElements ;
     skos:prefLabel "molybdenum"@en .
 
-she:Nitrogen a skos:Concept ;
-    skos:broader she:Macronutrients ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:NitrogenTotal ;
-    skos:prefLabel "nitrogen"@en .
-
 she:NonconservativeSolutes a skos:Concept ;
     skos:altLabel "nonconservative solute"@en ;
     skos:broader she:SoilSolutes ;
@@ -5344,7 +5346,8 @@ she:NonsoilIndicators a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:EnvironmentalFactors,
         she:ExternalFactors ;
-    skos:prefLabel "non-soil indicators"@en .
+    skos:prefLabel "non-soil indicators"@en ;
+    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:PhosphorusRetention a skos:Concept ;
     skos:broader she:Phosphorus ;
@@ -5865,7 +5868,8 @@ she:SoilClassification a skos:Concept ;
     skos:narrower she:SoilClassificationFAO,
         she:SoilClassificationUSDA,
         she:SoilClassificationWRB ;
-    skos:prefLabel "soil classification"@en .
+    skos:prefLabel "soil classification"@en ;
+    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:SoilCompression a skos:Concept ;
     skos:broader she:SoilDensification,
@@ -5910,7 +5914,8 @@ she:SoilFormation a skos:Concept ;
     skos:narrower she:Lithology,
         she:ParentMaterial,
         she:SoilAge ;
-    skos:prefLabel "soil formation"@en .
+    skos:prefLabel "soil formation"@en ;
+    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:SoilHeatTransfer a skos:Concept ;
     skos:broader she:SoilHeatMovement ;
@@ -5971,7 +5976,8 @@ she:SoilProcesses a skos:Concept ;
 
 she:SoilQuality a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil quality"@en .
+    skos:prefLabel "soil quality"@en ;
+    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:SoilSolutePhysicalProperties a skos:Concept ;
     skos:altLabel "soil solute physical property"@en ;
@@ -6114,7 +6120,8 @@ she:EcosystemServices a skos:Concept ;
         she:ProvisioningServices,
         she:RegulatingServices,
         she:SupportingServices ;
-    skos:prefLabel "ecosystem services"@en .
+    skos:prefLabel "ecosystem services"@en ;
+    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:ExternalFactors a skos:Concept ;
     skos:altLabel "external factor"@en ;
@@ -6164,7 +6171,8 @@ she:Physiography a skos:Concept ;
         she:MajorLandForms,
         she:RockOutcrops,
         she:Slope ;
-    skos:prefLabel "physiography"@en .
+    skos:prefLabel "physiography"@en ;
+    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:Rock a skos:Concept ;
     skos:broader she:Fragments ;
@@ -7040,7 +7048,8 @@ she:SoilFunctionIndicators a skos:Concept ;
         she:NutrientMobilisationCapacity,
         she:SoilMoistureDeficit,
         she:WaterStorageCapacity ;
-    skos:prefLabel "soil function indicators"@en .
+    skos:prefLabel "soil function indicators"@en ;
+    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:SoilMoistureContents a skos:Concept ;
     skos:altLabel "soil moisture content"@en ;
@@ -7160,7 +7169,8 @@ she:SoilThreats a skos:Concept ;
         she:SoilNutrientLoss,
         she:SoilPollution,
         she:SoilSealing ;
-    skos:prefLabel "soil threats"@en .
+    skos:prefLabel "soil threats"@en ;
+    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:WaterInterchange a skos:Concept ;
     skos:broader she:PlanetaryPhenomena ;
@@ -7377,7 +7387,6 @@ she:NitrogenTotal a skos:Concept ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Nittot ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "nitrogen total"@en ;
-    she:broader she:Nitrogen ;
     she:hasProcedure she:nitrogenTotalProcedure-TotalN_bremner,
         she:nitrogenTotalProcedure-TotalN_calcul,
         she:nitrogenTotalProcedure-TotalN_calcul-oc10,
@@ -8521,7 +8530,8 @@ she:SoilDescription a skos:Concept ;
         she:TextureFieldClass,
         she:TextureLabClass,
         she:VegetationClass ;
-    skos:prefLabel "soil description"@en .
+    skos:prefLabel "soil description"@en ;
+    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:SoilPores a skos:Concept ;
     skos:altLabel "soil pore"@en ;

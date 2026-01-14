@@ -105,8 +105,36 @@ def split_semicolon(value: str) -> list[str]:
     return [p for p in parts if p]
 
 
+def _graph_without_predicates(g: Graph, predicates: set[URIRef]) -> Graph:
+    if not predicates:
+        return g
+    g2 = Graph()
+    g2.namespace_manager = g.namespace_manager
+    for s, p, o in g:
+        if p in predicates:
+            continue
+        g2.add((s, p, o))
+    return g2
+
+
 def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[str, str]]:
     rows = read_rows(csv_path)
+
+    PROCEDURE_EXACTMATCH_PREFIXES = (
+        "http://w3id.org/glosis/model/procedure/",
+        "http://w3id.org/glosis/model/procedure",
+    )
+
+    # Determine which concepts are procedures.
+    # Rule: if any skos:exactMatch URI starts with the GLOSIS procedure namespace, it's a procedure.
+    procedure_concept_uris: set[str] = set()
+    for row in rows:
+        concept_uri = str(row[COL_ID]).strip()
+        if not concept_uri:
+            continue
+        exacts = split_semicolon(str(row[COL_EXACT]))
+        if any(u.startswith(PROCEDURE_EXACTMATCH_PREFIXES) for u in exacts):
+            procedure_concept_uris.add(concept_uri)
 
     # Build lookups for mapping broader prefLabels -> URIs
     uri_to_pref: dict[str, str] = {}
@@ -157,20 +185,26 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
         concept = URIRef(concept_uri)
         concepts.append(concept)
 
+        is_procedure_concept = concept_uri in procedure_concept_uris
+
         g.add((concept, RDF.type, SKOS.Concept))
         g.add((concept, SKOS.inScheme, SCHEME_URI))
 
         pref = str(row[COL_PREF]).strip()
         if pref:
-            # CSV doesn't preserve language tags; use plain literals for best round-trip tolerance
-            g.add((concept, SKOS.prefLabel, Literal(pref)))
+            g.add((concept, SKOS.prefLabel, Literal(pref, lang="en")))
 
         for alt in split_semicolon(str(row[COL_ALT])):
-            g.add((concept, SKOS.altLabel, Literal(alt)))
+            g.add((concept, SKOS.altLabel, Literal(alt, lang="en")))
 
         definition = str(row[COL_DEF]).strip()
         if definition:
-            g.add((concept, SKOS.definition, Literal(definition)))
+            # In the current SoilVoc.ttl, procedure definitions are typically untagged, while
+            # non-procedure concept definitions are typically @en.
+            if is_procedure_concept:
+                g.add((concept, SKOS.definition, Literal(definition)))
+            else:
+                g.add((concept, SKOS.definition, Literal(definition, lang="en")))
 
         for uri in split_semicolon(str(row[COL_EXACT])):
             g.add((concept, SKOS.exactMatch, URIRef(uri)))
@@ -179,24 +213,28 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
             g.add((concept, SKOS.closeMatch, URIRef(uri)))
 
     # Add broader links using prefLabel -> URI mapping.
-    # If the current concept looks like a procedure concept (URI contains 'procedure'),
-    # interpret its 'broader' entries as she:isProcedureOf and also add inverse she:hasProcedure.
+    # For procedures:
+    # - broader == another procedure => skos:broader/skos:narrower
+    # - broader == non-procedure concept => she:isProcedureOf + inverse she:hasProcedure
     for row in rows:
         concept_uri = str(row[COL_ID]).strip()
         if not concept_uri:
             continue
         concept = URIRef(concept_uri)
 
-        is_procedure_concept = "procedure" in concept_uri.casefold()
+        is_procedure_concept = concept_uri in procedure_concept_uris
 
         for broader_label in split_semicolon(str(row[COL_BROADER])):
             broader_uri = resolve_pref_to_uri(broader_label)
             if broader_uri:
                 broader_concept = URIRef(broader_uri)
                 if is_procedure_concept:
-                    SHE = Namespace("https://soilwise-he.github.io/soil-health#")
-                    g.add((concept, SHE.isProcedureOf, broader_concept))
-                    g.add((broader_concept, SHE.hasProcedure, concept))
+                    broader_is_procedure = broader_uri in procedure_concept_uris
+                    if broader_is_procedure:
+                        g.add((concept, SKOS.broader, broader_concept))
+                    else:
+                        g.add((concept, SHE.isProcedureOf, broader_concept))
+                        g.add((broader_concept, SHE.hasProcedure, concept))
                 else:
                     g.add((concept, SKOS.broader, broader_concept))
 
@@ -204,12 +242,20 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
     for child, _, parent in g.triples((None, SKOS.broader, None)):
         g.add((parent, SKOS.narrower, child))
 
-    # Infer top concepts: concepts with no broader but at least one narrower
-    has_broader = set(s for s, _, _ in g.triples((None, SKOS.broader, None)))
-    has_narrower = set(o for _, _, o in g.triples((None, SKOS.narrower, None)))
-    top_concepts = [c for c in concepts if c not in has_broader and c in has_narrower]
+    # Infer top concepts: all non-procedure concepts with no skos:broader.
+    # For this project we treat: blank CSV "broader" => top concept.
+    # (We only record skos:broader in CSV; procedures are excluded.)
+    top_concept_uris_from_csv: set[str] = set()
+    for row in rows:
+        concept_uri = str(row[COL_ID]).strip()
+        if not concept_uri or concept_uri in procedure_concept_uris:
+            continue
+        broader_raw = str(row[COL_BROADER]).strip()
+        if not broader_raw:
+            top_concept_uris_from_csv.add(concept_uri)
 
-    for tc in sorted(set(top_concepts), key=lambda u: str(u)):
+    for tc_uri in sorted(top_concept_uris_from_csv):
+        tc = URIRef(tc_uri)
         g.add((SCHEME_URI, SKOS.hasTopConcept, tc))
         g.add((tc, SKOS.topConceptOf, SCHEME_URI))
 
@@ -222,6 +268,58 @@ def diff_graphs(g_expected: Graph, g_actual: Graph, limit: int = 25) -> tuple[li
     missing = sorted(expected_triples - actual_triples, key=lambda t: (str(t[0]), str(t[1]), str(t[2])))
     extra = sorted(actual_triples - expected_triples, key=lambda t: (str(t[0]), str(t[1]), str(t[2])))
     return missing[:limit], extra[:limit]
+
+
+def find_literal_lexical_differences(
+    g_expected: Graph,
+    g_actual: Graph,
+    predicates: set[URIRef],
+    limit: int = 10,
+) -> list[tuple[URIRef, URIRef, list[Literal], list[Literal]]]:
+    """Return (s, p, expected_literals, actual_literals) where both graphs have literals for (s,p) but they differ."""
+    def lit_map(g: Graph) -> dict[tuple[URIRef, URIRef], set[Literal]]:
+        out: dict[tuple[URIRef, URIRef], set[Literal]] = {}
+        for s, p, o in g:
+            if p not in predicates or not isinstance(o, Literal):
+                continue
+            out.setdefault((s, p), set()).add(o)
+        return out
+
+    m_expected = lit_map(g_expected)
+    m_actual = lit_map(g_actual)
+
+    diffs: list[tuple[URIRef, URIRef, list[Literal], list[Literal]]] = []
+    for key in sorted(set(m_expected.keys()) & set(m_actual.keys()), key=lambda k: (str(k[0]), str(k[1]))):
+        expected_set = m_expected[key]
+        actual_set = m_actual[key]
+        if expected_set != actual_set:
+            s, p = key
+            diffs.append(
+                (
+                    s,
+                    p,
+                    sorted(expected_set, key=lambda l: l.n3(g_expected.namespace_manager)),
+                    sorted(actual_set, key=lambda l: l.n3(g_actual.namespace_manager)),
+                )
+            )
+            if len(diffs) >= limit:
+                break
+
+    return diffs
+
+
+def top_concepts_in_scheme(g: Graph, scheme_uri: str) -> set[URIRef]:
+    scheme = URIRef(scheme_uri)
+    return set(o for _, _, o in g.triples((scheme, SKOS.hasTopConcept, None)))
+
+
+def close_topconcept_inverses(g: Graph, scheme_uri: str) -> None:
+    """Ensure both skos:hasTopConcept and skos:topConceptOf are present for the given scheme."""
+    scheme = URIRef(scheme_uri)
+    for tc in list(g.objects(scheme, SKOS.hasTopConcept)):
+        g.add((tc, SKOS.topConceptOf, scheme))
+    for tc in list(g.subjects(SKOS.topConceptOf, scheme)):
+        g.add((scheme, SKOS.hasTopConcept, tc))
 
 
 def main() -> None:
@@ -237,6 +335,27 @@ def main() -> None:
         "--compare",
         default="SoilVoc.ttl",
         help="Existing TTL to compare against",
+    )
+    parser.add_argument(
+        "--include-related",
+        action="store_true",
+        help="Include skos:related in comparison (default: ignore skos:related)",
+    )
+    parser.add_argument(
+        "--include-topconceptof",
+        action="store_true",
+        help="Include skos:topConceptOf in comparison (default: ignore skos:topConceptOf)",
+    )
+    parser.add_argument(
+        "--include-equivalentto",
+        action="store_true",
+        help="Include semscience:equivalentTo in comparison (default: ignore it)",
+    )
+    parser.add_argument(
+        "--literal-diff-limit",
+        type=int,
+        default=10,
+        help="How many literal lexical-form mismatches to print",
     )
     args = parser.parse_args()
 
@@ -260,11 +379,38 @@ def main() -> None:
         g_existing = Graph()
         g_existing.parse(str(compare_path), format="turtle")
 
-        same = isomorphic(restored, g_existing)
-        print(f"\nGraph isomorphic to {compare_path}: {same}")
+        SEMSCIENCE_EQUIVALENT_TO = URIRef("http://semanticscience.org/resource/equivalentTo")
 
-        if not same:
-            missing, extra = diff_graphs(g_existing, restored, limit=25)
+        ignored_predicates: set[URIRef] = set()
+        if not args.include_related:
+            ignored_predicates.add(SKOS.related)
+        if not args.include_equivalentto:
+            ignored_predicates.add(SEMSCIENCE_EQUIVALENT_TO)
+
+        g_existing_cmp = _graph_without_predicates(g_existing, ignored_predicates)
+        restored_cmp = _graph_without_predicates(restored, ignored_predicates)
+
+        # If requested, compare including skos:topConceptOf, but normalize both graphs so
+        # they are closed under the inverse relationship hasTopConcept <-> topConceptOf.
+        if args.include_topconceptof:
+            close_topconcept_inverses(g_existing_cmp, args.scheme)
+            close_topconcept_inverses(restored_cmp, args.scheme)
+
+        same_raw = isomorphic(restored, g_existing)
+        same_cmp = isomorphic(restored_cmp, g_existing_cmp)
+        if ignored_predicates:
+            print(f"\nGraph isomorphic to {compare_path} (raw): {same_raw}")
+            print(f"Graph isomorphic to {compare_path} (ignoring {', '.join(sorted(str(p) for p in ignored_predicates))}): {same_cmp}")
+        else:
+            print(f"\nGraph isomorphic to {compare_path}: {same_raw}")
+
+        existing_top = top_concepts_in_scheme(g_existing, args.scheme)
+        restored_top = top_concepts_in_scheme(restored, args.scheme)
+        print(f"\nTop concepts in existing TTL: {len(existing_top)}")
+        print(f"Top concepts in restored TTL: {len(restored_top)}")
+
+        if not same_cmp:
+            missing, extra = diff_graphs(g_existing_cmp, restored_cmp, limit=25)
             print(f"\nTriples missing from restored (showing up to {len(missing)}):")
             for s, p, o in missing:
                 print(f"- {s.n3(restored.namespace_manager)} {p.n3(restored.namespace_manager)} {o.n3(restored.namespace_manager)}")
@@ -272,6 +418,26 @@ def main() -> None:
             print(f"\nTriples extra in restored (showing up to {len(extra)}):")
             for s, p, o in extra:
                 print(f"- {s.n3(restored.namespace_manager)} {p.n3(restored.namespace_manager)} {o.n3(restored.namespace_manager)}")
+
+            # Targeted literal lexical-form differences (what the user can fix in CSV)
+            lit_preds = {SKOS.prefLabel, SKOS.altLabel, SKOS.definition}
+            literal_diffs = find_literal_lexical_differences(
+                g_existing_cmp,
+                restored_cmp,
+                predicates=lit_preds,
+                limit=max(0, int(args.literal_diff_limit)),
+            )
+            if literal_diffs:
+                print(f"\nExamples of literal lexical-form differences (up to {len(literal_diffs)}):")
+                for s, p, expected_lits, actual_lits in literal_diffs:
+                    print(f"- Subject: {s}")
+                    print(f"  Predicate: {p}")
+                    print("  Existing literals:")
+                    for lit in expected_lits:
+                        print(f"    - {lit.n3(g_existing.namespace_manager)}")
+                    print("  Restored literals:")
+                    for lit in actual_lits:
+                        print(f"    - {lit.n3(restored.namespace_manager)}")
 
 
 if __name__ == "__main__":
