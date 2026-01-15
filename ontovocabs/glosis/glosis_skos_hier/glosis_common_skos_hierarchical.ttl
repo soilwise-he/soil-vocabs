@@ -1,129 +1,152 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix glosis_cm: <http://w3id.org/glosis/model/common/> .
+@prefix schema: <https://schema.org/> .
 @prefix she: <https://soilwise-he.github.io/soil-health#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 she:BleachedSand a skos:Concept ;
     skos:broader she:Sand ;
-    skos:definition "The Bleached Sand refers to the physical characteristic of sandy soil that has undergone a bleaching process due to leaching, where minerals such as iron and other elements have been removed by water. This process often occurs in areas with high rainfall, leading to a soil that appears lighter in color. Bleached sand typically indicates low fertility and poor nutrient-holding capacity due to the lack of iron and other nutrients that are washed away. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall."@en ;
+    skos:definition [ dcterms:source glosis_cm:bleachedSandProperty ;
+            schema:text "The Bleached Sand refers to the physical characteristic of sandy soil that has undergone a bleaching process due to leaching, where minerals such as iron and other elements have been removed by water. This process often occurs in areas with high rainfall, leading to a soil that appears lighter in color. Bleached sand typically indicates low fertility and poor nutrient-holding capacity due to the lack of iron and other nutrients that are washed away. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall."@en ] ;
     skos:exactMatch glosis_cm:bleachedSandProperty ;
     skos:prefLabel "bleached sand"@en .
 
 she:SoilColourDry a skos:Concept ;
     skos:broader she:SoilColour ;
-    skos:definition "The Soil Colour Dry describes the color of soil when it is in a dry state. Soil color in the dry condition is influenced by the soil’s mineral composition and moisture content. For example, soils with high organic matter content typically appear dark brown or black when dry, while sandy or saline soils may appear lighter in color. Dry soil color is used in soil classification and can provide insights into the soil's composition and drainage. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ;
+    skos:definition [ dcterms:source glosis_cm:colourDryProperty ;
+            schema:text "The Soil Colour Dry describes the color of soil when it is in a dry state. Soil color in the dry condition is influenced by the soil’s mineral composition and moisture content. For example, soils with high organic matter content typically appear dark brown or black when dry, while sandy or saline soils may appear lighter in color. Dry soil color is used in soil classification and can provide insights into the soil's composition and drainage. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ] ;
     skos:exactMatch glosis_cm:colourDryProperty ;
     skos:prefLabel "soil colour dry"@en .
 
 she:SoilColourMoist a skos:Concept ;
     skos:broader she:SoilColour ;
-    skos:definition "The Soil Colour Moist refers to the soil's color when it is in a wet or moist condition. Moisture enhances the color intensity of the soil, which is often darker compared to its dry state. This is particularly helpful in determining organic matter content, iron oxide presence, and soil moisture retention. For instance, moist soils with abundant organic material tend to appear darker, whereas more mineral-rich soils can appear lighter in color. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ;
+    skos:definition [ dcterms:source glosis_cm:colourMoistProperty ;
+            schema:text "The Soil Colour Moist refers to the soil's color when it is in a wet or moist condition. Moisture enhances the color intensity of the soil, which is often darker compared to its dry state. This is particularly helpful in determining organic matter content, iron oxide presence, and soil moisture retention. For instance, moist soils with abundant organic material tend to appear darker, whereas more mineral-rich soils can appear lighter in color. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ] ;
     skos:exactMatch glosis_cm:colourMoistProperty ;
     skos:prefLabel "soil colour moist"@en .
 
 she:SoilCrackDepth a skos:Concept ;
     skos:broader she:SoilCracks ;
-    skos:definition "The Soil Crack Depth refers to the measurement of the vertical depth of cracks formed in soil, which is typically observed in dry conditions when the soil shrinks. Cracks are more common in clayey soils that experience significant shrinkage upon drying. The depth of these cracks can indicate soil moisture levels, compaction, and the ability of the soil to expand and contract, which affects water infiltration and root penetration. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press."@en ;
+    skos:definition [ dcterms:source glosis_cm:cracksDepthProperty ;
+            schema:text "The Soil Crack Depth refers to the measurement of the vertical depth of cracks formed in soil, which is typically observed in dry conditions when the soil shrinks. Cracks are more common in clayey soils that experience significant shrinkage upon drying. The depth of these cracks can indicate soil moisture levels, compaction, and the ability of the soil to expand and contract, which affects water infiltration and root penetration. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press."@en ] ;
     skos:exactMatch glosis_cm:cracksDepthProperty ;
     skos:prefLabel "soil crack depth"@en .
 
 she:SoilCrackDistance a skos:Concept ;
     skos:broader she:SoilCracks ;
-    skos:definition "The Soil Crack Distance refers to the horizontal spacing between cracks in the soil surface, which can occur due to the shrinkage of soil as it dries. Cracks form when water content decreases, and their distance is an indicator of the soil's shrink-swell behavior. Larger distances between cracks generally indicate more severe soil shrinkage, which can affect root growth and water infiltration. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press."@en ;
+    skos:definition [ dcterms:source glosis_cm:cracksDistanceProperty ;
+            schema:text "The Soil Crack Distance refers to the horizontal spacing between cracks in the soil surface, which can occur due to the shrinkage of soil as it dries. Cracks form when water content decreases, and their distance is an indicator of the soil's shrink-swell behavior. Larger distances between cracks generally indicate more severe soil shrinkage, which can affect root growth and water infiltration. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press."@en ] ;
     skos:exactMatch glosis_cm:cracksDistanceProperty ;
     skos:prefLabel "soil crack distance"@en .
 
 she:SoilCrackWidth a skos:Concept ;
     skos:broader she:SoilCracks ;
-    skos:definition "The Soil Crack Width refers to the measurement of the gap or space between the sides of soil cracks. The width of these cracks is typically influenced by soil moisture content and texture. Wider cracks are indicative of drier conditions and are commonly found in soils with high clay content, which tend to shrink and form deep cracks when the moisture content is reduced. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press."@en ;
+    skos:definition [ dcterms:source glosis_cm:cracksWidthProperty ;
+            schema:text "The Soil Crack Width refers to the measurement of the gap or space between the sides of soil cracks. The width of these cracks is typically influenced by soil moisture content and texture. Wider cracks are indicative of drier conditions and are commonly found in soils with high clay content, which tend to shrink and form deep cracks when the moisture content is reduced. Source: McSweeney, K. (2009). Soil and Water Conservation Handbook. CRC Press."@en ] ;
     skos:exactMatch glosis_cm:cracksWidthProperty ;
     skos:prefLabel "soil crack width"@en .
 
 she:SoilDepthRootableClass a skos:Concept ;
     skos:broader she:SoilDescription ;
-    skos:definition "The Soil Depth Rootable Class classifies soils based on the depth of the rootable zone, which excludes impenetrable layers such as bedrock or compacted horizons. Soils are typically classified as shallow, moderately deep, or deep, depending on the depth of the root zone, which directly affects plant growth. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations."@en ;
+    skos:definition [ dcterms:source glosis_cm:soilDepthRootableClassProperty ;
+            schema:text "The Soil Depth Rootable Class classifies soils based on the depth of the rootable zone, which excludes impenetrable layers such as bedrock or compacted horizons. Soils are typically classified as shallow, moderately deep, or deep, depending on the depth of the root zone, which directly affects plant growth. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations."@en ] ;
     skos:exactMatch glosis_cm:soilDepthRootableClassProperty ;
     skos:prefLabel "soil depth rootable class"@en .
 
 she:SoilOrganicMatterClass a skos:Concept ;
     skos:broader she:SoilDescription ;
-    skos:definition "The Soil Organic Matter Class classifies soil based on the amount and quality of organic matter it contains. Soils with high organic matter are usually fertile, retain moisture better, and support more biological activity. This classification helps in determining soil health and suitability for agricultural purposes. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall."@en ;
+    skos:definition [ dcterms:source glosis_cm:organicMatterClassProperty ;
+            schema:text "The Soil Organic Matter Class classifies soil based on the amount and quality of organic matter it contains. Soils with high organic matter are usually fertile, retain moisture better, and support more biological activity. This classification helps in determining soil health and suitability for agricultural purposes. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall."@en ] ;
     skos:exactMatch glosis_cm:organicMatterClassProperty ;
     skos:prefLabel "soil organic matter class"@en .
 
 she:SoilTexture a skos:Concept ;
-    skos:definition "The Soil Texture refers to the relative proportions of sand, silt, and clay in a soil. It is a key indicator of the soil’s ability to retain moisture, drain water, and support root growth. Soils can be classified into textures such as sandy, loamy, or clayey, each with distinct characteristics affecting soil management. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ;
+    skos:definition [ dcterms:source glosis_cm:textureProperty ;
+            schema:text "The Soil Texture refers to the relative proportions of sand, silt, and clay in a soil. It is a key indicator of the soil’s ability to retain moisture, drain water, and support root growth. Soils can be classified into textures such as sandy, loamy, or clayey, each with distinct characteristics affecting soil management. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ] ;
     skos:exactMatch glosis_cm:textureProperty ;
     skos:prefLabel "soil texture"@en .
 
 she:SoilWaterInfiltrationRateClass a skos:Concept ;
     skos:broader she:SoilDescription ;
-    skos:definition "The Soil Water Infiltration Rate Class classifies the soil’s ability to absorb water based on observed infiltration rates. This classification is typically divided into categories like slow, moderate, or rapid infiltration, based on how quickly water is absorbed into the soil. It is an essential property for understanding drainage, runoff, and irrigation needs. Source: Hillel, D. (2004). Introduction to Soil Physics. Academic Press."@en ;
+    skos:definition [ dcterms:source glosis_cm:infiltrationRateClassProperty ;
+            schema:text "The Soil Water Infiltration Rate Class classifies the soil’s ability to absorb water based on observed infiltration rates. This classification is typically divided into categories like slow, moderate, or rapid infiltration, based on how quickly water is absorbed into the soil. It is an essential property for understanding drainage, runoff, and irrigation needs. Source: Hillel, D. (2004). Introduction to Soil Physics. Academic Press."@en ] ;
     skos:exactMatch glosis_cm:infiltrationRateClassProperty ;
     skos:prefLabel "soil water infiltration rate class"@en .
 
 she:SoilWaterInfiltrationRateNumeric a skos:Concept ;
     skos:broader she:SoilWaterInfiltrationRate ;
-    skos:definition "The Soil Water Infiltration Rate Numeric provides a quantitative measure of the rate at which water enters the soil, usually expressed in units such as millimeters per hour (mm/h). This numeric value is essential for determining soil permeability, irrigation management, and runoff prediction. Higher infiltration rates indicate well-drained soils, while lower rates suggest compacted or clay-rich soils. Source: Bouwer, H. (2000). Integrated Water Management for the 21st Century. Water Resources Research."@en ;
+    skos:definition [ dcterms:source glosis_cm:infiltrationRateNumericProperty ;
+            schema:text "The Soil Water Infiltration Rate Numeric provides a quantitative measure of the rate at which water enters the soil, usually expressed in units such as millimeters per hour (mm/h). This numeric value is essential for determining soil permeability, irrigation management, and runoff prediction. Higher infiltration rates indicate well-drained soils, while lower rates suggest compacted or clay-rich soils. Source: Bouwer, H. (2000). Integrated Water Management for the 21st Century. Water Resources Research."@en ] ;
     skos:exactMatch glosis_cm:infiltrationRateNumericProperty ;
     skos:prefLabel "soil water infiltration rate numeric"@en .
 
 she:FragmentCover a skos:Concept ;
     skos:broader she:Fragments ;
-    skos:definition "The Fragment Cover describes the proportion of the soil surface covered by coarse fragments such as rocks, stones, or other large particles. This property is important because a high fragment cover can reduce soil erosion but may also interfere with water infiltration and root growth. Fragment cover is often used as an indicator of soil stability and erosion potential. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations."@en ;
+    skos:definition [ dcterms:source glosis_cm:fragmentCoverProperty ;
+            schema:text "The Fragment Cover describes the proportion of the soil surface covered by coarse fragments such as rocks, stones, or other large particles. This property is important because a high fragment cover can reduce soil erosion but may also interfere with water infiltration and root growth. Fragment cover is often used as an indicator of soil stability and erosion potential. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations."@en ] ;
     skos:exactMatch glosis_cm:fragmentCoverProperty ;
     skos:prefLabel "fragment cover"@en .
 
 she:FragmentSize a skos:Concept ;
     skos:broader she:Fragments ;
-    skos:definition "The Fragment Size refers to the dimensions of rock or mineral fragments present in the soil. These fragments are categorized based on their size, ranging from small gravel particles to larger stones and boulders. Larger fragments tend to reduce soil fertility, inhibit root growth, and decrease water retention. Smaller fragments, in contrast, contribute to soil texture and permeability. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ;
+    skos:definition [ dcterms:source glosis_cm:fragmentsSizeProperty ;
+            schema:text "The Fragment Size refers to the dimensions of rock or mineral fragments present in the soil. These fragments are categorized based on their size, ranging from small gravel particles to larger stones and boulders. Larger fragments tend to reduce soil fertility, inhibit root growth, and decrease water retention. Smaller fragments, in contrast, contribute to soil texture and permeability. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ] ;
     skos:exactMatch glosis_cm:fragmentsSizeProperty ;
     skos:prefLabel "fragment size"@en .
 
 she:RockAbundance a skos:Concept ;
     skos:broader she:Rock ;
-    skos:definition "The Rock Abundance refers to the proportion or percentage of rock fragments in the soil profile. High rock abundance can affect soil tillage, water retention, root penetration, and overall soil fertility. It is often used to assess land suitability for agriculture and vegetation. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations."@en ;
+    skos:definition [ dcterms:source glosis_cm:rockAbundanceProperty ;
+            schema:text "The Rock Abundance refers to the proportion or percentage of rock fragments in the soil profile. High rock abundance can affect soil tillage, water retention, root penetration, and overall soil fertility. It is often used to assess land suitability for agriculture and vegetation. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations."@en ] ;
     skos:exactMatch glosis_cm:rockAbundanceProperty ;
     skos:prefLabel "rock abundance"@en .
 
 she:RockShape a skos:Concept ;
     skos:broader she:Rock ;
-    skos:definition "The Rock Shape describes the physical form of rock fragments in the soil, which can range from angular to rounded. Angular rocks are generally a sign of recent weathering, while rounded rocks have been smoothed by long-term weathering processes. The shape of rocks influences soil texture, drainage, and tillage requirements. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations."@en ;
+    skos:definition [ dcterms:source glosis_cm:rockShapeProperty ;
+            schema:text "The Rock Shape describes the physical form of rock fragments in the soil, which can range from angular to rounded. Angular rocks are generally a sign of recent weathering, while rounded rocks have been smoothed by long-term weathering processes. The shape of rocks influences soil texture, drainage, and tillage requirements. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations."@en ] ;
     skos:exactMatch glosis_cm:rockShapeProperty ;
     skos:prefLabel "rock shape"@en .
 
 she:RockSize a skos:Concept ;
     skos:broader she:Rock ;
-    skos:definition "The Rock Size refers to the dimensions of the rock fragments present in the soil. Rocks are typically classified by their size, from small gravel to large boulders. Larger rocks can limit root growth, hinder water infiltration, and complicate soil management practices. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ;
+    skos:definition [ dcterms:source glosis_cm:rockSizeProperty ;
+            schema:text "The Rock Size refers to the dimensions of the rock fragments present in the soil. Rocks are typically classified by their size, from small gravel to large boulders. Larger rocks can limit root growth, hinder water infiltration, and complicate soil management practices. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ] ;
     skos:exactMatch glosis_cm:rockSizeProperty ;
     skos:prefLabel "rock size"@en .
 
 she:SoilDepthBedrock a skos:Concept ;
     skos:broader she:SoilDepth ;
-    skos:definition "The Soil Depth Bedrock refers to the distance from the soil surface to the underlying bedrock layer. This measurement is important for understanding the soil's capacity to support plant growth, as soils with shallow bedrock tend to have limited rooting depth, affecting water retention and nutrient availability. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations."@en ;
+    skos:definition [ dcterms:source glosis_cm:soilDepthBedrockProperty ;
+            schema:text "The Soil Depth Bedrock refers to the distance from the soil surface to the underlying bedrock layer. This measurement is important for understanding the soil's capacity to support plant growth, as soils with shallow bedrock tend to have limited rooting depth, affecting water retention and nutrient availability. Source: FAO (2006). Guidelines for Soil Description (4th ed.). Food and Agriculture Organization of the United Nations."@en ] ;
     skos:exactMatch glosis_cm:soilDepthBedrockProperty ;
     skos:prefLabel "soil depth bedrock"@en .
 
 she:SoilDepthRootable a skos:Concept ;
     skos:broader she:SoilDepth ;
-    skos:definition "The Soil Depth Rootable refers to the actual vertical depth of soil that can support plant roots, excluding any non-rootable layers such as bedrock or a water-impervious horizon. This depth is crucial for determining the suitability of land for agriculture and vegetation. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ;
+    skos:definition [ dcterms:source glosis_cm:soilDepthRootableProperty ;
+            schema:text "The Soil Depth Rootable refers to the actual vertical depth of soil that can support plant roots, excluding any non-rootable layers such as bedrock or a water-impervious horizon. This depth is crucial for determining the suitability of land for agriculture and vegetation. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ] ;
     skos:exactMatch glosis_cm:soilDepthRootableProperty ;
     skos:prefLabel "soil depth rootable"@en .
 
 she:SoilDepthSampled a skos:Concept ;
     skos:broader she:SoilDepth ;
-    skos:definition "The Soil Depth Sampled indicates the specific depth of the soil profile that has been sampled for analysis. This property is important for understanding the representativeness of the sample, as different soil horizons may vary significantly in properties such as texture, fertility, and moisture content. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ;
+    skos:definition [ dcterms:source glosis_cm:soilDepthSampledProperty ;
+            schema:text "The Soil Depth Sampled indicates the specific depth of the soil profile that has been sampled for analysis. This property is important for understanding the representativeness of the sample, as different soil horizons may vary significantly in properties such as texture, fertility, and moisture content. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ] ;
     skos:exactMatch glosis_cm:soilDepthSampledProperty ;
     skos:prefLabel "soil depth sampled"@en .
 
 she:WeatheringFragments a skos:Concept ;
     skos:altLabel "weathering fragment"@en ;
     skos:broader she:Fragments ;
-    skos:definition "The Weathering Fragment refers to soil particles or rock fragments that have been broken down through physical, chemical, or biological weathering. These fragments play a role in soil texture, structure, and nutrient availability. The degree of weathering can indicate the age and stability of the soil’s mineral content. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall."@en ;
+    skos:definition [ dcterms:source glosis_cm:weatheringFragmentsProperty ;
+            schema:text "The Weathering Fragment refers to soil particles or rock fragments that have been broken down through physical, chemical, or biological weathering. These fragments play a role in soil texture, structure, and nutrient availability. The degree of weathering can indicate the age and stability of the soil’s mineral content. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall."@en ] ;
     skos:exactMatch glosis_cm:weatheringFragmentsProperty ;
     skos:prefLabel "weathering fragments"@en .
 
 she:SoilDepth a skos:Concept ;
-    skos:definition "The Soil Depth measures the vertical distance from the soil surface to an impenetrable layer, such as bedrock or a hardpan. Soil depth is a crucial factor influencing root development, water storage, and plant growth. Shallow soils may limit root growth, while deep soils can support more extensive root systems. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall."@en ;
+    skos:definition [ dcterms:source glosis_cm:soilDepthProperty ;
+            schema:text "The Soil Depth measures the vertical distance from the soil surface to an impenetrable layer, such as bedrock or a hardpan. Soil depth is a crucial factor influencing root development, water storage, and plant growth. Shallow soils may limit root growth, while deep soils can support more extensive root systems. Source: Brady, N. C., & Weil, R. R. (2008). The Nature and Properties of Soils (14th ed.). Pearson Prentice Hall."@en ] ;
     skos:exactMatch glosis_cm:soilDepthProperty ;
     skos:narrower she:SoilDepthBedrock,
         she:SoilDepthRootable,
@@ -131,8 +154,8 @@ she:SoilDepth a skos:Concept ;
     skos:prefLabel "soil depth"@en .
 
 she:Fragments a skos:Concept ;
-    skos:broader she:SoilPhysicalProperties ;
     skos:altLabel "fragment"@en ;
+    skos:broader she:SoilPhysicalProperties ;
     skos:narrower she:FragmentCover,
         she:FragmentSize,
         she:Rock,
