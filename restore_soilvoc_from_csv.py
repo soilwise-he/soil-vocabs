@@ -4,9 +4,9 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-from rdflib import Graph, Literal, Namespace, URIRef
-from rdflib.namespace import RDF, SKOS
-from rdflib.compare import isomorphic
+from rdflib import BNode, Graph, Literal, Namespace, URIRef
+from rdflib.namespace import DCTERMS, RDF, SKOS, SDO
+from rdflib.compare import graph_diff, isomorphic, to_isomorphic
 
 
 COL_ID = "ID"
@@ -16,6 +16,7 @@ COL_DEF = "definition"
 COL_BROADER = "broader"
 COL_EXACT = "exactMatch"
 COL_CLOSE = "closeMatch"
+COL_SOURCE = "source link"
 
 
 COLUMN_ALIASES: dict[str, list[str]] = {
@@ -43,6 +44,15 @@ COLUMN_ALIASES: dict[str, list[str]] = {
         "closeMatch",
         "close match",
         "close match (skos:closeMatch, semicolon-separated, use full URIs)",
+    ],
+    COL_SOURCE: [
+        "source link",
+        "source links",
+        "source_link",
+        "source",
+        "source uri",
+        "source uris",
+        "definition source",
     ],
 }
 
@@ -95,13 +105,19 @@ def read_rows(csv_path: Path) -> list[dict[str, str]]:
         return rows
 
 
-def split_semicolon(value: str) -> list[str]:
+def split_values(value: str, allow_legacy_semicolon: bool = True) -> list[str]:
     if value is None:
         return []
     value = str(value).strip()
     if not value or value.lower() == "nan":
         return []
-    parts = [p.strip() for p in value.split(";")]
+    if "|" in value:
+        parts = value.split("|")
+    elif allow_legacy_semicolon and ";" in value:
+        parts = value.split(";")
+    else:
+        parts = [value]
+    parts = [p.strip() for p in parts]
     return [p for p in parts if p]
 
 
@@ -132,7 +148,7 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
         concept_uri = str(row[COL_ID]).strip()
         if not concept_uri:
             continue
-        exacts = split_semicolon(str(row[COL_EXACT]))
+        exacts = split_values(str(row[COL_EXACT]))
         if any(u.startswith(PROCEDURE_EXACTMATCH_PREFIXES) for u in exacts):
             procedure_concept_uris.add(concept_uri)
 
@@ -172,6 +188,8 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
 
     g.bind("skos", SKOS)
     g.bind("she", SHE)
+    g.bind("dcterms", DCTERMS)
+    g.bind("schema", SDO)
 
     # Create concept scheme (CSV doesn't carry scheme metadata beyond URI)
     g.add((SCHEME_URI, RDF.type, SKOS.ConceptScheme))
@@ -194,22 +212,30 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
         if pref:
             g.add((concept, SKOS.prefLabel, Literal(pref, lang="en")))
 
-        for alt in split_semicolon(str(row[COL_ALT])):
+        for alt in split_values(str(row[COL_ALT])):
             g.add((concept, SKOS.altLabel, Literal(alt, lang="en")))
 
-        definition = str(row[COL_DEF]).strip()
-        if definition:
-            # In the current SoilVoc.ttl, procedure definitions are typically untagged, while
-            # non-procedure concept definitions are typically @en.
-            if is_procedure_concept:
-                g.add((concept, SKOS.definition, Literal(definition)))
+        definitions = split_values(str(row[COL_DEF]), allow_legacy_semicolon=False)
+        sources = split_values(str(row[COL_SOURCE]), allow_legacy_semicolon=False)
+        if sources and len(sources) != len(definitions):
+            warnings.setdefault("definition_source_mismatch", "")
+            warnings["definition_source_mismatch"] += (
+                f"- {concept_uri}: {len(definitions)} definition(s), {len(sources)} source link(s)\n"
+            )
+        for idx, definition in enumerate(definitions):
+            source = sources[idx] if idx < len(sources) else ""
+            if source:
+                bnode = BNode()
+                g.add((concept, SKOS.definition, bnode))
+                g.add((bnode, SDO.text, Literal(definition, lang="en")))
+                g.add((bnode, DCTERMS.source, URIRef(source)))
             else:
                 g.add((concept, SKOS.definition, Literal(definition, lang="en")))
 
-        for uri in split_semicolon(str(row[COL_EXACT])):
+        for uri in split_values(str(row[COL_EXACT])):
             g.add((concept, SKOS.exactMatch, URIRef(uri)))
 
-        for uri in split_semicolon(str(row[COL_CLOSE])):
+        for uri in split_values(str(row[COL_CLOSE])):
             g.add((concept, SKOS.closeMatch, URIRef(uri)))
 
     # Add broader links using prefLabel -> URI mapping.
@@ -224,7 +250,7 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
 
         is_procedure_concept = concept_uri in procedure_concept_uris
 
-        for broader_label in split_semicolon(str(row[COL_BROADER])):
+        for broader_label in split_values(str(row[COL_BROADER])):
             broader_uri = resolve_pref_to_uri(broader_label)
             if broader_uri:
                 broader_concept = URIRef(broader_uri)
@@ -262,11 +288,23 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
     return g, warnings
 
 
-def diff_graphs(g_expected: Graph, g_actual: Graph, limit: int = 25) -> tuple[list[tuple], list[tuple]]:
-    expected_triples = set(g_expected)
-    actual_triples = set(g_actual)
-    missing = sorted(expected_triples - actual_triples, key=lambda t: (str(t[0]), str(t[1]), str(t[2])))
-    extra = sorted(actual_triples - expected_triples, key=lambda t: (str(t[0]), str(t[1]), str(t[2])))
+def diff_graphs(
+    g_expected: Graph,
+    g_actual: Graph,
+    limit: int = 25,
+    canonicalize_bnodes: bool = True,
+) -> tuple[list[tuple], list[tuple]]:
+    if canonicalize_bnodes:
+        iso_expected = to_isomorphic(g_expected)
+        iso_actual = to_isomorphic(g_actual)
+        _, in_expected, in_actual = graph_diff(iso_expected, iso_actual)
+        missing = sorted(in_expected, key=lambda t: (str(t[0]), str(t[1]), str(t[2])))
+        extra = sorted(in_actual, key=lambda t: (str(t[0]), str(t[1]), str(t[2])))
+    else:
+        expected_triples = set(g_expected)
+        actual_triples = set(g_actual)
+        missing = sorted(expected_triples - actual_triples, key=lambda t: (str(t[0]), str(t[1]), str(t[2])))
+        extra = sorted(actual_triples - expected_triples, key=lambda t: (str(t[0]), str(t[1]), str(t[2])))
     return missing[:limit], extra[:limit]
 
 
@@ -357,6 +395,11 @@ def main() -> None:
         default=10,
         help="How many literal lexical-form mismatches to print",
     )
+    parser.add_argument(
+        "--raw-bnode-diff",
+        action="store_true",
+        help="Show diffs with raw blank node IDs (default: canonicalize bnodes in diffs)",
+    )
     args = parser.parse_args()
 
     csv_path = Path(args.csv)
@@ -373,6 +416,9 @@ def main() -> None:
     if warnings.get("unresolved_broader_labels"):
         print("\nWARNING: Unresolved broader labels (no matching prefLabel in CSV):")
         print(warnings["unresolved_broader_labels"].rstrip())
+    if warnings.get("definition_source_mismatch"):
+        print("\nWARNING: Definition/source link count mismatch:")
+        print(warnings["definition_source_mismatch"].rstrip())
 
     # Compare with existing TTL if present
     if compare_path.exists():
@@ -410,7 +456,12 @@ def main() -> None:
         print(f"Top concepts in restored TTL: {len(restored_top)}")
 
         if not same_cmp:
-            missing, extra = diff_graphs(g_existing_cmp, restored_cmp, limit=25)
+            missing, extra = diff_graphs(
+                g_existing_cmp,
+                restored_cmp,
+                limit=25,
+                canonicalize_bnodes=not args.raw_bnode_diff,
+            )
             print(f"\nTriples missing from restored (showing up to {len(missing)}):")
             for s, p, o in missing:
                 print(f"- {s.n3(restored.namespace_manager)} {p.n3(restored.namespace_manager)} {o.n3(restored.namespace_manager)}")
@@ -420,7 +471,7 @@ def main() -> None:
                 print(f"- {s.n3(restored.namespace_manager)} {p.n3(restored.namespace_manager)} {o.n3(restored.namespace_manager)}")
 
             # Targeted literal lexical-form differences (what the user can fix in CSV)
-            lit_preds = {SKOS.prefLabel, SKOS.altLabel, SKOS.definition}
+            lit_preds = {SKOS.prefLabel, SKOS.altLabel, SDO.text, SKOS.definition}
             literal_diffs = find_literal_lexical_differences(
                 g_existing_cmp,
                 restored_cmp,
