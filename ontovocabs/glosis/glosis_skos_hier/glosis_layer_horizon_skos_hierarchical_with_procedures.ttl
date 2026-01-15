@@ -295,12 +295,6 @@ she:TotalCarbonateEquivalent a skos:Concept ;
         she:totalCarbonateEquivalentProcedure-CaCO3_ca12,
         she:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc .
 
-she:ToxicElements a skos:Concept ;
-    skos:broader she:SoilPollution ;
-    skos:narrower she:Aluminium,
-        she:Cadmium ;
-    skos:prefLabel "toxic elements"@en .
-
 she:WetPlasticity a skos:Concept ;
     skos:broader she:SoilPlasticity ;
     skos:definition [ dcterms:source glosis_lh:wetPlasticityProperty ;
@@ -2988,6 +2982,7 @@ she:Boron a skos:Concept ;
     skos:prefLabel "boron"@en .
 
 she:Cadmium a skos:Concept ;
+    skos:broader she:SoilContaminants ;
     skos:narrower she:CadmiumExtractableElements,
         she:CadmiumTotalElements ;
     skos:prefLabel "cadmium"@en .
@@ -3084,6 +3079,7 @@ she:Zinc a skos:Concept ;
     skos:prefLabel "zinc"@en .
 
 she:Aluminium a skos:Concept ;
+    skos:broader she:SoilContaminants ;
     skos:narrower she:AluminiumExchangeableBase,
         she:AluminiumExtractableElements,
         she:AluminiumTotalElements ;

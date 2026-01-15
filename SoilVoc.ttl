@@ -154,11 +154,6 @@ she:BuildingStability a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "building stability"@en .
 
-she:BulkDensity a skos:Concept ;
-    skos:broader she:ObservableSoilProperties ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "bulk density"@en .
-
 she:BulkDensityMineral a skos:Concept ;
     skos:broader she:SoilBulkDensity ;
     skos:definition [ dcterms:source glosis_lh:bulkDensityMineralProperty ;
@@ -2621,6 +2616,11 @@ she:SoilPollutantTransport a skos:Concept ;
     skos:exactMatch spp:SoilPollutantTransport ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil pollutant transport"@en .
+
+she:SoilPollution a skos:Concept ;
+    skos:broader she:SoilThreats ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "soil pollution"@en .
 
 she:SoilPolymerAdsorption a skos:Concept ;
     skos:broader she:SoilAdsorption ;
@@ -5279,13 +5279,6 @@ she:SoilChargeDensity a skos:Concept ;
     skos:narrower she:IntrinsicChargeDensity ;
     skos:prefLabel "soil charge density"@en .
 
-she:SoilContaminants a skos:Concept ;
-    skos:altLabel "soil contaminant"@en ;
-    skos:broader she:SoilAnionContents,
-        she:SoilCationContents ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil contaminants"@en .
-
 she:SoilCracking a skos:Concept ;
     skos:broader she:SoilFailure,
         she:SoilPhysicalProcesses ;
@@ -5394,12 +5387,6 @@ she:SoilPlasticity a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:WetPlasticity ;
     skos:prefLabel "soil plasticity"@en .
-
-she:SoilPollution a skos:Concept ;
-    skos:broader she:SoilThreats ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:ToxicElements ;
-    skos:prefLabel "soil pollution"@en .
 
 she:SoilPoreSizeDistribution a skos:Concept ;
     skos:broader she:SoilPorePhysicalProperties,
@@ -5585,7 +5572,7 @@ she:Boron a skos:Concept ;
     skos:prefLabel "boron"@en .
 
 she:Cadmium a skos:Concept ;
-    skos:broader she:ToxicElements ;
+    skos:broader she:SoilContaminants ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:CadmiumExtractableElements,
         she:CadmiumTotalElements ;
@@ -6016,13 +6003,6 @@ she:Sulfur a skos:Concept ;
         she:SulfurTotalElements ;
     skos:prefLabel "sulfur"@en .
 
-she:ToxicElements a skos:Concept ;
-    skos:broader she:SoilPollution ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:Aluminium,
-        she:Cadmium ;
-    skos:prefLabel "toxic elements"@en .
-
 she:Vegetation a skos:Concept ;
     skos:broader she:Plant ;
     skos:exactMatch spp:Vegetation ;
@@ -6055,7 +6035,7 @@ she:Zinc a skos:Concept ;
     skos:prefLabel "zinc"@en .
 
 she:Aluminium a skos:Concept ;
-    skos:broader she:ToxicElements ;
+    skos:broader she:SoilContaminants ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:AluminiumExchangeableBase,
         she:AluminiumExtractableElements,
@@ -6210,6 +6190,15 @@ she:SoilCompression a skos:Concept ;
     skos:narrower she:SoilCompaction,
         she:SoilConsolidation ;
     skos:prefLabel "soil compression"@en .
+
+she:SoilContaminants a skos:Concept ;
+    skos:altLabel "soil contaminant"@en ;
+    skos:broader she:SoilAnionContents,
+        she:SoilCationContents ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:Aluminium,
+        she:Cadmium ;
+    skos:prefLabel "soil contaminants"@en .
 
 she:SoilCracks a skos:Concept ;
     skos:altLabel "soil crack"@en ;
@@ -6880,18 +6869,6 @@ she:Precipitation a skos:Concept ;
         she:Snow ;
     skos:prefLabel "precipitation"@en .
 
-she:SoilBulkDensity a skos:Concept ;
-    skos:broader she:SoilDensity ;
-    skos:exactMatch spp:SoilBulkDensity ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:BulkDensityFineEarth,
-        she:BulkDensityMineral,
-        she:BulkDensityPeat,
-        she:BulkDensityWholeSoil,
-        she:DrySoilBulkDensity,
-        she:WetSoilBulkDensity ;
-    skos:prefLabel "soil bulk density"@en .
-
 she:SoilElectricalConductivity a skos:Concept ;
     skos:broader she:SoilPhysicalProperties ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Eleccond ;
@@ -7283,6 +7260,19 @@ she:SoilBiologicalProcesses a skos:Concept ;
         she:SoilMicrobialActivity,
         she:SoilOxygenConsumption ;
     skos:prefLabel "soil biological processes"@en .
+
+she:SoilBulkDensity a skos:Concept ;
+    skos:broader she:ObservableSoilProperties,
+        she:SoilDensity ;
+    skos:exactMatch spp:SoilBulkDensity ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:BulkDensityFineEarth,
+        she:BulkDensityMineral,
+        she:BulkDensityPeat,
+        she:BulkDensityWholeSoil,
+        she:DrySoilBulkDensity,
+        she:WetSoilBulkDensity ;
+    skos:prefLabel "soil bulk density"@en .
 
 she:SoilDensity a skos:Concept ;
     skos:broader she:SoilPhysicalProperties ;
@@ -8901,10 +8891,10 @@ she:ObservableSoilProperties a skos:Concept ;
     skos:altLabel "observable soil property"@en ;
     skos:broader she:SoilProperties ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:BulkDensity,
-        she:ClayMineralogy,
+    skos:narrower she:ClayMineralogy,
         she:SoilAnionContents,
         she:SoilBiota,
+        she:SoilBulkDensity,
         she:SoilCationContents,
         she:SoilDepth,
         she:SoilNitrogen,

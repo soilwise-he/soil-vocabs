@@ -77,8 +77,8 @@ she:Adsorption a skos:Concept ;
 she:BiomassProductivity a skos:Concept ;
     skos:prefLabel "biomass productivity"@en .
 
-she:BulkDensity a skos:Concept ;
-    skos:prefLabel "bulk density"@en .
+she:SoilBulkDensity a skos:Concept ;
+    skos:prefLabel "soil bulk density"@en .
 
 she:CarbonStorageCapacity a skos:Concept ;
     skos:prefLabel "carbon storage capacity"@en .
@@ -173,7 +173,7 @@ she:NutrientMobilisationCapacity a skos:Concept ;
 
 she:ObservableSoilProperties a skos:Concept ;
     skos:altLabel "observable soil property"@en ;
-    skos:narrower she:BulkDensity,
+    skos:narrower she:SoilBulkDensity,
         she:ClayMineralogy,
         she:SoilAnionContents,
         she:SoilBiota,
