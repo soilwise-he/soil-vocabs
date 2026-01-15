@@ -38,9 +38,16 @@ she:SoilFunctionIndicators a skos:Concept ;
 
 she:SoilFunctions a skos:Concept ;
     skos:altLabel "soil function"@en ;
-    skos:narrower she:SoilBiologicalFunctions,
+    skos:narrower she:CarbonPools,
+        she:ClimateRegulation,
+        she:FoodProduction,
+        she:Habitats,
+        she:NutrientDynamics,
+        she:SoilBiologicalFunctions,
         she:SoilChemicalFunctions,
-        she:SoilPhysicalFunctions ;
+        she:SoilPhysicalFunctions,
+        she:WaterPurification,
+        she:WaterRegulation ;
     skos:prefLabel "soil functions"@en .
 
 she:SoilHealth a skos:Concept ;
@@ -77,8 +84,9 @@ she:Adsorption a skos:Concept ;
 she:BiomassProductivity a skos:Concept ;
     skos:prefLabel "biomass productivity"@en .
 
-she:SoilBulkDensity a skos:Concept ;
-    skos:prefLabel "soil bulk density"@en .
+she:CarbonPools a skos:Concept ;
+    skos:altLabel "carbon pool"@en ;
+    skos:prefLabel "carbon pools"@en .
 
 she:CarbonStorageCapacity a skos:Concept ;
     skos:prefLabel "carbon storage capacity"@en .
@@ -91,6 +99,9 @@ she:ClayMineralogy a skos:Concept ;
 
 she:Climate a skos:Concept ;
     skos:prefLabel "climate"@en .
+
+she:ClimateRegulation a skos:Concept ;
+    skos:prefLabel "climate regulation"@en .
 
 she:CulturalServices a skos:Concept ;
     skos:altLabel "cultural service"@en ;
@@ -132,11 +143,18 @@ she:ExternalFactors a skos:Concept ;
         she:LandUse ;
     skos:prefLabel "external factors"@en .
 
+she:FoodProduction a skos:Concept ;
+    skos:prefLabel "food production"@en .
+
 she:GroundwaterReproduction a skos:Concept ;
     skos:prefLabel "groundwater reproduction"@en .
 
 she:HabitatProvisionCapacity a skos:Concept ;
     skos:prefLabel "habitat provision capacity"@en .
+
+she:Habitats a skos:Concept ;
+    skos:altLabel "habitat"@en ;
+    skos:prefLabel "habitats"@en .
 
 she:HydraulicConductivity a skos:Concept ;
     skos:prefLabel "hydraulic conductivity"@en .
@@ -168,15 +186,19 @@ she:Microorganisms a skos:Concept ;
 she:NutrientBufferingCapacity a skos:Concept ;
     skos:prefLabel "nutrient buffering capacity"@en .
 
+she:NutrientDynamics a skos:Concept ;
+    skos:altLabel "nutrient dynamic"@en ;
+    skos:prefLabel "nutrient dynamics"@en .
+
 she:NutrientMobilisationCapacity a skos:Concept ;
     skos:prefLabel "nutrient mobilisation capacity"@en .
 
 she:ObservableSoilProperties a skos:Concept ;
     skos:altLabel "observable soil property"@en ;
-    skos:narrower she:SoilBulkDensity,
-        she:ClayMineralogy,
+    skos:narrower she:ClayMineralogy,
         she:SoilAnionContents,
         she:SoilBiota,
+        she:SoilBulkDensity,
         she:SoilCationContents,
         she:SoilDepth,
         she:SoilNitrogen,
@@ -248,6 +270,9 @@ she:SoilBiota a skos:Concept ;
         she:Microorganisms ;
     skos:prefLabel "soil biota"@en .
 
+she:SoilBulkDensity a skos:Concept ;
+    skos:prefLabel "soil bulk density"@en .
+
 she:SoilCationContents a skos:Concept ;
     skos:altLabel "soil cation content"@en ;
     skos:narrower she:Acidifiers,
@@ -318,12 +343,12 @@ she:SoilPhysicalFunctions a skos:Concept ;
 
 she:SoilPhysicalProperties a skos:Concept ;
     skos:altLabel "soil physical property"@en ;
-    skos:definition [ dcterms:source <https://www.cambridge.org/core/books/properties-and-management-of-soils-in-the-tropics/soil-physical-properties/275087D91E8849FA36F347D4964ED835> ;
+    skos:definition [ dcterms:source <https://soilhealthnexus.org/resources/soil-properties/soil-physical-properties/> ;
+            schema:text "Soil physical properties include both inherent and dynamic soil properties. Inherent properties include soil texture, soil parent materials and soil depth. Dynamic properties are those that can be influenced by management include infiltration, aggregate stability, available soil water holding capacity, soil organic matter, soil porosity, compaction layers, crusting, bulk density, and structure. Optimal soil physical properties reduce limitations to root growth and productivity, improve seedling emergence, nutrient and water retention, infiltration, and movement of air and water within the soil profile. Physical properties are directly related to optimal chemical and biological properties which together improve nutrient and water cycling and other key soil functions."@en ],
+        [ dcterms:source <https://www.cambridge.org/core/books/properties-and-management-of-soils-in-the-tropics/soil-physical-properties/275087D91E8849FA36F347D4964ED835> ;
             schema:text "Soil physical properties are those responsible for the transport of water, solutes, air and heat in the soil. The main physical soil properties are depth, temperature, texture, structure, bulk density and water-holding capacity."@en ],
         [ dcterms:source <https://www.soils.org/publications/soils-glossary?q=publications/soils-glossary/> ;
-            schema:text "Those characteristics, processes, or reactions of a soil that are caused by physical forces and that can be described by, or expressed in, physical terms or equations. Examples of physical properties are bulk density, hydraulic conductivity, porosity, pore-size distribution, etc."@en ],
-        [ dcterms:source <https://soilhealthnexus.org/resources/soil-properties/soil-physical-properties/> ;
-            schema:text "Soil physical properties include both inherent and dynamic soil properties. Inherent properties include soil texture, soil parent materials and soil depth. Dynamic properties are those that can be influenced by management include infiltration, aggregate stability, available soil water holding capacity, soil organic matter, soil porosity, compaction layers, crusting, bulk density, and structure. Optimal soil physical properties reduce limitations to root growth and productivity, improve seedling emergence, nutrient and water retention, infiltration, and movement of air and water within the soil profile. Physical properties are directly related to optimal chemical and biological properties which together improve nutrient and water cycling and other key soil functions."@en ] ;
+            schema:text "Those characteristics, processes, or reactions of a soil that are caused by physical forces and that can be described by, or expressed in, physical terms or equations. Examples of physical properties are bulk density, hydraulic conductivity, porosity, pore-size distribution, etc."@en ] ;
     skos:prefLabel "soil physical properties"@en ;
     skos:related she:SoilQuality .
 
@@ -363,6 +388,12 @@ she:SupportingServices a skos:Concept ;
 
 she:WaterInfiltration a skos:Concept ;
     skos:prefLabel "water infiltration"@en .
+
+she:WaterPurification a skos:Concept ;
+    skos:prefLabel "water purification"@en .
+
+she:WaterRegulation a skos:Concept ;
+    skos:prefLabel "water regulation"@en .
 
 she:WaterRunoff a skos:Concept ;
     skos:prefLabel "water runoff"@en .

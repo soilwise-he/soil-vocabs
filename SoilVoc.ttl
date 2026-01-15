@@ -176,6 +176,12 @@ she:BurrowingAnimal a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "burrowing animal"@en .
 
+she:CarbonPools a skos:Concept ;
+    skos:altLabel "carbon pool"@en ;
+    skos:broader she:SoilFunctions ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "carbon pools"@en .
+
 she:CarbonStorageCapacity a skos:Concept ;
     skos:broader she:SoilFunctionIndicators ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -270,6 +276,11 @@ she:ClayRatio a skos:Concept ;
     skos:exactMatch spp:ClayRatio ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "clay ratio"@en .
+
+she:ClimateRegulation a skos:Concept ;
+    skos:broader she:SoilFunctions ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "climate regulation"@en .
 
 she:CoarseSand a skos:Concept ;
     skos:broader she:Sand ;
@@ -529,6 +540,11 @@ she:Fog a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "fog"@en .
 
+she:FoodProduction a skos:Concept ;
+    skos:broader she:SoilFunctions ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "food production"@en .
+
 she:FoundationStability a skos:Concept ;
     skos:broader she:SoilEngineeringFunctions ;
     skos:exactMatch spp:FoundationStability ;
@@ -647,6 +663,12 @@ she:HabitatProvisionCapacity a skos:Concept ;
     skos:broader she:SoilFunctionIndicators ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "habitat provision capacity"@en .
+
+she:Habitats a skos:Concept ;
+    skos:altLabel "habitat"@en ;
+    skos:broader she:SoilFunctions ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "habitats"@en .
 
 she:Hail a skos:Concept ;
     skos:broader she:Precipitation ;
@@ -1154,6 +1176,12 @@ she:NutrientBufferingCapacity a skos:Concept ;
     skos:broader she:SoilFunctionIndicators ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "nutrient buffering capacity"@en .
+
+she:NutrientDynamics a skos:Concept ;
+    skos:altLabel "nutrient dynamic"@en ;
+    skos:broader she:SoilFunctions ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "nutrient dynamics"@en .
 
 she:NutrientMobilisationCapacity a skos:Concept ;
     skos:broader she:SoilFunctionIndicators ;
@@ -3106,10 +3134,10 @@ she:SoilWaterAbsorption a skos:Concept ;
     skos:prefLabel "soil water absorption"@en .
 
 she:SoilWaterAdsorption a skos:Concept ;
+    skos:broader she:SoilAdsorption ;
     skos:exactMatch spp:SoilWaterAdsorption ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil water adsorption"@en ;
-    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
+    skos:prefLabel "soil water adsorption"@en .
 
 she:SoilWaterAffinity a skos:Concept ;
     skos:broader she:SoilWaterPhysicalProperties ;
@@ -3183,10 +3211,10 @@ she:SoilWaterRepellency a skos:Concept ;
     skos:prefLabel "soil water repellency"@en .
 
 she:SoilWaterRetention a skos:Concept ;
+    skos:broader she:SoilWaterPhysicalProperties ;
     skos:exactMatch spp:SoilWaterRetention ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil water retention"@en ;
-    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
+    skos:prefLabel "soil water retention"@en .
 
 she:SoilWaterRetentionCapacity a skos:Concept ;
     skos:broader she:SoilPhysicalCapacity ;
@@ -3439,6 +3467,16 @@ she:WaterInfiltration a skos:Concept ;
     skos:broader she:DerivedSoilProperties ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "water infiltration"@en .
+
+she:WaterPurification a skos:Concept ;
+    skos:broader she:SoilFunctions ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "water purification"@en .
+
+she:WaterRegulation a skos:Concept ;
+    skos:broader she:SoilFunctions ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "water regulation"@en .
 
 she:WaterRunoff a skos:Concept ;
     skos:broader she:DerivedSoilProperties ;
@@ -5186,13 +5224,6 @@ she:SoilAdhesion a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil adhesion"@en .
 
-she:SoilAdsorption a skos:Concept ;
-    skos:broader she:SoilChemicalProcesses ;
-    skos:exactMatch spp:SoilAdsorption ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SoilPolymerAdsorption ;
-    skos:prefLabel "soil adsorption"@en .
-
 she:SoilAeration a skos:Concept ;
     skos:broader she:SoilAgriculturalFunctions,
         she:SoilAirPhysicalProcesses ;
@@ -5710,6 +5741,14 @@ she:SoilAbsorption a skos:Concept ;
     skos:narrower she:SoilHeatAbsorption,
         she:SoilWaterAbsorption ;
     skos:prefLabel "soil absorption"@en .
+
+she:SoilAdsorption a skos:Concept ;
+    skos:broader she:SoilChemicalProcesses ;
+    skos:exactMatch spp:SoilAdsorption ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:SoilPolymerAdsorption,
+        she:SoilWaterAdsorption ;
+    skos:prefLabel "soil adsorption"@en .
 
 she:SoilAerationIndex a skos:Concept ;
     skos:broader she:SoilStructureIndex ;
@@ -6896,19 +6935,6 @@ she:SoilErosion a skos:Concept ;
         she:SoilErosionTotalAreaAffected ;
     skos:prefLabel "soil erosion"@en .
 
-she:SoilFunctions a skos:Concept ;
-    skos:altLabel "soil function"@en ;
-    skos:exactMatch spp:SoilFunction ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SoilAgriculturalFunctions,
-        she:SoilBiologicalFunctions,
-        she:SoilChemicalFunctions,
-        she:SoilEngineeringFunctions,
-        she:SoilEnvironmentalFunctions,
-        she:SoilPhysicalFunctions ;
-    skos:prefLabel "soil functions"@en ;
-    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
-
 she:SoilMoisturePotential a skos:Concept ;
     skos:broader she:SoilWaterPhysicalProperties ;
     skos:exactMatch spp:SoilMoisturePotential ;
@@ -7920,6 +7946,26 @@ she:SoilPorosity a skos:Concept ;
         she:VoidRatio ;
     skos:prefLabel "soil porosity"@en ;
     she:hasProcedure she:porosityProcedure-Poros_calcul-pf0 .
+
+she:SoilFunctions a skos:Concept ;
+    skos:altLabel "soil function"@en ;
+    skos:exactMatch spp:SoilFunction ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:CarbonPools,
+        she:ClimateRegulation,
+        she:FoodProduction,
+        she:Habitats,
+        she:NutrientDynamics,
+        she:SoilAgriculturalFunctions,
+        she:SoilBiologicalFunctions,
+        she:SoilChemicalFunctions,
+        she:SoilEngineeringFunctions,
+        she:SoilEnvironmentalFunctions,
+        she:SoilPhysicalFunctions,
+        she:WaterPurification,
+        she:WaterRegulation ;
+    skos:prefLabel "soil functions"@en ;
+    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:extractableElementsProcedure-Extr_ap14 a skos:Concept ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_ap14 ;
@@ -9429,6 +9475,7 @@ she:SoilWaterPhysicalProperties a skos:Concept ;
         she:SoilWaterInfiltrationCapacity,
         she:SoilWaterPermeability,
         she:SoilWaterPotential,
+        she:SoilWaterRetention,
         she:SoilWaterSorptionProperties,
         she:SoilWetness,
         she:pFcurve ;
@@ -9973,12 +10020,12 @@ she:TotalCarbonateEquivalent a skos:Concept ;
 she:SoilPhysicalProperties a skos:Concept ;
     skos:altLabel "soil physical property"@en ;
     skos:broader she:SoilProperties ;
-    skos:definition [ dcterms:source <https://soilhealthnexus.org/resources/soil-properties/soil-physical-properties/> ;
+    skos:definition [ dcterms:source <https://www.soils.org/publications/soils-glossary?q=publications/soils-glossary/> ;
+            schema:text "Those characteristics, processes, or reactions of a soil that are caused by physical forces and that can be described by, or expressed in, physical terms or equations. Examples of physical properties are bulk density, hydraulic conductivity, porosity, pore-size distribution, etc."@en ],
+        [ dcterms:source <https://soilhealthnexus.org/resources/soil-properties/soil-physical-properties/> ;
             schema:text "Soil physical properties include both inherent and dynamic soil properties. Inherent properties include soil texture, soil parent materials and soil depth. Dynamic properties are those that can be influenced by management include infiltration, aggregate stability, available soil water holding capacity, soil organic matter, soil porosity, compaction layers, crusting, bulk density, and structure. Optimal soil physical properties reduce limitations to root growth and productivity, improve seedling emergence, nutrient and water retention, infiltration, and movement of air and water within the soil profile. Physical properties are directly related to optimal chemical and biological properties which together improve nutrient and water cycling and other key soil functions."@en ],
         [ dcterms:source <https://www.cambridge.org/core/books/properties-and-management-of-soils-in-the-tropics/soil-physical-properties/275087D91E8849FA36F347D4964ED835> ;
-            schema:text "Soil physical properties are those responsible for the transport of water, solutes, air and heat in the soil. The main physical soil properties are depth, temperature, texture, structure, bulk density and water-holding capacity."@en ],
-        [ dcterms:source <https://www.soils.org/publications/soils-glossary?q=publications/soils-glossary/> ;
-            schema:text "Those characteristics, processes, or reactions of a soil that are caused by physical forces and that can be described by, or expressed in, physical terms or equations. Examples of physical properties are bulk density, hydraulic conductivity, porosity, pore-size distribution, etc."@en ] ;
+            schema:text "Soil physical properties are those responsible for the transport of water, solutes, air and heat in the soil. The main physical soil properties are depth, temperature, texture, structure, bulk density and water-holding capacity."@en ] ;
     skos:exactMatch spp:SoilPhysicalProperty ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:Cementation,
@@ -10076,7 +10123,5 @@ she:SoilPhysicalProperties a skos:Concept ;
         she:SoilSoluteTransport,
         she:SoilStructureIndex,
         she:SoilSubstance,
-        she:SoilThreats,
-        she:SoilWaterAdsorption,
-        she:SoilWaterRetention .
+        she:SoilThreats .
 

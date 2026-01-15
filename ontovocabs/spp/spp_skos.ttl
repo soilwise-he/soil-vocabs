@@ -2105,10 +2105,10 @@ she:SoilWaterAbsorption a skos:Concept ;
     skos:prefLabel "soil water absorption"@en .
 
 she:SoilWaterAdsorption a skos:Concept ;
+    skos:broader she:SoilAdsorption ;
     skos:exactMatch spp:SoilWaterAdsorption ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil water adsorption"@en ;
-    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
+    skos:prefLabel "soil water adsorption"@en .
 
 she:SoilWaterAffinity a skos:Concept ;
     skos:broader she:SoilWaterPhysicalProperties ;
@@ -2172,10 +2172,10 @@ she:SoilWaterRepellency a skos:Concept ;
     skos:prefLabel "soil water repellency"@en .
 
 she:SoilWaterRetention a skos:Concept ;
+    skos:broader she:SoilWaterPhysicalProperties ;
     skos:exactMatch spp:SoilWaterRetention ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil water retention"@en ;
-    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
+    skos:prefLabel "soil water retention"@en .
 
 she:SoilWaterRetentionCapacity a skos:Concept ;
     skos:broader she:SoilPhysicalCapacity ;
@@ -4131,7 +4131,5 @@ she:SoilPhysicalProperties a skos:Concept ;
         she:SoilSolidTransport,
         she:SoilSoluteTransport,
         she:SoilStructureIndex,
-        she:SoilSubstance,
-        she:SoilWaterAdsorption,
-        she:SoilWaterRetention .
+        she:SoilSubstance .
 
