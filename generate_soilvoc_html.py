@@ -8,7 +8,8 @@ Generate enhanced interactive HTML mind map from SoilVoc.ttl with:
 - Visual differentiation for procedures
 """
 
-from rdflib import Graph, Namespace, RDF, RDFS, SKOS, URIRef
+from rdflib import Graph, Namespace, URIRef, BNode
+from rdflib.namespace import SKOS, DCTERMS, RDF, RDFS, SDO
 import json
 import traceback
 
@@ -60,16 +61,45 @@ def parse_skos_vocabulary_enhanced(ttl_file_path):
         concepts_with_broader = set(g.subjects(SKOS.broader, None))
         top_concepts = list(all_concepts - concepts_with_broader)
 
+    def pick_text_literal(defn_node):
+        texts = list(g.objects(defn_node, SDO.text))
+        if not texts:
+            texts = list(g.objects(defn_node, RDF.value))
+        if not texts:
+            return None
+        for t in texts:
+            if getattr(t, 'language', None) == 'en':
+                return t
+        return texts[0]
+
     # Build the hierarchy
     def get_concept_info(concept_uri):
         """Extract information about a concept."""
         pref_label = g.value(concept_uri, SKOS.prefLabel)
         alt_label = g.value(concept_uri, SKOS.altLabel)
-        definition = g.value(concept_uri, SKOS.definition)
         notation = g.value(concept_uri, SKOS.notation)
 
         label = str(pref_label or concept_uri.split('/')[-1].split('#')[-1])
         alt_label_str = str(alt_label) if alt_label else None
+
+        # Get definitions and sources (blank node structure)
+        definitions = []
+        for defn in g.objects(concept_uri, SKOS.definition):
+            if isinstance(defn, BNode):
+                text_literal = pick_text_literal(defn)
+                text = str(text_literal) if text_literal else None
+                source_val = g.value(defn, DCTERMS.source)
+                source = str(source_val) if source_val else None
+                if text:
+                    definitions.append({
+                        'text': text,
+                        'source': source
+                    })
+            else:
+                definitions.append({
+                    'text': str(defn),
+                    'source': None
+                })
 
         # Get exactMatch links
         exact_matches = []
@@ -104,7 +134,8 @@ def parse_skos_vocabulary_enhanced(ttl_file_path):
             'label': label,
             'altLabel': alt_label_str,
             'notation': str(notation) if notation else None,
-            'definition': str(definition) if definition else None,
+            'definition': definitions[0]['text'] if definitions else None,
+            'definitions': definitions,
             'exactMatch': exact_matches,
             'isProcedure': is_procedure,
             'procedures': procedures,
@@ -296,6 +327,14 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             margin-top: 2px;
         }}
 
+        .concept-header.active .concept-alt-label {{
+            color: rgba(255, 255, 255, 0.85);
+        }}
+
+        .concept-header.procedure.active .concept-alt-label {{
+            color: rgba(44, 24, 16, 0.85);
+        }}
+
         .copy-uri-btn {{
             background: rgba(90, 142, 107, 0.1);
             color: #4a7c59;
@@ -370,9 +409,40 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             border-radius: 4px;
             font-size: 0.9em;
             color: #3d5a3f;
-            font-style: italic;
+            font-style: normal;
+            font-weight: 500;
             display: none;
             border-left: 3px solid #a8b5a3;
+        }}
+
+        .definition-item {{
+            margin-bottom: 6px;
+        }}
+
+        .definition-item:last-child {{
+            margin-bottom: 0;
+        }}
+
+        .definition-source-label {{
+            margin-left: 6px;
+            font-size: 0.85em;
+            color: #6b5840;
+            font-style: normal;
+        }}
+
+        .definition-source-link {{
+            color: #4a7c59;
+            text-decoration: none;
+            font-style: normal;
+            font-size: 0.75em;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: rgba(90, 142, 107, 0.12);
+        }}
+
+        .definition-source-link:hover {{
+            text-decoration: underline;
         }}
 
         .concept-definition.show {{
@@ -696,7 +766,8 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             const hasNarrower = concept.narrower && concept.narrower.length > 0;
             const hasProcedures = concept.procedures && concept.procedures.length > 0;
             const hasChildren = hasNarrower || hasProcedures;
-            const hasDefinition = concept.definition !== null && concept.definition !== undefined;
+            const hasDefinition = (concept.definitions && concept.definitions.length > 0) ||
+                (concept.definition !== null && concept.definition !== undefined && concept.definition !== '');
             const hasExactMatch = concept.exactMatch && concept.exactMatch.length > 0;
 
             // Concept is clickable if it has children OR has definition/exactMatch
@@ -722,7 +793,15 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
                     </div>
             `;
 
-            if (concept.definition) {{
+            if (concept.definitions && concept.definitions.length > 0) {{
+                const defItems = concept.definitions.map(d => {{
+                    const sourceHtml = d.source
+                        ? ` <a href="${{d.source}}" target="_blank" class="definition-source-link" title="Source">source</a>`
+                        : '';
+                    return `<div class="definition-item">${{d.text}}${{sourceHtml}}</div>`;
+                }}).join('');
+                html += `<div class="concept-definition">${{defItems}}</div>`;
+            }} else if (concept.definition) {{
                 html += `<div class="concept-definition">${{concept.definition}}</div>`;
             }}
 

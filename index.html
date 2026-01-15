@@ -163,6 +163,14 @@
             margin-top: 2px;
         }
 
+        .concept-header.active .concept-alt-label {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .concept-header.procedure.active .concept-alt-label {
+            color: rgba(44, 24, 16, 0.85);
+        }
+
         .copy-uri-btn {
             background: rgba(90, 142, 107, 0.1);
             color: #4a7c59;
@@ -237,7 +245,8 @@
             border-radius: 4px;
             font-size: 0.9em;
             color: #3d5a3f;
-            font-style: italic;
+            font-style: normal;
+            font-weight: 500;
             display: none;
             border-left: 3px solid #a8b5a3;
         }
@@ -259,9 +268,17 @@
 
         .definition-source-link {
             color: #4a7c59;
-            text-decoration: underline;
-            word-break: break-all;
+            text-decoration: none;
             font-style: normal;
+            font-size: 0.75em;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: rgba(90, 142, 107, 0.12);
+        }
+
+        .definition-source-link:hover {
+            text-decoration: underline;
         }
 
         .concept-definition.show {
@@ -66406,7 +66423,7 @@
             if (concept.definitions && concept.definitions.length > 0) {
                 const defItems = concept.definitions.map(d => {
                     const sourceHtml = d.source
-                        ? ` <span class="definition-source-label">Source:</span> <a href="${d.source}" target="_blank" class="definition-source-link">${d.source}</a>`
+                        ? ` <a href="${d.source}" target="_blank" class="definition-source-link" title="Source">source</a>`
                         : '';
                     return `<div class="definition-item">${d.text}${sourceHtml}</div>`;
                 }).join('');
