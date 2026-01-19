@@ -11,30 +11,12 @@ she:EcosystemServices a skos:Concept ;
         she:SupportingServices ;
     skos:prefLabel "ecosystem services"@en .
 
-she:NonsoilIndicators a skos:Concept ;
-    skos:altLabel "non-soil indicator"@en ;
-    skos:narrower she:EnvironmentalFactors,
-        she:ExternalFactors ;
-    skos:prefLabel "non-soil indicators"@en .
-
 she:SoilDegradation a skos:Concept ;
     skos:narrower she:SoilBiologicalDegradation,
         she:SoilChemicalDegradation,
         she:SoilEcologicalDegradation,
         she:SoilPhysicalDegradation ;
     skos:prefLabel "soil degradation"@en .
-
-she:SoilFunctionIndicators a skos:Concept ;
-    skos:altLabel "soil function indicator"@en ;
-    skos:narrower she:BiomassProductivity,
-        she:CarbonStorageCapacity,
-        she:GroundwaterReproduction,
-        she:HabitatProvisionCapacity,
-        she:NutrientBufferingCapacity,
-        she:NutrientMobilisationCapacity,
-        she:SoilMoistureDeficit,
-        she:WaterStorageCapacity ;
-    skos:prefLabel "soil function indicators"@en .
 
 she:SoilFunctions a skos:Concept ;
     skos:altLabel "soil function"@en ;
@@ -53,6 +35,13 @@ she:SoilFunctions a skos:Concept ;
 she:SoilHealth a skos:Concept ;
     skos:definition "Soil health is the level to which soil functions are fulfilled."@en ;
     skos:prefLabel "soil health"@en .
+
+she:SoilIndicators a skos:Concept ;
+    skos:altLabel "soil indicator"@en ;
+    skos:narrower she:NonsoilIndicators,
+        she:SoilFunctionIndicators,
+        she:SoilStructureIndex ;
+    skos:prefLabel "soil indicators"@en .
 
 she:SoilProperties a skos:Concept ;
     skos:altLabel "soil property"@en ;
@@ -170,18 +159,24 @@ she:LandUse a skos:Concept ;
             schema:text "The total of arrangements, activities, and inputs that people undertake in a certain land cover type (FAO, 1997a; FAO/UNEP, 1999)."@en ] ;
     skos:prefLabel "land use"@en .
 
-she:Macrofauna a skos:Concept ;
-    skos:prefLabel "macrofauna"@en .
+she:SoilMacrofauna a skos:Concept ;
+    skos:prefLabel "soil macrofauna"@en .
 
-she:Mesofauna a skos:Concept ;
-    skos:prefLabel "mesofauna"@en .
+she:SoilMesofauna a skos:Concept ;
+    skos:prefLabel "soil mesofauna"@en .
 
-she:Microfauna a skos:Concept ;
-    skos:prefLabel "microfauna"@en .
+she:SoilMicrofauna a skos:Concept ;
+    skos:prefLabel "soil microfauna"@en .
 
 she:Microorganisms a skos:Concept ;
     skos:altLabel "microorganism"@en ;
     skos:prefLabel "microorganisms"@en .
+
+she:NonsoilIndicators a skos:Concept ;
+    skos:altLabel "non-soil indicator"@en ;
+    skos:narrower she:EnvironmentalFactors,
+        she:ExternalFactors ;
+    skos:prefLabel "non-soil indicators"@en .
 
 she:NutrientBufferingCapacity a skos:Concept ;
     skos:prefLabel "nutrient buffering capacity"@en .
@@ -264,9 +259,9 @@ she:SoilBiologicalProperties a skos:Concept ;
     skos:related she:SoilQuality .
 
 she:SoilBiota a skos:Concept ;
-    skos:narrower she:Macrofauna,
-        she:Mesofauna,
-        she:Microfauna,
+    skos:narrower she:SoilMacrofauna,
+        she:SoilMesofauna,
+        she:SoilMicrofauna,
         she:Microorganisms ;
     skos:prefLabel "soil biota"@en .
 
@@ -309,6 +304,18 @@ she:SoilEcologicalDegradation a skos:Concept ;
 she:SoilErosion a skos:Concept ;
     skos:prefLabel "soil erosion"@en .
 
+she:SoilFunctionIndicators a skos:Concept ;
+    skos:altLabel "soil function indicator"@en ;
+    skos:narrower she:BiomassProductivity,
+        she:CarbonStorageCapacity,
+        she:GroundwaterReproduction,
+        she:HabitatProvisionCapacity,
+        she:NutrientBufferingCapacity,
+        she:NutrientMobilisationCapacity,
+        she:SoilMoistureDeficit,
+        she:WaterStorageCapacity ;
+    skos:prefLabel "soil function indicators"@en .
+
 she:SoilMoistureDeficit a skos:Concept ;
     skos:prefLabel "soil moisture deficit"@en .
 
@@ -343,12 +350,12 @@ she:SoilPhysicalFunctions a skos:Concept ;
 
 she:SoilPhysicalProperties a skos:Concept ;
     skos:altLabel "soil physical property"@en ;
-    skos:definition [ dcterms:source <https://soilhealthnexus.org/resources/soil-properties/soil-physical-properties/> ;
+    skos:definition [ dcterms:source <https://www.soils.org/publications/soils-glossary?q=publications/soils-glossary/> ;
+            schema:text "Those characteristics, processes, or reactions of a soil that are caused by physical forces and that can be described by, or expressed in, physical terms or equations. Examples of physical properties are bulk density, hydraulic conductivity, porosity, pore-size distribution, etc."@en ],
+        [ dcterms:source <https://soilhealthnexus.org/resources/soil-properties/soil-physical-properties/> ;
             schema:text "Soil physical properties include both inherent and dynamic soil properties. Inherent properties include soil texture, soil parent materials and soil depth. Dynamic properties are those that can be influenced by management include infiltration, aggregate stability, available soil water holding capacity, soil organic matter, soil porosity, compaction layers, crusting, bulk density, and structure. Optimal soil physical properties reduce limitations to root growth and productivity, improve seedling emergence, nutrient and water retention, infiltration, and movement of air and water within the soil profile. Physical properties are directly related to optimal chemical and biological properties which together improve nutrient and water cycling and other key soil functions."@en ],
         [ dcterms:source <https://www.cambridge.org/core/books/properties-and-management-of-soils-in-the-tropics/soil-physical-properties/275087D91E8849FA36F347D4964ED835> ;
-            schema:text "Soil physical properties are those responsible for the transport of water, solutes, air and heat in the soil. The main physical soil properties are depth, temperature, texture, structure, bulk density and water-holding capacity."@en ],
-        [ dcterms:source <https://www.soils.org/publications/soils-glossary?q=publications/soils-glossary/> ;
-            schema:text "Those characteristics, processes, or reactions of a soil that are caused by physical forces and that can be described by, or expressed in, physical terms or equations. Examples of physical properties are bulk density, hydraulic conductivity, porosity, pore-size distribution, etc."@en ] ;
+            schema:text "Soil physical properties are those responsible for the transport of water, solutes, air and heat in the soil. The main physical soil properties are depth, temperature, texture, structure, bulk density and water-holding capacity."@en ] ;
     skos:prefLabel "soil physical properties"@en ;
     skos:related she:SoilQuality .
 
