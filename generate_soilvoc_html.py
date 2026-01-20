@@ -610,6 +610,28 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             margin-top: 5px;
         }}
 
+        .search-result-paths {{
+            margin-top: 6px;
+        }}
+
+        .search-result-path-item {{
+            padding: 6px 8px;
+            background: #fff8e8;
+            border-left: 3px solid #d4a259;
+            border-radius: 4px;
+            margin-top: 6px;
+            font-size: 0.85em;
+            color: #6b5840;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }}
+
+        .search-result-path-item:hover {{
+            background: #ffedc9;
+            border-left-color: #c4923f;
+            transform: translateX(4px);
+        }}
+
         .search-info {{
             padding: 10px 15px;
             background: #e8f4f0;
@@ -667,7 +689,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
 <body>
     <div class="container">
         <div class="header">
-            <h1>🌱 SoilVoc</h1>
+            <h1>🌱 SoilVoc 0.0.1</h1>
             <p>Interactive Soil Vocabulary · <a href="https://soilwise-he.eu" target="_blank">SoilWise-HE Project</a></p>
         </div>
 
@@ -692,18 +714,34 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
 
         let allConcepts = [];
         let uniqueConceptUris = new Set();
-        let conceptMap = new Map(); // Maps URI to concept object with path info
+        let conceptMap = new Map(); // Maps URI to concept object with all paths
+
+        function pathKey(path) {{
+            return path.map(c => c.uri).join('>');
+        }}
+
+        function pathKeyEncoded(path) {{
+            return encodeURIComponent(pathKey(path));
+        }}
 
         function buildConceptMap(concepts, path = []) {{
             concepts.forEach(concept => {{
                 const currentPath = [...path, concept];
+                const currentKey = pathKey(currentPath);
 
-                // Store concept with its path
+                // Store concept with all possible paths
                 if (!conceptMap.has(concept.uri)) {{
                     conceptMap.set(concept.uri, {{
                         concept: concept,
-                        path: currentPath
+                        paths: [currentPath],
+                        pathKeys: new Set([currentKey])
                     }});
+                }} else {{
+                    const data = conceptMap.get(concept.uri);
+                    if (!data.pathKeys.has(currentKey)) {{
+                        data.paths.push(currentPath);
+                        data.pathKeys.add(currentKey);
+                    }}
                 }}
 
                 uniqueConceptUris.add(concept.uri);
@@ -762,7 +800,9 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             }}, 2000);
         }}
 
-        function renderConcept(concept, level = 0) {{
+        function renderConcept(concept, level = 0, path = []) {{
+            const currentPath = [...path, concept];
+            const currentPathKey = pathKeyEncoded(currentPath);
             const hasNarrower = concept.narrower && concept.narrower.length > 0;
             const hasProcedures = concept.procedures && concept.procedures.length > 0;
             const hasChildren = hasNarrower || hasProcedures;
@@ -783,7 +823,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             const toggleIcon = hasChildren ? '▶' : '●';
 
             let html = `
-                <div class="concept" data-uri="${{concept.uri}}">
+                <div class="concept" data-uri="${{concept.uri}}" data-path-key="${{currentPathKey}}">
                     <div class="concept-header ${{noChildClass}} ${{procedureClass}}" onclick="toggleConcept(this)">
                         <span class="toggle-icon">${{toggleIcon}}</span>
                         ${{notation}}
@@ -817,7 +857,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
                     <div class="procedures-title">📋 Procedures:</div>
                     <div class="concept-children">`;
                 concept.procedures.forEach(proc => {{
-                    html += renderConcept(proc, level + 1);
+                    html += renderConcept(proc, level + 1, currentPath);
                 }});
                 html += `</div></div>`;
             }}
@@ -825,7 +865,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             if (hasNarrower) {{
                 html += `<div class="concept-children">`;
                 concept.narrower.forEach(narrower => {{
-                    html += renderConcept(narrower, level + 1);
+                    html += renderConcept(narrower, level + 1, currentPath);
                 }});
                 html += `</div>`;
             }}
@@ -938,25 +978,28 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
                     matches.push({{
                         uri: uri,
                         concept: concept,
-                        path: data.path
+                        paths: data.paths
                     }});
                 }}
             }});
 
             // Display results
             if (matches.length > 0) {{
-                let html = `<div class="search-info">Found ${{matches.length}} matching concept(s). Click to navigate.</div>`;
+                let html = `<div class="search-info">Found ${{matches.length}} matching concept(s). Click a path to navigate.</div>`;
 
                 matches.forEach(match => {{
-                    const pathLabels = match.path.map(c => c.notation ? `${{c.notation}} ${{c.label}}` : c.label).join(' → ');
                     const notation = match.concept.notation ? `<span class="search-result-notation">${{match.concept.notation}}</span>` : '';
+                    const pathItems = match.paths.map((path, index) => {{
+                        const pathLabels = path.map(c => c.notation ? `${{c.notation}} ${{c.label}}` : c.label).join(' → ');
+                        return `<div class="search-result-path-item" data-uri="${{match.uri}}" data-path-index="${{index}}">${{pathLabels}}</div>`;
+                    }}).join('');
 
                     html += `
-                        <div class="search-result-item" onclick="navigateToConcept('${{match.uri}}')">
+                        <div class="search-result-item" data-uri="${{match.uri}}">
                             <div class="search-result-label">
                                 ${{notation}}${{match.concept.label}}
                             </div>
-                            <div class="search-result-path">${{pathLabels}}</div>
+                            <div class="search-result-paths">${{pathItems}}</div>
                         </div>
                     `;
                 }});
@@ -973,10 +1016,17 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             }}
         }}
 
-        function navigateToConcept(targetUri) {{
+        function navigateToConcept(targetUri, pathIndex = 0) {{
             // Get the path to this concept
             const conceptData = conceptMap.get(targetUri);
             if (!conceptData) return;
+
+            const paths = conceptData.paths && conceptData.paths.length > 0
+                ? conceptData.paths
+                : (conceptData.path ? [conceptData.path] : []);
+            if (paths.length === 0) return;
+            const safeIndex = Math.min(Math.max(pathIndex, 0), paths.length - 1);
+            const path = paths[safeIndex];
 
             // First, collapse everything
             document.querySelectorAll('.concept-children.expanded').forEach(el => {{
@@ -1002,10 +1052,11 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             clearHighlights();
 
             // Expand the path to the target concept
-            const path = conceptData.path;
             for (let i = 0; i < path.length - 1; i++) {{
                 const conceptUri = path[i].uri;
-                const conceptElement = document.querySelector(`.concept[data-uri="${{conceptUri}}"]`);
+                const pathKeyValue = pathKeyEncoded(path.slice(0, i + 1));
+                const conceptElement = document.querySelector(`.concept[data-path-key="${{pathKeyValue}}"]`)
+                    || document.querySelector(`.concept[data-uri="${{conceptUri}}"]`);
 
                 if (conceptElement) {{
                     const header = conceptElement.querySelector('.concept-header');
@@ -1035,7 +1086,9 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             }}
 
             // Highlight and scroll to the target concept
-            const targetElement = document.querySelector(`.concept[data-uri="${{targetUri}}"]`);
+            const targetPathKey = pathKeyEncoded(path);
+            const targetElement = document.querySelector(`.concept[data-path-key="${{targetPathKey}}"]`)
+                || document.querySelector(`.concept[data-uri="${{targetUri}}"]`);
             if (targetElement) {{
                 const targetHeader = targetElement.querySelector('.concept-header');
                 targetHeader.classList.add('highlighted');
@@ -1085,6 +1138,27 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
         buildConceptMap(vocabularyData.top_concepts);
         renderMindmap();
         renderStats();
+
+        // Search results click handling (paths + items)
+        const searchResultsDiv = document.getElementById('searchResults');
+        searchResultsDiv.addEventListener('click', (e) => {{
+            const pathItem = e.target.closest('.search-result-path-item');
+            if (pathItem && searchResultsDiv.contains(pathItem)) {{
+                e.stopPropagation();
+                const uri = pathItem.getAttribute('data-uri');
+                const idx = parseInt(pathItem.getAttribute('data-path-index'), 10);
+                navigateToConcept(uri, Number.isFinite(idx) ? idx : 0);
+                return;
+            }}
+
+            const resultItem = e.target.closest('.search-result-item');
+            if (resultItem && searchResultsDiv.contains(resultItem)) {{
+                const uri = resultItem.getAttribute('data-uri');
+                if (uri) {{
+                    navigateToConcept(uri);
+                }}
+            }}
+        }});
 
         // Search functionality with debounce
         let searchTimeout;
