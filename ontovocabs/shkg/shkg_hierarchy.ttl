@@ -11,13 +11,6 @@ she:EcosystemServices a skos:Concept ;
         she:SupportingServices ;
     skos:prefLabel "ecosystem services"@en .
 
-she:SoilDegradation a skos:Concept ;
-    skos:narrower she:SoilBiologicalDegradation,
-        she:SoilChemicalDegradation,
-        she:SoilEcologicalDegradation,
-        she:SoilPhysicalDegradation ;
-    skos:prefLabel "soil degradation"@en .
-
 she:SoilFunctions a skos:Concept ;
     skos:altLabel "soil function"@en ;
     skos:narrower she:CarbonPools,
@@ -43,6 +36,12 @@ she:SoilIndicators a skos:Concept ;
         she:SoilStructureIndex ;
     skos:prefLabel "soil indicators"@en .
 
+she:SoilOrganisms a skos:Concept ;
+    skos:altLabel "soil organism"@en ;
+    skos:narrower she:Microorganisms,
+        she:SoilFauna ;
+    skos:prefLabel "soil organisms"@en .
+
 she:SoilProperties a skos:Concept ;
     skos:altLabel "soil property"@en ;
     skos:narrower she:DerivedSoilProperties,
@@ -61,6 +60,7 @@ she:SoilThreats a skos:Concept ;
         she:SoilAcidification,
         she:SoilBiodiversityLoss,
         she:SoilCompaction,
+        she:SoilDegradation,
         she:SoilErosion,
         she:SoilNutrientLoss,
         she:SoilPollution,
@@ -159,15 +159,6 @@ she:LandUse a skos:Concept ;
             schema:text "The total of arrangements, activities, and inputs that people undertake in a certain land cover type (FAO, 1997a; FAO/UNEP, 1999)."@en ] ;
     skos:prefLabel "land use"@en .
 
-she:SoilMacrofauna a skos:Concept ;
-    skos:prefLabel "soil macrofauna"@en .
-
-she:SoilMesofauna a skos:Concept ;
-    skos:prefLabel "soil mesofauna"@en .
-
-she:SoilMicrofauna a skos:Concept ;
-    skos:prefLabel "soil microfauna"@en .
-
 she:Microorganisms a skos:Concept ;
     skos:altLabel "microorganism"@en ;
     skos:prefLabel "microorganisms"@en .
@@ -259,10 +250,6 @@ she:SoilBiologicalProperties a skos:Concept ;
     skos:related she:SoilQuality .
 
 she:SoilBiota a skos:Concept ;
-    skos:narrower she:SoilMacrofauna,
-        she:SoilMesofauna,
-        she:SoilMicrofauna,
-        she:Microorganisms ;
     skos:prefLabel "soil biota"@en .
 
 she:SoilBulkDensity a skos:Concept ;
@@ -295,6 +282,13 @@ she:SoilChemicalProperties a skos:Concept ;
 she:SoilCompaction a skos:Concept ;
     skos:prefLabel "soil compaction"@en .
 
+she:SoilDegradation a skos:Concept ;
+    skos:narrower she:SoilBiologicalDegradation,
+        she:SoilChemicalDegradation,
+        she:SoilEcologicalDegradation,
+        she:SoilPhysicalDegradation ;
+    skos:prefLabel "soil degradation"@en .
+
 she:SoilDepth a skos:Concept ;
     skos:prefLabel "soil depth"@en .
 
@@ -303,6 +297,12 @@ she:SoilEcologicalDegradation a skos:Concept ;
 
 she:SoilErosion a skos:Concept ;
     skos:prefLabel "soil erosion"@en .
+
+she:SoilFauna a skos:Concept ;
+    skos:narrower she:SoilMacrofauna,
+        she:SoilMesofauna,
+        she:SoilMicrofauna ;
+    skos:prefLabel "soil fauna"@en .
 
 she:SoilFunctionIndicators a skos:Concept ;
     skos:altLabel "soil function indicator"@en ;
@@ -315,6 +315,15 @@ she:SoilFunctionIndicators a skos:Concept ;
         she:SoilMoistureDeficit,
         she:WaterStorageCapacity ;
     skos:prefLabel "soil function indicators"@en .
+
+she:SoilMacrofauna a skos:Concept ;
+    skos:prefLabel "soil macrofauna"@en .
+
+she:SoilMesofauna a skos:Concept ;
+    skos:prefLabel "soil mesofauna"@en .
+
+she:SoilMicrofauna a skos:Concept ;
+    skos:prefLabel "soil microfauna"@en .
 
 she:SoilMoistureDeficit a skos:Concept ;
     skos:prefLabel "soil moisture deficit"@en .

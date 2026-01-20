@@ -15,6 +15,9 @@ she:Geology a skos:Concept ;
     skos:definition [ dcterms:source glosis_sp:geologyProperty ;
             schema:text "Geology refers to the underlying geological composition of an area, including rock types, mineral content, and geological processes. The geology of a region influences soil formation, structure, fertility, and drainage properties. Source: AGI, 'Encyclopedia of Geology'"@en ] ;
     skos:exactMatch glosis_sp:geologyProperty ;
+    skos:narrower she:Lithology,
+        she:ParentMaterial,
+        she:RockOutcrops ;
     skos:prefLabel "geology"@en .
 
 she:GroundwaterDepth a skos:Concept ;
@@ -51,7 +54,6 @@ she:Physiography a skos:Concept ;
     skos:exactMatch glosis_sp:physiographyProperty ;
     skos:narrower she:LandformComplex,
         she:MajorLandForms,
-        she:RockOutcrops,
         she:Slope ;
     skos:prefLabel "physiography"@en .
 
@@ -68,12 +70,6 @@ she:SlopeOrientationClass a skos:Concept ;
             schema:text "Slope Orientation Class classifies the direction in which a slope faces (north, south, east, west) and can significantly affect local climate conditions, such as sunlight exposure, moisture, and temperature. For instance, south-facing slopes in the Northern Hemisphere receive more sunlight, influencing soil temperature, vegetation types, and soil moisture availability. Source: FAO, 'Soil and Water Conservation'"@en ] ;
     skos:exactMatch glosis_sp:slopeOrientationClassProperty ;
     skos:prefLabel "slope orientation class"@en .
-
-she:SoilFormation a skos:Concept ;
-    skos:narrower she:Lithology,
-        she:ParentMaterial,
-        she:SoilAge ;
-    skos:prefLabel "soil formation"@en .
 
 she:TreeDensity a skos:Concept ;
     skos:broader she:Trees ;
@@ -227,6 +223,12 @@ she:SlopePathways a skos:Concept ;
     skos:exactMatch glosis_sp:slopePathwaysProperty ;
     skos:prefLabel "slope pathways"@en .
 
+she:SoilAge a skos:Concept ;
+    skos:altLabel "age of soil"@en ;
+    skos:broader she:SoilProperties ;
+    skos:narrower she:SoilSurfaceAge ;
+    skos:prefLabel "soil age"@en .
+
 she:SoilCarbonDensity a skos:Concept ;
     skos:broader she:SoilOrganicCarbon ;
     skos:definition [ dcterms:source glosis_sp:soilCarbonDensityProperty ;
@@ -307,11 +309,6 @@ she:SlopeGradient a skos:Concept ;
 she:SlopeOrientation a skos:Concept ;
     skos:narrower she:SlopeOrientationNumeric ;
     skos:prefLabel "slope orientation"@en .
-
-she:SoilAge a skos:Concept ;
-    skos:altLabel "age of soil"@en ;
-    skos:narrower she:SoilSurfaceAge ;
-    skos:prefLabel "soil age"@en .
 
 she:Weather a skos:Concept ;
     skos:narrower she:WeatherCurrent,

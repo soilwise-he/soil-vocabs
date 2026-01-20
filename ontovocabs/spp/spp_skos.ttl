@@ -2,6 +2,32 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix spp: <http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#> .
 
+she:Crop a skos:Concept ;
+    skos:broader she:PlantCover ;
+    skos:exactMatch spp:Crop ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "crop"@en .
+
+she:Earthworms a skos:Concept ;
+    skos:altLabel "earthworm"@en ;
+    skos:broader she:SoilMacrofauna ;
+    skos:exactMatch spp:Earthworm ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "earthworms"@en .
+
+she:GroundCover a skos:Concept ;
+    skos:broader she:LandCover ;
+    skos:exactMatch spp:GroundCover ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "ground cover"@en .
+
+she:Microbes a skos:Concept ;
+    skos:altLabel "microbe"@en ;
+    skos:broader she:SoilOrganisms ;
+    skos:exactMatch spp:Microbe ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "microbes"@en .
+
 she:SoilFluidRetention a skos:Concept ;
     skos:broader she:SoilRetention,
         she:SoilWaterPhysicalProcesses ;
@@ -15,6 +41,11 @@ she:SoilFluidTransport a skos:Concept ;
     skos:exactMatch spp:SoilFluidTransport ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil fluid transport"@en .
+
+she:SoilFormation a skos:Concept ;
+    skos:broader she:SoilPhysicalProcesses ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "soil formation"@en .
 
 she:SoilNutrientRetention a skos:Concept ;
     skos:broader she:SoilRetention ;
@@ -46,6 +77,13 @@ she:SoilWaterRetention a skos:Concept ;
     skos:exactMatch spp:SoilWaterRetention ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil water retention"@en .
+
+she:Termites a skos:Concept ;
+    skos:altLabel "termite"@en ;
+    skos:broader she:SoilMacrofauna ;
+    skos:exactMatch spp:Termite ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "termites"@en .
 
 she:AerationPorosity a skos:Concept ;
     skos:broader she:SoilPorosityIndex ;
@@ -89,30 +127,12 @@ she:AirRatio a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "air ratio"@en .
 
-she:AlgalGrowth a skos:Concept ;
-    skos:broader she:PlantGrowth ;
-    skos:exactMatch spp:AlgalGrowth ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "algal growth"@en .
-
 she:AntecedentSoilMoistureContents a skos:Concept ;
     skos:altLabel "antecedent soil moisture content"@en ;
     skos:broader she:SoilMoistureContents ;
     skos:exactMatch spp:AntecedentSoilMoistureContent ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "antecedent soil moisture contents"@en .
-
-she:AtmosphericPressure a skos:Concept ;
-    skos:broader she:Pressure ;
-    skos:exactMatch spp:AtmosphericPressure ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "atmospheric pressure"@en .
-
-she:AttractiveForce a skos:Concept ;
-    skos:broader she:Force ;
-    skos:exactMatch spp:AttractiveForce ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "attractive force"@en .
 
 she:Biochannel a skos:Concept ;
     skos:broader she:SoilPores ;
@@ -137,12 +157,6 @@ she:BuildingStability a skos:Concept ;
     skos:exactMatch spp:BuildingStability ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "building stability"@en .
-
-she:BurrowingAnimal a skos:Concept ;
-    skos:broader she:Animal ;
-    skos:exactMatch spp:BurrowingAnimal ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "burrowing animal"@en .
 
 she:CationExchange a skos:Concept ;
     skos:broader she:IonExchange ;
@@ -218,12 +232,6 @@ she:CriticalSoilOrganicMatterContents a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "critical soil organic matter contents"@en .
 
-she:Crop a skos:Concept ;
-    skos:broader she:Plant ;
-    skos:exactMatch spp:Crop ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "crop"@en .
-
 she:CropResidueMulch a skos:Concept ;
     skos:broader she:Mulch ;
     skos:exactMatch spp:CropResidueMulch ;
@@ -235,12 +243,6 @@ she:CropYield a skos:Concept ;
     skos:exactMatch spp:CropYield ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "crop yield"@en .
-
-she:DaytimeHeating a skos:Concept ;
-    skos:broader she:PlanetaryPhenomena ;
-    skos:exactMatch spp:DaytimeHeating ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "daytime heating"@en .
 
 she:DegreeOfSaturation a skos:Concept ;
     skos:broader she:SoilMoistureContents ;
@@ -266,13 +268,6 @@ she:DrySoilBulkDensity a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "dry soil bulk density"@en .
 
-she:Earthworms a skos:Concept ;
-    skos:altLabel "earthworm"@en ;
-    skos:broader she:SoilAnimal ;
-    skos:exactMatch spp:Earthworm ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "earthworms"@en .
-
 she:ErosionRatio a skos:Concept ;
     skos:broader she:SoilErodibilityIndex ;
     skos:exactMatch spp:ErosionRatio ;
@@ -291,12 +286,6 @@ she:ExchangeableCations a skos:Concept ;
     skos:exactMatch spp:ExchangeableCation ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "exchangeable cations"@en .
-
-she:ExternalLoad a skos:Concept ;
-    skos:broader she:Force ;
-    skos:exactMatch spp:ExternalLoad ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "external load"@en .
 
 she:FertiliserUse a skos:Concept ;
     skos:broader she:SoilManagement ;
@@ -360,18 +349,6 @@ she:Grasses a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "grasses"@en .
 
-she:GreenhouseEffect a skos:Concept ;
-    skos:broader she:PlanetaryPhenomena ;
-    skos:exactMatch spp:GreenhouseEffect ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "greenhouse effect"@en .
-
-she:GroundCover a skos:Concept ;
-    skos:broader she:MaterialThing ;
-    skos:exactMatch spp:GroundCover ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "ground cover"@en .
-
 she:Hail a skos:Concept ;
     skos:broader she:Precipitation ;
     skos:exactMatch spp:Hail ;
@@ -415,12 +392,6 @@ she:IndexOfStructuralStability a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "index of structural stability"@en .
 
-she:Infrastructure a skos:Concept ;
-    skos:broader she:MaterialThing ;
-    skos:exactMatch spp:Infrastructure ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "infrastructure"@en .
-
 she:InterAggregatePorosity a skos:Concept ;
     skos:broader she:SoilPorosity ;
     skos:exactMatch spp:InterAggregatePorosity ;
@@ -445,12 +416,6 @@ she:InterlatticeSwelling a skos:Concept ;
     skos:exactMatch spp:InterlatticeSwelling ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "interlattice swelling"@en .
-
-she:InterparticleBond a skos:Concept ;
-    skos:broader she:Force ;
-    skos:exactMatch spp:InterparticleBond ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "interparticle bond"@en .
 
 she:InterparticleSwelling a skos:Concept ;
     skos:broader she:SoilSwelling ;
@@ -483,6 +448,14 @@ she:IntrinsicChargeDensity a skos:Concept ;
     skos:exactMatch spp:IntrinsicChargeDensity ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "intrinsic charge density"@en .
+
+she:Ions a skos:Concept ;
+    skos:altLabel "ion"@en ;
+    skos:broader she:SoilChemical ;
+    skos:exactMatch spp:Ion ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:ExchangeableCations ;
+    skos:prefLabel "ions"@en .
 
 she:Irrigation a skos:Concept ;
     skos:broader she:SoilManagement ;
@@ -558,13 +531,6 @@ she:MediumSand a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "medium sand"@en .
 
-she:Microbes a skos:Concept ;
-    skos:altLabel "microbe"@en ;
-    skos:broader she:LivingEntity ;
-    skos:exactMatch spp:Microbe ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "microbes"@en .
-
 she:Mist a skos:Concept ;
     skos:broader she:Precipitation ;
     skos:exactMatch spp:Mist ;
@@ -577,6 +543,13 @@ she:ModulusOfRupture a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "modulus of rupture"@en .
 
+she:Mulch a skos:Concept ;
+    skos:broader she:SoilManagement ;
+    skos:exactMatch spp:Mulch ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:CropResidueMulch ;
+    skos:prefLabel "mulch"@en .
+
 she:MulchFarming a skos:Concept ;
     skos:broader she:SoilManagement ;
     skos:exactMatch spp:MulchFarming ;
@@ -588,12 +561,6 @@ she:Mulching a skos:Concept ;
     skos:exactMatch spp:Mulching ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "mulching"@en .
-
-she:NighttimeCooling a skos:Concept ;
-    skos:broader she:PlanetaryPhenomena ;
-    skos:exactMatch spp:NighttimeCooling ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "nighttime cooling"@en .
 
 she:NoTill a skos:Concept ;
     skos:broader she:SoilManagement ;
@@ -614,41 +581,11 @@ she:NormalShrinkage a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "normal shrinkage"@en .
 
-she:NormalStress a skos:Concept ;
-    skos:broader she:Stress ;
-    skos:exactMatch spp:NormalStress ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "normal stress"@en .
-
-she:OsmoticPressure a skos:Concept ;
-    skos:broader she:Pressure ;
-    skos:exactMatch spp:OsmoticPressure ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "osmotic pressure"@en .
-
-she:OverBurdenPressure a skos:Concept ;
-    skos:broader she:Pressure ;
-    skos:exactMatch spp:OverBurdenPressure ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "over burden pressure"@en .
-
 she:OverlandFlow a skos:Concept ;
     skos:broader she:WaterInterchange ;
     skos:exactMatch spp:OverlandFlow ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "overland flow"@en .
-
-she:ParticleRepulsion a skos:Concept ;
-    skos:broader she:Force ;
-    skos:exactMatch spp:ParticleRepulsion ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "particle repulsion"@en .
-
-she:ParticleToParticleFriction a skos:Concept ;
-    skos:broader she:Force ;
-    skos:exactMatch spp:ParticleToParticleFriction ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "particle to particle friction"@en .
 
 she:PavementStability a skos:Concept ;
     skos:broader she:SoilEngineeringFunctions ;
@@ -680,12 +617,6 @@ she:PermanentWiltingPoint a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "permanent wilting point"@en .
 
-she:Pest a skos:Concept ;
-    skos:broader she:Animal ;
-    skos:exactMatch spp:Pest ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "pest"@en .
-
 she:PesticideUse a skos:Concept ;
     skos:broader she:SoilManagement ;
     skos:exactMatch spp:PesticideUse ;
@@ -699,11 +630,30 @@ she:PlantAvailableWaterContents a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "plant available water contents"@en .
 
-she:PlantCover a skos:Concept ;
-    skos:broader she:LandCover ;
-    skos:exactMatch spp:PlantCover ;
+she:PlantNutrientUptake a skos:Concept ;
+    skos:broader she:SoilAgriculturalFunctions ;
+    skos:exactMatch spp:PlantNutrientUptake ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "plant cover"@en .
+    skos:prefLabel "plant nutrient uptake"@en .
+
+she:PlantPart a skos:Concept ;
+    skos:broader she:PlantCover ;
+    skos:exactMatch spp:PlantPart ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:Roots ;
+    skos:prefLabel "plant part"@en .
+
+she:PlantRespiration a skos:Concept ;
+    skos:broader she:SoilAgriculturalFunctions ;
+    skos:exactMatch spp:PlantRespiration ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "plant respiration"@en .
+
+she:PlantWaterUptake a skos:Concept ;
+    skos:broader she:SoilAgriculturalFunctions ;
+    skos:exactMatch spp:PlantWaterUptake ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "plant water uptake"@en .
 
 she:PlasticConsistence a skos:Concept ;
     skos:broader she:SoilConsistence ;
@@ -730,12 +680,6 @@ she:ReactiveSolutes a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "reactive solutes"@en .
 
-she:Reorientation a skos:Concept ;
-    skos:broader she:Force ;
-    skos:exactMatch spp:Reorientation ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "reorientation"@en .
-
 she:ResidualShrinkage a skos:Concept ;
     skos:broader she:SoilShrinkage ;
     skos:exactMatch spp:ResidualShrinkage ;
@@ -753,6 +697,12 @@ she:RootBiomass a skos:Concept ;
     skos:exactMatch spp:RootBiomass ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "root biomass"@en .
+
+she:RootRespiration a skos:Concept ;
+    skos:broader she:SoilBiologicalProcesses ;
+    skos:exactMatch spp:RootRespiration ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "root respiration"@en .
 
 she:Roots a skos:Concept ;
     skos:altLabel "root"@en ;
@@ -809,12 +759,6 @@ she:SeedlingEmergence a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "seedling emergence"@en .
 
-she:ShearingStress a skos:Concept ;
-    skos:broader she:Stress ;
-    skos:exactMatch spp:ShearingStress ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "shearing stress"@en .
-
 she:SilicaSesquioxideRatio a skos:Concept ;
     skos:broader she:SoilErodibilityIndex ;
     skos:exactMatch spp:SilicaSesquioxideRatio ;
@@ -846,10 +790,10 @@ she:SoftConsistence a skos:Concept ;
     skos:prefLabel "soft consistence"@en .
 
 she:Soil a skos:Concept ;
-    skos:broader she:ChemicalSubstance ;
     skos:exactMatch spp:Soil ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil"@en .
+    skos:prefLabel "soil"@en ;
+    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:SoilAcidification a skos:Concept ;
     skos:broader she:SoilChemicalDegradativeProcesses ;
@@ -979,7 +923,7 @@ she:SoilBiopore a skos:Concept ;
     skos:prefLabel "soil biopore"@en .
 
 she:SoilBiota a skos:Concept ;
-    skos:broader she:SoilSubstance ;
+    skos:broader she:SoilBiologicalProperties ;
     skos:exactMatch spp:SoilBiota ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil biota"@en .
@@ -995,12 +939,6 @@ she:SoilChannel a skos:Concept ;
     skos:exactMatch spp:SoilChannel ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil channel"@en .
-
-she:SoilChemical a skos:Concept ;
-    skos:broader she:SoilSubstance ;
-    skos:exactMatch spp:SoilChemical ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil chemical"@en .
 
 she:SoilChemicalCrusts a skos:Concept ;
     skos:altLabel "soil chemical crust"@en ;
@@ -1368,12 +1306,6 @@ she:SoilLongitudinalStrain a skos:Concept ;
     skos:exactMatch spp:SoilLongitudinalStrain ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil longitudinal strain"@en .
-
-she:SoilMacrofauna a skos:Concept ;
-    skos:broader she:SoilFauna ;
-    skos:exactMatch spp:SoilMacrofauna ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil macrofauna"@en .
 
 she:SoilMatricPotential a skos:Concept ;
     skos:broader she:SoilMoisturePotential ;
@@ -2260,19 +2192,6 @@ she:SurfaceRunoff a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "surface runoff"@en .
 
-she:TangentialStress a skos:Concept ;
-    skos:broader she:Stress ;
-    skos:exactMatch spp:TangentialStress ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "tangential stress"@en .
-
-she:Termites a skos:Concept ;
-    skos:altLabel "termite"@en ;
-    skos:broader she:SoilAnimal ;
-    skos:exactMatch spp:Termite ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "termites"@en .
-
 she:TexturalPores a skos:Concept ;
     skos:altLabel "textural pore"@en ;
     skos:broader she:SoilPores ;
@@ -2347,17 +2266,19 @@ she:WetSoilBulkDensity a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "wet soil bulk density"@en .
 
-she:Worm a skos:Concept ;
-    skos:broader she:Animal ;
-    skos:exactMatch spp:Worm ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "worm"@en .
-
 she:pFcurve a skos:Concept ;
     skos:broader she:SoilWaterPhysicalProperties ;
     skos:exactMatch spp:pFcurve ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "pF curve"@en .
+
+she:Biomass a skos:Concept ;
+    skos:broader she:SoilBiota ;
+    skos:exactMatch spp:Biomass ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:RootBiomass,
+        she:SoilMicrobialBiomass ;
+    skos:prefLabel "biomass"@en .
 
 she:Evapouration a skos:Concept ;
     skos:broader she:WaterInterchange ;
@@ -2394,27 +2315,12 @@ she:IonExchange a skos:Concept ;
     skos:narrower she:CationExchange ;
     skos:prefLabel "ion exchange"@en .
 
-she:Ions a skos:Concept ;
-    skos:altLabel "ion"@en ;
-    skos:broader she:ChemicalSubstance ;
-    skos:exactMatch spp:Ion ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:ExchangeableCations ;
-    skos:prefLabel "ions"@en .
-
 she:LeastLimitingWaterRange a skos:Concept ;
     skos:broader she:SoilMoistureContents,
         she:SoilWaterRetentionIndex ;
     skos:exactMatch spp:LeastLimitingWaterRange ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "least limiting water range"@en .
-
-she:Mulch a skos:Concept ;
-    skos:broader she:MaterialThing ;
-    skos:exactMatch spp:Mulch ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:CropResidueMulch ;
-    skos:prefLabel "mulch"@en .
 
 she:Pavements a skos:Concept ;
     skos:altLabel "pavement"@en ;
@@ -2431,47 +2337,12 @@ she:PlantAvailableWaterCapacity a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "plant available water capacity"@en .
 
-she:PlantGrowth a skos:Concept ;
-    skos:broader she:PlantProcesses ;
-    skos:exactMatch spp:PlantGrowth ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:AlgalGrowth ;
-    skos:prefLabel "plant growth"@en .
-
-she:PlantNutrientUptake a skos:Concept ;
-    skos:broader she:PlantProcesses,
-        she:SoilAgriculturalFunctions ;
-    skos:exactMatch spp:PlantNutrientUptake ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "plant nutrient uptake"@en .
-
-she:PlantPart a skos:Concept ;
-    skos:broader she:LivingEntity ;
-    skos:exactMatch spp:PlantPart ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:Roots ;
-    skos:prefLabel "plant part"@en .
-
-she:PlantRespiration a skos:Concept ;
-    skos:broader she:PlantProcesses,
-        she:SoilAgriculturalFunctions ;
-    skos:exactMatch spp:PlantRespiration ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "plant respiration"@en .
-
-she:PlantWaterUptake a skos:Concept ;
-    skos:broader she:PlantProcesses,
-        she:SoilAgriculturalFunctions ;
-    skos:exactMatch spp:PlantWaterUptake ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "plant water uptake"@en .
-
-she:RootRespiration a skos:Concept ;
-    skos:broader she:PlantProcesses,
+she:RootGrowth a skos:Concept ;
+    skos:broader she:SoilAgriculturalFunctions,
         she:SoilBiologicalProcesses ;
-    skos:exactMatch spp:RootRespiration ;
+    skos:exactMatch spp:RootGrowth ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "root respiration"@en .
+    skos:prefLabel "root growth"@en .
 
 she:Runoff a skos:Concept ;
     skos:broader she:WaterInterchange ;
@@ -2552,6 +2423,12 @@ she:SoilChargeDensity a skos:Concept ;
     skos:narrower she:IntrinsicChargeDensity ;
     skos:prefLabel "soil charge density"@en .
 
+she:SoilChemical a skos:Concept ;
+    skos:broader she:SoilSubstance ;
+    skos:exactMatch spp:SoilChemical ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "soil chemical"@en .
+
 she:SoilCompaction a skos:Concept ;
     skos:broader she:SoilCompression,
         she:SoilPhysicalDegradativeProcesses ;
@@ -2593,6 +2470,14 @@ she:SoilDesertification a skos:Concept ;
     skos:exactMatch spp:SoilDesertification ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil desertification"@en .
+
+she:SoilFauna a skos:Concept ;
+    skos:broader she:SoilOrganisms ;
+    skos:exactMatch spp:SoilFauna ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:SoilMacrofauna,
+        she:SoilMicrofauna ;
+    skos:prefLabel "soil fauna"@en .
 
 she:SoilGas a skos:Concept ;
     skos:broader she:SoilComponent ;
@@ -2742,6 +2627,13 @@ she:SoilTrafficability a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil trafficability"@en .
 
+she:SoilVapourPressure a skos:Concept ;
+    skos:broader she:SoilPhysicalProperties ;
+    skos:exactMatch spp:SoilVaporPressure ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:SaturatedVapourPressure ;
+    skos:prefLabel "soil vapour pressure"@en .
+
 she:SoilWaterAbsorptionCapacity a skos:Concept ;
     skos:broader she:SoilPhysicalCapacity,
         she:SoilWaterPhysicalProperties ;
@@ -2791,28 +2683,20 @@ she:TotalPorosity a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "total porosity"@en .
 
+she:Vegetation a skos:Concept ;
+    skos:broader she:PlantCover ;
+    skos:exactMatch spp:Vegetation ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:Grasses,
+        she:Trees ;
+    skos:prefLabel "vegetation"@en .
+
 she:WaterQuality a skos:Concept ;
     skos:broader she:SoilEngineeringFunctions,
         she:SoilEnvironmentalFunctions ;
     skos:exactMatch spp:WaterQuality ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "water quality"@en .
-
-she:Biomass a skos:Concept ;
-    skos:broader she:LivingEntity ;
-    skos:exactMatch spp:Biomass ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:RootBiomass,
-        she:SoilMicrobialBiomass ;
-    skos:prefLabel "biomass"@en .
-
-she:ChemicalSubstance a skos:Concept ;
-    skos:exactMatch spp:ChemicalSubstance ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:Ions,
-        she:Soil ;
-    skos:prefLabel "chemical substance"@en ;
-    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:NonconservativeSolutes a skos:Concept ;
     skos:altLabel "nonconservative solute"@en ;
@@ -2822,22 +2706,6 @@ she:NonconservativeSolutes a skos:Concept ;
     skos:narrower she:LabileSolutes,
         she:ReactiveSolutes ;
     skos:prefLabel "nonconservative solutes"@en .
-
-she:Plant a skos:Concept ;
-    skos:broader she:LivingEntity ;
-    skos:exactMatch spp:Plant ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:Crop,
-        she:Vegetation ;
-    skos:prefLabel "plant"@en .
-
-she:RootGrowth a skos:Concept ;
-    skos:broader she:PlantProcesses,
-        she:SoilAgriculturalFunctions,
-        she:SoilBiologicalProcesses ;
-    skos:exactMatch spp:RootGrowth ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "root growth"@en .
 
 she:SoilAbsorption a skos:Concept ;
     skos:broader she:SoilPhysicalProcesses ;
@@ -2861,14 +2729,6 @@ she:SoilAerationIndex a skos:Concept ;
     skos:narrower she:SoilAirDiffusionCoefficient,
         she:SoilOxygenDiffusionRate ;
     skos:prefLabel "soil aeration index"@en .
-
-she:SoilAnimal a skos:Concept ;
-    skos:broader she:Animal ;
-    skos:exactMatch spp:SoilAnimal ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:Earthworms,
-        she:Termites ;
-    skos:prefLabel "soil animal"@en .
 
 she:SoilBulkDensity a skos:Concept ;
     skos:broader she:SoilDensity ;
@@ -2903,14 +2763,6 @@ she:SoilDensification a skos:Concept ;
         she:SoilHardsetting ;
     skos:prefLabel "soil densification"@en .
 
-she:SoilFauna a skos:Concept ;
-    skos:broader she:SoilSubstance ;
-    skos:exactMatch spp:SoilFauna ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SoilMacrofauna,
-        she:SoilMicrofauna ;
-    skos:prefLabel "soil fauna"@en .
-
 she:SoilHeatMovement a skos:Concept ;
     skos:broader she:SoilThermalProcesses ;
     skos:exactMatch spp:SoilHeatMovement ;
@@ -2918,6 +2770,12 @@ she:SoilHeatMovement a skos:Concept ;
     skos:narrower she:SoilHeatTransfer,
         she:SoilHeatTransport ;
     skos:prefLabel "soil heat movement"@en .
+
+she:SoilMacrofauna a skos:Concept ;
+    skos:broader she:SoilFauna ;
+    skos:exactMatch spp:SoilMacrofauna ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "soil macrofauna"@en .
 
 she:SoilMacropore a skos:Concept ;
     skos:broader she:SoilPores ;
@@ -2934,6 +2792,11 @@ she:SoilMicrobialActivity a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:SoilMicrobialRespiration ;
     skos:prefLabel "soil microbial activity"@en .
+
+she:SoilOrganisms a skos:Concept ;
+    skos:altLabel "soil organism"@en ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:prefLabel "soil organisms"@en .
 
 she:SoilOxidationReductionReaction a skos:Concept ;
     skos:broader she:SoilChemicalReaction ;
@@ -3034,14 +2897,6 @@ she:SoilSwelling a skos:Concept ;
         she:InterparticleSwelling ;
     skos:prefLabel "soil swelling"@en .
 
-she:SoilVapourPressure a skos:Concept ;
-    skos:broader she:Pressure,
-        she:SoilPhysicalProperties ;
-    skos:exactMatch spp:SoilVaporPressure ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SaturatedVapourPressure ;
-    skos:prefLabel "soil vapour pressure"@en .
-
 she:SoilWaterFlow a skos:Concept ;
     skos:broader she:SoilWaterMovement ;
     skos:exactMatch spp:SoilWaterFlow ;
@@ -3074,14 +2929,6 @@ she:SoilWetting a skos:Concept ;
         she:SoilSlowWetting ;
     skos:prefLabel "soil wetting"@en .
 
-she:Vegetation a skos:Concept ;
-    skos:broader she:Plant ;
-    skos:exactMatch spp:Vegetation ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:Grasses,
-        she:Trees ;
-    skos:prefLabel "vegetation"@en .
-
 she:WasteDisposal a skos:Concept ;
     skos:broader she:SoilEngineeringFunctions,
         she:SoilEnvironmentalFunctions ;
@@ -3090,14 +2937,11 @@ she:WasteDisposal a skos:Concept ;
     skos:narrower she:LiquidWasteDisposal ;
     skos:prefLabel "waste disposal"@en .
 
-she:LandCover a skos:Concept ;
-    skos:broader she:MaterialThing ;
-    skos:exactMatch spp:LandCover ;
+she:PlantCover a skos:Concept ;
+    skos:broader she:LandCover ;
+    skos:exactMatch spp:PlantCover ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:Building,
-        she:Pavements,
-        she:PlantCover ;
-    skos:prefLabel "land cover"@en .
+    skos:prefLabel "plant cover"@en .
 
 she:Sand a skos:Concept ;
     skos:broader she:SoilPrimaryParticles ;
@@ -3307,33 +3151,13 @@ she:SoilWaterMovement a skos:Concept ;
         she:SoilWaterTransport ;
     skos:prefLabel "soil water movement"@en .
 
-she:Stress a skos:Concept ;
-    skos:broader she:Pressure ;
-    skos:exactMatch spp:Stress ;
+she:LandCover a skos:Concept ;
+    skos:exactMatch spp:LandCover ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:NormalStress,
-        she:ShearingStress,
-        she:TangentialStress ;
-    skos:prefLabel "stress"@en .
-
-she:Animal a skos:Concept ;
-    skos:broader she:LivingEntity ;
-    skos:exactMatch spp:Animal ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:BurrowingAnimal,
-        she:Pest,
-        she:SoilAnimal,
-        she:Worm ;
-    skos:prefLabel "animal"@en .
-
-she:MaterialThing a skos:Concept ;
-    skos:exactMatch spp:MaterialThing ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:GroundCover,
-        she:Infrastructure,
-        she:LandCover,
-        she:Mulch ;
-    skos:prefLabel "material thing"@en ;
+    skos:narrower she:Building,
+        she:Pavements,
+        she:PlantCover ;
+    skos:prefLabel "land cover"@en ;
     skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:SoilAirPhysicalProperties a skos:Concept ;
@@ -3439,27 +3263,17 @@ she:SoilVolumeChange a skos:Concept ;
         she:SoilSwelling ;
     skos:prefLabel "soil volume change"@en .
 
-she:LivingEntity a skos:Concept ;
-    skos:exactMatch spp:LivingEntity ;
+she:PlanetaryPhenomena a skos:Concept ;
+    skos:altLabel "planetary phenomenon"@en ;
+    skos:exactMatch spp:PlanetaryPhenomena ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:Animal,
-        she:Biomass,
-        she:Microbes,
-        she:Plant,
-        she:PlantPart ;
-    skos:prefLabel "living entity"@en ;
+    skos:narrower she:Climate,
+        she:Inundation,
+        she:Season,
+        she:WaterInterchange,
+        she:Weather ;
+    skos:prefLabel "planetary phenomena"@en ;
     skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
-
-she:Pressure a skos:Concept ;
-    skos:broader she:Force ;
-    skos:exactMatch spp:Pressure ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:AtmosphericPressure,
-        she:OsmoticPressure,
-        she:OverBurdenPressure,
-        she:SoilVapourPressure,
-        she:Stress ;
-    skos:prefLabel "pressure"@en .
 
 she:SoilAggregationIndex a skos:Concept ;
     skos:broader she:SoilStructureIndex ;
@@ -3528,19 +3342,6 @@ she:SoilSoluteTransport a skos:Concept ;
         she:SoilSoluteDispersiveTransport ;
     skos:prefLabel "soil solute transport"@en .
 
-she:PlantProcesses a skos:Concept ;
-    skos:altLabel "plant process"@en ;
-    skos:exactMatch spp:PlantProcess ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:PlantGrowth,
-        she:PlantNutrientUptake,
-        she:PlantRespiration,
-        she:PlantWaterUptake,
-        she:RootGrowth,
-        she:RootRespiration ;
-    skos:prefLabel "plant processes"@en ;
-    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
-
 she:Precipitation a skos:Concept ;
     skos:broader she:WaterInterchange ;
     skos:exactMatch spp:Precipitation ;
@@ -3590,6 +3391,19 @@ she:SoilMoisturePotential a skos:Concept ;
         she:TotalSoilMoisturePotential ;
     skos:prefLabel "soil moisture potential"@en .
 
+she:SoilSubstance a skos:Concept ;
+    skos:exactMatch spp:SoilSubstance ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:SoilChemical,
+        she:SoilComponent,
+        she:SoilCrusts,
+        she:SoilNutrients,
+        she:SoilOrganisms,
+        she:SoilPores,
+        she:SoilSurfaceSeal ;
+    skos:prefLabel "soil substance"@en ;
+    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
+
 she:SoilTransport a skos:Concept ;
     skos:broader she:SoilPhysicalProcesses ;
     skos:exactMatch spp:SoilTransport ;
@@ -3610,19 +3424,6 @@ she:SoilWaterTransmissionIndex a skos:Concept ;
         she:SoilWaterInfiltrationCapacity,
         she:SoilWaterInfiltrationRate ;
     skos:prefLabel "soil water transmission index"@en .
-
-she:Force a skos:Concept ;
-    skos:exactMatch spp:Force ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:AttractiveForce,
-        she:ExternalLoad,
-        she:InterparticleBond,
-        she:ParticleRepulsion,
-        she:ParticleToParticleFriction,
-        she:Pressure,
-        she:Reorientation ;
-    skos:prefLabel "force"@en ;
-    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:SoilAggregatePhysicalProperties a skos:Concept ;
     skos:altLabel "soil aggregate physical property"@en ;
@@ -3664,21 +3465,6 @@ she:SoilDensity a skos:Concept ;
         she:SoilSpecificGravity,
         she:SoilTrueDensity ;
     skos:prefLabel "soil density"@en .
-
-she:PlanetaryPhenomena a skos:Concept ;
-    skos:altLabel "planetary phenomenon"@en ;
-    skos:exactMatch spp:PlanetaryPhenomena ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:Climate,
-        she:DaytimeHeating,
-        she:GreenhouseEffect,
-        she:Inundation,
-        she:NighttimeCooling,
-        she:Season,
-        she:WaterInterchange,
-        she:Weather ;
-    skos:prefLabel "planetary phenomena"@en ;
-    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:SoilChemicalDegradativeProcesses a skos:Concept ;
     skos:altLabel "soil chemical degradative process"@en ;
@@ -3739,35 +3525,6 @@ she:SoilStructureIndex a skos:Concept ;
     skos:prefLabel "soil structure index"@en ;
     skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
-she:SoilSubstance a skos:Concept ;
-    skos:exactMatch spp:SoilSubstance ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SoilBiota,
-        she:SoilChemical,
-        she:SoilComponent,
-        she:SoilCrusts,
-        she:SoilFauna,
-        she:SoilNutrients,
-        she:SoilPores,
-        she:SoilSurfaceSeal ;
-    skos:prefLabel "soil substance"@en ;
-    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
-
-she:SoilManagement a skos:Concept ;
-    skos:exactMatch spp:SoilManagement ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:FertiliserUse,
-        she:Irrigation,
-        she:MulchFarming,
-        she:Mulching,
-        she:NoTill,
-        she:PesticideUse,
-        she:SeedbedPreparation,
-        she:SoilDrainage,
-        she:SoilTillage ;
-    skos:prefLabel "soil management"@en ;
-    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
-
 she:SoilPhenomena a skos:Concept ;
     skos:altLabel "soil phenomenon"@en ;
     skos:exactMatch spp:SoilPhenomena ;
@@ -3815,6 +3572,21 @@ she:SoilContents a skos:Concept ;
         she:SoilSandContents,
         she:SoilSiltContents ;
     skos:prefLabel "soil contents"@en .
+
+she:SoilManagement a skos:Concept ;
+    skos:exactMatch spp:SoilManagement ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:FertiliserUse,
+        she:Irrigation,
+        she:MulchFarming,
+        she:Mulching,
+        she:NoTill,
+        she:PesticideUse,
+        she:SeedbedPreparation,
+        she:SoilDrainage,
+        she:SoilTillage ;
+    skos:prefLabel "soil management"@en ;
+    skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:SoilPhysicalCapacity a skos:Concept ;
     skos:broader she:SoilPhysicalProperties ;
@@ -4115,13 +3887,10 @@ she:SoilPhysicalProperties a skos:Concept ;
     skos:prefLabel "soil physical properties"@en .
 
 <https://soilwise-he.github.io/soil-health> a skos:ConceptScheme ;
-    skos:hasTopConcept she:ChemicalSubstance,
-        she:Force,
+    skos:hasTopConcept she:LandCover,
         she:LandUse,
-        she:LivingEntity,
-        she:MaterialThing,
         she:PlanetaryPhenomena,
-        she:PlantProcesses,
+        she:Soil,
         she:SoilFunctions,
         she:SoilManagement,
         she:SoilPhenomena,

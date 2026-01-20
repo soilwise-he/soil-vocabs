@@ -529,276 +529,6 @@
   "scheme_label": "soil-health",
   "top_concepts": [
     {
-      "uri": "https://soilwise-he.github.io/soil-health#ChemicalSubstance",
-      "label": "chemical substance",
-      "altLabel": null,
-      "notation": null,
-      "definition": null,
-      "definitions": [],
-      "exactMatch": [
-        {
-          "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#ChemicalSubstance",
-          "label": "ChemicalSubstance"
-        }
-      ],
-      "isProcedure": false,
-      "procedures": [],
-      "narrower": [
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#Ions",
-          "label": "ions",
-          "altLabel": "ion",
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Ion",
-              "label": "Ion"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#ExchangeableCations",
-              "label": "exchangeable cations",
-              "altLabel": "exchangeable cation",
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#ExchangeableCation",
-                  "label": "ExchangeableCation"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": [
-                {
-                  "uri": "https://soilwise-he.github.io/soil-health#AcidityExchangeable",
-                  "label": "acidity exchangeable",
-                  "altLabel": null,
-                  "notation": null,
-                  "definition": "Exchangeable acidity represents the amount of hydrogen (H\u207a) and aluminum (Al\u00b3\u207a) ions adsorbed onto soil particles that can be exchanged with the soil solution. It is a key factor in determining soil liming requirements and improving nutrient availability in acidic soils. Source: Brady & Weil (2017).",
-                  "definitions": [
-                    {
-                      "text": "Exchangeable acidity represents the amount of hydrogen (H\u207a) and aluminum (Al\u00b3\u207a) ions adsorbed onto soil particles that can be exchanged with the soil solution. It is a key factor in determining soil liming requirements and improving nutrient availability in acidic soils. Source: Brady & Weil (2017).",
-                      "source": "http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aciexc"
-                    }
-                  ],
-                  "exactMatch": [
-                    {
-                      "uri": "http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aciexc",
-                      "label": "physioChemicalPropertyCode-Aciexc"
-                    }
-                  ],
-                  "isProcedure": false,
-                  "procedures": [
-                    {
-                      "uri": "https://soilwise-he.github.io/soil-health#acidityExchangeableProcedure-ExchAcid_ph0-kcl1m",
-                      "label": "ExchAcid_ph0-kcl1m",
-                      "altLabel": null,
-                      "notation": null,
-                      "definition": "Exch acidity (H+Al) unbuffered, in 1 M KCl extract",
-                      "definitions": [
-                        {
-                          "text": "Exch acidity (H+Al) unbuffered, in 1 M KCl extract",
-                          "source": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph0-kcl1m"
-                        }
-                      ],
-                      "exactMatch": [
-                        {
-                          "uri": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph0-kcl1m",
-                          "label": "acidityExchangeableProcedure-ExchAcid_ph0-kcl1m"
-                        }
-                      ],
-                      "isProcedure": true,
-                      "procedures": [],
-                      "narrower": []
-                    },
-                    {
-                      "uri": "https://soilwise-he.github.io/soil-health#acidityExchangeableProcedure-ExchAcid_ph0-nh4cl",
-                      "label": "ExchAcid_ph0-nh4cl",
-                      "altLabel": null,
-                      "notation": null,
-                      "definition": "Exch acidity (H+Al) unbuffered, in 0.05-0.1 M NH4Cl extract",
-                      "definitions": [
-                        {
-                          "text": "Exch acidity (H+Al) unbuffered, in 0.05-0.1 M NH4Cl extract",
-                          "source": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph0-nh4cl"
-                        }
-                      ],
-                      "exactMatch": [
-                        {
-                          "uri": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph0-nh4cl",
-                          "label": "acidityExchangeableProcedure-ExchAcid_ph0-nh4cl"
-                        }
-                      ],
-                      "isProcedure": true,
-                      "procedures": [],
-                      "narrower": []
-                    },
-                    {
-                      "uri": "https://soilwise-he.github.io/soil-health#acidityExchangeableProcedure-ExchAcid_ph0-unkn",
-                      "label": "ExchAcid_ph0-unk",
-                      "altLabel": null,
-                      "notation": null,
-                      "definition": "Exch acidity (H+Al) unbuffered, in unknown extract",
-                      "definitions": [
-                        {
-                          "text": "Exch acidity (H+Al) unbuffered, in unknown extract",
-                          "source": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph0-unkn"
-                        }
-                      ],
-                      "exactMatch": [
-                        {
-                          "uri": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph0-unkn",
-                          "label": "acidityExchangeableProcedure-ExchAcid_ph0-unkn"
-                        }
-                      ],
-                      "isProcedure": true,
-                      "procedures": [],
-                      "narrower": []
-                    },
-                    {
-                      "uri": "https://soilwise-he.github.io/soil-health#acidityExchangeableProcedure-ExchAcid_ph7-caoac",
-                      "label": "ExchAcid_ph7-caoac",
-                      "altLabel": null,
-                      "notation": null,
-                      "definition": "Exch acidity (H+Al) buffered at pH 7, in 1M Ca-acetate extract",
-                      "definitions": [
-                        {
-                          "text": "Exch acidity (H+Al) buffered at pH 7, in 1M Ca-acetate extract",
-                          "source": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph7-caoac"
-                        }
-                      ],
-                      "exactMatch": [
-                        {
-                          "uri": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph7-caoac",
-                          "label": "acidityExchangeableProcedure-ExchAcid_ph7-caoac"
-                        }
-                      ],
-                      "isProcedure": true,
-                      "procedures": [],
-                      "narrower": []
-                    },
-                    {
-                      "uri": "https://soilwise-he.github.io/soil-health#acidityExchangeableProcedure-ExchAcid_ph7-unkn",
-                      "label": "ExchAcid_ph7-unk",
-                      "altLabel": null,
-                      "notation": null,
-                      "definition": "Exch acidity (H+Al) buffered at pH 7, in unknown extract",
-                      "definitions": [
-                        {
-                          "text": "Exch acidity (H+Al) buffered at pH 7, in unknown extract",
-                          "source": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph7-unkn"
-                        }
-                      ],
-                      "exactMatch": [
-                        {
-                          "uri": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph7-unkn",
-                          "label": "acidityExchangeableProcedure-ExchAcid_ph7-unkn"
-                        }
-                      ],
-                      "isProcedure": true,
-                      "procedures": [],
-                      "narrower": []
-                    },
-                    {
-                      "uri": "https://soilwise-he.github.io/soil-health#acidityExchangeableProcedure-ExchAcid_ph8-bacl2tea",
-                      "label": "ExchAcid_ph8-bacl2tea",
-                      "altLabel": null,
-                      "notation": null,
-                      "definition": "Exch (extractable / potential) acidity (Al) buffered at pH 8.0-8.5, in 1 M BaCl2 - TEA",
-                      "definitions": [
-                        {
-                          "text": "Exch (extractable / potential) acidity (Al) buffered at pH 8.0-8.5, in 1 M BaCl2 - TEA",
-                          "source": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph8-bacl2tea"
-                        }
-                      ],
-                      "exactMatch": [
-                        {
-                          "uri": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph8-bacl2tea",
-                          "label": "acidityExchangeableProcedure-ExchAcid_ph8-bacl2tea"
-                        }
-                      ],
-                      "isProcedure": true,
-                      "procedures": [],
-                      "narrower": []
-                    },
-                    {
-                      "uri": "https://soilwise-he.github.io/soil-health#acidityExchangeableProcedure-ExchAcid_ph8-unkn",
-                      "label": "ExchAcid_ph8-unk",
-                      "altLabel": null,
-                      "notation": null,
-                      "definition": "Exch (extractable / potential) acidity (Al) buffered at pH 8.0-8.5, in unknown extract",
-                      "definitions": [
-                        {
-                          "text": "Exch (extractable / potential) acidity (Al) buffered at pH 8.0-8.5, in unknown extract",
-                          "source": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph8-unkn"
-                        }
-                      ],
-                      "exactMatch": [
-                        {
-                          "uri": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph8-unkn",
-                          "label": "acidityExchangeableProcedure-ExchAcid_ph8-unkn"
-                        }
-                      ],
-                      "isProcedure": true,
-                      "procedures": [],
-                      "narrower": []
-                    }
-                  ],
-                  "narrower": []
-                },
-                {
-                  "uri": "https://soilwise-he.github.io/soil-health#CationSum",
-                  "label": "cation sum",
-                  "altLabel": "cations sum",
-                  "notation": null,
-                  "definition": "The Cations Sum calculates the total concentration of exchangeable cations (e.g., Ca\u00b2\u207a, Mg\u00b2\u207a, K\u207a, Na\u207a) in the soil. It helps determine soil fertility and salinity and is commonly expressed in milliequivalents per 100 grams of soil. Source: Soil Science Society of America (SSSA) Glossary.",
-                  "definitions": [
-                    {
-                      "text": "The Cations Sum calculates the total concentration of exchangeable cations (e.g., Ca\u00b2\u207a, Mg\u00b2\u207a, K\u207a, Na\u207a) in the soil. It helps determine soil fertility and salinity and is commonly expressed in milliequivalents per 100 grams of soil. Source: Soil Science Society of America (SSSA) Glossary.",
-                      "source": "http://w3id.org/glosis/model/layerhorizon/cationsSumProperty"
-                    }
-                  ],
-                  "exactMatch": [
-                    {
-                      "uri": "http://w3id.org/glosis/model/layerhorizon/cationsSumProperty",
-                      "label": "cationsSumProperty"
-                    }
-                  ],
-                  "isProcedure": false,
-                  "procedures": [],
-                  "narrower": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#Soil",
-          "label": "soil",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Soil",
-              "label": "Soil"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        }
-      ]
-    },
-    {
       "uri": "https://soilwise-he.github.io/soil-health#EcosystemServices",
       "label": "ecosystem services",
       "altLabel": "ecosystem service",
@@ -860,299 +590,6 @@
       ]
     },
     {
-      "uri": "https://soilwise-he.github.io/soil-health#Force",
-      "label": "force",
-      "altLabel": null,
-      "notation": null,
-      "definition": null,
-      "definitions": [],
-      "exactMatch": [
-        {
-          "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Force",
-          "label": "Force"
-        }
-      ],
-      "isProcedure": false,
-      "procedures": [],
-      "narrower": [
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#AttractiveForce",
-          "label": "attractive force",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#AttractiveForce",
-              "label": "AttractiveForce"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#ExternalLoad",
-          "label": "external load",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#ExternalLoad",
-              "label": "ExternalLoad"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#InterparticleBond",
-          "label": "interparticle bond",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#InterparticleBond",
-              "label": "InterparticleBond"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#ParticleRepulsion",
-          "label": "particle repulsion",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#ParticleRepulsion",
-              "label": "ParticleRepulsion"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#ParticleToParticleFriction",
-          "label": "particle to particle friction",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#ParticleToParticleFriction",
-              "label": "ParticleToParticleFriction"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#Pressure",
-          "label": "pressure",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Pressure",
-              "label": "Pressure"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#AtmosphericPressure",
-              "label": "atmospheric pressure",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#AtmosphericPressure",
-                  "label": "AtmosphericPressure"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#OsmoticPressure",
-              "label": "osmotic pressure",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#OsmoticPressure",
-                  "label": "OsmoticPressure"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#OverBurdenPressure",
-              "label": "over burden pressure",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#OverBurdenPressure",
-                  "label": "OverBurdenPressure"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#SoilVapourPressure",
-              "label": "soil vapour pressure",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilVaporPressure",
-                  "label": "SoilVaporPressure"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": [
-                {
-                  "uri": "https://soilwise-he.github.io/soil-health#SaturatedVapourPressure",
-                  "label": "saturated vapour pressure",
-                  "altLabel": null,
-                  "notation": null,
-                  "definition": null,
-                  "definitions": [],
-                  "exactMatch": [
-                    {
-                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SaturatedVaporPressure",
-                      "label": "SaturatedVaporPressure"
-                    }
-                  ],
-                  "isProcedure": false,
-                  "procedures": [],
-                  "narrower": []
-                }
-              ]
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#Stress",
-              "label": "stress",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Stress",
-                  "label": "Stress"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": [
-                {
-                  "uri": "https://soilwise-he.github.io/soil-health#NormalStress",
-                  "label": "normal stress",
-                  "altLabel": null,
-                  "notation": null,
-                  "definition": null,
-                  "definitions": [],
-                  "exactMatch": [
-                    {
-                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#NormalStress",
-                      "label": "NormalStress"
-                    }
-                  ],
-                  "isProcedure": false,
-                  "procedures": [],
-                  "narrower": []
-                },
-                {
-                  "uri": "https://soilwise-he.github.io/soil-health#ShearingStress",
-                  "label": "shearing stress",
-                  "altLabel": null,
-                  "notation": null,
-                  "definition": null,
-                  "definitions": [],
-                  "exactMatch": [
-                    {
-                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#ShearingStress",
-                      "label": "ShearingStress"
-                    }
-                  ],
-                  "isProcedure": false,
-                  "procedures": [],
-                  "narrower": []
-                },
-                {
-                  "uri": "https://soilwise-he.github.io/soil-health#TangentialStress",
-                  "label": "tangential stress",
-                  "altLabel": null,
-                  "notation": null,
-                  "definition": null,
-                  "definitions": [],
-                  "exactMatch": [
-                    {
-                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#TangentialStress",
-                      "label": "TangentialStress"
-                    }
-                  ],
-                  "isProcedure": false,
-                  "procedures": [],
-                  "narrower": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#Reorientation",
-          "label": "reorientation",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Reorientation",
-              "label": "Reorientation"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        }
-      ]
-    },
-    {
       "uri": "https://soilwise-he.github.io/soil-health#Geology",
       "label": "geology",
       "altLabel": null,
@@ -1172,208 +609,23 @@
       ],
       "isProcedure": false,
       "procedures": [],
-      "narrower": []
-    },
-    {
-      "uri": "https://soilwise-he.github.io/soil-health#LivingEntity",
-      "label": "living entity",
-      "altLabel": null,
-      "notation": null,
-      "definition": null,
-      "definitions": [],
-      "exactMatch": [
-        {
-          "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#LivingEntity",
-          "label": "LivingEntity"
-        }
-      ],
-      "isProcedure": false,
-      "procedures": [],
       "narrower": [
         {
-          "uri": "https://soilwise-he.github.io/soil-health#Animal",
-          "label": "animal",
+          "uri": "https://soilwise-he.github.io/soil-health#Lithology",
+          "label": "lithology",
           "altLabel": null,
           "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
+          "definition": "Lithology refers to the physical characteristics of the parent material, such as the mineral composition, texture, and structure of the underlying rocks or sediments. The lithology of an area influences soil formation by affecting drainage, nutrient content, and the ability of the soil to support vegetation. Source: AGI, 'Encyclopedia of Geology'",
+          "definitions": [
             {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Animal",
-              "label": "Animal"
+              "text": "Lithology refers to the physical characteristics of the parent material, such as the mineral composition, texture, and structure of the underlying rocks or sediments. The lithology of an area influences soil formation by affecting drainage, nutrient content, and the ability of the soil to support vegetation. Source: AGI, 'Encyclopedia of Geology'",
+              "source": "http://w3id.org/glosis/model/siteplot/lithologyProperty"
             }
           ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#BurrowingAnimal",
-              "label": "burrowing animal",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#BurrowingAnimal",
-                  "label": "BurrowingAnimal"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#Pest",
-              "label": "pest",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Pest",
-                  "label": "Pest"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#SoilAnimal",
-              "label": "soil animal",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilAnimal",
-                  "label": "SoilAnimal"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": [
-                {
-                  "uri": "https://soilwise-he.github.io/soil-health#Earthworms",
-                  "label": "earthworms",
-                  "altLabel": "earthworm",
-                  "notation": null,
-                  "definition": null,
-                  "definitions": [],
-                  "exactMatch": [
-                    {
-                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Earthworm",
-                      "label": "Earthworm"
-                    }
-                  ],
-                  "isProcedure": false,
-                  "procedures": [],
-                  "narrower": []
-                },
-                {
-                  "uri": "https://soilwise-he.github.io/soil-health#Termites",
-                  "label": "termites",
-                  "altLabel": "termite",
-                  "notation": null,
-                  "definition": null,
-                  "definitions": [],
-                  "exactMatch": [
-                    {
-                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Termite",
-                      "label": "Termite"
-                    }
-                  ],
-                  "isProcedure": false,
-                  "procedures": [],
-                  "narrower": []
-                }
-              ]
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#Worm",
-              "label": "worm",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Worm",
-                  "label": "Worm"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            }
-          ]
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#Biomass",
-          "label": "biomass",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
           "exactMatch": [
             {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Biomass",
-              "label": "Biomass"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#RootBiomass",
-              "label": "root biomass",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#RootBiomass",
-                  "label": "RootBiomass"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#SoilMicrobialBiomass",
-              "label": "soil microbial biomass",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilMicrobialBiomass",
-                  "label": "SoilMicrobialBiomass"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            }
-          ]
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#Microbes",
-          "label": "microbes",
-          "altLabel": "microbe",
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Microbe",
-              "label": "Microbe"
+              "uri": "http://w3id.org/glosis/model/siteplot/lithologyProperty",
+              "label": "lithologyProperty"
             }
           ],
           "isProcedure": false,
@@ -1381,16 +633,239 @@
           "narrower": []
         },
         {
-          "uri": "https://soilwise-he.github.io/soil-health#Plant",
-          "label": "plant",
+          "uri": "https://soilwise-he.github.io/soil-health#ParentMaterial",
+          "label": "parent material",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "definitions": [],
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#ParentDeposition",
+              "label": "parent deposition",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Parent Deposition refers to the accumulation of materials, such as sediments or volcanic ash, that contribute to soil formation. These parent materials are deposited through natural processes such as erosion, weathering, or sediment transport, influencing soil texture, nutrient content, and water retention properties. Source: USDA NRCS, 'Soil Genesis and Classification'",
+              "definitions": [
+                {
+                  "text": "Parent Deposition refers to the accumulation of materials, such as sediments or volcanic ash, that contribute to soil formation. These parent materials are deposited through natural processes such as erosion, weathering, or sediment transport, influencing soil texture, nutrient content, and water retention properties. Source: USDA NRCS, 'Soil Genesis and Classification'",
+                  "source": "http://w3id.org/glosis/model/siteplot/parentDepositionProperty"
+                }
+              ],
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/siteplot/parentDepositionProperty",
+                  "label": "parentDepositionProperty"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#ParentLithology",
+              "label": "parent lithology",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Parent Lithology is the specific geological composition of the parent material (e.g., bedrock or sediment) from which the soil develops. The mineral content and texture of this material directly affect the physical and chemical properties of the soil, such as fertility, permeability, and soil depth. Source: USDA NRCS, 'Soil Genesis and Classification'",
+              "definitions": [
+                {
+                  "text": "Parent Lithology is the specific geological composition of the parent material (e.g., bedrock or sediment) from which the soil develops. The mineral content and texture of this material directly affect the physical and chemical properties of the soil, such as fertility, permeability, and soil depth. Source: USDA NRCS, 'Soil Genesis and Classification'",
+                  "source": "http://w3id.org/glosis/model/siteplot/parentLithologyProperty"
+                }
+              ],
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/siteplot/parentLithologyProperty",
+                  "label": "parentLithologyProperty"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#ParentTextureUnconsolidated",
+              "label": "parent texture unconsolidated",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Parent Texture Unconsolidated refers to the texture of the unconsolidated parent material, such as loose sediments or debris, that has not been solidified into rock. This texture affects soil properties such as aeration, drainage, and root penetration, as well as its ability to retain nutrients. Source: USDA NRCS, 'Soil Genesis and Classification'",
+              "definitions": [
+                {
+                  "text": "Parent Texture Unconsolidated refers to the texture of the unconsolidated parent material, such as loose sediments or debris, that has not been solidified into rock. This texture affects soil properties such as aeration, drainage, and root penetration, as well as its ability to retain nutrients. Source: USDA NRCS, 'Soil Genesis and Classification'",
+                  "source": "http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty"
+                }
+              ],
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty",
+                  "label": "parentTextureUnconsolidatedProperty"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            }
+          ]
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#RockOutcrops",
+          "label": "rock outcrops",
+          "altLabel": "rock outcrop",
+          "notation": null,
+          "definition": null,
+          "definitions": [],
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#RockOutcropCover",
+              "label": "rock outcrop cover",
+              "altLabel": "rock outcrops cover",
+              "notation": null,
+              "definition": "Rock Outcrops Cover measures the extent to which rock outcrops (exposed bedrock or rock masses) cover the landscape. The presence of rock outcrops can influence soil depth and water retention, as well as contribute to erosion and landscape stability, particularly in areas with minimal soil cover. Source: USDA NRCS, 'Soil Survey Manual'",
+              "definitions": [
+                {
+                  "text": "Rock Outcrops Cover measures the extent to which rock outcrops (exposed bedrock or rock masses) cover the landscape. The presence of rock outcrops can influence soil depth and water retention, as well as contribute to erosion and landscape stability, particularly in areas with minimal soil cover. Source: USDA NRCS, 'Soil Survey Manual'",
+                  "source": "http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty"
+                }
+              ],
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty",
+                  "label": "rockOutcropsCoverProperty"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#RockOutcropDistance",
+              "label": "rock outcrop distance",
+              "altLabel": "rock outcrops distance",
+              "notation": null,
+              "definition": "Rock Outcrops Distance quantifies the distance from a given point or area to the nearest rock outcrop. The proximity to rock outcrops can influence soil development, with areas closer to outcrops often having thinner soils and higher vulnerability to erosion. Source: FAO, 'Soil Formation and Classification'",
+              "definitions": [
+                {
+                  "text": "Rock Outcrops Distance quantifies the distance from a given point or area to the nearest rock outcrop. The proximity to rock outcrops can influence soil development, with areas closer to outcrops often having thinner soils and higher vulnerability to erosion. Source: FAO, 'Soil Formation and Classification'",
+                  "source": "http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty"
+                }
+              ],
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty",
+                  "label": "rockOutcropsDistanceProperty"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "uri": "https://soilwise-he.github.io/soil-health#LandCover",
+      "label": "land cover",
+      "altLabel": null,
+      "notation": null,
+      "definition": null,
+      "definitions": [],
+      "exactMatch": [
+        {
+          "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#LandCover",
+          "label": "LandCover"
+        }
+      ],
+      "isProcedure": false,
+      "procedures": [],
+      "narrower": [
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#Building",
+          "label": "building",
           "altLabel": null,
           "notation": null,
           "definition": null,
           "definitions": [],
           "exactMatch": [
             {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Plant",
-              "label": "Plant"
+              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Building",
+              "label": "Building"
+            }
+          ],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#GroundCover",
+          "label": "ground cover",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "definitions": [],
+          "exactMatch": [
+            {
+              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#GroundCover",
+              "label": "GroundCover"
+            }
+          ],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#Pavements",
+          "label": "pavements",
+          "altLabel": "pavement",
+          "notation": null,
+          "definition": null,
+          "definitions": [],
+          "exactMatch": [
+            {
+              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Pavement",
+              "label": "Pavement"
+            }
+          ],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#Road",
+              "label": "road",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "definitions": [],
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Road",
+                  "label": "Road"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            }
+          ]
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#PlantCover",
+          "label": "plant cover",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "definitions": [],
+          "exactMatch": [
+            {
+              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#PlantCover",
+              "label": "PlantCover"
             }
           ],
           "isProcedure": false,
@@ -1412,6 +887,86 @@
               "isProcedure": false,
               "procedures": [],
               "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#PlantPart",
+              "label": "plant part",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "definitions": [],
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#PlantPart",
+                  "label": "PlantPart"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#Roots",
+                  "label": "roots",
+                  "altLabel": "root",
+                  "notation": null,
+                  "definition": null,
+                  "definitions": [],
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Root",
+                      "label": "Root"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": [
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#RootAbundance",
+                      "label": "root abundance",
+                      "altLabel": "roots abundance",
+                      "notation": null,
+                      "definition": "The Roots Abundance describes the quantity of plant roots within a soil profile, typically categorized as few, common, or many. Root abundance reflects plant-soil interactions, soil fertility, and the physical structure that supports vegetation. Source: Soil Survey Manual (USDA, 2017).",
+                      "definitions": [
+                        {
+                          "text": "The Roots Abundance describes the quantity of plant roots within a soil profile, typically categorized as few, common, or many. Root abundance reflects plant-soil interactions, soil fertility, and the physical structure that supports vegetation. Source: Soil Survey Manual (USDA, 2017).",
+                          "source": "http://w3id.org/glosis/model/layerhorizon/rootsAbundanceProperty"
+                        }
+                      ],
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/layerhorizon/rootsAbundanceProperty",
+                          "label": "rootsAbundanceProperty"
+                        }
+                      ],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#RootPresence",
+                      "label": "root presence",
+                      "altLabel": "roots presence",
+                      "notation": null,
+                      "definition": "The Roots Presence identifies whether roots are visible in a soil profile or horizon. It indicates biological activity, soil health, and the suitability of the soil for plant growth. Roots are commonly observed during soil surveys and are classified by type and density. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.",
+                      "definitions": [
+                        {
+                          "text": "The Roots Presence identifies whether roots are visible in a soil profile or horizon. It indicates biological activity, soil health, and the suitability of the soil for plant growth. Roots are commonly observed during soil surveys and are classified by type and density. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.",
+                          "source": "http://w3id.org/glosis/model/layerhorizon/rootsPresenceProperty"
+                        }
+                      ],
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/layerhorizon/rootsPresenceProperty",
+                          "label": "rootsPresenceProperty"
+                        }
+                      ],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
+                    }
+                  ]
+                }
+              ]
             },
             {
               "uri": "https://soilwise-he.github.io/soil-health#Vegetation",
@@ -1489,260 +1044,6 @@
               ]
             }
           ]
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#PlantPart",
-          "label": "plant part",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#PlantPart",
-              "label": "PlantPart"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#Roots",
-              "label": "roots",
-              "altLabel": "root",
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Root",
-                  "label": "Root"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": [
-                {
-                  "uri": "https://soilwise-he.github.io/soil-health#RootAbundance",
-                  "label": "root abundance",
-                  "altLabel": "roots abundance",
-                  "notation": null,
-                  "definition": "The Roots Abundance describes the quantity of plant roots within a soil profile, typically categorized as few, common, or many. Root abundance reflects plant-soil interactions, soil fertility, and the physical structure that supports vegetation. Source: Soil Survey Manual (USDA, 2017).",
-                  "definitions": [
-                    {
-                      "text": "The Roots Abundance describes the quantity of plant roots within a soil profile, typically categorized as few, common, or many. Root abundance reflects plant-soil interactions, soil fertility, and the physical structure that supports vegetation. Source: Soil Survey Manual (USDA, 2017).",
-                      "source": "http://w3id.org/glosis/model/layerhorizon/rootsAbundanceProperty"
-                    }
-                  ],
-                  "exactMatch": [
-                    {
-                      "uri": "http://w3id.org/glosis/model/layerhorizon/rootsAbundanceProperty",
-                      "label": "rootsAbundanceProperty"
-                    }
-                  ],
-                  "isProcedure": false,
-                  "procedures": [],
-                  "narrower": []
-                },
-                {
-                  "uri": "https://soilwise-he.github.io/soil-health#RootPresence",
-                  "label": "root presence",
-                  "altLabel": "roots presence",
-                  "notation": null,
-                  "definition": "The Roots Presence identifies whether roots are visible in a soil profile or horizon. It indicates biological activity, soil health, and the suitability of the soil for plant growth. Roots are commonly observed during soil surveys and are classified by type and density. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.",
-                  "definitions": [
-                    {
-                      "text": "The Roots Presence identifies whether roots are visible in a soil profile or horizon. It indicates biological activity, soil health, and the suitability of the soil for plant growth. Roots are commonly observed during soil surveys and are classified by type and density. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy.",
-                      "source": "http://w3id.org/glosis/model/layerhorizon/rootsPresenceProperty"
-                    }
-                  ],
-                  "exactMatch": [
-                    {
-                      "uri": "http://w3id.org/glosis/model/layerhorizon/rootsPresenceProperty",
-                      "label": "rootsPresenceProperty"
-                    }
-                  ],
-                  "isProcedure": false,
-                  "procedures": [],
-                  "narrower": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "uri": "https://soilwise-he.github.io/soil-health#MaterialThing",
-      "label": "material thing",
-      "altLabel": null,
-      "notation": null,
-      "definition": null,
-      "definitions": [],
-      "exactMatch": [
-        {
-          "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#MaterialThing",
-          "label": "MaterialThing"
-        }
-      ],
-      "isProcedure": false,
-      "procedures": [],
-      "narrower": [
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#GroundCover",
-          "label": "ground cover",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#GroundCover",
-              "label": "GroundCover"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#Infrastructure",
-          "label": "infrastructure",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Infrastructure",
-              "label": "Infrastructure"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#LandCover",
-          "label": "land cover",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#LandCover",
-              "label": "LandCover"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#Building",
-              "label": "building",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Building",
-                  "label": "Building"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#Pavements",
-              "label": "pavements",
-              "altLabel": "pavement",
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Pavement",
-                  "label": "Pavement"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": [
-                {
-                  "uri": "https://soilwise-he.github.io/soil-health#Road",
-                  "label": "road",
-                  "altLabel": null,
-                  "notation": null,
-                  "definition": null,
-                  "definitions": [],
-                  "exactMatch": [
-                    {
-                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Road",
-                      "label": "Road"
-                    }
-                  ],
-                  "isProcedure": false,
-                  "procedures": [],
-                  "narrower": []
-                }
-              ]
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#PlantCover",
-              "label": "plant cover",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#PlantCover",
-                  "label": "PlantCover"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            }
-          ]
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#Mulch",
-          "label": "mulch",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Mulch",
-              "label": "Mulch"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#CropResidueMulch",
-              "label": "crop residue mulch",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#CropResidueMulch",
-                  "label": "CropResidueMulch"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            }
-          ]
         }
       ]
     },
@@ -1810,63 +1111,6 @@
           "isProcedure": false,
           "procedures": [],
           "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#RockOutcrops",
-          "label": "rock outcrops",
-          "altLabel": "rock outcrop",
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#RockOutcropCover",
-              "label": "rock outcrop cover",
-              "altLabel": "rock outcrops cover",
-              "notation": null,
-              "definition": "Rock Outcrops Cover measures the extent to which rock outcrops (exposed bedrock or rock masses) cover the landscape. The presence of rock outcrops can influence soil depth and water retention, as well as contribute to erosion and landscape stability, particularly in areas with minimal soil cover. Source: USDA NRCS, 'Soil Survey Manual'",
-              "definitions": [
-                {
-                  "text": "Rock Outcrops Cover measures the extent to which rock outcrops (exposed bedrock or rock masses) cover the landscape. The presence of rock outcrops can influence soil depth and water retention, as well as contribute to erosion and landscape stability, particularly in areas with minimal soil cover. Source: USDA NRCS, 'Soil Survey Manual'",
-                  "source": "http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty"
-                }
-              ],
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/siteplot/rockOutcropsCoverProperty",
-                  "label": "rockOutcropsCoverProperty"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#RockOutcropDistance",
-              "label": "rock outcrop distance",
-              "altLabel": "rock outcrops distance",
-              "notation": null,
-              "definition": "Rock Outcrops Distance quantifies the distance from a given point or area to the nearest rock outcrop. The proximity to rock outcrops can influence soil development, with areas closer to outcrops often having thinner soils and higher vulnerability to erosion. Source: FAO, 'Soil Formation and Classification'",
-              "definitions": [
-                {
-                  "text": "Rock Outcrops Distance quantifies the distance from a given point or area to the nearest rock outcrop. The proximity to rock outcrops can influence soil development, with areas closer to outcrops often having thinner soils and higher vulnerability to erosion. Source: FAO, 'Soil Formation and Classification'",
-                  "source": "http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty"
-                }
-              ],
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/siteplot/rockOutcropsDistanceProperty",
-                  "label": "rockOutcropsDistanceProperty"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            }
-          ]
         },
         {
           "uri": "https://soilwise-he.github.io/soil-health#Slope",
@@ -2031,40 +1275,6 @@
           "narrower": []
         },
         {
-          "uri": "https://soilwise-he.github.io/soil-health#DaytimeHeating",
-          "label": "daytime heating",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#DaytimeHeating",
-              "label": "DaytimeHeating"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#GreenhouseEffect",
-          "label": "greenhouse effect",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#GreenhouseEffect",
-              "label": "GreenhouseEffect"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
           "uri": "https://soilwise-he.github.io/soil-health#Inundation",
           "label": "inundation",
           "altLabel": null,
@@ -2143,23 +1353,6 @@
               ]
             }
           ]
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#NighttimeCooling",
-          "label": "nighttime cooling",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#NighttimeCooling",
-              "label": "NighttimeCooling"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
         },
         {
           "uri": "https://soilwise-he.github.io/soil-health#Season",
@@ -2588,142 +1781,21 @@
       ]
     },
     {
-      "uri": "https://soilwise-he.github.io/soil-health#PlantProcesses",
-      "label": "plant processes",
-      "altLabel": "plant process",
+      "uri": "https://soilwise-he.github.io/soil-health#Soil",
+      "label": "soil",
+      "altLabel": null,
       "notation": null,
       "definition": null,
       "definitions": [],
       "exactMatch": [
         {
-          "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#PlantProcess",
-          "label": "PlantProcess"
+          "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Soil",
+          "label": "Soil"
         }
       ],
       "isProcedure": false,
       "procedures": [],
-      "narrower": [
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#PlantGrowth",
-          "label": "plant growth",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#PlantGrowth",
-              "label": "PlantGrowth"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#AlgalGrowth",
-              "label": "algal growth",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#AlgalGrowth",
-                  "label": "AlgalGrowth"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            }
-          ]
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#PlantNutrientUptake",
-          "label": "plant nutrient uptake",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#PlantNutrientUptake",
-              "label": "PlantNutrientUptake"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#PlantRespiration",
-          "label": "plant respiration",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#PlantRespiration",
-              "label": "PlantRespiration"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#PlantWaterUptake",
-          "label": "plant water uptake",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#PlantWaterUptake",
-              "label": "PlantWaterUptake"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#RootGrowth",
-          "label": "root growth",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#RootGrowth",
-              "label": "RootGrowth"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#RootRespiration",
-          "label": "root respiration",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#RootRespiration",
-              "label": "RootRespiration"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        }
-      ]
+      "narrower": []
     },
     {
       "uri": "https://soilwise-he.github.io/soil-health#SoilClassification",
@@ -3114,155 +2186,6 @@
           "isProcedure": false,
           "procedures": [],
           "narrower": []
-        }
-      ]
-    },
-    {
-      "uri": "https://soilwise-he.github.io/soil-health#SoilFormation",
-      "label": "soil formation",
-      "altLabel": null,
-      "notation": null,
-      "definition": null,
-      "definitions": [],
-      "exactMatch": [],
-      "isProcedure": false,
-      "procedures": [],
-      "narrower": [
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#Lithology",
-          "label": "lithology",
-          "altLabel": null,
-          "notation": null,
-          "definition": "Lithology refers to the physical characteristics of the parent material, such as the mineral composition, texture, and structure of the underlying rocks or sediments. The lithology of an area influences soil formation by affecting drainage, nutrient content, and the ability of the soil to support vegetation. Source: AGI, 'Encyclopedia of Geology'",
-          "definitions": [
-            {
-              "text": "Lithology refers to the physical characteristics of the parent material, such as the mineral composition, texture, and structure of the underlying rocks or sediments. The lithology of an area influences soil formation by affecting drainage, nutrient content, and the ability of the soil to support vegetation. Source: AGI, 'Encyclopedia of Geology'",
-              "source": "http://w3id.org/glosis/model/siteplot/lithologyProperty"
-            }
-          ],
-          "exactMatch": [
-            {
-              "uri": "http://w3id.org/glosis/model/siteplot/lithologyProperty",
-              "label": "lithologyProperty"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": []
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#ParentMaterial",
-          "label": "parent material",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#ParentDeposition",
-              "label": "parent deposition",
-              "altLabel": null,
-              "notation": null,
-              "definition": "Parent Deposition refers to the accumulation of materials, such as sediments or volcanic ash, that contribute to soil formation. These parent materials are deposited through natural processes such as erosion, weathering, or sediment transport, influencing soil texture, nutrient content, and water retention properties. Source: USDA NRCS, 'Soil Genesis and Classification'",
-              "definitions": [
-                {
-                  "text": "Parent Deposition refers to the accumulation of materials, such as sediments or volcanic ash, that contribute to soil formation. These parent materials are deposited through natural processes such as erosion, weathering, or sediment transport, influencing soil texture, nutrient content, and water retention properties. Source: USDA NRCS, 'Soil Genesis and Classification'",
-                  "source": "http://w3id.org/glosis/model/siteplot/parentDepositionProperty"
-                }
-              ],
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/siteplot/parentDepositionProperty",
-                  "label": "parentDepositionProperty"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#ParentLithology",
-              "label": "parent lithology",
-              "altLabel": null,
-              "notation": null,
-              "definition": "Parent Lithology is the specific geological composition of the parent material (e.g., bedrock or sediment) from which the soil develops. The mineral content and texture of this material directly affect the physical and chemical properties of the soil, such as fertility, permeability, and soil depth. Source: USDA NRCS, 'Soil Genesis and Classification'",
-              "definitions": [
-                {
-                  "text": "Parent Lithology is the specific geological composition of the parent material (e.g., bedrock or sediment) from which the soil develops. The mineral content and texture of this material directly affect the physical and chemical properties of the soil, such as fertility, permeability, and soil depth. Source: USDA NRCS, 'Soil Genesis and Classification'",
-                  "source": "http://w3id.org/glosis/model/siteplot/parentLithologyProperty"
-                }
-              ],
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/siteplot/parentLithologyProperty",
-                  "label": "parentLithologyProperty"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#ParentTextureUnconsolidated",
-              "label": "parent texture unconsolidated",
-              "altLabel": null,
-              "notation": null,
-              "definition": "Parent Texture Unconsolidated refers to the texture of the unconsolidated parent material, such as loose sediments or debris, that has not been solidified into rock. This texture affects soil properties such as aeration, drainage, and root penetration, as well as its ability to retain nutrients. Source: USDA NRCS, 'Soil Genesis and Classification'",
-              "definitions": [
-                {
-                  "text": "Parent Texture Unconsolidated refers to the texture of the unconsolidated parent material, such as loose sediments or debris, that has not been solidified into rock. This texture affects soil properties such as aeration, drainage, and root penetration, as well as its ability to retain nutrients. Source: USDA NRCS, 'Soil Genesis and Classification'",
-                  "source": "http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty"
-                }
-              ],
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/siteplot/parentTextureUnconsolidatedProperty",
-                  "label": "parentTextureUnconsolidatedProperty"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            }
-          ]
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#SoilAge",
-          "label": "soil age",
-          "altLabel": "age of soil",
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#SoilSurfaceAge",
-              "label": "soil surface age",
-              "altLabel": null,
-              "notation": null,
-              "definition": "Surface Age refers to the estimated age of a surface layer of soil or landform, which is important for understanding the degree of soil weathering, development, and fertility. Older surfaces may have more developed soils, while younger surfaces may be less fertile and more prone to erosion. Source: FAO, 'Soil Formation and Evolution'",
-              "definitions": [
-                {
-                  "text": "Surface Age refers to the estimated age of a surface layer of soil or landform, which is important for understanding the degree of soil weathering, development, and fertility. Older surfaces may have more developed soils, while younger surfaces may be less fertile and more prone to erosion. Source: FAO, 'Soil Formation and Evolution'",
-                  "source": "http://w3id.org/glosis/model/siteplot/surfaceAgeProperty"
-                }
-              ],
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/siteplot/surfaceAgeProperty",
-                  "label": "surfaceAgeProperty"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            }
-          ]
         }
       ]
     },
@@ -4131,15 +3054,15 @@
                   "label": "land use",
                   "altLabel": null,
                   "notation": null,
-                  "definition": "The total of arrangements, activities, and inputs that people undertake in a certain land cover type (FAO, 1997a; FAO/UNEP, 1999).",
+                  "definition": "Land use corresponds to the socio-economic description (functional dimension) of areas: areas used for residential, industrial or commercial purposes, for farming or forestry, for recreational or conservation purposes, etc. Links with land cover are possible; it may be possible to infer land use from land cover and conversely. But situations are often complicated and the link is not so evident. Contrary to land cover, land use is difficult to 'observe'. For example, it is often difficult to decide if grasslands are used or not for agricultural purposes. Distinctions between land use and land cover and their definition have impacts on the development of classification systems, data collection and information systems in general.",
                   "definitions": [
-                    {
-                      "text": "The total of arrangements, activities, and inputs that people undertake in a certain land cover type (FAO, 1997a; FAO/UNEP, 1999).",
-                      "source": "https://archive.ipcc.ch/ipccreports/sres/land_use/index.php?idp=45"
-                    },
                     {
                       "text": "Land use corresponds to the socio-economic description (functional dimension) of areas: areas used for residential, industrial or commercial purposes, for farming or forestry, for recreational or conservation purposes, etc. Links with land cover are possible; it may be possible to infer land use from land cover and conversely. But situations are often complicated and the link is not so evident. Contrary to land cover, land use is difficult to 'observe'. For example, it is often difficult to decide if grasslands are used or not for agricultural purposes. Distinctions between land use and land cover and their definition have impacts on the development of classification systems, data collection and information systems in general.",
                       "source": "https://www.eea.europa.eu/help/glossary/eea-glossary/land-use"
+                    },
+                    {
+                      "text": "The total of arrangements, activities, and inputs that people undertake in a certain land cover type (FAO, 1997a; FAO/UNEP, 1999).",
+                      "source": "https://archive.ipcc.ch/ipccreports/sres/land_use/index.php?idp=45"
                     }
                   ],
                   "exactMatch": [
@@ -5436,6 +4359,41 @@
           "isProcedure": false,
           "procedures": [],
           "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#Mulch",
+          "label": "mulch",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "definitions": [],
+          "exactMatch": [
+            {
+              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Mulch",
+              "label": "Mulch"
+            }
+          ],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#CropResidueMulch",
+              "label": "crop residue mulch",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "definitions": [],
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#CropResidueMulch",
+                  "label": "CropResidueMulch"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            }
+          ]
         },
         {
           "uri": "https://soilwise-he.github.io/soil-health#MulchFarming",
@@ -7325,6 +6283,18 @@
                   "label": "SoilFlocculation"
                 }
               ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilFormation",
+              "label": "soil formation",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "definitions": [],
+              "exactMatch": [],
               "isProcedure": false,
               "procedures": [],
               "narrower": []
@@ -25114,62 +24084,56 @@
               "procedures": [],
               "narrower": [
                 {
-                  "uri": "https://soilwise-he.github.io/soil-health#Microorganisms",
-                  "label": "microorganisms",
-                  "altLabel": "microorganism",
-                  "notation": null,
-                  "definition": null,
-                  "definitions": [],
-                  "exactMatch": [],
-                  "isProcedure": false,
-                  "procedures": [],
-                  "narrower": []
-                },
-                {
-                  "uri": "https://soilwise-he.github.io/soil-health#SoilMacrofauna",
-                  "label": "soil macrofauna",
+                  "uri": "https://soilwise-he.github.io/soil-health#Biomass",
+                  "label": "biomass",
                   "altLabel": null,
                   "notation": null,
                   "definition": null,
                   "definitions": [],
                   "exactMatch": [
                     {
-                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilMacrofauna",
-                      "label": "SoilMacrofauna"
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Biomass",
+                      "label": "Biomass"
                     }
                   ],
                   "isProcedure": false,
                   "procedures": [],
-                  "narrower": []
-                },
-                {
-                  "uri": "https://soilwise-he.github.io/soil-health#SoilMesofauna",
-                  "label": "soil mesofauna",
-                  "altLabel": null,
-                  "notation": null,
-                  "definition": null,
-                  "definitions": [],
-                  "exactMatch": [],
-                  "isProcedure": false,
-                  "procedures": [],
-                  "narrower": []
-                },
-                {
-                  "uri": "https://soilwise-he.github.io/soil-health#SoilMicrofauna",
-                  "label": "soil microfauna",
-                  "altLabel": null,
-                  "notation": null,
-                  "definition": null,
-                  "definitions": [],
-                  "exactMatch": [
+                  "narrower": [
                     {
-                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilMicrofauna",
-                      "label": "SoilMicrofauna"
+                      "uri": "https://soilwise-he.github.io/soil-health#RootBiomass",
+                      "label": "root biomass",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": null,
+                      "definitions": [],
+                      "exactMatch": [
+                        {
+                          "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#RootBiomass",
+                          "label": "RootBiomass"
+                        }
+                      ],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#SoilMicrobialBiomass",
+                      "label": "soil microbial biomass",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": null,
+                      "definitions": [],
+                      "exactMatch": [
+                        {
+                          "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilMicrobialBiomass",
+                          "label": "SoilMicrobialBiomass"
+                        }
+                      ],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
                     }
-                  ],
-                  "isProcedure": false,
-                  "procedures": [],
-                  "narrower": []
+                  ]
                 }
               ]
             },
@@ -42595,6 +41559,41 @@
           ]
         },
         {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilAge",
+          "label": "soil age",
+          "altLabel": "age of soil",
+          "notation": null,
+          "definition": null,
+          "definitions": [],
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilSurfaceAge",
+              "label": "soil surface age",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Surface Age refers to the estimated age of a surface layer of soil or landform, which is important for understanding the degree of soil weathering, development, and fertility. Older surfaces may have more developed soils, while younger surfaces may be less fertile and more prone to erosion. Source: FAO, 'Soil Formation and Evolution'",
+              "definitions": [
+                {
+                  "text": "Surface Age refers to the estimated age of a surface layer of soil or landform, which is important for understanding the degree of soil weathering, development, and fertility. Older surfaces may have more developed soils, while younger surfaces may be less fertile and more prone to erosion. Source: FAO, 'Soil Formation and Evolution'",
+                  "source": "http://w3id.org/glosis/model/siteplot/surfaceAgeProperty"
+                }
+              ],
+              "exactMatch": [
+                {
+                  "uri": "http://w3id.org/glosis/model/siteplot/surfaceAgeProperty",
+                  "label": "surfaceAgeProperty"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            }
+          ]
+        },
+        {
           "uri": "https://soilwise-he.github.io/soil-health#SoilBiologicalProperties",
           "label": "soil biological properties",
           "altLabel": "soil biological property",
@@ -42657,6 +41656,76 @@
               "isProcedure": false,
               "procedures": [],
               "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilBiota",
+              "label": "soil biota",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "definitions": [],
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilBiota",
+                  "label": "SoilBiota"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#Biomass",
+                  "label": "biomass",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "definitions": [],
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Biomass",
+                      "label": "Biomass"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": [
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#RootBiomass",
+                      "label": "root biomass",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": null,
+                      "definitions": [],
+                      "exactMatch": [
+                        {
+                          "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#RootBiomass",
+                          "label": "RootBiomass"
+                        }
+                      ],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#SoilMicrobialBiomass",
+                      "label": "soil microbial biomass",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": null,
+                      "definitions": [],
+                      "exactMatch": [
+                        {
+                          "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilMicrobialBiomass",
+                          "label": "SoilMicrobialBiomass"
+                        }
+                      ],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -47260,8 +46329,12 @@
           "label": "soil physical properties",
           "altLabel": "soil physical property",
           "notation": null,
-          "definition": "Those characteristics, processes, or reactions of a soil that are caused by physical forces and that can be described by, or expressed in, physical terms or equations. Examples of physical properties are bulk density, hydraulic conductivity, porosity, pore-size distribution, etc.",
+          "definition": "Soil physical properties are those responsible for the transport of water, solutes, air and heat in the soil. The main physical soil properties are depth, temperature, texture, structure, bulk density and water-holding capacity.",
           "definitions": [
+            {
+              "text": "Soil physical properties are those responsible for the transport of water, solutes, air and heat in the soil. The main physical soil properties are depth, temperature, texture, structure, bulk density and water-holding capacity.",
+              "source": "https://www.cambridge.org/core/books/properties-and-management-of-soils-in-the-tropics/soil-physical-properties/275087D91E8849FA36F347D4964ED835"
+            },
             {
               "text": "Those characteristics, processes, or reactions of a soil that are caused by physical forces and that can be described by, or expressed in, physical terms or equations. Examples of physical properties are bulk density, hydraulic conductivity, porosity, pore-size distribution, etc.",
               "source": "https://www.soils.org/publications/soils-glossary?q=publications/soils-glossary/"
@@ -47269,10 +46342,6 @@
             {
               "text": "Soil physical properties include both inherent and dynamic soil properties. Inherent properties include soil texture, soil parent materials and soil depth. Dynamic properties are those that can be influenced by management include infiltration, aggregate stability, available soil water holding capacity, soil organic matter, soil porosity, compaction layers, crusting, bulk density, and structure. Optimal soil physical properties reduce limitations to root growth and productivity, improve seedling emergence, nutrient and water retention, infiltration, and movement of air and water within the soil profile. Physical properties are directly related to optimal chemical and biological properties which together improve nutrient and water cycling and other key soil functions.",
               "source": "https://soilhealthnexus.org/resources/soil-properties/soil-physical-properties/"
-            },
-            {
-              "text": "Soil physical properties are those responsible for the transport of water, solutes, air and heat in the soil. The main physical soil properties are depth, temperature, texture, structure, bulk density and water-holding capacity.",
-              "source": "https://www.cambridge.org/core/books/properties-and-management-of-soils-in-the-tropics/soil-physical-properties/275087D91E8849FA36F347D4964ED835"
             }
           ],
           "exactMatch": [
@@ -53493,82 +52562,6 @@
       "procedures": [],
       "narrower": [
         {
-          "uri": "https://soilwise-he.github.io/soil-health#SoilBiota",
-          "label": "soil biota",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilBiota",
-              "label": "SoilBiota"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#Microorganisms",
-              "label": "microorganisms",
-              "altLabel": "microorganism",
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#SoilMacrofauna",
-              "label": "soil macrofauna",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilMacrofauna",
-                  "label": "SoilMacrofauna"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#SoilMesofauna",
-              "label": "soil mesofauna",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#SoilMicrofauna",
-              "label": "soil microfauna",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilMicrofauna",
-                  "label": "SoilMicrofauna"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            }
-          ]
-        },
-        {
           "uri": "https://soilwise-he.github.io/soil-health#SoilChemical",
           "label": "soil chemical",
           "altLabel": null,
@@ -53583,7 +52576,243 @@
           ],
           "isProcedure": false,
           "procedures": [],
-          "narrower": []
+          "narrower": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#Ions",
+              "label": "ions",
+              "altLabel": "ion",
+              "notation": null,
+              "definition": null,
+              "definitions": [],
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Ion",
+                  "label": "Ion"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#ExchangeableCations",
+                  "label": "exchangeable cations",
+                  "altLabel": "exchangeable cation",
+                  "notation": null,
+                  "definition": null,
+                  "definitions": [],
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#ExchangeableCation",
+                      "label": "ExchangeableCation"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": [
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#AcidityExchangeable",
+                      "label": "acidity exchangeable",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "Exchangeable acidity represents the amount of hydrogen (H\u207a) and aluminum (Al\u00b3\u207a) ions adsorbed onto soil particles that can be exchanged with the soil solution. It is a key factor in determining soil liming requirements and improving nutrient availability in acidic soils. Source: Brady & Weil (2017).",
+                      "definitions": [
+                        {
+                          "text": "Exchangeable acidity represents the amount of hydrogen (H\u207a) and aluminum (Al\u00b3\u207a) ions adsorbed onto soil particles that can be exchanged with the soil solution. It is a key factor in determining soil liming requirements and improving nutrient availability in acidic soils. Source: Brady & Weil (2017).",
+                          "source": "http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aciexc"
+                        }
+                      ],
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aciexc",
+                          "label": "physioChemicalPropertyCode-Aciexc"
+                        }
+                      ],
+                      "isProcedure": false,
+                      "procedures": [
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#acidityExchangeableProcedure-ExchAcid_ph0-kcl1m",
+                          "label": "ExchAcid_ph0-kcl1m",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "Exch acidity (H+Al) unbuffered, in 1 M KCl extract",
+                          "definitions": [
+                            {
+                              "text": "Exch acidity (H+Al) unbuffered, in 1 M KCl extract",
+                              "source": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph0-kcl1m"
+                            }
+                          ],
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph0-kcl1m",
+                              "label": "acidityExchangeableProcedure-ExchAcid_ph0-kcl1m"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#acidityExchangeableProcedure-ExchAcid_ph0-nh4cl",
+                          "label": "ExchAcid_ph0-nh4cl",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "Exch acidity (H+Al) unbuffered, in 0.05-0.1 M NH4Cl extract",
+                          "definitions": [
+                            {
+                              "text": "Exch acidity (H+Al) unbuffered, in 0.05-0.1 M NH4Cl extract",
+                              "source": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph0-nh4cl"
+                            }
+                          ],
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph0-nh4cl",
+                              "label": "acidityExchangeableProcedure-ExchAcid_ph0-nh4cl"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#acidityExchangeableProcedure-ExchAcid_ph0-unkn",
+                          "label": "ExchAcid_ph0-unk",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "Exch acidity (H+Al) unbuffered, in unknown extract",
+                          "definitions": [
+                            {
+                              "text": "Exch acidity (H+Al) unbuffered, in unknown extract",
+                              "source": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph0-unkn"
+                            }
+                          ],
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph0-unkn",
+                              "label": "acidityExchangeableProcedure-ExchAcid_ph0-unkn"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#acidityExchangeableProcedure-ExchAcid_ph7-caoac",
+                          "label": "ExchAcid_ph7-caoac",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "Exch acidity (H+Al) buffered at pH 7, in 1M Ca-acetate extract",
+                          "definitions": [
+                            {
+                              "text": "Exch acidity (H+Al) buffered at pH 7, in 1M Ca-acetate extract",
+                              "source": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph7-caoac"
+                            }
+                          ],
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph7-caoac",
+                              "label": "acidityExchangeableProcedure-ExchAcid_ph7-caoac"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#acidityExchangeableProcedure-ExchAcid_ph7-unkn",
+                          "label": "ExchAcid_ph7-unk",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "Exch acidity (H+Al) buffered at pH 7, in unknown extract",
+                          "definitions": [
+                            {
+                              "text": "Exch acidity (H+Al) buffered at pH 7, in unknown extract",
+                              "source": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph7-unkn"
+                            }
+                          ],
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph7-unkn",
+                              "label": "acidityExchangeableProcedure-ExchAcid_ph7-unkn"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#acidityExchangeableProcedure-ExchAcid_ph8-bacl2tea",
+                          "label": "ExchAcid_ph8-bacl2tea",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "Exch (extractable / potential) acidity (Al) buffered at pH 8.0-8.5, in 1 M BaCl2 - TEA",
+                          "definitions": [
+                            {
+                              "text": "Exch (extractable / potential) acidity (Al) buffered at pH 8.0-8.5, in 1 M BaCl2 - TEA",
+                              "source": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph8-bacl2tea"
+                            }
+                          ],
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph8-bacl2tea",
+                              "label": "acidityExchangeableProcedure-ExchAcid_ph8-bacl2tea"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        },
+                        {
+                          "uri": "https://soilwise-he.github.io/soil-health#acidityExchangeableProcedure-ExchAcid_ph8-unkn",
+                          "label": "ExchAcid_ph8-unk",
+                          "altLabel": null,
+                          "notation": null,
+                          "definition": "Exch (extractable / potential) acidity (Al) buffered at pH 8.0-8.5, in unknown extract",
+                          "definitions": [
+                            {
+                              "text": "Exch (extractable / potential) acidity (Al) buffered at pH 8.0-8.5, in unknown extract",
+                              "source": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph8-unkn"
+                            }
+                          ],
+                          "exactMatch": [
+                            {
+                              "uri": "http://w3id.org/glosis/model/procedure/acidityExchangeableProcedure-ExchAcid_ph8-unkn",
+                              "label": "acidityExchangeableProcedure-ExchAcid_ph8-unkn"
+                            }
+                          ],
+                          "isProcedure": true,
+                          "procedures": [],
+                          "narrower": []
+                        }
+                      ],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#CationSum",
+                      "label": "cation sum",
+                      "altLabel": "cations sum",
+                      "notation": null,
+                      "definition": "The Cations Sum calculates the total concentration of exchangeable cations (e.g., Ca\u00b2\u207a, Mg\u00b2\u207a, K\u207a, Na\u207a) in the soil. It helps determine soil fertility and salinity and is commonly expressed in milliequivalents per 100 grams of soil. Source: Soil Science Society of America (SSSA) Glossary.",
+                      "definitions": [
+                        {
+                          "text": "The Cations Sum calculates the total concentration of exchangeable cations (e.g., Ca\u00b2\u207a, Mg\u00b2\u207a, K\u207a, Na\u207a) in the soil. It helps determine soil fertility and salinity and is commonly expressed in milliequivalents per 100 grams of soil. Source: Soil Science Society of America (SSSA) Glossary.",
+                          "source": "http://w3id.org/glosis/model/layerhorizon/cationsSumProperty"
+                        }
+                      ],
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/layerhorizon/cationsSumProperty",
+                          "label": "cationsSumProperty"
+                        }
+                      ],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "uri": "https://soilwise-he.github.io/soil-health#SoilComponent",
@@ -55721,58 +54950,6 @@
                   "narrower": []
                 }
               ]
-            }
-          ]
-        },
-        {
-          "uri": "https://soilwise-he.github.io/soil-health#SoilFauna",
-          "label": "soil fauna",
-          "altLabel": null,
-          "notation": null,
-          "definition": null,
-          "definitions": [],
-          "exactMatch": [
-            {
-              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilFauna",
-              "label": "SoilFauna"
-            }
-          ],
-          "isProcedure": false,
-          "procedures": [],
-          "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#SoilMacrofauna",
-              "label": "soil macrofauna",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilMacrofauna",
-                  "label": "SoilMacrofauna"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#SoilMicrofauna",
-              "label": "soil microfauna",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [
-                {
-                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilMicrofauna",
-                  "label": "SoilMicrofauna"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
             }
           ]
         },
@@ -68590,6 +67767,147 @@
           ]
         },
         {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilOrganisms",
+          "label": "soil organisms",
+          "altLabel": "soil organism",
+          "notation": null,
+          "definition": null,
+          "definitions": [],
+          "exactMatch": [],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#Microbes",
+              "label": "microbes",
+              "altLabel": "microbe",
+              "notation": null,
+              "definition": null,
+              "definitions": [],
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Microbe",
+                  "label": "Microbe"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#Microorganisms",
+              "label": "microorganisms",
+              "altLabel": "microorganism",
+              "notation": null,
+              "definition": null,
+              "definitions": [],
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilFauna",
+              "label": "soil fauna",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "definitions": [],
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilFauna",
+                  "label": "SoilFauna"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilMacrofauna",
+                  "label": "soil macrofauna",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "definitions": [],
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilMacrofauna",
+                      "label": "SoilMacrofauna"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": [
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#Earthworms",
+                      "label": "earthworms",
+                      "altLabel": "earthworm",
+                      "notation": null,
+                      "definition": null,
+                      "definitions": [],
+                      "exactMatch": [
+                        {
+                          "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Earthworm",
+                          "label": "Earthworm"
+                        }
+                      ],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#Termites",
+                      "label": "termites",
+                      "altLabel": "termite",
+                      "notation": null,
+                      "definition": null,
+                      "definitions": [],
+                      "exactMatch": [
+                        {
+                          "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#Termite",
+                          "label": "Termite"
+                        }
+                      ],
+                      "isProcedure": false,
+                      "procedures": [],
+                      "narrower": []
+                    }
+                  ]
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilMesofauna",
+                  "label": "soil mesofauna",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "definitions": [],
+                  "exactMatch": [],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilMicrofauna",
+                  "label": "soil microfauna",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "definitions": [],
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilMicrofauna",
+                      "label": "SoilMicrofauna"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "uri": "https://soilwise-he.github.io/soil-health#SoilPores",
           "label": "soil pores",
           "altLabel": "soil pore",
@@ -69078,6 +68396,72 @@
           "isProcedure": false,
           "procedures": [],
           "narrower": []
+        },
+        {
+          "uri": "https://soilwise-he.github.io/soil-health#SoilDegradation",
+          "label": "soil degradation",
+          "altLabel": null,
+          "notation": null,
+          "definition": null,
+          "definitions": [],
+          "exactMatch": [
+            {
+              "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilDegradation",
+              "label": "SoilDegradation"
+            }
+          ],
+          "isProcedure": false,
+          "procedures": [],
+          "narrower": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilBiologicalDegradation",
+              "label": "soil biological degradation",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "definitions": [],
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilChemicalDegradation",
+              "label": "soil chemical degradation",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "definitions": [],
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilEcologicalDegradation",
+              "label": "soil ecological degradation",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "definitions": [],
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilPhysicalDegradation",
+              "label": "soil physical degradation",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "definitions": [],
+              "exactMatch": [],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            }
+          ]
         },
         {
           "uri": "https://soilwise-he.github.io/soil-health#SoilErosion",
