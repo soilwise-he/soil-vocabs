@@ -745,8 +745,8 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
 <body>
     <div class="container">
         <div class="header">
-            <h1>🌱 SoilVoc 0.0.1</h1>
-            <p>Interactive Soil Vocabulary · <a href="https://soilwise-he.eu" target="_blank">SoilWise-HE Project</a></p>
+            <h1>🌱 SoilVoc</h1>
+            <p>SoilVoc v0.0.1: a SKOS-based thesaurus dedicated to soil science · <a href="https://soilwise-he.eu" target="_blank">SoilWise-HE Project</a></p>
         </div>
 
         <div class="search-box">

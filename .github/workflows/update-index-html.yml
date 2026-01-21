@@ -4,8 +4,6 @@ on:
   push:
     paths:
       - SoilVoc_concepts.csv
-      - restore_soilvoc_from_csv.py
-      - generate_soilvoc_html.py
   workflow_dispatch:
 
 permissions:
