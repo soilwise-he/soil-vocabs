@@ -7908,18 +7908,6 @@
           "procedures": [],
           "narrower": [
             {
-              "uri": "https://soilwise-he.github.io/soil-health#Adsorption",
-              "label": "adsorption",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
               "uri": "https://soilwise-he.github.io/soil-health#CationExchangeCapacity",
               "label": "cation exchange capacity",
               "altLabel": null,
@@ -8489,30 +8477,6 @@
               "narrower": []
             },
             {
-              "uri": "https://soilwise-he.github.io/soil-health#Erodibility",
-              "label": "erodibility",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#HydraulicConductivity",
-              "label": "hydraulic conductivity",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
               "uri": "https://soilwise-he.github.io/soil-health#RootingDepth",
               "label": "rooting depth",
               "altLabel": null,
@@ -8523,6 +8487,58 @@
               "isProcedure": false,
               "procedures": [],
               "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilAdsorption",
+              "label": "soil adsorption",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "definitions": [],
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilAdsorption",
+                  "label": "SoilAdsorption"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilPolymerAdsorption",
+                  "label": "soil polymer adsorption",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "definitions": [],
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilPolymerAdsorption",
+                      "label": "SoilPolymerAdsorption"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SoilWaterAdsorption",
+                  "label": "soil water adsorption",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "definitions": [],
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilWaterAdsorption",
+                      "label": "SoilWaterAdsorption"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                }
+              ]
             },
             {
               "uri": "https://soilwise-he.github.io/soil-health#SoilAggregateStability",
@@ -8540,6 +8556,239 @@
               "isProcedure": false,
               "procedures": [],
               "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilErodibility",
+              "label": "soil erodibility",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "definitions": [],
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilErodibility",
+                  "label": "SoilErodibility"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilHydraulicConductivity",
+              "label": "soil hydraulic conductivity",
+              "altLabel": null,
+              "notation": null,
+              "definition": "Hydraulic conductivity refers to the rate at which water moves through soil pores under a unit hydraulic gradient. It reflects the soil's ability to transmit water, influenced by texture, structure, and porosity. Soils with high hydraulic conductivity, like sandy soils, allow rapid water movement, while clayey soils exhibit slower water flow. This property is critical for understanding water infiltration, drainage, and irrigation management. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils.",
+              "definitions": [
+                {
+                  "text": "Hydraulic conductivity refers to the rate at which water moves through soil pores under a unit hydraulic gradient. It reflects the soil's ability to transmit water, influenced by texture, structure, and porosity. Soils with high hydraulic conductivity, like sandy soils, allow rapid water movement, while clayey soils exhibit slower water flow. This property is critical for understanding water infiltration, drainage, and irrigation management. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils.",
+                  "source": "http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydcond"
+                }
+              ],
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilHydraulicConductivity",
+                  "label": "SoilHydraulicConductivity"
+                },
+                {
+                  "uri": "http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydcond",
+                  "label": "physioChemicalPropertyCode-Hydcond"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#hydraulicConductivityProcedure-KSat_calcul-ptf",
+                  "label": "KSat_calcul-ptf",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Saturated hydraulic conductivity.",
+                  "definitions": [
+                    {
+                      "text": "Saturated hydraulic conductivity.",
+                      "source": "http://w3id.org/glosis/model/procedure/hydraulicConductivityProcedure-KSat_calcul-ptf"
+                    }
+                  ],
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/hydraulicConductivityProcedure-KSat_calcul-ptf",
+                      "label": "hydraulicConductivityProcedure-KSat_calcul-ptf"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#hydraulicConductivityProcedure-KSat_calcul-ptf-genuchten",
+                  "label": "KSat_calcul-ptf-genucht",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Saturated and not saturated hydraulic conductivity.",
+                  "definitions": [
+                    {
+                      "text": "Saturated and not saturated hydraulic conductivity.",
+                      "source": "http://w3id.org/glosis/model/procedure/hydraulicConductivityProcedure-KSat_calcul-ptf-genuchten"
+                    }
+                  ],
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/hydraulicConductivityProcedure-KSat_calcul-ptf-genuchten",
+                      "label": "hydraulicConductivityProcedure-KSat_calcul-ptf-genuchten"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#hydraulicConductivityProcedure-KSat_calcul-ptf-saxton",
+                  "label": "KSat_calcul-ptf-saxto",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Saturated hydraulic conductivity.",
+                  "definitions": [
+                    {
+                      "text": "Saturated hydraulic conductivity.",
+                      "source": "http://w3id.org/glosis/model/procedure/hydraulicConductivityProcedure-KSat_calcul-ptf-saxton"
+                    }
+                  ],
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/hydraulicConductivityProcedure-KSat_calcul-ptf-saxton",
+                      "label": "hydraulicConductivityProcedure-KSat_calcul-ptf-saxton"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#hydraulicConductivityProcedure-Ksat_bhole",
+                  "label": "Ksat_bhol",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Saturated hydraulic conductivity. Bore hole method",
+                  "definitions": [
+                    {
+                      "text": "Saturated hydraulic conductivity. Bore hole method",
+                      "source": "http://w3id.org/glosis/model/procedure/hydraulicConductivityProcedure-Ksat_bhole"
+                    }
+                  ],
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/hydraulicConductivityProcedure-Ksat_bhole",
+                      "label": "hydraulicConductivityProcedure-Ksat_bhole"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#hydraulicConductivityProcedure-Ksat_column",
+                  "label": "Ksat_colum",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Saturated hydraulic conductivity. Permeability in cm/hr determined in column filled with fine earth fraction",
+                  "definitions": [
+                    {
+                      "text": "Saturated hydraulic conductivity. Permeability in cm/hr determined in column filled with fine earth fraction",
+                      "source": "http://w3id.org/glosis/model/procedure/hydraulicConductivityProcedure-Ksat_column"
+                    }
+                  ],
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/hydraulicConductivityProcedure-Ksat_column",
+                      "label": "hydraulicConductivityProcedure-Ksat_column"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#hydraulicConductivityProcedure-Ksat_dblring",
+                  "label": "Ksat_dblring",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Saturated hydraulic conductivity. Double ring method",
+                  "definitions": [
+                    {
+                      "text": "Saturated hydraulic conductivity. Double ring method",
+                      "source": "http://w3id.org/glosis/model/procedure/hydraulicConductivityProcedure-Ksat_dblring"
+                    }
+                  ],
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/hydraulicConductivityProcedure-Ksat_dblring",
+                      "label": "hydraulicConductivityProcedure-Ksat_dblring"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#hydraulicConductivityProcedure-Ksat_invbhole",
+                  "label": "Ksat_invbhol",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": "Saturated hydraulic conductivity. Inverse bore hole method",
+                  "definitions": [
+                    {
+                      "text": "Saturated hydraulic conductivity. Inverse bore hole method",
+                      "source": "http://w3id.org/glosis/model/procedure/hydraulicConductivityProcedure-Ksat_invbhole"
+                    }
+                  ],
+                  "exactMatch": [
+                    {
+                      "uri": "http://w3id.org/glosis/model/procedure/hydraulicConductivityProcedure-Ksat_invbhole",
+                      "label": "hydraulicConductivityProcedure-Ksat_invbhole"
+                    }
+                  ],
+                  "isProcedure": true,
+                  "procedures": [],
+                  "narrower": []
+                }
+              ],
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#SaturatedHydraulicConductivity",
+                  "label": "saturated hydraulic conductivity",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "definitions": [],
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SaturatedHydraulicConductivity",
+                      "label": "SaturatedHydraulicConductivity"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#UnsaturatedHydraulicConductivity",
+                  "label": "unsaturated hydraulic conductivity",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "definitions": [],
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#UnsaturatedHydraulicConductivity",
+                      "label": "UnsaturatedHydraulicConductivity"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                }
+              ]
             },
             {
               "uri": "https://soilwise-he.github.io/soil-health#SoilPorosity",
@@ -8762,16 +9011,56 @@
               ]
             },
             {
-              "uri": "https://soilwise-he.github.io/soil-health#WaterInfiltration",
-              "label": "water infiltration",
+              "uri": "https://soilwise-he.github.io/soil-health#SoilWaterInfiltration",
+              "label": "soil water infiltration",
               "altLabel": null,
               "notation": null,
               "definition": null,
               "definitions": [],
-              "exactMatch": [],
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilWaterInfiltration",
+                  "label": "SoilWaterInfiltration"
+                }
+              ],
               "isProcedure": false,
               "procedures": [],
-              "narrower": []
+              "narrower": [
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#FluxControlledWaterInfiltration",
+                  "label": "flux controlled water infiltration",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "definitions": [],
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#FluxControlledWaterInfiltration",
+                      "label": "FluxControlledWaterInfiltration"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                },
+                {
+                  "uri": "https://soilwise-he.github.io/soil-health#ProfileControlledWaterInfiltration",
+                  "label": "profile controlled water infiltration",
+                  "altLabel": null,
+                  "notation": null,
+                  "definition": null,
+                  "definitions": [],
+                  "exactMatch": [
+                    {
+                      "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#ProfileControlledWaterInfiltration",
+                      "label": "ProfileControlledWaterInfiltration"
+                    }
+                  ],
+                  "isProcedure": false,
+                  "procedures": [],
+                  "narrower": []
+                }
+              ]
             },
             {
               "uri": "https://soilwise-he.github.io/soil-health#WaterRunoff",
@@ -8798,18 +9087,6 @@
           "isProcedure": false,
           "procedures": [],
           "narrower": [
-            {
-              "uri": "https://soilwise-he.github.io/soil-health#ClayMineralogy",
-              "label": "clay mineralogy",
-              "altLabel": null,
-              "notation": null,
-              "definition": null,
-              "definitions": [],
-              "exactMatch": [],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
             {
               "uri": "https://soilwise-he.github.io/soil-health#SoilAnionContents",
               "label": "soil anion contents",
@@ -40117,6 +40394,23 @@
               ]
             },
             {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilClayMineralogy",
+              "label": "soil clay mineralogy",
+              "altLabel": null,
+              "notation": null,
+              "definition": null,
+              "definitions": [],
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilClayMineralogy",
+                  "label": "SoilClayMineralogy"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
               "uri": "https://soilwise-he.github.io/soil-health#SoilDepth",
               "label": "soil depth",
               "altLabel": null,
@@ -40210,9 +40504,9 @@
               ]
             },
             {
-              "uri": "https://soilwise-he.github.io/soil-health#SoilNitrogen",
-              "label": "soil nitrogen",
-              "altLabel": null,
+              "uri": "https://soilwise-he.github.io/soil-health#SoilNitrogenContents",
+              "label": "soil nitrogen contents",
+              "altLabel": "soil nitrogen content",
               "notation": null,
               "definition": null,
               "definitions": [],
@@ -40796,9 +41090,9 @@
               ]
             },
             {
-              "uri": "https://soilwise-he.github.io/soil-health#SoilPhosphorus",
-              "label": "soil phosphorus",
-              "altLabel": null,
+              "uri": "https://soilwise-he.github.io/soil-health#SoilPhosphorusContents",
+              "label": "soil phosphorus contents",
+              "altLabel": "soil phosphorus content",
               "notation": null,
               "definition": null,
               "definitions": [],
@@ -46421,8 +46715,12 @@
           "label": "soil physical properties",
           "altLabel": "soil physical property",
           "notation": null,
-          "definition": "Soil physical properties are those responsible for the transport of water, solutes, air and heat in the soil. The main physical soil properties are depth, temperature, texture, structure, bulk density and water-holding capacity.",
+          "definition": "Soil physical properties include both inherent and dynamic soil properties. Inherent properties include soil texture, soil parent materials and soil depth. Dynamic properties are those that can be influenced by management include infiltration, aggregate stability, available soil water holding capacity, soil organic matter, soil porosity, compaction layers, crusting, bulk density, and structure. Optimal soil physical properties reduce limitations to root growth and productivity, improve seedling emergence, nutrient and water retention, infiltration, and movement of air and water within the soil profile. Physical properties are directly related to optimal chemical and biological properties which together improve nutrient and water cycling and other key soil functions.",
           "definitions": [
+            {
+              "text": "Soil physical properties include both inherent and dynamic soil properties. Inherent properties include soil texture, soil parent materials and soil depth. Dynamic properties are those that can be influenced by management include infiltration, aggregate stability, available soil water holding capacity, soil organic matter, soil porosity, compaction layers, crusting, bulk density, and structure. Optimal soil physical properties reduce limitations to root growth and productivity, improve seedling emergence, nutrient and water retention, infiltration, and movement of air and water within the soil profile. Physical properties are directly related to optimal chemical and biological properties which together improve nutrient and water cycling and other key soil functions.",
+              "source": "https://soilhealthnexus.org/resources/soil-properties/soil-physical-properties/"
+            },
             {
               "text": "Soil physical properties are those responsible for the transport of water, solutes, air and heat in the soil. The main physical soil properties are depth, temperature, texture, structure, bulk density and water-holding capacity.",
               "source": "https://www.cambridge.org/core/books/properties-and-management-of-soils-in-the-tropics/soil-physical-properties/275087D91E8849FA36F347D4964ED835"
@@ -46430,10 +46728,6 @@
             {
               "text": "Those characteristics, processes, or reactions of a soil that are caused by physical forces and that can be described by, or expressed in, physical terms or equations. Examples of physical properties are bulk density, hydraulic conductivity, porosity, pore-size distribution, etc.",
               "source": "https://www.soils.org/publications/soils-glossary?q=publications/soils-glossary/"
-            },
-            {
-              "text": "Soil physical properties include both inherent and dynamic soil properties. Inherent properties include soil texture, soil parent materials and soil depth. Dynamic properties are those that can be influenced by management include infiltration, aggregate stability, available soil water holding capacity, soil organic matter, soil porosity, compaction layers, crusting, bulk density, and structure. Optimal soil physical properties reduce limitations to root growth and productivity, improve seedling emergence, nutrient and water retention, infiltration, and movement of air and water within the soil profile. Physical properties are directly related to optimal chemical and biological properties which together improve nutrient and water cycling and other key soil functions.",
-              "source": "https://soilhealthnexus.org/resources/soil-properties/soil-physical-properties/"
             }
           ],
           "exactMatch": [
@@ -50241,14 +50535,23 @@
                 {
                   "uri": "https://soilwise-he.github.io/soil-health#SoilPoreSize",
                   "label": "soil pore size",
-                  "altLabel": null,
+                  "altLabel": "pores size",
                   "notation": null,
-                  "definition": null,
-                  "definitions": [],
+                  "definition": "The Pores Size categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils.",
+                  "definitions": [
+                    {
+                      "text": "The Pores Size categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils.",
+                      "source": "http://w3id.org/glosis/model/layerhorizon/poresSizeProperty"
+                    }
+                  ],
                   "exactMatch": [
                     {
                       "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilPoreSize",
                       "label": "SoilPoreSize"
+                    },
+                    {
+                      "uri": "http://w3id.org/glosis/model/layerhorizon/poresSizeProperty",
+                      "label": "poresSizeProperty"
                     }
                   ],
                   "isProcedure": false,
@@ -51311,227 +51614,6 @@
                   "narrower": []
                 },
                 {
-                  "uri": "https://soilwise-he.github.io/soil-health#MoistureContents",
-                  "label": "moisture contents",
-                  "altLabel": "moisture content",
-                  "notation": null,
-                  "definition": "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.",
-                  "definitions": [
-                    {
-                      "text": "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.",
-                      "source": "http://w3id.org/glosis/model/layerhorizon/moistureContentProperty"
-                    }
-                  ],
-                  "exactMatch": [
-                    {
-                      "uri": "http://w3id.org/glosis/model/layerhorizon/moistureContentProperty",
-                      "label": "moistureContentProperty"
-                    }
-                  ],
-                  "isProcedure": false,
-                  "procedures": [
-                    {
-                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_calcul-ptf",
-                      "label": "VMC_calcul-ptf",
-                      "altLabel": null,
-                      "notation": null,
-                      "definition": "Calculated by PTF",
-                      "definitions": [
-                        {
-                          "text": "Calculated by PTF",
-                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_calcul-ptf"
-                        }
-                      ],
-                      "exactMatch": [
-                        {
-                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_calcul-ptf",
-                          "label": "moistureContentProcedure-VMC_calcul-ptf"
-                        }
-                      ],
-                      "isProcedure": true,
-                      "procedures": [],
-                      "narrower": []
-                    },
-                    {
-                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_calcul-ptf-brookscorey",
-                      "label": "VMC_calcul-ptf-brookscorey",
-                      "altLabel": null,
-                      "notation": null,
-                      "definition": "Calculated by PTF of brooks - corey",
-                      "definitions": [
-                        {
-                          "text": "Calculated by PTF of brooks - corey",
-                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_calcul-ptf-brookscorey"
-                        }
-                      ],
-                      "exactMatch": [
-                        {
-                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_calcul-ptf-brookscorey",
-                          "label": "moistureContentProcedure-VMC_calcul-ptf-brookscorey"
-                        }
-                      ],
-                      "isProcedure": true,
-                      "procedures": [],
-                      "narrower": []
-                    },
-                    {
-                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_d",
-                      "label": "VMC_d",
-                      "altLabel": null,
-                      "notation": null,
-                      "definition": "Volumetric moisture content in disturbed samples",
-                      "definitions": [
-                        {
-                          "text": "Volumetric moisture content in disturbed samples",
-                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d"
-                        }
-                      ],
-                      "exactMatch": [
-                        {
-                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d",
-                          "label": "moistureContentProcedure-VMC_d"
-                        }
-                      ],
-                      "isProcedure": true,
-                      "procedures": [],
-                      "narrower": []
-                    },
-                    {
-                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_d-cl",
-                      "label": "VMC_d-cl",
-                      "altLabel": null,
-                      "notation": null,
-                      "definition": "Pressure-plate extraction, disturbed -clod- samples (wt%) * density",
-                      "definitions": [
-                        {
-                          "text": "Pressure-plate extraction, disturbed -clod- samples (wt%) * density",
-                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d-cl"
-                        }
-                      ],
-                      "exactMatch": [
-                        {
-                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d-cl",
-                          "label": "moistureContentProcedure-VMC_d-cl"
-                        }
-                      ],
-                      "isProcedure": true,
-                      "procedures": [],
-                      "narrower": []
-                    },
-                    {
-                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_d-cl-ww",
-                      "label": "VMC_d-cl-ww",
-                      "altLabel": null,
-                      "notation": null,
-                      "definition": "Pressure-plate extraction, disturbed -clod- samples (wt%) * density on weight/weight basis; to be converted to v/v (with BD at appropriate humidity)",
-                      "definitions": [
-                        {
-                          "text": "Pressure-plate extraction, disturbed -clod- samples (wt%) * density on weight/weight basis; to be converted to v/v (with BD at appropriate humidity)",
-                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d-cl-ww"
-                        }
-                      ],
-                      "exactMatch": [
-                        {
-                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d-cl-ww",
-                          "label": "moistureContentProcedure-VMC_d-cl-ww"
-                        }
-                      ],
-                      "isProcedure": true,
-                      "procedures": [],
-                      "narrower": []
-                    },
-                    {
-                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_d-ww",
-                      "label": "VMC_d-ww",
-                      "altLabel": null,
-                      "notation": null,
-                      "definition": "Volumetric moisture content in disturbed samples on weight/weight basis to be converted to v/v (with BD at appropriate humidity)",
-                      "definitions": [
-                        {
-                          "text": "Volumetric moisture content in disturbed samples on weight/weight basis to be converted to v/v (with BD at appropriate humidity)",
-                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d-ww"
-                        }
-                      ],
-                      "exactMatch": [
-                        {
-                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d-ww",
-                          "label": "moistureContentProcedure-VMC_d-ww"
-                        }
-                      ],
-                      "isProcedure": true,
-                      "procedures": [],
-                      "narrower": []
-                    },
-                    {
-                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_ud",
-                      "label": "VMC_ud",
-                      "altLabel": null,
-                      "notation": null,
-                      "definition": "Undisturbed samples",
-                      "definitions": [
-                        {
-                          "text": "Undisturbed samples",
-                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_ud"
-                        }
-                      ],
-                      "exactMatch": [
-                        {
-                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_ud",
-                          "label": "moistureContentProcedure-VMC_ud"
-                        }
-                      ],
-                      "isProcedure": true,
-                      "procedures": [],
-                      "narrower": []
-                    },
-                    {
-                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_ud-cl",
-                      "label": "VMC_ud-cl",
-                      "altLabel": null,
-                      "notation": null,
-                      "definition": "Natural clod",
-                      "definitions": [
-                        {
-                          "text": "Natural clod",
-                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_ud-cl"
-                        }
-                      ],
-                      "exactMatch": [
-                        {
-                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_ud-cl",
-                          "label": "moistureContentProcedure-VMC_ud-cl"
-                        }
-                      ],
-                      "isProcedure": true,
-                      "procedures": [],
-                      "narrower": []
-                    },
-                    {
-                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_ud-co",
-                      "label": "VMC_ud-co",
-                      "altLabel": null,
-                      "notation": null,
-                      "definition": "Volumetric moisture content in undisturbed samples (pF rings cores)",
-                      "definitions": [
-                        {
-                          "text": "Volumetric moisture content in undisturbed samples (pF rings cores)",
-                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_ud-co"
-                        }
-                      ],
-                      "exactMatch": [
-                        {
-                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_ud-co",
-                          "label": "moistureContentProcedure-VMC_ud-co"
-                        }
-                      ],
-                      "isProcedure": true,
-                      "procedures": [],
-                      "narrower": []
-                    }
-                  ],
-                  "narrower": []
-                },
-                {
                   "uri": "https://soilwise-he.github.io/soil-health#SoilHydraulicConductivity",
                   "label": "soil hydraulic conductivity",
                   "altLabel": null,
@@ -51767,18 +51849,226 @@
                 {
                   "uri": "https://soilwise-he.github.io/soil-health#SoilMoistureContents",
                   "label": "soil moisture contents",
-                  "altLabel": "soil moisture content",
+                  "altLabel": "moisture content",
                   "notation": null,
-                  "definition": null,
-                  "definitions": [],
+                  "definition": "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.",
+                  "definitions": [
+                    {
+                      "text": "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics.",
+                      "source": "http://w3id.org/glosis/model/layerhorizon/moistureContentProperty"
+                    }
+                  ],
                   "exactMatch": [
                     {
                       "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilMoistureContent",
                       "label": "SoilMoistureContent"
+                    },
+                    {
+                      "uri": "http://w3id.org/glosis/model/layerhorizon/moistureContentProperty",
+                      "label": "moistureContentProperty"
                     }
                   ],
                   "isProcedure": false,
-                  "procedures": [],
+                  "procedures": [
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_calcul-ptf",
+                      "label": "VMC_calcul-ptf",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "Calculated by PTF",
+                      "definitions": [
+                        {
+                          "text": "Calculated by PTF",
+                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_calcul-ptf"
+                        }
+                      ],
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_calcul-ptf",
+                          "label": "moistureContentProcedure-VMC_calcul-ptf"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_calcul-ptf-brookscorey",
+                      "label": "VMC_calcul-ptf-brookscorey",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "Calculated by PTF of brooks - corey",
+                      "definitions": [
+                        {
+                          "text": "Calculated by PTF of brooks - corey",
+                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_calcul-ptf-brookscorey"
+                        }
+                      ],
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_calcul-ptf-brookscorey",
+                          "label": "moistureContentProcedure-VMC_calcul-ptf-brookscorey"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_d",
+                      "label": "VMC_d",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "Volumetric moisture content in disturbed samples",
+                      "definitions": [
+                        {
+                          "text": "Volumetric moisture content in disturbed samples",
+                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d"
+                        }
+                      ],
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d",
+                          "label": "moistureContentProcedure-VMC_d"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_d-cl",
+                      "label": "VMC_d-cl",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "Pressure-plate extraction, disturbed -clod- samples (wt%) * density",
+                      "definitions": [
+                        {
+                          "text": "Pressure-plate extraction, disturbed -clod- samples (wt%) * density",
+                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d-cl"
+                        }
+                      ],
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d-cl",
+                          "label": "moistureContentProcedure-VMC_d-cl"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_d-cl-ww",
+                      "label": "VMC_d-cl-ww",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "Pressure-plate extraction, disturbed -clod- samples (wt%) * density on weight/weight basis; to be converted to v/v (with BD at appropriate humidity)",
+                      "definitions": [
+                        {
+                          "text": "Pressure-plate extraction, disturbed -clod- samples (wt%) * density on weight/weight basis; to be converted to v/v (with BD at appropriate humidity)",
+                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d-cl-ww"
+                        }
+                      ],
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d-cl-ww",
+                          "label": "moistureContentProcedure-VMC_d-cl-ww"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_d-ww",
+                      "label": "VMC_d-ww",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "Volumetric moisture content in disturbed samples on weight/weight basis to be converted to v/v (with BD at appropriate humidity)",
+                      "definitions": [
+                        {
+                          "text": "Volumetric moisture content in disturbed samples on weight/weight basis to be converted to v/v (with BD at appropriate humidity)",
+                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d-ww"
+                        }
+                      ],
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_d-ww",
+                          "label": "moistureContentProcedure-VMC_d-ww"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_ud",
+                      "label": "VMC_ud",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "Undisturbed samples",
+                      "definitions": [
+                        {
+                          "text": "Undisturbed samples",
+                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_ud"
+                        }
+                      ],
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_ud",
+                          "label": "moistureContentProcedure-VMC_ud"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_ud-cl",
+                      "label": "VMC_ud-cl",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "Natural clod",
+                      "definitions": [
+                        {
+                          "text": "Natural clod",
+                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_ud-cl"
+                        }
+                      ],
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_ud-cl",
+                          "label": "moistureContentProcedure-VMC_ud-cl"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    },
+                    {
+                      "uri": "https://soilwise-he.github.io/soil-health#moistureContentProcedure-VMC_ud-co",
+                      "label": "VMC_ud-co",
+                      "altLabel": null,
+                      "notation": null,
+                      "definition": "Volumetric moisture content in undisturbed samples (pF rings cores)",
+                      "definitions": [
+                        {
+                          "text": "Volumetric moisture content in undisturbed samples (pF rings cores)",
+                          "source": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_ud-co"
+                        }
+                      ],
+                      "exactMatch": [
+                        {
+                          "uri": "http://w3id.org/glosis/model/procedure/moistureContentProcedure-VMC_ud-co",
+                          "label": "moistureContentProcedure-VMC_ud-co"
+                        }
+                      ],
+                      "isProcedure": true,
+                      "procedures": [],
+                      "narrower": []
+                    }
+                  ],
                   "narrower": [
                     {
                       "uri": "https://soilwise-he.github.io/soil-health#AntecedentSoilMoistureContents",
@@ -68140,28 +68430,6 @@
               "narrower": []
             },
             {
-              "uri": "https://soilwise-he.github.io/soil-health#PoreSize",
-              "label": "pore size",
-              "altLabel": "pores size",
-              "notation": null,
-              "definition": "The Pores Size categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils.",
-              "definitions": [
-                {
-                  "text": "The Pores Size categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils.",
-                  "source": "http://w3id.org/glosis/model/layerhorizon/poresSizeProperty"
-                }
-              ],
-              "exactMatch": [
-                {
-                  "uri": "http://w3id.org/glosis/model/layerhorizon/poresSizeProperty",
-                  "label": "poresSizeProperty"
-                }
-              ],
-              "isProcedure": false,
-              "procedures": [],
-              "narrower": []
-            },
-            {
               "uri": "https://soilwise-he.github.io/soil-health#SoilChannel",
               "label": "soil channel",
               "altLabel": null,
@@ -68325,6 +68593,32 @@
                 {
                   "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilMicropore",
                   "label": "SoilMicropore"
+                }
+              ],
+              "isProcedure": false,
+              "procedures": [],
+              "narrower": []
+            },
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SoilPoreSize",
+              "label": "soil pore size",
+              "altLabel": "pores size",
+              "notation": null,
+              "definition": "The Pores Size categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils.",
+              "definitions": [
+                {
+                  "text": "The Pores Size categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils.",
+                  "source": "http://w3id.org/glosis/model/layerhorizon/poresSizeProperty"
+                }
+              ],
+              "exactMatch": [
+                {
+                  "uri": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#SoilPoreSize",
+                  "label": "SoilPoreSize"
+                },
+                {
+                  "uri": "http://w3id.org/glosis/model/layerhorizon/poresSizeProperty",
+                  "label": "poresSizeProperty"
                 }
               ],
               "isProcedure": false,

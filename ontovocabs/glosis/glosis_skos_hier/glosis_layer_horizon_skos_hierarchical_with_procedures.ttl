@@ -136,13 +136,13 @@ she:MoistConsistency a skos:Concept ;
     skos:exactMatch glosis_lh:moistConsistencyProperty ;
     skos:prefLabel "moist consistency"@en .
 
-she:MoistureContents a skos:Concept ;
+she:SoilMoistureContents a skos:Concept ;
     skos:altLabel "moisture content"@en ;
     skos:broader she:SoilWaterPhysicalProperties ;
     skos:definition [ dcterms:source glosis_lh:moistureContentProperty ;
             schema:text "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ] ;
     skos:exactMatch glosis_lh:moistureContentProperty ;
-    skos:prefLabel "moisture contents"@en ;
+    skos:prefLabel "soil moisture contents"@en ;
     she:hasProcedure she:moistureContentProcedure-VMC_calcul-ptf,
         she:moistureContentProcedure-VMC_calcul-ptf-brookscorey,
         she:moistureContentProcedure-VMC_d,
@@ -1357,13 +1357,13 @@ she:PoreAbundance a skos:Concept ;
     skos:exactMatch glosis_lh:poresAbundanceProperty ;
     skos:prefLabel "pore abundance"@en .
 
-she:PoreSize a skos:Concept ;
+she:SoilPoreSize a skos:Concept ;
     skos:altLabel "pores size"@en ;
     skos:broader she:SoilPores ;
     skos:definition [ dcterms:source glosis_lh:poresSizeProperty ;
             schema:text "The Pores Size categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ] ;
     skos:exactMatch glosis_lh:poresSizeProperty ;
-    skos:prefLabel "pore size"@en .
+    skos:prefLabel "soil pore size"@en .
 
 she:PotassiumExchangeableBases a skos:Concept ;
     skos:altLabel "potassium exchangeable base"@en ;
@@ -2961,7 +2961,7 @@ she:SoilHorizonBoundary a skos:Concept ;
 she:SoilPores a skos:Concept ;
     skos:altLabel "soil pore"@en ;
     skos:narrower she:PoreAbundance,
-        she:PoreSize ;
+        she:SoilPoreSize ;
     skos:prefLabel "soil pores"@en .
 
 she:SoilStructure a skos:Concept ;

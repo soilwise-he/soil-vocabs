@@ -67,9 +67,6 @@ she:SoilThreats a skos:Concept ;
         she:SoilSealing ;
     skos:prefLabel "soil threats"@en .
 
-she:Adsorption a skos:Concept ;
-    skos:prefLabel "adsorption"@en .
-
 she:BiomassProductivity a skos:Concept ;
     skos:prefLabel "biomass productivity"@en .
 
@@ -83,9 +80,6 @@ she:CarbonStorageCapacity a skos:Concept ;
 she:CationExchangeCapacity a skos:Concept ;
     skos:prefLabel "cation exchange capacity"@en .
 
-she:ClayMineralogy a skos:Concept ;
-    skos:prefLabel "clay mineralogy"@en .
-
 she:Climate a skos:Concept ;
     skos:prefLabel "climate"@en .
 
@@ -98,15 +92,15 @@ she:CulturalServices a skos:Concept ;
 
 she:DerivedSoilProperties a skos:Concept ;
     skos:altLabel "derived soil property"@en ;
-    skos:narrower she:Adsorption,
-        she:CationExchangeCapacity,
+    skos:narrower she:CationExchangeCapacity,
         she:ElectricConductivity,
-        she:Erodibility,
-        she:HydraulicConductivity,
         she:RootingDepth,
+        she:SoilAdsorption,
         she:SoilAggregateStability,
+        she:SoilErodibility,
+        she:SoilHydraulicConductivity,
         she:SoilPorosity,
-        she:WaterInfiltration,
+        she:SoilWaterInfiltration,
         she:WaterRunoff ;
     skos:prefLabel "derived soil properties"@en .
 
@@ -120,9 +114,6 @@ she:Emissions a skos:Concept ;
 she:EnvironmentalFactors a skos:Concept ;
     skos:altLabel "environmental factor"@en ;
     skos:prefLabel "environmental factors"@en .
-
-she:Erodibility a skos:Concept ;
-    skos:prefLabel "erodibility"@en .
 
 she:ExternalFactors a skos:Concept ;
     skos:altLabel "external factor"@en ;
@@ -144,9 +135,6 @@ she:HabitatProvisionCapacity a skos:Concept ;
 she:Habitats a skos:Concept ;
     skos:altLabel "habitat"@en ;
     skos:prefLabel "habitats"@en .
-
-she:HydraulicConductivity a skos:Concept ;
-    skos:prefLabel "hydraulic conductivity"@en .
 
 she:Inputs a skos:Concept ;
     skos:altLabel "input"@en ;
@@ -181,15 +169,15 @@ she:NutrientMobilisationCapacity a skos:Concept ;
 
 she:ObservableSoilProperties a skos:Concept ;
     skos:altLabel "observable soil property"@en ;
-    skos:narrower she:ClayMineralogy,
-        she:SoilAnionContents,
+    skos:narrower she:SoilAnionContents,
         she:SoilBiota,
         she:SoilBulkDensity,
         she:SoilCationContents,
+        she:SoilClayMineralogy,
         she:SoilDepth,
-        she:SoilNitrogen,
+        she:SoilNitrogenContents,
         she:SoilOrganicCarbon,
-        she:SoilPhosphorus,
+        she:SoilPhosphorusContents,
         she:SoilStructure,
         she:SoilTemperature,
         she:SoilTexturalClasses,
@@ -218,6 +206,9 @@ she:Salinisation a skos:Concept ;
 
 she:SoilAcidification a skos:Concept ;
     skos:prefLabel "soil acidification"@en .
+
+she:SoilAdsorption a skos:Concept ;
+    skos:prefLabel "soil adsorption"@en .
 
 she:SoilAggregateStability a skos:Concept ;
     skos:prefLabel "soil aggregate stability"@en .
@@ -279,6 +270,9 @@ she:SoilChemicalProperties a skos:Concept ;
     skos:prefLabel "soil chemical properties"@en ;
     skos:related she:SoilQuality .
 
+she:SoilClayMineralogy a skos:Concept ;
+    skos:prefLabel "soil clay mineralogy"@en .
+
 she:SoilCompaction a skos:Concept ;
     skos:prefLabel "soil compaction"@en .
 
@@ -294,6 +288,9 @@ she:SoilDepth a skos:Concept ;
 
 she:SoilEcologicalDegradation a skos:Concept ;
     skos:prefLabel "soil ecological degradation"@en .
+
+she:SoilErodibility a skos:Concept ;
+    skos:prefLabel "soil erodibility"@en .
 
 she:SoilErosion a skos:Concept ;
     skos:prefLabel "soil erosion"@en .
@@ -316,6 +313,9 @@ she:SoilFunctionIndicators a skos:Concept ;
         she:WaterStorageCapacity ;
     skos:prefLabel "soil function indicators"@en .
 
+she:SoilHydraulicConductivity a skos:Concept ;
+    skos:prefLabel "soil hydraulic conductivity"@en .
+
 she:SoilMacrofauna a skos:Concept ;
     skos:prefLabel "soil macrofauna"@en .
 
@@ -332,8 +332,9 @@ she:SoilNLoss a skos:Concept ;
     skos:altLabel "soil N loss"@en ;
     skos:prefLabel "soil nitrogen loss"@en .
 
-she:SoilNitrogen a skos:Concept ;
-    skos:prefLabel "soil nitrogen"@en .
+she:SoilNitrogenContents a skos:Concept ;
+    skos:altLabel "soil nitrogen content"@en ;
+    skos:prefLabel "soil nitrogen contents"@en .
 
 she:SoilNutrientLoss a skos:Concept ;
     skos:narrower she:SoilNLoss,
@@ -347,8 +348,9 @@ she:SoilPLoss a skos:Concept ;
     skos:altLabel "soil P loss"@en ;
     skos:prefLabel "soil phosphorus loss"@en .
 
-she:SoilPhosphorus a skos:Concept ;
-    skos:prefLabel "soil phosphorus"@en .
+she:SoilPhosphorusContents a skos:Concept ;
+    skos:altLabel "soil phosphorus content"@en ;
+    skos:prefLabel "soil phosphorus contents"@en .
 
 she:SoilPhysicalDegradation a skos:Concept ;
     skos:prefLabel "soil physical degradation"@en .
@@ -359,12 +361,12 @@ she:SoilPhysicalFunctions a skos:Concept ;
 
 she:SoilPhysicalProperties a skos:Concept ;
     skos:altLabel "soil physical property"@en ;
-    skos:definition [ dcterms:source <https://www.soils.org/publications/soils-glossary?q=publications/soils-glossary/> ;
+    skos:definition [ dcterms:source <https://www.cambridge.org/core/books/properties-and-management-of-soils-in-the-tropics/soil-physical-properties/275087D91E8849FA36F347D4964ED835> ;
+            schema:text "Soil physical properties are those responsible for the transport of water, solutes, air and heat in the soil. The main physical soil properties are depth, temperature, texture, structure, bulk density and water-holding capacity."@en ],
+        [ dcterms:source <https://www.soils.org/publications/soils-glossary?q=publications/soils-glossary/> ;
             schema:text "Those characteristics, processes, or reactions of a soil that are caused by physical forces and that can be described by, or expressed in, physical terms or equations. Examples of physical properties are bulk density, hydraulic conductivity, porosity, pore-size distribution, etc."@en ],
         [ dcterms:source <https://soilhealthnexus.org/resources/soil-properties/soil-physical-properties/> ;
-            schema:text "Soil physical properties include both inherent and dynamic soil properties. Inherent properties include soil texture, soil parent materials and soil depth. Dynamic properties are those that can be influenced by management include infiltration, aggregate stability, available soil water holding capacity, soil organic matter, soil porosity, compaction layers, crusting, bulk density, and structure. Optimal soil physical properties reduce limitations to root growth and productivity, improve seedling emergence, nutrient and water retention, infiltration, and movement of air and water within the soil profile. Physical properties are directly related to optimal chemical and biological properties which together improve nutrient and water cycling and other key soil functions."@en ],
-        [ dcterms:source <https://www.cambridge.org/core/books/properties-and-management-of-soils-in-the-tropics/soil-physical-properties/275087D91E8849FA36F347D4964ED835> ;
-            schema:text "Soil physical properties are those responsible for the transport of water, solutes, air and heat in the soil. The main physical soil properties are depth, temperature, texture, structure, bulk density and water-holding capacity."@en ] ;
+            schema:text "Soil physical properties include both inherent and dynamic soil properties. Inherent properties include soil texture, soil parent materials and soil depth. Dynamic properties are those that can be influenced by management include infiltration, aggregate stability, available soil water holding capacity, soil organic matter, soil porosity, compaction layers, crusting, bulk density, and structure. Optimal soil physical properties reduce limitations to root growth and productivity, improve seedling emergence, nutrient and water retention, infiltration, and movement of air and water within the soil profile. Physical properties are directly related to optimal chemical and biological properties which together improve nutrient and water cycling and other key soil functions."@en ] ;
     skos:prefLabel "soil physical properties"@en ;
     skos:related she:SoilQuality .
 
@@ -391,6 +393,9 @@ she:SoilWaterContents a skos:Concept ;
     skos:altLabel "soil water content"@en ;
     skos:prefLabel "soil water contents"@en .
 
+she:SoilWaterInfiltration a skos:Concept ;
+    skos:prefLabel "soil water infiltration"@en .
+
 she:SoilpH a skos:Concept ;
     skos:prefLabel "soil pH"@en .
 
@@ -401,9 +406,6 @@ she:StoneContents a skos:Concept ;
 she:SupportingServices a skos:Concept ;
     skos:altLabel "supporting service"@en ;
     skos:prefLabel "supporting services"@en .
-
-she:WaterInfiltration a skos:Concept ;
-    skos:prefLabel "water infiltration"@en .
 
 she:WaterPurification a skos:Concept ;
     skos:prefLabel "water purification"@en .
