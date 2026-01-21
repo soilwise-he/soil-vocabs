@@ -1548,7 +1548,7 @@ she:Soil a skos:Concept ;
     skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:SoilAggregate a skos:Concept ;
-    skos:broader she:SoilComponent ;
+    skos:broader she:SoilComponents ;
     skos:exactMatch spp:SoilAggregate ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil aggregate"@en .
@@ -2001,7 +2001,7 @@ she:SoilFlow a skos:Concept ;
     skos:prefLabel "soil flow"@en .
 
 she:SoilFluid a skos:Concept ;
-    skos:broader she:SoilComponent ;
+    skos:broader she:SoilComponents ;
     skos:exactMatch spp:SoilFluid ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil fluid"@en .
@@ -2219,7 +2219,7 @@ she:SoilMicropore a skos:Concept ;
     skos:prefLabel "soil micropore"@en .
 
 she:SoilMineralMatter a skos:Concept ;
-    skos:broader she:SoilComponent ;
+    skos:broader she:SoilComponents ;
     skos:exactMatch spp:SoilMineralMatter ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil mineral matter"@en .
@@ -2238,7 +2238,7 @@ she:SoilMobileWaterContents a skos:Concept ;
     skos:prefLabel "soil mobile water contents"@en .
 
 she:SoilMoisture a skos:Concept ;
-    skos:broader she:SoilComponent ;
+    skos:broader she:SoilComponents ;
     skos:exactMatch spp:SoilMoisture ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil moisture"@en .
@@ -2321,11 +2321,11 @@ she:SoilNutrientStorage a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil nutrient storage"@en .
 
-she:SoilOrganicComponent a skos:Concept ;
-    skos:broader she:SoilComponent ;
-    skos:exactMatch spp:SoilOrganicComponent ;
+she:SoilOrganicCarbonContents a skos:Concept ;
+    skos:altLabel "soil organic carbon content"@en ;
+    skos:broader she:ObservableSoilProperties ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:prefLabel "soil organic component"@en .
+    skos:prefLabel "soil organic carbon contents"@en .
 
 she:SoilOrganicMatterClass a skos:Concept ;
     skos:broader she:SoilDescription ;
@@ -2950,7 +2950,7 @@ she:SoilWarming a skos:Concept ;
     skos:prefLabel "soil warming"@en .
 
 she:SoilWater a skos:Concept ;
-    skos:broader she:SoilComponent ;
+    skos:broader she:SoilComponents ;
     skos:exactMatch spp:SoilWater ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil water"@en .
@@ -5037,7 +5037,7 @@ she:SoilAggregateStrength a skos:Concept ;
     skos:prefLabel "soil aggregate strength"@en .
 
 she:SoilAir a skos:Concept ;
-    skos:broader she:SoilComponent,
+    skos:broader she:SoilComponents,
         she:SoilGas ;
     skos:exactMatch spp:SoilAir ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -5151,7 +5151,7 @@ she:SoilFluidTransport a skos:Concept ;
     skos:prefLabel "soil fluid transport"@en .
 
 she:SoilGas a skos:Concept ;
-    skos:broader she:SoilComponent ;
+    skos:broader she:SoilComponents ;
     skos:exactMatch spp:SoilGas ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:SoilAir ;
@@ -5178,19 +5178,28 @@ she:SoilHeatCapacity a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:prefLabel "soil heat capacity"@en .
 
-she:SoilInorganicComponent a skos:Concept ;
-    skos:broader she:SoilComponent ;
+she:SoilInorganicComponents a skos:Concept ;
+    skos:altLabel "soil inorganic component"@en ;
+    skos:broader she:SoilComponents ;
     skos:exactMatch spp:SoilInorganicComponent ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:SoilInorganicCarbon ;
-    skos:prefLabel "soil inorganic component"@en .
+    skos:prefLabel "soil inorganic components"@en .
 
 she:SoilLiquid a skos:Concept ;
-    skos:broader she:SoilComponent ;
+    skos:broader she:SoilComponents ;
     skos:exactMatch spp:SoilLiquid ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:SoilSolution ;
     skos:prefLabel "soil liquid"@en .
+
+she:SoilOrganicComponents a skos:Concept ;
+    skos:altLabel "soil organic component"@en ;
+    skos:broader she:SoilComponents ;
+    skos:exactMatch spp:SoilOrganicComponent ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:SoilOrganicMatter ;
+    skos:prefLabel "soil organic components"@en .
 
 she:SoilOxygenConcentration a skos:Concept ;
     skos:broader she:SoilAirPhysicalProperties,
@@ -5715,7 +5724,7 @@ she:SoilShrinkage a skos:Concept ;
     skos:prefLabel "soil shrinkage"@en .
 
 she:SoilSolid a skos:Concept ;
-    skos:broader she:SoilComponent ;
+    skos:broader she:SoilComponents ;
     skos:exactMatch spp:SoilSolid ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:SoilInorganicSolid,
@@ -5731,7 +5740,7 @@ she:SoilSoluteDispersiveTransport a skos:Concept ;
     skos:prefLabel "soil solute dispersive transport"@en .
 
 she:SoilSolution a skos:Concept ;
-    skos:broader she:SoilComponent,
+    skos:broader she:SoilComponents,
         she:SoilLiquid ;
     skos:exactMatch spp:SoilSolution ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -6117,7 +6126,7 @@ she:SoilIndicators a skos:Concept ;
     skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:SoilInorganicCarbon a skos:Concept ;
-    skos:broader she:SoilInorganicComponent,
+    skos:broader she:SoilInorganicComponents,
         she:SoilTotalCarbon ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Carinorg ;
             schema:text "Inorganic carbon in soil primarily consists of carbonates like calcium carbonate and magnesium carbonate. It contributes to soil pH buffering and is a significant feature of arid and calcareous soils. Excess inorganic carbon can immobilize certain nutrients, requiring careful management in agricultural systems. Source: Soil Science Society of America."@en ] ;
@@ -6469,7 +6478,7 @@ she:SoilNutrients a skos:Concept ;
 
 she:SoilParticles a skos:Concept ;
     skos:altLabel "soil particle"@en ;
-    skos:broader she:SoilComponent ;
+    skos:broader she:SoilComponents ;
     skos:exactMatch spp:SoilParticle ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:CoarseFragments,
@@ -6626,20 +6635,6 @@ she:SoilEnvironmentalFunctions a skos:Concept ;
         she:WaterQuality ;
     skos:prefLabel "soil environmental functions"@en .
 
-she:SoilOrganicMatter a skos:Concept ;
-    skos:broader she:SoilComponent ;
-    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Orgmat ;
-            schema:text "Soil organic matter is composed of decomposed plant and animal residues, living soil organisms, and humus. It improves soil structure, water retention, nutrient supply, and microbial activity, making it critical for sustainable agriculture and soil health. Source: Brady & Weil (2017)."@en ] ;
-    skos:exactMatch spp:SoilOrganicMatter,
-        glosis_cl:physioChemicalPropertyCode-Orgmat ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SoilOrganicCarbon ;
-    skos:prefLabel "soil organic matter"@en ;
-    she:hasProcedure she:organicMatterProcedure-FulAcidC_unkn,
-        she:organicMatterProcedure-HumAcidC_unkn,
-        she:organicMatterProcedure-OrgM_calcul-oc1.73,
-        she:organicMatterProcedure-TotHumC_unkn .
-
 she:SoilRetention a skos:Concept ;
     skos:broader she:SoilPhysicalProcesses ;
     skos:exactMatch spp:SoilRetention ;
@@ -6738,6 +6733,21 @@ she:SoilMottle a skos:Concept ;
         she:MottleSize ;
     skos:prefLabel "soil mottle"@en .
 
+she:SoilOrganicMatter a skos:Concept ;
+    skos:broader she:SoilComponents,
+        she:SoilOrganicComponents ;
+    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Orgmat ;
+            schema:text "Soil organic matter is composed of decomposed plant and animal residues, living soil organisms, and humus. It improves soil structure, water retention, nutrient supply, and microbial activity, making it critical for sustainable agriculture and soil health. Source: Brady & Weil (2017)."@en ] ;
+    skos:exactMatch spp:SoilOrganicMatter,
+        glosis_cl:physioChemicalPropertyCode-Orgmat ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:SoilOrganicCarbon ;
+    skos:prefLabel "soil organic matter"@en ;
+    she:hasProcedure she:organicMatterProcedure-FulAcidC_unkn,
+        she:organicMatterProcedure-HumAcidC_unkn,
+        she:organicMatterProcedure-OrgM_calcul-oc1.73,
+        she:organicMatterProcedure-TotHumC_unkn .
+
 she:SoilParticlePhysicalProperties a skos:Concept ;
     skos:altLabel "soil particle physical property"@en ;
     skos:broader she:SoilPhysicalProperties ;
@@ -6765,7 +6775,7 @@ she:SoilSoluteTransport a skos:Concept ;
 
 she:SoilSolutes a skos:Concept ;
     skos:altLabel "soil solute"@en ;
-    skos:broader she:SoilComponent,
+    skos:broader she:SoilComponents,
         she:SoilSolution ;
     skos:exactMatch spp:SoilSolute ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -7097,7 +7107,7 @@ she:SoilSubstance a skos:Concept ;
     skos:exactMatch spp:SoilSubstance ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
     skos:narrower she:SoilChemical,
-        she:SoilComponent,
+        she:SoilComponents,
         she:SoilCrusts,
         she:SoilNutrients,
         she:SoilOrganisms,
@@ -7107,7 +7117,7 @@ she:SoilSubstance a skos:Concept ;
     skos:topConceptOf <https://soilwise-he.github.io/soil-health> .
 
 she:SoilTotalCarbon a skos:Concept ;
-    skos:broader she:SoilChemicalProperties ;
+    skos:broader she:SoilComponents ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Cartot ;
             schema:text "Total carbon in soil includes both organic carbon (from plant and microbial residues) and inorganic carbon (primarily carbonates). It is a fundamental component of soil organic matter, influencing soil fertility, structure, and water retention. High carbon levels are associated with better soil health and productivity. Source: USDA NRCS."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cartot ;
@@ -7544,6 +7554,29 @@ she:SodiumExchangeableBases a skos:Concept ;
         she:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea,
         she:exchangeableBasesProcedure-ExchBases_ph8-unkn .
 
+she:SoilChemicalProperties a skos:Concept ;
+    skos:altLabel "soil chemical property"@en ;
+    skos:broader she:SoilProperties ;
+    skos:definition [ dcterms:source <https://soilhealthnexus.org/resources/soil-properties/soil-chemical-properties/> ;
+            schema:text "Chemical properties of soils include the following aspects: inorganic matters of soil, organic matters in soil, colloidal properties of soil particles and soil reactions and buffering action in acidic soils and basic soils."@en ],
+        [ dcterms:source <https://www.sciencedirect.com/topics/earth-and-planetary-sciences/soil-chemical-property> ;
+            schema:text "Soil chemical properties refer to the chemical attributes of soil that influence its ability to supply nutrients to plants, retain harmful elements, and affect plant growth and microbial populations. These properties include nutrient concentrations, pH levels, and the presence of elements such as nitrogen, phosphorus, and potassium, which are critical for soil quality assessment and agricultural productivity."@en ] ;
+    skos:exactMatch spp:SoilChemicalProperty ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:BaseSaturation,
+        she:Carbonate,
+        she:HydrogenExchangeableBases,
+        she:OxalateExtractableOpticalDensity,
+        she:Sodium,
+        she:SoilChargeProperties,
+        she:SoilChemicalCapacity,
+        she:SoilReactivity,
+        she:SoilRedoxPotential,
+        she:SoilSalinity,
+        she:SoilpH ;
+    skos:prefLabel "soil chemical properties"@en ;
+    skos:related she:SoilQuality .
+
 she:SoilEngineeringFunctions a skos:Concept ;
     skos:altLabel "soil engineering function"@en ;
     skos:broader she:SoilFunctions ;
@@ -7617,30 +7650,6 @@ she:SoilAgriculturalFunctions a skos:Concept ;
         she:SoilRespiration,
         she:SoilWaterAvailability ;
     skos:prefLabel "soil agricultural functions"@en .
-
-she:SoilChemicalProperties a skos:Concept ;
-    skos:altLabel "soil chemical property"@en ;
-    skos:broader she:SoilProperties ;
-    skos:definition [ dcterms:source <https://soilhealthnexus.org/resources/soil-properties/soil-chemical-properties/> ;
-            schema:text "Chemical properties of soils include the following aspects: inorganic matters of soil, organic matters in soil, colloidal properties of soil particles and soil reactions and buffering action in acidic soils and basic soils."@en ],
-        [ dcterms:source <https://www.sciencedirect.com/topics/earth-and-planetary-sciences/soil-chemical-property> ;
-            schema:text "Soil chemical properties refer to the chemical attributes of soil that influence its ability to supply nutrients to plants, retain harmful elements, and affect plant growth and microbial populations. These properties include nutrient concentrations, pH levels, and the presence of elements such as nitrogen, phosphorus, and potassium, which are critical for soil quality assessment and agricultural productivity."@en ] ;
-    skos:exactMatch spp:SoilChemicalProperty ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:BaseSaturation,
-        she:Carbonate,
-        she:HydrogenExchangeableBases,
-        she:OxalateExtractableOpticalDensity,
-        she:Sodium,
-        she:SoilChargeProperties,
-        she:SoilChemicalCapacity,
-        she:SoilReactivity,
-        she:SoilRedoxPotential,
-        she:SoilSalinity,
-        she:SoilTotalCarbon,
-        she:SoilpH ;
-    skos:prefLabel "soil chemical properties"@en ;
-    skos:related she:SoilQuality .
 
 she:SoilPorosity a skos:Concept ;
     skos:broader she:DerivedSoilProperties,
@@ -8681,7 +8690,7 @@ she:ObservableSoilProperties a skos:Concept ;
         she:SoilClayMineralogy,
         she:SoilDepth,
         she:SoilNitrogenContents,
-        she:SoilOrganicCarbon,
+        she:SoilOrganicCarbonContents,
         she:SoilPhosphorusContents,
         she:SoilStructure,
         she:SoilTemperature,
@@ -8690,27 +8699,6 @@ she:ObservableSoilProperties a skos:Concept ;
         she:SoilpH,
         she:StoneContents ;
     skos:prefLabel "observable soil properties"@en .
-
-she:SoilComponent a skos:Concept ;
-    skos:broader she:SoilSubstance ;
-    skos:exactMatch spp:SoilComponent ;
-    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
-    skos:narrower she:SoilAggregate,
-        she:SoilAir,
-        she:SoilFluid,
-        she:SoilGas,
-        she:SoilInorganicComponent,
-        she:SoilLiquid,
-        she:SoilMineralMatter,
-        she:SoilMoisture,
-        she:SoilOrganicComponent,
-        she:SoilOrganicMatter,
-        she:SoilParticles,
-        she:SoilSolid,
-        she:SoilSolutes,
-        she:SoilSolution,
-        she:SoilWater ;
-    skos:prefLabel "soil component"@en .
 
 she:SoilDescription a skos:Concept ;
     skos:inScheme <https://soilwise-he.github.io/soil-health> ;
@@ -8753,6 +8741,29 @@ she:SoilPores a skos:Concept ;
         she:StructuralPores,
         she:TexturalPores ;
     skos:prefLabel "soil pores"@en .
+
+she:SoilComponents a skos:Concept ;
+    skos:altLabel "soil component"@en ;
+    skos:broader she:SoilSubstance ;
+    skos:exactMatch spp:SoilComponent ;
+    skos:inScheme <https://soilwise-he.github.io/soil-health> ;
+    skos:narrower she:SoilAggregate,
+        she:SoilAir,
+        she:SoilFluid,
+        she:SoilGas,
+        she:SoilInorganicComponents,
+        she:SoilLiquid,
+        she:SoilMineralMatter,
+        she:SoilMoisture,
+        she:SoilOrganicComponents,
+        she:SoilOrganicMatter,
+        she:SoilParticles,
+        she:SoilSolid,
+        she:SoilSolutes,
+        she:SoilSolution,
+        she:SoilTotalCarbon,
+        she:SoilWater ;
+    skos:prefLabel "soil components"@en .
 
 she:SoilMoistureContents a skos:Concept ;
     skos:altLabel "moisture content"@en,
@@ -9711,8 +9722,7 @@ she:ZincExtractableElements a skos:Concept ;
         she:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
 she:SoilOrganicCarbon a skos:Concept ;
-    skos:broader she:ObservableSoilProperties,
-        she:SoilOrganicMatter,
+    skos:broader she:SoilOrganicMatter,
         she:SoilTotalCarbon ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Carorg ;
             schema:text "Organic carbon refers to the carbon component of soil organic matter, derived from decomposed plant and microbial residues. It serves as a key energy source for soil microbes and influences nutrient cycling, soil structure, and water retention. Organic carbon is a primary indicator of soil fertility and health. Source: Brady & Weil (2017)."@en ] ;

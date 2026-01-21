@@ -176,7 +176,7 @@ she:ObservableSoilProperties a skos:Concept ;
         she:SoilClayMineralogy,
         she:SoilDepth,
         she:SoilNitrogenContents,
-        she:SoilOrganicCarbon,
+        she:SoilOrganicCarbonContents,
         she:SoilPhosphorusContents,
         she:SoilStructure,
         she:SoilTemperature,
@@ -341,8 +341,9 @@ she:SoilNutrientLoss a skos:Concept ;
         she:SoilPLoss ;
     skos:prefLabel "soil nutrient loss"@en .
 
-she:SoilOrganicCarbon a skos:Concept ;
-    skos:prefLabel "soil organic carbon"@en .
+she:SoilOrganicCarbonContents a skos:Concept ;
+    skos:altLabel "soil organic carbon content"@en ;
+    skos:prefLabel "soil organic carbon contents"@en .
 
 she:SoilPLoss a skos:Concept ;
     skos:altLabel "soil P loss"@en ;

@@ -214,7 +214,7 @@ she:SoilPorosity a skos:Concept ;
     she:hasProcedure she:porosityProcedure-Poros_calcul-pf0 .
 
 she:SoilTotalCarbon a skos:Concept ;
-    skos:broader she:SoilChemicalProperties ;
+    skos:broader she:SoilComponents ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Cartot ;
             schema:text "Total carbon in soil includes both organic carbon (from plant and microbial residues) and inorganic carbon (primarily carbonates). It is a fundamental component of soil organic matter, influencing soil fertility, structure, and water retention. High carbon levels are associated with better soil health and productivity. Source: USDA NRCS."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cartot ;
@@ -1552,7 +1552,7 @@ she:SodiumTotalElements a skos:Concept ;
         she:totalElementsProcedure-Total_xtf-t .
 
 she:SoilInorganicCarbon a skos:Concept ;
-    skos:broader she:SoilInorganicComponent ;
+    skos:broader she:SoilInorganicComponents ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Carinorg ;
             schema:text "Inorganic carbon in soil primarily consists of carbonates like calcium carbonate and magnesium carbonate. It contributes to soil pH buffering and is a significant feature of arid and calcareous soils. Excess inorganic carbon can immobilize certain nutrients, requiring careful management in agricultural systems. Source: Soil Science Society of America."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Carinorg ;
