@@ -3770,7 +3770,6 @@ she:SoilComponents a skos:Concept ;
         she:SoilMineralMatter,
         she:SoilMoisture,
         she:SoilOrganicComponents,
-        she:SoilOrganicMatter,
         she:SoilParticles,
         she:SoilSolid,
         she:SoilSolutes,
