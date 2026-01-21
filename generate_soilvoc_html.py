@@ -684,6 +684,62 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
         .toast.show {{
             opacity: 1;
         }}
+        /* Floating action buttons */
+        .floating-buttons {{
+            position: fixed;
+            right: 30px;
+            bottom: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 999;
+        }}
+
+        .floating-btn {{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }}
+
+        .floating-btn:hover {{
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        }}
+
+        .back-to-top {{
+            background: #5a8e6b;
+            color: white;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }}
+
+        .back-to-top.show {{
+            opacity: 1;
+            visibility: visible;
+        }}
+
+        .back-to-top:hover {{
+            background: #4a7c59;
+        }}
+
+        .feedback-btn {{
+            background: #d4a259;
+            color: white;
+        }}
+
+        .feedback-btn:hover {{
+            background: #c4923f;
+        }}
     </style>
 </head>
 <body>
@@ -708,6 +764,20 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
     </div>
 
     <div class="toast" id="toast">URI copied to clipboard!</div>
+
+    <!-- Floating action buttons -->
+    <div class="floating-buttons">
+        <button class="floating-btn back-to-top" id="backToTop" title="Back to top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </button>
+        <a href="https://github.com/soilwise-he/soil-vocabs/issues" target="_blank" class="floating-btn feedback-btn" title="Feedback / Report Issue">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+        </a>
+    </div>
 
     <script>
         const vocabularyData = {json.dumps(vocabulary_data, indent=2)};
@@ -1172,6 +1242,23 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             if (e.key === 'Escape') {{
                 clearSearch();
             }}
+        }});
+
+        // Back to top button functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {{
+            if (window.scrollY > 300) {{
+                backToTopBtn.classList.add('show');
+            }} else {{
+                backToTopBtn.classList.remove('show');
+            }}
+        }});
+
+        backToTopBtn.addEventListener('click', () => {{
+            window.scrollTo({{
+                top: 0,
+                behavior: 'smooth'
+            }});
         }});
     </script>
 </body>
