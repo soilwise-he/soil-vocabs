@@ -5,7 +5,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from rdflib import BNode, Graph, Literal, Namespace, URIRef
-from rdflib.namespace import DCTERMS, RDF, SKOS, SDO
+from rdflib.namespace import DCTERMS, RDF, SKOS, SDO, SOSA
 from rdflib.compare import graph_diff, isomorphic, to_isomorphic
 
 
@@ -183,11 +183,10 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
 
     g = Graph()
 
-    SHE = Namespace("https://soilwise-he.github.io/soil-health#")
     SCHEME_URI = URIRef(scheme_uri)
 
     g.bind("skos", SKOS)
-    g.bind("she", SHE)
+    g.bind("sosa", SOSA)
     g.bind("dcterms", DCTERMS)
     g.bind("schema", SDO)
 
@@ -241,7 +240,7 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
     # Add broader links using prefLabel -> URI mapping.
     # For procedures:
     # - broader == another procedure => skos:broader/skos:narrower
-    # - broader == non-procedure concept => she:isProcedureOf + inverse she:hasProcedure
+    # - broader == non-procedure concept => sosa:isProcedureFor + inverse sosa:hasProcedure
     for row in rows:
         concept_uri = str(row[COL_ID]).strip()
         if not concept_uri:
@@ -259,8 +258,8 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
                     if broader_is_procedure:
                         g.add((concept, SKOS.broader, broader_concept))
                     else:
-                        g.add((concept, SHE.isProcedureOf, broader_concept))
-                        g.add((broader_concept, SHE.hasProcedure, concept))
+                        g.add((concept, SOSA.isProcedureFor, broader_concept))
+                        g.add((broader_concept, SOSA.hasProcedure, concept))
                 else:
                     g.add((concept, SKOS.broader, broader_concept))
 

@@ -4,16 +4,14 @@ Generate enhanced interactive HTML mind map from SoilVoc.ttl with:
 - skos:definition display
 - skos:exactMatch with clickable links
 - Copy URI button for concepts
-- she:hasProcedure relationships
+- sosa:hasProcedure relationships
 - Visual differentiation for procedures
 """
 
 from rdflib import Graph, Namespace, URIRef, BNode
-from rdflib.namespace import SKOS, DCTERMS, RDF, RDFS, SDO
+from rdflib.namespace import SKOS, DCTERMS, RDF, RDFS, SDO, SOSA
 import json
 import traceback
-
-SHE = Namespace("https://soilwise-he.github.io/soil-health#")
 
 def parse_skos_vocabulary_enhanced(ttl_file_path):
     """
@@ -123,9 +121,9 @@ def parse_skos_vocabulary_enhanced(ttl_file_path):
             if concept not in narrower:
                 narrower.append(concept)
 
-        # Get procedures linked via she:hasProcedure
+        # Get procedures linked via sosa:hasProcedure
         procedures = []
-        for proc_uri in g.objects(concept_uri, SHE.hasProcedure):
+        for proc_uri in g.objects(concept_uri, SOSA.hasProcedure):
             proc_info = get_concept_info(proc_uri)
             procedures.append(proc_info)
 

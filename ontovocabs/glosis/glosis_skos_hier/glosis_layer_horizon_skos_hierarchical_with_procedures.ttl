@@ -6,6 +6,7 @@
 @prefix she: <https://soilwise-he.github.io/soil-health#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 she:AcidityExchangeable a skos:Concept ;
     skos:broader she:ExchangeableCations ;
@@ -13,7 +14,7 @@ she:AcidityExchangeable a skos:Concept ;
             schema:text "Exchangeable acidity represents the amount of hydrogen (H⁺) and aluminum (Al³⁺) ions adsorbed onto soil particles that can be exchanged with the soil solution. It is a key factor in determining soil liming requirements and improving nutrient availability in acidic soils. Source: Brady & Weil (2017)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Aciexc ;
     skos:prefLabel "acidity exchangeable"@en ;
-    she:hasProcedure she:acidityExchangeableProcedure-ExchAcid_ph0-kcl1m,
+    sosa:hasProcedure she:acidityExchangeableProcedure-ExchAcid_ph0-kcl1m,
         she:acidityExchangeableProcedure-ExchAcid_ph0-nh4cl,
         she:acidityExchangeableProcedure-ExchAcid_ph0-unkn,
         she:acidityExchangeableProcedure-ExchAcid_ph7-caoac,
@@ -27,7 +28,7 @@ she:AvailableWaterHoldingCapacity a skos:Concept ;
             schema:text "Available water capacity (AWC) measures the volume of water soil can retain between field capacity and the permanent wilting point. It represents the water accessible to plants for uptake. High AWC supports better plant growth, while low AWC may necessitate irrigation. Source: USDA NRCS."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Avavol ;
     skos:prefLabel "available water holding capacity"@en ;
-    she:hasProcedure she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc100wp,
+    sosa:hasProcedure she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc100wp,
         she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc200wp,
         she:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc300wp .
 
@@ -37,7 +38,7 @@ she:BaseSaturation a skos:Concept ;
             schema:text "Base saturation represents the percentage of the soil's cation exchange capacity (CEC) occupied by basic cations such as calcium (Ca²⁺), magnesium (Mg²⁺), potassium (K⁺), and sodium (Na⁺). Higher base saturation typically correlates with higher fertility and a greater ability to supply essential nutrients to plants. This parameter also influences soil pH buffering capacity. Source: Brady & Weil (2017)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Bascal ;
     skos:prefLabel "base saturation"@en ;
-    she:hasProcedure she:baseSaturationProcedure-BSat_calcul-cec,
+    sosa:hasProcedure she:baseSaturationProcedure-BSat_calcul-cec,
         she:baseSaturationProcedure-BSat_calcul-ecec .
 
 she:BiologicalAbundance a skos:Concept ;
@@ -70,7 +71,7 @@ she:CoarseFragments a skos:Concept ;
             schema:text "Coarse fragments are soil particles larger than 2 mm in diameter, such as gravel, cobbles, and stones. They affect soil porosity, water infiltration, and root penetration. Source: Soil Survey Staff (2014). Keys to Soil Taxonomy."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-CoaFra ;
     skos:prefLabel "coarse fragments"@en ;
-    she:hasProcedure she:coarseFragmentsProcedure-CrsFrg_fld,
+    sosa:hasProcedure she:coarseFragmentsProcedure-CrsFrg_fld,
         she:coarseFragmentsProcedure-CrsFrg_fldcls,
         she:coarseFragmentsProcedure-CrsFrg_lab .
 
@@ -95,7 +96,7 @@ she:HydrogenExchangeableBases a skos:Concept ;
             schema:text "Hydrogen ions bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Hydexc ;
     skos:prefLabel "hydrogen exchangeable bases"@en ;
-    she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
+    sosa:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec,
         she:exchangeableBasesProcedure-ExchBases_ph0-cohex,
@@ -136,23 +137,6 @@ she:MoistConsistency a skos:Concept ;
     skos:exactMatch glosis_lh:moistConsistencyProperty ;
     skos:prefLabel "moist consistency"@en .
 
-she:SoilMoistureContents a skos:Concept ;
-    skos:altLabel "moisture content"@en ;
-    skos:broader she:SoilWaterPhysicalProperties ;
-    skos:definition [ dcterms:source glosis_lh:moistureContentProperty ;
-            schema:text "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ] ;
-    skos:exactMatch glosis_lh:moistureContentProperty ;
-    skos:prefLabel "soil moisture contents"@en ;
-    she:hasProcedure she:moistureContentProcedure-VMC_calcul-ptf,
-        she:moistureContentProcedure-VMC_calcul-ptf-brookscorey,
-        she:moistureContentProcedure-VMC_d,
-        she:moistureContentProcedure-VMC_d-cl,
-        she:moistureContentProcedure-VMC_d-cl-ww,
-        she:moistureContentProcedure-VMC_d-ww,
-        she:moistureContentProcedure-VMC_ud,
-        she:moistureContentProcedure-VMC_ud-cl,
-        she:moistureContentProcedure-VMC_ud-co .
-
 she:OxalateExtractableOpticalDensity a skos:Concept ;
     skos:broader she:SoilChemicalProperties ;
     skos:definition [ dcterms:source glosis_lh:oxalateExtractableOpticalDensityProperty ;
@@ -186,7 +170,7 @@ she:SoilElectricalConductivity a skos:Concept ;
             schema:text "Electrical conductivity (EC) measures the ability of soil to conduct an electrical current, which is directly related to the concentration of soluble salts. It is an essential indicator of soil salinity and is used to assess soil's suitability for crop growth. High EC levels can reduce plant water uptake and affect germination, while low levels indicate low salinity and better soil health. Source: USDA NRCS."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Eleccond ;
     skos:prefLabel "soil electrical conductivity"@en ;
-    she:hasProcedure she:electricalConductivityProcedure-EC_ratio1-1,
+    sosa:hasProcedure she:electricalConductivityProcedure-EC_ratio1-1,
         she:electricalConductivityProcedure-EC_ratio1-10,
         she:electricalConductivityProcedure-EC_ratio1-2,
         she:electricalConductivityProcedure-EC_ratio1-2.5,
@@ -198,7 +182,7 @@ she:SoilHydraulicConductivity a skos:Concept ;
             schema:text "Hydraulic conductivity refers to the rate at which water moves through soil pores under a unit hydraulic gradient. It reflects the soil's ability to transmit water, influenced by texture, structure, and porosity. Soils with high hydraulic conductivity, like sandy soils, allow rapid water movement, while clayey soils exhibit slower water flow. This property is critical for understanding water infiltration, drainage, and irrigation management. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Hydcond ;
     skos:prefLabel "soil hydraulic conductivity"@en ;
-    she:hasProcedure she:hydraulicConductivityProcedure-KSat_calcul-ptf,
+    sosa:hasProcedure she:hydraulicConductivityProcedure-KSat_calcul-ptf,
         she:hydraulicConductivityProcedure-KSat_calcul-ptf-genuchten,
         she:hydraulicConductivityProcedure-KSat_calcul-ptf-saxton,
         she:hydraulicConductivityProcedure-Ksat_bhole,
@@ -206,12 +190,29 @@ she:SoilHydraulicConductivity a skos:Concept ;
         she:hydraulicConductivityProcedure-Ksat_dblring,
         she:hydraulicConductivityProcedure-Ksat_invbhole .
 
+she:SoilMoistureContents a skos:Concept ;
+    skos:altLabel "moisture content"@en ;
+    skos:broader she:SoilWaterPhysicalProperties ;
+    skos:definition [ dcterms:source glosis_lh:moistureContentProperty ;
+            schema:text "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ] ;
+    skos:exactMatch glosis_lh:moistureContentProperty ;
+    skos:prefLabel "soil moisture contents"@en ;
+    sosa:hasProcedure she:moistureContentProcedure-VMC_calcul-ptf,
+        she:moistureContentProcedure-VMC_calcul-ptf-brookscorey,
+        she:moistureContentProcedure-VMC_d,
+        she:moistureContentProcedure-VMC_d-cl,
+        she:moistureContentProcedure-VMC_d-cl-ww,
+        she:moistureContentProcedure-VMC_d-ww,
+        she:moistureContentProcedure-VMC_ud,
+        she:moistureContentProcedure-VMC_ud-cl,
+        she:moistureContentProcedure-VMC_ud-co .
+
 she:SoilPorosity a skos:Concept ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Por ;
             schema:text "Porosity refers to the percentage of soil volume occupied by pores or voids, which hold air and water. It directly impacts water infiltration, drainage, and root growth. Soils with high porosity are better suited for crop cultivation, as they provide good aeration and water availability. Source: Brady & Weil (2017)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Por ;
     skos:prefLabel "soil porosity"@en ;
-    she:hasProcedure she:porosityProcedure-Poros_calcul-pf0 .
+    sosa:hasProcedure she:porosityProcedure-Poros_calcul-pf0 .
 
 she:SoilTotalCarbon a skos:Concept ;
     skos:broader she:SoilComponents ;
@@ -221,7 +222,7 @@ she:SoilTotalCarbon a skos:Concept ;
     skos:narrower she:SoilInorganicCarbon,
         she:SoilOrganicCarbon ;
     skos:prefLabel "soil total carbon"@en ;
-    she:hasProcedure she:carbonTotalProcedure-TotC_calcul-ic-oc,
+    sosa:hasProcedure she:carbonTotalProcedure-TotC_calcul-ic-oc,
         she:carbonTotalProcedure-TotC_dc-ht,
         she:carbonTotalProcedure-TotC_dc-ht-analyser,
         she:carbonTotalProcedure-TotC_dc-ht-spec,
@@ -232,7 +233,7 @@ she:SoilpH a skos:Concept ;
             schema:text "Soil pH measures the concentration of hydrogen ions (H⁺) in the soil solution, indicating its acidity or alkalinity on a scale from 1 to 14. Neutral soils have a pH of 7, while values below 7 are acidic and above are alkaline. Soil pH significantly affects nutrient availability, microbial activity, and plant growth. For instance, nutrients like phosphorus are most available in a pH range of 6 to 7. Lime or sulfur applications can adjust soil pH to optimize conditions for crops. Source: USDA Natural Resources Conservation Service (NRCS)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-pH ;
     skos:prefLabel "soil pH"@en ;
-    she:hasProcedure she:pHProcedure-pHCaCl2,
+    sosa:hasProcedure she:pHProcedure-pHCaCl2,
         she:pHProcedure-pHH2O,
         she:pHProcedure-pHKCl,
         she:pHProcedure-pHKCl_sat,
@@ -266,7 +267,7 @@ she:TotalCarbonateEquivalent a skos:Concept ;
             schema:text "The total calcium carbonate equivalent measures the full capacity of soil to neutralize acidity, considering all forms of carbonate and bicarbonate minerals. It is essential for managing soil pH and nutrient availability in acidic soils. Source: FAO Soil Bulletin."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Ccetot ;
     skos:prefLabel "total carbonate equivalent"@en ;
-    she:hasProcedure she:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc,
+    sosa:hasProcedure she:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc,
         she:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-nodc,
         she:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-unkn,
         she:totalCarbonateEquivalentProcedure-CaCO3_acid-dc,
@@ -308,7 +309,7 @@ she:AluminiumExchangeableBase a skos:Concept ;
             schema:text "Aluminium ions bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Aluexc ;
     skos:prefLabel "aluminium exchangeable base"@en ;
-    she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
+    sosa:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec,
         she:exchangeableBasesProcedure-ExchBases_ph0-cohex,
@@ -327,7 +328,7 @@ she:AluminiumExtractableElements a skos:Concept ;
             schema:text "Aluminium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Aluext ;
     skos:prefLabel "aluminium extractable elements"@en ;
-    she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
+    sosa:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
         she:extractableElementsProcedure-Extr_ap21,
@@ -360,7 +361,7 @@ she:AluminiumTotalElements a skos:Concept ;
             schema:text "Total concentration of aluminium in the soil, including both soluble and insoluble forms, typically measured after complete digestion of the soil sample."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Alutot ;
     skos:prefLabel "aluminium total elements"@en ;
-    she:hasProcedure she:totalElementsProcedure-Total_h2so4,
+    sosa:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
         she:totalElementsProcedure-Total_hclo4,
@@ -387,7 +388,7 @@ she:BoronExtractableElements a skos:Concept ;
             schema:text "Boron bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Borext ;
     skos:prefLabel "boron extractable elements"@en ;
-    she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
+    sosa:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
         she:extractableElementsProcedure-Extr_ap21,
@@ -420,7 +421,7 @@ she:BoronTotalElements a skos:Concept ;
             schema:text "Total boron includes all boron forms in soil, crucial for plant cell wall formation and reproductive processes. Deficiency can impair growth, while toxicity is a risk in arid soils or with excessive irrigation. Source: Havlin et al. (2014)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Bortot ;
     skos:prefLabel "boron total elements"@en ;
-    she:hasProcedure she:totalElementsProcedure-Total_h2so4,
+    sosa:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
         she:totalElementsProcedure-Total_hclo4,
@@ -460,7 +461,7 @@ she:BulkDensityFineEarth a skos:Concept ;
             schema:text "This parameter measures the bulk density of the soil fraction smaller than 2 mm (excluding rocks and coarse fragments). It is used to assess the physical properties of soil related to root growth, water movement, and compaction. Source: Soil Science Society of America."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-BulDfine ;
     skos:prefLabel "bulk density fine earth"@en ;
-    she:hasProcedure she:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-fc,
+    sosa:hasProcedure she:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-fc,
         she:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-od,
         she:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-unkn,
         she:bulkDensityFineEarthProcedure-BlkDensF_fe-co-fc,
@@ -491,7 +492,7 @@ she:BulkDensityWholeSoil a skos:Concept ;
             schema:text "This parameter measures the bulk density of the soil fraction smaller than 2 mm (excluding rocks and coarse fragments). It is used to assess the physical properties of soil related to root growth, water movement, and compaction. Source: Soil Science Society of America."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-BulDfine ;
     skos:prefLabel "bulk density whole soil"@en ;
-    she:hasProcedure she:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-fc,
+    sosa:hasProcedure she:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-fc,
         she:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-od,
         she:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-unkn,
         she:bulkDensityWholeSoilProcedure-BlkDensW_we-co-fc,
@@ -507,7 +508,7 @@ she:CadmiumExtractableElements a skos:Concept ;
             schema:text "Cadmium is a heavy metal present in trace amounts in soils, often introduced through industrial pollution or phosphate fertilizers. It is toxic to plants, animals, and humans even at low concentrations. Monitoring cadmium levels is crucial to ensure soil safety and reduce contamination risks in the food chain. Source: Sparks, D.L. (2003)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cad ;
     skos:prefLabel "cadmium extractable elements"@en ;
-    she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
+    sosa:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
         she:extractableElementsProcedure-Extr_ap21,
@@ -540,7 +541,7 @@ she:CadmiumTotalElements a skos:Concept ;
             schema:text "Cadmium is a heavy metal present in trace amounts in soils, often introduced through industrial pollution or phosphate fertilizers. It is toxic to plants, animals, and humans even at low concentrations. Monitoring cadmium levels is crucial to ensure soil safety and reduce contamination risks in the food chain. Source: Sparks, D.L. (2003)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cad ;
     skos:prefLabel "cadmium total elements"@en ;
-    she:hasProcedure she:totalElementsProcedure-Total_h2so4,
+    sosa:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
         she:totalElementsProcedure-Total_hclo4,
@@ -566,7 +567,7 @@ she:CalciumExchangeableBase a skos:Concept ;
             schema:text "Calcium bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Calexc ;
     skos:prefLabel "calcium exchangeable base"@en ;
-    she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
+    sosa:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec,
         she:exchangeableBasesProcedure-ExchBases_ph0-cohex,
@@ -584,7 +585,7 @@ she:CalciumExtractableElements a skos:Concept ;
             schema:text "Calcium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Calext ;
     skos:prefLabel "calcium extractable elements"@en ;
-    she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
+    sosa:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
         she:extractableElementsProcedure-Extr_ap21,
@@ -616,7 +617,7 @@ she:CalciumTotalElements a skos:Concept ;
             schema:text "Total calcium in soil includes all forms, from exchangeable calcium to calcium in minerals. It is essential for plant cell wall structure, enzyme activation, and soil aggregation. Calcium levels influence soil pH and nutrient availability. Source: Havlin et al. (2014)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Caltot ;
     skos:prefLabel "calcium total elements"@en ;
-    she:hasProcedure she:totalElementsProcedure-Total_h2so4,
+    sosa:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
         she:totalElementsProcedure-Total_hclo4,
@@ -665,7 +666,7 @@ she:CationExchangeCapacitySoil a skos:Concept ;
             schema:text "CEC measures the soil’s ability to hold and exchange positively charged ions (cations). It is a critical indicator of soil fertility, as higher CEC values imply greater capacity to retain essential nutrients like calcium, magnesium, and potassium. Clayey and organic-rich soils typically exhibit higher CEC. Source: Soil Science Society of America."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-CEC ;
     skos:prefLabel "cation exchange capacity soil"@en ;
-    she:hasProcedure she:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-cacl2,
+    sosa:hasProcedure she:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-cacl2,
         she:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-lioac,
         she:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-m3,
         she:cationExchangeCapacitySoilProcedure-CEC_ph0-ag-thioura,
@@ -769,7 +770,7 @@ she:CopperExtractableElements a skos:Concept ;
             schema:text "Copper bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Copext ;
     skos:prefLabel "copper extractable elements"@en ;
-    she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
+    sosa:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
         she:extractableElementsProcedure-Extr_ap21,
@@ -801,7 +802,7 @@ she:CopperTotalElements a skos:Concept ;
             schema:text "Total copper comprises all soil copper, including bound and free forms. Copper is vital for plant enzyme activation and metabolic processes. Deficiencies can lead to reduced growth and yields, while excess copper may inhibit root development. Source: Soil Science Society of America."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Coptot ;
     skos:prefLabel "copper total elements"@en ;
-    she:hasProcedure she:totalElementsProcedure-Total_h2so4,
+    sosa:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
         she:totalElementsProcedure-Total_hclo4,
@@ -827,7 +828,7 @@ she:EffectiveCEC a skos:Concept ;
             schema:text "ECEC is the sum of exchangeable cations in soil at its natural pH. It provides a measure of the soil’s fertility under acidic conditions, as it considers both base cations and exchangeable aluminum. Source: Brady & Weil (2017)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-ECEC ;
     skos:prefLabel "effective CEC"@en ;
-    she:hasProcedure she:effectiveCecProcedure-EffCEC_calcul-b,
+    sosa:hasProcedure she:effectiveCecProcedure-EffCEC_calcul-b,
         she:effectiveCecProcedure-EffCEC_calcul-ba .
 
 she:GypsumContents a skos:Concept ;
@@ -859,7 +860,7 @@ she:IronExtractableElements a skos:Concept ;
             schema:text "Iron bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Iroext ;
     skos:prefLabel "iron extractable elements"@en ;
-    she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
+    sosa:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
         she:extractableElementsProcedure-Extr_ap21,
@@ -891,7 +892,7 @@ she:IronTotalElements a skos:Concept ;
             schema:text "Total iron includes all iron forms in the soil, from soluble ferrous iron (Fe²⁺) to insoluble ferric iron (Fe³⁺). Iron is essential for plant chlorophyll synthesis and various enzymatic reactions. Deficiency, often seen in alkaline soils, results in chlorosis, while excessive iron can cause toxicity in acidic soils. Source: Soil Chemistry by Bohn et al."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Irotot ;
     skos:prefLabel "iron total elements"@en ;
-    she:hasProcedure she:totalElementsProcedure-Total_h2so4,
+    sosa:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
         she:totalElementsProcedure-Total_hclo4,
@@ -918,7 +919,7 @@ she:MagnesiumExchangeableBases a skos:Concept ;
             schema:text "Magnesium bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Magexc ;
     skos:prefLabel "magnesium exchangeable bases"@en ;
-    she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
+    sosa:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec,
         she:exchangeableBasesProcedure-ExchBases_ph0-cohex,
@@ -936,7 +937,7 @@ she:MagnesiumExtractableElements a skos:Concept ;
             schema:text "Magnesium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Magext ;
     skos:prefLabel "magnesium extractable elements"@en ;
-    she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
+    sosa:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
         she:extractableElementsProcedure-Extr_ap21,
@@ -968,7 +969,7 @@ she:MagnesiumTotalElements a skos:Concept ;
             schema:text "Total magnesium in soil includes exchangeable, soluble, and mineral-bound forms. Magnesium is essential for chlorophyll synthesis, enzyme activation, and nutrient transport in plants. Its availability is influenced by soil pH and texture. Source: Havlin et al. (2014)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Magtot ;
     skos:prefLabel "magnesium total elements"@en ;
-    she:hasProcedure she:totalElementsProcedure-Total_h2so4,
+    sosa:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
         she:totalElementsProcedure-Total_hclo4,
@@ -995,7 +996,7 @@ she:ManganeseExchangeableBases a skos:Concept ;
             schema:text "Total manganese refers to all forms of manganese in the soil, which is critical for photosynthesis, enzyme activation, and nitrogen metabolism in plants. Manganese deficiencies or toxicities are influenced by soil pH, with deficiencies occurring in high-pH soils and toxicities in low-pH, waterlogged soils.  Source: Brady & Weil (2017)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mantot ;
     skos:prefLabel "manganese exchangeable bases"@en ;
-    she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
+    sosa:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec,
         she:exchangeableBasesProcedure-ExchBases_ph0-cohex,
@@ -1013,7 +1014,7 @@ she:ManganeseExtractableElements a skos:Concept ;
             schema:text "Manganese bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Manext ;
     skos:prefLabel "manganese extractable elements"@en ;
-    she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
+    sosa:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
         she:extractableElementsProcedure-Extr_ap21,
@@ -1045,7 +1046,7 @@ she:ManganeseTotalElements a skos:Concept ;
             schema:text "Total manganese refers to all forms of manganese in the soil, which is critical for photosynthesis, enzyme activation, and nitrogen metabolism in plants. Manganese deficiencies or toxicities are influenced by soil pH, with deficiencies occurring in high-pH soils and toxicities in low-pH, waterlogged soils.  Source: Brady & Weil (2017)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mantot ;
     skos:prefLabel "manganese total elements"@en ;
-    she:hasProcedure she:totalElementsProcedure-Total_h2so4,
+    sosa:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
         she:totalElementsProcedure-Total_hclo4,
@@ -1143,7 +1144,7 @@ she:MolybdenumExtractableElements a skos:Concept ;
             schema:text "Molybdenum is a micronutrient essential for plant enzymes involved in nitrogen fixation and nitrate reduction. Deficiency, often observed in acidic soils, can lead to stunted growth and poor nitrogen utilization. Its availability increases with higher pH, making liming a common solution for molybdenum deficiencies. Source: Havlin et al. (2014)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mol ;
     skos:prefLabel "molybdenum extractable elements"@en ;
-    she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
+    sosa:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
         she:extractableElementsProcedure-Extr_ap21,
@@ -1175,7 +1176,7 @@ she:MolybdenumTotalElements a skos:Concept ;
             schema:text "Molybdenum is a micronutrient essential for plant enzymes involved in nitrogen fixation and nitrate reduction. Deficiency, often observed in acidic soils, can lead to stunted growth and poor nitrogen utilization. Its availability increases with higher pH, making liming a common solution for molybdenum deficiencies. Source: Havlin et al. (2014)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mol ;
     skos:prefLabel "molybdenum total elements"@en ;
-    she:hasProcedure she:totalElementsProcedure-Total_h2so4,
+    sosa:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
         she:totalElementsProcedure-Total_hclo4,
@@ -1249,7 +1250,7 @@ she:NitrogenTotal a skos:Concept ;
             schema:text "Total nitrogen encompasses all nitrogen forms in soil, including organic nitrogen in humus and inorganic nitrogen such as ammonium (NH₄⁺) and nitrate (NO₃⁻). Nitrogen is essential for plant growth, being a vital component of amino acids, proteins, and chlorophyll. Total nitrogen is a key indicator of soil fertility and its capacity to sustain long-term crop productivity. Source: Brady & Weil (2017)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Nittot ;
     skos:prefLabel "nitrogen total"@en ;
-    she:hasProcedure she:nitrogenTotalProcedure-TotalN_bremner,
+    sosa:hasProcedure she:nitrogenTotalProcedure-TotalN_bremner,
         she:nitrogenTotalProcedure-TotalN_calcul,
         she:nitrogenTotalProcedure-TotalN_calcul-oc10,
         she:nitrogenTotalProcedure-TotalN_dc,
@@ -1288,7 +1289,7 @@ she:PhosphorusExtractableElements a skos:Concept ;
             schema:text "Phosphorus bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Phoext ;
     skos:prefLabel "phosphorus extractable elements"@en ;
-    she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
+    sosa:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
         she:extractableElementsProcedure-Extr_ap21,
@@ -1320,7 +1321,7 @@ she:PhosphorusRetention a skos:Concept ;
             schema:text "Phosphorus retention measures a soil's capacity to adsorb and hold phosphorus, influenced by soil texture, pH, and mineralogy. While high retention reduces leaching, it may also limit phosphorus availability to plants. Understanding phosphorus retention helps optimize fertilization and minimize environmental impacts. Source: Brady & Weil (2017)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Phoret ;
     skos:prefLabel "phosphorus retention"@en ;
-    she:hasProcedure she:phosphorusRetentionProcedure-RetentP_blakemore,
+    sosa:hasProcedure she:phosphorusRetentionProcedure-RetentP_blakemore,
         she:phosphorusRetentionProcedure-RetentP_unkn-spec .
 
 she:PhosphorusTotalElements a skos:Concept ;
@@ -1329,7 +1330,7 @@ she:PhosphorusTotalElements a skos:Concept ;
             schema:text "Total phosphorus includes all forms of phosphorus in the soil, both organic and inorganic. While only a fraction is plant-available, total phosphorus serves as a long-term reserve for crop nutrition. Adequate phosphorus levels are crucial for energy transfer, photosynthesis, and root development in plants. Source: Soil Chemistry by Bohn et al."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Photot ;
     skos:prefLabel "phosphorus total elements"@en ;
-    she:hasProcedure she:totalElementsProcedure-Total_h2so4,
+    sosa:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
         she:totalElementsProcedure-Total_hclo4,
@@ -1357,14 +1358,6 @@ she:PoreAbundance a skos:Concept ;
     skos:exactMatch glosis_lh:poresAbundanceProperty ;
     skos:prefLabel "pore abundance"@en .
 
-she:SoilPoreSize a skos:Concept ;
-    skos:altLabel "pores size"@en ;
-    skos:broader she:SoilPores ;
-    skos:definition [ dcterms:source glosis_lh:poresSizeProperty ;
-            schema:text "The Pores Size categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ] ;
-    skos:exactMatch glosis_lh:poresSizeProperty ;
-    skos:prefLabel "soil pore size"@en .
-
 she:PotassiumExchangeableBases a skos:Concept ;
     skos:altLabel "potassium exchangeable base"@en ;
     skos:broader she:Potassium ;
@@ -1372,7 +1365,7 @@ she:PotassiumExchangeableBases a skos:Concept ;
             schema:text "Potassium bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Potexc ;
     skos:prefLabel "potassium exchangeable bases"@en ;
-    she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
+    sosa:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec,
         she:exchangeableBasesProcedure-ExchBases_ph0-cohex,
@@ -1390,7 +1383,7 @@ she:PotassiumExtractableElements a skos:Concept ;
             schema:text "Potassium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Potext ;
     skos:prefLabel "potassium extractable elements"@en ;
-    she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
+    sosa:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
         she:extractableElementsProcedure-Extr_ap21,
@@ -1422,7 +1415,7 @@ she:PotassiumTotalElements a skos:Concept ;
             schema:text "Total potassium includes all forms of potassium in soil, such as mineral-bound, exchangeable, and water-soluble potassium. It plays a vital role in plant growth by regulating water balance, enzyme activation, and photosynthesis. While only a fraction of total potassium is readily available to plants, it serves as a reserve to replenish exchangeable potassium over time. Adequate potassium levels improve crop yield, quality, and resistance to stress. Source: Soil Science Society of America."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Pottot ;
     skos:prefLabel "potassium total elements"@en ;
-    she:hasProcedure she:totalElementsProcedure-Total_h2so4,
+    sosa:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
         she:totalElementsProcedure-Total_hclo4,
@@ -1481,7 +1474,7 @@ she:SodiumExchangeableBases a skos:Concept ;
             schema:text "Sodium bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sodexp ;
     skos:prefLabel "sodium exchangeable bases"@en ;
-    she:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
+    sosa:hasProcedure she:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3,
         she:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec,
         she:exchangeableBasesProcedure-ExchBases_ph0-cohex,
@@ -1499,7 +1492,7 @@ she:SodiumExtractableElements a skos:Concept ;
             schema:text "Sodium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sodext ;
     skos:prefLabel "sodium extractable elements"@en ;
-    she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
+    sosa:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
         she:extractableElementsProcedure-Extr_ap21,
@@ -1531,7 +1524,7 @@ she:SodiumTotalElements a skos:Concept ;
             schema:text "Total sodium includes all sodium present in soil, both soluble and bound. Excess sodium can lead to sodicity, which disrupts soil structure, reduces permeability, and impairs plant growth. Monitoring sodium levels is crucial for managing soil salinity in arid and irrigated regions. Source: Bohn, H.L., et al. (2001). Soil Chemistry."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sodtot ;
     skos:prefLabel "sodium total elements"@en ;
-    she:hasProcedure she:totalElementsProcedure-Total_h2so4,
+    sosa:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
         she:totalElementsProcedure-Total_hclo4,
@@ -1557,7 +1550,7 @@ she:SoilInorganicCarbon a skos:Concept ;
             schema:text "Inorganic carbon in soil primarily consists of carbonates like calcium carbonate and magnesium carbonate. It contributes to soil pH buffering and is a significant feature of arid and calcareous soils. Excess inorganic carbon can immobilize certain nutrients, requiring careful management in agricultural systems. Source: Soil Science Society of America."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Carinorg ;
     skos:prefLabel "soil inorganic carbon"@en ;
-    she:hasProcedure she:carbonInorganicProcedure-InOrgC_calcul-caco3,
+    sosa:hasProcedure she:carbonInorganicProcedure-InOrgC_calcul-caco3,
         she:carbonInorganicProcedure-InOrgC_calcul-tc-oc .
 
 she:SoilOrganicCarbon a skos:Concept ;
@@ -1566,7 +1559,7 @@ she:SoilOrganicCarbon a skos:Concept ;
             schema:text "Organic carbon refers to the carbon component of soil organic matter, derived from decomposed plant and microbial residues. It serves as a key energy source for soil microbes and influences nutrient cycling, soil structure, and water retention. Organic carbon is a primary indicator of soil fertility and health. Source: Brady & Weil (2017)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Carorg ;
     skos:prefLabel "soil organic carbon"@en ;
-    she:hasProcedure she:carbonOrganicProcedure-OrgC_acid-dc,
+    sosa:hasProcedure she:carbonOrganicProcedure-OrgC_acid-dc,
         she:carbonOrganicProcedure-OrgC_acid-dc-ht,
         she:carbonOrganicProcedure-OrgC_acid-dc-ht-analyser,
         she:carbonOrganicProcedure-OrgC_acid-dc-lt,
@@ -1596,7 +1589,7 @@ she:SoilOrganicMatter a skos:Concept ;
             schema:text "Soil organic matter is composed of decomposed plant and animal residues, living soil organisms, and humus. It improves soil structure, water retention, nutrient supply, and microbial activity, making it critical for sustainable agriculture and soil health. Source: Brady & Weil (2017)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Orgmat ;
     skos:prefLabel "soil organic matter"@en ;
-    she:hasProcedure she:organicMatterProcedure-FulAcidC_unkn,
+    sosa:hasProcedure she:organicMatterProcedure-FulAcidC_unkn,
         she:organicMatterProcedure-HumAcidC_unkn,
         she:organicMatterProcedure-OrgM_calcul-oc1.73,
         she:organicMatterProcedure-TotHumC_unkn .
@@ -1606,6 +1599,14 @@ she:SoilPlasticity a skos:Concept ;
             schema:text "The Plasticity measures the soil's ability to deform under stress without cracking or breaking, especially when wet. It is influenced by clay content and mineralogy and is important for engineering and agricultural applications. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ] ;
     skos:exactMatch glosis_lh:plasticityProperty ;
     skos:prefLabel "soil plasticity"@en .
+
+she:SoilPoreSize a skos:Concept ;
+    skos:altLabel "pores size"@en ;
+    skos:broader she:SoilPores ;
+    skos:definition [ dcterms:source glosis_lh:poresSizeProperty ;
+            schema:text "The Pores Size categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ] ;
+    skos:exactMatch glosis_lh:poresSizeProperty ;
+    skos:prefLabel "soil pore size"@en .
 
 she:SolubleAnionTotal a skos:Concept ;
     skos:altLabel "soluble anions total"@en ;
@@ -1643,7 +1644,7 @@ she:SulfurExtractableElements a skos:Concept ;
             schema:text "Sulfur bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sulext ;
     skos:prefLabel "sulfur extractable elements"@en ;
-    she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
+    sosa:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
         she:extractableElementsProcedure-Extr_ap21,
@@ -1675,7 +1676,7 @@ she:SulfurTotalElements a skos:Concept ;
             schema:text "Total sulfur in soil includes both organic and inorganic forms, such as sulfates and sulfur in organic matter. Sulfur is essential for protein synthesis and enzyme functions in plants. Deficiency leads to stunted growth and yellowing of leaves. Total sulfur provides insight into the soil's potential to release plant-available sulfur over time, critical for sustaining crop health. Source: Havlin, J.L., et al. (2014). Soil Fertility and Fertilizers."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Sultot ;
     skos:prefLabel "sulfur total elements"@en ;
-    she:hasProcedure she:totalElementsProcedure-Total_h2so4,
+    sosa:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
         she:totalElementsProcedure-Total_hclo4,
@@ -1717,7 +1718,7 @@ she:ZincExtractableElements a skos:Concept ;
             schema:text "Zinc bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Zinext ;
     skos:prefLabel "zinc extractable elements"@en ;
-    she:hasProcedure she:extractableElementsProcedure-Extr_ap14,
+    sosa:hasProcedure she:extractableElementsProcedure-Extr_ap14,
         she:extractableElementsProcedure-Extr_ap15,
         she:extractableElementsProcedure-Extr_ap20,
         she:extractableElementsProcedure-Extr_ap21,
@@ -1749,7 +1750,7 @@ she:ZincTotalElements a skos:Concept ;
             schema:text "Zinc is a micronutrient essential for plant enzyme systems, protein synthesis, and growth regulation. Deficiency is common in calcareous soils and results in stunted growth and chlorosis. Zinc fertilizers or soil pH adjustments can address deficiencies. Source: Havlin et al. (2014)."@en ] ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Zin ;
     skos:prefLabel "zinc total elements"@en ;
-    she:hasProcedure she:totalElementsProcedure-Total_h2so4,
+    sosa:hasProcedure she:totalElementsProcedure-Total_h2so4,
         she:totalElementsProcedure-Total_hcl,
         she:totalElementsProcedure-Total_hcl-aquaregia,
         she:totalElementsProcedure-Total_hclo4,
@@ -2930,6 +2931,12 @@ she:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc a skos:Concept ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc ;
     skos:prefLabel "CaCO3_calcul-tc-oc"@en .
 
+she:Cadmium a skos:Concept ;
+    skos:broader she:SoilContaminants ;
+    skos:narrower she:CadmiumExtractableElements,
+        she:CadmiumTotalElements ;
+    skos:prefLabel "cadmium"@en .
+
 she:MineralParticles a skos:Concept ;
     skos:altLabel "mineral particle"@en ;
     skos:broader she:SoilPhysicalProperties ;
@@ -2976,16 +2983,17 @@ she:SoilVoids a skos:Concept ;
         she:VoidDiameter ;
     skos:prefLabel "soil voids"@en .
 
+she:Aluminium a skos:Concept ;
+    skos:broader she:SoilContaminants ;
+    skos:narrower she:AluminiumExchangeableBase,
+        she:AluminiumExtractableElements,
+        she:AluminiumTotalElements ;
+    skos:prefLabel "aluminium"@en .
+
 she:Boron a skos:Concept ;
     skos:narrower she:BoronExtractableElements,
         she:BoronTotalElements ;
     skos:prefLabel "boron"@en .
-
-she:Cadmium a skos:Concept ;
-    skos:broader she:SoilContaminants ;
-    skos:narrower she:CadmiumExtractableElements,
-        she:CadmiumTotalElements ;
-    skos:prefLabel "cadmium"@en .
 
 she:Carbonate a skos:Concept ;
     skos:broader she:SoilChemicalProperties ;
@@ -3016,7 +3024,7 @@ she:Gypsum a skos:Concept ;
         she:GypsumForms,
         she:GypsumWeight ;
     skos:prefLabel "gypsum"@en ;
-    she:hasProcedure she:gypsumProcedure-CaSO4_gy01,
+    sosa:hasProcedure she:gypsumProcedure-CaSO4_gy01,
         she:gypsumProcedure-CaSO4_gy02,
         she:gypsumProcedure-CaSO4_gy03,
         she:gypsumProcedure-CaSO4_gy04,
@@ -3065,7 +3073,7 @@ she:SolubleSalts a skos:Concept ;
     skos:exactMatch glosis_cl:physioChemicalPropertyCode-Solsal ;
     skos:narrower she:SaltContents ;
     skos:prefLabel "soluble salts"@en ;
-    she:hasProcedure she:solubleSaltsProcedure-SlbAn_calcul-unkn,
+    sosa:hasProcedure she:solubleSaltsProcedure-SlbAn_calcul-unkn,
         she:solubleSaltsProcedure-SlbCat_calcul-unkn .
 
 she:Sulfur a skos:Concept ;
@@ -3077,13 +3085,6 @@ she:Zinc a skos:Concept ;
     skos:narrower she:ZincExtractableElements,
         she:ZincTotalElements ;
     skos:prefLabel "zinc"@en .
-
-she:Aluminium a skos:Concept ;
-    skos:broader she:SoilContaminants ;
-    skos:narrower she:AluminiumExchangeableBase,
-        she:AluminiumExtractableElements,
-        she:AluminiumTotalElements ;
-    skos:prefLabel "aluminium"@en .
 
 she:Calcium a skos:Concept ;
     skos:narrower she:CalciumExchangeableBase,
