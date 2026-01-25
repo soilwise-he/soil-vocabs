@@ -71,6 +71,26 @@ def parse_skos_vocabulary_enhanced(ttl_file_path):
         return texts[0]
 
     # Build the hierarchy
+    def _get_match_source_label(match_uri: str) -> str | None:
+        if match_uri.startswith("http://aims.fao.org/aos/agrovoc/"):
+            return "AGROVOC"
+        if "thesaurusINRAE" in match_uri:
+            return "INRAE"
+        if "eionet.europa.eu/gemet" in match_uri:
+            return "GEMET"
+        if "w3id.org/glosis/model" in match_uri:
+            return "GloSIS"
+        if "ISO11074" in match_uri:
+            return "ISO11074"
+        if "SoilPhysics.owl" in match_uri:
+            return "Soil Property Process ontology"
+        return None
+
+    def _get_match_local_id(match_uri: str) -> str:
+        if "#" in match_uri:
+            return match_uri.split("#")[-1]
+        return match_uri.rstrip("/").split("/")[-1]
+
     def get_concept_info(concept_uri):
         """Extract information about a concept."""
         pref_label = g.value(concept_uri, SKOS.prefLabel)
@@ -103,9 +123,28 @@ def parse_skos_vocabulary_enhanced(ttl_file_path):
         exact_matches = []
         for match_uri in g.objects(concept_uri, SKOS.exactMatch):
             match_str = str(match_uri)
-            # Extract a readable label from the URI
-            match_label = match_str.split('/')[-1].split('#')[-1]
+            source_label = _get_match_source_label(match_str)
+            local_id = _get_match_local_id(match_str)
+            if source_label:
+                match_label = f"{source_label} ({local_id})"
+            else:
+                match_label = local_id
             exact_matches.append({
+                'uri': match_str,
+                'label': match_label
+            })
+
+        # Get closeMatch links
+        close_matches = []
+        for match_uri in g.objects(concept_uri, SKOS.closeMatch):
+            match_str = str(match_uri)
+            source_label = _get_match_source_label(match_str)
+            local_id = _get_match_local_id(match_str)
+            if source_label:
+                match_label = f"{source_label} ({local_id})"
+            else:
+                match_label = local_id
+            close_matches.append({
                 'uri': match_str,
                 'label': match_label
             })
@@ -135,6 +174,7 @@ def parse_skos_vocabulary_enhanced(ttl_file_path):
             'definition': definitions[0]['text'] if definitions else None,
             'definitions': definitions,
             'exactMatch': exact_matches,
+            'closeMatch': close_matches,
             'isProcedure': is_procedure,
             'procedures': procedures,
             'narrower': [get_concept_info(n) for n in narrower] if narrower else []
@@ -462,6 +502,21 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             display: block;
         }}
 
+        .close-match-info {{
+            margin: 5px 0 10px 54px;
+            padding: 8px 12px;
+            background: #eef2f7;
+            border-left: 3px solid #4f6d8a;
+            border-radius: 4px;
+            font-size: 0.85em;
+            color: #2f3f52;
+            display: none;
+        }}
+
+        .close-match-info.show {{
+            display: block;
+        }}
+
         .exact-match-link {{
             color: #4a7c59;
             text-decoration: underline;
@@ -471,6 +526,17 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
 
         .exact-match-link:hover {{
             color: #3d6b4d;
+        }}
+
+        .close-match-link {{
+            color: #4f6d8a;
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 500;
+        }}
+
+        .close-match-link:hover {{
+            color: #3d5168;
         }}
 
         .procedure-badge {{
@@ -877,9 +943,10 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             const hasDefinition = (concept.definitions && concept.definitions.length > 0) ||
                 (concept.definition !== null && concept.definition !== undefined && concept.definition !== '');
             const hasExactMatch = concept.exactMatch && concept.exactMatch.length > 0;
+            const hasCloseMatch = concept.closeMatch && concept.closeMatch.length > 0;
 
-            // Concept is clickable if it has children OR has definition/exactMatch
-            const isClickable = hasChildren || hasDefinition || hasExactMatch;
+            // Concept is clickable if it has children OR has definition/matches
+            const isClickable = hasChildren || hasDefinition || hasExactMatch || hasCloseMatch;
 
             const notation = concept.notation ? `<span class="concept-notation">${{concept.notation}}</span>` : '';
             const procedureBadge = concept.isProcedure ? '<span class="procedure-badge">Procedure</span>' : '';
@@ -920,6 +987,13 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
                 html += `<div class="exact-match-info">See also: ${{exactMatchLinks}}</div>`;
             }}
 
+            if (concept.closeMatch && concept.closeMatch.length > 0) {{
+                const closeMatchLinks = concept.closeMatch.map(m =>
+                    `<a href="${{m.uri}}" target="_blank" class="close-match-link">${{m.label}}</a>`
+                ).join(', ');
+                html += `<div class="close-match-info">Related terms: ${{closeMatchLinks}}</div>`;
+            }}
+
             if (hasProcedures) {{
                 html += `<div class="procedures-section">
                     <div class="procedures-title">📋 Procedures:</div>
@@ -947,6 +1021,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             const children = concept.querySelectorAll(':scope > .concept-children');
             const definition = concept.querySelector(':scope > .concept-definition');
             const exactMatch = concept.querySelector(':scope > .exact-match-info');
+            const closeMatch = concept.querySelector(':scope > .close-match-info');
             const procedures = concept.querySelector(':scope > .procedures-section');
             const icon = header.querySelector('.toggle-icon');
 
@@ -954,10 +1029,11 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             const hasChildren = children.length > 0;
             const hasDefinition = definition !== null;
             const hasExactMatch = exactMatch !== null;
+            const hasCloseMatch = closeMatch !== null;
             const hasProcedures = procedures !== null;
 
             // If no children and no info to display, do nothing
-            if (!hasChildren && !hasDefinition && !hasExactMatch && !hasProcedures) {{
+            if (!hasChildren && !hasDefinition && !hasExactMatch && !hasCloseMatch && !hasProcedures) {{
                 return;
             }}
 
@@ -978,6 +1054,10 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
 
             if (exactMatch) {{
                 exactMatch.classList.toggle('show');
+            }}
+
+            if (closeMatch) {{
+                closeMatch.classList.toggle('show');
             }}
 
             if (procedures) {{
@@ -1112,6 +1192,9 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             document.querySelectorAll('.exact-match-info.show').forEach(el => {{
                 el.classList.remove('show');
             }});
+            document.querySelectorAll('.close-match-info.show').forEach(el => {{
+                el.classList.remove('show');
+            }});
             document.querySelectorAll('.procedures-section.show').forEach(el => {{
                 el.classList.remove('show');
             }});
@@ -1170,6 +1253,11 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
                 const exactMatch = targetElement.querySelector(':scope > .exact-match-info');
                 if (exactMatch) {{
                     exactMatch.classList.add('show');
+                }}
+
+                const closeMatch = targetElement.querySelector(':scope > .close-match-info');
+                if (closeMatch) {{
+                    closeMatch.classList.add('show');
                 }}
 
                 const procedures = targetElement.querySelector(':scope > .procedures-section');
