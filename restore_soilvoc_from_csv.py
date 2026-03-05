@@ -21,6 +21,8 @@ COL_SOURCE = "source link"
 
 HAS_PROCEDURE = URIRef(str(SOSA) + "hasProcedure")
 IS_PROCEDURE_FOR = URIRef(str(SOSA) + "isProcedureFor")
+OBSERVABLE_PROPERTY = URIRef(str(SOSA) + "ObservableProperty")
+PROCEDURE_CLASS = URIRef(str(SOSA) + "Procedure")
 
 
 COLUMN_ALIASES: dict[str, list[str]] = {
@@ -283,6 +285,15 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
                 target_concept = URIRef(target_uri)
                 g.add((concept, IS_PROCEDURE_FOR, target_concept))
                 g.add((target_concept, HAS_PROCEDURE, concept))
+
+    # Infer SOSA class typing from existing triples.
+    # 1) Concepts with sosa:hasProcedure are sosa:ObservableProperty.
+    for concept, _, _ in g.triples((None, HAS_PROCEDURE, None)):
+        g.add((concept, RDF.type, OBSERVABLE_PROPERTY))
+
+    # 2) Concepts exact-matching glosis procedure URIs are sosa:Procedure.
+    for concept_uri in procedure_concept_uris:
+        g.add((URIRef(concept_uri), RDF.type, PROCEDURE_CLASS))
 
     # Add inferred skos:narrower (original TTL contains these)
     for child, _, parent in g.triples((None, SKOS.broader, None)):
