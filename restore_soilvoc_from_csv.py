@@ -14,9 +14,13 @@ COL_PREF = "prefLabel"
 COL_ALT = "altLabel"
 COL_DEF = "definition"
 COL_BROADER = "broader"
+COL_IS_PROCEDURE_FOR = "isProcedureFor"
 COL_EXACT = "exactMatch"
 COL_CLOSE = "closeMatch"
 COL_SOURCE = "source link"
+
+HAS_PROCEDURE = URIRef(str(SOSA) + "hasProcedure")
+IS_PROCEDURE_FOR = URIRef(str(SOSA) + "isProcedureFor")
 
 
 COLUMN_ALIASES: dict[str, list[str]] = {
@@ -34,6 +38,12 @@ COLUMN_ALIASES: dict[str, list[str]] = {
         "broader",
         "broader term",
         "broader term (immediate, semicolon-separated, use prefLabel)",
+    ],
+    COL_IS_PROCEDURE_FOR: [
+        "isProcedureFor",
+        "is procedure for",
+        "is_procedure_for",
+        "procedure for",
     ],
     COL_EXACT: [
         "exactMatch",
@@ -55,6 +65,19 @@ COLUMN_ALIASES: dict[str, list[str]] = {
         "definition source",
     ],
 }
+
+REQUIRED_COLUMNS: tuple[str, ...] = (
+    COL_ID,
+    COL_PREF,
+    COL_ALT,
+    COL_DEF,
+    COL_BROADER,
+    COL_EXACT,
+    COL_CLOSE,
+    COL_SOURCE,
+)
+
+OPTIONAL_COLUMNS: tuple[str, ...] = (COL_IS_PROCEDURE_FOR,)
 
 
 def _norm_col(name: str) -> str:
@@ -78,7 +101,8 @@ def canonicalize_fieldnames(fieldnames: list[str] | None) -> dict[str, str]:
                 found_actual = actual
                 break
         if found_actual is None:
-            missing.append(canonical)
+            if canonical in REQUIRED_COLUMNS:
+                missing.append(canonical)
         else:
             rename_map[found_actual] = canonical
 
@@ -152,30 +176,30 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
         if any(u.startswith(PROCEDURE_EXACTMATCH_PREFIXES) for u in exacts):
             procedure_concept_uris.add(concept_uri)
 
-    # Build lookups for mapping broader prefLabels -> URIs
-    uri_to_pref: dict[str, str] = {}
+    # Build lookup for mapping prefLabels -> concept URIs
     pref_to_uris: defaultdict[str, list[str]] = defaultdict(list)
     for row in rows:
         uri = str(row[COL_ID]).strip()
         pref = str(row[COL_PREF]).strip()
         if not uri:
             continue
-        uri_to_pref[uri] = pref
         if pref:
             pref_to_uris[pref.casefold()].append(uri)
 
     warnings: dict[str, str] = {}
 
-    def resolve_pref_to_uri(pref_label: str) -> str | None:
+    def resolve_pref_to_uri(pref_label: str, relation_name: str) -> str | None:
         key = pref_label.casefold()
         uris = pref_to_uris.get(key, [])
         if not uris:
-            warnings.setdefault("unresolved_broader_labels", "")
-            warnings["unresolved_broader_labels"] += f"- {pref_label}\n"
+            unresolved_key = f"unresolved_{relation_name}_labels"
+            warnings.setdefault(unresolved_key, "")
+            warnings[unresolved_key] += f"- {pref_label}\n"
             return None
         if len(uris) > 1:
-            warnings.setdefault("ambiguous_broader_labels", "")
-            warnings["ambiguous_broader_labels"] += (
+            ambiguous_key = f"ambiguous_{relation_name}_labels"
+            warnings.setdefault(ambiguous_key, "")
+            warnings[ambiguous_key] += (
                 f"- {pref_label} -> {len(uris)} URIs; using lexicographically smallest\n"
             )
             return sorted(uris)[0]
@@ -194,15 +218,11 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
     g.add((SCHEME_URI, RDF.type, SKOS.ConceptScheme))
 
     # Create concepts + literals + match links
-    concepts: list[URIRef] = []
     for row in rows:
         concept_uri = str(row[COL_ID]).strip()
         if not concept_uri:
             continue
         concept = URIRef(concept_uri)
-        concepts.append(concept)
-
-        is_procedure_concept = concept_uri in procedure_concept_uris
 
         g.add((concept, RDF.type, SKOS.Concept))
         g.add((concept, SKOS.inScheme, SCHEME_URI))
@@ -237,31 +257,32 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
         for uri in split_values(str(row[COL_CLOSE])):
             g.add((concept, SKOS.closeMatch, URIRef(uri)))
 
-    # Add broader links using prefLabel -> URI mapping.
-    # For procedures:
-    # - broader == another procedure => skos:broader/skos:narrower
-    # - broader == non-procedure concept => sosa:isProcedureFor + inverse sosa:hasProcedure
+    # Add broader links from the dedicated broader column only.
     for row in rows:
         concept_uri = str(row[COL_ID]).strip()
         if not concept_uri:
             continue
         concept = URIRef(concept_uri)
 
-        is_procedure_concept = concept_uri in procedure_concept_uris
-
         for broader_label in split_values(str(row[COL_BROADER])):
-            broader_uri = resolve_pref_to_uri(broader_label)
+            broader_uri = resolve_pref_to_uri(broader_label, relation_name="broader")
             if broader_uri:
                 broader_concept = URIRef(broader_uri)
-                if is_procedure_concept:
-                    broader_is_procedure = broader_uri in procedure_concept_uris
-                    if broader_is_procedure:
-                        g.add((concept, SKOS.broader, broader_concept))
-                    else:
-                        g.add((concept, SOSA.isProcedureFor, broader_concept))
-                        g.add((broader_concept, SOSA.hasProcedure, concept))
-                else:
-                    g.add((concept, SKOS.broader, broader_concept))
+                g.add((concept, SKOS.broader, broader_concept))
+
+    # Add explicit procedure links from the dedicated isProcedureFor column.
+    for row in rows:
+        concept_uri = str(row[COL_ID]).strip()
+        if not concept_uri:
+            continue
+        concept = URIRef(concept_uri)
+
+        for target_label in split_values(str(row.get(COL_IS_PROCEDURE_FOR, ""))):
+            target_uri = resolve_pref_to_uri(target_label, relation_name="isprocedurefor")
+            if target_uri:
+                target_concept = URIRef(target_uri)
+                g.add((concept, IS_PROCEDURE_FOR, target_concept))
+                g.add((target_concept, HAS_PROCEDURE, concept))
 
     # Add inferred skos:narrower (original TTL contains these)
     for child, _, parent in g.triples((None, SKOS.broader, None)):
@@ -415,6 +436,12 @@ def main() -> None:
     if warnings.get("unresolved_broader_labels"):
         print("\nWARNING: Unresolved broader labels (no matching prefLabel in CSV):")
         print(warnings["unresolved_broader_labels"].rstrip())
+    if warnings.get("ambiguous_isprocedurefor_labels"):
+        print("\nWARNING: Ambiguous isProcedureFor labels detected:")
+        print(warnings["ambiguous_isprocedurefor_labels"].rstrip())
+    if warnings.get("unresolved_isprocedurefor_labels"):
+        print("\nWARNING: Unresolved isProcedureFor labels (no matching prefLabel in CSV):")
+        print(warnings["unresolved_isprocedurefor_labels"].rstrip())
     if warnings.get("definition_source_mismatch"):
         print("\nWARNING: Definition/source link count mismatch:")
         print(warnings["definition_source_mismatch"].rstrip())
