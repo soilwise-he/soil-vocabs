@@ -1,3 +1,6 @@
+# local worktrees
+.worktrees/
+
 # similarity csv
 entity_similarity_gpt.csv
 
