@@ -397,7 +397,7 @@ def main() -> None:
     parser.add_argument("--out", default="SoilVoc_restored.ttl", help="Output TTL path")
     parser.add_argument(
         "--scheme",
-        default="https://soilwise-he.github.io/soil-health",
+        default="https://soilwise-he.github.io/soil-vocabs",
         help="ConceptScheme URI",
     )
     parser.add_argument(
