@@ -1,3 +1,9 @@
+# coding agents
+docs/plans
+
+# test scripts
+tests/
+
 # local worktrees
 .worktrees/
 

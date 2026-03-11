@@ -936,6 +936,35 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             }}, 2000);
         }}
 
+        function getConceptUriFromHash() {{
+            const rawHash = window.location.hash;
+            if (!rawHash || rawHash === '#') {{
+                return null;
+            }}
+
+            let fragment;
+            try {{
+                fragment = decodeURIComponent(rawHash.slice(1)).trim();
+            }} catch (err) {{
+                console.warn('Failed to decode location hash:', err);
+                return null;
+            }}
+
+            if (!fragment) {{
+                return null;
+            }}
+
+            const targetUri = `${{vocabularyData.scheme_uri}}#${{fragment}}`;
+            return conceptMap.has(targetUri) ? targetUri : null;
+        }}
+
+        function handleHashNavigation() {{
+            const targetUri = getConceptUriFromHash();
+            if (targetUri) {{
+                navigateToConcept(targetUri);
+            }}
+        }}
+
         function renderConcept(concept, level = 0, path = []) {{
             const currentPath = [...path, concept];
             const currentPathKey = pathKeyEncoded(currentPath);
@@ -1296,6 +1325,11 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
         buildConceptMap(vocabularyData.top_concepts);
         renderMindmap();
         renderStats();
+        handleHashNavigation();
+
+        window.addEventListener('hashchange', () => {{
+            handleHashNavigation();
+        }});
 
         // Search results click handling (paths + items)
         const searchResultsDiv = document.getElementById('searchResults');
