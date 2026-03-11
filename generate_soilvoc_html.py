@@ -194,6 +194,39 @@ def parse_skos_vocabulary_enhanced(ttl_file_path):
     return vocabulary
 
 
+def build_fragment_alias_map(vocabulary_data):
+    """Build a lowercase fragment-to-canonical-URI map for unique concept URIs."""
+
+    alias_map = {}
+    ambiguous_fragments = set()
+
+    def visit_concepts(concepts):
+        for concept in concepts:
+            uri = concept.get('uri')
+            if uri and '#' in uri:
+                fragment = uri.split('#', 1)[1]
+                alias_key = fragment.lower()
+                existing_uri = alias_map.get(alias_key)
+                if existing_uri is None:
+                    alias_map[alias_key] = uri
+                elif existing_uri != uri:
+                    ambiguous_fragments.add(alias_key)
+
+            narrower = concept.get('narrower') or []
+            procedures = concept.get('procedures') or []
+            if narrower:
+                visit_concepts(narrower)
+            if procedures:
+                visit_concepts(procedures)
+
+    visit_concepts(vocabulary_data.get('top_concepts', []))
+
+    for alias_key in ambiguous_fragments:
+        alias_map.pop(alias_key, None)
+
+    return alias_map
+
+
 def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
     """
     Generate an enhanced interactive HTML mind map from the vocabulary data.
@@ -202,6 +235,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
         vocabulary_data: Dictionary containing the vocabulary structure
         output_file: Output HTML file path
     """
+    fragment_alias_map = build_fragment_alias_map(vocabulary_data)
     html_content = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -847,6 +881,7 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
 
     <script>
         const vocabularyData = {json.dumps(vocabulary_data, indent=2)};
+        const fragmentAliasMap = {json.dumps(fragment_alias_map, indent=2)};
 
         let allConcepts = [];
         let uniqueConceptUris = new Set();
@@ -955,7 +990,12 @@ def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
             }}
 
             const targetUri = `${{vocabularyData.scheme_uri}}#${{fragment}}`;
-            return conceptMap.has(targetUri) ? targetUri : null;
+            if (conceptMap.has(targetUri)) {{
+                return targetUri;
+            }}
+
+            const aliasTargetUri = fragmentAliasMap[fragment.toLowerCase()];
+            return aliasTargetUri || null;
         }}
 
         function handleHashNavigation() {{
