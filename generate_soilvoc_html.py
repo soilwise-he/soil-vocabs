@@ -84,6 +84,8 @@ def parse_skos_vocabulary_enhanced(ttl_file_path):
             return "ISO11074"
         if "SoilPhysics.owl" in match_uri:
             return "Soil Property Process ontology"
+        if "soil-health" in match_uri:
+            return "SHKG"
         return None
 
     def _get_match_local_id(match_uri: str) -> str:

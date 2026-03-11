@@ -457,6 +457,12 @@ soilvoc:Ions a skos:Concept ;
     skos:narrower soilvoc:ExchangeableCations ;
     skos:prefLabel "ions"@en .
 
+soilvoc:Salts a skos:Concept ;
+    skos:altLabel "salt"@en ;
+    skos:broader soilvoc:SoilChemical ;
+    skos:inScheme <https://soilwise-he.github.io/soil-vocabs> ;
+    skos:prefLabel "salts"@en .
+
 soilvoc:Irrigation a skos:Concept ;
     skos:broader soilvoc:SoilManagement ;
     skos:exactMatch spp:Irrigation ;
