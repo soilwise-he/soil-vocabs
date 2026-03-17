@@ -871,7 +871,7 @@ def _generate_html_mindmap_enhanced_LEGACY(vocabulary_data, output_file='index.h
     <div class="container">
         <div class="header">
             <h1>🌱 SoilVoc</h1>
-            <p>SoilVoc v0.0.1: a SKOS-based thesaurus dedicated to soil science · <a href="https://soilwise-he.eu" target="_blank">SoilWise-HE Project</a></p>
+            <p>SoilVoc v0.0.1: a SKOS-based thesaurus dedicated to soil science · <a href="https://soilwise-he.eu" target="_blank" rel="noopener noreferrer">SoilWise-HE Project</a></p>
         </div>
 
         <div class="search-box">
@@ -897,7 +897,7 @@ def _generate_html_mindmap_enhanced_LEGACY(vocabulary_data, output_file='index.h
                 <polyline points="18 15 12 9 6 15"></polyline>
             </svg>
         </button>
-        <a href="https://github.com/soilwise-he/soil-vocabs/issues" target="_blank" class="floating-btn feedback-btn" title="Feedback / Report Issue">
+        <a href="https://github.com/soilwise-he/soil-vocabs/issues" target="_blank" rel="noopener noreferrer" class="floating-btn feedback-btn" title="Feedback / Report Issue">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
             </svg>
@@ -1067,7 +1067,7 @@ def _generate_html_mindmap_enhanced_LEGACY(vocabulary_data, output_file='index.h
             if (concept.definitions && concept.definitions.length > 0) {{
                 const defItems = concept.definitions.map(d => {{
                     const sourceHtml = d.source
-                        ? ` <a href="${{d.source}}" target="_blank" class="definition-source-link" title="Source">source</a>`
+                        ? ` <a href="${{d.source}}" target="_blank" rel="noopener noreferrer" class="definition-source-link" title="Source">source</a>`
                         : '';
                     return `<div class="definition-item">${{d.text}}${{sourceHtml}}</div>`;
                 }}).join('');
@@ -1078,14 +1078,14 @@ def _generate_html_mindmap_enhanced_LEGACY(vocabulary_data, output_file='index.h
 
             if (concept.exactMatch && concept.exactMatch.length > 0) {{
                 const exactMatchLinks = concept.exactMatch.map(m =>
-                    `<a href="${{m.uri}}" target="_blank" class="exact-match-link">${{m.label}}</a>`
+                    `<a href="${{m.uri}}" target="_blank" rel="noopener noreferrer" class="exact-match-link">${{m.label}}</a>`
                 ).join(', ');
                 html += `<div class="exact-match-info">See also: ${{exactMatchLinks}}</div>`;
             }}
 
             if (concept.closeMatch && concept.closeMatch.length > 0) {{
                 const closeMatchLinks = concept.closeMatch.map(m =>
-                    `<a href="${{m.uri}}" target="_blank" class="close-match-link">${{m.label}}</a>`
+                    `<a href="${{m.uri}}" target="_blank" rel="noopener noreferrer" class="close-match-link">${{m.label}}</a>`
                 ).join(', ');
                 html += `<div class="close-match-info">Related terms: ${{closeMatchLinks}}</div>`;
             }}
