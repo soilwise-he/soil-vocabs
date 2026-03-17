@@ -548,7 +548,7 @@ fetch('soilvoc_data.json')
         document.getElementById('mindmap').innerHTML =
             '<p style="padding:40px;color:#c00;">Failed to load vocabulary data. ' +
             'If opening as a local file, serve via HTTP instead ' +
-            '(e.g. <code>python -m http.server</code> then open http://localhost:8000/viewer/).</p>';
+            '(e.g. <code>python -m http.server</code> then open http://localhost:8000/docs/).</p>';
         console.error('Failed to load soilvoc_data.json:', err);
     });
 
