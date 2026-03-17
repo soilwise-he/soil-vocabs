@@ -348,10 +348,20 @@ let fragmentAliasMap = null;
                 searchResultsDiv.innerHTML = html;
                 searchResultsDiv.classList.add('show');
             } else {
-                searchResultsDiv.innerHTML = `
-                    <div class="search-info">No concepts found matching "${searchTerm}".</div>
-                    <div class="clear-search" onclick="clearSearch()">Clear Search</div>
-                `;
+                // Build DOM nodes safely to avoid injecting user input into innerHTML
+                searchResultsDiv.innerHTML = '';
+
+                const infoDiv = document.createElement('div');
+                infoDiv.className = 'search-info';
+                infoDiv.textContent = `No concepts found matching "${searchTerm}".`;
+
+                const clearDiv = document.createElement('div');
+                clearDiv.className = 'clear-search';
+                clearDiv.textContent = 'Clear Search';
+                clearDiv.onclick = clearSearch;
+
+                searchResultsDiv.appendChild(infoDiv);
+                searchResultsDiv.appendChild(clearDiv);
                 searchResultsDiv.classList.add('show');
             }
         }
