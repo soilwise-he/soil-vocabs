@@ -1,4 +1,4 @@
-name: Update index.html from SoilVoc CSV
+name: Update viewer data from SoilVoc CSV
 
 on:
   push:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  build-html:
+  build-viewer-data:
     runs-on: ubuntu-latest
 
     steps:
@@ -34,24 +34,24 @@ jobs:
           mkdir -p .tmp
           python restore_soilvoc_from_csv.py --csv SoilVoc_concepts.csv --out .tmp/SoilVoc_restored.ttl --compare .tmp/does_not_exist.ttl
 
-      - name: Generate index.html
+      - name: Generate docs/soilvoc_data.json
         run: |
-          python -c "import generate_soilvoc_html as m; v=m.parse_skos_vocabulary_enhanced('.tmp/SoilVoc_restored.ttl'); m.generate_html_mindmap_enhanced(v, 'index.html')"
+          python -c "import generate_soilvoc_html as m; v=m.parse_skos_vocabulary_enhanced('.tmp/SoilVoc_restored.ttl'); m.generate_viewer_data(v, 'docs')"
 
       - name: Clean up temp TTL
         run: |
           rm -rf .tmp
 
-      - name: Commit index.html (if changed)
+      - name: Commit docs/soilvoc_data.json (if changed)
         run: |
-          if git diff --quiet -- index.html; then
-            echo "index.html unchanged; nothing to commit."
+          if git diff --quiet -- docs/soilvoc_data.json; then
+            echo "docs/soilvoc_data.json unchanged; nothing to commit."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add index.html
-          git commit -m "Auto-update index.html from SoilVoc_concepts.csv"
+          git add docs/soilvoc_data.json
+          git commit -m "Auto-update docs/soilvoc_data.json from SoilVoc_concepts.csv"
           git push

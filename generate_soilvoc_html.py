@@ -227,13 +227,38 @@ def build_fragment_alias_map(vocabulary_data):
     return alias_map
 
 
-def generate_html_mindmap_enhanced(vocabulary_data, output_file='index.html'):
+def generate_viewer_data(vocabulary_data, output_dir='docs'):
     """
-    Generate an enhanced interactive HTML mind map from the vocabulary data.
+    Write vocabulary data as JSON for the viewer.
+
+    The static viewer files (index.html, assets/) live in output_dir and are
+    not regenerated here — only soilvoc_data.json is written.
 
     Args:
         vocabulary_data: Dictionary containing the vocabulary structure
-        output_file: Output HTML file path
+        output_dir: Directory containing the viewer (must already have index.html + assets/)
+    """
+    import os
+    fragment_alias_map = build_fragment_alias_map(vocabulary_data)
+    payload = {
+        'vocabulary': vocabulary_data,
+        'fragment_alias_map': fragment_alias_map,
+    }
+    os.makedirs(output_dir, exist_ok=True)
+    out_path = os.path.join(output_dir, 'soilvoc_data.json')
+    with open(out_path, 'w', encoding='utf-8') as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+    print(f"Vocabulary data written: {out_path}")
+    return out_path
+
+
+# ---------------------------------------------------------------------------
+# Legacy function kept for reference — replaced by generate_viewer_data()
+# ---------------------------------------------------------------------------
+def _generate_html_mindmap_enhanced_LEGACY(vocabulary_data, output_file='index.html'):
+    """
+    [DEPRECATED] Generates a self-contained monolithic HTML file.
+    Use generate_viewer_data() + the viewer/ static files instead.
     """
     fragment_alias_map = build_fragment_alias_map(vocabulary_data)
     html_content = f'''<!DOCTYPE html>
@@ -1443,16 +1468,11 @@ if __name__ == '__main__':
         print(f"Found ConceptScheme: {vocabulary['scheme_label']}")
         print(f"Number of top concepts: {len(vocabulary['top_concepts'])}")
 
-        output_file = 'index.html'
-        generate_html_mindmap_enhanced(vocabulary, output_file)
+        generate_viewer_data(vocabulary, output_dir='docs')
 
-        print(f"\nSuccess! Open {output_file} in your web browser to view the enhanced interactive mind map.")
-        print("\nNew features:")
-        print("- ✓ Definitions displayed for all concepts")
-        print("- ✓ Exact matches shown with clickable links")
-        print("- ✓ Copy URI button for each concept")
-        print("- ✓ Procedures displayed in hierarchy")
-        print("- ✓ Visual differentiation for procedures (yellow background)")
+        print("\nSuccess! Serve the viewer with:")
+        print("  python -m http.server")
+        print("Then open http://localhost:8000/docs/ in your browser.")
 
     except FileNotFoundError:
         print(f"Error: File '{ttl_file}' not found.")
