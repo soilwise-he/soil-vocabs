@@ -494,7 +494,7 @@ let fragmentAliasMap = null;
 
 
 // Load vocabulary data and initialize the viewer
-fetch('soilvoc_data.json')
+fetch('assets/soilvoc_data.json')
     .then(r => r.json())
     .then(data => {
         vocabularyData = data.vocabulary;

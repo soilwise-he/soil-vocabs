@@ -1,4 +1,4 @@
-name: Update viewer data from SoilVoc CSV
+name: Update SoilVoc from CSV
 
 on:
   push:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  build-viewer-data:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,31 +27,32 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install rdflib
+          python -m pip install rdflib pandas
 
-      - name: Restore TTL (temporary)
+      - name: Restore SoilVoc.ttl from CSV
         run: |
-          mkdir -p .tmp
-          python restore_soilvoc_from_csv.py --csv SoilVoc_concepts.csv --out .tmp/SoilVoc_restored.ttl --compare .tmp/does_not_exist.ttl
+          python restore_soilvoc_from_csv.py \
+            --csv SoilVoc_concepts.csv \
+            --out SoilVoc.ttl
 
       - name: Generate docs/soilvoc_data.json
         run: |
-          python -c "import generate_soilvoc_html as m; v=m.parse_skos_vocabulary_enhanced('.tmp/SoilVoc_restored.ttl'); m.generate_viewer_data(v, 'docs')"
+          python -c "
+          import generate_soilvoc_html as m
+          v = m.parse_skos_vocabulary_enhanced('SoilVoc.ttl')
+          m.generate_viewer_data(v, 'assets')
+          "
 
-      - name: Clean up temp TTL
+      - name: Commit updated files
         run: |
-          rm -rf .tmp
-
-      - name: Commit docs/soilvoc_data.json (if changed)
-        run: |
-          if git diff --quiet -- docs/soilvoc_data.json; then
-            echo "docs/soilvoc_data.json unchanged; nothing to commit."
+          git diff --quiet -- SoilVoc.ttl assets/soilvoc_data.json && {
+            echo "No changes to commit."
             exit 0
-          fi
+          }
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add docs/soilvoc_data.json
-          git commit -m "Auto-update docs/soilvoc_data.json from SoilVoc_concepts.csv"
+          git add SoilVoc.ttl assets/soilvoc_data.json
+          git commit -m "Auto-update SoilVoc.ttl and soilvoc_data.json from CSV [skip ci]"
           git push
