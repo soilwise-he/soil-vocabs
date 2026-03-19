@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoilVoc</title>
+    <link rel="stylesheet" href="assets/soilvoc.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌱 SoilVoc</h1>
+            <p>SoilVoc v0.0.1: a SKOS-based thesaurus dedicated to soil science · <a href="https://soilwise-he.eu" target="_blank" rel="noopener noreferrer">SoilWise-HE Project</a></p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search all concepts by label or notation...">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <div class="mindmap" id="mindmap">
+            <p class="loading-msg">Loading vocabulary...</p>
+        </div>
+
+        <div class="stats" id="stats"></div>
+    </div>
+
+    <div class="toast" id="toast">URI copied to clipboard!</div>
+
+    <div class="floating-buttons">
+        <button class="floating-btn back-to-top" id="backToTop" title="Back to top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </button>
+        <a href="https://github.com/soilwise-he/soil-vocabs/issues" target="_blank" rel="noopener noreferrer" class="floating-btn feedback-btn" title="Feedback / Report Issue">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+        </a>
+    </div>
+
+    <script src="assets/soilvoc.js"></script>
+</body>
+</html>
