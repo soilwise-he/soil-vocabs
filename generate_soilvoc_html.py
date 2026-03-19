@@ -227,7 +227,7 @@ def build_fragment_alias_map(vocabulary_data):
     return alias_map
 
 
-def generate_viewer_data(vocabulary_data, output_dir='docs'):
+def generate_viewer_data(vocabulary_data, output_dir='docs', version=None):
     """
     Write vocabulary data as JSON for the viewer.
 
@@ -237,10 +237,12 @@ def generate_viewer_data(vocabulary_data, output_dir='docs'):
     Args:
         vocabulary_data: Dictionary containing the vocabulary structure
         output_dir: Directory containing the viewer (must already have index.html + assets/)
+        version: Optional version string (e.g. "v0.2.0") injected into the JSON
     """
     import os
     fragment_alias_map = build_fragment_alias_map(vocabulary_data)
     payload = {
+        'version': version or 'unknown',
         'vocabulary': vocabulary_data,
         'fragment_alias_map': fragment_alias_map,
     }
