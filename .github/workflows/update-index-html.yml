@@ -35,12 +35,13 @@ jobs:
             --csv SoilVoc_concepts.csv \
             --out SoilVoc.ttl
 
-      - name: Generate docs/soilvoc_data.json
+      - name: Generate assets/soilvoc_data.json
         run: |
+          VERSION=$(cat VERSION)
           python -c "
           import generate_soilvoc_html as m
           v = m.parse_skos_vocabulary_enhanced('SoilVoc.ttl')
-          m.generate_viewer_data(v, 'assets')
+          m.generate_viewer_data(v, 'assets', version='${VERSION}')
           "
 
       - name: Commit updated files

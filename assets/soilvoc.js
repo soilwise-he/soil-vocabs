@@ -499,6 +499,7 @@ fetch('assets/soilvoc_data.json')
     .then(data => {
         vocabularyData = data.vocabulary;
         fragmentAliasMap = data.fragment_alias_map;
+        document.getElementById('version-tag').textContent = data.version || '';
 
         buildConceptMap(vocabularyData.top_concepts);
         renderMindmap();
