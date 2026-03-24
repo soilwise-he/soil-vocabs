@@ -8,6 +8,9 @@ from rdflib import BNode, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCTERMS, RDF, SKOS, SDO, SOSA
 from rdflib.compare import graph_diff, isomorphic, to_isomorphic
 
+EUSOILVOC_SCHEME_URI = "https://w3id.org/eusoilvoc"
+EUSOILVOC_NAMESPACE = Namespace(f"{EUSOILVOC_SCHEME_URI}#")
+
 
 COL_ID = "ID"
 COL_PREF = "prefLabel"
@@ -215,6 +218,8 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
     g.bind("sosa", SOSA)
     g.bind("dcterms", DCTERMS)
     g.bind("schema", SDO)
+    if scheme_uri == EUSOILVOC_SCHEME_URI:
+        g.bind("eusoilvoc", EUSOILVOC_NAMESPACE)
 
     # Create concept scheme (CSV doesn't carry scheme metadata beyond URI)
     g.add((SCHEME_URI, RDF.type, SKOS.ConceptScheme))
@@ -397,7 +402,7 @@ def main() -> None:
     parser.add_argument("--out", default="SoilVoc_restored.ttl", help="Output TTL path")
     parser.add_argument(
         "--scheme",
-        default="https://soilwise-he.github.io/soil-vocabs",
+        default=EUSOILVOC_SCHEME_URI,
         help="ConceptScheme URI",
     )
     parser.add_argument(
