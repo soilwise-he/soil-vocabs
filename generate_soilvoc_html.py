@@ -12,6 +12,7 @@ from rdflib import Graph, Namespace, URIRef, BNode
 from rdflib.namespace import SKOS, DCTERMS, RDF, RDFS, SDO, SOSA
 import json
 import traceback
+from pathlib import Path
 
 def parse_skos_vocabulary_enhanced(ttl_file_path):
     """
@@ -227,16 +228,16 @@ def build_fragment_alias_map(vocabulary_data):
     return alias_map
 
 
-def generate_viewer_data(vocabulary_data, output_dir='docs', version=None):
+def generate_viewer_data(vocabulary_data, output_dir='assets', version=None):
     """
     Write vocabulary data as JSON for the viewer.
 
-    The static viewer files (index.html, assets/) live in output_dir and are
-    not regenerated here — only soilvoc_data.json is written.
+    The static viewer shell lives at the repository root and loads
+    assets/soilvoc_data.json at runtime. Only soilvoc_data.json is written here.
 
     Args:
         vocabulary_data: Dictionary containing the vocabulary structure
-        output_dir: Directory containing the viewer (must already have index.html + assets/)
+        output_dir: Directory where soilvoc_data.json should be written
         version: Optional version string (e.g. "v0.2.0") injected into the JSON
     """
     import os
@@ -252,6 +253,16 @@ def generate_viewer_data(vocabulary_data, output_dir='docs', version=None):
         json.dump(payload, f, ensure_ascii=False, indent=2)
     print(f"Vocabulary data written: {out_path}")
     return out_path
+
+
+def read_version_file(version_file='VERSION'):
+    """Read the viewer version from a local VERSION file."""
+    version_path = Path(version_file)
+    if not version_path.exists():
+        return None
+
+    version = version_path.read_text(encoding='utf-8').strip()
+    return version or None
 
 
 # ---------------------------------------------------------------------------
@@ -1466,15 +1477,20 @@ if __name__ == '__main__':
     try:
         print(f"Parsing SKOS vocabulary from: {ttl_file}")
         vocabulary = parse_skos_vocabulary_enhanced(ttl_file)
+        version = read_version_file('VERSION')
 
         print(f"Found ConceptScheme: {vocabulary['scheme_label']}")
         print(f"Number of top concepts: {len(vocabulary['top_concepts'])}")
+        if version:
+            print(f"Using version: {version}")
+        else:
+            print("VERSION file not found or empty; using version: unknown")
 
-        generate_viewer_data(vocabulary, output_dir='docs')
+        generate_viewer_data(vocabulary, output_dir='assets', version=version)
 
         print("\nSuccess! Serve the viewer with:")
         print("  python -m http.server")
-        print("Then open http://localhost:8000/docs/ in your browser.")
+        print("Then open http://localhost:8000/ in your browser.")
 
     except FileNotFoundError:
         print(f"Error: File '{ttl_file}' not found.")
