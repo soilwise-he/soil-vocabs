@@ -1,9 +1,10 @@
-name: Update SoilVoc from CSV
+name: Update SoilVoc viewer data from source files
 
 on:
   push:
     paths:
       - SoilVoc_concepts.csv
+      - VERSION
   workflow_dispatch:
 
 permissions:
@@ -35,6 +36,8 @@ jobs:
             --csv SoilVoc_concepts.csv \
             --out SoilVoc.ttl
 
+      # index.html, assets/soilvoc.js, and assets/soilvoc.css are committed
+      # static viewer files. Only assets/soilvoc_data.json is regenerated here.
       - name: Generate assets/soilvoc_data.json
         run: |
           VERSION=$(cat VERSION)
@@ -55,5 +58,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add SoilVoc.ttl assets/soilvoc_data.json
-          git commit -m "Auto-update SoilVoc.ttl and soilvoc_data.json from CSV [skip ci]"
+          git commit -m "Auto-update SoilVoc.ttl and soilvoc_data.json from source files [skip ci]"
           git push
