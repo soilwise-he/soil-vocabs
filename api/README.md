@@ -187,5 +187,5 @@ api/
 A docker is available on ghcr.io
 
 ```
-docker run -p8000:8000 ghcr.io/soilwise-he/soil-vocabs
+docker run -p8000:8000 ghcr.io/soilwise-he/soil-vocabs:latest
 ```

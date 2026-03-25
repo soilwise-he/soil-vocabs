@@ -5,7 +5,7 @@ on:
     paths:
       - SoilVoc_concepts.csv
       - VERSION
-      - api
+      - "api/**"
   workflow_dispatch:
 
 permissions:
