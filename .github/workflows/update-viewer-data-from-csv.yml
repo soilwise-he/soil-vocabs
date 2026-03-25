@@ -8,7 +8,8 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  packages: write   # required for GHCR  
 
 jobs:
   build:
@@ -60,3 +61,23 @@ jobs:
           git add SoilVoc.ttl assets/soilvoc_data.json
           git commit -m "Auto-update SoilVoc.ttl and soilvoc_data.json from source files [skip ci]"
           git push
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags)
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository_owner }}/soil-vocabs
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
