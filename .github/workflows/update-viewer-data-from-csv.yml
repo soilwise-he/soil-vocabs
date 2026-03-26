@@ -32,26 +32,32 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install rdflib pandas
 
-      - name: Restore SoilVoc.ttl from CSV
+      - name: Restore temporary TTL from CSV
+        env:
+          RESTORED_TTL: ${{ runner.temp }}/SoilVoc_restored.ttl
         run: |
           python restore_soilvoc_from_csv.py \
             --csv SoilVoc_concepts.csv \
-            --out SoilVoc.ttl
+            --out "$RESTORED_TTL"
 
       # index.html, assets/soilvoc.js, and assets/soilvoc.css are committed
-      # static viewer files. Only assets/soilvoc_data.json is regenerated here.
+      # static viewer files. A temporary restored TTL is used only to regenerate
+      # assets/soilvoc_data.json and is not committed.
       - name: Generate assets/soilvoc_data.json
+        env:
+          RESTORED_TTL: ${{ runner.temp }}/SoilVoc_restored.ttl
         run: |
           VERSION=$(cat VERSION)
           python -c "
+          import os
           import generate_soilvoc_html as m
-          v = m.parse_skos_vocabulary_enhanced('SoilVoc.ttl')
+          v = m.parse_skos_vocabulary_enhanced(os.environ['RESTORED_TTL'])
           m.generate_viewer_data(v, 'assets', version='${VERSION}')
           "
 
       - name: Commit updated files
         run: |
-          git diff --quiet -- SoilVoc.ttl assets/soilvoc_data.json && {
+          git diff --quiet -- assets/soilvoc_data.json && {
             echo "No changes to commit."
             exit 0
           }
@@ -59,8 +65,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add SoilVoc.ttl assets/soilvoc_data.json
-          git commit -m "Auto-update SoilVoc.ttl and soilvoc_data.json from source files [skip ci]"
+          git add assets/soilvoc_data.json
+          git commit -m "Auto-update soilvoc_data.json from source files [skip ci]"
           git push
 
       - name: Log in to GHCR
