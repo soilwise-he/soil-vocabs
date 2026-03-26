@@ -14,6 +14,10 @@ RUN mkdir api
 COPY ./api ./api
 COPY ./SoilVoc.ttl .
 
+RUN mkdir site
+COPY ./index.html ./site/
+COPY ./assets ./site/assets
+
 # Expose FastAPI port
 EXPOSE 8000
 
