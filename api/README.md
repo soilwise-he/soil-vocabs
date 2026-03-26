@@ -184,10 +184,19 @@ api/
 
 ## Docker
 
-A docker image is available on ghcr.io.
+A docker image is available on ghcr.io. The container serves both the REST API and the static vocabulary viewer.
 
 ```
 docker run -p8000:8000 ghcr.io/soilwise-he/soil-vocabs:latest
 ```
 
-You can set an env variable 'ROOTPATH' to /example to run the api at a path, e.g. http://example.com/example/docs.
+- `/` — static vocabulary viewer
+- `/api/v1/concepts/...` — REST API
+- `/docs` — Swagger UI
+
+### Environment variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `ROOTPATH` | (empty) | Set to e.g. `/example` to run behind a reverse proxy at a sub-path |
+| `SITEPATH` | `site` | Directory containing `index.html` and `assets/`. Set to `.` for local development |
