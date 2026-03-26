@@ -1,5 +1,4 @@
 from pathlib import Path
-
 from rdflib import BNode, Graph, Namespace, URIRef
 from rdflib.namespace import DCTERMS, RDF, SDO, SKOS
 
