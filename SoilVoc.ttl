@@ -3513,7 +3513,8 @@ eusoilvoc:WetSoilBulkDensity a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "wet soil bulk density"@en .
 
-eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph0-kcl1m a skos:Concept ;
+eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph0-kcl1m a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:acidityExchangeableProcedure-ExchAcid_ph0-kcl1m ;
             schema:text "Exch acidity (H+Al) unbuffered, in 1 M KCl extract"@en ] ;
     skos:exactMatch glosis_proc:acidityExchangeableProcedure-ExchAcid_ph0-kcl1m ;
@@ -3521,7 +3522,8 @@ eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph0-kcl1m a skos:Concept ;
     skos:prefLabel "ExchAcid_ph0-kcl1m"@en ;
     sosa:isProcedureFor eusoilvoc:AcidityExchangeable .
 
-eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph0-nh4cl a skos:Concept ;
+eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph0-nh4cl a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:acidityExchangeableProcedure-ExchAcid_ph0-nh4cl ;
             schema:text "Exch acidity (H+Al) unbuffered, in 0.05-0.1 M NH4Cl extract"@en ] ;
     skos:exactMatch glosis_proc:acidityExchangeableProcedure-ExchAcid_ph0-nh4cl ;
@@ -3529,7 +3531,8 @@ eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph0-nh4cl a skos:Concept ;
     skos:prefLabel "ExchAcid_ph0-nh4cl"@en ;
     sosa:isProcedureFor eusoilvoc:AcidityExchangeable .
 
-eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph0-unkn a skos:Concept ;
+eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph0-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:acidityExchangeableProcedure-ExchAcid_ph0-unkn ;
             schema:text "Exch acidity (H+Al) unbuffered, in unknown extract"@en ] ;
     skos:exactMatch glosis_proc:acidityExchangeableProcedure-ExchAcid_ph0-unkn ;
@@ -3537,7 +3540,8 @@ eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph0-unkn a skos:Concept ;
     skos:prefLabel "ExchAcid_ph0-unk"@en ;
     sosa:isProcedureFor eusoilvoc:AcidityExchangeable .
 
-eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph7-caoac a skos:Concept ;
+eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph7-caoac a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:acidityExchangeableProcedure-ExchAcid_ph7-caoac ;
             schema:text "Exch acidity (H+Al) buffered at pH 7, in 1M Ca-acetate extract"@en ] ;
     skos:exactMatch glosis_proc:acidityExchangeableProcedure-ExchAcid_ph7-caoac ;
@@ -3545,7 +3549,8 @@ eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph7-caoac a skos:Concept ;
     skos:prefLabel "ExchAcid_ph7-caoac"@en ;
     sosa:isProcedureFor eusoilvoc:AcidityExchangeable .
 
-eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph7-unkn a skos:Concept ;
+eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph7-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:acidityExchangeableProcedure-ExchAcid_ph7-unkn ;
             schema:text "Exch acidity (H+Al) buffered at pH 7, in unknown extract"@en ] ;
     skos:exactMatch glosis_proc:acidityExchangeableProcedure-ExchAcid_ph7-unkn ;
@@ -3553,7 +3558,8 @@ eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph7-unkn a skos:Concept ;
     skos:prefLabel "ExchAcid_ph7-unk"@en ;
     sosa:isProcedureFor eusoilvoc:AcidityExchangeable .
 
-eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph8-bacl2tea a skos:Concept ;
+eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph8-bacl2tea a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:acidityExchangeableProcedure-ExchAcid_ph8-bacl2tea ;
             schema:text "Exch (extractable / potential) acidity (Al) buffered at pH 8.0-8.5, in 1 M BaCl2 - TEA"@en ] ;
     skos:exactMatch glosis_proc:acidityExchangeableProcedure-ExchAcid_ph8-bacl2tea ;
@@ -3561,7 +3567,8 @@ eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph8-bacl2tea a skos:Concept ;
     skos:prefLabel "ExchAcid_ph8-bacl2tea"@en ;
     sosa:isProcedureFor eusoilvoc:AcidityExchangeable .
 
-eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph8-unkn a skos:Concept ;
+eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph8-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:acidityExchangeableProcedure-ExchAcid_ph8-unkn ;
             schema:text "Exch (extractable / potential) acidity (Al) buffered at pH 8.0-8.5, in unknown extract"@en ] ;
     skos:exactMatch glosis_proc:acidityExchangeableProcedure-ExchAcid_ph8-unkn ;
@@ -3569,7 +3576,8 @@ eusoilvoc:acidityExchangeableProcedure-ExchAcid_ph8-unkn a skos:Concept ;
     skos:prefLabel "ExchAcid_ph8-unk"@en ;
     sosa:isProcedureFor eusoilvoc:AcidityExchangeable .
 
-eusoilvoc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc100wp a skos:Concept ;
+eusoilvoc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc100wp a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc100wp ;
             schema:text "Plant available water holding capacity of the soil fine earth fraction, calculated with field capacity defined at 100 cm (pF 2.0)"@en ] ;
     skos:exactMatch glosis_proc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc100wp ;
@@ -3577,7 +3585,8 @@ eusoilvoc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc100wp a skos:Con
     skos:prefLabel "PAWHC_calcul-fc100wp"@en ;
     sosa:isProcedureFor eusoilvoc:AvailableWaterHoldingCapacity .
 
-eusoilvoc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc200wp a skos:Concept ;
+eusoilvoc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc200wp a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc200wp ;
             schema:text "Plant available water holding capacity of the soil fine earth fraction, calculated with field capacity defined at 200 cm (pF 2.3)"@en ] ;
     skos:exactMatch glosis_proc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc200wp ;
@@ -3585,7 +3594,8 @@ eusoilvoc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc200wp a skos:Con
     skos:prefLabel "PAWHC_calcul-fc200wp"@en ;
     sosa:isProcedureFor eusoilvoc:AvailableWaterHoldingCapacity .
 
-eusoilvoc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc300wp a skos:Concept ;
+eusoilvoc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc300wp a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc300wp ;
             schema:text "Plant available water holding capacity of the soil fine earth fraction, calculated with field capacity defined at 300 cm (pF 2.5)"@en ] ;
     skos:exactMatch glosis_proc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc300wp ;
@@ -3593,7 +3603,8 @@ eusoilvoc:availableWaterHoldingCapacityProcedure-PAWHC_calcul-fc300wp a skos:Con
     skos:prefLabel "PAWHC_calcul-fc300wp"@en ;
     sosa:isProcedureFor eusoilvoc:AvailableWaterHoldingCapacity .
 
-eusoilvoc:baseSaturationProcedure-BSat_calcul-cec a skos:Concept ;
+eusoilvoc:baseSaturationProcedure-BSat_calcul-cec a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:baseSaturationProcedure-BSat_calcul-cec ;
             schema:text "Sum of exchangeable bases (Ca++, Mg++, K+, Na+) as percentage of CEC (method specified with CEC and ExchBases)"@en ] ;
     skos:exactMatch glosis_proc:baseSaturationProcedure-BSat_calcul-cec ;
@@ -3601,7 +3612,8 @@ eusoilvoc:baseSaturationProcedure-BSat_calcul-cec a skos:Concept ;
     skos:prefLabel "BSat_calcul-cec"@en ;
     sosa:isProcedureFor eusoilvoc:BaseSaturation .
 
-eusoilvoc:baseSaturationProcedure-BSat_calcul-ecec a skos:Concept ;
+eusoilvoc:baseSaturationProcedure-BSat_calcul-ecec a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:baseSaturationProcedure-BSat_calcul-ecec ;
             schema:text "Sum of exchangeable bases (Ca++, Mg++, K+, Na+) as percentage of EffCEC (method specified with EffCEC and ExchBases)"@en ] ;
     skos:exactMatch glosis_proc:baseSaturationProcedure-BSat_calcul-ecec ;
@@ -3609,7 +3621,8 @@ eusoilvoc:baseSaturationProcedure-BSat_calcul-ecec a skos:Concept ;
     skos:prefLabel "BSat_calcul-ecec"@en ;
     sosa:isProcedureFor eusoilvoc:BaseSaturation .
 
-eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-fc a skos:Concept ;
+eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-fc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-fc ;
             schema:text "Fine earth. Clod samples (natural clods or reconstituted from < 2mm sample), at field capacity (0.33 bar, 33 kPa, 330 cm, pF 2.5), corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-fc ;
@@ -3617,7 +3630,8 @@ eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-fc a skos:Concept ;
     skos:prefLabel "BlkDensF_fe-cl-fc"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityFineEarth .
 
-eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-od a skos:Concept ;
+eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-od a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-od ;
             schema:text "Fine earth. Clod samples (natural clods or reconstituted from < 2mm sample), at oven dry, corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-od ;
@@ -3625,7 +3639,8 @@ eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-od a skos:Concept ;
     skos:prefLabel "BlkDensF_fe-cl-od"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityFineEarth .
 
-eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-unkn a skos:Concept ;
+eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-unkn ;
             schema:text "Fine earth. Clod samples (natural clods or reconstituted from < 2mm sample), at unknown humidity, corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-unkn ;
@@ -3633,7 +3648,8 @@ eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-cl-unkn a skos:Concept ;
     skos:prefLabel "BlkDensF_fe-cl-unk"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityFineEarth .
 
-eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-fc a skos:Concept ;
+eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-fc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-fc ;
             schema:text "Fine earth. Core sampling (pF rings), at field capacity (0.33 bar, 33 kPa, 336 cm, pF 2.5), corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-fc ;
@@ -3641,7 +3657,8 @@ eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-fc a skos:Concept ;
     skos:prefLabel "BlkDensF_fe-co-fc"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityFineEarth .
 
-eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-od a skos:Concept ;
+eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-od a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-od ;
             schema:text "Fine earth. Core sampling (pF rings), at oven dry, corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-od ;
@@ -3649,7 +3666,8 @@ eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-od a skos:Concept ;
     skos:prefLabel "BlkDensF_fe-co-od"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityFineEarth .
 
-eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-unkn a skos:Concept ;
+eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-unkn ;
             schema:text "Fine earth. Core sampling (pF rings), at unknown humidity, corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-unkn ;
@@ -3657,7 +3675,8 @@ eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-co-unkn a skos:Concept ;
     skos:prefLabel "BlkDensF_fe-co-unk"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityFineEarth .
 
-eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-rpl-unkn a skos:Concept ;
+eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-rpl-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-rpl-unkn ;
             schema:text "Fine earth. Excavation and replacement (i.e. soils too fragile to remove a stable sample) e.g. by auger, at unknown humidity, corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-rpl-unkn ;
@@ -3665,7 +3684,8 @@ eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-rpl-unkn a skos:Concept ;
     skos:prefLabel "BlkDensF_fe-rpl-unk"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityFineEarth .
 
-eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn a skos:Concept ;
+eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn ;
             schema:text "Fine earth. Type of sample unknown, at unknown humidity, corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn ;
@@ -3673,7 +3693,8 @@ eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn a skos:Concept ;
     skos:prefLabel "BlkDensF_fe-unk"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityFineEarth .
 
-eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-fc a skos:Concept ;
+eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-fc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-fc ;
             schema:text "Fine earth. Type of sample unknown, at field capacity (0.33 bar, 33 kPa, 330 cm, pF 2.5), corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-fc ;
@@ -3681,7 +3702,8 @@ eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-fc a skos:Concept ;
     skos:prefLabel "BlkDensF_fe-unkn-fc"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityFineEarth .
 
-eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-od a skos:Concept ;
+eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-od a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-od ;
             schema:text "Fine earth. Type of sample unknown, at oven dry, corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-od ;
@@ -3689,7 +3711,8 @@ eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-od a skos:Concept ;
     skos:prefLabel "BlkDensF_fe-unkn-od"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityFineEarth .
 
-eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-fc a skos:Concept ;
+eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-fc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-fc ;
             schema:text "Whole earth. Clod samples (natural clods), at field capacity (0.33 bar, 33 kPa, 330 cm, pF 2.5), not corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-fc ;
@@ -3697,7 +3720,8 @@ eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-fc a skos:Concept ;
     skos:prefLabel "BlkDensW_we-cl-fc"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityWholeSoil .
 
-eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-od a skos:Concept ;
+eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-od a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-od ;
             schema:text "Whole earth. Clod samples (natural clods), at oven dry, not corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-od ;
@@ -3705,7 +3729,8 @@ eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-od a skos:Concept ;
     skos:prefLabel "BlkDensW_we-cl-od"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityWholeSoil .
 
-eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-unkn a skos:Concept ;
+eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-unkn ;
             schema:text "Whole earth. Clod samples (natural clods), at unknown humidity, not corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-unkn ;
@@ -3713,7 +3738,8 @@ eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-unkn a skos:Concept ;
     skos:prefLabel "BlkDensW_we-cl-unk"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityWholeSoil .
 
-eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-fc a skos:Concept ;
+eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-fc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-fc ;
             schema:text "Whole earth. Core sampling (pF rings), at field capacity (0.33 bar, 33 kPa, 336 cm, pF 2.5), not corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-fc ;
@@ -3721,7 +3747,8 @@ eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-fc a skos:Concept ;
     skos:prefLabel "BlkDensW_we-co-fc"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityWholeSoil .
 
-eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-od a skos:Concept ;
+eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-od a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-od ;
             schema:text "Whole earth. Core sampling (pF rings), at oven dry, not corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-od ;
@@ -3729,7 +3756,8 @@ eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-od a skos:Concept ;
     skos:prefLabel "BlkDensW_we-co-od"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityWholeSoil .
 
-eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-unkn a skos:Concept ;
+eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-unkn ;
             schema:text "Whole earth. Core sampling (pF rings), at unknown humidity, not corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-unkn ;
@@ -3737,7 +3765,8 @@ eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-unkn a skos:Concept ;
     skos:prefLabel "BlkDensW_we-co-unk"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityWholeSoil .
 
-eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-rpl-unkn a skos:Concept ;
+eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-rpl-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-rpl-unkn ;
             schema:text "Whole earth. Excavation and replacement (i.e. soils too fragile to remove a stable sample) e.g. by auger, at unknown humidity, not corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-rpl-unkn ;
@@ -3745,7 +3774,8 @@ eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-rpl-unkn a skos:Concept ;
     skos:prefLabel "BlkDensW_we-rpl-unk"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityWholeSoil .
 
-eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-unkn a skos:Concept ;
+eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-unkn ;
             schema:text "Whole earth. Type of sample unknown, at unknown humidity, not corrected for coarse fragments if any"@en ] ;
     skos:exactMatch glosis_proc:bulkDensityWholeSoilProcedure-BlkDensW_we-unkn ;
@@ -3753,7 +3783,8 @@ eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-unkn a skos:Concept ;
     skos:prefLabel "BlkDensW_we-unk"@en ;
     sosa:isProcedureFor eusoilvoc:BulkDensityWholeSoil .
 
-eusoilvoc:carbonInorganicProcedure-InOrgC_calcul-caco3 a skos:Concept ;
+eusoilvoc:carbonInorganicProcedure-InOrgC_calcul-caco3 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonInorganicProcedure-InOrgC_calcul-caco3 ;
             schema:text "Indirect estimate from total carbonate equivalent, with a factor of 0.12 (molar weights: CaCO3 100g/mol, C 12g/mol)"@en ] ;
     skos:exactMatch glosis_proc:carbonInorganicProcedure-InOrgC_calcul-caco3 ;
@@ -3761,7 +3792,8 @@ eusoilvoc:carbonInorganicProcedure-InOrgC_calcul-caco3 a skos:Concept ;
     skos:prefLabel "InOrgC_calcul-caco3"@en ;
     sosa:isProcedureFor eusoilvoc:SoilInorganicCarbon .
 
-eusoilvoc:carbonInorganicProcedure-InOrgC_calcul-tc-oc a skos:Concept ;
+eusoilvoc:carbonInorganicProcedure-InOrgC_calcul-tc-oc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonInorganicProcedure-InOrgC_calcul-tc-oc ;
             schema:text "Indirect estimate (total carbon minus organic carbon = inorganic carbon)"@en ] ;
     skos:exactMatch glosis_proc:carbonInorganicProcedure-InOrgC_calcul-tc-oc ;
@@ -3769,7 +3801,8 @@ eusoilvoc:carbonInorganicProcedure-InOrgC_calcul-tc-oc a skos:Concept ;
     skos:prefLabel "InOrgC_calcul-tc-oc"@en ;
     sosa:isProcedureFor eusoilvoc:SoilInorganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_acid-dc ;
             schema:text "Acidified dry combustion or dry oxidation methods (after removal of carbonates)"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_acid-dc ;
@@ -3777,7 +3810,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc a skos:Concept ;
     skos:prefLabel "OrgC_acid-dc"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-ht a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-ht a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-ht ;
             schema:text "Acidified. Dry combustion at 1200 C and colometric CO2 measurement (Schlichting et al. 1995)"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-ht ;
@@ -3785,7 +3819,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-ht a skos:Concept ;
     skos:prefLabel "OrgC_acid-dc-ht"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-ht-analyser a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-ht-analyser a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-ht-analyser ;
             schema:text "Acidified. Furnace combustion (e.g., LECO combustion analyzer, Dumas method)"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-ht-analyser ;
@@ -3793,7 +3828,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-ht-analyser a skos:Concept ;
     skos:prefLabel "OrgC_acid-dc-ht-analyser"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-lt a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-lt a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-lt ;
             schema:text "Acidified. Dry combustion at 500 C"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-lt ;
@@ -3801,7 +3837,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-lt a skos:Concept ;
     skos:prefLabel "OrgC_acid-dc-lt"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-lt-loi a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-lt-loi a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-lt-loi ;
             schema:text "Acidified. Loss on ignition (NL)"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-lt-loi ;
@@ -3809,7 +3846,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-lt-loi a skos:Concept ;
     skos:prefLabel "OrgC_acid-dc-lt-loi"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-mt a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-mt a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-mt ;
             schema:text "Acidified. Dry combustion at 840 C"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-mt ;
@@ -3817,7 +3855,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-mt a skos:Concept ;
     skos:prefLabel "OrgC_acid-dc-mt"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-spec a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-spec a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-spec ;
             schema:text "Spectrally measured and converted to Acidified dry combustion or dry oxidation methods (after removal of carbonates)"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_acid-dc-spec ;
@@ -3825,7 +3864,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_acid-dc-spec a skos:Concept ;
     skos:prefLabel "OrgC_acid-dc-spec"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_calcul-tc-ic a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_calcul-tc-ic a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_calcul-tc-ic ;
             schema:text "Calculated as total carbon minus inorganic carbon"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_calcul-tc-ic ;
@@ -3833,7 +3873,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_calcul-tc-ic a skos:Concept ;
     skos:prefLabel "OrgC_calcul-tc-ic"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_dc a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_dc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_dc ;
             schema:text "Unacidified. Dry combustion or dry oxidation methods (without prior removal of carbonates)"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_dc ;
@@ -3841,7 +3882,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_dc a skos:Concept ;
     skos:prefLabel "OrgC_dc"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_dc-ht a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_dc-ht a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_dc-ht ;
             schema:text "Unacidified. Dry combustion at high temperature (e.g. 1200 C and colometric CO2 measurement (Schlichting et al. 1995)"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_dc-ht ;
@@ -3849,7 +3891,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_dc-ht a skos:Concept ;
     skos:prefLabel "OrgC_dc-ht"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_dc-ht-analyser a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_dc-ht-analyser a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_dc-ht-analyser ;
             schema:text "Unacidified. Dry combustion by furnace (e.g., LECO combustion analyzer, Dumas method). Is total Carbon?"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_dc-ht-analyser ;
@@ -3857,7 +3900,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_dc-ht-analyser a skos:Concept ;
     skos:prefLabel "OrgC_dc-ht-analyser"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_dc-lt a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_dc-lt a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_dc-lt ;
             schema:text "Unacidified. Dry combustion at low temperature e.g. 500 C"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_dc-lt ;
@@ -3865,7 +3909,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_dc-lt a skos:Concept ;
     skos:prefLabel "OrgC_dc-lt"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_dc-lt-loi a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_dc-lt-loi a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_dc-lt-loi ;
             schema:text "Unacidified. Loss on ignition (NL) is total Organic Carbon"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_dc-lt-loi ;
@@ -3873,7 +3918,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_dc-lt-loi a skos:Concept ;
     skos:prefLabel "OrgC_dc-lt-loi"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_dc-mt a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_dc-mt a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_dc-mt ;
             schema:text "Unacidified. Dry combustion at medium temperature e.g. 840 C"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_dc-mt ;
@@ -3881,7 +3927,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_dc-mt a skos:Concept ;
     skos:prefLabel "OrgC_dc-mt"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_dc-spec a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_dc-spec a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_dc-spec ;
             schema:text "Spectrally measured and converted to Unacidified Dry combustion or dry oxidation methods"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_dc-spec ;
@@ -3889,7 +3936,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_dc-spec a skos:Concept ;
     skos:prefLabel "OrgC_dc-spec"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_wc a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_wc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_wc ;
             schema:text "Wet oxidation or wet combustion methods"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_wc ;
@@ -3897,7 +3945,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_wc a skos:Concept ;
     skos:prefLabel "OrgC_wc"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-jackson a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-jackson a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-jackson ;
             schema:text "Wet oxidation according to Jackson (1958) with chromic acid digestion"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-jackson ;
@@ -3905,7 +3954,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-jackson a skos:Concept ;
     skos:prefLabel "OrgC_wc-cro3-jackso"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-kalembra a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-kalembra a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-kalembra ;
             schema:text "Wet oxidation according to Kalembra and Jenkinson (1973) with acid dichromate"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-kalembra ;
@@ -3913,7 +3963,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-kalembra a skos:Concept ;
     skos:prefLabel "OrgC_wc-cro3-kalembra"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-knopp a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-knopp a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-knopp ;
             schema:text "Wet oxidation according to Knopp with chromic acid and gravimetric determination of CO2"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-knopp ;
@@ -3921,7 +3972,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-knopp a skos:Concept ;
     skos:prefLabel "OrgC_wc-cro3-knopp"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-kurmies a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-kurmies a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-kurmies ;
             schema:text "Wet oxidation according to Kurmies with K2Cr2O7+H2SO4"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-kurmies ;
@@ -3929,7 +3981,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-kurmies a skos:Concept ;
     skos:prefLabel "OrgC_wc-cro3-kurmies"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-nelson a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-nelson a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-nelson ;
             schema:text "Wet oxidation according to Nelson and Sommers (1996)"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-nelson ;
@@ -3937,7 +3990,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-nelson a skos:Concept ;
     skos:prefLabel "OrgC_wc-cro3-nelso"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-nrcs6a1c a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-nrcs6a1c a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-nrcs6a1c ;
             schema:text "Wet oxidation according to USDA-NRCS method 6A1c with acid dichromate digestion, FeSO4 titration, automatic titrator"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-nrcs6a1c ;
@@ -3945,7 +3999,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-nrcs6a1c a skos:Concept ;
     skos:prefLabel "OrgC_wc-cro3-nrcs6a1c"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-tiurin a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-tiurin a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-tiurin ;
             schema:text "Wet oxidation according to Tiurin with K-dichromate"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-tiurin ;
@@ -3953,7 +4008,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-tiurin a skos:Concept ;
     skos:prefLabel "OrgC_wc-cro3-tiuri"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-walkleyblack a skos:Concept ;
+eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-walkleyblack a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-walkleyblack ;
             schema:text "Walkley-Black method (chromic acid digestion)"@en ] ;
     skos:exactMatch glosis_proc:carbonOrganicProcedure-OrgC_wc-cro3-walkleyblack ;
@@ -3961,7 +4017,8 @@ eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-walkleyblack a skos:Concept ;
     skos:prefLabel "OrgC_wc-cro3-walkleyblack"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicCarbon .
 
-eusoilvoc:carbonTotalProcedure-TotC_calcul-ic-oc a skos:Concept ;
+eusoilvoc:carbonTotalProcedure-TotC_calcul-ic-oc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonTotalProcedure-TotC_calcul-ic-oc ;
             schema:text "Calculated as sum of inorganic carbon and organic carbon"@en ] ;
     skos:exactMatch glosis_proc:carbonTotalProcedure-TotC_calcul-ic-oc ;
@@ -3969,7 +4026,8 @@ eusoilvoc:carbonTotalProcedure-TotC_calcul-ic-oc a skos:Concept ;
     skos:prefLabel "TotC_calcul-ic-oc"@en ;
     sosa:isProcedureFor eusoilvoc:SoilTotalCarbon .
 
-eusoilvoc:carbonTotalProcedure-TotC_dc-ht a skos:Concept ;
+eusoilvoc:carbonTotalProcedure-TotC_dc-ht a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonTotalProcedure-TotC_dc-ht ;
             schema:text "Unacidified dry combustion at high temperature (950-1400 C). Total Carbon"@en ] ;
     skos:exactMatch glosis_proc:carbonTotalProcedure-TotC_dc-ht ;
@@ -3977,7 +4035,8 @@ eusoilvoc:carbonTotalProcedure-TotC_dc-ht a skos:Concept ;
     skos:prefLabel "TotC_dc-ht"@en ;
     sosa:isProcedureFor eusoilvoc:SoilTotalCarbon .
 
-eusoilvoc:carbonTotalProcedure-TotC_dc-ht-analyser a skos:Concept ;
+eusoilvoc:carbonTotalProcedure-TotC_dc-ht-analyser a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonTotalProcedure-TotC_dc-ht-analyser ;
             schema:text "Unacidified dry combustion at high temperature (950-1400 C). Total Carbon (USDA-NRCS method 6A), LECO analyzer at 1140 C"@en ] ;
     skos:exactMatch glosis_proc:carbonTotalProcedure-TotC_dc-ht-analyser ;
@@ -3985,7 +4044,8 @@ eusoilvoc:carbonTotalProcedure-TotC_dc-ht-analyser a skos:Concept ;
     skos:prefLabel "TotC_dc-ht-analyser"@en ;
     sosa:isProcedureFor eusoilvoc:SoilTotalCarbon .
 
-eusoilvoc:carbonTotalProcedure-TotC_dc-ht-spec a skos:Concept ;
+eusoilvoc:carbonTotalProcedure-TotC_dc-ht-spec a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonTotalProcedure-TotC_dc-ht-spec ;
             schema:text "Spectrally measured and converted to Unacidified dry combustion at high temperature (950-1400 C)."@en ] ;
     skos:exactMatch glosis_proc:carbonTotalProcedure-TotC_dc-ht-spec ;
@@ -3993,7 +4053,8 @@ eusoilvoc:carbonTotalProcedure-TotC_dc-ht-spec a skos:Concept ;
     skos:prefLabel "TotC_dc-ht-spec"@en ;
     sosa:isProcedureFor eusoilvoc:SoilTotalCarbon .
 
-eusoilvoc:carbonTotalProcedure-TotC_dc-mt a skos:Concept ;
+eusoilvoc:carbonTotalProcedure-TotC_dc-mt a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:carbonTotalProcedure-TotC_dc-mt ;
             schema:text "Unacidified dry combustion at medium temperature (550-950 C)."@en ] ;
     skos:exactMatch glosis_proc:carbonTotalProcedure-TotC_dc-mt ;
@@ -4001,7 +4062,8 @@ eusoilvoc:carbonTotalProcedure-TotC_dc-mt a skos:Concept ;
     skos:prefLabel "TotC_dc-mt"@en ;
     sosa:isProcedureFor eusoilvoc:SoilTotalCarbon .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-cacl2 a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-cacl2 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-cacl2 ;
             schema:text "CEC at unknown buffer, in 0.1 M CaCl2 exchange solution"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-cacl2 ;
@@ -4009,7 +4071,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-cacl2 a skos:Concept ;
     skos:prefLabel "CEC_ph-unkn-cacl2"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-lioac a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-lioac a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-lioac ;
             schema:text "CEC at unknown buffer, in 0.5 M Li-acetate exchange solution"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-lioac ;
@@ -4017,7 +4080,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-lioac a skos:Concept ;
     skos:prefLabel "CEC_ph-unkn-lioac"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-m3 a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-m3 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-m3 ;
             schema:text "CEC at unknown buffer, in Mehlich III exchange solution"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-m3 ;
@@ -4025,7 +4089,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph-unkn-m3 a skos:Concept ;
     skos:prefLabel "CEC_ph-unkn-m3"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-ag-thioura a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-ag-thioura a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-ag-thioura ;
             schema:text "CEC unbuffered at pH of the soil, in 0.01 M Ag-thioura exchange solution"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-ag-thioura ;
@@ -4033,7 +4098,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-ag-thioura a skos:Concept 
     skos:prefLabel "CEC_ph0-ag-thioura"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-bacl2 a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-bacl2 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-bacl2 ;
             schema:text "CEC unbuffered at pH o the soil, in 0.5 M BaCl2 exchange solution (0.1.1.0 M)"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-bacl2 ;
@@ -4041,7 +4107,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-bacl2 a skos:Concept ;
     skos:prefLabel "CEC_ph0-bacl2"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-cohex a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-cohex a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-cohex ;
             schema:text "CEC unbuffered at pH of the soil, in Cobalt(III) hexamine chloride solution 0,0166M (Cohex) [Co[NH3]6]Cl3 ), ISO 23470 (2007)  exchange solution"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-cohex ;
@@ -4049,7 +4116,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-cohex a skos:Concept ;
     skos:prefLabel "CEC_ph0-cohex"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-kcl a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-kcl a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-kcl ;
             schema:text "CEC unbuffered at pH of the soil, in 1 M KCl exchange solution"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-kcl ;
@@ -4057,7 +4125,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-kcl a skos:Concept ;
     skos:prefLabel "CEC_ph0-kcl"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4cl a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4cl a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4cl ;
             schema:text "CEC unbuffered at pH of the soil, in 1 M NH4-chloride exchange solution (0.2-1.0 M)"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4cl ;
@@ -4065,7 +4134,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4cl a skos:Concept ;
     skos:prefLabel "CEC_ph0-nh4cl"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4oac a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4oac a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4oac ;
             schema:text "CEC unbuffered at pH of the soil, in 1 M NH4-acetate (NH4OAc) exchange solution (0.25-1.0 M)"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4oac ;
@@ -4073,7 +4143,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-nh4oac a skos:Concept ;
     skos:prefLabel "CEC_ph0-nh4oac"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-unkn a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-unkn ;
             schema:text "CEC unbuffered at pH of the soil, in unknown exchange solution"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph0-unkn ;
@@ -4081,7 +4152,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph0-unkn a skos:Concept ;
     skos:prefLabel "CEC_ph0-unk"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph7-edta a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph7-edta a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph7-edta ;
             schema:text "CEC buffered at pH 7, in 0.1 M Li-EDTA exchange solution"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph7-edta ;
@@ -4089,7 +4161,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph7-edta a skos:Concept ;
     skos:prefLabel "CEC_ph7-edta"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph7-nh4oac a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph7-nh4oac a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph7-nh4oac ;
             schema:text "CEC buffered at pH 7, in 1 M NH4-acetate (NH4OAc) exchange solution (0.25-1.0 M)"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph7-nh4oac ;
@@ -4097,7 +4170,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph7-nh4oac a skos:Concept ;
     skos:prefLabel "CEC_ph7-nh4oac"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph7-unkn a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph7-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph7-unkn ;
             schema:text "CEC buffered at pH 7, in unknown exchange solution"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph7-unkn ;
@@ -4105,7 +4179,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph7-unkn a skos:Concept ;
     skos:prefLabel "CEC_ph7-unk"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-bacl2tea a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-bacl2tea a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-bacl2tea ;
             schema:text "CEC buffered at pH 8.0-8.5, in 0.5 M BaCl2-TEA exchange solution (0.1.1.0 M)"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-bacl2tea ;
@@ -4113,7 +4188,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-bacl2tea a skos:Concept ;
     skos:prefLabel "CEC_ph8-bacl2tea"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-baoac a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-baoac a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-baoac ;
             schema:text "CEC buffered at pH 8.0-8.5, in 0.5 M Ba-acetate exchange solution"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-baoac ;
@@ -4121,7 +4197,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-baoac a skos:Concept ;
     skos:prefLabel "CEC_ph8-baoac"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-licl2tea a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-licl2tea a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-licl2tea ;
             schema:text "CEC buffered at pH 8.0-8.5, in 0.5 M Li-chloride - TEA exchange solution"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-licl2tea ;
@@ -4129,7 +4206,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-licl2tea a skos:Concept ;
     skos:prefLabel "CEC_ph8-licl2tea"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-naoac a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-naoac a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-naoac ;
             schema:text "CEC buffered at pH 8.0-8.5, in 1 M Na-acetate exchange solution"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-naoac ;
@@ -4137,7 +4215,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-naoac a skos:Concept ;
     skos:prefLabel "CEC_ph8-naoac"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-nh4oac a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-nh4oac a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-nh4oac ;
             schema:text "CEC buffered at pH 8.0-8.5, in 1 M NH4-acetate exchange solution (0.25-1.0 M)"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-nh4oac ;
@@ -4145,7 +4224,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-nh4oac a skos:Concept ;
     skos:prefLabel "CEC_ph8-nh4oac"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-unkn a skos:Concept ;
+eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-unkn ;
             schema:text "CEC buffered at pH 8.0-8.5, in unknown exchange solution"@en ] ;
     skos:exactMatch glosis_proc:cationExchangeCapacitySoilProcedure-CEC_ph8-unkn ;
@@ -4153,7 +4233,8 @@ eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-unkn a skos:Concept ;
     skos:prefLabel "CEC_ph8-unk"@en ;
     sosa:isProcedureFor eusoilvoc:CationExchangeCapacitySoil .
 
-eusoilvoc:coarseFragmentsProcedure-CrsFrg_fld a skos:Concept ;
+eusoilvoc:coarseFragmentsProcedure-CrsFrg_fld a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:coarseFragmentsProcedure-CrsFrg_fld ;
             schema:text "Particles > 2 mm observed in the field. May include concretions and very hard aggregates"@en ] ;
     skos:exactMatch glosis_proc:coarseFragmentsProcedure-CrsFrg_fld ;
@@ -4161,7 +4242,8 @@ eusoilvoc:coarseFragmentsProcedure-CrsFrg_fld a skos:Concept ;
     skos:prefLabel "CrsFrg_fld"@en ;
     sosa:isProcedureFor eusoilvoc:CoarseFragments .
 
-eusoilvoc:coarseFragmentsProcedure-CrsFrg_fldcls a skos:Concept ;
+eusoilvoc:coarseFragmentsProcedure-CrsFrg_fldcls a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:coarseFragmentsProcedure-CrsFrg_fldcls ;
             schema:text "Particles > 2 mm observed in the field and calculated from class values. May include concretions and very hard aggregates"@en ] ;
     skos:exactMatch glosis_proc:coarseFragmentsProcedure-CrsFrg_fldcls ;
@@ -4169,7 +4251,8 @@ eusoilvoc:coarseFragmentsProcedure-CrsFrg_fldcls a skos:Concept ;
     skos:prefLabel "CrsFrg_fldcls"@en ;
     sosa:isProcedureFor eusoilvoc:CoarseFragments .
 
-eusoilvoc:coarseFragmentsProcedure-CrsFrg_lab a skos:Concept ;
+eusoilvoc:coarseFragmentsProcedure-CrsFrg_lab a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:coarseFragmentsProcedure-CrsFrg_lab ;
             schema:text "Particles > 2 mm measured in laboratory (sieved after light pounding). May include concretions and very hard aggregates"@en ] ;
     skos:exactMatch glosis_proc:coarseFragmentsProcedure-CrsFrg_lab ;
@@ -4177,7 +4260,8 @@ eusoilvoc:coarseFragmentsProcedure-CrsFrg_lab a skos:Concept ;
     skos:prefLabel "CrsFrg_lab"@en ;
     sosa:isProcedureFor eusoilvoc:CoarseFragments .
 
-eusoilvoc:effectiveCecProcedure-EffCEC_calcul-b a skos:Concept ;
+eusoilvoc:effectiveCecProcedure-EffCEC_calcul-b a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:effectiveCecProcedure-EffCEC_calcul-b ;
             schema:text "Sum of exchangeable bases (Ca, Mg, K, Na) without exchangeable acidity (H+Al), see ExchBases and ExchAcids for methods"@en ] ;
     skos:exactMatch glosis_proc:effectiveCecProcedure-EffCEC_calcul-b ;
@@ -4185,7 +4269,8 @@ eusoilvoc:effectiveCecProcedure-EffCEC_calcul-b a skos:Concept ;
     skos:prefLabel "EffCEC_calcul-b"@en ;
     sosa:isProcedureFor eusoilvoc:EffectiveCEC .
 
-eusoilvoc:effectiveCecProcedure-EffCEC_calcul-ba a skos:Concept ;
+eusoilvoc:effectiveCecProcedure-EffCEC_calcul-ba a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:effectiveCecProcedure-EffCEC_calcul-ba ;
             schema:text "Sum of exchangeable bases (Ca, Mg, K, Na) plus exchangeable acidity (H+Al), see ExchBases and ExchAcids for methods"@en ] ;
     skos:exactMatch glosis_proc:effectiveCecProcedure-EffCEC_calcul-ba ;
@@ -4193,7 +4278,8 @@ eusoilvoc:effectiveCecProcedure-EffCEC_calcul-ba a skos:Concept ;
     skos:prefLabel "EffCEC_calcul-ba"@en ;
     sosa:isProcedureFor eusoilvoc:EffectiveCEC .
 
-eusoilvoc:electricalConductivityProcedure-EC_ratio1-1 a skos:Concept ;
+eusoilvoc:electricalConductivityProcedure-EC_ratio1-1 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:electricalConductivityProcedure-EC_ratio1-1 ;
             schema:text "Elec. conductivity at 1:1 soil/water ratio"@en ] ;
     skos:exactMatch glosis_proc:electricalConductivityProcedure-EC_ratio1-1 ;
@@ -4201,7 +4287,8 @@ eusoilvoc:electricalConductivityProcedure-EC_ratio1-1 a skos:Concept ;
     skos:prefLabel "EC_ratio1-1"@en ;
     sosa:isProcedureFor eusoilvoc:SoilElectricalConductivity .
 
-eusoilvoc:electricalConductivityProcedure-EC_ratio1-10 a skos:Concept ;
+eusoilvoc:electricalConductivityProcedure-EC_ratio1-10 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:electricalConductivityProcedure-EC_ratio1-10 ;
             schema:text "Elec. conductivity at 1:10 soil/water ratio"@en ] ;
     skos:exactMatch glosis_proc:electricalConductivityProcedure-EC_ratio1-10 ;
@@ -4209,7 +4296,8 @@ eusoilvoc:electricalConductivityProcedure-EC_ratio1-10 a skos:Concept ;
     skos:prefLabel "EC_ratio1-10"@en ;
     sosa:isProcedureFor eusoilvoc:SoilElectricalConductivity .
 
-eusoilvoc:electricalConductivityProcedure-EC_ratio1-2 a skos:Concept ;
+eusoilvoc:electricalConductivityProcedure-EC_ratio1-2 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:electricalConductivityProcedure-EC_ratio1-2 ;
             schema:text "Elec. conductivity at 1:2 soil/water ratio"@en ] ;
     skos:exactMatch glosis_proc:electricalConductivityProcedure-EC_ratio1-2 ;
@@ -4217,7 +4305,8 @@ eusoilvoc:electricalConductivityProcedure-EC_ratio1-2 a skos:Concept ;
     skos:prefLabel "EC_ratio1-2"@en ;
     sosa:isProcedureFor eusoilvoc:SoilElectricalConductivity .
 
-eusoilvoc:electricalConductivityProcedure-EC_ratio1-2.5 a skos:Concept ;
+eusoilvoc:electricalConductivityProcedure-EC_ratio1-2.5 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:electricalConductivityProcedure-EC_ratio1-2.5 ;
             schema:text "Elec. conductivity at 1:2.5 soil/water ratio"@en ] ;
     skos:exactMatch glosis_proc:electricalConductivityProcedure-EC_ratio1-2.5 ;
@@ -4225,7 +4314,8 @@ eusoilvoc:electricalConductivityProcedure-EC_ratio1-2.5 a skos:Concept ;
     skos:prefLabel "EC_ratio1-2.5"@en ;
     sosa:isProcedureFor eusoilvoc:SoilElectricalConductivity .
 
-eusoilvoc:electricalConductivityProcedure-EC_ratio1-5 a skos:Concept ;
+eusoilvoc:electricalConductivityProcedure-EC_ratio1-5 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:electricalConductivityProcedure-EC_ratio1-5 ;
             schema:text "Elec. conductivity at 1:5 soil/water ratio"@en ] ;
     skos:exactMatch glosis_proc:electricalConductivityProcedure-EC_ratio1-5 ;
@@ -4233,7 +4323,8 @@ eusoilvoc:electricalConductivityProcedure-EC_ratio1-5 a skos:Concept ;
     skos:prefLabel "EC_ratio1-5"@en ;
     sosa:isProcedureFor eusoilvoc:SoilElectricalConductivity .
 
-eusoilvoc:electricalConductivityProcedure-ECe_sat a skos:Concept ;
+eusoilvoc:electricalConductivityProcedure-ECe_sat a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:electricalConductivityProcedure-ECe_sat ;
             schema:text "Elec. conductivity in saturated paste (ECe)"@en ] ;
     skos:exactMatch glosis_proc:electricalConductivityProcedure-ECe_sat ;
@@ -4241,7 +4332,8 @@ eusoilvoc:electricalConductivityProcedure-ECe_sat a skos:Concept ;
     skos:prefLabel "ECe_sat"@en ;
     sosa:isProcedureFor eusoilvoc:SoilElectricalConductivity .
 
-eusoilvoc:gypsumProcedure-CaSO4_gy01 a skos:Concept ;
+eusoilvoc:gypsumProcedure-CaSO4_gy01 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:gypsumProcedure-CaSO4_gy01 ;
             schema:text "Dissolved in water and precipitated by acetone"@en ] ;
     skos:exactMatch glosis_proc:gypsumProcedure-CaSO4_gy01 ;
@@ -4249,7 +4341,8 @@ eusoilvoc:gypsumProcedure-CaSO4_gy01 a skos:Concept ;
     skos:prefLabel "CaSO4_gy01"@en ;
     sosa:isProcedureFor eusoilvoc:Gypsum .
 
-eusoilvoc:gypsumProcedure-CaSO4_gy02 a skos:Concept ;
+eusoilvoc:gypsumProcedure-CaSO4_gy02 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:gypsumProcedure-CaSO4_gy02 ;
             schema:text "Differ. between Ca-conc. in sat. extr. and Ca-conc. in 1/50 s/w solution"@en ] ;
     skos:exactMatch glosis_proc:gypsumProcedure-CaSO4_gy02 ;
@@ -4257,7 +4350,8 @@ eusoilvoc:gypsumProcedure-CaSO4_gy02 a skos:Concept ;
     skos:prefLabel "CaSO4_gy02"@en ;
     sosa:isProcedureFor eusoilvoc:Gypsum .
 
-eusoilvoc:gypsumProcedure-CaSO4_gy03 a skos:Concept ;
+eusoilvoc:gypsumProcedure-CaSO4_gy03 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:gypsumProcedure-CaSO4_gy03 ;
             schema:text "Calculated from conductivity of successive dilutions"@en ] ;
     skos:exactMatch glosis_proc:gypsumProcedure-CaSO4_gy03 ;
@@ -4265,7 +4359,8 @@ eusoilvoc:gypsumProcedure-CaSO4_gy03 a skos:Concept ;
     skos:prefLabel "CaSO4_gy03"@en ;
     sosa:isProcedureFor eusoilvoc:Gypsum .
 
-eusoilvoc:gypsumProcedure-CaSO4_gy04 a skos:Concept ;
+eusoilvoc:gypsumProcedure-CaSO4_gy04 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:gypsumProcedure-CaSO4_gy04 ;
             schema:text "In 0.1 M Na3-EDTA-/- turbidimetric (Begheijn, 1993)"@en ] ;
     skos:exactMatch glosis_proc:gypsumProcedure-CaSO4_gy04 ;
@@ -4273,7 +4368,8 @@ eusoilvoc:gypsumProcedure-CaSO4_gy04 a skos:Concept ;
     skos:prefLabel "CaSO4_gy04"@en ;
     sosa:isProcedureFor eusoilvoc:Gypsum .
 
-eusoilvoc:gypsumProcedure-CaSO4_gy05 a skos:Concept ;
+eusoilvoc:gypsumProcedure-CaSO4_gy05 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:gypsumProcedure-CaSO4_gy05 ;
             schema:text "Gravimetric after dissolution in 0.2 N HCl (USSR-method)"@en ] ;
     skos:exactMatch glosis_proc:gypsumProcedure-CaSO4_gy05 ;
@@ -4281,7 +4377,8 @@ eusoilvoc:gypsumProcedure-CaSO4_gy05 a skos:Concept ;
     skos:prefLabel "CaSO4_gy05"@en ;
     sosa:isProcedureFor eusoilvoc:Gypsum .
 
-eusoilvoc:gypsumProcedure-CaSO4_gy06 a skos:Concept ;
+eusoilvoc:gypsumProcedure-CaSO4_gy06 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:gypsumProcedure-CaSO4_gy06 ;
             schema:text "Total-S, using LECO furnace, minus easily soluble MgSO4 and Na2SO4"@en ] ;
     skos:exactMatch glosis_proc:gypsumProcedure-CaSO4_gy06 ;
@@ -4289,7 +4386,8 @@ eusoilvoc:gypsumProcedure-CaSO4_gy06 a skos:Concept ;
     skos:prefLabel "CaSO4_gy06"@en ;
     sosa:isProcedureFor eusoilvoc:Gypsum .
 
-eusoilvoc:gypsumProcedure-CaSO4_gy07 a skos:Concept ;
+eusoilvoc:gypsumProcedure-CaSO4_gy07 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:gypsumProcedure-CaSO4_gy07 ;
             schema:text "Schleiff method, electrometric"@en ] ;
     skos:exactMatch glosis_proc:gypsumProcedure-CaSO4_gy07 ;
@@ -4297,7 +4395,8 @@ eusoilvoc:gypsumProcedure-CaSO4_gy07 a skos:Concept ;
     skos:prefLabel "CaSO4_gy07"@en ;
     sosa:isProcedureFor eusoilvoc:Gypsum .
 
-eusoilvoc:hydraulicConductivityProcedure-KSat_calcul-ptf a skos:Concept ;
+eusoilvoc:hydraulicConductivityProcedure-KSat_calcul-ptf a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:hydraulicConductivityProcedure-KSat_calcul-ptf ;
             schema:text "Saturated hydraulic conductivity."@en ] ;
     skos:exactMatch glosis_proc:hydraulicConductivityProcedure-KSat_calcul-ptf ;
@@ -4305,7 +4404,8 @@ eusoilvoc:hydraulicConductivityProcedure-KSat_calcul-ptf a skos:Concept ;
     skos:prefLabel "KSat_calcul-ptf"@en ;
     sosa:isProcedureFor eusoilvoc:SoilHydraulicConductivity .
 
-eusoilvoc:hydraulicConductivityProcedure-KSat_calcul-ptf-genuchten a skos:Concept ;
+eusoilvoc:hydraulicConductivityProcedure-KSat_calcul-ptf-genuchten a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:hydraulicConductivityProcedure-KSat_calcul-ptf-genuchten ;
             schema:text "Saturated and not saturated hydraulic conductivity."@en ] ;
     skos:exactMatch glosis_proc:hydraulicConductivityProcedure-KSat_calcul-ptf-genuchten ;
@@ -4313,7 +4413,8 @@ eusoilvoc:hydraulicConductivityProcedure-KSat_calcul-ptf-genuchten a skos:Concep
     skos:prefLabel "KSat_calcul-ptf-genucht"@en ;
     sosa:isProcedureFor eusoilvoc:SoilHydraulicConductivity .
 
-eusoilvoc:hydraulicConductivityProcedure-KSat_calcul-ptf-saxton a skos:Concept ;
+eusoilvoc:hydraulicConductivityProcedure-KSat_calcul-ptf-saxton a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:hydraulicConductivityProcedure-KSat_calcul-ptf-saxton ;
             schema:text "Saturated hydraulic conductivity."@en ] ;
     skos:exactMatch glosis_proc:hydraulicConductivityProcedure-KSat_calcul-ptf-saxton ;
@@ -4321,7 +4422,8 @@ eusoilvoc:hydraulicConductivityProcedure-KSat_calcul-ptf-saxton a skos:Concept ;
     skos:prefLabel "KSat_calcul-ptf-saxto"@en ;
     sosa:isProcedureFor eusoilvoc:SoilHydraulicConductivity .
 
-eusoilvoc:hydraulicConductivityProcedure-Ksat_bhole a skos:Concept ;
+eusoilvoc:hydraulicConductivityProcedure-Ksat_bhole a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:hydraulicConductivityProcedure-Ksat_bhole ;
             schema:text "Saturated hydraulic conductivity. Bore hole method"@en ] ;
     skos:exactMatch glosis_proc:hydraulicConductivityProcedure-Ksat_bhole ;
@@ -4329,7 +4431,8 @@ eusoilvoc:hydraulicConductivityProcedure-Ksat_bhole a skos:Concept ;
     skos:prefLabel "Ksat_bhol"@en ;
     sosa:isProcedureFor eusoilvoc:SoilHydraulicConductivity .
 
-eusoilvoc:hydraulicConductivityProcedure-Ksat_column a skos:Concept ;
+eusoilvoc:hydraulicConductivityProcedure-Ksat_column a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:hydraulicConductivityProcedure-Ksat_column ;
             schema:text "Saturated hydraulic conductivity. Permeability in cm/hr determined in column filled with fine earth fraction"@en ] ;
     skos:exactMatch glosis_proc:hydraulicConductivityProcedure-Ksat_column ;
@@ -4337,7 +4440,8 @@ eusoilvoc:hydraulicConductivityProcedure-Ksat_column a skos:Concept ;
     skos:prefLabel "Ksat_colum"@en ;
     sosa:isProcedureFor eusoilvoc:SoilHydraulicConductivity .
 
-eusoilvoc:hydraulicConductivityProcedure-Ksat_dblring a skos:Concept ;
+eusoilvoc:hydraulicConductivityProcedure-Ksat_dblring a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:hydraulicConductivityProcedure-Ksat_dblring ;
             schema:text "Saturated hydraulic conductivity. Double ring method"@en ] ;
     skos:exactMatch glosis_proc:hydraulicConductivityProcedure-Ksat_dblring ;
@@ -4345,7 +4449,8 @@ eusoilvoc:hydraulicConductivityProcedure-Ksat_dblring a skos:Concept ;
     skos:prefLabel "Ksat_dblring"@en ;
     sosa:isProcedureFor eusoilvoc:SoilHydraulicConductivity .
 
-eusoilvoc:hydraulicConductivityProcedure-Ksat_invbhole a skos:Concept ;
+eusoilvoc:hydraulicConductivityProcedure-Ksat_invbhole a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:hydraulicConductivityProcedure-Ksat_invbhole ;
             schema:text "Saturated hydraulic conductivity. Inverse bore hole method"@en ] ;
     skos:exactMatch glosis_proc:hydraulicConductivityProcedure-Ksat_invbhole ;
@@ -4353,7 +4458,8 @@ eusoilvoc:hydraulicConductivityProcedure-Ksat_invbhole a skos:Concept ;
     skos:prefLabel "Ksat_invbhol"@en ;
     sosa:isProcedureFor eusoilvoc:SoilHydraulicConductivity .
 
-eusoilvoc:moistureContentProcedure-VMC_calcul-ptf a skos:Concept ;
+eusoilvoc:moistureContentProcedure-VMC_calcul-ptf a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:moistureContentProcedure-VMC_calcul-ptf ;
             schema:text "Calculated by PTF"@en ] ;
     skos:exactMatch glosis_proc:moistureContentProcedure-VMC_calcul-ptf ;
@@ -4361,7 +4467,8 @@ eusoilvoc:moistureContentProcedure-VMC_calcul-ptf a skos:Concept ;
     skos:prefLabel "VMC_calcul-ptf"@en ;
     sosa:isProcedureFor eusoilvoc:SoilMoistureContents .
 
-eusoilvoc:moistureContentProcedure-VMC_calcul-ptf-brookscorey a skos:Concept ;
+eusoilvoc:moistureContentProcedure-VMC_calcul-ptf-brookscorey a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:moistureContentProcedure-VMC_calcul-ptf-brookscorey ;
             schema:text "Calculated by PTF of brooks - corey"@en ] ;
     skos:exactMatch glosis_proc:moistureContentProcedure-VMC_calcul-ptf-brookscorey ;
@@ -4369,7 +4476,8 @@ eusoilvoc:moistureContentProcedure-VMC_calcul-ptf-brookscorey a skos:Concept ;
     skos:prefLabel "VMC_calcul-ptf-brookscorey"@en ;
     sosa:isProcedureFor eusoilvoc:SoilMoistureContents .
 
-eusoilvoc:moistureContentProcedure-VMC_d a skos:Concept ;
+eusoilvoc:moistureContentProcedure-VMC_d a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:moistureContentProcedure-VMC_d ;
             schema:text "Volumetric moisture content in disturbed samples"@en ] ;
     skos:exactMatch glosis_proc:moistureContentProcedure-VMC_d ;
@@ -4377,7 +4485,8 @@ eusoilvoc:moistureContentProcedure-VMC_d a skos:Concept ;
     skos:prefLabel "VMC_d"@en ;
     sosa:isProcedureFor eusoilvoc:SoilMoistureContents .
 
-eusoilvoc:moistureContentProcedure-VMC_d-cl a skos:Concept ;
+eusoilvoc:moistureContentProcedure-VMC_d-cl a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:moistureContentProcedure-VMC_d-cl ;
             schema:text "Pressure-plate extraction, disturbed -clod- samples (wt%) * density"@en ] ;
     skos:exactMatch glosis_proc:moistureContentProcedure-VMC_d-cl ;
@@ -4385,7 +4494,8 @@ eusoilvoc:moistureContentProcedure-VMC_d-cl a skos:Concept ;
     skos:prefLabel "VMC_d-cl"@en ;
     sosa:isProcedureFor eusoilvoc:SoilMoistureContents .
 
-eusoilvoc:moistureContentProcedure-VMC_d-cl-ww a skos:Concept ;
+eusoilvoc:moistureContentProcedure-VMC_d-cl-ww a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:moistureContentProcedure-VMC_d-cl-ww ;
             schema:text "Pressure-plate extraction, disturbed -clod- samples (wt%) * density on weight/weight basis; to be converted to v/v (with BD at appropriate humidity)"@en ] ;
     skos:exactMatch glosis_proc:moistureContentProcedure-VMC_d-cl-ww ;
@@ -4393,7 +4503,8 @@ eusoilvoc:moistureContentProcedure-VMC_d-cl-ww a skos:Concept ;
     skos:prefLabel "VMC_d-cl-ww"@en ;
     sosa:isProcedureFor eusoilvoc:SoilMoistureContents .
 
-eusoilvoc:moistureContentProcedure-VMC_d-ww a skos:Concept ;
+eusoilvoc:moistureContentProcedure-VMC_d-ww a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:moistureContentProcedure-VMC_d-ww ;
             schema:text "Volumetric moisture content in disturbed samples on weight/weight basis to be converted to v/v (with BD at appropriate humidity)"@en ] ;
     skos:exactMatch glosis_proc:moistureContentProcedure-VMC_d-ww ;
@@ -4401,7 +4512,8 @@ eusoilvoc:moistureContentProcedure-VMC_d-ww a skos:Concept ;
     skos:prefLabel "VMC_d-ww"@en ;
     sosa:isProcedureFor eusoilvoc:SoilMoistureContents .
 
-eusoilvoc:moistureContentProcedure-VMC_ud a skos:Concept ;
+eusoilvoc:moistureContentProcedure-VMC_ud a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:moistureContentProcedure-VMC_ud ;
             schema:text "Undisturbed samples"@en ] ;
     skos:exactMatch glosis_proc:moistureContentProcedure-VMC_ud ;
@@ -4409,7 +4521,8 @@ eusoilvoc:moistureContentProcedure-VMC_ud a skos:Concept ;
     skos:prefLabel "VMC_ud"@en ;
     sosa:isProcedureFor eusoilvoc:SoilMoistureContents .
 
-eusoilvoc:moistureContentProcedure-VMC_ud-cl a skos:Concept ;
+eusoilvoc:moistureContentProcedure-VMC_ud-cl a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:moistureContentProcedure-VMC_ud-cl ;
             schema:text "Natural clod"@en ] ;
     skos:exactMatch glosis_proc:moistureContentProcedure-VMC_ud-cl ;
@@ -4417,7 +4530,8 @@ eusoilvoc:moistureContentProcedure-VMC_ud-cl a skos:Concept ;
     skos:prefLabel "VMC_ud-cl"@en ;
     sosa:isProcedureFor eusoilvoc:SoilMoistureContents .
 
-eusoilvoc:moistureContentProcedure-VMC_ud-co a skos:Concept ;
+eusoilvoc:moistureContentProcedure-VMC_ud-co a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:moistureContentProcedure-VMC_ud-co ;
             schema:text "Volumetric moisture content in undisturbed samples (pF rings cores)"@en ] ;
     skos:exactMatch glosis_proc:moistureContentProcedure-VMC_ud-co ;
@@ -4425,7 +4539,8 @@ eusoilvoc:moistureContentProcedure-VMC_ud-co a skos:Concept ;
     skos:prefLabel "VMC_ud-co"@en ;
     sosa:isProcedureFor eusoilvoc:SoilMoistureContents .
 
-eusoilvoc:nitrogenTotalProcedure-TotalN_bremner a skos:Concept ;
+eusoilvoc:nitrogenTotalProcedure-TotalN_bremner a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:nitrogenTotalProcedure-TotalN_bremner ;
             schema:text "Total N (Bremner, 1965, p. 1162-1164)"@en ] ;
     skos:exactMatch glosis_proc:nitrogenTotalProcedure-TotalN_bremner ;
@@ -4433,7 +4548,8 @@ eusoilvoc:nitrogenTotalProcedure-TotalN_bremner a skos:Concept ;
     skos:prefLabel "TotalN_bremner"@en ;
     sosa:isProcedureFor eusoilvoc:NitrogenTotal .
 
-eusoilvoc:nitrogenTotalProcedure-TotalN_calcul a skos:Concept ;
+eusoilvoc:nitrogenTotalProcedure-TotalN_calcul a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:nitrogenTotalProcedure-TotalN_calcul ;
             schema:text "OC * 1.72 / 20 (gives C/N=11.6009)"@en ] ;
     skos:exactMatch glosis_proc:nitrogenTotalProcedure-TotalN_calcul ;
@@ -4441,7 +4557,8 @@ eusoilvoc:nitrogenTotalProcedure-TotalN_calcul a skos:Concept ;
     skos:prefLabel "TotalN_calcul"@en ;
     sosa:isProcedureFor eusoilvoc:NitrogenTotal .
 
-eusoilvoc:nitrogenTotalProcedure-TotalN_calcul-oc10 a skos:Concept ;
+eusoilvoc:nitrogenTotalProcedure-TotalN_calcul-oc10 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:nitrogenTotalProcedure-TotalN_calcul-oc10 ;
             schema:text "Calculated from OrgC and C/N ratio of 10"@en ] ;
     skos:exactMatch glosis_proc:nitrogenTotalProcedure-TotalN_calcul-oc10 ;
@@ -4449,7 +4566,8 @@ eusoilvoc:nitrogenTotalProcedure-TotalN_calcul-oc10 a skos:Concept ;
     skos:prefLabel "TotalN_calcul-oc10"@en ;
     sosa:isProcedureFor eusoilvoc:NitrogenTotal .
 
-eusoilvoc:nitrogenTotalProcedure-TotalN_dc-ht-dumas a skos:Concept ;
+eusoilvoc:nitrogenTotalProcedure-TotalN_dc-ht-dumas a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:nitrogenTotalProcedure-TotalN_dc ;
     skos:definition [ dcterms:source glosis_proc:nitrogenTotalProcedure-TotalN_dc-ht-dumas ;
             schema:text "Dry combustion at 800-1000 C celcius (Dumas method)"@en ] ;
@@ -4457,7 +4575,8 @@ eusoilvoc:nitrogenTotalProcedure-TotalN_dc-ht-dumas a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "TotalN_dc-ht-dumas"@en .
 
-eusoilvoc:nitrogenTotalProcedure-TotalN_dc-ht-leco a skos:Concept ;
+eusoilvoc:nitrogenTotalProcedure-TotalN_dc-ht-leco a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:nitrogenTotalProcedure-TotalN_dc ;
     skos:definition [ dcterms:source glosis_proc:nitrogenTotalProcedure-TotalN_dc-ht-leco ;
             schema:text "Element analyzer (LECO analyzer), Dry Combustion"@en ] ;
@@ -4465,7 +4584,8 @@ eusoilvoc:nitrogenTotalProcedure-TotalN_dc-ht-leco a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "TotalN_dc-ht-leco"@en .
 
-eusoilvoc:nitrogenTotalProcedure-TotalN_dc-spec a skos:Concept ;
+eusoilvoc:nitrogenTotalProcedure-TotalN_dc-spec a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:nitrogenTotalProcedure-TotalN_dc ;
     skos:definition [ dcterms:source glosis_proc:nitrogenTotalProcedure-TotalN_dc-spec ;
             schema:text "Spectrally measured and converted to N by dry combustion"@en ] ;
@@ -4473,7 +4593,8 @@ eusoilvoc:nitrogenTotalProcedure-TotalN_dc-spec a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "TotalN_dc-spec"@en .
 
-eusoilvoc:nitrogenTotalProcedure-TotalN_h2so4 a skos:Concept ;
+eusoilvoc:nitrogenTotalProcedure-TotalN_h2so4 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:nitrogenTotalProcedure-TotalN_h2so4 ;
             schema:text "H2SO4"@en ] ;
     skos:exactMatch glosis_proc:nitrogenTotalProcedure-TotalN_h2so4 ;
@@ -4481,7 +4602,8 @@ eusoilvoc:nitrogenTotalProcedure-TotalN_h2so4 a skos:Concept ;
     skos:prefLabel "TotalN_h2so4"@en ;
     sosa:isProcedureFor eusoilvoc:NitrogenTotal .
 
-eusoilvoc:nitrogenTotalProcedure-TotalN_kjeldahl a skos:Concept ;
+eusoilvoc:nitrogenTotalProcedure-TotalN_kjeldahl a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:nitrogenTotalProcedure-TotalN_kjeldahl ;
             schema:text "Method of Kjeldahl (digestion)"@en ] ;
     skos:exactMatch glosis_proc:nitrogenTotalProcedure-TotalN_kjeldahl ;
@@ -4489,7 +4611,8 @@ eusoilvoc:nitrogenTotalProcedure-TotalN_kjeldahl a skos:Concept ;
     skos:prefLabel "TotalN_kjeldahl"@en ;
     sosa:isProcedureFor eusoilvoc:NitrogenTotal .
 
-eusoilvoc:nitrogenTotalProcedure-TotalN_kjeldahl-nh4 a skos:Concept ;
+eusoilvoc:nitrogenTotalProcedure-TotalN_kjeldahl-nh4 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:nitrogenTotalProcedure-TotalN_kjeldahl-nh4 ;
             schema:text "Kjeldahl, and ammonia distillation"@en ] ;
     skos:exactMatch glosis_proc:nitrogenTotalProcedure-TotalN_kjeldahl-nh4 ;
@@ -4497,7 +4620,8 @@ eusoilvoc:nitrogenTotalProcedure-TotalN_kjeldahl-nh4 a skos:Concept ;
     skos:prefLabel "TotalN_kjeldahl-nh4"@en ;
     sosa:isProcedureFor eusoilvoc:NitrogenTotal .
 
-eusoilvoc:nitrogenTotalProcedure-TotalN_nelson a skos:Concept ;
+eusoilvoc:nitrogenTotalProcedure-TotalN_nelson a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:nitrogenTotalProcedure-TotalN_nelson ;
             schema:text "Nelson and Sommers, 1980"@en ] ;
     skos:exactMatch glosis_proc:nitrogenTotalProcedure-TotalN_nelson ;
@@ -4505,7 +4629,8 @@ eusoilvoc:nitrogenTotalProcedure-TotalN_nelson a skos:Concept ;
     skos:prefLabel "TotalN_nelso"@en ;
     sosa:isProcedureFor eusoilvoc:NitrogenTotal .
 
-eusoilvoc:nitrogenTotalProcedure-TotalN_tn04 a skos:Concept ;
+eusoilvoc:nitrogenTotalProcedure-TotalN_tn04 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:nitrogenTotalProcedure-TotalN_tn04 ;
             schema:text "Dry combustion using a CN-corder and cobalt oxide or copper oxide as an oxidation accelerator (Tanabe and Araragi, 1970)"@en ] ;
     skos:exactMatch glosis_proc:nitrogenTotalProcedure-TotalN_tn04 ;
@@ -4513,7 +4638,8 @@ eusoilvoc:nitrogenTotalProcedure-TotalN_tn04 a skos:Concept ;
     skos:prefLabel "TotalN_tn04"@en ;
     sosa:isProcedureFor eusoilvoc:NitrogenTotal .
 
-eusoilvoc:nitrogenTotalProcedure-TotalN_tn06 a skos:Concept ;
+eusoilvoc:nitrogenTotalProcedure-TotalN_tn06 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:nitrogenTotalProcedure-TotalN_tn06 ;
             schema:text "Continuous flow analyser after digestion with H2SO4/salicyclic acid/H2O2/Se"@en ] ;
     skos:exactMatch glosis_proc:nitrogenTotalProcedure-TotalN_tn06 ;
@@ -4521,7 +4647,8 @@ eusoilvoc:nitrogenTotalProcedure-TotalN_tn06 a skos:Concept ;
     skos:prefLabel "TotalN_tn06"@en ;
     sosa:isProcedureFor eusoilvoc:NitrogenTotal .
 
-eusoilvoc:nitrogenTotalProcedure-TotalN_tn08 a skos:Concept ;
+eusoilvoc:nitrogenTotalProcedure-TotalN_tn08 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:nitrogenTotalProcedure-TotalN_tn08 ;
             schema:text "Sample digested by sulphuric acid, distillation of released ammonia, back titration against sulpuric acid"@en ] ;
     skos:exactMatch glosis_proc:nitrogenTotalProcedure-TotalN_tn08 ;
@@ -4529,7 +4656,8 @@ eusoilvoc:nitrogenTotalProcedure-TotalN_tn08 a skos:Concept ;
     skos:prefLabel "TotalN_tn08"@en ;
     sosa:isProcedureFor eusoilvoc:NitrogenTotal .
 
-eusoilvoc:organicMatterProcedure-FulAcidC_unkn a skos:Concept ;
+eusoilvoc:organicMatterProcedure-FulAcidC_unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:organicMatterProcedure-FulAcidC_unkn ;
             schema:text "Fulvic acid carbon_unknown method"@en ] ;
     skos:exactMatch glosis_proc:organicMatterProcedure-FulAcidC_unkn ;
@@ -4537,7 +4665,8 @@ eusoilvoc:organicMatterProcedure-FulAcidC_unkn a skos:Concept ;
     skos:prefLabel "FulAcidC_unk"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicMatter .
 
-eusoilvoc:organicMatterProcedure-HumAcidC_unkn a skos:Concept ;
+eusoilvoc:organicMatterProcedure-HumAcidC_unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:organicMatterProcedure-HumAcidC_unkn ;
             schema:text "Humic acid carbon_unknown method"@en ] ;
     skos:exactMatch glosis_proc:organicMatterProcedure-HumAcidC_unkn ;
@@ -4545,7 +4674,8 @@ eusoilvoc:organicMatterProcedure-HumAcidC_unkn a skos:Concept ;
     skos:prefLabel "HumAcidC_unk"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicMatter .
 
-eusoilvoc:organicMatterProcedure-OrgM_calcul-oc1.73 a skos:Concept ;
+eusoilvoc:organicMatterProcedure-OrgM_calcul-oc1.73 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:organicMatterProcedure-OrgM_calcul-oc1.73 ;
             schema:text "Organic carbon * 1,73"@en ] ;
     skos:exactMatch glosis_proc:organicMatterProcedure-OrgM_calcul-oc1.73 ;
@@ -4553,7 +4683,8 @@ eusoilvoc:organicMatterProcedure-OrgM_calcul-oc1.73 a skos:Concept ;
     skos:prefLabel "OrgM_calcul-oc1.73"@en ;
     sosa:isProcedureFor eusoilvoc:SoilOrganicMatter .
 
-eusoilvoc:organicMatterProcedure-TotHumC_unkn a skos:Concept ;
+eusoilvoc:organicMatterProcedure-TotHumC_unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:organicMatterProcedure-TotHumC_unkn ;
             schema:text "Total humic carbon_unknown method"@en ] ;
     skos:exactMatch glosis_proc:organicMatterProcedure-TotHumC_unkn ;
@@ -4567,7 +4698,8 @@ eusoilvoc:pFcurve a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pF curve"@en .
 
-eusoilvoc:pHProcedure-pHCaCl2_ratio1-1 a skos:Concept ;
+eusoilvoc:pHProcedure-pHCaCl2_ratio1-1 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHCaCl2 ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHCaCl2_ratio1-1 ;
             schema:text "pHCaCl2 (soil reaction) in 1:1 soil/1 M CaCl2 solution (1 M)"@en ] ;
@@ -4575,7 +4707,8 @@ eusoilvoc:pHProcedure-pHCaCl2_ratio1-1 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHCaCl2_ratio1-1"@en .
 
-eusoilvoc:pHProcedure-pHCaCl2_ratio1-10 a skos:Concept ;
+eusoilvoc:pHProcedure-pHCaCl2_ratio1-10 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHCaCl2 ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHCaCl2_ratio1-10 ;
             schema:text "pHCaCl2 (soil reaction) in 1:10 soil/CaCl2 solution (0.01-1 M)"@en ] ;
@@ -4583,7 +4716,8 @@ eusoilvoc:pHProcedure-pHCaCl2_ratio1-10 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHCaCl2_ratio1-10"@en .
 
-eusoilvoc:pHProcedure-pHCaCl2_ratio1-2 a skos:Concept ;
+eusoilvoc:pHProcedure-pHCaCl2_ratio1-2 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHCaCl2 ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHCaCl2_ratio1-2 ;
             schema:text "pHCaCl2 (soil reaction) in 1:2 soil/CaCl2 solution (0.01-1 M)"@en ] ;
@@ -4591,7 +4725,8 @@ eusoilvoc:pHProcedure-pHCaCl2_ratio1-2 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHCaCl2_ratio1-2"@en .
 
-eusoilvoc:pHProcedure-pHCaCl2_ratio1-2.5 a skos:Concept ;
+eusoilvoc:pHProcedure-pHCaCl2_ratio1-2.5 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHCaCl2 ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHCaCl2_ratio1-2.5 ;
             schema:text "pHCaCl2 (soil reaction) in 1:2.5 soil/CaCl2 solution (0.01-1 M)"@en ] ;
@@ -4599,7 +4734,8 @@ eusoilvoc:pHProcedure-pHCaCl2_ratio1-2.5 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHCaCl2_ratio1-2.5"@en .
 
-eusoilvoc:pHProcedure-pHCaCl2_ratio1-5 a skos:Concept ;
+eusoilvoc:pHProcedure-pHCaCl2_ratio1-5 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHCaCl2 ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHCaCl2_ratio1-5 ;
             schema:text "pHCaCl2 (soil reaction) in 1:5 soil/CaCl2 solution (0.01-1 M)"@en ] ;
@@ -4607,7 +4743,8 @@ eusoilvoc:pHProcedure-pHCaCl2_ratio1-5 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHCaCl2_ratio1-5"@en .
 
-eusoilvoc:pHProcedure-pHCaCl2_sat a skos:Concept ;
+eusoilvoc:pHProcedure-pHCaCl2_sat a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHCaCl2 ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHCaCl2_sat ;
             schema:text "pHCaCl2 (soil reaction) in saturated paste"@en ] ;
@@ -4615,7 +4752,8 @@ eusoilvoc:pHProcedure-pHCaCl2_sat a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHCaCl2_sat"@en .
 
-eusoilvoc:pHProcedure-pHH2O_ratio1-1 a skos:Concept ;
+eusoilvoc:pHProcedure-pHH2O_ratio1-1 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHH2O ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHH2O_ratio1-1 ;
             schema:text "pHH2O (soil reaction) in 1:1 soil/water solution"@en ] ;
@@ -4623,7 +4761,8 @@ eusoilvoc:pHProcedure-pHH2O_ratio1-1 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHH2O_ratio1-1"@en .
 
-eusoilvoc:pHProcedure-pHH2O_ratio1-10 a skos:Concept ;
+eusoilvoc:pHProcedure-pHH2O_ratio1-10 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHH2O ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHH2O_ratio1-10 ;
             schema:text "pHH2O (soil reaction) in 1:10 soil/water solution"@en ] ;
@@ -4631,7 +4770,8 @@ eusoilvoc:pHProcedure-pHH2O_ratio1-10 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHH2O_ratio1-10"@en .
 
-eusoilvoc:pHProcedure-pHH2O_ratio1-2 a skos:Concept ;
+eusoilvoc:pHProcedure-pHH2O_ratio1-2 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHH2O ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHH2O_ratio1-2 ;
             schema:text "pHH2O (soil reaction) in 1:2 soil/water solution"@en ] ;
@@ -4639,7 +4779,8 @@ eusoilvoc:pHProcedure-pHH2O_ratio1-2 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHH2O_ratio1-2"@en .
 
-eusoilvoc:pHProcedure-pHH2O_ratio1-2.5 a skos:Concept ;
+eusoilvoc:pHProcedure-pHH2O_ratio1-2.5 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHH2O ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHH2O_ratio1-2.5 ;
             schema:text "pHH2O (soil reaction) in 1:2.5 soil/water solution"@en ] ;
@@ -4647,7 +4788,8 @@ eusoilvoc:pHProcedure-pHH2O_ratio1-2.5 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHH2O_ratio1-2.5"@en .
 
-eusoilvoc:pHProcedure-pHH2O_ratio1-5 a skos:Concept ;
+eusoilvoc:pHProcedure-pHH2O_ratio1-5 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHH2O ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHH2O_ratio1-5 ;
             schema:text "pHH2O (soil reaction) in 1:5 soil/water solution"@en ] ;
@@ -4655,7 +4797,8 @@ eusoilvoc:pHProcedure-pHH2O_ratio1-5 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHH2O_ratio1-5"@en .
 
-eusoilvoc:pHProcedure-pHH2O_sat a skos:Concept ;
+eusoilvoc:pHProcedure-pHH2O_sat a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHH2O ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHH2O_sat ;
             schema:text "pHH2O (soil reaction) in water saturated paste"@en ] ;
@@ -4663,7 +4806,8 @@ eusoilvoc:pHProcedure-pHH2O_sat a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHH2O_sat"@en .
 
-eusoilvoc:pHProcedure-pHH2O_unkn-spec a skos:Concept ;
+eusoilvoc:pHProcedure-pHH2O_unkn-spec a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHH2O ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHH2O_unkn-spec ;
             schema:text "Spectrally measured and converted to pHH2O (soil reaction) in unknown soil/water solution"@en ] ;
@@ -4671,7 +4815,8 @@ eusoilvoc:pHProcedure-pHH2O_unkn-spec a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHH2O_unkn-spec"@en .
 
-eusoilvoc:pHProcedure-pHKCl_ratio1-1 a skos:Concept ;
+eusoilvoc:pHProcedure-pHKCl_ratio1-1 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHKCl ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHKCl_ratio1-1 ;
             schema:text "pHKCl (soil reaction) in 1:1 soil/KCl solution (1 M)"@en ] ;
@@ -4679,7 +4824,8 @@ eusoilvoc:pHProcedure-pHKCl_ratio1-1 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHKCl_ratio1-1"@en .
 
-eusoilvoc:pHProcedure-pHKCl_ratio1-10 a skos:Concept ;
+eusoilvoc:pHProcedure-pHKCl_ratio1-10 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHKCl ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHKCl_ratio1-10 ;
             schema:text "pHKCl (soil reaction) in 1:10 soil/KCl solution (0.01-1 M)"@en ] ;
@@ -4687,7 +4833,8 @@ eusoilvoc:pHProcedure-pHKCl_ratio1-10 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHKCl_ratio1-10"@en .
 
-eusoilvoc:pHProcedure-pHKCl_ratio1-2 a skos:Concept ;
+eusoilvoc:pHProcedure-pHKCl_ratio1-2 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHKCl ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHKCl_ratio1-2 ;
             schema:text "pHKCl (soil reaction) in 1:2 soil/KCl solution (0.01-1 M)"@en ] ;
@@ -4695,7 +4842,8 @@ eusoilvoc:pHProcedure-pHKCl_ratio1-2 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHKCl_ratio1-2"@en .
 
-eusoilvoc:pHProcedure-pHKCl_ratio1-2.5 a skos:Concept ;
+eusoilvoc:pHProcedure-pHKCl_ratio1-2.5 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHKCl ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHKCl_ratio1-2.5 ;
             schema:text "pHKCl (soil reaction) in 1:2.5 soil/KCl solution (0.01-1 M)"@en ] ;
@@ -4703,7 +4851,8 @@ eusoilvoc:pHProcedure-pHKCl_ratio1-2.5 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHKCl_ratio1-2.5"@en .
 
-eusoilvoc:pHProcedure-pHKCl_ratio1-5 a skos:Concept ;
+eusoilvoc:pHProcedure-pHKCl_ratio1-5 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHKCl ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHKCl_ratio1-5 ;
             schema:text "pHKCl (soil reaction) in 1:5 soil/KCl solution (0.01-1 M)"@en ] ;
@@ -4711,7 +4860,8 @@ eusoilvoc:pHProcedure-pHKCl_ratio1-5 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHKCl_ratio1-5"@en .
 
-eusoilvoc:pHProcedure-pHKCl_sat a skos:Concept ;
+eusoilvoc:pHProcedure-pHKCl_sat a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHKCl_sat ;
             schema:text "pHKCl (soil reaction) in saturated paste"@en ] ;
     skos:exactMatch glosis_proc:pHProcedure-pHKCl_sat ;
@@ -4719,7 +4869,8 @@ eusoilvoc:pHProcedure-pHKCl_sat a skos:Concept ;
     skos:prefLabel "pHKCl_sat"@en ;
     sosa:isProcedureFor eusoilvoc:SoilpH .
 
-eusoilvoc:pHProcedure-pHNaF_ratio1-1 a skos:Concept ;
+eusoilvoc:pHProcedure-pHNaF_ratio1-1 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHNaF ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHNaF_ratio1-1 ;
             schema:text "pHNaF (soil reaction) in 1:1 soil/NaF solution (1 M)"@en ] ;
@@ -4727,7 +4878,8 @@ eusoilvoc:pHProcedure-pHNaF_ratio1-1 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHNaF_ratio1-1"@en .
 
-eusoilvoc:pHProcedure-pHNaF_ratio1-10 a skos:Concept ;
+eusoilvoc:pHProcedure-pHNaF_ratio1-10 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHNaF ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHNaF_ratio1-10 ;
             schema:text "pHNaF (soil reaction) in 1:10 soil/NaF solution (0.01-1 M)"@en ] ;
@@ -4735,7 +4887,8 @@ eusoilvoc:pHProcedure-pHNaF_ratio1-10 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHNaF_ratio1-10"@en .
 
-eusoilvoc:pHProcedure-pHNaF_ratio1-2 a skos:Concept ;
+eusoilvoc:pHProcedure-pHNaF_ratio1-2 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHNaF ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHNaF_ratio1-2 ;
             schema:text "pHNaF (soil reaction) in 1:2 soil/NaF solution (0.01-1 M)"@en ] ;
@@ -4743,7 +4896,8 @@ eusoilvoc:pHProcedure-pHNaF_ratio1-2 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHNaF_ratio1-2"@en .
 
-eusoilvoc:pHProcedure-pHNaF_ratio1-2.5 a skos:Concept ;
+eusoilvoc:pHProcedure-pHNaF_ratio1-2.5 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHNaF ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHNaF_ratio1-2.5 ;
             schema:text "pHNaF (soil reaction) in 1:2.5 soil/NaF solution (0.01-1 M)"@en ] ;
@@ -4751,7 +4905,8 @@ eusoilvoc:pHProcedure-pHNaF_ratio1-2.5 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHNaF_ratio1-2.5"@en .
 
-eusoilvoc:pHProcedure-pHNaF_ratio1-5 a skos:Concept ;
+eusoilvoc:pHProcedure-pHNaF_ratio1-5 a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHNaF ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHNaF_ratio1-5 ;
             schema:text "pHNaF (soil reaction) in 1:5 soil/NaF solution (0.01-1 M)"@en ] ;
@@ -4759,7 +4914,8 @@ eusoilvoc:pHProcedure-pHNaF_ratio1-5 a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHNaF_ratio1-5"@en .
 
-eusoilvoc:pHProcedure-pHNaF_sat a skos:Concept ;
+eusoilvoc:pHProcedure-pHNaF_sat a skos:Concept,
+        sosa:Procedure ;
     skos:broader eusoilvoc:pHProcedure-pHNaF ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHNaF_sat ;
             schema:text "pHNaF (soil reaction) in saturated paste"@en ] ;
@@ -4767,7 +4923,8 @@ eusoilvoc:pHProcedure-pHNaF_sat a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "pHNaF_sat"@en .
 
-eusoilvoc:phosphorusRetentionProcedure-RetentP_blakemore a skos:Concept ;
+eusoilvoc:phosphorusRetentionProcedure-RetentP_blakemore a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:phosphorusRetentionProcedure-RetentP_blakemore ;
             schema:text "P retention at ~pH4.6  (acc. Blakemore 1987)"@en ] ;
     skos:exactMatch glosis_proc:phosphorusRetentionProcedure-RetentP_blakemore ;
@@ -4775,7 +4932,8 @@ eusoilvoc:phosphorusRetentionProcedure-RetentP_blakemore a skos:Concept ;
     skos:prefLabel "RetentP_blakemor"@en ;
     sosa:isProcedureFor eusoilvoc:PhosphorusRetention .
 
-eusoilvoc:phosphorusRetentionProcedure-RetentP_unkn-spec a skos:Concept ;
+eusoilvoc:phosphorusRetentionProcedure-RetentP_unkn-spec a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:phosphorusRetentionProcedure-RetentP_unkn-spec ;
             schema:text "Spectrally measured and converted to P retention (P buffer index)"@en ] ;
     skos:exactMatch glosis_proc:phosphorusRetentionProcedure-RetentP_unkn-spec ;
@@ -4783,7 +4941,8 @@ eusoilvoc:phosphorusRetentionProcedure-RetentP_unkn-spec a skos:Concept ;
     skos:prefLabel "RetentP_unkn-spec"@en ;
     sosa:isProcedureFor eusoilvoc:PhosphorusRetention .
 
-eusoilvoc:porosityProcedure-Poros_calcul-pf0 a skos:Concept ;
+eusoilvoc:porosityProcedure-Poros_calcul-pf0 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:porosityProcedure-Poros_calcul-pf0 ;
             schema:text "Porosity calculated from volumetric moisture content at pF 0 (1 cm)"@en ] ;
     skos:exactMatch glosis_proc:porosityProcedure-Poros_calcul-pf0 ;
@@ -4791,7 +4950,8 @@ eusoilvoc:porosityProcedure-Poros_calcul-pf0 a skos:Concept ;
     skos:prefLabel "Poros_calcul-pf0"@en ;
     sosa:isProcedureFor eusoilvoc:SoilPorosity .
 
-eusoilvoc:solubleSaltsProcedure-SlbAn_calcul-unkn a skos:Concept ;
+eusoilvoc:solubleSaltsProcedure-SlbAn_calcul-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:solubleSaltsProcedure-SlbAn_calcul-unkn ;
             schema:text "Sum of soluble anions (Cl, SO4, HCO2, CO3, NO3, F)"@en ] ;
     skos:exactMatch glosis_proc:solubleSaltsProcedure-SlbAn_calcul-unkn ;
@@ -4799,7 +4959,8 @@ eusoilvoc:solubleSaltsProcedure-SlbAn_calcul-unkn a skos:Concept ;
     skos:prefLabel "SlbAn_calcul-unk"@en ;
     sosa:isProcedureFor eusoilvoc:SolubleSalts .
 
-eusoilvoc:solubleSaltsProcedure-SlbCat_calcul-unkn a skos:Concept ;
+eusoilvoc:solubleSaltsProcedure-SlbCat_calcul-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:solubleSaltsProcedure-SlbCat_calcul-unkn ;
             schema:text "Sum of soluble cations (Ca, Mg, K, Na)"@en ] ;
     skos:exactMatch glosis_proc:solubleSaltsProcedure-SlbCat_calcul-unkn ;
@@ -4807,7 +4968,8 @@ eusoilvoc:solubleSaltsProcedure-SlbCat_calcul-unkn a skos:Concept ;
     skos:prefLabel "SlbCat_calcul-unk"@en ;
     sosa:isProcedureFor eusoilvoc:SolubleSalts .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc ;
             schema:text "Dissolution of carbonates by Acetic acid [CH3COOH], external heat (dry combustion)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc ;
@@ -4815,7 +4977,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-dc a skos:Concept
     skos:prefLabel "CaCO3_acid-ch3cooh-dc"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-nodc a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-nodc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-nodc ;
             schema:text "Dissolution of carbonates by Acetic acid [CH3COOH], no external (no dry combustion)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-nodc ;
@@ -4823,7 +4986,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-nodc a skos:Conce
     skos:prefLabel "CaCO3_acid-ch3cooh-nodc"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-unkn a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-unkn ;
             schema:text "Dissolution of carbonates by Acetic acid [CH3COOH], external heat unknown"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-unkn ;
@@ -4831,7 +4995,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-ch3cooh-unkn a skos:Conce
     skos:prefLabel "CaCO3_acid-ch3cooh-unk"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-dc a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-dc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-dc ;
             schema:text "Dissolution of carbonates by acid, external heat (dry combustion)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-dc ;
@@ -4839,7 +5004,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-dc a skos:Concept ;
     skos:prefLabel "CaCO3_acid-dc"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-dc a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-dc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-dc ;
             schema:text "Dissolution of carbonates by Sulfuric acid [H2SO4], external heat (dry combustion)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-dc ;
@@ -4847,7 +5013,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-dc a skos:Concept ;
     skos:prefLabel "CaCO3_acid-h2so4-dc"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-nodc a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-nodc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-nodc ;
             schema:text "Dissolution of carbonates by Sulfuric acid [H2SO4], no external (no dry combustion)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-nodc ;
@@ -4855,7 +5022,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-nodc a skos:Concept
     skos:prefLabel "CaCO3_acid-h2so4-nodc"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-unkn a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-unkn ;
             schema:text "Dissolution of carbonates by Sulfuric acid [H2SO4], external heat unknown"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-unkn ;
@@ -4863,7 +5031,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h2so4-unkn a skos:Concept
     skos:prefLabel "CaCO3_acid-h2so4-unk"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-dc a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-dc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-dc ;
             schema:text "Dissolution of carbonates by Phosphoric acid [H3PO4], external heat (dry combustion)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-dc ;
@@ -4871,7 +5040,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-dc a skos:Concept ;
     skos:prefLabel "CaCO3_acid-h3po4-dc"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-nodc a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-nodc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-nodc ;
             schema:text "Dissolution of carbonates by Phosphoric acid [H3PO4], no external (no dry combustion)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-nodc ;
@@ -4879,7 +5049,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-nodc a skos:Concept
     skos:prefLabel "CaCO3_acid-h3po4-nodc"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-unkn a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-unkn ;
             schema:text "Dissolution of carbonates by Phosphoric acid [H3PO4], external heat unknown"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-unkn ;
@@ -4887,7 +5058,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-h3po4-unkn a skos:Concept
     skos:prefLabel "CaCO3_acid-h3po4-unk"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-dc a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-dc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-dc ;
             schema:text "Dissolution of carbonates by Hydrochloric acid [HCl], or Perchloric acid [HClO4], external heat (dry combustion)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-dc ;
@@ -4895,7 +5067,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-dc a skos:Concept ;
     skos:prefLabel "CaCO3_acid-hcl-dc"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-nodc a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-nodc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-nodc ;
             schema:text "Dissolution of carbonates by Hydrochloric acid [HCl], or Perchloric acid [HClO4], no external (no dry combustion)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-nodc ;
@@ -4903,7 +5076,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-nodc a skos:Concept ;
     skos:prefLabel "CaCO3_acid-hcl-nodc"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-unkn a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-unkn ;
             schema:text "Dissolution of carbonates by Hydrochloric acid [HCl], or Perchloric acid [HClO4], external heat unknown"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-unkn ;
@@ -4911,7 +5085,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-hcl-unkn a skos:Concept ;
     skos:prefLabel "CaCO3_acid-hcl-unk"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-nodc a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-nodc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-nodc ;
             schema:text "Dissolution of carbonates by acid, no external (no dry combustion)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-nodc ;
@@ -4919,7 +5094,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-nodc a skos:Concept ;
     skos:prefLabel "CaCO3_acid-nodc"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-unkn a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-unkn ;
             schema:text "Dissolution of carbonates by acid, external heat unknown"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_acid-unkn ;
@@ -4927,7 +5103,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_acid-unkn a skos:Concept ;
     skos:prefLabel "CaCO3_acid-unk"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca01 a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca01 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca01 ;
             schema:text "Method of Scheibler (volumetric)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca01 ;
@@ -4935,7 +5112,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca01 a skos:Concept ;
     skos:prefLabel "CaCO3_ca01"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca02 a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca02 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca02 ;
             schema:text "Method of Wesemael"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca02 ;
@@ -4943,7 +5121,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca02 a skos:Concept ;
     skos:prefLabel "CaCO3_ca02"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca03 a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca03 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca03 ;
             schema:text "Method of Piper (HCl)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca03 ;
@@ -4951,7 +5130,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca03 a skos:Concept ;
     skos:prefLabel "CaCO3_ca03"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca04 a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca04 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca04 ;
             schema:text "Calcimeter method (volumetric after adition of dilute acid)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca04 ;
@@ -4959,7 +5139,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca04 a skos:Concept ;
     skos:prefLabel "CaCO3_ca04"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca05 a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca05 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca05 ;
             schema:text "Gravimetric (USDA Agr. Hdbk 60-/- method Richards et al., 1954)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca05 ;
@@ -4967,7 +5148,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca05 a skos:Concept ;
     skos:prefLabel "CaCO3_ca05"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca06 a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca06 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca06 ;
             schema:text "H3PO4 acid at 80C, conductometric in NaOH (Schlichting & Blume, 1966)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca06 ;
@@ -4975,7 +5157,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca06 a skos:Concept ;
     skos:prefLabel "CaCO3_ca06"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca07 a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca07 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca07 ;
             schema:text "Pressure calcimeter (Nelson, 1982)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca07 ;
@@ -4983,7 +5166,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca07 a skos:Concept ;
     skos:prefLabel "CaCO3_ca07"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca08 a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca08 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca08 ;
             schema:text "Bernard calcimeter (Total CaCO3)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca08 ;
@@ -4991,7 +5175,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca08 a skos:Concept ;
     skos:prefLabel "CaCO3_ca08"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca09 a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca09 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca09 ;
             schema:text "Carbonates: H3PO4 treatment at 80 deg. C and CO2 measurement like TOC (OC13), transformation into CaCO3 (Schlichting et al. 1995)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca09 ;
@@ -4999,7 +5184,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca09 a skos:Concept ;
     skos:prefLabel "CaCO3_ca09"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca10 a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca10 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca10 ;
             schema:text "CaCO3 Equivalent, CO2 evolution after HCl treatment. Gravimetric"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca10 ;
@@ -5007,7 +5193,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca10 a skos:Concept ;
     skos:prefLabel "CaCO3_ca10"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca11 a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca11 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca11 ;
             schema:text "Black, 1965-HCl"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca11 ;
@@ -5015,7 +5202,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca11 a skos:Concept ;
     skos:prefLabel "CaCO3_ca11"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca12 a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca12 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca12 ;
             schema:text "Treatment with H2SO4 N/2 acid followed by titration with NaOH N/2 in presence of an indicator"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_ca12 ;
@@ -5023,7 +5211,8 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_ca12 a skos:Concept ;
     skos:prefLabel "CaCO3_ca12"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
-eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc a skos:Concept ;
+eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc ;
             schema:text "Indirect estimate: inorganic carbon divided by 0.12 (computed as total carbon minus organic carbon)"@en ] ;
     skos:exactMatch glosis_proc:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc ;
@@ -5624,7 +5813,8 @@ eusoilvoc:WaterQuality a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "water quality"@en .
 
-eusoilvoc:BaseSaturation a skos:Concept ;
+eusoilvoc:BaseSaturation a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilChemicalProperties ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Bascal ;
             schema:text "Base saturation represents the percentage of the soil's cation exchange capacity (CEC) occupied by basic cations such as calcium (Ca²⁺), magnesium (Mg²⁺), potassium (K⁺), and sodium (Na⁺). Higher base saturation typically correlates with higher fertility and a greater ability to supply essential nutrients to plants. This parameter also influences soil pH buffering capacity. Source: Brady & Weil (2017)."@en ] ;
@@ -5681,7 +5871,8 @@ eusoilvoc:Copper a skos:Concept ;
         eusoilvoc:CopperTotalElements ;
     skos:prefLabel "copper"@en .
 
-eusoilvoc:EffectiveCEC a skos:Concept ;
+eusoilvoc:EffectiveCEC a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:CationExchangeCapacity ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-ECEC ;
             schema:text "ECEC is the sum of exchangeable cations in soil at its natural pH. It provides a measure of the soil’s fertility under acidic conditions, as it considers both base cations and exchangeable aluminum. Source: Brady & Weil (2017)."@en ] ;
@@ -5757,7 +5948,8 @@ eusoilvoc:NonsoilIndicators a skos:Concept ;
         eusoilvoc:ExternalFactors ;
     skos:prefLabel "non-soil indicators"@en .
 
-eusoilvoc:PhosphorusRetention a skos:Concept ;
+eusoilvoc:PhosphorusRetention a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Phosphorus ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Phoret ;
             schema:text "Phosphorus retention measures a soil's capacity to adsorb and hold phosphorus, influenced by soil texture, pH, and mineralogy. While high retention reduces leaching, it may also limit phosphorus availability to plants. Understanding phosphorus retention helps optimize fertilization and minimize environmental impacts. Source: Brady & Weil (2017)."@en ] ;
@@ -5929,16 +6121,6 @@ eusoilvoc:SoilNutrientLoss a skos:Concept ;
     skos:narrower eusoilvoc:SoilNLoss,
         eusoilvoc:SoilPLoss ;
     skos:prefLabel "soil nutrient loss"@en .
-
-eusoilvoc:SoilNutrients a skos:Concept ;
-    skos:altLabel "soil nutrient"@en ;
-    skos:broader eusoilvoc:SoilSubstance ;
-    skos:exactMatch spp:SoilNutrient,
-        she:SoilNutrients ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Macronutrients,
-        eusoilvoc:Micronutrients ;
-    skos:prefLabel "soil nutrients"@en .
 
 eusoilvoc:SoilOxidationReductionReaction a skos:Concept ;
     skos:broader eusoilvoc:SoilChemicalReaction ;
@@ -6172,7 +6354,8 @@ eusoilvoc:Aluminium a skos:Concept ;
         eusoilvoc:AluminiumTotalElements ;
     skos:prefLabel "aluminium"@en .
 
-eusoilvoc:AvailableWaterHoldingCapacity a skos:Concept ;
+eusoilvoc:AvailableWaterHoldingCapacity a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilWaterHoldingCapacity ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Avavol ;
             schema:text "Available water capacity (AWC) measures the volume of water soil can retain between field capacity and the permanent wilting point. It represents the water accessible to plants for uptake. High AWC supports better plant growth, while low AWC may necessitate irrigation. Source: USDA NRCS."@en ] ;
@@ -6219,7 +6402,8 @@ eusoilvoc:CationExchangeCapacity a skos:Concept ;
         eusoilvoc:EffectiveCEC ;
     skos:prefLabel "cation exchange capacity"@en .
 
-eusoilvoc:CoarseFragments a skos:Concept ;
+eusoilvoc:CoarseFragments a skos:Concept,
+        sosa:ObservableProperty ;
     skos:altLabel "coarse fragment"@en ;
     skos:broader eusoilvoc:SoilParticles ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-CoaFra ;
@@ -6482,7 +6666,8 @@ eusoilvoc:SoilIndicators a skos:Concept ;
     skos:prefLabel "soil indicators"@en ;
     skos:topConceptOf <https://w3id.org/eusoilvoc> .
 
-eusoilvoc:SoilInorganicCarbon a skos:Concept ;
+eusoilvoc:SoilInorganicCarbon a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilInorganicComponents,
         eusoilvoc:SoilTotalCarbon ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Carinorg ;
@@ -6492,6 +6677,17 @@ eusoilvoc:SoilInorganicCarbon a skos:Concept ;
     skos:prefLabel "soil inorganic carbon"@en ;
     sosa:hasProcedure eusoilvoc:carbonInorganicProcedure-InOrgC_calcul-caco3,
         eusoilvoc:carbonInorganicProcedure-InOrgC_calcul-tc-oc .
+
+eusoilvoc:SoilNutrients a skos:Concept ;
+    skos:altLabel "soil nutrient"@en ;
+    skos:broader eusoilvoc:SoilChemicalProperties,
+        eusoilvoc:SoilSubstance ;
+    skos:exactMatch spp:SoilNutrient,
+        she:SoilNutrients ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:Macronutrients,
+        eusoilvoc:Micronutrients ;
+    skos:prefLabel "soil nutrients"@en .
 
 eusoilvoc:SoilOrganisms a skos:Concept ;
     skos:altLabel "soil organism"@en ;
@@ -6622,7 +6818,8 @@ eusoilvoc:SoilWaterMovement a skos:Concept ;
         eusoilvoc:SoilWaterTransport ;
     skos:prefLabel "soil water movement"@en .
 
-eusoilvoc:nitrogenTotalProcedure-TotalN_dc a skos:Concept ;
+eusoilvoc:nitrogenTotalProcedure-TotalN_dc a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:nitrogenTotalProcedure-TotalN_dc ;
             schema:text "Dry combustion"@en ] ;
     skos:exactMatch glosis_proc:nitrogenTotalProcedure-TotalN_dc ;
@@ -6881,7 +7078,8 @@ eusoilvoc:SoilVolumeChange a skos:Concept ;
         eusoilvoc:SoilSwelling ;
     skos:prefLabel "soil volume change"@en .
 
-eusoilvoc:SolubleSalts a skos:Concept ;
+eusoilvoc:SolubleSalts a skos:Concept,
+        sosa:ObservableProperty ;
     skos:altLabel "soluble salt"@en ;
     skos:broader eusoilvoc:Salts,
         eusoilvoc:SoilSolutes ;
@@ -6964,7 +7162,8 @@ eusoilvoc:SoilEnvironmentalFunctions a skos:Concept ;
         eusoilvoc:WaterQuality ;
     skos:prefLabel "soil environmental functions"@en .
 
-eusoilvoc:SoilOrganicMatter a skos:Concept ;
+eusoilvoc:SoilOrganicMatter a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilOrganicComponents ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Orgmat ;
             schema:text "Soil organic matter is composed of decomposed plant and animal residues, living soil organisms, and humus. It improves soil structure, water retention, nutrient supply, and microbial activity, making it critical for sustainable agriculture and soil health. Source: Brady & Weil (2017)."@en ] ;
@@ -7006,7 +7205,8 @@ eusoilvoc:SoilRetention a skos:Concept ;
         eusoilvoc:SoilWaterStorage ;
     skos:prefLabel "soil retention"@en .
 
-eusoilvoc:SoilpH a skos:Concept ;
+eusoilvoc:SoilpH a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilChemicalProperties ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-pH ;
             schema:text "Soil pH measures the concentration of hydrogen ions (H⁺) in the soil solution, indicating its acidity or alkalinity on a scale from 1 to 14. Neutral soils have a pH of 7, while values below 7 are acidic and above are alkaline. Soil pH significantly affects nutrient availability, microbial activity, and plant growth. For instance, nutrients like phosphorus are most available in a pH range of 6 to 7. Lime or sulfur applications can adjust soil pH to optimize conditions for crops. Source: USDA Natural Resources Conservation Service (NRCS)."@en ] ;
@@ -7022,7 +7222,8 @@ eusoilvoc:SoilpH a skos:Concept ;
         eusoilvoc:pHProcedure-pHKCl_sat,
         eusoilvoc:pHProcedure-pHNaF .
 
-eusoilvoc:pHProcedure-pHKCl a skos:Concept ;
+eusoilvoc:pHProcedure-pHKCl a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHKCl ;
             schema:text "pHKCl (soil reaction) in a soil/KCl solution (0.01-1 M)"@en ] ;
     skos:exactMatch glosis_proc:pHProcedure-pHKCl ;
@@ -7078,7 +7279,8 @@ eusoilvoc:SoilDegradation a skos:Concept ;
         eusoilvoc:SoilPhysicalDegradation ;
     skos:prefLabel "soil degradation"@en .
 
-eusoilvoc:SoilElectricalConductivity a skos:Concept ;
+eusoilvoc:SoilElectricalConductivity a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Eleccond ;
             schema:text "Electrical conductivity (EC) measures the ability of soil to conduct an electrical current, which is directly related to the concentration of soluble salts. It is an essential indicator of soil salinity and is used to assess soil's suitability for crop growth. High EC levels can reduce plant water uptake and affect germination, while low levels indicate low salinity and better soil health. Source: USDA NRCS."@en ] ;
@@ -7194,7 +7396,8 @@ eusoilvoc:SoilWaterTransmissionIndex a skos:Concept ;
         eusoilvoc:SoilWaterInfiltrationRate ;
     skos:prefLabel "soil water transmission index"@en .
 
-eusoilvoc:exchangeableBasesProcedure-ExchBases_ph-unkn-edta a skos:Concept ;
+eusoilvoc:exchangeableBasesProcedure-ExchBases_ph-unkn-edta a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:exchangeableBasesProcedure-ExchBases_ph-unkn-edta ;
             schema:text "Exch bases (Ca, Mg, K, Na) unknown buffer, in EDTA solution"@en ] ;
     skos:exactMatch glosis_proc:exchangeableBasesProcedure-ExchBases_ph-unkn-edta ;
@@ -7208,7 +7411,8 @@ eusoilvoc:exchangeableBasesProcedure-ExchBases_ph-unkn-edta a skos:Concept ;
         eusoilvoc:PotassiumExchangeableBases,
         eusoilvoc:SodiumExchangeableBases .
 
-eusoilvoc:exchangeableBasesProcedure-ExchBases_ph-unkn-m3 a skos:Concept ;
+eusoilvoc:exchangeableBasesProcedure-ExchBases_ph-unkn-m3 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:exchangeableBasesProcedure-ExchBases_ph-unkn-m3 ;
             schema:text "Exch bases (Ca, Mg, K, Na) unknown buffer, in Mehlich3 solution with extractable ppm assumed exchangeable cmolc/kg"@en ] ;
     skos:exactMatch glosis_proc:exchangeableBasesProcedure-ExchBases_ph-unkn-m3 ;
@@ -7222,7 +7426,8 @@ eusoilvoc:exchangeableBasesProcedure-ExchBases_ph-unkn-m3 a skos:Concept ;
         eusoilvoc:PotassiumExchangeableBases,
         eusoilvoc:SodiumExchangeableBases .
 
-eusoilvoc:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec a skos:Concept ;
+eusoilvoc:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec ;
             schema:text "Exch bases (Ca, Mg, K, Na) spectrally measured and converted to, unknown buffer, in Mehlich3 solution with extractable ppm assumed exchangeable cmolc/kg"@en ] ;
     skos:exactMatch glosis_proc:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec ;
@@ -7236,7 +7441,8 @@ eusoilvoc:exchangeableBasesProcedure-ExchBases_ph-unkn-m3-spec a skos:Concept ;
         eusoilvoc:PotassiumExchangeableBases,
         eusoilvoc:SodiumExchangeableBases .
 
-eusoilvoc:exchangeableBasesProcedure-ExchBases_ph0-cohex a skos:Concept ;
+eusoilvoc:exchangeableBasesProcedure-ExchBases_ph0-cohex a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:exchangeableBasesProcedure-ExchBases_ph0-cohex ;
             schema:text "Exch bases (Ca, Mg, K, Na) unbuffered, in Cobalt(III) hexamine chloride solution 0,0166M (Cohex) [Co[NH3]6]Cl3 ), ISO 23470 (2007)"@en ] ;
     skos:exactMatch glosis_proc:exchangeableBasesProcedure-ExchBases_ph0-cohex ;
@@ -7250,7 +7456,8 @@ eusoilvoc:exchangeableBasesProcedure-ExchBases_ph0-cohex a skos:Concept ;
         eusoilvoc:PotassiumExchangeableBases,
         eusoilvoc:SodiumExchangeableBases .
 
-eusoilvoc:exchangeableBasesProcedure-ExchBases_ph0-nh4cl a skos:Concept ;
+eusoilvoc:exchangeableBasesProcedure-ExchBases_ph0-nh4cl a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:exchangeableBasesProcedure-ExchBases_ph0-nh4cl ;
             schema:text "Exch bases (Ca, Mg, K, Na) unbuffered, in 1 M NH4Cl (0.05-1.0 m?)"@en ] ;
     skos:exactMatch glosis_proc:exchangeableBasesProcedure-ExchBases_ph0-nh4cl ;
@@ -7264,7 +7471,8 @@ eusoilvoc:exchangeableBasesProcedure-ExchBases_ph0-nh4cl a skos:Concept ;
         eusoilvoc:PotassiumExchangeableBases,
         eusoilvoc:SodiumExchangeableBases .
 
-eusoilvoc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac a skos:Concept ;
+eusoilvoc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac ;
             schema:text "Exch bases (Ca, Mg, K, Na) buffered at pH 7, in 1M NH4OAc"@en ] ;
     skos:exactMatch glosis_proc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac ;
@@ -7278,7 +7486,8 @@ eusoilvoc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac a skos:Concept ;
         eusoilvoc:PotassiumExchangeableBases,
         eusoilvoc:SodiumExchangeableBases .
 
-eusoilvoc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-aas a skos:Concept ;
+eusoilvoc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-aas a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-aas ;
             schema:text "Exch bases (Ca, Mg, K, Na) buffered at pH 7, in 1M NH4OAc, Ca and Mg with AAS (Atomic Absorption Spectrometry)"@en ] ;
     skos:exactMatch glosis_proc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-aas ;
@@ -7292,7 +7501,8 @@ eusoilvoc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-aas a skos:Concept ;
         eusoilvoc:PotassiumExchangeableBases,
         eusoilvoc:SodiumExchangeableBases .
 
-eusoilvoc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-fp a skos:Concept ;
+eusoilvoc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-fp a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-fp ;
             schema:text "Exch bases (Ca, Mg, K, Na) buffered at pH 7, in 1M NH4OAc, K and Na with FP (Flame Photometry)"@en ] ;
     skos:exactMatch glosis_proc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-fp ;
@@ -7306,7 +7516,8 @@ eusoilvoc:exchangeableBasesProcedure-ExchBases_ph7-nh4oac-fp a skos:Concept ;
         eusoilvoc:PotassiumExchangeableBases,
         eusoilvoc:SodiumExchangeableBases .
 
-eusoilvoc:exchangeableBasesProcedure-ExchBases_ph7-unkn a skos:Concept ;
+eusoilvoc:exchangeableBasesProcedure-ExchBases_ph7-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:exchangeableBasesProcedure-ExchBases_ph7-unkn ;
             schema:text "Exch bases (Ca, Mg, K, Na) buffered at pH 7, in unknown solution"@en ] ;
     skos:exactMatch glosis_proc:exchangeableBasesProcedure-ExchBases_ph7-unkn ;
@@ -7320,7 +7531,8 @@ eusoilvoc:exchangeableBasesProcedure-ExchBases_ph7-unkn a skos:Concept ;
         eusoilvoc:PotassiumExchangeableBases,
         eusoilvoc:SodiumExchangeableBases .
 
-eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea a skos:Concept ;
+eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea ;
             schema:text "Exch bases (Ca, Mg, K, Na) buffered at pH 8.0-8.5, in 0.5 M BaCl2 - TEA solution"@en ] ;
     skos:exactMatch glosis_proc:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea ;
@@ -7334,7 +7546,8 @@ eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea a skos:Concept ;
         eusoilvoc:PotassiumExchangeableBases,
         eusoilvoc:SodiumExchangeableBases .
 
-eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-unkn a skos:Concept ;
+eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:exchangeableBasesProcedure-ExchBases_ph8-unkn ;
             schema:text "Exch bases (Ca, Mg, K, Na) buffered at pH 8.0-8.5, in unknown solution"@en ] ;
     skos:exactMatch glosis_proc:exchangeableBasesProcedure-ExchBases_ph8-unkn ;
@@ -7348,7 +7561,8 @@ eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-unkn a skos:Concept ;
         eusoilvoc:PotassiumExchangeableBases,
         eusoilvoc:SodiumExchangeableBases .
 
-eusoilvoc:pHProcedure-pHCaCl2 a skos:Concept ;
+eusoilvoc:pHProcedure-pHCaCl2 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHCaCl2 ;
             schema:text "pHCaCl2 (soil reaction) in a soil/CaCl2 solution (0.01-1 M)"@en ] ;
     skos:exactMatch glosis_proc:pHProcedure-pHCaCl2 ;
@@ -7362,7 +7576,8 @@ eusoilvoc:pHProcedure-pHCaCl2 a skos:Concept ;
     skos:prefLabel "pHCaCl2"@en ;
     sosa:isProcedureFor eusoilvoc:SoilpH .
 
-eusoilvoc:pHProcedure-pHNaF a skos:Concept ;
+eusoilvoc:pHProcedure-pHNaF a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHNaF ;
             schema:text "pHNaF (soil reaction) in a soil/NaF solution (0.01-1 M)"@en ] ;
     skos:exactMatch glosis_proc:pHProcedure-pHNaF ;
@@ -7376,7 +7591,8 @@ eusoilvoc:pHProcedure-pHNaF a skos:Concept ;
     skos:prefLabel "pHNaF"@en ;
     sosa:isProcedureFor eusoilvoc:SoilpH .
 
-eusoilvoc:AcidityExchangeable a skos:Concept ;
+eusoilvoc:AcidityExchangeable a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:ExchangeableCations ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Aciexc ;
             schema:text "Exchangeable acidity represents the amount of hydrogen (H⁺) and aluminum (Al³⁺) ions adsorbed onto soil particles that can be exchanged with the soil solution. It is a key factor in determining soil liming requirements and improving nutrient availability in acidic soils. Source: Brady & Weil (2017)."@en ] ;
@@ -7462,7 +7678,8 @@ eusoilvoc:SoilSubstance a skos:Concept ;
     skos:prefLabel "soil substance"@en ;
     skos:topConceptOf <https://w3id.org/eusoilvoc> .
 
-eusoilvoc:SoilTotalCarbon a skos:Concept ;
+eusoilvoc:SoilTotalCarbon a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Cartot ;
             schema:text "Total carbon in soil includes both organic carbon (from plant and microbial residues) and inorganic carbon (primarily carbonates). It is a fundamental component of soil organic matter, influencing soil fertility, structure, and water retention. High carbon levels are associated with better soil health and productivity. Source: USDA NRCS."@en ] ;
@@ -7477,7 +7694,8 @@ eusoilvoc:SoilTotalCarbon a skos:Concept ;
         eusoilvoc:carbonTotalProcedure-TotC_dc-ht-spec,
         eusoilvoc:carbonTotalProcedure-TotC_dc-mt .
 
-eusoilvoc:pHProcedure-pHH2O a skos:Concept ;
+eusoilvoc:pHProcedure-pHH2O a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHH2O ;
             schema:text "pHH2O (soil reaction) in a soil/water solution"@en ] ;
     skos:exactMatch glosis_proc:pHProcedure-pHH2O ;
@@ -7492,7 +7710,8 @@ eusoilvoc:pHProcedure-pHH2O a skos:Concept ;
     skos:prefLabel "pHH2O"@en ;
     sosa:isProcedureFor eusoilvoc:SoilpH .
 
-eusoilvoc:BulkDensityWholeSoil a skos:Concept ;
+eusoilvoc:BulkDensityWholeSoil a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilBulkDensity ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-BulDfine ;
             schema:text "This parameter measures the bulk density of the soil fraction smaller than 2 mm (excluding rocks and coarse fragments). It is used to assess the physical properties of soil related to root growth, water movement, and compaction. Source: Soil Science Society of America."@en ] ;
@@ -7626,7 +7845,8 @@ eusoilvoc:WaterInterchange a skos:Concept ;
         eusoilvoc:Transpiration ;
     skos:prefLabel "water interchange"@en .
 
-eusoilvoc:BulkDensityFineEarth a skos:Concept ;
+eusoilvoc:BulkDensityFineEarth a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilBulkDensity ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-BulDfine ;
             schema:text "This parameter measures the bulk density of the soil fraction smaller than 2 mm (excluding rocks and coarse fragments). It is used to assess the physical properties of soil related to root growth, water movement, and compaction. Source: Soil Science Society of America."@en ] ;
@@ -7644,7 +7864,8 @@ eusoilvoc:BulkDensityFineEarth a skos:Concept ;
         eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-fc,
         eusoilvoc:bulkDensityFineEarthProcedure-BlkDensF_fe-unkn-od .
 
-eusoilvoc:Gypsum a skos:Concept ;
+eusoilvoc:Gypsum a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Gyp ;
             schema:text "The gypsum content, expressed as weight, refers to the soil’s calcium sulfate levels. Gypsum improves soil structure, alleviates sodicity, and enhances water infiltration. It is commonly applied to saline-sodic soils for reclamation. Source: FAO Soil Bulletin."@en ] ;
@@ -7681,7 +7902,8 @@ eusoilvoc:SoilContents a skos:Concept ;
         eusoilvoc:SoilSiltContents ;
     skos:prefLabel "soil contents"@en .
 
-eusoilvoc:SoilHydraulicConductivity a skos:Concept ;
+eusoilvoc:SoilHydraulicConductivity a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilWaterPhysicalProperties,
         eusoilvoc:SoilWaterTransmissionIndex ;
     skos:closeMatch agrovoc:c_25579 ;
@@ -7756,7 +7978,8 @@ eusoilvoc:SoilThreats a skos:Concept ;
     skos:prefLabel "soil threats"@en ;
     skos:topConceptOf <https://w3id.org/eusoilvoc> .
 
-eusoilvoc:AluminiumExchangeableBase a skos:Concept ;
+eusoilvoc:AluminiumExchangeableBase a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Aluminium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Aluexc ;
             schema:text "Aluminium ions bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ] ;
@@ -7775,7 +7998,8 @@ eusoilvoc:AluminiumExchangeableBase a skos:Concept ;
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea,
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-unkn .
 
-eusoilvoc:CalciumExchangeableBase a skos:Concept ;
+eusoilvoc:CalciumExchangeableBase a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Calcium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Calexc ;
             schema:text "Calcium bound to exchange surfaces in the soil such as clay minerals and organic matter that can be released to the soil solution upon exchange"@en ] ;
@@ -7794,7 +8018,8 @@ eusoilvoc:CalciumExchangeableBase a skos:Concept ;
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea,
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-unkn .
 
-eusoilvoc:HydrogenExchangeableBases a skos:Concept ;
+eusoilvoc:HydrogenExchangeableBases a skos:Concept,
+        sosa:ObservableProperty ;
     skos:altLabel "hydrogen exchangeable base"@en ;
     skos:broader eusoilvoc:SoilChemicalProperties ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Hydexc ;
@@ -7814,7 +8039,8 @@ eusoilvoc:HydrogenExchangeableBases a skos:Concept ;
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea,
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-unkn .
 
-eusoilvoc:MagnesiumExchangeableBases a skos:Concept ;
+eusoilvoc:MagnesiumExchangeableBases a skos:Concept,
+        sosa:ObservableProperty ;
     skos:altLabel "magnesium exchangeable base"@en ;
     skos:broader eusoilvoc:Magnesium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Magexc ;
@@ -7834,7 +8060,8 @@ eusoilvoc:MagnesiumExchangeableBases a skos:Concept ;
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea,
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-unkn .
 
-eusoilvoc:ManganeseExchangeableBases a skos:Concept ;
+eusoilvoc:ManganeseExchangeableBases a skos:Concept,
+        sosa:ObservableProperty ;
     skos:altLabel "manganese exchangeable base"@en ;
     skos:broader eusoilvoc:Manganese ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Mantot ;
@@ -7854,7 +8081,8 @@ eusoilvoc:ManganeseExchangeableBases a skos:Concept ;
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea,
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-unkn .
 
-eusoilvoc:NitrogenTotal a skos:Concept ;
+eusoilvoc:NitrogenTotal a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Nitrogen ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Nittot ;
             schema:text "Total nitrogen encompasses all nitrogen forms in soil, including organic nitrogen in humus and inorganic nitrogen such as ammonium (NH₄⁺) and nitrate (NO₃⁻). Nitrogen is essential for plant growth, being a vital component of amino acids, proteins, and chlorophyll. Total nitrogen is a key indicator of soil fertility and its capacity to sustain long-term crop productivity. Source: Brady & Weil (2017)."@en ] ;
@@ -7873,7 +8101,8 @@ eusoilvoc:NitrogenTotal a skos:Concept ;
         eusoilvoc:nitrogenTotalProcedure-TotalN_tn06,
         eusoilvoc:nitrogenTotalProcedure-TotalN_tn08 .
 
-eusoilvoc:PotassiumExchangeableBases a skos:Concept ;
+eusoilvoc:PotassiumExchangeableBases a skos:Concept,
+        sosa:ObservableProperty ;
     skos:altLabel "potassium exchangeable base"@en ;
     skos:broader eusoilvoc:Potassium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Potexc ;
@@ -7893,7 +8122,8 @@ eusoilvoc:PotassiumExchangeableBases a skos:Concept ;
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea,
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-unkn .
 
-eusoilvoc:SodiumExchangeableBases a skos:Concept ;
+eusoilvoc:SodiumExchangeableBases a skos:Concept,
+        sosa:ObservableProperty ;
     skos:altLabel "sodium exchangeable base"@en ;
     skos:broader eusoilvoc:Sodium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Sodexp ;
@@ -7913,30 +8143,6 @@ eusoilvoc:SodiumExchangeableBases a skos:Concept ;
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea,
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-unkn .
 
-eusoilvoc:SoilChemicalProperties a skos:Concept ;
-    skos:altLabel "soil chemical property"@en ;
-    skos:broader eusoilvoc:SoilProperties ;
-    skos:definition [ dcterms:source <https://soilhealthnexus.org/resources/soil-properties/soil-chemical-properties/> ;
-            schema:text "Chemical properties of soils include the following aspects: inorganic matters of soil, organic matters in soil, colloidal properties of soil particles and soil reactions and buffering action in acidic soils and basic soils."@en ],
-        [ dcterms:source <https://www.sciencedirect.com/topics/earth-and-planetary-sciences/soil-chemical-property> ;
-            schema:text "Soil chemical properties refer to the chemical attributes of soil that influence its ability to supply nutrients to plants, retain harmful elements, and affect plant growth and microbial populations. These properties include nutrient concentrations, pH levels, and the presence of elements such as nitrogen, phosphorus, and potassium, which are critical for soil quality assessment and agricultural productivity."@en ] ;
-    skos:exactMatch spp:SoilChemicalProperty,
-        she:SoilChemicalProperties ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:BaseSaturation,
-        eusoilvoc:Carbonate,
-        eusoilvoc:HydrogenExchangeableBases,
-        eusoilvoc:OxalateExtractableOpticalDensity,
-        eusoilvoc:Sodium,
-        eusoilvoc:SoilChargeProperties,
-        eusoilvoc:SoilChemicalCapacity,
-        eusoilvoc:SoilReactivity,
-        eusoilvoc:SoilRedoxPotential,
-        eusoilvoc:SoilSalinity,
-        eusoilvoc:SoilpH ;
-    skos:prefLabel "soil chemical properties"@en ;
-    skos:related eusoilvoc:SoilQuality .
-
 eusoilvoc:SoilEngineeringFunctions a skos:Concept ;
     skos:altLabel "soil engineering function"@en ;
     skos:broader eusoilvoc:SoilFunctions ;
@@ -7955,7 +8161,8 @@ eusoilvoc:SoilEngineeringFunctions a skos:Concept ;
         eusoilvoc:WaterQuality ;
     skos:prefLabel "soil engineering functions"@en .
 
-eusoilvoc:SoilPorosity a skos:Concept ;
+eusoilvoc:SoilPorosity a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilPorePhysicalProperties ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Por ;
             schema:text "Porosity refers to the percentage of soil volume occupied by pores or voids, which hold air and water. It directly impacts water infiltration, drainage, and root growth. Soils with high porosity are better suited for crop cultivation, as they provide good aeration and water availability. Source: Brady & Weil (2017)."@en ] ;
@@ -8014,6 +8221,31 @@ eusoilvoc:SoilAgriculturalFunctions a skos:Concept ;
         eusoilvoc:SoilWaterAvailability ;
     skos:prefLabel "soil agricultural functions"@en .
 
+eusoilvoc:SoilChemicalProperties a skos:Concept ;
+    skos:altLabel "soil chemical property"@en ;
+    skos:broader eusoilvoc:SoilProperties ;
+    skos:definition [ dcterms:source <https://soilhealthnexus.org/resources/soil-properties/soil-chemical-properties/> ;
+            schema:text "Chemical properties of soils include the following aspects: inorganic matters of soil, organic matters in soil, colloidal properties of soil particles and soil reactions and buffering action in acidic soils and basic soils."@en ],
+        [ dcterms:source <https://www.sciencedirect.com/topics/earth-and-planetary-sciences/soil-chemical-property> ;
+            schema:text "Soil chemical properties refer to the chemical attributes of soil that influence its ability to supply nutrients to plants, retain harmful elements, and affect plant growth and microbial populations. These properties include nutrient concentrations, pH levels, and the presence of elements such as nitrogen, phosphorus, and potassium, which are critical for soil quality assessment and agricultural productivity."@en ] ;
+    skos:exactMatch spp:SoilChemicalProperty,
+        she:SoilChemicalProperties ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:BaseSaturation,
+        eusoilvoc:Carbonate,
+        eusoilvoc:HydrogenExchangeableBases,
+        eusoilvoc:OxalateExtractableOpticalDensity,
+        eusoilvoc:Sodium,
+        eusoilvoc:SoilChargeProperties,
+        eusoilvoc:SoilChemicalCapacity,
+        eusoilvoc:SoilNutrients,
+        eusoilvoc:SoilReactivity,
+        eusoilvoc:SoilRedoxPotential,
+        eusoilvoc:SoilSalinity,
+        eusoilvoc:SoilpH ;
+    skos:prefLabel "soil chemical properties"@en ;
+    skos:related eusoilvoc:SoilQuality .
+
 eusoilvoc:SoilFunctions a skos:Concept ;
     skos:altLabel "soil function"@en ;
     skos:exactMatch agrovoc:c_e5629cbd,
@@ -8036,7 +8268,8 @@ eusoilvoc:SoilFunctions a skos:Concept ;
     skos:prefLabel "soil functions"@en ;
     skos:topConceptOf <https://w3id.org/eusoilvoc> .
 
-eusoilvoc:extractableElementsProcedure-Extr_ap14 a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_ap14 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_ap14 ;
             schema:text "Method of Saunders and Metelerkamp (anion-exch. resin). Particularly used for available P."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_ap14 ;
@@ -8057,7 +8290,8 @@ eusoilvoc:extractableElementsProcedure-Extr_ap14 a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_ap15 a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_ap15 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_ap15 ;
             schema:text "Method of Hunter (1975) modified after ISFEI method. Particularly used for available P."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_ap15 ;
@@ -8078,7 +8312,8 @@ eusoilvoc:extractableElementsProcedure-Extr_ap15 a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_ap20 a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_ap20 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_ap20 ;
             schema:text "Olsen (not acid soils) resp. Bray I (acid soils). Particularly used for available P."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_ap20 ;
@@ -8099,7 +8334,8 @@ eusoilvoc:extractableElementsProcedure-Extr_ap20 a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_ap21 a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_ap21 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_ap21 ;
             schema:text "Olsen (if pH > 7) resp. Mehlich (if pH < 7). Particularly used for available P."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_ap21 ;
@@ -8120,7 +8356,8 @@ eusoilvoc:extractableElementsProcedure-Extr_ap21 a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_c6h8o7-reeuwijk a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_c6h8o7-reeuwijk a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_c6h8o7-reeuwijk ;
             schema:text "Complexation with citric acid (van Reeuwijk). Particularly used for available P."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_c6h8o7-reeuwijk ;
@@ -8141,7 +8378,8 @@ eusoilvoc:extractableElementsProcedure-Extr_c6h8o7-reeuwijk a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_cacl2 a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_cacl2 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_cacl2 ;
             schema:text "CaCl2. Particularly used for soluble P."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_cacl2 ;
@@ -8162,7 +8400,8 @@ eusoilvoc:extractableElementsProcedure-Extr_cacl2 a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_capo4 a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_capo4 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_capo4 ;
             schema:text "Ca phosphate. Particularly used for available S."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_capo4 ;
@@ -8183,7 +8422,8 @@ eusoilvoc:extractableElementsProcedure-Extr_capo4 a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_dtpa a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_dtpa a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_dtpa ;
             schema:text "DiethyneleTriaminePentaAcetic acid (DTPA) method"@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_dtpa ;
@@ -8204,7 +8444,8 @@ eusoilvoc:extractableElementsProcedure-Extr_dtpa a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_edta a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_edta a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_edta ;
             schema:text "EthyleneDiamineTetraAcetic acid (EDTA) method"@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_edta ;
@@ -8225,7 +8466,8 @@ eusoilvoc:extractableElementsProcedure-Extr_edta a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_h2so4-truog a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_h2so4-truog a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_h2so4-truog ;
             schema:text "Method of Truog (dilute H2SO4). Particularly used for available P."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_h2so4-truog ;
@@ -8246,7 +8488,8 @@ eusoilvoc:extractableElementsProcedure-Extr_h2so4-truog a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_hcl-h2so4-nelson a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_hcl-h2so4-nelson a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_hcl-h2so4-nelson ;
             schema:text "Method of Nelson (dilute HCl/H2SO4). Particularly used for available P."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_hcl-h2so4-nelson ;
@@ -8267,7 +8510,8 @@ eusoilvoc:extractableElementsProcedure-Extr_hcl-h2so4-nelson a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_hcl-nh4f-bray1 a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_hcl-nh4f-bray1 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_hcl-nh4f-bray1 ;
             schema:text "Method of Bray I  (dilute HCl/NH4F). Particularly used for available P."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_hcl-nh4f-bray1 ;
@@ -8288,7 +8532,8 @@ eusoilvoc:extractableElementsProcedure-Extr_hcl-nh4f-bray1 a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_hcl-nh4f-bray2 a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_hcl-nh4f-bray2 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_hcl-nh4f-bray2 ;
             schema:text "Method of Bray II (dilute HCl/NH4F). Particularly used for available P."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_hcl-nh4f-bray2 ;
@@ -8309,7 +8554,8 @@ eusoilvoc:extractableElementsProcedure-Extr_hcl-nh4f-bray2 a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_hcl-nh4f-kurtz-bray a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_hcl-nh4f-kurtz-bray a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_hcl-nh4f-kurtz-bray ;
             schema:text "Method of Kurtz-Bray I (0.025 M HCl + 0.03 M NH4F). Particularly used for available P."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_hcl-nh4f-kurtz-bray ;
@@ -8330,7 +8576,8 @@ eusoilvoc:extractableElementsProcedure-Extr_hcl-nh4f-kurtz-bray a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_hno3 a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_hno3 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_hno3 ;
             schema:text "Nitric acid (HNO3) method"@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_hno3 ;
@@ -8351,7 +8598,8 @@ eusoilvoc:extractableElementsProcedure-Extr_hno3 a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_hotwater a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_hotwater a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_hotwater ;
             schema:text "Hot water. Particularly used for available B"@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_hotwater ;
@@ -8372,7 +8620,8 @@ eusoilvoc:extractableElementsProcedure-Extr_hotwater a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_m1 a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_m1 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_m1 ;
             schema:text "Mehlich1 method"@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_m1 ;
@@ -8393,7 +8642,8 @@ eusoilvoc:extractableElementsProcedure-Extr_m1 a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_m2 a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_m2 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_m2 ;
             schema:text "Mehlich2 method"@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_m2 ;
@@ -8414,7 +8664,8 @@ eusoilvoc:extractableElementsProcedure-Extr_m2 a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_m3 a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_m3 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_m3 ;
             schema:text "Mehlich3 method (extractant 0.2 N CH3COOH + 0.25 N NH4NO3 + 0.015 N NH4F + 0.013 N HNO3 + 0.001 M EDTA)"@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_m3 ;
@@ -8435,7 +8686,8 @@ eusoilvoc:extractableElementsProcedure-Extr_m3 a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_m3-spec a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_m3-spec a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_m3-spec ;
             schema:text "Spectrally measured and converted to Mehlich3 method (extractant 0.2 N CH3COOH + 0.25 N NH4NO3 + 0.015 N NH4F + 0.013 N HNO3 + 0.001 M EDTA)"@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_m3-spec ;
@@ -8456,7 +8708,8 @@ eusoilvoc:extractableElementsProcedure-Extr_m3-spec a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_nahco3-olsen a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_nahco3-olsen a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_nahco3-olsen ;
             schema:text "Method of Olsen (0.5 M Sodium Bicarbonate (NaHCO3) extraction at pH8.5). Particularly used for available P."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_nahco3-olsen ;
@@ -8477,7 +8730,8 @@ eusoilvoc:extractableElementsProcedure-Extr_nahco3-olsen a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_nahco3-olsen-dabin a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_nahco3-olsen-dabin a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_nahco3-olsen-dabin ;
             schema:text "Method of Olsen, modified by Dabin (ORSTOM). Particularly used for available P."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_nahco3-olsen-dabin ;
@@ -8498,7 +8752,8 @@ eusoilvoc:extractableElementsProcedure-Extr_nahco3-olsen-dabin a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_naoac-morgan a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_naoac-morgan a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_naoac-morgan ;
             schema:text "Method of Morgan (Na-acetate/acetic acid). Particularly used for available P."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_naoac-morgan ;
@@ -8519,7 +8774,8 @@ eusoilvoc:extractableElementsProcedure-Extr_naoac-morgan a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1 a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1 ;
             schema:text "Ambic1 method (ammonium bicarbonate) (South Africa). Particularly used for available P."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1 ;
@@ -8540,7 +8796,8 @@ eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1 a skos:Concept ;
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven a skos:Concept ;
+eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven ;
             schema:text "NH4-lactate extraction method (KU-Leuven). Particularly used for available P."@en ] ;
     skos:exactMatch glosis_proc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven ;
@@ -8561,7 +8818,8 @@ eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven a skos:Conce
         eusoilvoc:SulfurExtractableElements,
         eusoilvoc:ZincExtractableElements .
 
-eusoilvoc:totalElementsProcedure-Total_h2so4 a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_h2so4 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_h2so4 ;
             schema:text "Total P-/- colorimetric in H2SO4-Se-Salicylic acid digest( sulfuric acid) Particularly used for Total P."@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_h2so4 ;
@@ -8582,7 +8840,8 @@ eusoilvoc:totalElementsProcedure-Total_h2so4 a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_hcl a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_hcl a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_hcl ;
             schema:text "HCl extraction. Particularly used for Total P."@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_hcl ;
@@ -8603,7 +8862,8 @@ eusoilvoc:totalElementsProcedure-Total_hcl a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_hcl-aquaregia a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_hcl-aquaregia a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_hcl-aquaregia ;
             schema:text "Hydrocloric (HCl) extraction in nitric/perchloric acid mixture (totals) aqua regia"@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_hcl-aquaregia ;
@@ -8624,7 +8884,8 @@ eusoilvoc:totalElementsProcedure-Total_hcl-aquaregia a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_hclo4 a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_hclo4 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_hclo4 ;
             schema:text "Perchloric acid percolation. Particularly used for Total P."@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_hclo4 ;
@@ -8645,7 +8906,8 @@ eusoilvoc:totalElementsProcedure-Total_hclo4 a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_hno3-aquafortis a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_hno3-aquafortis a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_hno3-aquafortis ;
             schema:text "Nitric acid attack. Particularly used for Total P."@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_hno3-aquafortis ;
@@ -8666,7 +8928,8 @@ eusoilvoc:totalElementsProcedure-Total_hno3-aquafortis a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_nh4-6mo7o24 a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_nh4-6mo7o24 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_nh4-6mo7o24 ;
             schema:text "COLORIMETRIC VANADATE MOLYBDATE. Particularly used for Total P."@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_nh4-6mo7o24 ;
@@ -8687,7 +8950,8 @@ eusoilvoc:totalElementsProcedure-Total_nh4-6mo7o24 a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_tp03 a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_tp03 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_tp03 ;
             schema:text "reagent of Baeyens. Precipitation in form of Phosphomolybdate. Particularly used for Total P."@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_tp03 ;
@@ -8708,7 +8972,8 @@ eusoilvoc:totalElementsProcedure-Total_tp03 a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_tp04 a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_tp04 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_tp04 ;
             schema:text "acid fleischman. Particularly used for Total P."@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_tp04 ;
@@ -8729,7 +8994,8 @@ eusoilvoc:totalElementsProcedure-Total_tp04 a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_tp05 a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_tp05 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_tp05 ;
             schema:text "8 M HCl extraction. Particularly used for Total P."@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_tp05 ;
@@ -8750,7 +9016,8 @@ eusoilvoc:totalElementsProcedure-Total_tp05 a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_tp06 a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_tp06 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_tp06 ;
             schema:text "Molybdenum blue method, using ascorbic acid as reductant after heating of soil to 550 C and extraction with 6M sulphuric acid. Particularly used for Total P."@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_tp06 ;
@@ -8771,7 +9038,8 @@ eusoilvoc:totalElementsProcedure-Total_tp06 a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_tp07 a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_tp07 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_tp07 ;
             schema:text "1:1 H2SO4 : HNO3. Particularly used for Total P."@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_tp07 ;
@@ -8792,7 +9060,8 @@ eusoilvoc:totalElementsProcedure-Total_tp07 a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_tp08 a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_tp08 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_tp08 ;
             schema:text "After Nitric acid attack (boiling with HNO3), colometric determination (method of Duval).. Particularly used for Total P."@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_tp08 ;
@@ -8813,7 +9082,8 @@ eusoilvoc:totalElementsProcedure-Total_tp08 a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_tp09 a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_tp09 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_tp09 ;
             schema:text "Walker and Adams, 1958. Particularly used for Total P."@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_tp09 ;
@@ -8834,7 +9104,8 @@ eusoilvoc:totalElementsProcedure-Total_tp09 a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_tp10 a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_tp10 a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_tp10 ;
             schema:text "Colorimetric, unspecified extract"@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_tp10 ;
@@ -8855,7 +9126,8 @@ eusoilvoc:totalElementsProcedure-Total_tp10 a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_unkn a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_unkn a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_unkn ;
             schema:text "Unspecified method"@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_unkn ;
@@ -8876,7 +9148,8 @@ eusoilvoc:totalElementsProcedure-Total_unkn a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_xrd a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_xrd a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_xrd ;
             schema:text "XRD"@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_xrd ;
@@ -8897,7 +9170,8 @@ eusoilvoc:totalElementsProcedure-Total_xrd a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_xrf a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_xrf a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_xrf ;
             schema:text "XRF"@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_xrf ;
@@ -8918,7 +9192,8 @@ eusoilvoc:totalElementsProcedure-Total_xrf a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_xrf-p a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_xrf-p a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_xrf-p ;
             schema:text "PXRF"@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_xrf-p ;
@@ -8939,7 +9214,8 @@ eusoilvoc:totalElementsProcedure-Total_xrf-p a skos:Concept ;
         eusoilvoc:SulfurTotalElements,
         eusoilvoc:ZincTotalElements .
 
-eusoilvoc:totalElementsProcedure-Total_xtf-t a skos:Concept ;
+eusoilvoc:totalElementsProcedure-Total_xtf-t a skos:Concept,
+        sosa:Procedure ;
     skos:definition [ dcterms:source glosis_proc:totalElementsProcedure-Total_xtf-t ;
             schema:text "TXRF"@en ] ;
     skos:exactMatch glosis_proc:totalElementsProcedure-Total_xtf-t ;
@@ -9088,7 +9364,8 @@ eusoilvoc:SoilPores a skos:Concept ;
         eusoilvoc:TexturalPores ;
     skos:prefLabel "soil pores"@en .
 
-eusoilvoc:SoilMoistureContents a skos:Concept ;
+eusoilvoc:SoilMoistureContents a skos:Concept,
+        sosa:ObservableProperty ;
     skos:altLabel "moisture content"@en,
         "soil moisture content"@en ;
     skos:broader eusoilvoc:SoilWaterPhysicalProperties ;
@@ -9116,7 +9393,8 @@ eusoilvoc:SoilMoistureContents a skos:Concept ;
         eusoilvoc:moistureContentProcedure-VMC_ud-cl,
         eusoilvoc:moistureContentProcedure-VMC_ud-co .
 
-eusoilvoc:AluminiumTotalElements a skos:Concept ;
+eusoilvoc:AluminiumTotalElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:altLabel "aluminium total element"@en ;
     skos:broader eusoilvoc:Aluminium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Alutot ;
@@ -9144,7 +9422,8 @@ eusoilvoc:AluminiumTotalElements a skos:Concept ;
         eusoilvoc:totalElementsProcedure-Total_xrf-p,
         eusoilvoc:totalElementsProcedure-Total_xtf-t .
 
-eusoilvoc:BoronTotalElements a skos:Concept ;
+eusoilvoc:BoronTotalElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:altLabel "boron total element"@en ;
     skos:broader eusoilvoc:Boron ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Bortot ;
@@ -9172,7 +9451,8 @@ eusoilvoc:BoronTotalElements a skos:Concept ;
         eusoilvoc:totalElementsProcedure-Total_xrf-p,
         eusoilvoc:totalElementsProcedure-Total_xtf-t .
 
-eusoilvoc:CadmiumTotalElements a skos:Concept ;
+eusoilvoc:CadmiumTotalElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:altLabel "cadmium total element"@en ;
     skos:broader eusoilvoc:Cadmium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Cad ;
@@ -9200,7 +9480,8 @@ eusoilvoc:CadmiumTotalElements a skos:Concept ;
         eusoilvoc:totalElementsProcedure-Total_xrf-p,
         eusoilvoc:totalElementsProcedure-Total_xtf-t .
 
-eusoilvoc:CalciumTotalElements a skos:Concept ;
+eusoilvoc:CalciumTotalElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Calcium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Caltot ;
             schema:text "Total calcium in soil includes all forms, from exchangeable calcium to calcium in minerals. It is essential for plant cell wall structure, enzyme activation, and soil aggregation. Calcium levels influence soil pH and nutrient availability. Source: Havlin et al. (2014)."@en ] ;
@@ -9227,7 +9508,8 @@ eusoilvoc:CalciumTotalElements a skos:Concept ;
         eusoilvoc:totalElementsProcedure-Total_xrf-p,
         eusoilvoc:totalElementsProcedure-Total_xtf-t .
 
-eusoilvoc:CationExchangeCapacitySoil a skos:Concept ;
+eusoilvoc:CationExchangeCapacitySoil a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:CationExchangeCapacity ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-CEC ;
             schema:text "CEC measures the soil’s ability to hold and exchange positively charged ions (cations). It is a critical indicator of soil fertility, as higher CEC values imply greater capacity to retain essential nutrients like calcium, magnesium, and potassium. Clayey and organic-rich soils typically exhibit higher CEC. Source: Soil Science Society of America."@en ] ;
@@ -9254,7 +9536,8 @@ eusoilvoc:CationExchangeCapacitySoil a skos:Concept ;
         eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-nh4oac,
         eusoilvoc:cationExchangeCapacitySoilProcedure-CEC_ph8-unkn .
 
-eusoilvoc:CopperTotalElements a skos:Concept ;
+eusoilvoc:CopperTotalElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Copper ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Coptot ;
             schema:text "Total copper comprises all soil copper, including bound and free forms. Copper is vital for plant enzyme activation and metabolic processes. Deficiencies can lead to reduced growth and yields, while excess copper may inhibit root development. Source: Soil Science Society of America."@en ] ;
@@ -9281,7 +9564,8 @@ eusoilvoc:CopperTotalElements a skos:Concept ;
         eusoilvoc:totalElementsProcedure-Total_xrf-p,
         eusoilvoc:totalElementsProcedure-Total_xtf-t .
 
-eusoilvoc:IronTotalElements a skos:Concept ;
+eusoilvoc:IronTotalElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Iron ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Irotot ;
             schema:text "Total iron includes all iron forms in the soil, from soluble ferrous iron (Fe²⁺) to insoluble ferric iron (Fe³⁺). Iron is essential for plant chlorophyll synthesis and various enzymatic reactions. Deficiency, often seen in alkaline soils, results in chlorosis, while excessive iron can cause toxicity in acidic soils. Source: Soil Chemistry by Bohn et al."@en ] ;
@@ -9308,7 +9592,8 @@ eusoilvoc:IronTotalElements a skos:Concept ;
         eusoilvoc:totalElementsProcedure-Total_xrf-p,
         eusoilvoc:totalElementsProcedure-Total_xtf-t .
 
-eusoilvoc:MagnesiumTotalElements a skos:Concept ;
+eusoilvoc:MagnesiumTotalElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Magnesium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Magtot ;
             schema:text "Total magnesium in soil includes exchangeable, soluble, and mineral-bound forms. Magnesium is essential for chlorophyll synthesis, enzyme activation, and nutrient transport in plants. Its availability is influenced by soil pH and texture. Source: Havlin et al. (2014)."@en ] ;
@@ -9335,7 +9620,8 @@ eusoilvoc:MagnesiumTotalElements a skos:Concept ;
         eusoilvoc:totalElementsProcedure-Total_xrf-p,
         eusoilvoc:totalElementsProcedure-Total_xtf-t .
 
-eusoilvoc:ManganeseTotalElements a skos:Concept ;
+eusoilvoc:ManganeseTotalElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Manganese ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Mantot ;
             schema:text "Total manganese refers to all forms of manganese in the soil, which is critical for photosynthesis, enzyme activation, and nitrogen metabolism in plants. Manganese deficiencies or toxicities are influenced by soil pH, with deficiencies occurring in high-pH soils and toxicities in low-pH, waterlogged soils.  Source: Brady & Weil (2017)."@en ] ;
@@ -9362,7 +9648,8 @@ eusoilvoc:ManganeseTotalElements a skos:Concept ;
         eusoilvoc:totalElementsProcedure-Total_xrf-p,
         eusoilvoc:totalElementsProcedure-Total_xtf-t .
 
-eusoilvoc:MolybdenumTotalElements a skos:Concept ;
+eusoilvoc:MolybdenumTotalElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Molybdenum ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Mol ;
             schema:text "Molybdenum is a micronutrient essential for plant enzymes involved in nitrogen fixation and nitrate reduction. Deficiency, often observed in acidic soils, can lead to stunted growth and poor nitrogen utilization. Its availability increases with higher pH, making liming a common solution for molybdenum deficiencies. Source: Havlin et al. (2014)."@en ] ;
@@ -9389,7 +9676,8 @@ eusoilvoc:MolybdenumTotalElements a skos:Concept ;
         eusoilvoc:totalElementsProcedure-Total_xrf-p,
         eusoilvoc:totalElementsProcedure-Total_xtf-t .
 
-eusoilvoc:PhosphorusTotalElements a skos:Concept ;
+eusoilvoc:PhosphorusTotalElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Phosphorus ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Photot ;
             schema:text "Total phosphorus includes all forms of phosphorus in the soil, both organic and inorganic. While only a fraction is plant-available, total phosphorus serves as a long-term reserve for crop nutrition. Adequate phosphorus levels are crucial for energy transfer, photosynthesis, and root development in plants. Source: Soil Chemistry by Bohn et al."@en ] ;
@@ -9416,7 +9704,8 @@ eusoilvoc:PhosphorusTotalElements a skos:Concept ;
         eusoilvoc:totalElementsProcedure-Total_xrf-p,
         eusoilvoc:totalElementsProcedure-Total_xtf-t .
 
-eusoilvoc:PotassiumTotalElements a skos:Concept ;
+eusoilvoc:PotassiumTotalElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Potassium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Pottot ;
             schema:text "Total potassium includes all forms of potassium in soil, such as mineral-bound, exchangeable, and water-soluble potassium. It plays a vital role in plant growth by regulating water balance, enzyme activation, and photosynthesis. While only a fraction of total potassium is readily available to plants, it serves as a reserve to replenish exchangeable potassium over time. Adequate potassium levels improve crop yield, quality, and resistance to stress. Source: Soil Science Society of America."@en ] ;
@@ -9443,7 +9732,8 @@ eusoilvoc:PotassiumTotalElements a skos:Concept ;
         eusoilvoc:totalElementsProcedure-Total_xrf-p,
         eusoilvoc:totalElementsProcedure-Total_xtf-t .
 
-eusoilvoc:SodiumTotalElements a skos:Concept ;
+eusoilvoc:SodiumTotalElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Sodium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Sodtot ;
             schema:text "Total sodium includes all sodium present in soil, both soluble and bound. Excess sodium can lead to sodicity, which disrupts soil structure, reduces permeability, and impairs plant growth. Monitoring sodium levels is crucial for managing soil salinity in arid and irrigated regions. Source: Bohn, H.L., et al. (2001). Soil Chemistry."@en ] ;
@@ -9470,7 +9760,8 @@ eusoilvoc:SodiumTotalElements a skos:Concept ;
         eusoilvoc:totalElementsProcedure-Total_xrf-p,
         eusoilvoc:totalElementsProcedure-Total_xtf-t .
 
-eusoilvoc:SulfurTotalElements a skos:Concept ;
+eusoilvoc:SulfurTotalElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Sulfur ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Sultot ;
             schema:text "Total sulfur in soil includes both organic and inorganic forms, such as sulfates and sulfur in organic matter. Sulfur is essential for protein synthesis and enzyme functions in plants. Deficiency leads to stunted growth and yellowing of leaves. Total sulfur provides insight into the soil's potential to release plant-available sulfur over time, critical for sustaining crop health. Source: Havlin, J.L., et al. (2014). Soil Fertility and Fertilizers."@en ] ;
@@ -9497,7 +9788,8 @@ eusoilvoc:SulfurTotalElements a skos:Concept ;
         eusoilvoc:totalElementsProcedure-Total_xrf-p,
         eusoilvoc:totalElementsProcedure-Total_xtf-t .
 
-eusoilvoc:ZincTotalElements a skos:Concept ;
+eusoilvoc:ZincTotalElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Zinc ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Zin ;
             schema:text "Zinc is a micronutrient essential for plant enzyme systems, protein synthesis, and growth regulation. Deficiency is common in calcareous soils and results in stunted growth and chlorosis. Zinc fertilizers or soil pH adjustments can address deficiencies. Source: Havlin et al. (2014)."@en ] ;
@@ -9579,7 +9871,8 @@ eusoilvoc:SoilPhysicalProcesses a skos:Concept ;
         eusoilvoc:SoilWaterPhysicalProcesses ;
     skos:prefLabel "soil physical processes"@en .
 
-eusoilvoc:AluminiumExtractableElements a skos:Concept ;
+eusoilvoc:AluminiumExtractableElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:altLabel "aluminium extractable element"@en ;
     skos:broader eusoilvoc:Aluminium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Aluext ;
@@ -9613,7 +9906,8 @@ eusoilvoc:AluminiumExtractableElements a skos:Concept ;
         eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-eusoilvoc:BoronExtractableElements a skos:Concept ;
+eusoilvoc:BoronExtractableElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:altLabel "boron extractable element"@en ;
     skos:broader eusoilvoc:Boron ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Borext ;
@@ -9647,7 +9941,8 @@ eusoilvoc:BoronExtractableElements a skos:Concept ;
         eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-eusoilvoc:CadmiumExtractableElements a skos:Concept ;
+eusoilvoc:CadmiumExtractableElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:altLabel "cadmium extractable element"@en ;
     skos:broader eusoilvoc:Cadmium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Cad ;
@@ -9681,7 +9976,8 @@ eusoilvoc:CadmiumExtractableElements a skos:Concept ;
         eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-eusoilvoc:CalciumExtractableElements a skos:Concept ;
+eusoilvoc:CalciumExtractableElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Calcium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Calext ;
             schema:text "Calcium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
@@ -9714,7 +10010,8 @@ eusoilvoc:CalciumExtractableElements a skos:Concept ;
         eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-eusoilvoc:CopperExtractableElements a skos:Concept ;
+eusoilvoc:CopperExtractableElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Copper ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Copext ;
             schema:text "Copper bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
@@ -9747,7 +10044,8 @@ eusoilvoc:CopperExtractableElements a skos:Concept ;
         eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-eusoilvoc:IronExtractableElements a skos:Concept ;
+eusoilvoc:IronExtractableElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Iron ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Iroext ;
             schema:text "Iron bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
@@ -9780,7 +10078,8 @@ eusoilvoc:IronExtractableElements a skos:Concept ;
         eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-eusoilvoc:MagnesiumExtractableElements a skos:Concept ;
+eusoilvoc:MagnesiumExtractableElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Magnesium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Magext ;
             schema:text "Magnesium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
@@ -9813,7 +10112,8 @@ eusoilvoc:MagnesiumExtractableElements a skos:Concept ;
         eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-eusoilvoc:ManganeseExtractableElements a skos:Concept ;
+eusoilvoc:ManganeseExtractableElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Manganese ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Manext ;
             schema:text "Manganese bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
@@ -9846,7 +10146,8 @@ eusoilvoc:ManganeseExtractableElements a skos:Concept ;
         eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-eusoilvoc:MolybdenumExtractableElements a skos:Concept ;
+eusoilvoc:MolybdenumExtractableElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Molybdenum ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Mol ;
             schema:text "Molybdenum is a micronutrient essential for plant enzymes involved in nitrogen fixation and nitrate reduction. Deficiency, often observed in acidic soils, can lead to stunted growth and poor nitrogen utilization. Its availability increases with higher pH, making liming a common solution for molybdenum deficiencies. Source: Havlin et al. (2014)."@en ] ;
@@ -9879,7 +10180,8 @@ eusoilvoc:MolybdenumExtractableElements a skos:Concept ;
         eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-eusoilvoc:PhosphorusExtractableElements a skos:Concept ;
+eusoilvoc:PhosphorusExtractableElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Phosphorus ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Phoext ;
             schema:text "Phosphorus bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
@@ -9912,7 +10214,8 @@ eusoilvoc:PhosphorusExtractableElements a skos:Concept ;
         eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-eusoilvoc:PotassiumExtractableElements a skos:Concept ;
+eusoilvoc:PotassiumExtractableElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Potassium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Potext ;
             schema:text "Potassium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
@@ -9945,7 +10248,8 @@ eusoilvoc:PotassiumExtractableElements a skos:Concept ;
         eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-eusoilvoc:SodiumExtractableElements a skos:Concept ;
+eusoilvoc:SodiumExtractableElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Sodium ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Sodext ;
             schema:text "Sodium bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
@@ -9978,7 +10282,8 @@ eusoilvoc:SodiumExtractableElements a skos:Concept ;
         eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-eusoilvoc:SulfurExtractableElements a skos:Concept ;
+eusoilvoc:SulfurExtractableElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Sulfur ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Sulext ;
             schema:text "Sulfur bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
@@ -10011,7 +10316,8 @@ eusoilvoc:SulfurExtractableElements a skos:Concept ;
         eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-eusoilvoc:ZincExtractableElements a skos:Concept ;
+eusoilvoc:ZincExtractableElements a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Zinc ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Zinext ;
             schema:text "Zinc bound to the soil matrix but that can be released into the soil solution (i.e. become bio-available)"@en ] ;
@@ -10044,7 +10350,8 @@ eusoilvoc:ZincExtractableElements a skos:Concept ;
         eusoilvoc:extractableElementsProcedure-Extr_nh4-co3-2-ambic1,
         eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven .
 
-eusoilvoc:SoilOrganicCarbon a skos:Concept ;
+eusoilvoc:SoilOrganicCarbon a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilOrganicMatter,
         eusoilvoc:SoilTotalCarbon ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Carorg ;
@@ -10081,7 +10388,8 @@ eusoilvoc:SoilOrganicCarbon a skos:Concept ;
         eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-tiurin,
         eusoilvoc:carbonOrganicProcedure-OrgC_wc-cro3-walkleyblack .
 
-eusoilvoc:TotalCarbonateEquivalent a skos:Concept ;
+eusoilvoc:TotalCarbonateEquivalent a skos:Concept,
+        sosa:ObservableProperty ;
     skos:broader eusoilvoc:Carbonate ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Ccetot ;
             schema:text "The total calcium carbonate equivalent measures the full capacity of soil to neutralize acidity, considering all forms of carbonate and bicarbonate minerals. It is essential for managing soil pH and nutrient availability in acidic soils. Source: FAO Soil Bulletin."@en ] ;

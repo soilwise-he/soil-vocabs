@@ -28,6 +28,12 @@ eusoilvoc:Microbes a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "microbes"@en .
 
+eusoilvoc:Salts a skos:Concept ;
+    skos:altLabel "salt"@en ;
+    skos:broader eusoilvoc:SoilChemical ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "salts"@en .
+
 eusoilvoc:SoilFluidRetention a skos:Concept ;
     skos:broader eusoilvoc:SoilRetention,
         eusoilvoc:SoilWaterPhysicalProcesses ;
@@ -52,6 +58,12 @@ eusoilvoc:SoilNutrientRetention a skos:Concept ;
     skos:exactMatch spp:SoilNutrientRetention ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil nutrient retention"@en .
+
+eusoilvoc:SoilOrganicMatter a skos:Concept ;
+    skos:broader eusoilvoc:SoilOrganicComponents ;
+    skos:exactMatch spp:SoilOrganicMatter ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "soil organic matter"@en .
 
 eusoilvoc:SoilParticleMovement a skos:Concept ;
     skos:broader eusoilvoc:SoilMovement ;
@@ -456,12 +468,6 @@ eusoilvoc:Ions a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:ExchangeableCations ;
     skos:prefLabel "ions"@en .
-
-eusoilvoc:Salts a skos:Concept ;
-    skos:altLabel "salt"@en ;
-    skos:broader eusoilvoc:SoilChemical ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "salts"@en .
 
 eusoilvoc:Irrigation a skos:Concept ;
     skos:broader eusoilvoc:SoilManagement ;
@@ -1451,23 +1457,11 @@ eusoilvoc:SoilNutrientStorage a skos:Concept ;
 
 eusoilvoc:SoilNutrients a skos:Concept ;
     skos:altLabel "soil nutrient"@en ;
-    skos:broader eusoilvoc:SoilSubstance ;
+    skos:broader eusoilvoc:SoilChemicalProperties,
+        eusoilvoc:SoilSubstance ;
     skos:exactMatch spp:SoilNutrient ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil nutrients"@en .
-
-eusoilvoc:SoilOrganicComponents a skos:Concept ;
-    skos:altLabel "soil organic component"@en ;
-    skos:broader eusoilvoc:SoilComponents ;
-    skos:exactMatch spp:SoilOrganicComponent ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil organic components"@en .
-
-eusoilvoc:SoilOrganicMatter a skos:Concept ;
-    skos:broader eusoilvoc:SoilOrganicComponents ;
-    skos:exactMatch spp:SoilOrganicMatter ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil organic matter"@en .
 
 eusoilvoc:SoilOrganicMatterContents a skos:Concept ;
     skos:altLabel "soil organic matter content"@en ;
@@ -2431,12 +2425,6 @@ eusoilvoc:SoilChargeDensity a skos:Concept ;
     skos:narrower eusoilvoc:IntrinsicChargeDensity ;
     skos:prefLabel "soil charge density"@en .
 
-eusoilvoc:SoilChemical a skos:Concept ;
-    skos:broader eusoilvoc:SoilSubstance ;
-    skos:exactMatch spp:SoilChemical ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil chemical"@en .
-
 eusoilvoc:SoilCompaction a skos:Concept ;
     skos:broader eusoilvoc:SoilCompression,
         eusoilvoc:SoilPhysicalDegradativeProcesses ;
@@ -2521,6 +2509,13 @@ eusoilvoc:SoilLiquid a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilSolution ;
     skos:prefLabel "soil liquid"@en .
+
+eusoilvoc:SoilOrganicComponents a skos:Concept ;
+    skos:altLabel "soil organic component"@en ;
+    skos:broader eusoilvoc:SoilComponents ;
+    skos:exactMatch spp:SoilOrganicComponent ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "soil organic components"@en .
 
 eusoilvoc:SoilOxygenConcentration a skos:Concept ;
     skos:broader eusoilvoc:SoilAirPhysicalProperties,
@@ -2745,6 +2740,12 @@ eusoilvoc:SoilBulkDensity a skos:Concept ;
     skos:narrower eusoilvoc:DrySoilBulkDensity,
         eusoilvoc:WetSoilBulkDensity ;
     skos:prefLabel "soil bulk density"@en .
+
+eusoilvoc:SoilChemical a skos:Concept ;
+    skos:broader eusoilvoc:SoilSubstance ;
+    skos:exactMatch spp:SoilChemical ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "soil chemical"@en .
 
 eusoilvoc:SoilChemicalReaction a skos:Concept ;
     skos:broader eusoilvoc:SoilChemicalProcesses ;
@@ -3362,19 +3363,6 @@ eusoilvoc:Precipitation a skos:Concept ;
         eusoilvoc:Snow ;
     skos:prefLabel "precipitation"@en .
 
-eusoilvoc:SoilChemicalProperties a skos:Concept ;
-    skos:altLabel "soil chemical property"@en ;
-    skos:broader eusoilvoc:SoilProperties ;
-    skos:exactMatch spp:SoilChemicalProperty ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:SoilChargeProperties,
-        eusoilvoc:SoilChemicalCapacity,
-        eusoilvoc:SoilReactivity,
-        eusoilvoc:SoilRedoxPotential,
-        eusoilvoc:SoilSalinity,
-        eusoilvoc:SoilpH ;
-    skos:prefLabel "soil chemical properties"@en .
-
 eusoilvoc:SoilConsistence a skos:Concept ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilConsistence ;
@@ -3460,6 +3448,19 @@ eusoilvoc:SoilBiologicalProcesses a skos:Concept ;
         eusoilvoc:SoilMicrobialActivity,
         eusoilvoc:SoilOxygenConsumption ;
     skos:prefLabel "soil biological processes"@en .
+
+eusoilvoc:SoilChemicalProperties a skos:Concept ;
+    skos:altLabel "soil chemical property"@en ;
+    skos:broader eusoilvoc:SoilProperties ;
+    skos:exactMatch spp:SoilChemicalProperty ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:SoilChargeProperties,
+        eusoilvoc:SoilChemicalCapacity,
+        eusoilvoc:SoilReactivity,
+        eusoilvoc:SoilRedoxPotential,
+        eusoilvoc:SoilSalinity,
+        eusoilvoc:SoilpH ;
+    skos:prefLabel "soil chemical properties"@en .
 
 eusoilvoc:SoilDensity a skos:Concept ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
@@ -3723,6 +3724,27 @@ eusoilvoc:SoilChemicalProcesses a skos:Concept ;
         eusoilvoc:SoilSorption ;
     skos:prefLabel "soil chemical processes"@en .
 
+eusoilvoc:SoilComponents a skos:Concept ;
+    skos:altLabel "soil component"@en ;
+    skos:broader eusoilvoc:SoilSubstance ;
+    skos:exactMatch spp:SoilComponent ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:SoilAggregate,
+        eusoilvoc:SoilAir,
+        eusoilvoc:SoilFluid,
+        eusoilvoc:SoilGas,
+        eusoilvoc:SoilInorganicComponents,
+        eusoilvoc:SoilLiquid,
+        eusoilvoc:SoilMineralMatter,
+        eusoilvoc:SoilMoisture,
+        eusoilvoc:SoilOrganicComponents,
+        eusoilvoc:SoilParticles,
+        eusoilvoc:SoilSolid,
+        eusoilvoc:SoilSolutes,
+        eusoilvoc:SoilSolution,
+        eusoilvoc:SoilWater ;
+    skos:prefLabel "soil components"@en .
+
 eusoilvoc:SoilPorePhysicalProperties a skos:Concept ;
     skos:altLabel "soil pore physical property"@en ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
@@ -3761,27 +3783,6 @@ eusoilvoc:SoilWaterPhysicalProcesses a skos:Concept ;
         eusoilvoc:SoilWaterMovement,
         eusoilvoc:SoilWetting ;
     skos:prefLabel "soil water physical processes"@en .
-
-eusoilvoc:SoilComponents a skos:Concept ;
-    skos:altLabel "soil component"@en ;
-    skos:broader eusoilvoc:SoilSubstance ;
-    skos:exactMatch spp:SoilComponent ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:SoilAggregate,
-        eusoilvoc:SoilAir,
-        eusoilvoc:SoilFluid,
-        eusoilvoc:SoilGas,
-        eusoilvoc:SoilInorganicComponents,
-        eusoilvoc:SoilLiquid,
-        eusoilvoc:SoilMineralMatter,
-        eusoilvoc:SoilMoisture,
-        eusoilvoc:SoilOrganicComponents,
-        eusoilvoc:SoilParticles,
-        eusoilvoc:SoilSolid,
-        eusoilvoc:SoilSolutes,
-        eusoilvoc:SoilSolution,
-        eusoilvoc:SoilWater ;
-    skos:prefLabel "soil components"@en .
 
 eusoilvoc:SoilWaterPhysicalProperties a skos:Concept ;
     skos:altLabel "soil water physical property"@en ;
