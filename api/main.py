@@ -7,8 +7,6 @@ from api.vocab import load_graph
 
 rootpath = os.environ.get("ROOTPATH") or "/"
 
-rootpath = '/foo'
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     load_graph()

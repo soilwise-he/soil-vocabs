@@ -190,4 +190,4 @@ A docker image is available on ghcr.io.
 docker run -p8000:8000 ghcr.io/soilwise-he/soil-vocabs:latest
 ```
 
-You can set an env variable 'rootpath' to /example to run the api at a path, e.g. http://example.com/example/docs.
+You can set an env variable 'ROOTPATH' to /example to run the api at a path, e.g. http://example.com/example/docs.
