@@ -19,7 +19,7 @@ This replaces earlier versions (e.g., 2015) and supports interoperability across
 ## Soil health Monitoring law
 
 **What it is:**
-Defines key terms and concepts related to soil health monitoring, assessment, and management within the context of EU legislation. While not a formal ontology, it provides **standardized definitions** that can be referenced in semantic models related to soil health. 
+Defines key terms and concepts related to soil health monitoring, assessment, and management within the context of EU legislation. While not a formal ontology, it provides **standardized definitions** that can be referenced in semantic models related to soil health.
 
 **Background & Creator:**
 EU
@@ -35,8 +35,6 @@ Developed and maintained by **INRAE**, first published in 2021. Contains **>16 0
 **Use:**
 Serves for annotating datasets, documents, and research outputs, and is often **aligned with AGROVOC, GEMET, and other vocabularies** to enable broader semantic integration. ([vocabulaires-ouverts.inrae.fr][4])
 
-
-
 ## GEMET – GEneral Multilingual Environmental Thesaurus
 
 **What it is:**
@@ -46,9 +44,7 @@ A **multilingual environmental thesaurus** providing a core set of general envir
 Developed since **1995** under contract for the **European Environment Agency (EEA)** and others in the European environmental information network (EIONET). ([Eionet Portal](https://www.eionet.europa.eu/gemet/en/about))
 
 **Use:**
-Provides **general environmental concepts** (soil, water, pollution, etc.) that can be linked or mapped to domain-specific vocabularies like AGROVOC or INRAE Thesaurus, facilitating interdisciplinary interoperability. 
-
-
+Provides **general environmental concepts** (soil, water, pollution, etc.) that can be linked or mapped to domain-specific vocabularies like AGROVOC or INRAE Thesaurus, facilitating interdisciplinary interoperability.
 
 ## AGROVOC
 
@@ -61,8 +57,6 @@ Maintained by **FAO (Food and Agriculture Organization of the UN)**. Publicly ac
 **Use:**
 Used for indexing, annotating, and integrating agricultural and environmental data globally, and often functions as a **hub vocabulary** in agronomy and environmental knowledge graphs.
 
-
-
 ## GloSIS-LD – Global Soil Information System Linked Data
 
 **What it is:**
@@ -74,8 +68,6 @@ Originated within the **Global Soil Partnership (FAO)** to unify soil data seman
 **Use:**
 Provides a **semantic model for soil description and analysis**, enabling Linked Data publication and integration of heterogeneous soil data internationally.
 
-
-
 ## Soil Health Benchmarks Glossary
 
 **What it is:**
@@ -86,8 +78,6 @@ Created by EU research partners, this glossary aggregates and clarifies scientif
 
 **Use:**
 While primarily a glossary rather than a formal ontology, it’s **domain-focused on soil health** and can be used as semantic support for project data and knowledge graphs.
-
-
 
 ## [IMASH]( https://archive.researchdata.leeds.ac.uk/42) (Soil Properties and Processes Ontology)
 
@@ -114,7 +104,6 @@ A foundational environmental ontology developed under NASA that provides high-le
 
 ## [iAdopt](https://i-adopt.github.io/)
 
-
 ## INSPIRE registry
 
 The INSPIRE infrastructure involves a number of items, which require clear descriptions and the possibility to be referenced through unique identifiers. Examples for such items include INSPIRE themes, code lists, application schemas or discovery services. Registers provide a means to assign identifiers to items and their labels, definitions and descriptions (in different languages). The [INSPIRE registry](https://inspire.ec.europa.eu/registry) provides a central access point to a number of centrally managed INSPIRE registers. The content of these registers are based on the INSPIRE Directive, Implementing Rules and Technical Guidelines.
@@ -134,15 +123,14 @@ Recent versions include a Fieldguide including a reange of classifications for s
 
 ## Glosolan
 
-[Standard Operating Procedures of the Global Soil Partnership](https://www.fao.org/global-soil-partnership/glosolan-old/soil-analysis/standard-operating-procedures/en/) are described in pdf's, not available in SKOS (yet) 
+[Standard Operating Procedures of the Global Soil Partnership](https://www.fao.org/global-soil-partnership/glosolan-old/soil-analysis/standard-operating-procedures/en/) are described in pdf's, not available in SKOS (yet)
 
 ## NALT
 
 [National Agricultural thesaurus](https://lod.nal.usda.gov/nalt/en/) is an initiative of USDA, it is widely used due to its completeness and acurateness
 
 ## AGRIS/CARIS
+
 [AGRIS/CARIS](https://www.fao.org/4/u1808e/U1808E01.htm#TopOfPage): SUBJECT CATEGORIES AND SCOPE DESCRIPTIONS
 
 In this Categorization Scheme, agriculture includes fisheries, forestry, food, nutrition and rural sociology. It comprises the production of plants and animals useful to man and the preparation and distribution of these products for man's use.
-
-
