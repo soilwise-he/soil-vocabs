@@ -4,8 +4,10 @@ on:
   push:
     paths:
       - SoilVoc_concepts.csv
-      - VERSION
+      - assets/VERSION
       - "api/**"
+      - "scripts/**"
+      - "docker/**"
   workflow_dispatch:
 
 permissions:
@@ -36,7 +38,7 @@ jobs:
         env:
           RESTORED_TTL: ${{ runner.temp }}/SoilVoc_restored.ttl
         run: |
-          python restore_soilvoc_from_csv.py \
+          python scripts/restore_soilvoc_from_csv.py \
             --csv SoilVoc_concepts.csv \
             --out "$RESTORED_TTL"
 
@@ -47,13 +49,10 @@ jobs:
         env:
           RESTORED_TTL: ${{ runner.temp }}/SoilVoc_restored.ttl
         run: |
-          VERSION=$(cat VERSION)
-          python -c "
-          import os
-          import generate_soilvoc_html as m
-          v = m.parse_skos_vocabulary_enhanced(os.environ['RESTORED_TTL'])
-          m.generate_viewer_data(v, 'assets', version='${VERSION}')
-          "
+          python scripts/generate_soilvoc_html.py \
+            --ttl "$RESTORED_TTL" \
+            --output-dir assets \
+            --version-file assets/VERSION
 
       - name: Commit updated files
         run: |
@@ -85,6 +84,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
+          file: docker/Dockerfile
           push: true
           tags: |
             ghcr.io/${{ github.repository }}:${{ steps.vars.outputs.TAG }}

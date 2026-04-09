@@ -8,11 +8,18 @@ Generate enhanced interactive HTML mind map from SoilVoc.ttl with:
 - Visual differentiation for procedures
 """
 
-from rdflib import Graph, Namespace, URIRef, BNode
-from rdflib.namespace import SKOS, DCTERMS, RDF, RDFS, SDO, SOSA
+import argparse
 import json
 import traceback
 from pathlib import Path
+
+from rdflib import BNode, Graph, Namespace, URIRef
+from rdflib.namespace import DCTERMS, RDF, RDFS, SDO, SKOS, SOSA
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DEFAULT_TTL_PATH = REPO_ROOT / "SoilVoc.ttl"
+DEFAULT_OUTPUT_DIR = REPO_ROOT / "assets"
+DEFAULT_VERSION_FILE = DEFAULT_OUTPUT_DIR / "VERSION"
 
 def parse_skos_vocabulary_enhanced(ttl_file_path):
     """
@@ -228,7 +235,7 @@ def build_fragment_alias_map(vocabulary_data):
     return alias_map
 
 
-def generate_viewer_data(vocabulary_data, output_dir='assets', version=None):
+def generate_viewer_data(vocabulary_data, output_dir=DEFAULT_OUTPUT_DIR, version=None):
     """
     Write vocabulary data as JSON for the viewer.
 
@@ -240,23 +247,23 @@ def generate_viewer_data(vocabulary_data, output_dir='assets', version=None):
         output_dir: Directory where soilvoc_data.json should be written
         version: Optional version string (e.g. "v0.2.0") injected into the JSON
     """
-    import os
     fragment_alias_map = build_fragment_alias_map(vocabulary_data)
     payload = {
         'version': version or 'unknown',
         'vocabulary': vocabulary_data,
         'fragment_alias_map': fragment_alias_map,
     }
-    os.makedirs(output_dir, exist_ok=True)
-    out_path = os.path.join(output_dir, 'soilvoc_data.json')
-    with open(out_path, 'w', encoding='utf-8') as f:
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    out_path = output_dir / 'soilvoc_data.json'
+    with out_path.open('w', encoding='utf-8') as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
     print(f"Vocabulary data written: {out_path}")
     return out_path
 
 
-def read_version_file(version_file='VERSION'):
-    """Read the viewer version from a local VERSION file."""
+def read_version_file(version_file=DEFAULT_VERSION_FILE):
+    """Read the viewer version from a VERSION file."""
     version_path = Path(version_file)
     if not version_path.exists():
         return None
@@ -1471,13 +1478,35 @@ def _generate_html_mindmap_enhanced_LEGACY(vocabulary_data, output_file='index.h
 
 
 # Main execution
-if __name__ == '__main__':
-    ttl_file = 'SoilVoc.ttl'
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Generate SoilVoc viewer data from a Turtle vocabulary file"
+    )
+    parser.add_argument(
+        "--ttl",
+        default=str(DEFAULT_TTL_PATH),
+        help="Input Turtle vocabulary path",
+    )
+    parser.add_argument(
+        "--output-dir",
+        default=str(DEFAULT_OUTPUT_DIR),
+        help="Directory where soilvoc_data.json will be written",
+    )
+    parser.add_argument(
+        "--version-file",
+        default=str(DEFAULT_VERSION_FILE),
+        help="Path to the VERSION file used for the viewer payload",
+    )
+    args = parser.parse_args()
+
+    ttl_file = Path(args.ttl)
+    output_dir = Path(args.output_dir)
+    version_file = Path(args.version_file)
 
     try:
         print(f"Parsing SKOS vocabulary from: {ttl_file}")
         vocabulary = parse_skos_vocabulary_enhanced(ttl_file)
-        version = read_version_file('VERSION')
+        version = read_version_file(version_file)
 
         print(f"Found ConceptScheme: {vocabulary['scheme_label']}")
         print(f"Number of top concepts: {len(vocabulary['top_concepts'])}")
@@ -1486,7 +1515,7 @@ if __name__ == '__main__':
         else:
             print("VERSION file not found or empty; using version: unknown")
 
-        generate_viewer_data(vocabulary, output_dir='assets', version=version)
+        generate_viewer_data(vocabulary, output_dir=output_dir, version=version)
 
         print("\nSuccess! Serve the viewer with:")
         print("  python -m http.server")
@@ -1497,3 +1526,7 @@ if __name__ == '__main__':
     except Exception as e:
         print(f"Error: {e}")
         traceback.print_exc()
+
+
+if __name__ == '__main__':
+    main()

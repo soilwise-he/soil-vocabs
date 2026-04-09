@@ -32,3 +32,20 @@ For the soil domain we should distinghuish various types of entities for which d
 This repository includes an effort to convert the existing Benchmarks glossary to RDF.
 
 Please go to [soil_health_benchmarks](./soil_health_benchmarks) for glossary to SKOS conversion and interlinking utilities.
+
+## Tooling layout
+
+The main published vocabulary files stay at the repository root, while support tooling lives in dedicated folders:
+
+- `scripts/restore_soilvoc_from_csv.py` rebuilds or compares `SoilVoc.ttl` from `SoilVoc_concepts.csv`
+- `scripts/generate_soilvoc_html.py` refreshes `assets/soilvoc_data.json` from `SoilVoc.ttl`
+- `assets/VERSION` stores the viewer version used in the generated JSON payload
+- `docker/Dockerfile` builds the combined API + static viewer container
+
+Typical local commands:
+
+```bash
+python scripts/restore_soilvoc_from_csv.py --csv SoilVoc_concepts.csv --out SoilVoc_restored.ttl --compare SoilVoc.ttl
+python scripts/generate_soilvoc_html.py
+docker build -f docker/Dockerfile -t soilvoc .
+```

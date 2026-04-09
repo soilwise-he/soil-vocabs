@@ -8,6 +8,7 @@ from rdflib import BNode, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCTERMS, RDF, SKOS, SDO, SOSA
 from rdflib.compare import graph_diff, isomorphic, to_isomorphic
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
 EUSOILVOC_SCHEME_URI = "https://w3id.org/eusoilvoc"
 EUSOILVOC_NAMESPACE = Namespace(f"{EUSOILVOC_SCHEME_URI}#")
 
@@ -398,8 +399,16 @@ def close_topconcept_inverses(g: Graph, scheme_uri: str) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Restore SoilVoc.ttl from SoilVoc_concepts.csv")
-    parser.add_argument("--csv", default="SoilVoc_concepts.csv", help="Input CSV path")
-    parser.add_argument("--out", default="SoilVoc_restored.ttl", help="Output TTL path")
+    parser.add_argument(
+        "--csv",
+        default=str(REPO_ROOT / "SoilVoc_concepts.csv"),
+        help="Input CSV path",
+    )
+    parser.add_argument(
+        "--out",
+        default=str(REPO_ROOT / "SoilVoc_restored.ttl"),
+        help="Output TTL path",
+    )
     parser.add_argument(
         "--scheme",
         default=EUSOILVOC_SCHEME_URI,
@@ -407,7 +416,7 @@ def main() -> None:
     )
     parser.add_argument(
         "--compare",
-        default="SoilVoc.ttl",
+        default=str(REPO_ROOT / "SoilVoc.ttl"),
         help="Existing TTL to compare against",
     )
     parser.add_argument(
