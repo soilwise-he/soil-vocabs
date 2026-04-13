@@ -4,6 +4,8 @@ AGENTS.md
 
 # test scripts
 tests/
+!tests/
+!tests/test_*.py
 
 # local worktrees
 .worktrees/
@@ -16,6 +18,8 @@ entity_similarity_gpt.csv
 
 # config
 config
+!skosmos/config/
+!skosmos/config/**
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

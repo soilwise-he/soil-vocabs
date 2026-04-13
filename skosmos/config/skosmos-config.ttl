@@ -1,0 +1,83 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosmos: <http://purl.org/net/skosmos#> .
+@prefix mdrtype: <http://publications.europa.eu/resource/authority/dataset-type/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix : <#> .
+
+:config a skosmos:Configuration ;
+    skosmos:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    skosmos:sparqlDialect "JenaText" ;
+    skosmos:sparqlCollationEnabled false ;
+    skosmos:sparqlTimeout 20 ;
+    skosmos:httpTimeout 5 ;
+    skosmos:serviceName "SoilVoc Skosmos" ;
+    skosmos:languages (
+        [ rdfs:label "en" ; rdf:value "en_GB.utf8" ]
+    ) ;
+    skosmos:searchResultsSize 20 ;
+    skosmos:transitiveLimit 1000 ;
+    skosmos:rdfListItemsLimit 1000 ;
+    skosmos:logCaughtExceptions false ;
+    skosmos:logBrowserConsole false ;
+    skosmos:templateCache "/tmp/skosmos-template-cache" ;
+    skosmos:feedbackAddress "" ;
+    skosmos:feedbackSender "" ;
+    skosmos:feedbackEnvelopeSender "" ;
+    skosmos:uiLanguageDropdown false ;
+    skosmos:uiHoneypotEnabled true ;
+    skosmos:uiHoneypotTime 5 ;
+    skosmos:globalPlugins () .
+
+:soilvoc a skosmos:Vocabulary, void:Dataset ;
+    dc:title "SoilVoc - Soil science vocabulary"@en ;
+    dc:subject :cat_soil ;
+    dc:type mdrtype:THESAURUS ;
+    void:uriSpace "https://w3id.org/eusoilvoc#" ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    skosmos:sparqlGraph <https://w3id.org/eusoilvoc> ;
+    skosmos:mainConceptScheme <https://w3id.org/eusoilvoc> ;
+    skosmos:language "en" ;
+    skosmos:defaultLanguage "en" ;
+    skosmos:shortName "SoilVoc" ;
+    skosmos:showTopConcepts true ;
+    skosmos:fullAlphabeticalIndex true ;
+    skosmos:hierarchyProperty skos:broader ;
+    skosmos:propertyOrder [
+        a skosmos:PropertyOrder ;
+        rdf:value (
+            rdf:type
+            skos:definition
+            dc:source
+            skos:broader
+            skos:narrower
+            sosa:hasProcedure
+            sosa:isProcedureFor
+            skos:related
+            skos:exactMatch
+            skos:closeMatch
+            skos:altLabel
+            skos:note
+            skos:scopeNote
+            skos:historyNote
+            rdfs:comment
+            skosmos:memberOf
+            skosmos:memberOfArray
+        )
+    ] ;
+    skosmos:vocabularyPlugins ( "soilvoc-definition-source" ) ;
+    skosmos:loadExternalResources false .
+
+:categories a skos:ConceptScheme ;
+    skos:prefLabel "Skosmos Vocabulary Categories"@en .
+
+:cat_soil a skos:Concept ;
+    skos:topConceptOf :categories ;
+    skos:inScheme :categories ;
+    skos:prefLabel "Soil vocabularies"@en .
+
+mdrtype:THESAURUS a skos:Concept ;
+    skos:prefLabel "Thesaurus"@en .

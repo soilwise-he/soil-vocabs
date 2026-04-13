@@ -1,0 +1,11 @@
+{
+  "js": [
+    "definition-source.js"
+  ],
+  "css": [
+    "definition-source.css"
+  ],
+  "callback": [
+    "soilvocDefinitionSource"
+  ]
+}

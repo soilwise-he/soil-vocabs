@@ -1,0 +1,56 @@
+name: soilvoc-skosmos
+
+services:
+  fuseki:
+    hostname: fuseki
+    build:
+      context: ./fuseki
+      dockerfile: Dockerfile
+      args:
+        JENA_VERSION: ${JENA_VERSION:-5.4.0}
+    command: --config=/fuseki/config/skosmos.ttl
+    environment:
+      - JAVA_OPTIONS=-Xmx2g -Xms1g
+    ports:
+      - ${FUSEKI_PORT:-9030}:3030
+    volumes:
+      - ./config/fuseki-skosmos.ttl:/fuseki/config/skosmos.ttl:ro
+      - fuseki-databases:/fuseki/databases
+      - fuseki-logs:/fuseki/logs
+    user: "fuseki:fuseki"
+
+  fuseki-cache:
+    hostname: fuseki-cache
+    image: varnish
+    security_opt:
+      - seccomp:unconfined
+    ports:
+      - ${CACHE_PORT:-9031}:80
+    volumes:
+      - type: bind
+        source: ./config/varnish-default.vcl
+        target: /etc/varnish/default.vcl
+        read_only: true
+    depends_on:
+      - fuseki
+
+  skosmos:
+    hostname: skosmos
+    image: quay.io/natlibfi/skosmos:${SKOSMOS_TAG:-latest}
+    ports:
+      - ${SKOSMOS_PORT:-9090}:80
+    volumes:
+      - type: bind
+        source: ./config/skosmos-config.ttl
+        target: /var/www/html/config.ttl
+        read_only: true
+      - type: bind
+        source: ./plugins/soilvoc-definition-source
+        target: /var/www/html/plugins/soilvoc-definition-source
+        read_only: true
+    depends_on:
+      - fuseki-cache
+
+volumes:
+  fuseki-databases:
+  fuseki-logs:
