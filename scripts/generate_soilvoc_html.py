@@ -68,9 +68,9 @@ def parse_skos_vocabulary_enhanced(ttl_file_path):
         top_concepts = list(all_concepts - concepts_with_broader)
 
     def pick_text_literal(defn_node):
-        texts = list(g.objects(defn_node, SDO.text))
+        texts = list(g.objects(defn_node, RDF.value))
         if not texts:
-            texts = list(g.objects(defn_node, RDF.value))
+            texts = list(g.objects(defn_node, SDO.text))
         if not texts:
             return None
         for t in texts:

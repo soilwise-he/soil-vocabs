@@ -1,9 +1,8 @@
 """Generate the Skosmos display copy of SoilVoc.
 
 The source vocabulary keeps definition provenance in blank nodes using
-schema:text. Skosmos can display resource-valued definitions when the text is
-available as rdf:value, so this script rewrites only those definition nodes for
-the local Skosmos deployment.
+rdf:value. For legacy inputs, this script still rewrites definition blank-node
+schema:text values to rdf:value for the local Skosmos deployment.
 
 Skosmos hierarchy navigation is SKOS-oriented. The generated copy projects SOSA
 procedure links into SKOS broader/narrower view triples and adds closure triples
@@ -23,7 +22,7 @@ SOSA = Namespace("http://www.w3.org/ns/sosa/")
 SCHEMA_TEXT = URIRef("https://schema.org/text")
 
 
-def rewrite_definition_text(graph: Graph) -> int:
+def rewrite_legacy_definition_text(graph: Graph) -> int:
     changed = 0
     for _, _, definition_node in list(graph.triples((None, SKOS.definition, None))):
         for text_value in list(graph.objects(definition_node, SCHEMA_TEXT)):
@@ -84,13 +83,13 @@ def generate_skosmos_ttl(source: Path, output: Path) -> tuple[int, int, int]:
     graph = Graph()
     graph.parse(source, format="turtle")
 
-    definition_rewrites = rewrite_definition_text(graph)
+    legacy_definition_rewrites = rewrite_legacy_definition_text(graph)
     procedure_hierarchy_triples = project_procedure_hierarchy(graph)
     hierarchy_closure_triples = add_hierarchy_closure(graph)
 
     output.parent.mkdir(parents=True, exist_ok=True)
     graph.serialize(destination=output, format="turtle", encoding="utf-8")
-    return definition_rewrites, procedure_hierarchy_triples, hierarchy_closure_triples
+    return legacy_definition_rewrites, procedure_hierarchy_triples, hierarchy_closure_triples
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -117,12 +116,12 @@ def build_parser() -> argparse.ArgumentParser:
 def main() -> None:
     args = build_parser().parse_args()
     (
-        definition_rewrites,
+        legacy_definition_rewrites,
         procedure_hierarchy_triples,
         hierarchy_closure_triples,
     ) = generate_skosmos_ttl(args.source, args.output)
     print(
-        f"Wrote {args.output} with {definition_rewrites} definition text rewrites, "
+        f"Wrote {args.output} with {legacy_definition_rewrites} legacy definition text rewrites, "
         f"{procedure_hierarchy_triples} procedure hierarchy projection triples, "
         f"and {hierarchy_closure_triples} hierarchy closure triples."
     )

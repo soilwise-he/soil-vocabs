@@ -5,7 +5,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from rdflib import BNode, Graph, Literal, Namespace, URIRef
-from rdflib.namespace import DCTERMS, RDF, SKOS, SDO, SOSA
+from rdflib.namespace import DCTERMS, RDF, SKOS, SOSA
 from rdflib.compare import graph_diff, isomorphic, to_isomorphic
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -218,7 +218,6 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
     g.bind("skos", SKOS)
     g.bind("sosa", SOSA)
     g.bind("dcterms", DCTERMS)
-    g.bind("schema", SDO)
     if scheme_uri == EUSOILVOC_SCHEME_URI:
         g.bind("eusoilvoc", EUSOILVOC_NAMESPACE)
 
@@ -254,7 +253,7 @@ def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[s
             if source:
                 bnode = BNode()
                 g.add((concept, SKOS.definition, bnode))
-                g.add((bnode, SDO.text, Literal(definition, lang="en")))
+                g.add((bnode, RDF.value, Literal(definition, lang="en")))
                 g.add((bnode, DCTERMS.source, URIRef(source)))
             else:
                 g.add((concept, SKOS.definition, Literal(definition, lang="en")))
@@ -522,7 +521,7 @@ def main() -> None:
                 print(f"- {s.n3(restored.namespace_manager)} {p.n3(restored.namespace_manager)} {o.n3(restored.namespace_manager)}")
 
             # Targeted literal lexical-form differences (what the user can fix in CSV)
-            lit_preds = {SKOS.prefLabel, SKOS.altLabel, SDO.text, SKOS.definition}
+            lit_preds = {SKOS.prefLabel, SKOS.altLabel, RDF.value, SKOS.definition}
             literal_diffs = find_literal_lexical_differences(
                 g_existing_cmp,
                 restored_cmp,

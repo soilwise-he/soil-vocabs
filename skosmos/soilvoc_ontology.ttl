@@ -1,71 +1,49 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <https://schema.org/> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
-skos:Concept a rdfs:Class ;
-	rdfs:label "Concept"@en .
+skos:Concept a rdfs:Class .
 
-skos:ConceptScheme a rdfs:Class ;
-	rdfs:label "Concept Scheme"@en .
+skos:ConceptScheme a rdfs:Class .
 
-sosa:ObservableProperty a rdfs:Class ;
-	rdfs:label "Observable Property"@en .
+sosa:ObservableProperty a rdfs:Class .
 
-sosa:Procedure a rdfs:Class ;
-	rdfs:label "Procedure"@en .
+sosa:Procedure a rdfs:Class .
 
-dcterms:source a rdf:Property ;
-	rdfs:label "source"@en .
+dcterms:source a rdf:Property .
 
-sio:equivalentTo a rdf:Property ;
-	rdfs:label "equivalent to"@en .
+sio:equivalentTo a rdf:Property .
 
-rdf:type a rdf:Property ;
-	rdfs:label "type"@en .
+rdf:type a rdf:Property .
 
-skos:altLabel a rdf:Property ;
-	rdfs:label "alternative label"@en .
+rdf:value a rdf:Property .
 
-skos:broader a rdf:Property ;
-	rdfs:label "broader"@en .
+skos:altLabel a rdf:Property .
 
-skos:closeMatch a rdf:Property ;
-	rdfs:label "close match"@en .
+skos:broader a rdf:Property .
 
-skos:definition a rdf:Property ;
-	rdfs:label "definition"@en .
+skos:closeMatch a rdf:Property .
 
-skos:exactMatch a rdf:Property ;
-	rdfs:label "exact match"@en .
+skos:definition a rdf:Property .
 
-skos:hasTopConcept a rdf:Property ;
-	rdfs:label "has top concept"@en .
+skos:exactMatch a rdf:Property .
 
-skos:inScheme a rdf:Property ;
-	rdfs:label "in scheme"@en .
+skos:hasTopConcept a rdf:Property .
 
-skos:narrower a rdf:Property ;
-	rdfs:label "narrower"@en .
+skos:inScheme a rdf:Property .
 
-skos:prefLabel a rdf:Property ;
-	rdfs:label "preferred label"@en .
+skos:narrower a rdf:Property .
 
-skos:related a rdf:Property ;
-	rdfs:label "related"@en .
+skos:prefLabel a rdf:Property .
 
-skos:topConceptOf a rdf:Property ;
-	rdfs:label "top concept of"@en .
+skos:related a rdf:Property .
 
-sosa:hasProcedure a rdf:Property ;
-	rdfs:label "has procedure"@en .
+skos:topConceptOf a rdf:Property .
 
-sosa:isProcedureFor a rdf:Property ;
-	rdfs:label "is procedure for"@en .
+sosa:hasProcedure a rdf:Property .
 
-schema:text a rdf:Property ;
-	rdfs:label "text"@en .
+sosa:isProcedureFor a rdf:Property .
 

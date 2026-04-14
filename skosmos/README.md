@@ -23,7 +23,7 @@ The stack follows the NatLibFi Skosmos Docker pattern:
 python .\generate_skosmos_ttl.py
 ```
 
-This writes `SoilVoc_skosmos.ttl`. The generated copy replaces definition blank-node `schema:text` values with `rdf:value`, projects SOSA procedure links into Skosmos-friendly SKOS hierarchy view triples, and adds hierarchy closure triples. The canonical `../SoilVoc.ttl` is not changed.
+This writes `SoilVoc_skosmos.ttl`. The generated copy preserves canonical definition blank-node `rdf:value` text, rewrites legacy `schema:text` values if present, projects SOSA procedure links into Skosmos-friendly SKOS hierarchy view triples, and adds hierarchy closure triples. The canonical `../SoilVoc.ttl` is not changed by this script.
 
 ## Start
 
