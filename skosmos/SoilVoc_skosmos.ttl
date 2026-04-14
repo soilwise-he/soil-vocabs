@@ -14884,7 +14884,6 @@ eusoilvoc:Aluminium a skos:Concept ;
     skos:broaderTransitive eusoilvoc:SoilContaminants,
         eusoilvoc:SoilPollution,
         eusoilvoc:SoilThreats ;
-    skos:closeMatch agrovoc:c_317 ;
     skos:exactMatch agrovoc:c_317,
         inrae:c_15702,
         gemet:353,

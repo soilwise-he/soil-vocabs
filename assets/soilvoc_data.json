@@ -52062,12 +52062,7 @@
                         "label": "SHKG (Aluminium)"
                       }
                     ],
-                    "closeMatch": [
-                      {
-                        "uri": "http://aims.fao.org/aos/agrovoc/c_317",
-                        "label": "AGROVOC (c_317)"
-                      }
-                    ],
+                    "closeMatch": [],
                     "isProcedure": false,
                     "procedures": [],
                     "narrower": [
