@@ -4,8 +4,6 @@ AGENTS.md
 
 # test scripts
 tests/
-!tests/
-!tests/test_*.py
 
 # local worktrees
 .worktrees/

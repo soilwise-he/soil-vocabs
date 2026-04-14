@@ -7,3 +7,12 @@
 .soilvoc-definition-source-enhanced .soilvoc-definition-source-label {
   font-weight: 600;
 }
+
+.prop-mapping .prop-mapping-label {
+  min-width: 0;
+}
+
+.prop-mapping .prop-mapping-label a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
