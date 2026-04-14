@@ -5,45 +5,66 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
-skos:Concept a rdfs:Class .
+skos:Concept a rdfs:Class ;
+	rdfs:label "Concept"@en .
 
-skos:ConceptScheme a rdfs:Class .
+skos:ConceptScheme a rdfs:Class ;
+	rdfs:label "Concept Scheme"@en .
 
-sosa:ObservableProperty a rdfs:Class .
+sosa:ObservableProperty a rdfs:Class ;
+	rdfs:label "Observable Property"@en .
 
-sosa:Procedure a rdfs:Class .
+sosa:Procedure a rdfs:Class ;
+	rdfs:label "Procedure"@en .
 
-dcterms:source a rdf:Property .
+dcterms:source a rdf:Property ;
+	rdfs:label "source"@en .
 
-sio:equivalentTo a rdf:Property .
+sio:equivalentTo a rdf:Property ;
+	rdfs:label "equivalent to"@en .
 
-rdf:type a rdf:Property .
+rdf:type a rdf:Property ;
+	rdfs:label "type"@en .
 
-rdf:value a rdf:Property .
+rdf:value a rdf:Property ;
+	rdfs:label "value"@en .
 
-skos:altLabel a rdf:Property .
+skos:altLabel a rdf:Property ;
+	rdfs:label "alternative label"@en .
 
-skos:broader a rdf:Property .
+skos:broader a rdf:Property ;
+	rdfs:label "broader"@en .
 
-skos:closeMatch a rdf:Property .
+skos:closeMatch a rdf:Property ;
+	rdfs:label "close match"@en .
 
-skos:definition a rdf:Property .
+skos:definition a rdf:Property ;
+	rdfs:label "definition"@en .
 
-skos:exactMatch a rdf:Property .
+skos:exactMatch a rdf:Property ;
+	rdfs:label "exact match"@en .
 
-skos:hasTopConcept a rdf:Property .
+skos:hasTopConcept a rdf:Property ;
+	rdfs:label "has top concept"@en .
 
-skos:inScheme a rdf:Property .
+skos:inScheme a rdf:Property ;
+	rdfs:label "in scheme"@en .
 
-skos:narrower a rdf:Property .
+skos:narrower a rdf:Property ;
+	rdfs:label "narrower"@en .
 
-skos:prefLabel a rdf:Property .
+skos:prefLabel a rdf:Property ;
+	rdfs:label "preferred label"@en .
 
-skos:related a rdf:Property .
+skos:related a rdf:Property ;
+	rdfs:label "related"@en .
 
-skos:topConceptOf a rdf:Property .
+skos:topConceptOf a rdf:Property ;
+	rdfs:label "top concept of"@en .
 
-sosa:hasProcedure a rdf:Property .
+sosa:hasProcedure a rdf:Property ;
+	rdfs:label "has procedure"@en .
 
-sosa:isProcedureFor a rdf:Property .
+sosa:isProcedureFor a rdf:Property ;
+	rdfs:label "is procedure for"@en .
 

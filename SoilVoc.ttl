@@ -6343,7 +6343,6 @@ eusoilvoc:Zinc a skos:Concept ;
 
 eusoilvoc:Aluminium a skos:Concept ;
     skos:broader eusoilvoc:SoilContaminants ;
-    skos:closeMatch agrovoc:c_317 ;
     skos:exactMatch agrovoc:c_317,
         inrae:c_15702,
         gemet:353,
