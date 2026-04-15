@@ -4,9 +4,9 @@ The source vocabulary keeps definition provenance in blank nodes using
 rdf:value. For legacy inputs, this script still rewrites definition blank-node
 schema:text values to rdf:value for the local Skosmos deployment.
 
-Skosmos hierarchy navigation is SKOS-oriented. The generated copy projects SOSA
-procedure links into SKOS broader/narrower view triples and adds closure triples
-without changing the canonical SoilVoc.ttl source.
+Skosmos hierarchy navigation is configured to use one display-only hierarchy
+predicate. The generated copy preserves the semantic SKOS and SOSA links, then
+adds eusoilvoc:skosmosHierarchyParent triples for Skosmos sidebar traversal.
 """
 
 from __future__ import annotations
@@ -19,7 +19,9 @@ from rdflib import Graph, RDF, Namespace, URIRef
 
 SKOS = Namespace("http://www.w3.org/2004/02/skos/core#")
 SOSA = Namespace("http://www.w3.org/ns/sosa/")
+EUSOILVOC = Namespace("https://w3id.org/eusoilvoc#")
 SCHEMA_TEXT = URIRef("https://schema.org/text")
+SKOSMOS_HIERARCHY_PARENT = EUSOILVOC.skosmosHierarchyParent
 
 
 def rewrite_legacy_definition_text(graph: Graph) -> int:
@@ -32,20 +34,23 @@ def rewrite_legacy_definition_text(graph: Graph) -> int:
     return changed
 
 
-def project_procedure_hierarchy(graph: Graph) -> int:
+def add_skosmos_hierarchy_projection(graph: Graph) -> int:
     added = 0
-    for procedure, observable_property in graph.subject_objects(SOSA.isProcedureFor):
-        if not isinstance(procedure, URIRef) or not isinstance(observable_property, URIRef):
-            continue
+    hierarchy_sources = [
+        list(graph.subject_objects(SKOS.broader)),
+        list(graph.subject_objects(SOSA.isProcedureFor)),
+    ]
 
-        broader_triple = (procedure, SKOS.broader, observable_property)
-        narrower_triple = (observable_property, SKOS.narrower, procedure)
-        if broader_triple not in graph:
-            graph.add(broader_triple)
-            added += 1
-        if narrower_triple not in graph:
-            graph.add(narrower_triple)
-            added += 1
+    for child_parent_pairs in hierarchy_sources:
+        for child, parent in child_parent_pairs:
+            if not isinstance(child, URIRef) or not isinstance(parent, URIRef):
+                continue
+
+            triple = (child, SKOSMOS_HIERARCHY_PARENT, parent)
+            if triple not in graph:
+                graph.add(triple)
+                added += 1
+
     return added
 
 
@@ -84,12 +89,12 @@ def generate_skosmos_ttl(source: Path, output: Path) -> tuple[int, int, int]:
     graph.parse(source, format="turtle")
 
     legacy_definition_rewrites = rewrite_legacy_definition_text(graph)
-    procedure_hierarchy_triples = project_procedure_hierarchy(graph)
+    skosmos_hierarchy_projection_triples = add_skosmos_hierarchy_projection(graph)
     hierarchy_closure_triples = add_hierarchy_closure(graph)
 
     output.parent.mkdir(parents=True, exist_ok=True)
     graph.serialize(destination=output, format="turtle", encoding="utf-8")
-    return legacy_definition_rewrites, procedure_hierarchy_triples, hierarchy_closure_triples
+    return legacy_definition_rewrites, skosmos_hierarchy_projection_triples, hierarchy_closure_triples
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -117,13 +122,13 @@ def main() -> None:
     args = build_parser().parse_args()
     (
         legacy_definition_rewrites,
-        procedure_hierarchy_triples,
+        skosmos_hierarchy_projection_triples,
         hierarchy_closure_triples,
     ) = generate_skosmos_ttl(args.source, args.output)
     print(
         f"Wrote {args.output} with {legacy_definition_rewrites} legacy definition text rewrites, "
-        f"{procedure_hierarchy_triples} procedure hierarchy projection triples, "
-        f"and {hierarchy_closure_triples} hierarchy closure triples."
+        f"{skosmos_hierarchy_projection_triples} Skosmos hierarchy projection triples, "
+        f"and added {hierarchy_closure_triples} SKOS hierarchy closure triples."
     )
 
 

@@ -7,7 +7,7 @@ The stack follows the NatLibFi Skosmos Docker pattern:
 - `skosmos`: Skosmos web UI from `quay.io/natlibfi/skosmos`
 - `fuseki`: Apache Jena Fuseki with Jena Text indexing
 - `fuseki-cache`: Varnish cache in front of Fuseki
-- `plugins/soilvoc-definition-source`: a SoilVoc-only Skosmos plugin that displays definition text with its source
+- `plugins/soilvoc-definition-source`: a SoilVoc-only Skosmos plugin that displays definition text with its source and enriches the hierarchy sidebar with semantic SOSA procedure children
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ The stack follows the NatLibFi Skosmos Docker pattern:
 python .\generate_skosmos_ttl.py
 ```
 
-This writes `SoilVoc_skosmos.ttl`. The generated copy preserves canonical definition blank-node `rdf:value` text, rewrites legacy `schema:text` values if present, projects SOSA procedure links into Skosmos-friendly SKOS hierarchy view triples, and adds hierarchy closure triples. The canonical `../SoilVoc.ttl` is not changed by this script.
+This writes `SoilVoc_skosmos.ttl`. The generated copy preserves canonical definition blank-node `rdf:value` text, rewrites legacy `schema:text` values if present, keeps SKOS and SOSA links semantic, and adds display-only `eusoilvoc:skosmosHierarchyParent` triples for Skosmos sidebar traversal. This lets procedures appear in the sidebar without becoming false SKOS narrower concepts. The canonical `../SoilVoc.ttl` is not changed by this script.
 
 ## Start
 

@@ -37,6 +37,22 @@
     return Array.isArray(value) ? value : [value];
   }
 
+  function mergeByUri(existingValues, newValues) {
+    const merged = [];
+    const seen = new Set();
+
+    for (const value of [...asArray(existingValues), ...asArray(newValues)]) {
+      const id = getId(value);
+      const key = id || JSON.stringify(value);
+      if (!seen.has(key)) {
+        seen.add(key);
+        merged.push(value);
+      }
+    }
+
+    return merged;
+  }
+
   function firstDefined(node, keys) {
     if (!node) {
       return null;
@@ -210,6 +226,104 @@
     }
   }
 
+  function getRequestUrl(input) {
+    const url = typeof input === "string" ? input : input?.url;
+    if (!url) {
+      return null;
+    }
+
+    try {
+      return new URL(url, document.baseURI || window.location.href);
+    } catch (_error) {
+      return null;
+    }
+  }
+
+  function shouldPatchHierarchyResponse(url) {
+    return window.location.pathname.includes("/soilvoc/")
+      && url.pathname === "/rest/v1/soilvoc/hierarchy/";
+  }
+
+  function findHierarchyConcept(data, conceptUri) {
+    const broaderTransitive = data?.broaderTransitive || {};
+    return Object.values(broaderTransitive).find((concept) => concept?.uri === conceptUri) || null;
+  }
+
+  async function fetchHierarchyChildren(originalFetch, requestUrl, conceptUri) {
+    const childrenUrl = new URL("/rest/v1/soilvoc/children", requestUrl.origin);
+    childrenUrl.searchParams.set("uri", conceptUri);
+
+    const lang = requestUrl.searchParams.get("lang");
+    if (lang) {
+      childrenUrl.searchParams.set("lang", lang);
+    }
+
+    const response = await originalFetch(childrenUrl.toString());
+    if (!response.ok) {
+      return [];
+    }
+
+    const data = await response.json();
+    return asArray(data?.narrower);
+  }
+
+  async function patchHierarchyResponse(response, requestUrl, originalFetch) {
+    if (!response.ok) {
+      return response;
+    }
+
+    const conceptUri = requestUrl.searchParams.get("uri");
+    if (!conceptUri) {
+      return response;
+    }
+
+    let data;
+    try {
+      data = await response.clone().json();
+    } catch (_error) {
+      return response;
+    }
+
+    const concept = findHierarchyConcept(data, conceptUri);
+    if (!concept) {
+      return response;
+    }
+
+    const children = await fetchHierarchyChildren(originalFetch, requestUrl, conceptUri);
+    if (children.length === 0) {
+      return response;
+    }
+
+    concept.narrower = mergeByUri(concept.narrower, children);
+
+    return new Response(JSON.stringify(data), {
+      status: response.status,
+      statusText: response.statusText,
+      headers: response.headers,
+    });
+  }
+
+  function installSoilVocHierarchyPatch() {
+    if (!window.fetch || window.fetch.soilvocHierarchyPatched) {
+      return;
+    }
+
+    const originalFetch = window.fetch.bind(window);
+
+    async function soilvocFetch(input, init) {
+      const response = await originalFetch(input, init);
+      const requestUrl = getRequestUrl(input);
+      if (!requestUrl || !shouldPatchHierarchyResponse(requestUrl)) {
+        return response;
+      }
+
+      return patchHierarchyResponse(response, requestUrl, originalFetch);
+    }
+
+    soilvocFetch.soilvocHierarchyPatched = true;
+    window.fetch = soilvocFetch;
+  }
+
   function soilvocDefinitionSource() {
     if (!window.location.pathname.includes("/soilvoc/")) {
       return;
@@ -225,6 +339,7 @@
     renderDefinitions(collectDefinitions(conceptNode, nodeMap), nodeMap);
   }
 
+  installSoilVocHierarchyPatch();
   window.soilvocDefinitionSource = soilvocDefinitionSource;
   document.addEventListener("DOMContentLoaded", soilvocDefinitionSource);
 })();

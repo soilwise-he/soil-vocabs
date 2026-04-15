@@ -6,6 +6,7 @@
 @prefix skosmos: <http://purl.org/net/skosmos#> .
 @prefix mdrtype: <http://publications.europa.eu/resource/authority/dataset-type/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix eusoilvoc: <https://w3id.org/eusoilvoc#> .
 @prefix : <#> .
 
 :config a skosmos:Configuration ;
@@ -45,7 +46,7 @@
     skosmos:shortName "SoilVoc" ;
     skosmos:showTopConcepts true ;
     skosmos:fullAlphabeticalIndex true ;
-    skosmos:hierarchyProperty skos:broader ;
+    skosmos:hierarchyProperty eusoilvoc:skosmosHierarchyParent ;
     skosmos:propertyOrder [
         a skosmos:PropertyOrder ;
         rdf:value (
