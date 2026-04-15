@@ -20,3 +20,26 @@
 .prop-eusoilvoc_skosmosHierarchyParent {
   display: none;
 }
+
+#hierarchy-list a[href*="Procedure"]::after {
+  background: #e8f4f7;
+  border: 1px solid rgba(15, 93, 118, 0.35);
+  border-radius: 999px;
+  color: #0f5d76;
+  content: "procedure";
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-left: 0.4rem;
+  padding: 0.08rem 0.36rem 0.1rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+#hierarchy-list a.selected[href*="Procedure"]::after {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #0b2a4d;
+}
