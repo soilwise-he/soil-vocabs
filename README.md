@@ -49,3 +49,10 @@ python scripts/restore_soilvoc_from_csv.py --csv SoilVoc_concepts.csv --out Soil
 python scripts/generate_soilvoc_html.py
 docker build -f docker/Dockerfile -t soilvoc .
 ```
+
+## Soilwise-he project
+This work has been initiated as part of the [Soilwise-he](https://soilwise-he.eu) project. The project receives
+funding from the European Union’s HORIZON Innovation Actions 2022 under grant agreement No.
+101112838. Views and opinions expressed are however those of the author(s) only and do not necessarily
+reflect those of the European Union or Research Executive Agency. Neither the European Union nor the
+granting authority can be held responsible for them.
