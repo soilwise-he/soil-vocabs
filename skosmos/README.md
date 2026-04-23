@@ -23,7 +23,7 @@ The stack follows the NatLibFi Skosmos Docker pattern:
 python .\generate_skosmos_ttl.py
 ```
 
-This writes `SoilVoc_skosmos.ttl`. The generated copy preserves canonical definition blank-node `rdf:value` text, rewrites legacy `schema:text` values if present, keeps SKOS and SOSA links semantic, and adds display-only `eusoilvoc:skosmosHierarchyParent` triples for Skosmos sidebar traversal. This lets procedures appear in the sidebar without becoming false SKOS narrower concepts. The canonical `../SoilVoc.ttl` is not changed by this script.
+This writes `SoilVoc_skosmos.ttl`. The generated copy preserves canonical definition blank-node `rdf:value` text, rewrites legacy `schema:text` values if present, keeps SKOS and SOSA links semantic, adds display-only `eusoilvoc:skosmosHierarchyParent` triples for Skosmos sidebar traversal, and embeds `soilvoc_ontology.ttl` so property/class labels are available from the same RDF file. This lets procedures appear in the sidebar without becoming false SKOS narrower concepts. The canonical `../SoilVoc.ttl` is not changed by this script.
 
 ## Start
 
@@ -47,7 +47,7 @@ http://localhost:9030/
 
 ## Load SoilVoc
 
-Run this after the containers are up. It replaces the SoilVoc graph with `SoilVoc_skosmos.ttl`, then adds `soilvoc_ontology.ttl` to the same graph so advanced relationship labels are available to Skosmos.
+Run this after the containers are up. It replaces the SoilVoc graph with the single generated file `SoilVoc_skosmos.ttl`, which already includes the SoilVoc ontology labels and declarations.
 
 ```powershell
 .\load-soilvoc.ps1
@@ -72,13 +72,6 @@ Invoke-WebRequest `
   -Method Put `
   -ContentType "text/turtle" `
   -InFile .\SoilVoc_skosmos.ttl `
-  -Uri "http://localhost:9030/skosmos/data?graph=https%3A%2F%2Fw3id.org%2Feusoilvoc" `
-  -UseBasicParsing
-
-Invoke-WebRequest `
-  -Method Post `
-  -ContentType "text/turtle" `
-  -InFile .\soilvoc_ontology.ttl `
   -Uri "http://localhost:9030/skosmos/data?graph=https%3A%2F%2Fw3id.org%2Feusoilvoc" `
   -UseBasicParsing
 ```
@@ -128,5 +121,5 @@ docker compose up -d --build
 - Skosmos UI port: `9090`
 - Fuseki host port: `9030`
 - Varnish cache host port: `9031`
-- `SoilVoc_skosmos.ttl` is a generated Skosmos display copy; regenerate it from `../SoilVoc.ttl`.
+- `SoilVoc_skosmos.ttl` is a generated Skosmos display copy; regenerate it from `../SoilVoc.ttl` and `soilvoc_ontology.ttl`.
 - Override ports or image versions by copying `.env.example` to `.env` and editing the values.
