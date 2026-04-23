@@ -17,6 +17,11 @@ For the soil domain we should distinghuish various types of entities for which d
 - Ability to perform Soil **functions** is estimated by the quality indicators
 - Feature Of Interest **types**, an (set of) observation should be representative for a FOI, eg a horizon, profile, plot, site, body
 
+## Interfaces
+
+- **SoilVoc Viewer** — a browser-based viewer to explore concepts in hierarchies. Available at [soil-vocabs](https://w3id.org/eusoilvoc).
+- **SoilVoc REST API** — a REST API for searching concepts, getting concept details and getting procedures linked to properties. Available at [SoilVoc api](https://api.soilwise-he.containers.wur.nl/vocab/docs#/concepts/search_api_v1_concepts_search_get). See [api/README.md](./api/README.md).
+
 ## SoilWise Activities
 
 - Design, test and document strategies on the use of SKOS when designing and publishing glossaries in Soil Mission projects
