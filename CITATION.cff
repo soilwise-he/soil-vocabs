@@ -1,0 +1,77 @@
+cff-version: 0.1.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Wang"
+  given-names: "Beichen"
+  email: "beichen.wang@wur.nl"
+  affiliation: "Wageningen University & Research"
+  orcid: "https://orcid.org/0009-0008-5213-5114"
+- family-names: "Li"
+  given-names: "Jiarong"
+  email: "jiarong.li@wur.nl"
+  affiliation: "ISRIC World Soil Information"
+  orcid: "https://orcid.org/0009-0002-6433-9217"
+- family-names: "van Genuchten"
+  given-names: "Paul"
+  email: "paul.vangenuchten@wur.nl"
+  affiliation: "ISRIC World Soil Information"
+  orcid: "https://orcid.org/0000-0002-4789-174X"
+- family-names: "van Egmond"
+  given-names: "Fenny"
+  email: "fenny.vanegmond@wur.nl"
+  affiliation: "ISRIC World Soil Information"
+  orcid: "https://orcid.org/0000-0002-2608-9889"
+- family-names: "Uyttendaele"
+  given-names: "Sofia"
+  email: "sofia.uyttendaele@wur.nl"
+  affiliation: "ISRIC World Soil Information"
+  orcid: "https://orcid.org/0009-0002-8783-1300"
+- family-names: "Schleidt"
+  given-names: "Kathi"
+  email: Kathi@DataCove.eu
+  affiliation: "DataCove e.U., Open Geospatial Consortium"
+  orcid: "https://orcid.org/0000-0002-8011-7350"
+
+title: "Soil-Vocabs"
+version: 0.1.0
+date-released: 2026-04-23
+url: "https://github.com/soilwise-he/soil-vocabs"
+license: MIT
+identifiers:
+  - type: other
+    value: "101112838"
+    description: "EU Horizon grant agreement number"
+  - type: other
+    name: "ISRIC World Soil Information"
+    value: "https://ror.org/01z8yfp14"
+references:
+  - type: grant
+    title: "SoilWise — Enabling Soil Data and Knowledge for Informed Decision-Making"
+  - name: "European Commission"
+    number: "101112838"
+    url: "https://doi.org/10.3030/101112838"
+keywords:
+  - "soil"
+  - "soil data"
+  - "soil properties"
+  - "observation procedures"
+  - "controlled vocabulary"
+  - "glossary"
+  - "ontology"
+  - "SKOS"
+  - "RDF"
+  - "linked data"
+  - "AGROVOC"
+  - "GEMET"
+  - "INRAE thesaurus"
+  - "GloSIS"
+  - "ISO 11074"
+  - "Skosmos"
+  - "vocabulary viewer"
+  - "FastAPI"
+  - "rdflib"
+  - "SoilWise"
+  - "ISRIC"
+  - "EU"
+  - "Horizon Europe"
+
