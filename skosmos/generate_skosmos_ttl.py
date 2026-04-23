@@ -7,6 +7,8 @@ schema:text values to rdf:value for the local Skosmos deployment.
 Skosmos hierarchy navigation is configured to use one display-only hierarchy
 predicate. The generated copy preserves the semantic SKOS and SOSA links, then
 adds eusoilvoc:skosmosHierarchyParent triples for Skosmos sidebar traversal.
+It also embeds the local SoilVoc ontology labels and property/class declarations
+so Fuseki only needs one generated Turtle file.
 """
 
 from __future__ import annotations
@@ -22,6 +24,11 @@ SOSA = Namespace("http://www.w3.org/ns/sosa/")
 EUSOILVOC = Namespace("https://w3id.org/eusoilvoc#")
 SCHEMA_TEXT = URIRef("https://schema.org/text")
 SKOSMOS_HIERARCHY_PARENT = EUSOILVOC.skosmosHierarchyParent
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = SCRIPT_DIR.parent
+DEFAULT_SOURCE = REPO_ROOT / "SoilVoc.ttl"
+DEFAULT_OUTPUT = SCRIPT_DIR / "SoilVoc_skosmos.ttl"
+DEFAULT_ONTOLOGY = SCRIPT_DIR / "soilvoc_ontology.ttl"
 
 
 def rewrite_legacy_definition_text(graph: Graph) -> int:
@@ -84,36 +91,56 @@ def add_hierarchy_closure(graph: Graph) -> int:
     return added
 
 
-def generate_skosmos_ttl(source: Path, output: Path) -> tuple[int, int, int]:
+def merge_ontology(graph: Graph, ontology: Path) -> int:
+    before = len(graph)
+    graph.parse(ontology, format="turtle")
+    return len(graph) - before
+
+
+def generate_skosmos_ttl(
+    source: Path,
+    output: Path,
+    ontology: Path | None = DEFAULT_ONTOLOGY,
+) -> tuple[int, int, int, int]:
     graph = Graph()
     graph.parse(source, format="turtle")
 
     legacy_definition_rewrites = rewrite_legacy_definition_text(graph)
     skosmos_hierarchy_projection_triples = add_skosmos_hierarchy_projection(graph)
     hierarchy_closure_triples = add_hierarchy_closure(graph)
+    ontology_triples = merge_ontology(graph, ontology) if ontology is not None else 0
 
     output.parent.mkdir(parents=True, exist_ok=True)
     graph.serialize(destination=output, format="turtle", encoding="utf-8")
-    return legacy_definition_rewrites, skosmos_hierarchy_projection_triples, hierarchy_closure_triples
+    return (
+        legacy_definition_rewrites,
+        skosmos_hierarchy_projection_triples,
+        hierarchy_closure_triples,
+        ontology_triples,
+    )
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Generate skosmos/SoilVoc_skosmos.ttl from SoilVoc.ttl."
     )
-    script_dir = Path(__file__).resolve().parent
-    repo_root = script_dir.parent
     parser.add_argument(
         "--source",
         type=Path,
-        default=repo_root / "SoilVoc.ttl",
+        default=DEFAULT_SOURCE,
         help="Source SoilVoc Turtle file.",
     )
     parser.add_argument(
         "--output",
         type=Path,
-        default=script_dir / "SoilVoc_skosmos.ttl",
+        default=DEFAULT_OUTPUT,
         help="Generated Turtle file for the local Skosmos deployment.",
+    )
+    parser.add_argument(
+        "--ontology",
+        type=Path,
+        default=DEFAULT_ONTOLOGY,
+        help="SoilVoc ontology Turtle file to embed into the generated Skosmos Turtle file.",
     )
     return parser
 
@@ -124,11 +151,13 @@ def main() -> None:
         legacy_definition_rewrites,
         skosmos_hierarchy_projection_triples,
         hierarchy_closure_triples,
-    ) = generate_skosmos_ttl(args.source, args.output)
+        ontology_triples,
+    ) = generate_skosmos_ttl(args.source, args.output, args.ontology)
     print(
         f"Wrote {args.output} with {legacy_definition_rewrites} legacy definition text rewrites, "
         f"{skosmos_hierarchy_projection_triples} Skosmos hierarchy projection triples, "
-        f"and added {hierarchy_closure_triples} SKOS hierarchy closure triples."
+        f"added {hierarchy_closure_triples} SKOS hierarchy closure triples, "
+        f"and embedded {ontology_triples} ontology triples."
     )
 
 
