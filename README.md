@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1016805177.svg)](https://doi.org/10.5281/zenodo.19710233)
+
 # Soil Vocabs
 
 Harmonising terminology within or between communities is an important aspect in cooperation. The SKOS ontology is a common mechanism to advertise (and link between) terminologies.  
