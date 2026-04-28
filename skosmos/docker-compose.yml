@@ -2,6 +2,8 @@ name: soilvoc-skosmos
 
 services:
   fuseki:
+    profiles:
+      - local-fuseki
     hostname: fuseki
     build:
       context: ./fuseki
@@ -20,6 +22,8 @@ services:
     user: "fuseki:fuseki"
 
   fuseki-cache:
+    profiles:
+      - local-fuseki
     hostname: fuseki-cache
     image: varnish
     security_opt:
@@ -41,16 +45,13 @@ services:
       - ${SKOSMOS_PORT:-9090}:80
     volumes:
       - type: bind
-        source: ./config/skosmos-config.ttl
+        source: ${SKOSMOS_CONFIG:-./config/skosmos-config.ttl}
         target: /var/www/html/config.ttl
         read_only: true
       - type: bind
         source: ./plugins/soilvoc-definition-source
         target: /var/www/html/plugins/soilvoc-definition-source
         read_only: true
-    depends_on:
-      - fuseki-cache
-
 volumes:
   fuseki-databases:
   fuseki-logs:

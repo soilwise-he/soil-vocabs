@@ -10,11 +10,11 @@
 @prefix : <#> .
 
 :config a skosmos:Configuration ;
-    skosmos:sparqlEndpoint <https://sparql.soilwise.wetransform.eu/sparql/> ;
-    skosmos:sparqlDialect "Generic" ;
+    skosmos:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    skosmos:sparqlDialect "JenaText" ;
     skosmos:sparqlCollationEnabled false ;
-    skosmos:sparqlTimeout 30 ;
-    skosmos:httpTimeout 10 ;
+    skosmos:sparqlTimeout 20 ;
+    skosmos:httpTimeout 5 ;
     skosmos:serviceName "SoilVoc Skosmos" ;
     skosmos:languages (
         [ rdfs:label "en" ; rdf:value "en_GB.utf8" ]
@@ -38,7 +38,7 @@
     dc:subject :cat_soil ;
     dc:type mdrtype:THESAURUS ;
     void:uriSpace "https://w3id.org/eusoilvoc#" ;
-    void:sparqlEndpoint <https://sparql.soilwise.wetransform.eu/sparql/> ;
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
     skosmos:sparqlGraph <https://w3id.org/eusoilvoc> ;
     skosmos:mainConceptScheme <https://w3id.org/eusoilvoc> ;
     skosmos:language "en" ;
