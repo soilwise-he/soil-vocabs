@@ -29,6 +29,24 @@
     "http://www.w3.org/2004/02/skos/core#prefLabel",
     "http://www.w3.org/2000/01/rdf-schema#label",
   ];
+  const HIERARCHY_PARENT_KEYS = [
+    "soilvoc:skosmosHierarchyParent",
+    "eusoilvoc:skosmosHierarchyParent",
+    "skosmosHierarchyParent",
+    "https://w3id.org/eusoilvoc#skosmosHierarchyParent",
+  ];
+  const SKOS_BROADER_KEYS = [
+    "broader",
+    "skos:broader",
+    "http://www.w3.org/2004/02/skos/core#broader",
+  ];
+  const TOP_CONCEPT_KEYS = [
+    "topConceptOf",
+    "skos:topConceptOf",
+    "http://www.w3.org/2004/02/skos/core#topConceptOf",
+  ];
+  const SOILVOC_DATA_FORMAT = "application/ld+json";
+  const FALLBACK_HIERARCHY_MAX_NODES = 50;
 
   function asArray(value) {
     if (value === undefined || value === null) {
@@ -66,6 +84,20 @@
       }
     }
     return null;
+  }
+
+  function allDefined(node, keys) {
+    const values = [];
+    if (!node) {
+      return values;
+    }
+
+    for (const key of keys) {
+      if (node[key] !== undefined && node[key] !== null) {
+        values.push(...asArray(node[key]));
+      }
+    }
+    return values;
   }
 
   function getId(node) {
@@ -117,6 +149,15 @@
     return value;
   }
 
+  function getValueId(value, context) {
+    const id = typeof value === "string" ? value : getId(value);
+    return id ? expandCurie(id, context) : null;
+  }
+
+  function uniqueUris(values, context) {
+    return [...new Set(values.map((value) => getValueId(value, context)).filter(Boolean))];
+  }
+
   function readJsonLdDocument() {
     const scripts = document.querySelectorAll('script[type="application/ld+json"]');
     for (const script of scripts) {
@@ -136,16 +177,52 @@
     return { context: {}, graph: [] };
   }
 
-  function buildNodeMap(graph, context) {
-    const nodeMap = new Map();
+  function mergeNodeData(existingNode, newNode) {
+    const merged = { ...existingNode };
+
+    for (const [key, value] of Object.entries(newNode)) {
+      if ((key === "uri" || key === "@id") && merged[key]) {
+        continue;
+      }
+      if (merged[key] === undefined || merged[key] === null) {
+        merged[key] = value;
+      } else {
+        merged[key] = mergeByUri(merged[key], value);
+      }
+    }
+
+    return merged;
+  }
+
+  function addNodesToMap(nodeMap, graph, context) {
+    if (!Array.isArray(graph)) {
+      return nodeMap;
+    }
+
     for (const node of graph) {
       const id = getId(node);
       if (id) {
-        nodeMap.set(id, node);
-        nodeMap.set(expandCurie(id, context), node);
+        const expandedId = expandCurie(id, context);
+        const existingNode = nodeMap.get(expandedId) || nodeMap.get(id);
+        const mergedNode = existingNode ? mergeNodeData(existingNode, node) : node;
+
+        nodeMap.set(id, mergedNode);
+        nodeMap.set(expandedId, mergedNode);
+        if (existingNode) {
+          const existingId = getId(existingNode);
+          if (existingId) {
+            nodeMap.set(existingId, mergedNode);
+            nodeMap.set(expandCurie(existingId, context), mergedNode);
+          }
+        }
       }
     }
     return nodeMap;
+  }
+
+  function buildNodeMap(graph, context) {
+    const nodeMap = new Map();
+    return addNodesToMap(nodeMap, graph, context);
   }
 
   function findConceptNode(graph, context) {
@@ -267,14 +344,140 @@
     return asArray(data?.narrower);
   }
 
-  async function patchHierarchyResponse(response, requestUrl, originalFetch) {
+  async function fetchConceptDocument(originalFetch, requestUrl, conceptUri) {
+    const dataUrl = new URL("/rest/v1/soilvoc/data", requestUrl.origin);
+    dataUrl.searchParams.set("uri", conceptUri);
+    dataUrl.searchParams.set("format", SOILVOC_DATA_FORMAT);
+
+    const response = await originalFetch(dataUrl.toString());
     if (!response.ok) {
-      return response;
+      return null;
     }
 
+    try {
+      const data = await response.json();
+      const graph = data.graph || data["@graph"];
+      if (Array.isArray(graph)) {
+        return {
+          context: data["@context"] || {},
+          graph,
+        };
+      }
+    } catch (_error) {
+      return null;
+    }
+
+    return null;
+  }
+
+  function mergeDocument(state, documentData) {
+    if (!documentData) {
+      return;
+    }
+
+    Object.assign(state.context, documentData.context || {});
+    addNodesToMap(state.nodeMap, documentData.graph, state.context);
+  }
+
+  function getHierarchyParentUris(node, context) {
+    const customParents = uniqueUris(allDefined(node, HIERARCHY_PARENT_KEYS), context);
+    if (customParents.length > 0) {
+      return customParents;
+    }
+    return uniqueUris(allDefined(node, SKOS_BROADER_KEYS), context);
+  }
+
+  async function buildFallbackHierarchy(originalFetch, requestUrl, conceptUri) {
+    const initialDocument = readJsonLdDocument();
+    const state = {
+      context: { ...(initialDocument.context || {}) },
+      nodeMap: buildNodeMap(initialDocument.graph, initialDocument.context || {}),
+    };
+    const queue = [conceptUri];
+    const visited = new Set();
+    const loaded = new Set();
+    const hierarchyUris = new Set();
+
+    while (queue.length > 0 && visited.size < FALLBACK_HIERARCHY_MAX_NODES) {
+      const uri = queue.shift();
+      if (!uri || visited.has(uri)) {
+        continue;
+      }
+
+      visited.add(uri);
+      hierarchyUris.add(uri);
+
+      if (!loaded.has(uri)) {
+        mergeDocument(state, await fetchConceptDocument(originalFetch, requestUrl, uri));
+        loaded.add(uri);
+      }
+
+      const node = state.nodeMap.get(uri);
+      for (const parentUri of getHierarchyParentUris(node, state.context)) {
+        hierarchyUris.add(parentUri);
+        if (!visited.has(parentUri)) {
+          queue.push(parentUri);
+        }
+      }
+    }
+
+    if (!hierarchyUris.has(conceptUri)) {
+      return null;
+    }
+
+    const broaderTransitive = {};
+    for (const uri of hierarchyUris) {
+      if (!loaded.has(uri)) {
+        mergeDocument(state, await fetchConceptDocument(originalFetch, requestUrl, uri));
+        loaded.add(uri);
+      }
+
+      const node = state.nodeMap.get(uri);
+      const parentUris = getHierarchyParentUris(node, state.context);
+      const children = await fetchHierarchyChildren(originalFetch, requestUrl, uri);
+      const label = getNodeLabel(state.nodeMap, { uri });
+      const topConcepts = uniqueUris(allDefined(node, TOP_CONCEPT_KEYS), state.context);
+      const concept = {
+        uri,
+        label,
+        prefLabel: label,
+        hasChildren: children.length > 0,
+      };
+
+      if (parentUris.length > 0) {
+        concept.broader = parentUris;
+      }
+      if (children.length > 0) {
+        concept.narrower = children;
+      }
+      if (topConcepts.length > 0) {
+        concept.top = topConcepts[0];
+        concept.tops = topConcepts;
+      }
+
+      broaderTransitive[uri] = concept;
+    }
+
+    return {
+      broaderTransitive,
+    };
+  }
+
+  async function patchHierarchyResponse(response, requestUrl, originalFetch) {
     const conceptUri = requestUrl.searchParams.get("uri");
     if (!conceptUri) {
       return response;
+    }
+
+    if (!response.ok) {
+      const fallbackData = await buildFallbackHierarchy(originalFetch, requestUrl, conceptUri);
+      return fallbackData
+        ? new Response(JSON.stringify(fallbackData), {
+            status: 200,
+            statusText: "OK",
+            headers: { "content-type": "application/json" },
+          })
+        : response;
     }
 
     let data;
