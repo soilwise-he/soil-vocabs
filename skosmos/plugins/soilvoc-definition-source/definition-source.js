@@ -325,7 +325,42 @@
 
   function findHierarchyConcept(data, conceptUri) {
     const broaderTransitive = data?.broaderTransitive || {};
-    return Object.values(broaderTransitive).find((concept) => concept?.uri === conceptUri) || null;
+    return broaderTransitive[conceptUri]
+      || Object.values(broaderTransitive).find((concept) => concept?.uri === conceptUri)
+      || null;
+  }
+
+  function hierarchyItemUri(value) {
+    return typeof value === "string" ? value : getId(value);
+  }
+
+  function findHierarchyChild(children, conceptUri) {
+    return asArray(children).find((child) => hierarchyItemUri(child) === conceptUri) || null;
+  }
+
+  function hierarchyChildFromConcept(concept) {
+    if (!concept?.uri) {
+      return null;
+    }
+
+    const child = { uri: concept.uri };
+    const label = concept.prefLabel || concept.label;
+    if (label) {
+      child.prefLabel = label;
+    }
+    if (concept.label) {
+      child.label = concept.label;
+    }
+    if (concept.hasChildren !== undefined) {
+      child.hasChildren = concept.hasChildren;
+    } else {
+      child.hasChildren = asArray(concept.narrower).length > 0;
+    }
+    return child;
+  }
+
+  function hierarchyBroaderUris(concept) {
+    return [...new Set(asArray(concept?.broader).map(hierarchyItemUri).filter(Boolean))];
   }
 
   async function fetchHierarchyChildren(originalFetch, requestUrl, conceptUri) {
@@ -427,13 +462,14 @@
       return null;
     }
 
-    const broaderTransitive = {};
     for (const uri of hierarchyUris) {
       if (!loaded.has(uri)) {
         mergeDocument(state, await fetchConceptDocument(originalFetch, requestUrl, uri));
         loaded.add(uri);
       }
+    }
 
+    const hierarchyEntries = await Promise.all([...hierarchyUris].map(async (uri) => {
       const node = state.nodeMap.get(uri);
       const parentUris = getHierarchyParentUris(node, state.context);
       const children = await fetchHierarchyChildren(originalFetch, requestUrl, uri);
@@ -457,12 +493,28 @@
         concept.tops = topConcepts;
       }
 
-      broaderTransitive[uri] = concept;
-    }
+      return [uri, concept];
+    }));
 
     return {
-      broaderTransitive,
+      broaderTransitive: Object.fromEntries(hierarchyEntries),
     };
+  }
+
+  async function buildCustomHierarchyResponse(originalFetch, requestUrl) {
+    const conceptUri = requestUrl.searchParams.get("uri");
+    if (!conceptUri) {
+      return null;
+    }
+
+    const data = await buildFallbackHierarchy(originalFetch, requestUrl, conceptUri);
+    return data
+      ? new Response(JSON.stringify(data), {
+          status: 200,
+          statusText: "OK",
+          headers: { "content-type": "application/json" },
+        })
+      : null;
   }
 
   async function patchHierarchyResponse(response, requestUrl, originalFetch) {
@@ -491,15 +543,47 @@
 
     const concept = findHierarchyConcept(data, conceptUri);
     if (!concept) {
-      return response;
+      const fallbackData = await buildFallbackHierarchy(originalFetch, requestUrl, conceptUri);
+      return fallbackData
+        ? new Response(JSON.stringify(fallbackData), {
+            status: 200,
+            statusText: "OK",
+            headers: { "content-type": "application/json" },
+          })
+        : response;
     }
 
+    let changed = false;
     const children = await fetchHierarchyChildren(originalFetch, requestUrl, conceptUri);
-    if (children.length === 0) {
-      return response;
+    if (children.length > 0) {
+      concept.narrower = mergeByUri(concept.narrower, children);
+      concept.hasChildren = true;
+      changed = true;
     }
 
-    concept.narrower = mergeByUri(concept.narrower, children);
+    const hierarchyConcepts = Object.values(data?.broaderTransitive || {}).filter((item) => item?.uri);
+    for (const childConcept of hierarchyConcepts) {
+      const childUri = childConcept.uri;
+      const selectedChild = hierarchyChildFromConcept(childConcept);
+      for (const parentUri of hierarchyBroaderUris(childConcept)) {
+        const parent = findHierarchyConcept(data, parentUri);
+        if (!parent || findHierarchyChild(parent.narrower, childUri)) {
+          continue;
+        }
+
+        const parentChildren = await fetchHierarchyChildren(originalFetch, requestUrl, parentUri);
+        parent.narrower = mergeByUri(
+          parent.narrower,
+          [...parentChildren, findHierarchyChild(parentChildren, childUri) || selectedChild].filter(Boolean),
+        );
+        parent.hasChildren = true;
+        changed = true;
+      }
+    }
+
+    if (!changed) {
+      return response;
+    }
 
     return new Response(JSON.stringify(data), {
       status: response.status,
@@ -516,12 +600,17 @@
     const originalFetch = window.fetch.bind(window);
 
     async function soilvocFetch(input, init) {
-      const response = await originalFetch(input, init);
       const requestUrl = getRequestUrl(input);
       if (!requestUrl || !shouldPatchHierarchyResponse(requestUrl)) {
-        return response;
+        return originalFetch(input, init);
       }
 
+      const customResponse = await buildCustomHierarchyResponse(originalFetch, requestUrl);
+      if (customResponse) {
+        return customResponse;
+      }
+
+      const response = await originalFetch(input, init);
       return patchHierarchyResponse(response, requestUrl, originalFetch);
     }
 

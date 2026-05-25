@@ -1,9 +1,9 @@
 {
   "js": [
-    "definition-source.js?v=20260524-feedback"
+    "definition-source.js?v=20260525-universal-hierarchy"
   ],
   "css": [
-    "definition-source.css?v=20260524-feedback"
+    "definition-source.css?v=20260525-universal-hierarchy"
   ],
   "callback": [
     "soilvocDefinitionSource"
