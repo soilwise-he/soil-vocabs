@@ -1,0 +1,33 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "soilvoc-feedback",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-05-24",
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "routes": [
+    {
+      "pattern": "soilvoc.wangbeichen.com/api/feedback",
+      "zone_id": "488a694d6f88500c407338cdf4402a12"
+    }
+  ],
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "allowed_destination_addresses": [
+        "beichen.wang98@gmail.com"
+      ],
+      "allowed_sender_addresses": [
+        "feedback@wangbeichen.com"
+      ]
+    }
+  ],
+  "vars": {
+    "ALLOWED_ORIGIN": "https://soilvoc.wangbeichen.com",
+    "DEBUG_ERRORS": "false",
+    "FEEDBACK_FROM": "feedback@wangbeichen.com",
+    "FEEDBACK_TO": "beichen.wang98@gmail.com"
+  }
+}

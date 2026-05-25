@@ -1,9 +1,9 @@
 {
   "js": [
-    "definition-source.js"
+    "definition-source.js?v=20260524-feedback"
   ],
   "css": [
-    "definition-source.css"
+    "definition-source.css?v=20260524-feedback"
   ],
   "callback": [
     "soilvocDefinitionSource"

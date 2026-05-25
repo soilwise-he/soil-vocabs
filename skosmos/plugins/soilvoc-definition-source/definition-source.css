@@ -43,3 +43,24 @@
   border-color: rgba(255, 255, 255, 0.7);
   color: #0b2a4d;
 }
+
+.soilvoc-feedback-status {
+  margin: 1rem 0;
+  min-height: 1.5rem;
+}
+
+.soilvoc-feedback-status-error {
+  color: #b00020;
+}
+
+.soilvoc-feedback-status-ok {
+  color: #1f6f43;
+}
+
+.soilvoc-feedback-turnstile {
+  margin: 1rem 0;
+}
+
+.soilvoc-feedback-confirmation {
+  margin-top: 1rem;
+}

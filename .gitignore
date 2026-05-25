@@ -103,6 +103,11 @@ target/
 .tmp/
 SoilVoc_restored.ttl
 
+# Local Wrangler/npm caches
+.npm-cache/
+.wrangler/
+.wrangler-config/
+
 # IPython
 profile_default/
 ipython_config.py

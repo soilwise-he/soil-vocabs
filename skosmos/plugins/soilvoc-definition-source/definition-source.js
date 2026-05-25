@@ -47,6 +47,8 @@
   ];
   const SOILVOC_DATA_FORMAT = "application/ld+json";
   const FALLBACK_HIERARCHY_MAX_NODES = 50;
+  const FEEDBACK_ENDPOINT = "https://soilvoc.wangbeichen.com/api/feedback";
+  const TURNSTILE_SITE_KEY = "";
 
   function asArray(value) {
     if (value === undefined || value === null) {
@@ -527,10 +529,102 @@
     window.fetch = soilvocFetch;
   }
 
+  function setFeedbackStatus(statusElement, message, isError = false) {
+    statusElement.textContent = message;
+    statusElement.className = `soilvoc-feedback-status ${isError ? "soilvoc-feedback-status-error" : "soilvoc-feedback-status-ok"}`;
+  }
+
+  function ensureFeedbackStatus(form) {
+    const existing = form.querySelector(".soilvoc-feedback-status");
+    if (existing) {
+      return existing;
+    }
+
+    const status = document.createElement("div");
+    status.className = "soilvoc-feedback-status";
+    status.setAttribute("role", "status");
+    status.setAttribute("aria-live", "polite");
+
+    const submitButton = form.querySelector("#submit-feedback");
+    submitButton?.parentElement?.insertBefore(status, submitButton);
+    return status;
+  }
+
+  function injectTurnstile(form) {
+    if (!TURNSTILE_SITE_KEY || form.querySelector(".cf-turnstile")) {
+      return;
+    }
+
+    const widget = document.createElement("div");
+    widget.className = "cf-turnstile soilvoc-feedback-turnstile";
+    widget.dataset.sitekey = TURNSTILE_SITE_KEY;
+
+    const submitButton = form.querySelector("#submit-feedback");
+    submitButton?.parentElement?.insertBefore(widget, submitButton);
+
+    if (!document.querySelector('script[src^="https://challenges.cloudflare.com/turnstile/v0/api.js"]')) {
+      const script = document.createElement("script");
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+  }
+
+  function installFeedbackWorkerForm() {
+    const form = document.querySelector("#feedback-form");
+    if (!form || form.dataset.soilvocFeedbackWorker === "true") {
+      return;
+    }
+
+    form.dataset.soilvocFeedbackWorker = "true";
+    form.action = FEEDBACK_ENDPOINT;
+    injectTurnstile(form);
+
+    const status = ensureFeedbackStatus(form);
+    const submitButton = form.querySelector("#submit-feedback");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (typeof form.reportValidity === "function" && !form.reportValidity()) {
+        return;
+      }
+
+      setFeedbackStatus(status, "Sending feedback...");
+      if (submitButton) {
+        submitButton.disabled = true;
+      }
+
+      try {
+        const response = await fetch(FEEDBACK_ENDPOINT, {
+          method: "POST",
+          body: new FormData(form),
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok || !data.ok) {
+          throw new Error(data.error || "Could not send feedback right now.");
+        }
+
+        form.replaceChildren();
+        const confirmation = document.createElement("div");
+        confirmation.className = "soilvoc-feedback-confirmation";
+        confirmation.innerHTML = "<h2>Feedback has been sent!</h2><p>Thank you for your feedback.</p>";
+        form.appendChild(confirmation);
+      } catch (error) {
+        setFeedbackStatus(status, error.message || "Could not send feedback right now.", true);
+        if (submitButton) {
+          submitButton.disabled = false;
+        }
+      }
+    });
+  }
+
   function soilvocDefinitionSource() {
     if (!window.location.pathname.includes("/soilvoc/")) {
       return;
     }
+
+    installFeedbackWorkerForm();
 
     const { context, graph } = readJsonLdDocument();
     const nodeMap = buildNodeMap(graph, context);
