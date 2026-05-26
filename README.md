@@ -6,6 +6,24 @@ Harmonising terminology within or between communities is an important aspect in 
 
 On this repository we collect soil related vocabularies, glossaries, thesauri and ontologies. Also technologies to create, maintain and publish such vocabularies are collected here. The viewer to interact with such vocabularies is available at [Soil-Vocabs Viewer](https://soilwise-he.github.io/soil-vocabs/).
 
+## How to contribute
+The current process for uploading new properties and procedures is through a [Github issue](https://github.com/soilwise-he/soil-vocabs/issues). If you have a list of new concepts, we recommend creating a CSV file with the same structure as [SoilVoc_concepts.csv](https://github.com/soilwise-he/soil-vocabs/blob/main/SoilVoc_concepts.csv). The file should have the following headers:
+
+`prefLabel,altLabel,definition,broader,isProcedureFor,exactMatch,closeMatch,source link`
+
+- **prefLabel**: The preferred label of the concept. E.g, `aluminium`
+- **altlabel** (optional): The alternative label the concept.
+- **definition** (optional): The definition of the concept.
+- **broader** (optional): The broader term for the concept from the SoilVoc. Use prefLabel.
+- **isProcedureFor** (optional): The property associated with this procedure if the concept is a procedure. Use the prefLabel.
+- **exactMatch** (optional): The URI of an equivalent term from other glossaries.
+- **closeMatch** (optional): The URI of a similar term from other glossaries.
+- **source link** (optional): A link to the source of the concept's definition.
+
+If a concept has multiple values for definition, broader, exactMatch, closeMatch, or source link, separate them with "|". E.g., `http://aims.fao.org/aos/agrovoc/c_317 | http://opendata.inrae.fr/thesaurusINRAE/c_15702 | http://www.eionet.europa.eu/gemet/concept/353 | https://soilwise-he.github.io/soil-health#Aluminium`.
+
+Once your concept list is ready, create an issue [here](https://github.com/soilwise-he/soil-vocabs/issues/new) with the prefix [new-concept] and attach the csv file. You can also use a table within the issue for this purpose, but a CSV file is preferred as it is easier to edit and process.
+
 ## Relevant terminologies
 
 For the soil domain we should distinghuish various types of entities for which definitions can be listed.
