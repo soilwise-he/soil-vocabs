@@ -95,23 +95,26 @@ Invoke-RestMethod `
 
 Then open `http://localhost:9090/soilvoc/en/` and search for `soil porosity`. Open a concept with a sourced definition such as `MineralConcVolume` and confirm the Definition row includes a Source line. Open `BaseSaturation` to confirm `Has procedure` is shown on the concept page and procedure children are available through the hierarchy navigation.
 
-## Publish Online With W3ID
+## Publish Skosmos Alongside W3ID
 
-Target production shape:
+Current public shape:
 
 ```text
 https://w3id.org/eusoilvoc
   -> HTTPS redirect, managed in perma-id/w3id.org
-  -> https://soilvoc.example.org/soilvoc/en/
+  -> https://soilwise-he.github.io/soil-vocabs/
+  -> GitHub Pages static SoilVoc viewer
+
+https://soilvoc.example.org/soilvoc/en/
   -> reverse proxy on the server
   -> Skosmos Docker container
   -> https://sparql.soilwise.wetransform.eu/sparql/
   -> graph https://w3id.org/eusoilvoc
 ```
 
-`w3id.org` is not the server that runs Skosmos. It is a persistent redirect service. You still need a real public HTTPS origin for the Skosmos container, for example `https://soilvoc.example.org`. After that origin works, configure `https://w3id.org/eusoilvoc` to redirect to the Skosmos vocabulary page.
+`w3id.org` is not the server that runs Skosmos. It is a persistent redirect service. Keep `https://w3id.org/eusoilvoc` pointing to the GitHub Pages static viewer unless the project explicitly decides to move the canonical public entry point. A Skosmos instance can run on a separate hostname, for example `https://soilvoc.example.org`, as an isolated live demo.
 
-The cleanest deployment is to serve Skosmos from the root of a dedicated hostname and let W3ID redirect to `/soilvoc/en/`. Avoid deploying Skosmos under a subpath unless necessary; subpath deployments require `skosmos:baseHref` and more reverse-proxy care.
+The cleanest Skosmos demo deployment is to serve Skosmos from the root of a dedicated hostname. Avoid deploying Skosmos under a subpath unless necessary; subpath deployments require `skosmos:baseHref` and more reverse-proxy care.
 
 ### 1. Prepare the Remote Server
 
@@ -254,7 +257,7 @@ curl -I https://soilvoc.example.org/rdf/SoilVoc_skosmos.ttl
 
 If you deploy under a subpath such as `https://soilvoc.example.org/skosmos/`, add `skosmos:baseHref <https://soilvoc.example.org/skosmos/>` to `config/skosmos-config.ttl` and adjust the reverse proxy path rules. Prefer a dedicated hostname to avoid this.
 
-### 5. Migrate the Existing W3ID Redirect
+### 5. Keep the Existing W3ID Redirect
 
 The `https://w3id.org/eusoilvoc` namespace is already registered in `perma-id/w3id.org`. It currently redirects to the GitHub Pages static viewer at:
 
@@ -262,19 +265,9 @@ The `https://w3id.org/eusoilvoc` namespace is already registered in `perma-id/w3
 https://soilwise-he.github.io/soil-vocabs/
 ```
 
-For the Skosmos migration, do not create a new W3ID namespace. Update the existing `eusoilvoc/.htaccess` in the `perma-id/w3id.org` repository so `https://w3id.org/eusoilvoc` points to the new Skosmos HTTPS origin.
+For the current deployment model, no W3ID change is needed. Keep the existing `eusoilvoc/.htaccess` target on GitHub Pages, and treat the Skosmos instance as a separate live demo URL. If maintainers, project description, or target-service details change, keep `eusoilvoc/README.md` current in the `perma-id/w3id.org` repository.
 
-Migration steps:
-
-1. Deploy and verify the new Skosmos origin, for example `https://soilvoc.example.org/soilvoc/en/`.
-2. Fork or update your fork of `https://github.com/perma-id/w3id.org`.
-3. Edit the existing `eusoilvoc/.htaccess`.
-4. Replace the old GitHub Pages target `https://soilwise-he.github.io/soil-vocabs/` with the new Skosmos target.
-5. Keep `eusoilvoc/README.md` current if maintainers, project description, or target service details changed.
-6. Open a pull request to `perma-id/w3id.org`.
-7. After merge, verify that `https://w3id.org/eusoilvoc` lands on the Skosmos vocabulary page.
-
-Minimal UI-only migration:
+Expected W3ID rule:
 
 ```apache
 # /eusoilvoc/
@@ -283,39 +276,15 @@ Minimal UI-only migration:
 
 RewriteEngine On
 
-# Previous target:
-# https://soilwise-he.github.io/soil-vocabs/
-
-RewriteRule ^$ https://soilvoc.example.org/soilvoc/en/ [R=303,L]
-RewriteRule ^(.*)$ https://soilvoc.example.org/soilvoc/en/ [R=303,L]
+RewriteRule ^$ https://soilwise-he.github.io/soil-vocabs/ [R=303,L]
+RewriteRule ^(.*)$ https://soilwise-he.github.io/soil-vocabs/ [R=303,L]
 ```
 
-Recommended Linked Data migration if you also publish a static RDF dump from the same HTTPS origin:
-
-```apache
-# /eusoilvoc/
-# Permanent identifier for SoilVoc.
-# Maintainer: <NAME>, <EMAIL>, GitHub: <USERNAME>
-
-RewriteEngine On
-
-# Previous target:
-# https://soilwise-he.github.io/soil-vocabs/
-
-RewriteCond %{HTTP_ACCEPT} text/turtle [OR]
-RewriteCond %{HTTP_ACCEPT} application/rdf\+xml [OR]
-RewriteCond %{HTTP_ACCEPT} application/ld\+json
-RewriteRule ^$ https://soilvoc.example.org/rdf/SoilVoc_skosmos.ttl [R=303,L]
-
-RewriteRule ^$ https://soilvoc.example.org/soilvoc/en/ [R=303,L]
-RewriteRule ^(.*)$ https://soilvoc.example.org/soilvoc/en/ [R=303,L]
-```
-
-The old GitHub Pages page can remain online as a transition page, but it should not remain the W3ID target once Skosmos is production-ready. If you keep it, replace the static viewer with a short notice or redirect to `https://w3id.org/eusoilvoc` or directly to the Skosmos page, so old bookmarks to `https://soilwise-he.github.io/soil-vocabs/` do not strand users on the deprecated viewer.
+Keep the GitHub Pages static viewer online as the canonical public browsing page. Link to the Skosmos live demo from project documentation if needed, but do not make GitHub Pages redirect to Skosmos while W3ID points to GitHub Pages.
 
 For hash URIs such as `https://w3id.org/eusoilvoc#SoilpH`, the fragment `#SoilpH` is not sent to the W3ID server. The redirect can only act on the base URI `https://w3id.org/eusoilvoc`. This is normal for hash URI vocabularies: the base document should describe the vocabulary, and the fragment identifies a resource inside that document.
 
-### 6. Verify W3ID After the Pull Request Is Merged
+### 6. Verify W3ID
 
 ```bash
 curl -I https://w3id.org/eusoilvoc
@@ -325,8 +294,8 @@ curl -L -I https://w3id.org/eusoilvoc
 Expected behavior:
 
 - The first command returns a `303` redirect after W3ID is configured.
-- The second command follows the redirect and reaches `https://soilvoc.example.org/soilvoc/en/`.
-- Opening `https://w3id.org/eusoilvoc` in a browser lands on the SoilVoc Skosmos vocabulary page.
+- The second command follows the redirect and reaches `https://soilwise-he.github.io/soil-vocabs/`.
+- Opening `https://w3id.org/eusoilvoc` in a browser lands on the SoilVoc GitHub Pages static viewer.
 
 If RDF content negotiation is configured, also test:
 
