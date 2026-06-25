@@ -1,22 +1,26 @@
 ---
 name: New procedures
-about: To propose new soil procedures for SoilVoc.
+about: To add new soil procedures for SoilVoc.
 title: "[new-procedures]"
 labels: ''
 assignees: ''
-type: Task
+type: Feature
 
 ---
 
 - **prefLabel**: The preferred label of the procedure concept.
-- **altlabel (optional)**: The alternative label of the procedure concept.
+- **altLabel (optional)**: The alternative label (synonyms) of the procedure concept.
 - **definition**: The definition of the procedure concept.
-- **source_link**: The link to the source of the definition.
-- **isProcedureFor**: The property related to this procedure. Use the prefLabel.
+- **defintionLink**: The link to the source of the definition.
+- **property**: The property related to this procedure. Use the prefLabel from soilVoc.
+- **exactMatch (optional)**: The same concept from other vocabularies. Use the URI.
+- **closeMatch (optional)**: The similar concept from other vocabularies. Use the URI.
+
+If there are multiple altLabel, definition, definitionLink, exactMatch or closeMatch, use semi column to separate them.
 
 
-| preLabel | altLabel | definition | source_link | isProcedureFor |
-|----------|----------|------------|-------------|----------------|
-|          |          |            |             |                |
-|          |          |            |             |                |
-|          |          |            |             |                |
+| prefLabel | altLabel | definition | definitionLink | property | exactMatch | closeMatch |
+|----------|----------|------------|-------------|----------------|---------------|--------------------|
+|          |          |            |             |                |                |              |
+|          |          |            |             |                |                |              |
+|          |          |            |             |                |                |              |
