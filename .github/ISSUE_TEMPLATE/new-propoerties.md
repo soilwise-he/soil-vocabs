@@ -1,9 +1,9 @@
 ---
-name: new propoerties
-about: To propose new soil properties for SoilVoc
+name: New propoerties
+about: To propose new soil properties for SoilVoc.
 title: "[new-properties]"
 labels: ''
-assignees: ''
+assignees: jli2025
 
 ---
 
