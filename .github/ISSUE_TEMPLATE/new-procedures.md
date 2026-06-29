@@ -1,6 +1,6 @@
 ---
 name: New procedures
-about: To add new soil procedures for SoilVoc.
+about: To add new soil procedures to SoilVoc.
 title: "[new-procedures]"
 labels: ''
 assignees: ''

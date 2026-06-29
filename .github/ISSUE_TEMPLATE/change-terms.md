@@ -1,9 +1,9 @@
 ---
-name: Correct concepts
-about: To correct information of the exsisting concepts from SoilVoc.
-title: "[correct-concept]"
+name: Change terms
+about: 'To change information of the exsisting terms from SoilVoc. '
+title: "[change-terms]"
 labels: ''
-assignees: ''
+assignees: jli2025
 type: Bug
 
 ---

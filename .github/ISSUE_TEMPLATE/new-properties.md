@@ -1,6 +1,6 @@
 ---
 name: New properties
-about: To propose new soil properties for SoilVoc.
+about: To add new soil properties to SoilVoc.
 title: "[new-properties]"
 labels: ''
 assignees: ''
