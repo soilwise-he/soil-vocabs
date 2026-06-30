@@ -8,4 +8,8 @@ type: Feature
 
 ---
 
-
+| preLabel | altLabel | definition | broader | exactMatch | closeMatch | source | publishing organization | titel or reference to document |
+|----------|----------|------------|---------|------------|------------|--------|-------------------------|--------------------------------|
+|          |          |            |         |            |            |        |                         |                                |
+|          |          |            |         |            |            |        |                         |                                |
+|          |          |            |         |            |            |        |                         |                                |
