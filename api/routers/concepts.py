@@ -1,7 +1,12 @@
 from fastapi import APIRouter, HTTPException, Query
 
 from api.models import ConceptDetail, SearchResult
-from api.vocab import get_concept_detail, get_property_procedures, search_concepts
+from api.vocab import (
+    get_concept_detail,
+    get_concept_tree,
+    get_property_procedures,
+    search_concepts,
+)
 
 router = APIRouter()
 
@@ -19,6 +24,12 @@ def search(
 ):
     results, total = search_concepts(q, limit=limit, offset=offset, concept_type=type)
     return SearchResult(query=q, total=total, results=results)
+
+
+@router.get("/tree")
+def tree() -> dict[str, dict]:
+    """Get the full vocabulary hierarchy as nested objects keyed by prefLabel."""
+    return get_concept_tree()
 
 
 @router.get("/{fragment}/procedures", response_model=SearchResult)

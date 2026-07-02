@@ -85,6 +85,45 @@ curl "http://localhost:8000/api/v1/concepts/search?q=bulk&type=property"
 }
 ```
 
+### Get vocabulary tree
+
+```
+GET /api/v1/concepts/tree
+```
+
+Returns the full vocabulary hierarchy as nested objects keyed by `prefLabel`. Roots are the scheme's top concepts (`skos:hasTopConcept`); children come from `skos:narrower` and inverse `skos:broader`. Leaves are empty objects. Takes no parameters.
+
+Example:
+
+```bash
+curl "http://localhost:8000/api/v1/concepts/tree"
+```
+
+```json
+{
+  "soil": {
+    "soil properties": {
+      "soil chemical properties": {
+        "soil nutrients": {
+          "micronutrients": {
+            "boron": {},
+            "copper": {},
+            "iron": {}
+          }
+        },
+        "soil pH": {}
+      }
+    }
+  }
+}
+```
+
+Notes:
+
+- Concepts with multiple broader parents appear under each parent.
+- Procedures are not part of the tree (they are linked via `sosa:hasProcedure`, not `skos:broader`).
+- The tree is computed once and cached for the lifetime of the process.
+
 ### Get concept detail
 
 ```

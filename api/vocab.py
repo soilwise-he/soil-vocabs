@@ -15,6 +15,7 @@ _graph: Graph | None = None
 _scheme_uri: str | None = None
 _property_uris: set[str] = set()
 _procedure_uris: set[str] = set()
+_tree_cache: dict | None = None
 
 DEFAULT_TTL_PATH = Path(__file__).resolve().parent.parent / "SoilVoc.ttl"
 
@@ -92,12 +93,16 @@ def _pick_text_literal(g: Graph, node: URIRef | BNode) -> str | None:
     return str(texts[0])
 
 
-def _concept_summary(g: Graph, uri: URIRef) -> ConceptSummary:
+def _pref_label(g: Graph, uri: URIRef) -> str:
     label = g.value(uri, SKOS.prefLabel)
+    return str(label) if label else str(uri).split("#")[-1].split("/")[-1]
+
+
+def _concept_summary(g: Graph, uri: URIRef) -> ConceptSummary:
     alt_label = g.value(uri, SKOS.altLabel)
     return ConceptSummary(
         uri=str(uri),
-        label=str(label or str(uri).split("#")[-1].split("/")[-1]),
+        label=_pref_label(g, uri),
         alt_label=str(alt_label) if alt_label else None,
         type=_concept_type(str(uri)),
         definitions=_concept_definitions(g, uri),
@@ -166,6 +171,35 @@ def search_concepts(
     matches.sort(key=lambda c: c.label.lower())
     total = len(matches)
     return matches[offset : offset + limit], total
+
+
+def get_concept_tree() -> dict:
+    """Return the full vocabulary hierarchy as nested dicts keyed by prefLabel.
+
+    Roots are the scheme's skos:hasTopConcept concepts; children come from
+    skos:narrower and inverse skos:broader. Leaves are empty dicts.
+    """
+    global _tree_cache
+    if _tree_cache is None:
+        g = get_graph()
+        scheme = URIRef(get_scheme_uri())
+
+        def build(uri: URIRef, path: frozenset[URIRef]) -> dict:
+            children: set[URIRef] = set(g.objects(uri, SKOS.narrower))
+            children.update(g.subjects(SKOS.broader, uri))
+            node: dict = {}
+            for child in sorted(children, key=lambda c: _pref_label(g, c).lower()):
+                if child in path:  # guard against skos:broader cycles
+                    continue
+                node[_pref_label(g, child)] = build(child, path | {child})
+            return node
+
+        roots = sorted(
+            g.objects(scheme, SKOS.hasTopConcept),
+            key=lambda c: _pref_label(g, c).lower(),
+        )
+        _tree_cache = {_pref_label(g, r): build(r, frozenset({r})) for r in roots}
+    return _tree_cache
 
 
 def _resolve_concept_uri(fragment: str) -> URIRef | None:
