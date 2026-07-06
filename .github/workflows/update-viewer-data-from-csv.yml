@@ -34,39 +34,39 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install rdflib pandas
 
-      - name: Restore temporary TTL from CSV
-        env:
-          RESTORED_TTL: ${{ runner.temp }}/SoilVoc_restored.ttl
-        run: |
-          python scripts/restore_soilvoc_from_csv.py \
-            --csv SoilVoc_concepts.csv \
-            --out "$RESTORED_TTL"
+      # - name: Restore temporary TTL from CSV
+      #   env:
+      #     RESTORED_TTL: ${{ runner.temp }}/SoilVoc_restored.ttl
+      #   run: |
+      #     python scripts/restore_soilvoc_from_csv.py \
+      #       --csv SoilVoc_concepts.csv \
+      #       --out "$RESTORED_TTL"
 
       # index.html, assets/soilvoc.js, and assets/soilvoc.css are committed
       # static viewer files. A temporary restored TTL is used only to regenerate
       # assets/soilvoc_data.json and is not committed.
-      - name: Generate assets/soilvoc_data.json
-        env:
-          RESTORED_TTL: ${{ runner.temp }}/SoilVoc_restored.ttl
-        run: |
-          python scripts/generate_soilvoc_html.py \
-            --ttl "$RESTORED_TTL" \
-            --output-dir assets \
-            --version-file assets/VERSION
+      # - name: Generate assets/soilvoc_data.json
+      #   env:
+      #     RESTORED_TTL: ${{ runner.temp }}/SoilVoc_restored.ttl
+      #   run: |
+      #     python scripts/generate_soilvoc_html.py \
+      #       --ttl "$RESTORED_TTL" \
+      #       --output-dir assets \
+      #       --version-file assets/VERSION
 
-      - name: Commit updated files
-        run: |
-          git diff --quiet -- assets/soilvoc_data.json && {
-            echo "No changes to commit."
-            exit 0
-          }
+      # - name: Commit updated files
+      #   run: |
+      #     git diff --quiet -- assets/soilvoc_data.json && {
+      #       echo "No changes to commit."
+      #       exit 0
+      #     }
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      #     git config user.name "github-actions[bot]"
+      #     git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add assets/soilvoc_data.json
-          git commit -m "Auto-update soilvoc_data.json from source files [skip ci]"
-          git push
+      #     git add assets/soilvoc_data.json
+      #     git commit -m "Auto-update soilvoc_data.json from source files [skip ci]"
+      #     git push
 
       - name: Log in to GHCR
         uses: docker/login-action@v3
