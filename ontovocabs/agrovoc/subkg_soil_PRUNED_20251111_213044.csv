@@ -1,0 +1,886 @@
+prefLabel,altLabels,displayName,uri,confidence
+evapotranspiration zone,,evapotranspiration zone,http://aims.fao.org/aos/agrovoc/c_25346,N/A
+growing media,growth media; rooting media; soil substrates,"growing media (growth media, rooting media, soil substrates)",http://aims.fao.org/aos/agrovoc/c_3393,N/A
+land cover,,land cover,http://aims.fao.org/aos/agrovoc/c_37897,N/A
+leachates,,leachates,http://aims.fao.org/aos/agrovoc/c_35164,N/A
+mud,,mud,http://aims.fao.org/aos/agrovoc/c_4973,N/A
+soil information,,soil information,http://aims.fao.org/aos/agrovoc/c_109db1c5,N/A
+spatial distribution,,spatial distribution,http://aims.fao.org/aos/agrovoc/c_36230,N/A
+total carbon,TC,total carbon (TC),http://aims.fao.org/aos/agrovoc/c_24fb4269,N/A
+sampling,,sampling,http://aims.fao.org/aos/agrovoc/c_6774,N/A
+solutions,,solutions,http://aims.fao.org/aos/agrovoc/c_28563,N/A
+spatial units,,spatial units,http://aims.fao.org/aos/agrovoc/c_9df6243d,N/A
+biocoenosis,biological communities; ecological associations; biocenosis; biotic communities,"biocoenosis (biological communities, ecological associations, biocenosis, biotic communities)",http://aims.fao.org/aos/agrovoc/c_912,N/A
+root temperature,,root temperature,http://aims.fao.org/aos/agrovoc/c_16599,N/A
+air,,air,http://aims.fao.org/aos/agrovoc/c_224,N/A
+atmosphere,,atmosphere,http://aims.fao.org/aos/agrovoc/c_8994,N/A
+permeability,,permeability,http://aims.fao.org/aos/agrovoc/c_5718,N/A
+land improvement,melioration of land; land melioration; land amelioration,"land improvement (melioration of land, land melioration, land amelioration)",http://aims.fao.org/aos/agrovoc/c_28717,N/A
+seaweed meal,,seaweed meal,http://aims.fao.org/aos/agrovoc/c_afec13cd,N/A
+inoculation,inoculation methods,inoculation (inoculation methods),http://aims.fao.org/aos/agrovoc/c_3879,N/A
+environmental factors,environmental conditions; ambient conditions,"environmental factors (environmental conditions, ambient conditions)",http://aims.fao.org/aos/agrovoc/c_2594,N/A
+site factors,location factors; site quality; site classes,"site factors (location factors, site quality, site classes)",http://aims.fao.org/aos/agrovoc/c_7087,N/A
+evaporation,water loss,evaporation (water loss),http://aims.fao.org/aos/agrovoc/c_2739,N/A
+losses,,losses,http://aims.fao.org/aos/agrovoc/c_4438,N/A
+diatomite,kieselguhr; diatomaceous earth,"diatomite (kieselguhr, diatomaceous earth)",http://aims.fao.org/aos/agrovoc/c_32658,N/A
+halide minerals,,halide minerals,http://aims.fao.org/aos/agrovoc/c_2c9b525c,N/A
+mineral resources,,mineral resources,http://aims.fao.org/aos/agrovoc/c_4852,N/A
+mineralogy,,mineralogy,http://aims.fao.org/aos/agrovoc/c_4856,N/A
+perlite,,perlite,http://aims.fao.org/aos/agrovoc/c_24125,N/A
+pumice,,pumice,http://aims.fao.org/aos/agrovoc/c_36851,N/A
+rock,,rock,http://aims.fao.org/aos/agrovoc/c_6628,N/A
+substances,,substances,http://aims.fao.org/aos/agrovoc/c_330705,N/A
+sylvinite,,sylvinite,http://aims.fao.org/aos/agrovoc/c_7561,N/A
+toxic minerals,,toxic minerals,http://aims.fao.org/aos/agrovoc/c_35674,N/A
+soil exposure types,,soil exposure types,http://aims.fao.org/aos/agrovoc/c_378b6841,N/A
+natural phenomena,,natural phenomena,http://aims.fao.org/aos/agrovoc/c_330740,N/A
+water,,water,http://aims.fao.org/aos/agrovoc/c_8309,N/A
+classification,systematization,classification (systematization),http://aims.fao.org/aos/agrovoc/c_1653,N/A
+chemicophysical properties,physicochemical properties; product characters; chemical properties; physical properties,"chemicophysical properties (physicochemical properties, product characters, chemical properties, physical properties)",http://aims.fao.org/aos/agrovoc/c_1521,N/A
+nitrogen content,,nitrogen content,http://aims.fao.org/aos/agrovoc/c_5193,N/A
+phosphorus content,,phosphorus content,http://aims.fao.org/aos/agrovoc/c_63a4df58,N/A
+total inorganic carbon,TIC,total inorganic carbon (TIC),http://aims.fao.org/aos/agrovoc/c_e3783c76,N/A
+additives,adjuncts,additives (adjuncts),http://aims.fao.org/aos/agrovoc/c_118,N/A
+agrochemicals,agricultural chemicals,agrochemicals (agricultural chemicals),http://aims.fao.org/aos/agrovoc/c_24430,N/A
+ashes,cinders,ashes (cinders),http://aims.fao.org/aos/agrovoc/c_15728,N/A
+evaporation suppressants,,evaporation suppressants,http://aims.fao.org/aos/agrovoc/c_2740,N/A
+composting,,composting,http://aims.fao.org/aos/agrovoc/c_15956,N/A
+marine snow,,marine snow,http://aims.fao.org/aos/agrovoc/c_aaf931fb,N/A
+forest ecology,,forest ecology,http://aims.fao.org/aos/agrovoc/c_3044,N/A
+logging wastes,logging residues; waste wood (logging); bark (wastes); wood trimmings,"logging wastes (logging residues, waste wood (logging), bark (wastes), wood trimmings)",http://aims.fao.org/aos/agrovoc/c_24870,N/A
+slash,,slash,http://aims.fao.org/aos/agrovoc/c_28152,N/A
+anoxic sediments,anaerobic sediments,anoxic sediments (anaerobic sediments),http://aims.fao.org/aos/agrovoc/c_c54e5050,N/A
+biological production,,biological production,http://aims.fao.org/aos/agrovoc/c_36649,N/A
+biomass,phytomass,biomass (phytomass),http://aims.fao.org/aos/agrovoc/c_926,N/A
+organic compounds,,organic compounds,http://aims.fao.org/aos/agrovoc/c_5384,N/A
+organic wastes,biological wastes; green wastes,"organic wastes (biological wastes, green wastes)",http://aims.fao.org/aos/agrovoc/c_35237,N/A
+Bacteria,Eubacteria,Bacteria (Eubacteria),http://aims.fao.org/aos/agrovoc/c_765,N/A
+Serratia,,Serratia,http://aims.fao.org/aos/agrovoc/c_14210,N/A
+biological control agents,biological control organisms,biological control agents (biological control organisms),http://aims.fao.org/aos/agrovoc/c_920,N/A
+depth,deepness,depth (deepness),http://aims.fao.org/aos/agrovoc/c_2190,N/A
+adventitious roots,secondary root; aerial roots,"adventitious roots (secondary root, aerial roots)",http://aims.fao.org/aos/agrovoc/c_24812,N/A
+cortex,,cortex,http://aims.fao.org/aos/agrovoc/c_1908,N/A
+grub felling,,grub felling,http://aims.fao.org/aos/agrovoc/c_28091,N/A
+plant vegetative organs,,plant vegetative organs,http://aims.fao.org/aos/agrovoc/c_27991,N/A
+primary root,seminal roots,primary root (seminal roots),http://aims.fao.org/aos/agrovoc/c_330864,N/A
+radicle,,radicle,http://aims.fao.org/aos/agrovoc/c_6423,N/A
+root cap,,root cap,http://aims.fao.org/aos/agrovoc/c_6640,N/A
+root colonization,,root colonization,http://aims.fao.org/aos/agrovoc/c_37239,N/A
+root conductance,,root conductance,http://aims.fao.org/aos/agrovoc/c_13951,N/A
+root extracts,,root extracts,http://aims.fao.org/aos/agrovoc/c_35307,N/A
+root hairs,,root hairs,http://aims.fao.org/aos/agrovoc/c_6642,N/A
+root hydraulic conductivity,,root hydraulic conductivity,http://aims.fao.org/aos/agrovoc/c_37237,N/A
+root inoculation,,root inoculation,http://aims.fao.org/aos/agrovoc/c_35955,N/A
+root length,,root length,http://aims.fao.org/aos/agrovoc/c_24232,N/A
+root nodules,,root nodules,http://aims.fao.org/aos/agrovoc/c_27601,N/A
+root pressure,,root pressure,http://aims.fao.org/aos/agrovoc/c_6644,N/A
+root systems,,root systems,http://aims.fao.org/aos/agrovoc/c_16034,N/A
+root tumours,root tumors,root tumours (root tumors),http://aims.fao.org/aos/agrovoc/c_36836,N/A
+root water potential,,root water potential,http://aims.fao.org/aos/agrovoc/c_37236,N/A
+rooting,,rooting,http://aims.fao.org/aos/agrovoc/c_6649,N/A
+storage organs,,storage organs,http://aims.fao.org/aos/agrovoc/c_7430,N/A
+storage roots,,storage roots,http://aims.fao.org/aos/agrovoc/c_97690135,N/A
+suckers,,suckers,http://aims.fao.org/aos/agrovoc/c_24411,N/A
+organisms,gaeabionta; life on earth,"organisms (gaeabionta, life on earth)",http://aims.fao.org/aos/agrovoc/c_49904,N/A
+boron content,,boron content,http://aims.fao.org/aos/agrovoc/c_f52b8ef5,N/A
+incorporation,,incorporation,http://aims.fao.org/aos/agrovoc/c_3823,N/A
+resource conservation,conservation,resource conservation (conservation),http://aims.fao.org/aos/agrovoc/c_6523,N/A
+soil conservation legislation,,soil conservation legislation,http://aims.fao.org/aos/agrovoc/c_0a2f9038,N/A
+terraces,,terraces,http://aims.fao.org/aos/agrovoc/c_28166,N/A
+cropping systems,cultivation systems; crop systems,"cropping systems (cultivation systems, crop systems)",http://aims.fao.org/aos/agrovoc/c_1971,N/A
+nutrient availability,,nutrient availability,http://aims.fao.org/aos/agrovoc/c_5268,N/A
+agronomy,,agronomy,http://aims.fao.org/aos/agrovoc/c_211,N/A
+inorganic acid salts,,inorganic acid salts,http://aims.fao.org/aos/agrovoc/c_6764,N/A
+analysis,,analysis,http://aims.fao.org/aos/agrovoc/c_49928,N/A
+analytical methods,analytical techniques,analytical methods (analytical techniques),http://aims.fao.org/aos/agrovoc/c_1513,N/A
+chemical composition,chemical concentration,chemical composition (chemical concentration),http://aims.fao.org/aos/agrovoc/c_1794,N/A
+stormwater runoff,,stormwater runoff,http://aims.fao.org/aos/agrovoc/c_c9214ebe,N/A
+urban runoff,,urban runoff,http://aims.fao.org/aos/agrovoc/c_a2eabe29,N/A
+authigenic minerals,authigenes; authigenic sediments,"authigenic minerals (authigenes, authigenic sediments)",http://aims.fao.org/aos/agrovoc/c_5feaf350,N/A
+monazite,,monazite,http://aims.fao.org/aos/agrovoc/c_ec5ccb14,N/A
+phosphorite nodules,phosphatic concretions; phosphorite concretions,"phosphorite nodules (phosphatic concretions, phosphorite concretions)",http://aims.fao.org/aos/agrovoc/c_e31d8184,N/A
+asbestos,,asbestos,http://aims.fao.org/aos/agrovoc/c_28233,N/A
+copper silicate,,copper silicate,http://aims.fao.org/aos/agrovoc/c_582b6de7,N/A
+alternative methods,,alternative methods,http://aims.fao.org/aos/agrovoc/c_36555,N/A
+cultivation,crop husbandry; plant cultivation,"cultivation (crop husbandry, plant cultivation)",http://aims.fao.org/aos/agrovoc/c_2018,N/A
+drainage,,drainage,http://aims.fao.org/aos/agrovoc/c_2372,N/A
+fallow,fallow land,fallow (fallow land),http://aims.fao.org/aos/agrovoc/c_34007,N/A
+irrigation,,irrigation,http://aims.fao.org/aos/agrovoc/c_3954,N/A
+land clearing,land clearance,land clearing (land clearance),http://aims.fao.org/aos/agrovoc/c_1662,N/A
+land levelling,,land levelling,http://aims.fao.org/aos/agrovoc/c_25791,N/A
+land management,,land management,http://aims.fao.org/aos/agrovoc/c_24866,N/A
+natural resources management,,natural resources management,http://aims.fao.org/aos/agrovoc/c_9000115,N/A
+site preparation,,site preparation,http://aims.fao.org/aos/agrovoc/c_32545,N/A
+water management,water resources management,water management (water resources management),http://aims.fao.org/aos/agrovoc/c_8320,N/A
+watershed management,,watershed management,http://aims.fao.org/aos/agrovoc/c_25301,N/A
+application methods,,application methods,http://aims.fao.org/aos/agrovoc/c_542,N/A
+chemistry,,chemistry,http://aims.fao.org/aos/agrovoc/c_1522,N/A
+carbon sequestration,,carbon sequestration,http://aims.fao.org/aos/agrovoc/c_331583,N/A
+organic carbon,,organic carbon,http://aims.fao.org/aos/agrovoc/c_2f82b0a2,N/A
+phenomena,,phenomena,http://aims.fao.org/aos/agrovoc/c_330704,N/A
+plant ecology,phytoecology,plant ecology (phytoecology),http://aims.fao.org/aos/agrovoc/c_5963,N/A
+plant nutrition,,plant nutrition,http://aims.fao.org/aos/agrovoc/c_16379,N/A
+plant response,,plant response,http://aims.fao.org/aos/agrovoc/c_25446,N/A
+biochemical reactions,,biochemical reactions,http://aims.fao.org/aos/agrovoc/c_27462,N/A
+nitrogen,N (symbol),nitrogen (N (symbol)),http://aims.fao.org/aos/agrovoc/c_5192,N/A
+reduction,biochemical reduction,reduction (biochemical reduction),http://aims.fao.org/aos/agrovoc/c_6483,N/A
+abrasion,,abrasion,http://aims.fao.org/aos/agrovoc/c_9709308a,N/A
+bioerosion,erosion (biological),bioerosion (erosion (biological)),http://aims.fao.org/aos/agrovoc/c_05cd5033,N/A
+bottom erosion,deep-sea erosion; submarine erosion; underwater erosion,"bottom erosion (deep-sea erosion, submarine erosion, underwater erosion)",http://aims.fao.org/aos/agrovoc/c_35687419,N/A
+coastal erosion,,coastal erosion,http://aims.fao.org/aos/agrovoc/c_9949,N/A
+denudation,,denudation,http://aims.fao.org/aos/agrovoc/c_fd9a06fb,N/A
+environmental degradation,environmental deterioration,environmental degradation (environmental deterioration),http://aims.fao.org/aos/agrovoc/c_34821,N/A
+glacial erosion,,glacial erosion,http://aims.fao.org/aos/agrovoc/c_b96cda43,N/A
+injurious factors,harmful factors,injurious factors (harmful factors),http://aims.fao.org/aos/agrovoc/c_3872,N/A
+scouring,hydrodynamic scour,scouring (hydrodynamic scour),http://aims.fao.org/aos/agrovoc/c_aa2f353f,N/A
+sedimentation,sediment deposition; geological sedimentation; geological stratification,"sedimentation (sediment deposition, geological sedimentation, geological stratification)",http://aims.fao.org/aos/agrovoc/c_6926,N/A
+water pollution,aquatic pollution,water pollution (aquatic pollution),http://aims.fao.org/aos/agrovoc/c_8321,N/A
+agricultural runoff,runoff from agricultural land; farm runoff,"agricultural runoff (runoff from agricultural land, farm runoff)",http://aims.fao.org/aos/agrovoc/c_21f05ced,N/A
+earth sciences,,earth sciences,http://aims.fao.org/aos/agrovoc/c_2438,N/A
+geology,,geology,http://aims.fao.org/aos/agrovoc/c_3232,N/A
+entities,,entities,http://aims.fao.org/aos/agrovoc/c_330892,N/A
+slurry,,slurry,http://aims.fao.org/aos/agrovoc/c_16602,N/A
+fish wastes,,fish wastes,http://aims.fao.org/aos/agrovoc/c_2933,N/A
+fishmeal,fish meal,fishmeal (fish meal),http://aims.fao.org/aos/agrovoc/c_2925,N/A
+manure spreaders,,manure spreaders,http://aims.fao.org/aos/agrovoc/c_25990,N/A
+potting,,potting,http://aims.fao.org/aos/agrovoc/c_6143,N/A
+heterotrophic organisms,heterotrophs,heterotrophic organisms (heterotrophs),http://aims.fao.org/aos/agrovoc/c_5fff5daf,N/A
+forests,,forests,http://aims.fao.org/aos/agrovoc/c_3062,N/A
+proximate composition,,proximate composition,http://aims.fao.org/aos/agrovoc/c_32803,N/A
+Cyanobacteria,blue green algae; Cyanophyta; Myxophyta; blue algae,"Cyanobacteria (blue green algae, Cyanophyta, Myxophyta, blue algae)",http://aims.fao.org/aos/agrovoc/c_15960,N/A
+biochemical processes,,biochemical processes,http://aims.fao.org/aos/agrovoc/c_331094,N/A
+heterocysts,heterocytes,heterocysts (heterocytes),http://aims.fao.org/aos/agrovoc/c_252a5734,N/A
+nitrogen fixation genes,nif genes,nitrogen fixation genes (nif genes),http://aims.fao.org/aos/agrovoc/c_331014,N/A
+planting depth,depth of planting,planting depth (depth of planting),http://aims.fao.org/aos/agrovoc/c_37311,N/A
+features,,features,http://aims.fao.org/aos/agrovoc/c_331061,N/A
+density,mass per volume,density (mass per volume),http://aims.fao.org/aos/agrovoc/c_2186,N/A
+cohesive sediments,,cohesive sediments,http://aims.fao.org/aos/agrovoc/c_ea015d99,N/A
+compaction,,compaction,http://aims.fao.org/aos/agrovoc/c_2198dd46,N/A
+engineering,,engineering,http://aims.fao.org/aos/agrovoc/c_2571,N/A
+geotechnology,geotechnics,geotechnology (geotechnics),http://aims.fao.org/aos/agrovoc/c_71aee624,N/A
+mechanical properties,,mechanical properties,http://aims.fao.org/aos/agrovoc/c_4683,N/A
+mechanics,,mechanics,http://aims.fao.org/aos/agrovoc/c_35220,N/A
+rock mechanics,,rock mechanics,http://aims.fao.org/aos/agrovoc/c_25345,N/A
+sediment drifts,sediment ridges,sediment drifts (sediment ridges),http://aims.fao.org/aos/agrovoc/c_0a02e602,N/A
+pH,hydrogen ion concentration,pH (hydrogen ion concentration),http://aims.fao.org/aos/agrovoc/c_5753,N/A
+physics,,physics,http://aims.fao.org/aos/agrovoc/c_5833,N/A
+properties,,properties,http://aims.fao.org/aos/agrovoc/c_49874,N/A
+soil security,,soil security,http://aims.fao.org/aos/agrovoc/c_f42c0d0e,N/A
+osmotic stress,salt stress; sodium chloride stress; osmotic shock,"osmotic stress (salt stress, sodium chloride stress, osmotic shock)",http://aims.fao.org/aos/agrovoc/c_35750,N/A
+soil survey guidelines,soil mapping guidelines,soil survey guidelines (soil mapping guidelines),http://aims.fao.org/aos/agrovoc/c_7cedf142,N/A
+surveys,inventories,surveys (inventories),http://aims.fao.org/aos/agrovoc/c_7537,N/A
+ions,,ions,http://aims.fao.org/aos/agrovoc/c_16162,N/A
+water circulation,,water circulation,http://aims.fao.org/aos/agrovoc/c_8314,N/A
+groundwater,subsurface water; phreatic water; ground water,"groundwater (subsurface water, phreatic water, ground water)",http://aims.fao.org/aos/agrovoc/c_3391,N/A
+groundwater depletion,,groundwater depletion,http://aims.fao.org/aos/agrovoc/c_26ace76d,N/A
+groundwater extraction,,groundwater extraction,http://aims.fao.org/aos/agrovoc/c_bbcf1e2e,N/A
+groundwater recharge,groundwater replenishment,groundwater recharge (groundwater replenishment),http://aims.fao.org/aos/agrovoc/c_24035,N/A
+water depletion,drying off (water),water depletion (drying off (water)),http://aims.fao.org/aos/agrovoc/c_25334,N/A
+irrigation rates,,irrigation rates,http://aims.fao.org/aos/agrovoc/c_25319,N/A
+water requirements,,water requirements,http://aims.fao.org/aos/agrovoc/c_8323,N/A
+wilting,,wilting,http://aims.fao.org/aos/agrovoc/c_8390,N/A
+agricultural drought,,agricultural drought,http://aims.fao.org/aos/agrovoc/c_0802adfe,N/A
+precipitation,,precipitation,http://aims.fao.org/aos/agrovoc/c_6161,N/A
+water balance,water budget; evaporative demand; water saturation,"water balance (water budget, evaporative demand, water saturation)",http://aims.fao.org/aos/agrovoc/c_8311,N/A
+strength,,strength,http://aims.fao.org/aos/agrovoc/c_7445,N/A
+temperature,,temperature,http://aims.fao.org/aos/agrovoc/c_7657,N/A
+sediment texture,,sediment texture,http://aims.fao.org/aos/agrovoc/c_409a6013,N/A
+texture,,texture,http://aims.fao.org/aos/agrovoc/c_15578,N/A
+thermal properties,,thermal properties,http://aims.fao.org/aos/agrovoc/c_7718,N/A
+measure,,measure,http://aims.fao.org/aos/agrovoc/c_330493,N/A
+humidity,,humidity,http://aims.fao.org/aos/agrovoc/c_3689,N/A
+groundwater flow,,groundwater flow,http://aims.fao.org/aos/agrovoc/c_32472,N/A
+seepages,seeps,seepages (seeps),http://aims.fao.org/aos/agrovoc/c_d8879371,N/A
+charcoal,,charcoal,http://aims.fao.org/aos/agrovoc/c_1503,N/A
+pyrolysis,,pyrolysis,http://aims.fao.org/aos/agrovoc/c_26874,N/A
+pollution control,remedial action (pollution); reduction of pollution,"pollution control (remedial action (pollution), reduction of pollution)",http://aims.fao.org/aos/agrovoc/c_6078,N/A
+by-products,,by-products,http://aims.fao.org/aos/agrovoc/c_1172,N/A
+molasses,,molasses,http://aims.fao.org/aos/agrovoc/c_4889,N/A
+arid zones,dry zones,arid zones (dry zones),http://aims.fao.org/aos/agrovoc/c_613,N/A
+cultural methods,cultural practices,cultural methods (cultural practices),http://aims.fao.org/aos/agrovoc/c_29762,N/A
+breakwaters,,breakwaters,http://aims.fao.org/aos/agrovoc/c_1074,N/A
+flood control,,flood control,http://aims.fao.org/aos/agrovoc/c_2976,N/A
+habitat improvement,habitat enhancement,habitat improvement (habitat enhancement),http://aims.fao.org/aos/agrovoc/c_3455,N/A
+construction materials,building materials,construction materials (building materials),http://aims.fao.org/aos/agrovoc/c_1141,N/A
+drainage equipment,,drainage equipment,http://aims.fao.org/aos/agrovoc/c_2373,N/A
+textiles,,textiles,http://aims.fao.org/aos/agrovoc/c_7697,N/A
+deficiencies,,deficiencies,http://aims.fao.org/aos/agrovoc/c_330738,N/A
+starter dressings,starter applications,starter dressings (starter applications),http://aims.fao.org/aos/agrovoc/c_7374,N/A
+top-dressing,,top-dressing,http://aims.fao.org/aos/agrovoc/c_7813,N/A
+compound fertilizers,mixed fertilizers; blended fertilizers; binary fertilizers,"compound fertilizers (mixed fertilizers, blended fertilizers, binary fertilizers)",http://aims.fao.org/aos/agrovoc/c_1797,N/A
+farm inputs,agricultural inputs,farm inputs (agricultural inputs),http://aims.fao.org/aos/agrovoc/c_2798,N/A
+fertilizer combinations,,fertilizer combinations,http://aims.fao.org/aos/agrovoc/c_2864,N/A
+fertilizer industry,,fertilizer industry,http://aims.fao.org/aos/agrovoc/c_2866,N/A
+fertilizer injury,,fertilizer injury,http://aims.fao.org/aos/agrovoc/c_10797,N/A
+fertilizer technology,,fertilizer technology,http://aims.fao.org/aos/agrovoc/c_27895,N/A
+foliar application,,foliar application,http://aims.fao.org/aos/agrovoc/c_3008,N/A
+inorganic fertilizers,mineral fertilizers,inorganic fertilizers (mineral fertilizers),http://aims.fao.org/aos/agrovoc/c_27870,N/A
+liquid fertilizers,fertilizer solutions; suspension fertilizers,"liquid fertilizers (fertilizer solutions, suspension fertilizers)",http://aims.fao.org/aos/agrovoc/c_4372,N/A
+liquid gas fertilizers,,liquid gas fertilizers,http://aims.fao.org/aos/agrovoc/c_25712,N/A
+magnesium fertilizers,,magnesium fertilizers,http://aims.fao.org/aos/agrovoc/c_27904,N/A
+micronutrient fertilizers,secondary fertilizers; trace element fertilizers,"micronutrient fertilizers (secondary fertilizers, trace element fertilizers)",http://aims.fao.org/aos/agrovoc/c_4806,N/A
+nitrogen fertilizers,,nitrogen fertilizers,http://aims.fao.org/aos/agrovoc/c_5195,N/A
+organomineral fertilizers,,organomineral fertilizers,http://aims.fao.org/aos/agrovoc/c_5392,N/A
+phosphate fertilizers,phosphorus fertilizers,phosphate fertilizers (phosphorus fertilizers),http://aims.fao.org/aos/agrovoc/c_5800,N/A
+pollutants,,pollutants,http://aims.fao.org/aos/agrovoc/c_6076,N/A
+potash fertilizers,potassium fertilizers,potash fertilizers (potassium fertilizers),http://aims.fao.org/aos/agrovoc/c_6138,N/A
+seed pelleting,seed coating,seed pelleting (seed coating),http://aims.fao.org/aos/agrovoc/c_6936,N/A
+slags,,slags,http://aims.fao.org/aos/agrovoc/c_32546,N/A
+slow release fertilizers,delayed action fertilizers; prolonged action fertilizers; controlled release fertilizers,"slow release fertilizers (delayed action fertilizers, prolonged action fertilizers, controlled release fertilizers)",http://aims.fao.org/aos/agrovoc/c_7110,N/A
+sulfur fertilizers,sulphur fertilizers,sulfur fertilizers (sulphur fertilizers),http://aims.fao.org/aos/agrovoc/c_27917,N/A
+lignite,,lignite,http://aims.fao.org/aos/agrovoc/c_32489,N/A
+alkali treatment,,alkali treatment,http://aims.fao.org/aos/agrovoc/c_15935,N/A
+Oligochaeta,,Oligochaeta,http://aims.fao.org/aos/agrovoc/c_29111,N/A
+biology,,biology,http://aims.fao.org/aos/agrovoc/c_925,N/A
+ethylene production,,ethylene production,http://aims.fao.org/aos/agrovoc/c_33984,N/A
+microbial flora,microflora; Microbiota,"microbial flora (microflora, Microbiota)",http://aims.fao.org/aos/agrovoc/c_16367,N/A
+fauna,,fauna,http://aims.fao.org/aos/agrovoc/c_2821,N/A
+flora,,flora,http://aims.fao.org/aos/agrovoc/c_2983,N/A
+saturation,saturation index,saturation (saturation index),http://aims.fao.org/aos/agrovoc/c_29dfb0fb,N/A
+annual dressings,annual application,annual dressings (annual application),http://aims.fao.org/aos/agrovoc/c_458,N/A
+application,,application,http://aims.fao.org/aos/agrovoc/c_331436,N/A
+application rates,,application rates,http://aims.fao.org/aos/agrovoc/c_16113,N/A
+balanced fertilization,,balanced fertilization,http://aims.fao.org/aos/agrovoc/c_330604,N/A
+basal dressings,,basal dressings,http://aims.fao.org/aos/agrovoc/c_831,N/A
+broadcast fertilization,,broadcast fertilization,http://aims.fao.org/aos/agrovoc/c_27889,N/A
+broadcasting,scattering,broadcasting (scattering),http://aims.fao.org/aos/agrovoc/c_1101,N/A
+corrective dressings,,corrective dressings,http://aims.fao.org/aos/agrovoc/c_27886,N/A
+fertigation,fertirrigation,fertigation (fertirrigation),http://aims.fao.org/aos/agrovoc/c_15970,N/A
+fertilizer drilling,,fertilizer drilling,http://aims.fao.org/aos/agrovoc/c_2385,N/A
+fertilizer legislation,,fertilizer legislation,http://aims.fao.org/aos/agrovoc/c_229de4d7,N/A
+foliar fertilization,,foliar fertilization,http://aims.fao.org/aos/agrovoc/c_27438,N/A
+maintenance dressings,,maintenance dressings,http://aims.fao.org/aos/agrovoc/c_4525,N/A
+nutritional requirements,nutrient requirements,nutritional requirements (nutrient requirements),http://aims.fao.org/aos/agrovoc/c_5277,N/A
+periodic dressings,storage dressings,periodic dressings (storage dressings),http://aims.fao.org/aos/agrovoc/c_5707,N/A
+placement,,placement,http://aims.fao.org/aos/agrovoc/c_5943,N/A
+split dressings,split applications,split dressings (split applications),http://aims.fao.org/aos/agrovoc/c_7316,N/A
+desiccants,drying agents,desiccants (drying agents),http://aims.fao.org/aos/agrovoc/c_26769,N/A
+chemical sediments,chemically precipitated sediments; hydrogenous sediments,"chemical sediments (chemically precipitated sediments, hydrogenous sediments)",http://aims.fao.org/aos/agrovoc/c_3a564e84,N/A
+sodium chloride,,sodium chloride,http://aims.fao.org/aos/agrovoc/c_7146,N/A
+bioherms,,bioherms,http://aims.fao.org/aos/agrovoc/c_085bb3b7,N/A
+dolomitization,,dolomitization,http://aims.fao.org/aos/agrovoc/c_881a9371,N/A
+karst,,karst,http://aims.fao.org/aos/agrovoc/c_33509,N/A
+ascorbyl phosphate,,ascorbyl phosphate,http://aims.fao.org/aos/agrovoc/c_36295,N/A
+inorganic compounds,,inorganic compounds,http://aims.fao.org/aos/agrovoc/c_3881,N/A
+phosphate deposits,,phosphate deposits,http://aims.fao.org/aos/agrovoc/c_4d088274,N/A
+sulphide deposits,polymetallic sulphide deposits; sulfide deposits,"sulphide deposits (polymetallic sulphide deposits, sulfide deposits)",http://aims.fao.org/aos/agrovoc/c_ea7e181e,N/A
+carbon monoxide,,carbon monoxide,http://aims.fao.org/aos/agrovoc/c_1303,N/A
+cuprous oxide,,cuprous oxide,http://aims.fao.org/aos/agrovoc/c_6263a03f,N/A
+dioxides,,dioxides,http://aims.fao.org/aos/agrovoc/c_10386,N/A
+mineral deficiencies,,mineral deficiencies,http://aims.fao.org/aos/agrovoc/c_4849,N/A
+nutrient depletion,,nutrient depletion,http://aims.fao.org/aos/agrovoc/c_3a9953a5,N/A
+deterioration,spoilage,deterioration (spoilage),http://aims.fao.org/aos/agrovoc/c_10350,N/A
+resource depletion,,resource depletion,http://aims.fao.org/aos/agrovoc/c_28017,N/A
+agricultural production,,agricultural production,http://aims.fao.org/aos/agrovoc/c_2ac7c9e1,N/A
+biodiversity,biological diversity; ecosystem diversity,"biodiversity (biological diversity, ecosystem diversity)",http://aims.fao.org/aos/agrovoc/c_33949,N/A
+biomass production,,biomass production,http://aims.fao.org/aos/agrovoc/c_adfffd29,N/A
+habitats,,habitats,http://aims.fao.org/aos/agrovoc/c_3456,N/A
+nutrient cycles,nutrient cycling in ecosystems; nutrient cycling,"nutrient cycles (nutrient cycling in ecosystems, nutrient cycling)",http://aims.fao.org/aos/agrovoc/c_12869,N/A
+water storage,,water storage,http://aims.fao.org/aos/agrovoc/c_8327,N/A
+quality,,quality,http://aims.fao.org/aos/agrovoc/c_6400,N/A
+pests,,pests,http://aims.fao.org/aos/agrovoc/c_5741,N/A
+replanting,plant replacement,replanting (plant replacement),http://aims.fao.org/aos/agrovoc/c_13811,N/A
+phytotoxicity,toxicity to plants,phytotoxicity (toxicity to plants),http://aims.fao.org/aos/agrovoc/c_5848,N/A
+toxicity,,toxicity,http://aims.fao.org/aos/agrovoc/c_7826,N/A
+acid mine drainage,,acid mine drainage,http://aims.fao.org/aos/agrovoc/c_9e93b761,N/A
+drainage water recycling,recycling of drainage water,drainage water recycling (recycling of drainage water),http://aims.fao.org/aos/agrovoc/c_330871,N/A
+urban watersheds,sewersheds,urban watersheds (sewersheds),http://aims.fao.org/aos/agrovoc/c_30ffa695,N/A
+flooding,inundation; floods (inundations),"flooding (inundation, floods (inundations))",http://aims.fao.org/aos/agrovoc/c_2980,N/A
+runoff irrigation,,runoff irrigation,http://aims.fao.org/aos/agrovoc/c_6698,N/A
+pollution prevention,,pollution prevention,http://aims.fao.org/aos/agrovoc/c_35715,N/A
+calcitization,,calcitization,http://aims.fao.org/aos/agrovoc/c_712a2c07,N/A
+calcium chloride,,calcium chloride,http://aims.fao.org/aos/agrovoc/c_15892,N/A
+epoxy compounds,epoxy polymers; epoxides; epoxy resins,"epoxy compounds (epoxy polymers, epoxides, epoxy resins)",http://aims.fao.org/aos/agrovoc/c_36773,N/A
+monoxides,,monoxides,http://aims.fao.org/aos/agrovoc/c_12646,N/A
+nitrogen oxides,NOx (nitrogen oxides),nitrogen oxides (NOx (nitrogen oxides)),http://aims.fao.org/aos/agrovoc/c_16002,N/A
+peroxides,,peroxides,http://aims.fao.org/aos/agrovoc/c_5721,N/A
+sulfur oxides,sulphur oxides,sulfur oxides (sulphur oxides),http://aims.fao.org/aos/agrovoc/c_c6d0a943,N/A
+semimetals,metalloids,semimetals (metalloids),http://aims.fao.org/aos/agrovoc/c_6969,N/A
+silicon isotopes,,silicon isotopes,http://aims.fao.org/aos/agrovoc/c_ce1ba42b,N/A
+adsorbents,,adsorbents,http://aims.fao.org/aos/agrovoc/c_25300,N/A
+plant physiology,,plant physiology,http://aims.fao.org/aos/agrovoc/c_25189,N/A
+plant water relations,plant water metabolism,plant water relations (plant water metabolism),http://aims.fao.org/aos/agrovoc/c_16147,N/A
+requirements,,requirements,http://aims.fao.org/aos/agrovoc/c_331040,N/A
+UNCCD,United Nations Convention to Combat Desertification,UNCCD (United Nations Convention to Combat Desertification),http://aims.fao.org/aos/agrovoc/c_1371200255610,N/A
+drought,drouth,drought (drouth),http://aims.fao.org/aos/agrovoc/c_2391,N/A
+sediment,sedimentary deposits,sediment (sedimentary deposits),http://aims.fao.org/aos/agrovoc/c_25341,N/A
+yields,,yields,http://aims.fao.org/aos/agrovoc/c_8488,N/A
+earthquakes,earth tremors,earthquakes (earth tremors),http://aims.fao.org/aos/agrovoc/c_2440,N/A
+climatic factors,continentality,climatic factors (continentality),http://aims.fao.org/aos/agrovoc/c_29554,N/A
+spalling,,spalling,http://aims.fao.org/aos/agrovoc/c_301cafe1,N/A
+wind abrasion,corrasion,wind abrasion (corrasion),http://aims.fao.org/aos/agrovoc/c_00f11054,N/A
+dunes,,dunes,http://aims.fao.org/aos/agrovoc/c_2410,N/A
+wind damage,,wind damage,http://aims.fao.org/aos/agrovoc/c_8392,N/A
+analcime,analcite,analcime (analcite),http://aims.fao.org/aos/agrovoc/c_cef4ef00,N/A
+resource management,resource exploitation; resource development; resource utilization; rehabilitation of natural resources,"resource management (resource exploitation, resource development, resource utilization, rehabilitation of natural resources)",http://aims.fao.org/aos/agrovoc/c_6524,N/A
+brackish water,,brackish water,http://aims.fao.org/aos/agrovoc/c_1049,N/A
+desalting,,desalting,http://aims.fao.org/aos/agrovoc/c_2201,N/A
+heating,,heating,http://aims.fao.org/aos/agrovoc/c_3524,N/A
+weather control,,weather control,http://aims.fao.org/aos/agrovoc/c_8339,N/A
+earthmoving equipment,,earthmoving equipment,http://aims.fao.org/aos/agrovoc/c_2439,N/A
+equipment,instruments; tools; installations; appliances; implements; machinery,"equipment (instruments, tools, installations, appliances, implements, machinery)",http://aims.fao.org/aos/agrovoc/c_2631,N/A
+farm equipment,agricultural machinery; farm machinery; agricultural equipment,"farm equipment (agricultural machinery, farm machinery, agricultural equipment)",http://aims.fao.org/aos/agrovoc/c_25753,N/A
+land clearing equipment,,land clearing equipment,http://aims.fao.org/aos/agrovoc/c_25752,N/A
+preplanting treatment,,preplanting treatment,http://aims.fao.org/aos/agrovoc/c_6159,N/A
+disinfection,bacteria control (disinfection); fungus control (disinfection),"disinfection (bacteria control (disinfection), fungus control (disinfection))",http://aims.fao.org/aos/agrovoc/c_10397,N/A
+injection,,injection,http://aims.fao.org/aos/agrovoc/c_3871,N/A
+injectors,,injectors,http://aims.fao.org/aos/agrovoc/c_37686,N/A
+insolation,sunlight exposure,insolation (sunlight exposure),http://aims.fao.org/aos/agrovoc/c_3892,N/A
+organic acids,,organic acids,http://aims.fao.org/aos/agrovoc/c_5383,N/A
+dystrophic lakes,dystrophic waters; humic lakes,"dystrophic lakes (dystrophic waters, humic lakes)",http://aims.fao.org/aos/agrovoc/c_38c8f242,N/A
+phenolic acids,,phenolic acids,http://aims.fao.org/aos/agrovoc/c_16197,N/A
+climatic requirements,,climatic requirements,http://aims.fao.org/aos/agrovoc/c_1667,N/A
+light requirements,,light requirements,http://aims.fao.org/aos/agrovoc/c_25196,N/A
+physiological requirements,,physiological requirements,http://aims.fao.org/aos/agrovoc/c_32757,N/A
+rollers,,rollers,http://aims.fao.org/aos/agrovoc/c_6636,N/A
+rotary cultivators,,rotary cultivators,http://aims.fao.org/aos/agrovoc/c_24077,N/A
+dibber,dibbler,dibber (dibbler),http://aims.fao.org/aos/agrovoc/c_2317eede,N/A
+sowing,seed planting; seeding (seed); seed placement,"sowing (seed planting, seeding (seed), seed placement)",http://aims.fao.org/aos/agrovoc/c_7268,N/A
+stone pickers,,stone pickers,http://aims.fao.org/aos/agrovoc/c_25992,N/A
+stones,,stones,http://aims.fao.org/aos/agrovoc/c_7424,N/A
+hydrology,,hydrology,http://aims.fao.org/aos/agrovoc/c_3731,N/A
+environmental impact,environmental effects,environmental impact (environmental effects),http://aims.fao.org/aos/agrovoc/c_24420,N/A
+mine spoil,,mine spoil,http://aims.fao.org/aos/agrovoc/c_34313,N/A
+animal meals,carcass meal,animal meals (carcass meal),http://aims.fao.org/aos/agrovoc/c_35866,N/A
+bones,skeleton,bones (skeleton),http://aims.fao.org/aos/agrovoc/c_1001,N/A
+feed meals,,feed meals,http://aims.fao.org/aos/agrovoc/c_2835,N/A
+guano birds,,guano birds,http://aims.fao.org/aos/agrovoc/c_d06414e9,N/A
+activated sludge,,activated sludge,http://aims.fao.org/aos/agrovoc/c_8611,N/A
+sewage,,sewage,http://aims.fao.org/aos/agrovoc/c_7007,N/A
+sewerage,sewage systems,sewerage (sewage systems),http://aims.fao.org/aos/agrovoc/c_7009,N/A
+sludge,,sludge,http://aims.fao.org/aos/agrovoc/c_a9af72b0,N/A
+Aureobasidium,,Aureobasidium,http://aims.fao.org/aos/agrovoc/c_31545,N/A
+fungal morphology,morphology of fungi,fungal morphology (morphology of fungi),http://aims.fao.org/aos/agrovoc/c_35117,N/A
+symbionts,,symbionts,http://aims.fao.org/aos/agrovoc/c_7562,N/A
+chemical reactions,,chemical reactions,http://aims.fao.org/aos/agrovoc/c_25191,N/A
+hoes,,hoes,http://aims.fao.org/aos/agrovoc/c_25733,N/A
+planker,,planker,http://aims.fao.org/aos/agrovoc/c_330850,N/A
+ploughs,plows,ploughs (plows),http://aims.fao.org/aos/agrovoc/c_6022,N/A
+rakes,,rakes,http://aims.fao.org/aos/agrovoc/c_6441,N/A
+rotary hoes,,rotary hoes,http://aims.fao.org/aos/agrovoc/c_8f953631,N/A
+rotary tillers,rotavator,rotary tillers (rotavator),http://aims.fao.org/aos/agrovoc/c_330875,N/A
+scarifiers,,scarifiers,http://aims.fao.org/aos/agrovoc/c_26150,N/A
+weed control equipment,weeders; weeding hoes,"weed control equipment (weeders, weeding hoes)",http://aims.fao.org/aos/agrovoc/c_15296,N/A
+stubble cleaning,,stubble cleaning,http://aims.fao.org/aos/agrovoc/c_7472,N/A
+abiotic factors,density-independent factors,abiotic factors (density-independent factors),http://aims.fao.org/aos/agrovoc/c_5b384c25,N/A
+halocline,,halocline,http://aims.fao.org/aos/agrovoc/c_a62d336e,N/A
+hydroclimate,,hydroclimate,http://aims.fao.org/aos/agrovoc/c_c5e6c7b0,N/A
+palaeosalinity,,palaeosalinity,http://aims.fao.org/aos/agrovoc/c_2490e44d,N/A
+potential density,,potential density,http://aims.fao.org/aos/agrovoc/c_d405d820,N/A
+saline water,saltwater; salt water,"saline water (saltwater, salt water)",http://aims.fao.org/aos/agrovoc/c_16376,N/A
+salinity charts,,salinity charts,http://aims.fao.org/aos/agrovoc/c_f7049911,N/A
+salinity data,,salinity data,http://aims.fao.org/aos/agrovoc/c_c6469776,N/A
+salinity maximum layer,,salinity maximum layer,http://aims.fao.org/aos/agrovoc/c_44eab4c7,N/A
+salinity measurement,,salinity measurement,http://aims.fao.org/aos/agrovoc/c_c2f52e89,N/A
+salinity measuring equipment,,salinity measuring equipment,http://aims.fao.org/aos/agrovoc/c_a2e4090f,N/A
+salinity microstructure,,salinity microstructure,http://aims.fao.org/aos/agrovoc/c_2e7b41f5,N/A
+salinity minimum layer,,salinity minimum layer,http://aims.fao.org/aos/agrovoc/c_697e4400,N/A
+salt flux,,salt flux,http://aims.fao.org/aos/agrovoc/c_c7eb3d5a,N/A
+salt tolerance,resistance to salinity; salt resistance; salinity tolerance,"salt tolerance (resistance to salinity, salt resistance, salinity tolerance)",http://aims.fao.org/aos/agrovoc/c_24078,N/A
+seawater,sea water,seawater (sea water),http://aims.fao.org/aos/agrovoc/c_6903,N/A
+surface salinity,sea surface salinity; water surface salinity,"surface salinity (sea surface salinity, water surface salinity)",http://aims.fao.org/aos/agrovoc/c_0738cb4f,N/A
+water density,density (water),water density (density (water)),http://aims.fao.org/aos/agrovoc/c_5bab82a8,N/A
+management,,management,http://aims.fao.org/aos/agrovoc/c_16086,N/A
+absorption,,absorption,http://aims.fao.org/aos/agrovoc/c_27,N/A
+leaf water potential,,leaf water potential,http://aims.fao.org/aos/agrovoc/c_37242,N/A
+xylem water potential,,xylem water potential,http://aims.fao.org/aos/agrovoc/c_37235,N/A
+excreta,,excreta,http://aims.fao.org/aos/agrovoc/c_2749,N/A
+faeces,feces; excrements,"faeces (feces, excrements)",http://aims.fao.org/aos/agrovoc/c_2772,N/A
+biogeochemical cycle,,biogeochemical cycle,http://aims.fao.org/aos/agrovoc/c_32983,N/A
+nitrogen metabolism,,nitrogen metabolism,http://aims.fao.org/aos/agrovoc/c_5197,N/A
+trees,,trees,http://aims.fao.org/aos/agrovoc/c_7887,N/A
+maps,,maps,http://aims.fao.org/aos/agrovoc/c_b43d8acf,N/A
+technical properties,engineering properties; working properties,"technical properties (engineering properties, working properties)",http://aims.fao.org/aos/agrovoc/c_2572,N/A
+hydrological cycle,water cycle (global),hydrological cycle (water cycle (global)),http://aims.fao.org/aos/agrovoc/c_11670,N/A
+leaf area index,LAI,leaf area index (LAI),http://aims.fao.org/aos/agrovoc/c_35196,N/A
+physical phenomena,,physical phenomena,http://aims.fao.org/aos/agrovoc/c_27944,N/A
+transpiration,normal water loss (of plants); plant transpiration,"transpiration (normal water loss (of plants), plant transpiration)",http://aims.fao.org/aos/agrovoc/c_7871,N/A
+transpiration ratio,transpiration rate; transpiration efficiency,"transpiration ratio (transpiration rate, transpiration efficiency)",http://aims.fao.org/aos/agrovoc/c_ea7b5b7a,N/A
+yield response factor,,yield response factor,http://aims.fao.org/aos/agrovoc/c_feaa7d27,N/A
+wetlands,,wetlands,http://aims.fao.org/aos/agrovoc/c_8371,N/A
+bund former,,bund former,http://aims.fao.org/aos/agrovoc/c_330674,N/A
+chisel ploughs,,chisel ploughs,http://aims.fao.org/aos/agrovoc/c_99dd11f2,N/A
+cultivators,discs; disks,"cultivators (discs, disks)",http://aims.fao.org/aos/agrovoc/c_2019,N/A
+harrows,,harrows,http://aims.fao.org/aos/agrovoc/c_3498,N/A
+Vigna radiata radiata,,Vigna radiata radiata,http://aims.fao.org/aos/agrovoc/c_8243,N/A
+Vigna unguiculata,,Vigna unguiculata,http://aims.fao.org/aos/agrovoc/c_8247,N/A
+Vigna unguiculata subsp. unguiculata,Vigna unguiculata unguiculata; Vigna sinensis,"Vigna unguiculata subsp. unguiculata (Vigna unguiculata unguiculata, Vigna sinensis)",http://aims.fao.org/aos/agrovoc/c_8250,N/A
+Vigna vexillata,Vigna senegalensis,Vigna vexillata (Vigna senegalensis),http://aims.fao.org/aos/agrovoc/c_8251,N/A
+liquid wastes,,liquid wastes,http://aims.fao.org/aos/agrovoc/c_4375,N/A
+fuels,,fuels,http://aims.fao.org/aos/agrovoc/c_3136,N/A
+organic sediments,carbonaceous deposits,organic sediments (carbonaceous deposits),http://aims.fao.org/aos/agrovoc/c_301a69db,N/A
+sapropels,sapropelite,sapropels (sapropelite),http://aims.fao.org/aos/agrovoc/c_7df506bb,N/A
+hydroxides,,hydroxides,http://aims.fao.org/aos/agrovoc/c_3736,N/A
+acrylamide,,acrylamide,http://aims.fao.org/aos/agrovoc/c_28214,N/A
+packaging materials,,packaging materials,http://aims.fao.org/aos/agrovoc/c_16008,N/A
+polymers,synthetic rubber,polymers (synthetic rubber),http://aims.fao.org/aos/agrovoc/c_32041,N/A
+Andropogon,,Andropogon,http://aims.fao.org/aos/agrovoc/c_408,N/A
+Buchloe,,Buchloe,http://aims.fao.org/aos/agrovoc/c_24608,N/A
+Elymus,Aneurolepidium; Elytrigia; Wild rye,"Elymus (Aneurolepidium, Elytrigia, Wild rye)",http://aims.fao.org/aos/agrovoc/c_2539,N/A
+Eragrostis curvula,,Eragrostis curvula,http://aims.fao.org/aos/agrovoc/c_2633,N/A
+Lespedeza,Kummerowia,Lespedeza (Kummerowia),http://aims.fao.org/aos/agrovoc/c_4285,N/A
+crops,economic plants; cultivated plants,"crops (economic plants, cultivated plants)",http://aims.fao.org/aos/agrovoc/c_1972,N/A
+environmental protection,,environmental protection,http://aims.fao.org/aos/agrovoc/c_15898,N/A
+forest resources,,forest resources,http://aims.fao.org/aos/agrovoc/c_3050,N/A
+farming systems,agricultural systems; types of farming; farming,"farming systems (agricultural systems, types of farming, farming)",http://aims.fao.org/aos/agrovoc/c_2807,N/A
+afforestation,,afforestation,http://aims.fao.org/aos/agrovoc/c_162,N/A
+colonizing ability,,colonizing ability,http://aims.fao.org/aos/agrovoc/c_36703,N/A
+plant establishment,stand development; crop establishment; stand establishment,"plant establishment (stand development, crop establishment, stand establishment)",http://aims.fao.org/aos/agrovoc/c_5965,N/A
+revegetation plants,,revegetation plants,http://aims.fao.org/aos/agrovoc/c_6545,N/A
+riverbanks,,riverbanks,http://aims.fao.org/aos/agrovoc/c_25303,N/A
+pollution,immission; environmental pollution; environmental contamination,"pollution (immission, environmental pollution, environmental contamination)",http://aims.fao.org/aos/agrovoc/c_6077,N/A
+exoskeleton,,exoskeleton,http://aims.fao.org/aos/agrovoc/c_2754,N/A
+water binding capacity,,water binding capacity,http://aims.fao.org/aos/agrovoc/c_8312,N/A
+exudates,,exudates,http://aims.fao.org/aos/agrovoc/c_26779,N/A
+gum resins,,gum resins,http://aims.fao.org/aos/agrovoc/c_3440,N/A
+gums,,gums,http://aims.fao.org/aos/agrovoc/c_3441,N/A
+kino gum,,kino gum,http://aims.fao.org/aos/agrovoc/c_330821,N/A
+natural resins,,natural resins,http://aims.fao.org/aos/agrovoc/c_330820,N/A
+biological phenomena,,biological phenomena,http://aims.fao.org/aos/agrovoc/c_49871,N/A
+Azolla,,Azolla,http://aims.fao.org/aos/agrovoc/c_15757,N/A
+Calliandra,,Calliandra,http://aims.fao.org/aos/agrovoc/c_1207,N/A
+Calopogonium mucunoides,calopo,Calopogonium mucunoides (calopo),http://aims.fao.org/aos/agrovoc/c_1217,N/A
+Canavalia,,Canavalia,http://aims.fao.org/aos/agrovoc/c_1242,N/A
+Centrosema,,Centrosema,http://aims.fao.org/aos/agrovoc/c_1445,N/A
+Coronilla,,Coronilla,http://aims.fao.org/aos/agrovoc/c_1903,N/A
+Crotalaria juncea,,Crotalaria juncea,http://aims.fao.org/aos/agrovoc/c_1978,N/A
+Fagopyrum esculentum,Fagopyrum sagittatum,Fagopyrum esculentum (Fagopyrum sagittatum),http://aims.fao.org/aos/agrovoc/c_2777,N/A
+Glycine max,Dolichos soja; Glycine hispida; Soja hispida; Soja max; Phaseolus max,"Glycine max (Dolichos soja, Glycine hispida, Soja hispida, Soja max, Phaseolus max)",http://aims.fao.org/aos/agrovoc/c_3301,N/A
+Lablab purpureus,Bonavist beans; Dolichos beans; Dolichos lablab; Dolichos purpureus; Lablab niger; Lablab vulgaris; Indian butter beans; Lubia; Seim beans; Hyacinth beans,"Lablab purpureus (Bonavist beans, Dolichos beans, Dolichos lablab, Dolichos purpureus, Lablab niger, Lablab vulgaris, Indian butter beans, Lubia, Seim beans, Hyacinth beans)",http://aims.fao.org/aos/agrovoc/c_4125,N/A
+Leucaena,,Leucaena,http://aims.fao.org/aos/agrovoc/c_4290,N/A
+Lupinus,lupins,Lupinus (lupins),http://aims.fao.org/aos/agrovoc/c_4463,N/A
+Medicago lupulina,black medic; hop clover; nonsuch,"Medicago lupulina (black medic, hop clover, nonsuch)",http://aims.fao.org/aos/agrovoc/c_4691,N/A
+Medicago orbicularis,Button clover,Medicago orbicularis (Button clover),http://aims.fao.org/aos/agrovoc/c_4692,N/A
+Mucuna,Stizolobium,Mucuna (Stizolobium),http://aims.fao.org/aos/agrovoc/c_4968,N/A
+Ornithopus,,Ornithopus,http://aims.fao.org/aos/agrovoc/c_5423,N/A
+Pueraria phaseoloides,Pueraria javanica; puero; tropical kudzu,"Pueraria phaseoloides (Pueraria javanica, puero, tropical kudzu)",http://aims.fao.org/aos/agrovoc/c_6357,N/A
+Sesbania grandiflora,Sesbania formosa; agati; bacule; West Indian pea (tree); vegetable hummingbird,"Sesbania grandiflora (Sesbania formosa, agati, bacule, West Indian pea (tree), vegetable hummingbird)",http://aims.fao.org/aos/agrovoc/c_6995,N/A
+Trifolium alexandrinum,berseem; Egyptian clover,"Trifolium alexandrinum (berseem, Egyptian clover)",http://aims.fao.org/aos/agrovoc/c_7911,N/A
+Tripsacum laxum,Tripsacum fasciculatum; Guatemala grass,"Tripsacum laxum (Tripsacum fasciculatum, Guatemala grass)",http://aims.fao.org/aos/agrovoc/c_7942,N/A
+Vicia benghalensis,Vicia atropurpurea,Vicia benghalensis (Vicia atropurpurea),http://aims.fao.org/aos/agrovoc/c_8217,N/A
+Vicia narbonensis,,Vicia narbonensis,http://aims.fao.org/aos/agrovoc/c_32263,N/A
+Vicia sativa,spring vetch; common vetch,"Vicia sativa (spring vetch, common vetch)",http://aims.fao.org/aos/agrovoc/c_8222,N/A
+Vicia villosa,Vicia dasycarpa; hairy vetch; Russian vetch; Siberian vetch,"Vicia villosa (Vicia dasycarpa, hairy vetch, Russian vetch, Siberian vetch)",http://aims.fao.org/aos/agrovoc/c_8223,N/A
+Vigna hosei,Dolichos hosei; Sarawak beans,"Vigna hosei (Dolichos hosei, Sarawak beans)",http://aims.fao.org/aos/agrovoc/c_8234,N/A
+Vigna mungo,Azukia mungo; Phaseolus mungo linn,"Vigna mungo (Azukia mungo, Phaseolus mungo linn)",http://aims.fao.org/aos/agrovoc/c_8239,N/A
+petrology,lithology,petrology (lithology),http://aims.fao.org/aos/agrovoc/c_5748,N/A
+alkaline area variety,,alkaline area variety,http://aims.fao.org/aos/agrovoc/c_330594,N/A
+halophytes,,halophytes,http://aims.fao.org/aos/agrovoc/c_25112,N/A
+nonmetals,,nonmetals,http://aims.fao.org/aos/agrovoc/c_5210,N/A
+organophosphorus compounds,,organophosphorus compounds,http://aims.fao.org/aos/agrovoc/c_5401,N/A
+phosphates (ester),,phosphates (ester),http://aims.fao.org/aos/agrovoc/c_35987,N/A
+phosphorus isotopes,,phosphorus isotopes,http://aims.fao.org/aos/agrovoc/c_6014573f,N/A
+organosulfur compounds,organosulphur compounds; organic sulphur compounds; sulphydryl compounds; sulfhydryl compounds,"organosulfur compounds (organosulphur compounds, organic sulphur compounds, sulphydryl compounds, sulfhydryl compounds)",http://aims.fao.org/aos/agrovoc/c_5402,N/A
+sulfur isotopes,sulphur isotopes,sulfur isotopes (sulphur isotopes),http://aims.fao.org/aos/agrovoc/c_166fd670,N/A
+sulphites,sulfites,sulphites (sulfites),http://aims.fao.org/aos/agrovoc/c_16201,N/A
+land degradation neutrality,,land degradation neutrality,http://aims.fao.org/aos/agrovoc/c_d702ccb8,N/A
+rangeland degradation,,rangeland degradation,http://aims.fao.org/aos/agrovoc/c_838aed8c,N/A
+land take,,land take,http://aims.fao.org/aos/agrovoc/c_03e78242,N/A
+water filtration,water filtering,water filtration (water filtering),http://aims.fao.org/aos/agrovoc/c_8f797d8b,N/A
+agricultural wastes,farm wastes,agricultural wastes (farm wastes),http://aims.fao.org/aos/agrovoc/c_8683,N/A
+husks,hulls,husks (hulls),http://aims.fao.org/aos/agrovoc/c_37743,N/A
+maize cobs,corn cobs; corncobs,"maize cobs (corn cobs, corncobs)",http://aims.fao.org/aos/agrovoc/c_b5e92263,N/A
+pomace,,pomace,http://aims.fao.org/aos/agrovoc/c_a2d35f8b,N/A
+location,,location,http://aims.fao.org/aos/agrovoc/c_330988,N/A
+cyanamides,,cyanamides,http://aims.fao.org/aos/agrovoc/c_2052,N/A
+manganese deposits,,manganese deposits,http://aims.fao.org/aos/agrovoc/c_87089122,N/A
+bromine,Br (symbol),bromine (Br (symbol)),http://aims.fao.org/aos/agrovoc/c_1106,N/A
+cofactors,,cofactors,http://aims.fao.org/aos/agrovoc/c_27490,N/A
+elements,chemical elements,elements (chemical elements),http://aims.fao.org/aos/agrovoc/c_2526,N/A
+fluorine,F (symbol),fluorine (F (symbol)),http://aims.fao.org/aos/agrovoc/c_2996,N/A
+iodine,I (symbol),iodine (I (symbol)),http://aims.fao.org/aos/agrovoc/c_3932,N/A
+nutrients,dietary components,nutrients (dietary components),http://aims.fao.org/aos/agrovoc/c_5274,N/A
+rubidium,Rb (symbol),rubidium (Rb (symbol)),http://aims.fao.org/aos/agrovoc/c_24409,N/A
+strontium,Sr (symbol),strontium (Sr (symbol)),http://aims.fao.org/aos/agrovoc/c_7462,N/A
+tungsten,W (symbol),tungsten (W (symbol)),http://aims.fao.org/aos/agrovoc/c_8006,N/A
+ceramics,,ceramics,http://aims.fao.org/aos/agrovoc/c_26764,N/A
+models,,models,http://aims.fao.org/aos/agrovoc/c_4881,N/A
+browsing damage,,browsing damage,http://aims.fao.org/aos/agrovoc/c_1119,N/A
+bush encroachment,woody plant encroachment,bush encroachment (woody plant encroachment),http://aims.fao.org/aos/agrovoc/c_bfa0efbf,N/A
+grazing intensity,grazing capacity; grazing pressure,"grazing intensity (grazing capacity, grazing pressure)",http://aims.fao.org/aos/agrovoc/c_3368,N/A
+grazing systems,grazing management,grazing systems (grazing management),http://aims.fao.org/aos/agrovoc/c_3367,N/A
+avalanches,,avalanches,http://aims.fao.org/aos/agrovoc/c_727,N/A
+geological hazards,,geological hazards,http://aims.fao.org/aos/agrovoc/c_6e79aa60,N/A
+natural disasters,,natural disasters,http://aims.fao.org/aos/agrovoc/c_10391,N/A
+gas turbation,,gas turbation,http://aims.fao.org/aos/agrovoc/c_b09277cb,N/A
+streambed erosion,riverbed erosion,streambed erosion (riverbed erosion),http://aims.fao.org/aos/agrovoc/c_82852448,N/A
+metamorphism,,metamorphism,http://aims.fao.org/aos/agrovoc/c_f8a48ac3,N/A
+site rehabilitation,,site rehabilitation,http://aims.fao.org/aos/agrovoc/c_330973,N/A
+reclaimed land,polders; dyked land,"reclaimed land (polders, dyked land)",http://aims.fao.org/aos/agrovoc/c_6472,N/A
+Robinia,Locust (tree),Robinia (Locust (tree)),http://aims.fao.org/aos/agrovoc/c_6624,N/A
+agricultural resources,,agricultural resources,http://aims.fao.org/aos/agrovoc/c_28001,N/A
+land resources,,land resources,http://aims.fao.org/aos/agrovoc/c_4179,N/A
+natural resources,,natural resources,http://aims.fao.org/aos/agrovoc/c_5091,N/A
+fumigants,,fumigants,http://aims.fao.org/aos/agrovoc/c_3141,N/A
+fumigation,,fumigation,http://aims.fao.org/aos/agrovoc/c_3142,N/A
+biological contamination,,biological contamination,http://aims.fao.org/aos/agrovoc/c_28318,N/A
+disease transmission,,disease transmission,http://aims.fao.org/aos/agrovoc/c_2329,N/A
+noxious animals,harmful animals; injurious animals; animals as pests,"noxious animals (harmful animals, injurious animals, animals as pests)",http://aims.fao.org/aos/agrovoc/c_5242,N/A
+pathogens,pathogenic microorganisms,pathogens (pathogenic microorganisms),http://aims.fao.org/aos/agrovoc/c_5630,N/A
+edible fungi,mushrooms; mushroom logs,"edible fungi (mushrooms, mushroom logs)",http://aims.fao.org/aos/agrovoc/c_2487,N/A
+biological competition,,biological competition,http://aims.fao.org/aos/agrovoc/c_917,N/A
+biological interaction,,biological interaction,http://aims.fao.org/aos/agrovoc/c_49896,N/A
+epiphytes,,epiphytes,http://aims.fao.org/aos/agrovoc/c_2623,N/A
+feeding habits,feeding behaviour; food habits; dietary behaviour,"feeding habits (feeding behaviour, food habits, dietary behaviour)",http://aims.fao.org/aos/agrovoc/c_2840,N/A
+trophic levels,energy levels; trophic groups,"trophic levels (energy levels, trophic groups)",http://aims.fao.org/aos/agrovoc/c_7969,N/A
+ammoniation,,ammoniation,http://aims.fao.org/aos/agrovoc/c_25110,N/A
+gases,,gases,http://aims.fao.org/aos/agrovoc/c_3197,N/A
+enzyme inhibitors,,enzyme inhibitors,http://aims.fao.org/aos/agrovoc/c_2599,N/A
+thiourea,,thiourea,http://aims.fao.org/aos/agrovoc/c_7733,N/A
+preservatives,,preservatives,http://aims.fao.org/aos/agrovoc/c_6172,N/A
+oil water separation,water oil separation,oil water separation (water oil separation),http://aims.fao.org/aos/agrovoc/c_df7cd870,N/A
+mushroom bedlogs,,mushroom bedlogs,http://aims.fao.org/aos/agrovoc/c_25219,N/A
+plant nurseries,,plant nurseries,http://aims.fao.org/aos/agrovoc/c_5973,N/A
+raised beds,,raised beds,http://aims.fao.org/aos/agrovoc/c_eb7af602,N/A
+anthropogenic changes,,anthropogenic changes,http://aims.fao.org/aos/agrovoc/c_a8524c01,N/A
+land use,land development (agriculture); arable land development,"land use (land development (agriculture), arable land development)",http://aims.fao.org/aos/agrovoc/c_4182,N/A
+rice fields,paddy fields,rice fields (paddy fields),http://aims.fao.org/aos/agrovoc/c_34891,N/A
+arid climate,desert climate; dry climate,"arid climate (desert climate, dry climate)",http://aims.fao.org/aos/agrovoc/c_611,N/A
+dryland management,,dryland management,http://aims.fao.org/aos/agrovoc/c_9000036,N/A
+permafrost areas,,permafrost areas,http://aims.fao.org/aos/agrovoc/c_5715,N/A
+climatic zones,cllimate zones,climatic zones (cllimate zones),http://aims.fao.org/aos/agrovoc/c_1669,N/A
+mediterranean climate,,mediterranean climate,http://aims.fao.org/aos/agrovoc/c_4697,N/A
+arable land,,arable land,http://aims.fao.org/aos/agrovoc/c_18948,N/A
+cultivated land,,cultivated land,http://aims.fao.org/aos/agrovoc/c_16212,N/A
+farmland,agricultural land; cropland,"farmland (agricultural land, cropland)",http://aims.fao.org/aos/agrovoc/c_2808,N/A
+solid wastes,rubbish,solid wastes (rubbish),http://aims.fao.org/aos/agrovoc/c_7228,N/A
+gaseous nitrogen,,gaseous nitrogen,http://aims.fao.org/aos/agrovoc/c_c696e530,N/A
+nitrogen compounds,,nitrogen compounds,http://aims.fao.org/aos/agrovoc/c_49901,N/A
+Endogonales,,Endogonales,http://aims.fao.org/aos/agrovoc/c_31652,N/A
+Ascomycota,Ascomycotina; Ascomycetes,"Ascomycota (Ascomycotina, Ascomycetes)",http://aims.fao.org/aos/agrovoc/c_331215,N/A
+genus,,genus,http://aims.fao.org/aos/agrovoc/c_11125,N/A
+Tuber aestivum,summer truffle; Burgundy truffle; Tuber uncinatum,"Tuber aestivum (summer truffle, Burgundy truffle, Tuber uncinatum)",http://aims.fao.org/aos/agrovoc/c_5079f1ee,N/A
+Tuber borchii,,Tuber borchii,http://aims.fao.org/aos/agrovoc/c_fbf3a276,N/A
+Tuber brumale,winter truffle,Tuber brumale (winter truffle),http://aims.fao.org/aos/agrovoc/c_c8714d6b,N/A
+Tuber candidum,,Tuber candidum,http://aims.fao.org/aos/agrovoc/c_45127410,N/A
+cohesionless sediments,non-cohesive sediments,cohesionless sediments (non-cohesive sediments),http://aims.fao.org/aos/agrovoc/c_675d78e8,N/A
+siltation,silting,siltation (silting),http://aims.fao.org/aos/agrovoc/c_14291,N/A
+availability,,availability,http://aims.fao.org/aos/agrovoc/c_bc301662,N/A
+water resources,,water resources,http://aims.fao.org/aos/agrovoc/c_8325,N/A
+water scarcity,,water scarcity,http://aims.fao.org/aos/agrovoc/c_1a8094a9,N/A
+water supply,,water supply,http://aims.fao.org/aos/agrovoc/c_8328,N/A
+water yield,,water yield,http://aims.fao.org/aos/agrovoc/c_26835,N/A
+wood chips,wood particles,wood chips (wood particles),http://aims.fao.org/aos/agrovoc/c_8423,N/A
+Actinomyces,,Actinomyces,http://aims.fao.org/aos/agrovoc/c_111,N/A
+Bifidobacterium,,Bifidobacterium,http://aims.fao.org/aos/agrovoc/c_23898,N/A
+Dermatophilus,,Dermatophilus,http://aims.fao.org/aos/agrovoc/c_2196,N/A
+Renibacterium,,Renibacterium,http://aims.fao.org/aos/agrovoc/c_26658,N/A
+order (taxa),,order (taxa),http://aims.fao.org/aos/agrovoc/c_330936,N/A
+Clostridium difficile,,Clostridium difficile,http://aims.fao.org/aos/agrovoc/c_37056,N/A
+Clostridium perfringens,,Clostridium perfringens,http://aims.fao.org/aos/agrovoc/c_32272,N/A
+Clostridium tetani,,Clostridium tetani,http://aims.fao.org/aos/agrovoc/c_21494,N/A
+Clostridium tyrobutyricum,,Clostridium tyrobutyricum,http://aims.fao.org/aos/agrovoc/c_37068,N/A
+gas gangrene,,gas gangrene,http://aims.fao.org/aos/agrovoc/c_16737,N/A
+beachrock,,beachrock,http://aims.fao.org/aos/agrovoc/c_14161243,N/A
+size,,size,http://aims.fao.org/aos/agrovoc/c_7093,N/A
+water consumption (plant),,water consumption (plant),http://aims.fao.org/aos/agrovoc/c_ee8c8ad8,N/A
+measuring instruments,,measuring instruments,http://aims.fao.org/aos/agrovoc/c_12457,N/A
+meteorological instruments,,meteorological instruments,http://aims.fao.org/aos/agrovoc/c_4779,N/A
+hydration,,hydration,http://aims.fao.org/aos/agrovoc/c_3712,N/A
+shade plants,,shade plants,http://aims.fao.org/aos/agrovoc/c_7019,N/A
+weeding,,weeding,http://aims.fao.org/aos/agrovoc/c_8346,N/A
+companion crops,nurse crops,companion crops (nurse crops),http://aims.fao.org/aos/agrovoc/c_25549,N/A
+volcanic areas,,volcanic areas,http://aims.fao.org/aos/agrovoc/c_8286,N/A
+volcanoes,,volcanoes,http://aims.fao.org/aos/agrovoc/c_15240,N/A
+fens,,fens,http://aims.fao.org/aos/agrovoc/c_576fb763,N/A
+highlands,upland areas; mountain areas; mountainous areas; downs; foothills; hills,"highlands (upland areas, mountain areas, mountainous areas, downs, foothills, hills)",http://aims.fao.org/aos/agrovoc/c_3614,N/A
+irrigated land,,irrigated land,http://aims.fao.org/aos/agrovoc/c_25194,N/A
+bogs,clearmuskegs; clear muskegs,"bogs (clearmuskegs, clear muskegs)",http://aims.fao.org/aos/agrovoc/c_987,N/A
+marshes,,marshes,http://aims.fao.org/aos/agrovoc/c_4631,N/A
+rangelands,,rangelands,http://aims.fao.org/aos/agrovoc/c_6448,N/A
+Dioctophymatidae,,Dioctophymatidae,http://aims.fao.org/aos/agrovoc/c_31020,N/A
+Dracunculidae,,Dracunculidae,http://aims.fao.org/aos/agrovoc/c_31024,N/A
+Filariidae,,Filariidae,http://aims.fao.org/aos/agrovoc/c_31026,N/A
+Filaroididae,,Filaroididae,http://aims.fao.org/aos/agrovoc/c_31028,N/A
+Gnathostomatidae,,Gnathostomatidae,http://aims.fao.org/aos/agrovoc/c_31030,N/A
+Habronematidae,,Habronematidae,http://aims.fao.org/aos/agrovoc/c_31031,N/A
+Heligmonellidae,,Heligmonellidae,http://aims.fao.org/aos/agrovoc/c_31032,N/A
+Heligmosomidae,,Heligmosomidae,http://aims.fao.org/aos/agrovoc/c_31034,N/A
+Heterakidae,,Heterakidae,http://aims.fao.org/aos/agrovoc/c_31036,N/A
+Metastrongylidae,,Metastrongylidae,http://aims.fao.org/aos/agrovoc/c_31078,N/A
+Molineidae,,Molineidae,http://aims.fao.org/aos/agrovoc/c_31081,N/A
+Onchocercidae,,Onchocercidae,http://aims.fao.org/aos/agrovoc/c_31085,N/A
+Oxyuridae,,Oxyuridae,http://aims.fao.org/aos/agrovoc/c_31101,N/A
+Protostrongylidae,,Protostrongylidae,http://aims.fao.org/aos/agrovoc/c_31112,N/A
+Spirocercidae,,Spirocercidae,http://aims.fao.org/aos/agrovoc/c_31119,N/A
+Strongylidae,,Strongylidae,http://aims.fao.org/aos/agrovoc/c_31125,N/A
+Strongyloididae,,Strongyloididae,http://aims.fao.org/aos/agrovoc/c_31127,N/A
+hedging plants,hedgerow plants,hedging plants (hedgerow plants),http://aims.fao.org/aos/agrovoc/c_3530,N/A
+protected cultivation,protected agriculture,protected cultivation (protected agriculture),http://aims.fao.org/aos/agrovoc/c_6243,N/A
+broadcast sowing,,broadcast sowing,http://aims.fao.org/aos/agrovoc/c_14115,N/A
+biosorption,,biosorption,http://aims.fao.org/aos/agrovoc/c_35925,N/A
+water pollution treatment,,water pollution treatment,http://aims.fao.org/aos/agrovoc/c_905ff9b9,N/A
+water quality,,water quality,http://aims.fao.org/aos/agrovoc/c_16061,N/A
+bicarbonates,,bicarbonates,http://aims.fao.org/aos/agrovoc/c_898,N/A
+carbon compounds,,carbon compounds,http://aims.fao.org/aos/agrovoc/c_55c17dd6,N/A
+Acuariidae,,Acuariidae,http://aims.fao.org/aos/agrovoc/c_30969,N/A
+Allantonematidae,,Allantonematidae,http://aims.fao.org/aos/agrovoc/c_30970,N/A
+Amidostomatidae,,Amidostomatidae,http://aims.fao.org/aos/agrovoc/c_30972,N/A
+Ancylostomatidae,,Ancylostomatidae,http://aims.fao.org/aos/agrovoc/c_30973,N/A
+Angiostrongylidae,,Angiostrongylidae,http://aims.fao.org/aos/agrovoc/c_30975,N/A
+Anguillicolidae,,Anguillicolidae,http://aims.fao.org/aos/agrovoc/c_30981,N/A
+Anisakidae,,Anisakidae,http://aims.fao.org/aos/agrovoc/c_30987,N/A
+Ascarididae,,Ascarididae,http://aims.fao.org/aos/agrovoc/c_30999,N/A
+Ascaridiidae,,Ascaridiidae,http://aims.fao.org/aos/agrovoc/c_31005,N/A
+Aschelminthes,Nemathelminthes,Aschelminthes (Nemathelminthes),http://aims.fao.org/aos/agrovoc/c_659,N/A
+Chabertiidae,,Chabertiidae,http://aims.fao.org/aos/agrovoc/c_31010,N/A
+Desmoscolecidae,,Desmoscolecidae,http://aims.fao.org/aos/agrovoc/c_33688,N/A
+Dictyocaulidae,,Dictyocaulidae,http://aims.fao.org/aos/agrovoc/c_31016,N/A
+mycoprotein,fungal protein,mycoprotein (fungal protein),http://aims.fao.org/aos/agrovoc/c_25437,N/A
+mycotoxins,fungal toxins; nidulotoxins; skyrine,"mycotoxins (fungal toxins, nidulotoxins, skyrine)",http://aims.fao.org/aos/agrovoc/c_5026,N/A
+pathogenic fungi,,pathogenic fungi,http://aims.fao.org/aos/agrovoc/c_29233,N/A
+plants,,plants,http://aims.fao.org/aos/agrovoc/c_5993,N/A
+rumen fungi,,rumen fungi,http://aims.fao.org/aos/agrovoc/c_34097,N/A
+storage fungi,,storage fungi,http://aims.fao.org/aos/agrovoc/c_37509,N/A
+yeasts,Budding fungi,yeasts (Budding fungi),http://aims.fao.org/aos/agrovoc/c_8480,N/A
+algicides,,algicides,http://aims.fao.org/aos/agrovoc/c_260,N/A
+copper sulfate pentahdyrate,copper sulphate pentahdyrate,copper sulfate pentahdyrate (copper sulphate pentahdyrate),http://aims.fao.org/aos/agrovoc/c_1523f837,N/A
+fungicides,antifungal agents,fungicides (antifungal agents),http://aims.fao.org/aos/agrovoc/c_3146,N/A
+accretion,aggradation,accretion (aggradation),http://aims.fao.org/aos/agrovoc/c_99f18324,N/A
+deltas,,deltas,http://aims.fao.org/aos/agrovoc/c_2170,N/A
+materials,,materials,http://aims.fao.org/aos/agrovoc/c_92337,N/A
+manure removal methods,,manure removal methods,http://aims.fao.org/aos/agrovoc/c_110295f0,N/A
+sediment load,,sediment load,http://aims.fao.org/aos/agrovoc/c_9f23e103,N/A
+cereals,small grain cereals (grain),cereals (small grain cereals (grain)),http://aims.fao.org/aos/agrovoc/c_1474,N/A
+roughage,,roughage,http://aims.fao.org/aos/agrovoc/c_6670,N/A
+Syngamidae,,Syngamidae,http://aims.fao.org/aos/agrovoc/c_31128,N/A
+Tetrameridae,,Tetrameridae,http://aims.fao.org/aos/agrovoc/c_31132,N/A
+Thelaziidae,,Thelaziidae,http://aims.fao.org/aos/agrovoc/c_31133,N/A
+Trichinellidae,,Trichinellidae,http://aims.fao.org/aos/agrovoc/c_31134,N/A
+Trichostrongylidae,,Trichostrongylidae,http://aims.fao.org/aos/agrovoc/c_31137,N/A
+Trichuridae,,Trichuridae,http://aims.fao.org/aos/agrovoc/c_31143,N/A
+helminths,parasitic worms,helminths (parasitic worms),http://aims.fao.org/aos/agrovoc/c_3549,N/A
+nematode infections,nematodiasis,nematode infections (nematodiasis),http://aims.fao.org/aos/agrovoc/c_5111,N/A
+phylum,division (taxa),phylum (division (taxa)),http://aims.fao.org/aos/agrovoc/c_330949,N/A
+invertebrates,Invertebrata,invertebrates (Invertebrata),http://aims.fao.org/aos/agrovoc/c_3929,N/A
+Basidiomycota,Basidiomycotina; Basidiomycetes,"Basidiomycota (Basidiomycotina, Basidiomycetes)",http://aims.fao.org/aos/agrovoc/c_331216,N/A
+Blastocladiomycota,,Blastocladiomycota,http://aims.fao.org/aos/agrovoc/c_331235,N/A
+Chytridiomycota,,Chytridiomycota,http://aims.fao.org/aos/agrovoc/c_331236,N/A
+Deuteromycotina,Fungi imperfecti,Deuteromycotina (Fungi imperfecti),http://aims.fao.org/aos/agrovoc/c_31535,N/A
+Eukaryota,eukarya; eukaryotes,"Eukaryota (eukarya, eukaryotes)",http://aims.fao.org/aos/agrovoc/c_330944,N/A
+Mastigomycotina,,Mastigomycotina,http://aims.fao.org/aos/agrovoc/c_31635,N/A
+Zygomycotina,Fungi inferior (Phycomycetes); Phycomycetes,"Zygomycotina (Fungi inferior (Phycomycetes), Phycomycetes)",http://aims.fao.org/aos/agrovoc/c_31636,N/A
+antibiotics,,antibiotics,http://aims.fao.org/aos/agrovoc/c_492,N/A
+endophytes,,endophytes,http://aims.fao.org/aos/agrovoc/c_32439,N/A
+lichens,lichenes,lichens (lichenes),http://aims.fao.org/aos/agrovoc/c_4314,N/A
+moulds,molds,moulds (molds),http://aims.fao.org/aos/agrovoc/c_4956,N/A
+mycoflora,,mycoflora,http://aims.fao.org/aos/agrovoc/c_34054,N/A
+nickel,Ni (symbol),nickel (Ni (symbol)),http://aims.fao.org/aos/agrovoc/c_5172,N/A
+sodium,Na (symbol),sodium (Na (symbol)),http://aims.fao.org/aos/agrovoc/c_7145,N/A
+titanium,,titanium,http://aims.fao.org/aos/agrovoc/c_32704,N/A
+yttrium,,yttrium,http://aims.fao.org/aos/agrovoc/c_c4a8cb57,N/A
+vanadium compounds,,vanadium compounds,http://aims.fao.org/aos/agrovoc/c_cb271d19,N/A
+zinc compounds,,zinc compounds,http://aims.fao.org/aos/agrovoc/c_cd7dbe96,N/A
+zinc isotopes,,zinc isotopes,http://aims.fao.org/aos/agrovoc/c_bb2a89fe,N/A
+wheat straw,,wheat straw,http://aims.fao.org/aos/agrovoc/c_16066,N/A
+ferromanganese nodules,manganese nodules; polymetallic nodules,"ferromanganese nodules (manganese nodules, polymetallic nodules)",http://aims.fao.org/aos/agrovoc/c_013e3c3f,N/A
+boron compounds,,boron compounds,http://aims.fao.org/aos/agrovoc/c_deb60c9f,N/A
+boron isotopes,,boron isotopes,http://aims.fao.org/aos/agrovoc/c_7d687762,N/A
+chromium isotopes,,chromium isotopes,http://aims.fao.org/aos/agrovoc/c_544569c8,N/A
+transition elements,,transition elements,http://aims.fao.org/aos/agrovoc/c_7867,N/A
+cobalt isotopes,,cobalt isotopes,http://aims.fao.org/aos/agrovoc/c_a7dfe9cd,N/A
+copper oxychloride,,copper oxychloride,http://aims.fao.org/aos/agrovoc/c_37920,N/A
+metalliferous sediments,,metalliferous sediments,http://aims.fao.org/aos/agrovoc/c_a5d4dbf4,N/A
+organocopper compounds,,organocopper compounds,http://aims.fao.org/aos/agrovoc/c_5396,N/A
+iron isotopes,,iron isotopes,http://aims.fao.org/aos/agrovoc/c_a6881c25,N/A
+ironstone,,ironstone,http://aims.fao.org/aos/agrovoc/c_a69cafdb,N/A
+ochre pollution,,ochre pollution,http://aims.fao.org/aos/agrovoc/c_35726,N/A
+steel,,steel,http://aims.fao.org/aos/agrovoc/c_7384,N/A
+alkaline earth metals,,alkaline earth metals,http://aims.fao.org/aos/agrovoc/c_266,N/A
+magnesium isotopes,,magnesium isotopes,http://aims.fao.org/aos/agrovoc/c_904a13a4,N/A
+manganese isotopes,,manganese isotopes,http://aims.fao.org/aos/agrovoc/c_30d1a49a,N/A
+deficiency diseases,,deficiency diseases,http://aims.fao.org/aos/agrovoc/c_2154,N/A
+triple burden of malnutrition,,triple burden of malnutrition,http://aims.fao.org/aos/agrovoc/c_40c766ef,N/A
+molybdenum isotopes,,molybdenum isotopes,http://aims.fao.org/aos/agrovoc/c_84293024,N/A
+selenium isotopes,,selenium isotopes,http://aims.fao.org/aos/agrovoc/c_9d04893b,N/A
+selenoproteins,,selenoproteins,http://aims.fao.org/aos/agrovoc/c_b6c2b224,N/A
+lanthanum,lanthanium,lanthanum (lanthanium),http://aims.fao.org/aos/agrovoc/c_a0589939,N/A
+species (taxa),,species (taxa),http://aims.fao.org/aos/agrovoc/c_331243,N/A
+Choiromyces,,Choiromyces,http://aims.fao.org/aos/agrovoc/c_84a0fe07,N/A
+Pezizales,,Pezizales,http://aims.fao.org/aos/agrovoc/c_31671,N/A
+cleaning behaviour,,cleaning behaviour,http://aims.fao.org/aos/agrovoc/c_a1cfa692,N/A
+commensalism,,commensalism,http://aims.fao.org/aos/agrovoc/c_33255,N/A
+endosymbiosis,,endosymbiosis,http://aims.fao.org/aos/agrovoc/c_bb461eb6,N/A
+epibiosis,,epibiosis,http://aims.fao.org/aos/agrovoc/c_48277bfc,N/A
+interspecific relationships,interspecific interactions,interspecific relationships (interspecific interactions),http://aims.fao.org/aos/agrovoc/c_12499276,N/A
+mutualism,,mutualism,http://aims.fao.org/aos/agrovoc/c_4308024a,N/A
+amines,,amines,http://aims.fao.org/aos/agrovoc/c_341,N/A
+quaternary ammonium compounds,,quaternary ammonium compounds,http://aims.fao.org/aos/agrovoc/c_32046,N/A
+Azadirachta indica,Melia indica; Melia azadirachta; neem (tree); margossa,"Azadirachta indica (Melia indica, Melia azadirachta, neem (tree), margossa)",http://aims.fao.org/aos/agrovoc/c_15749,N/A
+botanical pesticides,,botanical pesticides,http://aims.fao.org/aos/agrovoc/c_27844,N/A
+neem oil,,neem oil,http://aims.fao.org/aos/agrovoc/c_34063,N/A
+plant extracts,,plant extracts,http://aims.fao.org/aos/agrovoc/c_8166,N/A
+seed extracts,,seed extracts,http://aims.fao.org/aos/agrovoc/c_35303,N/A
+bactericides,antibacterial agents,bactericides (antibacterial agents),http://aims.fao.org/aos/agrovoc/c_9048,N/A
+agglutinins,,agglutinins,http://aims.fao.org/aos/agrovoc/c_189,N/A
+artificial protein membranes,,artificial protein membranes,http://aims.fao.org/aos/agrovoc/c_27452,N/A
+biocatalysts,,biocatalysts,http://aims.fao.org/aos/agrovoc/c_27460,N/A
+immobilized enzymes,,immobilized enzymes,http://aims.fao.org/aos/agrovoc/c_27552,N/A
+immobilized microorganisms,,immobilized microorganisms,http://aims.fao.org/aos/agrovoc/c_27553,N/A
+insolubilization,,insolubilization,http://aims.fao.org/aos/agrovoc/c_3893,N/A
+ligands,,ligands,http://aims.fao.org/aos/agrovoc/c_27567,N/A
+microcarriers,,microcarriers,http://aims.fao.org/aos/agrovoc/c_27574,N/A
+processing,transformation (of products); operational processing,"processing (transformation (of products), operational processing)",http://aims.fao.org/aos/agrovoc/c_6195,N/A
+bacterial toxins,,bacterial toxins,http://aims.fao.org/aos/agrovoc/c_9047,N/A
+phytoalexins,phytoncides,phytoalexins (phytoncides),http://aims.fao.org/aos/agrovoc/c_16109,N/A
+biochemical composition,,biochemical composition,http://aims.fao.org/aos/agrovoc/c_325cb76a,N/A
+equilibrium moisture content,,equilibrium moisture content,http://aims.fao.org/aos/agrovoc/c_7abd817b,N/A
+humectants,,humectants,http://aims.fao.org/aos/agrovoc/c_15985,N/A
+hygrometry,humidity measurement,hygrometry (humidity measurement),http://aims.fao.org/aos/agrovoc/c_7c478ce9,N/A
+orthodox seeds,,orthodox seeds,http://aims.fao.org/aos/agrovoc/c_ced52bd3,N/A
+recalcitrant seeds,,recalcitrant seeds,http://aims.fao.org/aos/agrovoc/c_52f3322e,N/A
+relative water content,,relative water content,http://aims.fao.org/aos/agrovoc/c_e65dd470,N/A
+seed moisture content,,seed moisture content,http://aims.fao.org/aos/agrovoc/c_36952,N/A
+water activity,,water activity,http://aims.fao.org/aos/agrovoc/c_24929,N/A
+wet weight,,wet weight,http://aims.fao.org/aos/agrovoc/c_4cf57abb,N/A
+swamps,,swamps,http://aims.fao.org/aos/agrovoc/c_7544,N/A
+wet cultivation,,wet cultivation,http://aims.fao.org/aos/agrovoc/c_330632,N/A
+semipermeable membranes,,semipermeable membranes,http://aims.fao.org/aos/agrovoc/c_27605,N/A
+Mycobacterium avium,,Mycobacterium avium,http://aims.fao.org/aos/agrovoc/c_12730,N/A
+Mycobacterium bovis,,Mycobacterium bovis,http://aims.fao.org/aos/agrovoc/c_12732,N/A
+Mycobacterium leprae,,Mycobacterium leprae,http://aims.fao.org/aos/agrovoc/c_a7540d85,N/A
+Mycobacterium tuberculosis,,Mycobacterium tuberculosis,http://aims.fao.org/aos/agrovoc/c_18213,N/A
+tuberculin,,tuberculin,http://aims.fao.org/aos/agrovoc/c_7996,N/A
+tuberculosis,,tuberculosis,http://aims.fao.org/aos/agrovoc/c_7997,N/A
+family (taxa),familia,family (taxa) (familia),http://aims.fao.org/aos/agrovoc/c_330937,N/A
+Corynebacterium,,Corynebacterium,http://aims.fao.org/aos/agrovoc/c_1913,N/A
+Rhodococcus equi,Corynebacterium equi,Rhodococcus equi (Corynebacterium equi),http://aims.fao.org/aos/agrovoc/c_24505,N/A
+avermectins,,avermectins,http://aims.fao.org/aos/agrovoc/c_33506,N/A
+monensin,monensin sodium,monensin (monensin sodium),http://aims.fao.org/aos/agrovoc/c_15906,N/A
+streptomycin,,streptomycin,http://aims.fao.org/aos/agrovoc/c_7451,N/A
+Clostridiales,,Clostridiales,http://aims.fao.org/aos/agrovoc/c_ebe11b64,N/A
+botulism,,botulism,http://aims.fao.org/aos/agrovoc/c_1034,N/A
+butyric fermentation,,butyric fermentation,http://aims.fao.org/aos/agrovoc/c_27474,N/A
+blackleg,,blackleg,http://aims.fao.org/aos/agrovoc/c_16391,N/A
+Liberibacter,Candidatus Liberibacter,Liberibacter (Candidatus Liberibacter),http://aims.fao.org/aos/agrovoc/c_709d21d1,N/A
+grapevines,grape vines,grapevines (grape vines),http://aims.fao.org/aos/agrovoc/c_3360,N/A
+Romanomermis,,Romanomermis,http://aims.fao.org/aos/agrovoc/c_31076,N/A
+cultivation equipment,,cultivation equipment,http://aims.fao.org/aos/agrovoc/c_25750,N/A
+Schistonchus,,Schistonchus,http://aims.fao.org/aos/agrovoc/c_050da850,N/A
+Aphelenchoides,,Aphelenchoides,http://aims.fao.org/aos/agrovoc/c_524,N/A
+Bursaphelenchus,,Bursaphelenchus,http://aims.fao.org/aos/agrovoc/c_24609,N/A
+Rhadinaphelenchus,,Rhadinaphelenchus,http://aims.fao.org/aos/agrovoc/c_30997,N/A
+complexing,,complexing,http://aims.fao.org/aos/agrovoc/c_28303,N/A
+alkali metals,,alkali metals,http://aims.fao.org/aos/agrovoc/c_264,N/A
+hypokalaemia,,hypokalaemia,http://aims.fao.org/aos/agrovoc/c_24471,N/A
+potassium isotopes,,potassium isotopes,http://aims.fao.org/aos/agrovoc/c_d0c8cfae,N/A
+calcium isotopes,,calcium isotopes,http://aims.fao.org/aos/agrovoc/c_155e3159,N/A
+barley,,barley,http://aims.fao.org/aos/agrovoc/c_823,N/A
+oats,,oats,http://aims.fao.org/aos/agrovoc/c_5287,N/A
+Oryza,rice (plant),Oryza (rice (plant)),http://aims.fao.org/aos/agrovoc/c_5435,N/A
+insect control,insect pests management,insect control (insect pests management),http://aims.fao.org/aos/agrovoc/c_3885,N/A
+parasites,,parasites,http://aims.fao.org/aos/agrovoc/c_5574,N/A
+benomyl,,benomyl,http://aims.fao.org/aos/agrovoc/c_31265,N/A
+carbamates,dithiocarbamates; methylcarbamates; phenylcarbamates; thiocarbamates,"carbamates (dithiocarbamates, methylcarbamates, phenylcarbamates, thiocarbamates)",http://aims.fao.org/aos/agrovoc/c_1296,N/A
+carbosulfan,,carbosulfan,http://aims.fao.org/aos/agrovoc/c_34801,N/A
+chemical control,,chemical control,http://aims.fao.org/aos/agrovoc/c_1514,N/A
+chlorpyrifos,chlorpyrifos ethyl; chlorpyriphos-ethyl; chlorpyriphos,"chlorpyrifos (chlorpyrifos ethyl, chlorpyriphos-ethyl, chlorpyriphos)",http://aims.fao.org/aos/agrovoc/c_31313,N/A
+coumaphos,coumafos,coumaphos (coumafos),http://aims.fao.org/aos/agrovoc/c_31316,N/A
+diazinon,,diazinon,http://aims.fao.org/aos/agrovoc/c_31326,N/A
+dimethoate,,dimethoate,http://aims.fao.org/aos/agrovoc/c_31338,N/A
+Spicaria,,Spicaria,http://aims.fao.org/aos/agrovoc/c_7298,N/A
+insect diseases,,insect diseases,http://aims.fao.org/aos/agrovoc/c_3886,N/A
+antimony,Sb (symbol),antimony (Sb (symbol)),http://aims.fao.org/aos/agrovoc/c_510,N/A
+bismuth,Bi (symbol),bismuth (Bi (symbol)),http://aims.fao.org/aos/agrovoc/c_938,N/A
+cadmium,Cd (symbol),cadmium (Cd (symbol)),http://aims.fao.org/aos/agrovoc/c_1178,N/A
+gallium,Ga (symbol),gallium (Ga (symbol)),http://aims.fao.org/aos/agrovoc/c_a69c31f8,N/A
+gold,,gold,http://aims.fao.org/aos/agrovoc/c_33067,N/A
+iridium,Ir (symbol),iridium (Ir (symbol)),http://aims.fao.org/aos/agrovoc/c_c2041bc1,N/A
+mercury,Hg (symbol),mercury (Hg (symbol)),http://aims.fao.org/aos/agrovoc/c_4751,N/A
+metallic elements,,metallic elements,http://aims.fao.org/aos/agrovoc/c_4774,N/A
+niobium,columbium; Nb (symbol),"niobium (columbium, Nb (symbol))",http://aims.fao.org/aos/agrovoc/c_d2e8106a,N/A
+osmium,Os (symbol),osmium (Os (symbol)),http://aims.fao.org/aos/agrovoc/c_9d49077b,N/A
+palladium,Pd (symbol),palladium (Pd (symbol)),http://aims.fao.org/aos/agrovoc/c_549615fb,N/A
+platinum,Pt (symbol),platinum (Pt (symbol)),http://aims.fao.org/aos/agrovoc/c_33116,N/A
+radium,Ra (symbol),radium (Ra (symbol)),http://aims.fao.org/aos/agrovoc/c_6431,N/A
+rhenium,Re (symbol),rhenium (Re (symbol)),http://aims.fao.org/aos/agrovoc/c_bb2168e4,N/A
+rhodium,Rh (symbol),rhodium (Rh (symbol)),http://aims.fao.org/aos/agrovoc/c_ea2af13b,N/A
+ruthenium,Ru (symbol),ruthenium (Ru (symbol)),http://aims.fao.org/aos/agrovoc/c_87cd9fbc,N/A
+silver,Ag (symbol),silver (Ag (symbol)),http://aims.fao.org/aos/agrovoc/c_7068,N/A
+tantalum,Ta (symbol),tantalum (Ta (symbol)),http://aims.fao.org/aos/agrovoc/c_49eb4388,N/A
+thallium,Tl (symbol),thallium (Tl (symbol)),http://aims.fao.org/aos/agrovoc/c_7702,N/A
+tin,Sn (symbol),tin (Sn (symbol)),http://aims.fao.org/aos/agrovoc/c_7782,N/A
+uranium,U (symbol),uranium (U (symbol)),http://aims.fao.org/aos/agrovoc/c_8084,N/A
+chemical compounds,,chemical compounds,http://aims.fao.org/aos/agrovoc/c_49870,N/A
+child stunting,,child stunting,http://aims.fao.org/aos/agrovoc/c_98822596,N/A
+diet,,diet,http://aims.fao.org/aos/agrovoc/c_2261,N/A
+nutritional disorders,nutrition disorders,nutritional disorders (nutrition disorders),http://aims.fao.org/aos/agrovoc/c_5276,N/A
+nutritional status,nutritional state; nutrient status,"nutritional status (nutritional state, nutrient status)",http://aims.fao.org/aos/agrovoc/c_24877,N/A
+protein deficiencies,protein malnutrition,protein deficiencies (protein malnutrition),http://aims.fao.org/aos/agrovoc/c_6252,N/A
+vitamin deficiencies,hypovitaminoses,vitamin deficiencies (hypovitaminoses),http://aims.fao.org/aos/agrovoc/c_8272,N/A
+molybdates,,molybdates,http://aims.fao.org/aos/agrovoc/c_33123,N/A
+arsenic compounds,arsenicals,arsenic compounds (arsenicals),http://aims.fao.org/aos/agrovoc/c_630,N/A
+organoarsenical compounds,,organoarsenical compounds,http://aims.fao.org/aos/agrovoc/c_5393,N/A
+lead compounds,,lead compounds,http://aims.fao.org/aos/agrovoc/c_5212dd3f,N/A
+lead isotopes,,lead isotopes,http://aims.fao.org/aos/agrovoc/c_67680524,N/A
+ethoprophos,ethoprop; prophos,"ethoprophos (ethoprop, prophos)",http://aims.fao.org/aos/agrovoc/c_31360,N/A
+ethylene dibromide,"1,2-dibromoethane; DBE (dibromoethane); Edb (ethylene dibromide)","ethylene dibromide (1,2-dibromoethane, DBE (dibromoethane), Edb (ethylene dibromide))",http://aims.fao.org/aos/agrovoc/c_26778,N/A
+fenamiphos,phenamiphos,fenamiphos (phenamiphos),http://aims.fao.org/aos/agrovoc/c_31364,N/A
+fensulfothion,,fensulfothion,http://aims.fao.org/aos/agrovoc/c_31375,N/A
+methomyl,,methomyl,http://aims.fao.org/aos/agrovoc/c_31420,N/A
+mevinphos,,mevinphos,http://aims.fao.org/aos/agrovoc/c_31427,N/A
+nematode control,,nematode control,http://aims.fao.org/aos/agrovoc/c_5110,N/A
+organobromine compounds,,organobromine compounds,http://aims.fao.org/aos/agrovoc/c_5394,N/A
+organochlorine compounds,,organochlorine compounds,http://aims.fao.org/aos/agrovoc/c_5395,N/A
+oxamyl,,oxamyl,http://aims.fao.org/aos/agrovoc/c_31447,N/A
+pesticides,,pesticides,http://aims.fao.org/aos/agrovoc/c_5739,N/A
+phorate,,phorate,http://aims.fao.org/aos/agrovoc/c_31462,N/A
+phosphamidon,,phosphamidon,http://aims.fao.org/aos/agrovoc/c_31465,N/A
+pirimiphos methyl,,pirimiphos methyl,http://aims.fao.org/aos/agrovoc/c_31470,N/A
+quintozene,PCNB; pentachloronitrobenzene,"quintozene (PCNB, pentachloronitrobenzene)",http://aims.fao.org/aos/agrovoc/c_31487,N/A
+resistance to nematicides,,resistance to nematicides,http://aims.fao.org/aos/agrovoc/c_12789,N/A
+terbufos,,terbufos,http://aims.fao.org/aos/agrovoc/c_31501,N/A
+thiofanox,,thiofanox,http://aims.fao.org/aos/agrovoc/c_31509,N/A
+triazophos,,triazophos,http://aims.fao.org/aos/agrovoc/c_31519,N/A
+Ascosphaera,,Ascosphaera,http://aims.fao.org/aos/agrovoc/c_662,N/A
+Aspergillus,Emericella; Neosartorya,"Aspergillus (Emericella, Neosartorya)",http://aims.fao.org/aos/agrovoc/c_672,N/A
+Cephalosporium,,Cephalosporium,http://aims.fao.org/aos/agrovoc/c_1459,N/A
+Coelomomyces,,Coelomomyces,http://aims.fao.org/aos/agrovoc/c_24619,N/A
+Cordyceps,,Cordyceps,http://aims.fao.org/aos/agrovoc/c_1889,N/A
+Entomophthora,,Entomophthora,http://aims.fao.org/aos/agrovoc/c_2589,N/A
+Erynia,Zoophthora,Erynia (Zoophthora),http://aims.fao.org/aos/agrovoc/c_27193,N/A
+Byssochlamys,,Byssochlamys,http://aims.fao.org/aos/agrovoc/c_31784,N/A
+crop rotation,rotational cropping; alternate cropping,"crop rotation (rotational cropping, alternate cropping)",http://aims.fao.org/aos/agrovoc/c_6662,N/A
+multiple cropping,multicropping,multiple cropping (multicropping),http://aims.fao.org/aos/agrovoc/c_4986,N/A
+lava flows,,lava flows,http://aims.fao.org/aos/agrovoc/c_0177d2d2,N/A
+anions,,anions,http://aims.fao.org/aos/agrovoc/c_16163,N/A
+cecidozoa,,cecidozoa,http://aims.fao.org/aos/agrovoc/c_1404,N/A
+protective screens,protective screening,protective screens (protective screening),http://aims.fao.org/aos/agrovoc/c_32663,N/A
+protective structures,,protective structures,http://aims.fao.org/aos/agrovoc/c_6249,N/A
+wind protection,,wind protection,http://aims.fao.org/aos/agrovoc/c_8395,N/A
+Anguina tritici,,Anguina tritici,http://aims.fao.org/aos/agrovoc/c_30984,N/A
+agents,,agents,http://aims.fao.org/aos/agrovoc/c_49873,N/A
+chemicals,,chemicals,http://aims.fao.org/aos/agrovoc/c_1520,N/A
+detoxicants,antidotes; narcotic antagonists,"detoxicants (antidotes, narcotic antagonists)",http://aims.fao.org/aos/agrovoc/c_2218,N/A
+dimercaprol,,dimercaprol,http://aims.fao.org/aos/agrovoc/c_10378,N/A
+penicillamine,,penicillamine,http://aims.fao.org/aos/agrovoc/c_13197,N/A
+acaricides,miticides,acaricides (miticides),http://aims.fao.org/aos/agrovoc/c_56,N/A
+aldicarb sulfoxide,,aldicarb sulfoxide,http://aims.fao.org/aos/agrovoc/c_c7c3a0a8,N/A
+insecticides,,insecticides,http://aims.fao.org/aos/agrovoc/c_3887,N/A
+herbicides,brush killers; weed-killers,"herbicides (brush killers, weed-killers)",http://aims.fao.org/aos/agrovoc/c_3566,N/A
+Hypocreales,Clavicipitales,Hypocreales (Clavicipitales),http://aims.fao.org/aos/agrovoc/c_31664,N/A
+Eurotium,,Eurotium,http://aims.fao.org/aos/agrovoc/c_31785,N/A
+carbon tetrachloride,,carbon tetrachloride,http://aims.fao.org/aos/agrovoc/c_1304,N/A
+chlorine,Cl (symbol),chlorine (Cl (symbol)),http://aims.fao.org/aos/agrovoc/c_1568,N/A
+chlorine compounds,,chlorine compounds,http://aims.fao.org/aos/agrovoc/c_5ef28e5f,N/A
+halides,,halides,http://aims.fao.org/aos/agrovoc/c_18de2b6c,N/A
+magnesium chloride,,magnesium chloride,http://aims.fao.org/aos/agrovoc/c_24047,N/A
+mercuric chloride,,mercuric chloride,http://aims.fao.org/aos/agrovoc/c_16191,N/A
+subspecies,,subspecies,http://aims.fao.org/aos/agrovoc/c_16047,N/A
+carbon dioxide,CO2,carbon dioxide (CO2),http://aims.fao.org/aos/agrovoc/c_1302,N/A
+carbon dioxide enrichment,elevated CO2 concentration,carbon dioxide enrichment (elevated CO2 concentration),http://aims.fao.org/aos/agrovoc/c_35921,N/A
+cold seeps,,cold seeps,http://aims.fao.org/aos/agrovoc/c_470a52bd,N/A
+spinosad,,spinosad,http://aims.fao.org/aos/agrovoc/c_e5b16209,N/A
+plant galls,plant tumours; plant tumors,"plant galls (plant tumours, plant tumors)",http://aims.fao.org/aos/agrovoc/c_5967,N/A
+heterocyclic compounds,,heterocyclic compounds,http://aims.fao.org/aos/agrovoc/c_3579,N/A
+peptides,,peptides,http://aims.fao.org/aos/agrovoc/c_5691,N/A
+Penicillium brevicompactum,,Penicillium brevicompactum,http://aims.fao.org/aos/agrovoc/c_34549,N/A
+Penicillium camembertii,Penicillium caseicola; Penicillium caseicolum,"Penicillium camembertii (Penicillium caseicola, Penicillium caseicolum)",http://aims.fao.org/aos/agrovoc/c_36060,N/A
+Penicillium chrysogenum,,Penicillium chrysogenum,http://aims.fao.org/aos/agrovoc/c_35990,N/A
+Penicillium digitatum,,Penicillium digitatum,http://aims.fao.org/aos/agrovoc/c_33790,N/A
+Penicillium expansum,,Penicillium expansum,http://aims.fao.org/aos/agrovoc/c_33791,N/A
+Penicillium italicum,,Penicillium italicum,http://aims.fao.org/aos/agrovoc/c_33792,N/A
+Penicillium roquefortii,,Penicillium roquefortii,http://aims.fao.org/aos/agrovoc/c_33794,N/A
+patulin,,patulin,http://aims.fao.org/aos/agrovoc/c_24882,N/A
+penicillins,penicillic acid,penicillins (penicillic acid),http://aims.fao.org/aos/agrovoc/c_5670,N/A
+roquefortine,,roquefortine,http://aims.fao.org/aos/agrovoc/c_28544,N/A

@@ -40,7 +40,7 @@ services:
 
   skosmos:
     hostname: skosmos
-    image: quay.io/natlibfi/skosmos:${SKOSMOS_TAG:-latest}
+    image: ${SKOSMOS_IMAGE:-soilvoc-skosmos:arm64}
     ports:
       - ${SKOSMOS_PORT:-9090}:80
     volumes:
@@ -51,6 +51,14 @@ services:
       - type: bind
         source: ./plugins/soilvoc-definition-source
         target: /var/www/html/plugins/soilvoc-definition-source
+        read_only: true
+      - type: bind
+        source: ./custom-templates
+        target: /var/www/html/custom-templates
+        read_only: true
+      - type: bind
+        source: ./Soilwise_workflow_soilvoc.png
+        target: /var/www/html/Soilwise_workflow_soilvoc.png
         read_only: true
 volumes:
   fuseki-databases:

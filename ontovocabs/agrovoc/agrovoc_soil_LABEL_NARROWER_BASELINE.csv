@@ -1,0 +1,497 @@
+prefLabel,altLabels,displayName,uri,baseline_origin
+A horizons,,A horizons,http://aims.fao.org/aos/agrovoc/c_47a98f68,NARROWER_DESCENDANT
+abrasion,,abrasion,http://aims.fao.org/aos/agrovoc/c_9709308a,NARROWER_DESCENDANT
+acid soils,,acid soils,http://aims.fao.org/aos/agrovoc/c_89,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+acid sulphate soils,acid sulfate soils,acid sulphate soils (acid sulfate soils),http://aims.fao.org/aos/agrovoc/c_36929,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+Acrisols,ultisols,Acrisols (ultisols),http://aims.fao.org/aos/agrovoc/c_101,NARROWER_DESCENDANT
+aeroponics,,aeroponics,http://aims.fao.org/aos/agrovoc/c_34200,NARROWER_DESCENDANT
+age of soil,soil age,age of soil (soil age),http://aims.fao.org/aos/agrovoc/c_7157,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+agricultural lime,,agricultural lime,http://aims.fao.org/aos/agrovoc/c_12182,NARROWER_DESCENDANT
+agricultural soils,,agricultural soils,http://aims.fao.org/aos/agrovoc/c_33934,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+agrology,,agrology,http://aims.fao.org/aos/agrovoc/c_8688,NARROWER_DESCENDANT
+Alisols,,Alisols,http://aims.fao.org/aos/agrovoc/c_479c499a,NARROWER_DESCENDANT
+alkaline soils,,alkaline soils,http://aims.fao.org/aos/agrovoc/c_268,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+alluvial soils,,alluvial soils,http://aims.fao.org/aos/agrovoc/c_296,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+aluminium mulches,,aluminium mulches,http://aims.fao.org/aos/agrovoc/c_207ace25,NARROWER_DESCENDANT
+ammonium fixation,,ammonium fixation,http://aims.fao.org/aos/agrovoc/c_32373,NARROWER_DESCENDANT
+Andosols,andic soils; andisols,"Andosols (andic soils, andisols)",http://aims.fao.org/aos/agrovoc/c_404,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+anthropogenic soils,anthropogenic soil types; manmade soils,"anthropogenic soils (anthropogenic soil types, manmade soils)",http://aims.fao.org/aos/agrovoc/c_486,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+Anthrosols,,Anthrosols,http://aims.fao.org/aos/agrovoc/c_4515b13e,NARROWER_DESCENDANT
+aquaponics,,aquaponics,http://aims.fao.org/aos/agrovoc/c_9001000,NARROWER_DESCENDANT
+arable soils,cultivable soil,arable soils (cultivable soil),http://aims.fao.org/aos/agrovoc/c_568,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+Arenosols,,Arenosols,http://aims.fao.org/aos/agrovoc/c_601,NARROWER_DESCENDANT
+arid soils,,arid soils,http://aims.fao.org/aos/agrovoc/c_612,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+aridisols,,aridisols,http://aims.fao.org/aos/agrovoc/c_490e91f0,NARROWER_DESCENDANT
+B horizons,,B horizons,http://aims.fao.org/aos/agrovoc/c_6381571a,NARROWER_DESCENDANT
+bark mulches,,bark mulches,http://aims.fao.org/aos/agrovoc/c_bc5f6400,NARROWER_DESCENDANT
+basaltic soils,,basaltic soils,http://aims.fao.org/aos/agrovoc/c_832,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+beach erosion,,beach erosion,http://aims.fao.org/aos/agrovoc/c_f1a870c8,NARROWER_DESCENDANT
+bentonite,,bentonite,http://aims.fao.org/aos/agrovoc/c_15620,NARROWER_DESCENDANT
+biodrainage,,biodrainage,http://aims.fao.org/aos/agrovoc/c_ac7696b9,NARROWER_DESCENDANT
+bioerosion,erosion (biological),bioerosion (erosion (biological)),http://aims.fao.org/aos/agrovoc/c_05cd5033,NARROWER_DESCENDANT
+biological activity in soil,,biological activity in soil,http://aims.fao.org/aos/agrovoc/c_9264,DIRECT_LABEL_MATCH
+bioponics,biological hydroponics; organic hydroponics,"bioponics (biological hydroponics, organic hydroponics)",http://aims.fao.org/aos/agrovoc/c_d7348dbe,NARROWER_DESCENDANT
+bioturbation,,bioturbation,http://aims.fao.org/aos/agrovoc/c_a3354940,NARROWER_DESCENDANT
+bog soils,,bog soils,http://aims.fao.org/aos/agrovoc/c_986,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+boron content,,boron content,http://aims.fao.org/aos/agrovoc/c_f52b8ef5,NARROWER_DESCENDANT
+bottom erosion,deep-sea erosion; submarine erosion; underwater erosion,"bottom erosion (deep-sea erosion, submarine erosion, underwater erosion)",http://aims.fao.org/aos/agrovoc/c_35687419,NARROWER_DESCENDANT
+bottomland soils,,bottomland soils,http://aims.fao.org/aos/agrovoc/c_1033,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+boulder clay soils,,boulder clay soils,http://aims.fao.org/aos/agrovoc/c_1036,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+bund former,,bund former,http://aims.fao.org/aos/agrovoc/c_330674,NARROWER_DESCENDANT
+buried soils,,buried soils,http://aims.fao.org/aos/agrovoc/c_1154,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+C horizons,,C horizons,http://aims.fao.org/aos/agrovoc/c_016fddeb,NARROWER_DESCENDANT
+calamine soils,,calamine soils,http://aims.fao.org/aos/agrovoc/c_1189,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+calcareous soils,,calcareous soils,http://aims.fao.org/aos/agrovoc/c_1194,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+Calcisols,,Calcisols,http://aims.fao.org/aos/agrovoc/c_ea60e31f,NARROWER_DESCENDANT
+calcitic lime (amendment),,calcitic lime (amendment),http://aims.fao.org/aos/agrovoc/c_36453,NARROWER_DESCENDANT
+Cambisols,,Cambisols,http://aims.fao.org/aos/agrovoc/c_1224,NARROWER_DESCENDANT
+chain harrows,,chain harrows,http://aims.fao.org/aos/agrovoc/c_0619dd9e,NARROWER_DESCENDANT
+chalk soils,,chalk soils,http://aims.fao.org/aos/agrovoc/c_1493,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+chemical soil types,,chemical soil types,http://aims.fao.org/aos/agrovoc/c_1519,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+Chernozems,black soil,Chernozems (black soil),http://aims.fao.org/aos/agrovoc/c_1533,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+chisel ploughs,,chisel ploughs,http://aims.fao.org/aos/agrovoc/c_99dd11f2,NARROWER_DESCENDANT
+clay,,clay,http://aims.fao.org/aos/agrovoc/c_15619,NARROWER_DESCENDANT
+clay soils,argillaceous soils; heavy soils,"clay soils (argillaceous soils, heavy soils)",http://aims.fao.org/aos/agrovoc/c_1659,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+claypan soils,,claypan soils,http://aims.fao.org/aos/agrovoc/c_1660,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+climatic soil types,,climatic soil types,http://aims.fao.org/aos/agrovoc/c_1668,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+coarse sand,,coarse sand,http://aims.fao.org/aos/agrovoc/c_c03927e1,NARROWER_DESCENDANT
+coarse silt,,coarse silt,http://aims.fao.org/aos/agrovoc/c_c1b90f01,NARROWER_DESCENDANT
+coastal erosion,,coastal erosion,http://aims.fao.org/aos/agrovoc/c_9949,NARROWER_DESCENDANT
+coastal soils,,coastal soils,http://aims.fao.org/aos/agrovoc/c_1699,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+colluvium,,colluvium,http://aims.fao.org/aos/agrovoc/c_ce89717c,NARROWER_DESCENDANT
+compost mulches,,compost mulches,http://aims.fao.org/aos/agrovoc/c_d2c183d0,NARROWER_DESCENDANT
+conservation tillage,,conservation tillage,http://aims.fao.org/aos/agrovoc/c_33445,NARROWER_DESCENDANT
+conventional tillage,,conventional tillage,http://aims.fao.org/aos/agrovoc/c_34250,NARROWER_DESCENDANT
+Cryosols,,Cryosols,http://aims.fao.org/aos/agrovoc/c_829043c3,NARROWER_DESCENDANT
+cultivators,discs; disks,"cultivators (discs, disks)",http://aims.fao.org/aos/agrovoc/c_2019,NARROWER_DESCENDANT
+cultural soil types,,cultural soil types,http://aims.fao.org/aos/agrovoc/c_2022,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+deep ploughing,,deep ploughing,http://aims.fao.org/aos/agrovoc/c_330745,NARROWER_DESCENDANT
+deep tillage,deep cultivation,deep tillage (deep cultivation),http://aims.fao.org/aos/agrovoc/c_36704,NARROWER_DESCENDANT
+delta soils,,delta soils,http://aims.fao.org/aos/agrovoc/c_2169,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+desert soils,,desert soils,http://aims.fao.org/aos/agrovoc/c_2203,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+diagnostic horizons,,diagnostic horizons,http://aims.fao.org/aos/agrovoc/c_29ac0905,NARROWER_DESCENDANT
+diorite soils,,diorite soils,http://aims.fao.org/aos/agrovoc/c_2286,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+disc harrows,,disc harrows,http://aims.fao.org/aos/agrovoc/c_25794,NARROWER_DESCENDANT
+disc ploughs,,disc ploughs,http://aims.fao.org/aos/agrovoc/c_25694,NARROWER_DESCENDANT
+disking,,disking,http://aims.fao.org/aos/agrovoc/c_24454,NARROWER_DESCENDANT
+dispersive soils,,dispersive soils,http://aims.fao.org/aos/agrovoc/c_2334,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+dolomitic lime (amendment),,dolomitic lime (amendment),http://aims.fao.org/aos/agrovoc/c_36452,NARROWER_DESCENDANT
+drainage,,drainage,http://aims.fao.org/aos/agrovoc/c_2372,NARROWER_DESCENDANT
+drainage equipment,,drainage equipment,http://aims.fao.org/aos/agrovoc/c_2373,NARROWER_DESCENDANT
+drumlin soils,,drumlin soils,http://aims.fao.org/aos/agrovoc/c_2396,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+dry mulches,,dry mulches,http://aims.fao.org/aos/agrovoc/c_2399,NARROWER_DESCENDANT
+dune fixation,,dune fixation,http://aims.fao.org/aos/agrovoc/c_10483,NARROWER_DESCENDANT
+dune soils,,dune soils,http://aims.fao.org/aos/agrovoc/c_2409,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+Durisols,,Durisols,http://aims.fao.org/aos/agrovoc/c_51ec138f,NARROWER_DESCENDANT
+E horizons,,E horizons,http://aims.fao.org/aos/agrovoc/c_f4fd14d8,NARROWER_DESCENDANT
+earthworms,earth worms,earthworms (earth worms),http://aims.fao.org/aos/agrovoc/c_29109,NARROWER_DESCENDANT
+ecological soil types,,ecological soil types,http://aims.fao.org/aos/agrovoc/c_2463,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+edaphic factors,soil factors,edaphic factors (soil factors),http://aims.fao.org/aos/agrovoc/c_15617,DIRECT_LABEL_MATCH
+entisols,,entisols,http://aims.fao.org/aos/agrovoc/c_b10d627e,NARROWER_DESCENDANT
+eroded soils,,eroded soils,http://aims.fao.org/aos/agrovoc/c_2650,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+erosion,soil erosion; soil erosion phenomena,"erosion (soil erosion, soil erosion phenomena)",http://aims.fao.org/aos/agrovoc/c_2651,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+erosion control,,erosion control,http://aims.fao.org/aos/agrovoc/c_2652,NARROWER_DESCENDANT
+erosion control plants,soil stabilizing plants,erosion control plants (soil stabilizing plants),http://aims.fao.org/aos/agrovoc/c_2653,DIRECT_LABEL_MATCH
+evaporation suppressants,,evaporation suppressants,http://aims.fao.org/aos/agrovoc/c_2740,NARROWER_DESCENDANT
+fenland soils,,fenland soils,http://aims.fao.org/aos/agrovoc/c_2854,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+Ferralsols,laterite soils; latosols; oxisols,"Ferralsols (laterite soils, latosols, oxisols)",http://aims.fao.org/aos/agrovoc/c_2858,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+field capacity,,field capacity,http://aims.fao.org/aos/agrovoc/c_32445,NARROWER_DESCENDANT
+field preparation,land preparation,field preparation (land preparation),http://aims.fao.org/aos/agrovoc/c_330639,NARROWER_DESCENDANT
+fine sand,,fine sand,http://aims.fao.org/aos/agrovoc/c_a91f25d6,NARROWER_DESCENDANT
+fine silt,,fine silt,http://aims.fao.org/aos/agrovoc/c_0f15e6e6,NARROWER_DESCENDANT
+fine soil,,fine soil,http://aims.fao.org/aos/agrovoc/c_5749f32e,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+Fluvisols,,Fluvisols,http://aims.fao.org/aos/agrovoc/c_3000,NARROWER_DESCENDANT
+forest soils,woodland soils,forest soils (woodland soils),http://aims.fao.org/aos/agrovoc/c_3051,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+free-living nematodes,soil nematodes (non parasitic),free-living nematodes (soil nematodes (non parasitic)),http://aims.fao.org/aos/agrovoc/c_36731,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+frigid soils,arctic soils,frigid soils (arctic soils),http://aims.fao.org/aos/agrovoc/c_3108,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+frost heave,frost heaving,frost heave (frost heaving),http://aims.fao.org/aos/agrovoc/c_8cbca199,NARROWER_DESCENDANT
+gas turbation,,gas turbation,http://aims.fao.org/aos/agrovoc/c_b09277cb,NARROWER_DESCENDANT
+gaseous nitrogen,,gaseous nitrogen,http://aims.fao.org/aos/agrovoc/c_c696e530,NARROWER_DESCENDANT
+gelisols,,gelisols,http://aims.fao.org/aos/agrovoc/c_44ac37ac,NARROWER_DESCENDANT
+genetic soil types,soil units,genetic soil types (soil units),http://aims.fao.org/aos/agrovoc/c_3219,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+glacial abrasion,,glacial abrasion,http://aims.fao.org/aos/agrovoc/c_d12f8016,NARROWER_DESCENDANT
+glacial erosion,,glacial erosion,http://aims.fao.org/aos/agrovoc/c_b96cda43,NARROWER_DESCENDANT
+glacial till soils,,glacial till soils,http://aims.fao.org/aos/agrovoc/c_3269,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+Gleysols,,Gleysols,http://aims.fao.org/aos/agrovoc/c_3276,NARROWER_DESCENDANT
+granite soils,,granite soils,http://aims.fao.org/aos/agrovoc/c_3356,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+grassland soils,pasture soils,grassland soils (pasture soils),http://aims.fao.org/aos/agrovoc/c_3365,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+gravel,,gravel,http://aims.fao.org/aos/agrovoc/c_24850,NARROWER_DESCENDANT
+gravel mulches,,gravel mulches,http://aims.fao.org/aos/agrovoc/c_11342,NARROWER_DESCENDANT
+gravimetric water content,gravimetric soil water content,gravimetric water content (gravimetric soil water content),http://aims.fao.org/aos/agrovoc/c_76b9bd59,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+green feed,soilage (feed); succulent feeds,"green feed (soilage (feed), succulent feeds)",http://aims.fao.org/aos/agrovoc/c_3374,DIRECT_LABEL_MATCH
+greenhouse soils,,greenhouse soils,http://aims.fao.org/aos/agrovoc/c_3378,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+greywacke soils,,greywacke soils,http://aims.fao.org/aos/agrovoc/c_3385,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+greyzems,,greyzems,http://aims.fao.org/aos/agrovoc/c_3386,NARROWER_DESCENDANT
+growing media,growth media; rooting media; soil substrates,"growing media (growth media, rooting media, soil substrates)",http://aims.fao.org/aos/agrovoc/c_3393,DIRECT_LABEL_MATCH
+gully control,,gully control,http://aims.fao.org/aos/agrovoc/c_2c35fa5f,NARROWER_DESCENDANT
+gully erosion,,gully erosion,http://aims.fao.org/aos/agrovoc/c_25010,NARROWER_DESCENDANT
+gypsiferous soils,,gypsiferous soils,http://aims.fao.org/aos/agrovoc/c_3452,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+Gypsisols,,Gypsisols,http://aims.fao.org/aos/agrovoc/c_61704b51,NARROWER_DESCENDANT
+hardpans,,hardpans,http://aims.fao.org/aos/agrovoc/c_c27ddf24,NARROWER_DESCENDANT
+harrowing,raking,harrowing (raking),http://aims.fao.org/aos/agrovoc/c_3497,NARROWER_DESCENDANT
+harrows,,harrows,http://aims.fao.org/aos/agrovoc/c_3498,NARROWER_DESCENDANT
+heathland soils,,heathland soils,http://aims.fao.org/aos/agrovoc/c_3523,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+heavy-duty ploughs,,heavy-duty ploughs,http://aims.fao.org/aos/agrovoc/c_25697,NARROWER_DESCENDANT
+hill soils,,hill soils,http://aims.fao.org/aos/agrovoc/c_3615,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+Histosols,,Histosols,http://aims.fao.org/aos/agrovoc/c_3636,NARROWER_DESCENDANT
+hoes,,hoes,http://aims.fao.org/aos/agrovoc/c_25733,NARROWER_DESCENDANT
+horticultural soils,,horticultural soils,http://aims.fao.org/aos/agrovoc/c_3670,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+hot water-extractable nitrogen,hot water-soluble nitrogen; hot-water extractable nitrogen,"hot water-extractable nitrogen (hot water-soluble nitrogen, hot-water extractable nitrogen)",http://aims.fao.org/aos/agrovoc/c_6ed53459,NARROWER_DESCENDANT
+humus,moder; mor; mull,"humus (moder, mor, mull)",http://aims.fao.org/aos/agrovoc/c_3693,NARROWER_DESCENDANT
+hydraulic conductivity,soil hydraulic conductivity,hydraulic conductivity (soil hydraulic conductivity),http://aims.fao.org/aos/agrovoc/c_25579,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+hydraulic potential (soil),,hydraulic potential (soil),http://aims.fao.org/aos/agrovoc/c_35950,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+hydroculture,,hydroculture,http://aims.fao.org/aos/agrovoc/c_10154,NARROWER_DESCENDANT
+hydromorphic soils,,hydromorphic soils,http://aims.fao.org/aos/agrovoc/c_25315,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+hydroponics,water culture,hydroponics (water culture),http://aims.fao.org/aos/agrovoc/c_3734,NARROWER_DESCENDANT
+iceberg scouring,ice scouring,iceberg scouring (ice scouring),http://aims.fao.org/aos/agrovoc/c_51a34cfc,NARROWER_DESCENDANT
+igneous rock soils,,igneous rock soils,http://aims.fao.org/aos/agrovoc/c_3792,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+illitic soils,,illitic soils,http://aims.fao.org/aos/agrovoc/c_3797,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+in situ soil conservation,,in situ soil conservation,http://aims.fao.org/aos/agrovoc/c_330803,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+inceptisols,,inceptisols,http://aims.fao.org/aos/agrovoc/c_90831e99,NARROWER_DESCENDANT
+indicator animals,bioindicators (animal),indicator animals (bioindicators (animal)),http://aims.fao.org/aos/agrovoc/c_24184,NARROWER_DESCENDANT
+indicator microorganisms,,indicator microorganisms,http://aims.fao.org/aos/agrovoc/c_5b2945bb,NARROWER_DESCENDANT
+indicator organisms,biochemical indicators (organisms); bioindicators (organisms); biological markers (organisms); indicator hosts; indicator species; soil indicators (organisms),"indicator organisms (biochemical indicators (organisms), bioindicators (organisms), biological markers (organisms), indicator hosts, indicator species, soil indicators (organisms))",http://aims.fao.org/aos/agrovoc/c_24040,DIRECT_LABEL_MATCH
+indicator plants,bioindicators (plants),indicator plants (bioindicators (plants)),http://aims.fao.org/aos/agrovoc/c_3830,NARROWER_DESCENDANT
+infiltration water,gravitational water; seepage water,"infiltration water (gravitational water, seepage water)",http://aims.fao.org/aos/agrovoc/c_25321,NARROWER_DESCENDANT
+inorganic amendments,,inorganic amendments,http://aims.fao.org/aos/agrovoc/c_27871,NARROWER_DESCENDANT
+inorganic nitrogen,mineral nitrogen,inorganic nitrogen (mineral nitrogen),http://aims.fao.org/aos/agrovoc/c_19dbe72d,NARROWER_DESCENDANT
+integrated soil fertility management,,integrated soil fertility management,http://aims.fao.org/aos/agrovoc/c_8fc04948,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+interrill erosion,,interrill erosion,http://aims.fao.org/aos/agrovoc/c_dc754417,NARROWER_DESCENDANT
+ion transport in soil,,ion transport in soil,http://aims.fao.org/aos/agrovoc/c_25019,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+irrigated soils,,irrigated soils,http://aims.fao.org/aos/agrovoc/c_3953,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+karst soils,,karst soils,http://aims.fao.org/aos/agrovoc/c_34036,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+Kastanozems,,Kastanozems,http://aims.fao.org/aos/agrovoc/c_4079,NARROWER_DESCENDANT
+land rehabilitation,soil rehabilitation,land rehabilitation (soil rehabilitation),http://aims.fao.org/aos/agrovoc/c_33534,DIRECT_LABEL_MATCH
+land take,,land take,http://aims.fao.org/aos/agrovoc/c_03e78242,NARROWER_DESCENDANT
+layered soils,,layered soils,http://aims.fao.org/aos/agrovoc/c_4232,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+leaching,lixiviation,leaching (lixiviation),http://aims.fao.org/aos/agrovoc/c_15591,NARROWER_DESCENDANT
+leaf mould,,leaf mould,http://aims.fao.org/aos/agrovoc/c_4238,NARROWER_DESCENDANT
+leaf mulches,,leaf mulches,http://aims.fao.org/aos/agrovoc/c_20c16f0f,NARROWER_DESCENDANT
+Leptosols,,Leptosols,http://aims.fao.org/aos/agrovoc/c_da0af025,NARROWER_DESCENDANT
+lime (amendment),,lime (amendment),http://aims.fao.org/aos/agrovoc/c_36454,NARROWER_DESCENDANT
+liming,,liming,http://aims.fao.org/aos/agrovoc/c_25206,NARROWER_DESCENDANT
+liming materials,calcareous magnesium amendments,liming materials (calcareous magnesium amendments),http://aims.fao.org/aos/agrovoc/c_200,NARROWER_DESCENDANT
+lithological soil types,,lithological soil types,http://aims.fao.org/aos/agrovoc/c_4387,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+lithosols,,lithosols,http://aims.fao.org/aos/agrovoc/c_4389,NARROWER_DESCENDANT
+live mulches,green mulches,live mulches (green mulches),http://aims.fao.org/aos/agrovoc/c_4394,NARROWER_DESCENDANT
+Lixisols,,Lixisols,http://aims.fao.org/aos/agrovoc/c_7283bd0a,NARROWER_DESCENDANT
+loam soils,,loam soils,http://aims.fao.org/aos/agrovoc/c_4408,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+loess,,loess,http://aims.fao.org/aos/agrovoc/c_5031d900,NARROWER_DESCENDANT
+loess soils,,loess soils,http://aims.fao.org/aos/agrovoc/c_4418,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+losses from soil,losses from soil systems,losses from soil (losses from soil systems),http://aims.fao.org/aos/agrovoc/c_36778,DIRECT_LABEL_MATCH
+Luvisols,alfisols,Luvisols (alfisols),http://aims.fao.org/aos/agrovoc/c_4470,NARROWER_DESCENDANT
+main field preparation,,main field preparation,http://aims.fao.org/aos/agrovoc/c_330643,NARROWER_DESCENDANT
+marshland soils,,marshland soils,http://aims.fao.org/aos/agrovoc/c_4632,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+mass movement,,mass movement,http://aims.fao.org/aos/agrovoc/c_46829edb,NARROWER_DESCENDANT
+matric potential (soil),,matric potential (soil),http://aims.fao.org/aos/agrovoc/c_35951,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+meadow soils,,meadow soils,http://aims.fao.org/aos/agrovoc/c_16569,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+medium sand,,medium sand,http://aims.fao.org/aos/agrovoc/c_7b64842d,NARROWER_DESCENDANT
+medium silt,,medium silt,http://aims.fao.org/aos/agrovoc/c_090f427c,NARROWER_DESCENDANT
+microsite preparation,,microsite preparation,http://aims.fao.org/aos/agrovoc/c_37597,NARROWER_DESCENDANT
+mineral soils,,mineral soils,http://aims.fao.org/aos/agrovoc/c_4853,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+mineralogical soil types,,mineralogical soil types,http://aims.fao.org/aos/agrovoc/c_4855,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+minimum tillage,minimum cultivation,minimum tillage (minimum cultivation),http://aims.fao.org/aos/agrovoc/c_32734,NARROWER_DESCENDANT
+Modified Universal Soil Loss Equation,MUSLE (Modified Universal Soil Loss Equation),Modified Universal Soil Loss Equation (MUSLE (Modified Universal Soil Loss Equation)),http://aims.fao.org/aos/agrovoc/c_55f2905b,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+mole ploughs,drain ploughs,mole ploughs (drain ploughs),http://aims.fao.org/aos/agrovoc/c_25698,NARROWER_DESCENDANT
+mollisols,,mollisols,http://aims.fao.org/aos/agrovoc/c_ca2631da,NARROWER_DESCENDANT
+montmorillonitic soils,,montmorillonitic soils,http://aims.fao.org/aos/agrovoc/c_4926,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+moraine soils,,moraine soils,http://aims.fao.org/aos/agrovoc/c_4933,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+mouldboard ploughs,vineyard ploughs,mouldboard ploughs (vineyard ploughs),http://aims.fao.org/aos/agrovoc/c_25695,NARROWER_DESCENDANT
+mountain soils,,mountain soils,http://aims.fao.org/aos/agrovoc/c_4959,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+mud flows,mudflows,mud flows (mudflows),http://aims.fao.org/aos/agrovoc/c_f3c459ea,NARROWER_DESCENDANT
+mulches,mulching materials,mulches (mulching materials),http://aims.fao.org/aos/agrovoc/c_4977,NARROWER_DESCENDANT
+neutral soils,,neutral soils,http://aims.fao.org/aos/agrovoc/c_24138,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+Nitosols,nitisols,Nitosols (nitisols),http://aims.fao.org/aos/agrovoc/c_5185,NARROWER_DESCENDANT
+nitrate-nitrogen,NO3-N,nitrate-nitrogen (NO3-N),http://aims.fao.org/aos/agrovoc/c_0e5d9815,NARROWER_DESCENDANT
+nitrogen content,,nitrogen content,http://aims.fao.org/aos/agrovoc/c_5193,NARROWER_DESCENDANT
+nonprotein nitrogen,NPN; non-protein nitrogen,"nonprotein nitrogen (NPN, non-protein nitrogen)",http://aims.fao.org/aos/agrovoc/c_24055,NARROWER_DESCENDANT
+nonprotein nitrogen content,,nonprotein nitrogen content,http://aims.fao.org/aos/agrovoc/c_330615,NARROWER_DESCENDANT
+not plant available water,plant unavailable water,not plant available water (plant unavailable water),http://aims.fao.org/aos/agrovoc/c_aa83b262,NARROWER_DESCENDANT
+nursery bed preparation,,nursery bed preparation,http://aims.fao.org/aos/agrovoc/c_330842,NARROWER_DESCENDANT
+nutrient availability (soil),,nutrient availability (soil),http://aims.fao.org/aos/agrovoc/c_37554,DIRECT_LABEL_MATCH
+nutrient film technique,,nutrient film technique,http://aims.fao.org/aos/agrovoc/c_32655,NARROWER_DESCENDANT
+offset disc harrows,,offset disc harrows,http://aims.fao.org/aos/agrovoc/c_c74e9c9f,NARROWER_DESCENDANT
+orchard soils,,orchard soils,http://aims.fao.org/aos/agrovoc/c_5378,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+organic amendments,,organic amendments,http://aims.fao.org/aos/agrovoc/c_12965,NARROWER_DESCENDANT
+organic horizons,,organic horizons,http://aims.fao.org/aos/agrovoc/c_a4326722,NARROWER_DESCENDANT
+organic mulches,,organic mulches,http://aims.fao.org/aos/agrovoc/c_51d7cf99,NARROWER_DESCENDANT
+organic soils,,organic soils,http://aims.fao.org/aos/agrovoc/c_5390,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+organomineral complexes,,organomineral complexes,http://aims.fao.org/aos/agrovoc/c_5391,NARROWER_DESCENDANT
+paddy soils,rice soils,paddy soils (rice soils),http://aims.fao.org/aos/agrovoc/c_5498,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+palaeosolic soil types,paleosolic soil types,palaeosolic soil types (paleosolic soil types),http://aims.fao.org/aos/agrovoc/c_5510,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+palaeosols,,palaeosols,http://aims.fao.org/aos/agrovoc/c_5511,NARROWER_DESCENDANT
+peat soils,,peat soils,http://aims.fao.org/aos/agrovoc/c_5648,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+pedology,,pedology,http://aims.fao.org/aos/agrovoc/c_13187,NARROWER_DESCENDANT
+pedoturbation,,pedoturbation,http://aims.fao.org/aos/agrovoc/c_c182b38d,NARROWER_DESCENDANT
+Phaeozems,,Phaeozems,http://aims.fao.org/aos/agrovoc/c_5755,NARROWER_DESCENDANT
+phosphorus content,,phosphorus content,http://aims.fao.org/aos/agrovoc/c_63a4df58,NARROWER_DESCENDANT
+physiographic soil types,,physiographic soil types,http://aims.fao.org/aos/agrovoc/c_5835,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+pipe drainage,,pipe drainage,http://aims.fao.org/aos/agrovoc/c_25597,NARROWER_DESCENDANT
+planker,,planker,http://aims.fao.org/aos/agrovoc/c_330850,NARROWER_DESCENDANT
+planking,,planking,http://aims.fao.org/aos/agrovoc/c_330851,NARROWER_DESCENDANT
+Planosols,,Planosols,http://aims.fao.org/aos/agrovoc/c_5953,NARROWER_DESCENDANT
+plant available boron,,plant available boron,http://aims.fao.org/aos/agrovoc/c_531214d1,NARROWER_DESCENDANT
+plant available nitrogen,,plant available nitrogen,http://aims.fao.org/aos/agrovoc/c_05f1777f,NARROWER_DESCENDANT
+plant available phosphorus,,plant available phosphorus,http://aims.fao.org/aos/agrovoc/c_eb7b4957,NARROWER_DESCENDANT
+plant available water,,plant available water,http://aims.fao.org/aos/agrovoc/c_31e02b4d,NARROWER_DESCENDANT
+plant growth-promoting rhizobacteria,,plant growth-promoting rhizobacteria,http://aims.fao.org/aos/agrovoc/c_cd313ffc,NARROWER_DESCENDANT
+plant requirements,soil requirements,plant requirements (soil requirements),http://aims.fao.org/aos/agrovoc/c_25444,DIRECT_LABEL_MATCH
+plant soil relations,,plant soil relations,http://aims.fao.org/aos/agrovoc/c_16146,DIRECT_LABEL_MATCH
+plastic mulches,,plastic mulches,http://aims.fao.org/aos/agrovoc/c_13452,NARROWER_DESCENDANT
+Plinthosols,,Plinthosols,http://aims.fao.org/aos/agrovoc/c_309e7c25,NARROWER_DESCENDANT
+ploughing,,ploughing,http://aims.fao.org/aos/agrovoc/c_6021,NARROWER_DESCENDANT
+ploughs,plows,ploughs (plows),http://aims.fao.org/aos/agrovoc/c_6022,NARROWER_DESCENDANT
+Podzols,,Podzols,http://aims.fao.org/aos/agrovoc/c_6044,NARROWER_DESCENDANT
+podzoluvisols,,podzoluvisols,http://aims.fao.org/aos/agrovoc/c_6045,NARROWER_DESCENDANT
+polder soils,,polder soils,http://aims.fao.org/aos/agrovoc/c_6059,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+polluted soils,contaminated soils,polluted soils (contaminated soils),http://aims.fao.org/aos/agrovoc/c_34324,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+polygenetic soil types,,polygenetic soil types,http://aims.fao.org/aos/agrovoc/c_6083,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+prairie soils,,prairie soils,http://aims.fao.org/aos/agrovoc/c_37707,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+primary tillage,,primary tillage,http://aims.fao.org/aos/agrovoc/c_330863,NARROWER_DESCENDANT
+puddling,wet tillage,puddling (wet tillage),http://aims.fao.org/aos/agrovoc/c_35282,NARROWER_DESCENDANT
+radioactive decontamination (soil),,radioactive decontamination (soil),http://aims.fao.org/aos/agrovoc/c_36089,DIRECT_LABEL_MATCH
+rangeland soils,,rangeland soils,http://aims.fao.org/aos/agrovoc/c_6447,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+rankers,,rankers,http://aims.fao.org/aos/agrovoc/c_6450,NARROWER_DESCENDANT
+reclaimed soils,,reclaimed soils,http://aims.fao.org/aos/agrovoc/c_6473,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+reclamation,land reclamation; soil reclamation,"reclamation (land reclamation, soil reclamation)",http://aims.fao.org/aos/agrovoc/c_6474,DIRECT_LABEL_MATCH
+Regosols,,Regosols,http://aims.fao.org/aos/agrovoc/c_6492,NARROWER_DESCENDANT
+rendzinas,,rendzinas,http://aims.fao.org/aos/agrovoc/c_6501,NARROWER_DESCENDANT
+Retisols,,Retisols,http://aims.fao.org/aos/agrovoc/c_ff831af0,NARROWER_DESCENDANT
+reversible ploughs,,reversible ploughs,http://aims.fao.org/aos/agrovoc/c_25910,NARROWER_DESCENDANT
+Revised Universal Soil Loss Equation,RUSLE (Revised Universal Soil Loss Equation),Revised Universal Soil Loss Equation (RUSLE (Revised Universal Soil Loss Equation)),http://aims.fao.org/aos/agrovoc/c_9021e8ed,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+rhizosphere,root zone,rhizosphere (root zone),http://aims.fao.org/aos/agrovoc/c_6569,NARROWER_DESCENDANT
+rhizosphere pH,,rhizosphere pH,http://aims.fao.org/aos/agrovoc/c_36313,NARROWER_DESCENDANT
+ridge tillage,ridge till,ridge tillage (ridge till),http://aims.fao.org/aos/agrovoc/c_25818,NARROWER_DESCENDANT
+rill erosion,,rill erosion,http://aims.fao.org/aos/agrovoc/c_27001,NARROWER_DESCENDANT
+ripping (tillage),,ripping (tillage),http://aims.fao.org/aos/agrovoc/c_36248,NARROWER_DESCENDANT
+river terrace soils,,river terrace soils,http://aims.fao.org/aos/agrovoc/c_6616,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+roadside soils,,roadside soils,http://aims.fao.org/aos/agrovoc/c_6622,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+rollers,,rollers,http://aims.fao.org/aos/agrovoc/c_6636,NARROWER_DESCENDANT
+rotary cultivation,rotary tillage,rotary cultivation (rotary tillage),http://aims.fao.org/aos/agrovoc/c_24233,NARROWER_DESCENDANT
+rotary cultivators,power tillers,rotary cultivators (power tillers),http://aims.fao.org/aos/agrovoc/c_24077,NARROWER_DESCENDANT
+rotary diggers,,rotary diggers,http://aims.fao.org/aos/agrovoc/c_25693,NARROWER_DESCENDANT
+rotary hoes,,rotary hoes,http://aims.fao.org/aos/agrovoc/c_8f953631,NARROWER_DESCENDANT
+rotary tillers,rotary harrows; rotavator,"rotary tillers (rotary harrows, rotavator)",http://aims.fao.org/aos/agrovoc/c_330875,NARROWER_DESCENDANT
+saline and sodic soil resistance,,saline and sodic soil resistance,http://aims.fao.org/aos/agrovoc/c_330809,DIRECT_LABEL_MATCH
+saline sodic soils,saline alkali soils; saline-sodic soils,"saline sodic soils (saline alkali soils, saline-sodic soils)",http://aims.fao.org/aos/agrovoc/c_6750,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+saline soils,,saline soils,http://aims.fao.org/aos/agrovoc/c_6748,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+salinity control,soil desalination; soil desalinization; soil desalting,"salinity control (soil desalination, soil desalinization, soil desalting)",http://aims.fao.org/aos/agrovoc/c_32681,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+sandy soils,light soils,sandy soils (light soils),http://aims.fao.org/aos/agrovoc/c_6781,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+scarifiers,,scarifiers,http://aims.fao.org/aos/agrovoc/c_26150,NARROWER_DESCENDANT
+schist soils,,schist soils,http://aims.fao.org/aos/agrovoc/c_6845,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+scouring,hydrodynamic scour,scouring (hydrodynamic scour),http://aims.fao.org/aos/agrovoc/c_aa2f353f,NARROWER_DESCENDANT
+scrubland soils,,scrubland soils,http://aims.fao.org/aos/agrovoc/c_6886,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+secondary tillage,,secondary tillage,http://aims.fao.org/aos/agrovoc/c_330784,NARROWER_DESCENDANT
+seedbed preparation,,seedbed preparation,http://aims.fao.org/aos/agrovoc/c_6943,NARROWER_DESCENDANT
+semi-arid soils,semiarid soils,semi-arid soils (semiarid soils),http://aims.fao.org/aos/agrovoc/c_14192,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+sentinel animals,,sentinel animals,http://aims.fao.org/aos/agrovoc/c_6e232fee,NARROWER_DESCENDANT
+sentinel plants,,sentinel plants,http://aims.fao.org/aos/agrovoc/c_fbb9ce0c,NARROWER_DESCENDANT
+serpentine soils,,serpentine soils,http://aims.fao.org/aos/agrovoc/c_6986,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+shale soils,,shale soils,http://aims.fao.org/aos/agrovoc/c_7021,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+sheet erosion,,sheet erosion,http://aims.fao.org/aos/agrovoc/c_548566f4,NARROWER_DESCENDANT
+silty soils,,silty soils,http://aims.fao.org/aos/agrovoc/c_7066,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+site preparation,,site preparation,http://aims.fao.org/aos/agrovoc/c_32545,NARROWER_DESCENDANT
+slipping of soil,,slipping of soil,http://aims.fao.org/aos/agrovoc/c_14336,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+sodic soils,alkali soils,sodic soils (alkali soils),http://aims.fao.org/aos/agrovoc/c_7144,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil,,soil,http://aims.fao.org/aos/agrovoc/c_7156,DIRECT_LABEL_MATCH
+soil accumulation,,soil accumulation,http://aims.fao.org/aos/agrovoc/c_6b424f29,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil acidification,,soil acidification,http://aims.fao.org/aos/agrovoc/c_a97faca7,DIRECT_LABEL_MATCH
+soil air,earth atmosphere; soil atmosphere,"soil air (earth atmosphere, soil atmosphere)",http://aims.fao.org/aos/agrovoc/c_7158,DIRECT_LABEL_MATCH
+soil algae,,soil algae,http://aims.fao.org/aos/agrovoc/c_e7a071ee,DIRECT_LABEL_MATCH
+soil amendments,,soil amendments,http://aims.fao.org/aos/agrovoc/c_7159,DIRECT_LABEL_MATCH
+soil analysis,soil testing,soil analysis (soil testing),http://aims.fao.org/aos/agrovoc/c_7198,DIRECT_LABEL_MATCH
+soil anthropogenic changes,soil anthropogenic measures,soil anthropogenic changes (soil anthropogenic measures),http://aims.fao.org/aos/agrovoc/c_8b0b0337,DIRECT_LABEL_MATCH
+soil bacteria,,soil bacteria,http://aims.fao.org/aos/agrovoc/c_34c44dd1,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil biology,,soil biology,http://aims.fao.org/aos/agrovoc/c_7160,DIRECT_LABEL_MATCH
+soil breaking,,soil breaking,http://aims.fao.org/aos/agrovoc/c_25707,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil chemicophysical properties,soil physical properties; soil physicochemical properties,"soil chemicophysical properties (soil physical properties, soil physicochemical properties)",http://aims.fao.org/aos/agrovoc/c_7182,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil chemistry,,soil chemistry,http://aims.fao.org/aos/agrovoc/c_7161,DIRECT_LABEL_MATCH
+soil classification,soil taxonomy,soil classification (soil taxonomy),http://aims.fao.org/aos/agrovoc/c_7162,DIRECT_LABEL_MATCH
+soil clods,,soil clods,http://aims.fao.org/aos/agrovoc/c_34900,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil compaction,,soil compaction,http://aims.fao.org/aos/agrovoc/c_7163,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil conditioners,,soil conditioners,http://aims.fao.org/aos/agrovoc/c_7164,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil conservation,,soil conservation,http://aims.fao.org/aos/agrovoc/c_7165,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil conservation legislation,,soil conservation legislation,http://aims.fao.org/aos/agrovoc/c_0a2f9038,DIRECT_LABEL_MATCH
+soil consistence,,soil consistence,http://aims.fao.org/aos/agrovoc/c_0640b006,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil cracking,,soil cracking,http://aims.fao.org/aos/agrovoc/c_32597,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil crusts,,soil crusts,http://aims.fao.org/aos/agrovoc/c_26766,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil deficiencies,soil mineral deficiencies; soil nutrient deficiencies,"soil deficiencies (soil mineral deficiencies, soil nutrient deficiencies)",http://aims.fao.org/aos/agrovoc/c_7166,DIRECT_LABEL_MATCH
+soil degradation,soil deterioration,soil degradation (soil deterioration),http://aims.fao.org/aos/agrovoc/c_7168,DIRECT_LABEL_MATCH
+soil density,aggregate density (soil); bulk density (soil); particle density (soil),"soil density (aggregate density (soil), bulk density (soil), particle density (soil))",http://aims.fao.org/aos/agrovoc/c_7167,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil depth,,soil depth,http://aims.fao.org/aos/agrovoc/c_0c184d6f,DIRECT_LABEL_MATCH
+soil disinfection,soil disinfestation,soil disinfection (soil disinfestation),http://aims.fao.org/aos/agrovoc/c_25830,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil dynamics,,soil dynamics,http://aims.fao.org/aos/agrovoc/c_25080,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil erosion models,,soil erosion models,http://aims.fao.org/aos/agrovoc/c_331058,DIRECT_LABEL_MATCH
+soil exhaustion,soil depletion,soil exhaustion (soil depletion),http://aims.fao.org/aos/agrovoc/c_26857,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil exposure types,,soil exposure types,http://aims.fao.org/aos/agrovoc/c_378b6841,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil fauna,,soil fauna,http://aims.fao.org/aos/agrovoc/c_7169,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil fertility,nutrient status (soil); soil nutrient balance; soil nutrient content; soil productivity,"soil fertility (nutrient status (soil), soil nutrient balance, soil nutrient content, soil productivity)",http://aims.fao.org/aos/agrovoc/c_7170,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil flora,,soil flora,http://aims.fao.org/aos/agrovoc/c_7172,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil fumigation,,soil fumigation,http://aims.fao.org/aos/agrovoc/c_34236,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil functions,,soil functions,http://aims.fao.org/aos/agrovoc/c_e5629cbd,DIRECT_LABEL_MATCH
+soil fungi,,soil fungi,http://aims.fao.org/aos/agrovoc/c_33550,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil genesis,soil formation,soil genesis (soil formation),http://aims.fao.org/aos/agrovoc/c_7173,DIRECT_LABEL_MATCH
+soil heating,,soil heating,http://aims.fao.org/aos/agrovoc/c_7174,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil horizons,,soil horizons,http://aims.fao.org/aos/agrovoc/c_32749,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil hydraulic properties,hydraulic head; pressure head (soil),"soil hydraulic properties (hydraulic head, pressure head (soil))",http://aims.fao.org/aos/agrovoc/c_34125,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil hydrology,,soil hydrology,http://aims.fao.org/aos/agrovoc/c_79e2033c,DIRECT_LABEL_MATCH
+soil improvement,,soil improvement,http://aims.fao.org/aos/agrovoc/c_36315,DIRECT_LABEL_MATCH
+soil information,,soil information,http://aims.fao.org/aos/agrovoc/c_109db1c5,DIRECT_LABEL_MATCH
+soil injection,,soil injection,http://aims.fao.org/aos/agrovoc/c_7175,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil injectors,,soil injectors,http://aims.fao.org/aos/agrovoc/c_26094,DIRECT_LABEL_MATCH
+soil inoculation,,soil inoculation,http://aims.fao.org/aos/agrovoc/c_14396,DIRECT_LABEL_MATCH
+soil investigations,,soil investigations,http://aims.fao.org/aos/agrovoc/c_8595c402,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil landscapes,,soil landscapes,http://aims.fao.org/aos/agrovoc/c_714b2285,DIRECT_LABEL_MATCH
+soil loss,soil denudation,soil loss (soil denudation),http://aims.fao.org/aos/agrovoc/c_8dab65bc,DIRECT_LABEL_MATCH
+soil macropores,,soil macropores,http://aims.fao.org/aos/agrovoc/c_35318,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil management,,soil management,http://aims.fao.org/aos/agrovoc/c_7176,DIRECT_LABEL_MATCH
+soil management equipment,,soil management equipment,http://aims.fao.org/aos/agrovoc/c_25757,DIRECT_LABEL_MATCH
+soil maps,,soil maps,http://aims.fao.org/aos/agrovoc/c_e6171c3e,DIRECT_LABEL_MATCH
+soil mechanical properties,,soil mechanical properties,http://aims.fao.org/aos/agrovoc/c_8c9575f3,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil mechanics,,soil mechanics,http://aims.fao.org/aos/agrovoc/c_7177,DIRECT_LABEL_MATCH
+soil micromorphological features,,soil micromorphological features,http://aims.fao.org/aos/agrovoc/c_26827,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil microorganisms,soil microbiota; soil microfauna; soil microflora,"soil microorganisms (soil microbiota, soil microfauna, soil microflora)",http://aims.fao.org/aos/agrovoc/c_36167,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil micropores,,soil micropores,http://aims.fao.org/aos/agrovoc/c_35319,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil moisture deficit,soil water deficit,soil moisture deficit (soil water deficit),http://aims.fao.org/aos/agrovoc/c_25307,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil morphological features,,soil morphological features,http://aims.fao.org/aos/agrovoc/c_7179,DIRECT_LABEL_MATCH
+soil morphology,,soil morphology,http://aims.fao.org/aos/agrovoc/c_15699,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil movement,,soil movement,http://aims.fao.org/aos/agrovoc/c_7180,DIRECT_LABEL_MATCH
+soil mulches,,soil mulches,http://aims.fao.org/aos/agrovoc/c_14397,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil organic carbon,SOC,soil organic carbon (SOC),http://aims.fao.org/aos/agrovoc/c_389fe908,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil organic matter,SOM,soil organic matter (SOM),http://aims.fao.org/aos/agrovoc/c_35657,DIRECT_LABEL_MATCH
+soil organisms,soil life,soil organisms (soil life),http://aims.fao.org/aos/agrovoc/c_33552,DIRECT_LABEL_MATCH
+soil parent materials,substrate (soil),soil parent materials (substrate (soil)),http://aims.fao.org/aos/agrovoc/c_7181,DIRECT_LABEL_MATCH
+soil penetration resistance,,soil penetration resistance,http://aims.fao.org/aos/agrovoc/c_d79c08d8,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil permeability,,soil permeability,http://aims.fao.org/aos/agrovoc/c_14398,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil pH,soil acidity; soil alkalinity,"soil pH (soil acidity, soil alkalinity)",http://aims.fao.org/aos/agrovoc/c_34901,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil physics,,soil physics,http://aims.fao.org/aos/agrovoc/c_14400,DIRECT_LABEL_MATCH
+soil pollutants,,soil pollutants,http://aims.fao.org/aos/agrovoc/c_e9c250f9,DIRECT_LABEL_MATCH
+soil pollution,,soil pollution,http://aims.fao.org/aos/agrovoc/c_7183,DIRECT_LABEL_MATCH
+soil pore system,pores (soil),soil pore system (pores (soil)),http://aims.fao.org/aos/agrovoc/c_7184,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil porosity,,soil porosity,http://aims.fao.org/aos/agrovoc/c_35320,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil profiles,,soil profiles,http://aims.fao.org/aos/agrovoc/c_14402,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil properties,,soil properties,http://aims.fao.org/aos/agrovoc/c_330883,DIRECT_LABEL_MATCH
+soil quality,soil health,soil quality (soil health),http://aims.fao.org/aos/agrovoc/c_a9645d28,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil reclamation plants,,soil reclamation plants,http://aims.fao.org/aos/agrovoc/c_7185,DIRECT_LABEL_MATCH
+soil resources,,soil resources,http://aims.fao.org/aos/agrovoc/c_7187,DIRECT_LABEL_MATCH
+soil respiration,,soil respiration,http://aims.fao.org/aos/agrovoc/c_33553,DIRECT_LABEL_MATCH
+soil salinity,,soil salinity,http://aims.fao.org/aos/agrovoc/c_35317,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil salinization,,soil salinization,http://aims.fao.org/aos/agrovoc/c_35321,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil sampling,,soil sampling,http://aims.fao.org/aos/agrovoc/c_25271,DIRECT_LABEL_MATCH
+soil scarification,,soil scarification,http://aims.fao.org/aos/agrovoc/c_24085,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil sciences,,soil sciences,http://aims.fao.org/aos/agrovoc/c_7188,DIRECT_LABEL_MATCH
+soil scientists,,soil scientists,http://aims.fao.org/aos/agrovoc/c_7189,DIRECT_LABEL_MATCH
+soil sealing,,soil sealing,http://aims.fao.org/aos/agrovoc/c_f9554e7c,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil security,,soil security,http://aims.fao.org/aos/agrovoc/c_f42c0d0e,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil seed banks,buried seeds; soil seed potential,"soil seed banks (buried seeds, soil seed potential)",http://aims.fao.org/aos/agrovoc/c_35298,DIRECT_LABEL_MATCH
+soil separates,,soil separates,http://aims.fao.org/aos/agrovoc/c_7190,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil sequences,,soil sequences,http://aims.fao.org/aos/agrovoc/c_7191,DIRECT_LABEL_MATCH
+soil sickness,,soil sickness,http://aims.fao.org/aos/agrovoc/c_26856,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil skeleton,,soil skeleton,http://aims.fao.org/aos/agrovoc/c_3fba1536,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil solarization,,soil solarization,http://aims.fao.org/aos/agrovoc/c_33263,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil solution,,soil solution,http://aims.fao.org/aos/agrovoc/c_7192,DIRECT_LABEL_MATCH
+soil sorption,,soil sorption,http://aims.fao.org/aos/agrovoc/c_15868,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil stabilization,soil fixation,soil stabilization (soil fixation),http://aims.fao.org/aos/agrovoc/c_7171,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil sterilization,chemical sterilizing of soil,soil sterilization (chemical sterilizing of soil),http://aims.fao.org/aos/agrovoc/c_7194,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil strength,,soil strength,http://aims.fao.org/aos/agrovoc/c_25399,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil structural units,soil aggregates; soil microaggregates,"soil structural units (soil aggregates, soil microaggregates)",http://aims.fao.org/aos/agrovoc/c_7195,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil structure,tilth (soil),soil structure (tilth (soil)),http://aims.fao.org/aos/agrovoc/c_7196,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil suitability,,soil suitability,http://aims.fao.org/aos/agrovoc/c_481147ef,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil surface properties,,soil surface properties,http://aims.fao.org/aos/agrovoc/c_14702,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil survey guidelines,soil mapping guidelines,soil survey guidelines (soil mapping guidelines),http://aims.fao.org/aos/agrovoc/c_7cedf142,DIRECT_LABEL_MATCH
+soil surveys,soil mapping,soil surveys (soil mapping),http://aims.fao.org/aos/agrovoc/c_16551,DIRECT_LABEL_MATCH
+soil temperature,,soil temperature,http://aims.fao.org/aos/agrovoc/c_7197,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil texture,soil cohesion,soil texture (soil cohesion),http://aims.fao.org/aos/agrovoc/c_7199,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil thermal regimes,freeze thaw cycles (soil),soil thermal regimes (freeze thaw cycles (soil)),http://aims.fao.org/aos/agrovoc/c_7200,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil toxicity,toxic soils,soil toxicity (toxic soils),http://aims.fao.org/aos/agrovoc/c_7201,DIRECT_LABEL_MATCH
+soil trafficability,,soil trafficability,http://aims.fao.org/aos/agrovoc/c_093ee711,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil transport processes,mass transfer in soil; solute movement in soil; solute transport in soil,"soil transport processes (mass transfer in soil, solute movement in soil, solute transport in soil)",http://aims.fao.org/aos/agrovoc/c_7202,DIRECT_LABEL_MATCH
+soil treatment,,soil treatment,http://aims.fao.org/aos/agrovoc/c_7203,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil types,,soil types,http://aims.fao.org/aos/agrovoc/c_7204,DIRECT_LABEL_MATCH
+soil water,,soil water,http://aims.fao.org/aos/agrovoc/c_7205,DIRECT_LABEL_MATCH
+soil water balance,,soil water balance,http://aims.fao.org/aos/agrovoc/c_7206,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil water characteristics,,soil water characteristics,http://aims.fao.org/aos/agrovoc/c_330770,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil water constants,,soil water constants,http://aims.fao.org/aos/agrovoc/c_32444,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil water content,soil moisture,soil water content (soil moisture),http://aims.fao.org/aos/agrovoc/c_7208,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil water movement,soil water percolation; water transfer (in soil),"soil water movement (soil water percolation, water transfer (in soil))",http://aims.fao.org/aos/agrovoc/c_7209,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil water potential,suction pressure (soil),soil water potential (suction pressure (soil)),http://aims.fao.org/aos/agrovoc/c_7210,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil water regimes,,soil water regimes,http://aims.fao.org/aos/agrovoc/c_7211,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil water repellency,,soil water repellency,http://aims.fao.org/aos/agrovoc/c_ad6278b9,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil water retention,,soil water retention,http://aims.fao.org/aos/agrovoc/c_7212,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil zonation,soil zonality; soil zones,"soil zonation (soil zonality, soil zones)",http://aims.fao.org/aos/agrovoc/c_7213,DIRECT_LABEL_MATCH
+soil-borne fungi,,soil-borne fungi,http://aims.fao.org/aos/agrovoc/c_34904,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil-borne organisms,,soil-borne organisms,http://aims.fao.org/aos/agrovoc/c_24902,DIRECT_LABEL_MATCH
+soil-borne viruses,,soil-borne viruses,http://aims.fao.org/aos/agrovoc/c_36398,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+soil-borne wheat mosaic virus,,soil-borne wheat mosaic virus,http://aims.fao.org/aos/agrovoc/c_3796b28f,DIRECT_LABEL_MATCH
+soilless culture,,soilless culture,http://aims.fao.org/aos/agrovoc/c_14407,DIRECT_LABEL_MATCH
+soil–plant–atmosphere continuum,,soil–plant–atmosphere continuum,http://aims.fao.org/aos/agrovoc/c_aeebe08e,DIRECT_LABEL_MATCH
+solifluction,,solifluction,http://aims.fao.org/aos/agrovoc/c_14420,NARROWER_DESCENDANT
+Solonchaks,,Solonchaks,http://aims.fao.org/aos/agrovoc/c_7231,NARROWER_DESCENDANT
+Solonetz,,Solonetz,http://aims.fao.org/aos/agrovoc/c_7232,NARROWER_DESCENDANT
+SPAD units,SPAD values; soil plant analysis development units; soil plant analysis development values,"SPAD units (SPAD values, soil plant analysis development units, soil plant analysis development values)",http://aims.fao.org/aos/agrovoc/c_9c738133,DIRECT_LABEL_MATCH
+splash erosion,,splash erosion,http://aims.fao.org/aos/agrovoc/c_95539e7b,NARROWER_DESCENDANT
+spodic horizons,,spodic horizons,http://aims.fao.org/aos/agrovoc/c_6843b260,NARROWER_DESCENDANT
+spodosols,,spodosols,http://aims.fao.org/aos/agrovoc/c_36874,NARROWER_DESCENDANT
+Stagnosols,,Stagnosols,http://aims.fao.org/aos/agrovoc/c_d9028da2,NARROWER_DESCENDANT
+stone clearing,,stone clearing,http://aims.fao.org/aos/agrovoc/c_25433,NARROWER_DESCENDANT
+stony soils,,stony soils,http://aims.fao.org/aos/agrovoc/c_7425,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+stratigraphic soil types,,stratigraphic soil types,http://aims.fao.org/aos/agrovoc/c_7439,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+straw mulches,,straw mulches,http://aims.fao.org/aos/agrovoc/c_7442,NARROWER_DESCENDANT
+stream erosion,,stream erosion,http://aims.fao.org/aos/agrovoc/c_1d93d7d6,NARROWER_DESCENDANT
+streambank erosion,bank erosion; river bank erosion,"streambank erosion (bank erosion, river bank erosion)",http://aims.fao.org/aos/agrovoc/c_2bd4427d,NARROWER_DESCENDANT
+streambed erosion,riverbed erosion,streambed erosion (riverbed erosion),http://aims.fao.org/aos/agrovoc/c_82852448,NARROWER_DESCENDANT
+strip tillage,strip till; strip-till; strip-tillage,"strip tillage (strip till, strip-till, strip-tillage)",http://aims.fao.org/aos/agrovoc/c_1516cbf3,NARROWER_DESCENDANT
+structural soil types,,structural soil types,http://aims.fao.org/aos/agrovoc/c_7466,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+stubble ploughs,,stubble ploughs,http://aims.fao.org/aos/agrovoc/c_25696,NARROWER_DESCENDANT
+stubble tillage,mulch tillage; stubble mulch tillage; stubble-mulch tillage,"stubble tillage (mulch tillage, stubble mulch tillage, stubble-mulch tillage)",http://aims.fao.org/aos/agrovoc/c_b219433a,NARROWER_DESCENDANT
+subsidence,land subsidence,subsidence (land subsidence),http://aims.fao.org/aos/agrovoc/c_14650,NARROWER_DESCENDANT
+subsoil,,subsoil,http://aims.fao.org/aos/agrovoc/c_7486,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+subsoilers,sub soilers,subsoilers (sub soilers),http://aims.fao.org/aos/agrovoc/c_25808,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+subsoiling,,subsoiling,http://aims.fao.org/aos/agrovoc/c_15593,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+subsurface drainage,,subsurface drainage,http://aims.fao.org/aos/agrovoc/c_25349,NARROWER_DESCENDANT
+subtropical soils,,subtropical soils,http://aims.fao.org/aos/agrovoc/c_14657,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+surface cultivation,surface tillage,surface cultivation (surface tillage),http://aims.fao.org/aos/agrovoc/c_25725,NARROWER_DESCENDANT
+surface drainage,,surface drainage,http://aims.fao.org/aos/agrovoc/c_25594,NARROWER_DESCENDANT
+swamp soils,,swamp soils,http://aims.fao.org/aos/agrovoc/c_7543,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+swing ploughs,,swing ploughs,http://aims.fao.org/aos/agrovoc/c_25676,NARROWER_DESCENDANT
+tandem disc harrows,,tandem disc harrows,http://aims.fao.org/aos/agrovoc/c_b95256aa,NARROWER_DESCENDANT
+Technosols,,Technosols,http://aims.fao.org/aos/agrovoc/c_3a0750ba,NARROWER_DESCENDANT
+textural soil types,,textural soil types,http://aims.fao.org/aos/agrovoc/c_7698,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+thermal erosion,,thermal erosion,http://aims.fao.org/aos/agrovoc/c_45d5dd17,NARROWER_DESCENDANT
+tidal scour,current scouring,tidal scour (current scouring),http://aims.fao.org/aos/agrovoc/c_6ef8d296,NARROWER_DESCENDANT
+tile drainage,,tile drainage,http://aims.fao.org/aos/agrovoc/c_25598,NARROWER_DESCENDANT
+tillage,soil cultivation; tilling,"tillage (soil cultivation, tilling)",http://aims.fao.org/aos/agrovoc/c_7771,DIRECT_LABEL_MATCH
+tillage equipment,soil loosening equipment; soil preparation equipment,"tillage equipment (soil loosening equipment, soil preparation equipment)",http://aims.fao.org/aos/agrovoc/c_25768,DIRECT_LABEL_MATCH
+tillage erosion,,tillage erosion,http://aims.fao.org/aos/agrovoc/c_924f2195,NARROWER_DESCENDANT
+tine harrows,,tine harrows,http://aims.fao.org/aos/agrovoc/c_e7505488,NARROWER_DESCENDANT
+topsoil,top soil,topsoil (top soil),http://aims.fao.org/aos/agrovoc/c_7812,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+total carbon,TC,total carbon (TC),http://aims.fao.org/aos/agrovoc/c_24fb4269,NARROWER_DESCENDANT
+total inorganic carbon,TIC,total inorganic carbon (TIC),http://aims.fao.org/aos/agrovoc/c_e3783c76,NARROWER_DESCENDANT
+total nitrogen,TN,total nitrogen (TN),http://aims.fao.org/aos/agrovoc/c_bdc779f4,NARROWER_DESCENDANT
+total phosphorus,TP,total phosphorus (TP),http://aims.fao.org/aos/agrovoc/c_ac4b3c22,NARROWER_DESCENDANT
+tropical soils,,tropical soils,http://aims.fao.org/aos/agrovoc/c_7978,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+Umbrisols,,Umbrisols,http://aims.fao.org/aos/agrovoc/c_9e95a849,NARROWER_DESCENDANT
+underdrainage,,underdrainage,http://aims.fao.org/aos/agrovoc/c_25600,NARROWER_DESCENDANT
+Universal Soil Loss Equation,USLE (Universal Soil Loss Equation),Universal Soil Loss Equation (USLE (Universal Soil Loss Equation)),http://aims.fao.org/aos/agrovoc/c_32619,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+upland soils,,upland soils,http://aims.fao.org/aos/agrovoc/c_8077,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+Vertisols,,Vertisols,http://aims.fao.org/aos/agrovoc/c_8199,NARROWER_DESCENDANT
+virgin soils,,virgin soils,http://aims.fao.org/aos/agrovoc/c_35348,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+volcanic soils,pumice soils; volcanic ash soils,"volcanic soils (pumice soils, volcanic ash soils)",http://aims.fao.org/aos/agrovoc/c_8287,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+volumetric water content,volumetric soil water content,volumetric water content (volumetric soil water content),http://aims.fao.org/aos/agrovoc/c_4b440f7a,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+water erosion,rain erosion,water erosion (rain erosion),http://aims.fao.org/aos/agrovoc/c_8318,NARROWER_DESCENDANT
+water filtration (soil),water filtering (soil),water filtration (soil) (water filtering (soil)),http://aims.fao.org/aos/agrovoc/c_25b98c3e,DIRECT_LABEL_MATCH
+water repellent soils,,water repellent soils,http://aims.fao.org/aos/agrovoc/c_8edcdbc5,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+water tolerance,submergence tolerance; tolerance to wet soils; waterlogging resistance; waterlogging tolerance,"water tolerance (submergence tolerance, tolerance to wet soils, waterlogging resistance, waterlogging tolerance)",http://aims.fao.org/aos/agrovoc/c_16151,DIRECT_LABEL_MATCH
+waterlogging,hydromorphism; hydromorphology; hydromorphy; water logging; waterlogged soils,"waterlogging (hydromorphism, hydromorphology, hydromorphy, water logging, waterlogged soils)",http://aims.fao.org/aos/agrovoc/c_8333,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+wave scouring,,wave scouring,http://aims.fao.org/aos/agrovoc/c_1d083fca,NARROWER_DESCENDANT
+wetland soils,,wetland soils,http://aims.fao.org/aos/agrovoc/c_8370,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+wilting point,,wilting point,http://aims.fao.org/aos/agrovoc/c_32626,NARROWER_DESCENDANT
+wind abrasion,corrasion,wind abrasion (corrasion),http://aims.fao.org/aos/agrovoc/c_00f11054,NARROWER_DESCENDANT
+wind erosion,,wind erosion,http://aims.fao.org/aos/agrovoc/c_8393,NARROWER_DESCENDANT
+wood chips mulches,,wood chips mulches,http://aims.fao.org/aos/agrovoc/c_b6875485,NARROWER_DESCENDANT
+World Reference Base soil types,WRB soil types; World Reference Base for Soil Resources groups,"World Reference Base soil types (WRB soil types, World Reference Base for Soil Resources groups)",http://aims.fao.org/aos/agrovoc/c_89f35c33,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+xeric soils,mediterranean soils,xeric soils (mediterranean soils),http://aims.fao.org/aos/agrovoc/c_8462,DIRECT_LABEL_MATCH; NARROWER_DESCENDANT
+xerosols,,xerosols,http://aims.fao.org/aos/agrovoc/c_8463,NARROWER_DESCENDANT
+yermosols,,yermosols,http://aims.fao.org/aos/agrovoc/c_8484,NARROWER_DESCENDANT
+zero tillage,no tillage,zero tillage (no tillage),http://aims.fao.org/aos/agrovoc/c_8511,NARROWER_DESCENDANT
+zero-grazing,soilage (feeding system); zero grazing,"zero-grazing (soilage (feeding system), zero grazing)",http://aims.fao.org/aos/agrovoc/c_19085,DIRECT_LABEL_MATCH

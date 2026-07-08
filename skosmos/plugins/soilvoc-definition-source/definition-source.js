@@ -1,6 +1,11 @@
 (function () {
   "use strict";
 
+  if (window.soilvocDefinitionSourceLoaded) {
+    return;
+  }
+  window.soilvocDefinitionSourceLoaded = true;
+
   const SKOS_DEFINITION_KEYS = [
     "skos:definition",
     "definition",
@@ -49,6 +54,58 @@
   const FALLBACK_HIERARCHY_MAX_NODES = 50;
   const FEEDBACK_ENDPOINT = "https://soilvoc.wangbeichen.com/api/feedback";
   const TURNSTILE_SITE_KEY = "";
+  const CONCEPT_SUGGESTION_FIELDS = [
+    {
+      name: "suggestionType",
+      label: "Suggestion type",
+      type: "select",
+      options: [
+        "New concept",
+        "Definition correction",
+        "Hierarchy correction",
+        "Mapping or source suggestion",
+        "Procedure suggestion",
+      ],
+    },
+    {
+      name: "preferredTerm",
+      label: "Proposed preferred term",
+      placeholder: "e.g. soil microbial biomass carbon",
+    },
+    {
+      name: "alternativeLabels",
+      label: "Alternative labels",
+      placeholder: "Synonyms, abbreviations, spelling variants",
+    },
+    {
+      name: "broaderConcept",
+      label: "Suggested broader concept",
+      placeholder: "e.g. soil biological properties",
+    },
+    {
+      name: "definition",
+      label: "Definition",
+      type: "textarea",
+      placeholder: "A short definition in your own words, or from a cited source",
+    },
+    {
+      name: "source",
+      label: "Source or reference",
+      placeholder: "URL, DOI, standard, paper, or vocabulary source",
+    },
+    {
+      name: "externalMappings",
+      label: "External mappings",
+      type: "textarea",
+      placeholder: "AGROVOC, NALT, GloSIS, WRB, ChEBI, GEMET, ENVO, etc.",
+    },
+    {
+      name: "reason",
+      label: "Why this is needed",
+      type: "textarea",
+      placeholder: "Where you saw the term, how it would be used, or what gap it fills",
+    },
+  ];
 
   function asArray(value) {
     if (value === undefined || value === null) {
@@ -660,6 +717,184 @@
     }
   }
 
+  function findFeedbackControl(form, selectors) {
+    for (const selector of selectors) {
+      const control = form.querySelector(selector);
+      if (control) {
+        return control;
+      }
+    }
+    return null;
+  }
+
+  function createTemplateControl(field) {
+    const control = document.createElement(field.type === "textarea" ? "textarea" : field.type === "select" ? "select" : "input");
+    control.id = `soilvoc-feedback-${field.name}`;
+    control.name = `soilvoc-${field.name}`;
+    control.dataset.soilvocFeedbackTemplateField = field.name;
+
+    if (field.type === "textarea") {
+      control.rows = 3;
+    } else if (field.type !== "select") {
+      control.type = "text";
+    }
+
+    if (field.placeholder) {
+      control.placeholder = field.placeholder;
+    }
+
+    if (field.type === "select") {
+      for (const optionLabel of field.options || []) {
+        const option = document.createElement("option");
+        option.value = optionLabel;
+        option.textContent = optionLabel;
+        control.appendChild(option);
+      }
+    }
+
+    return control;
+  }
+
+  function createTemplateField(field) {
+    const wrapper = document.createElement("div");
+    wrapper.className = `soilvoc-concept-suggestion-field soilvoc-concept-suggestion-field-${field.name}`;
+
+    const label = document.createElement("label");
+    label.setAttribute("for", `soilvoc-feedback-${field.name}`);
+    label.textContent = field.label;
+
+    const control = createTemplateControl(field);
+
+    wrapper.appendChild(label);
+    wrapper.appendChild(control);
+    return wrapper;
+  }
+
+  function rememberRawMessage(messageField) {
+    if (!messageField || messageField.dataset.soilvocRawMessage !== undefined) {
+      return;
+    }
+
+    messageField.dataset.soilvocRawMessage = messageField.value || "";
+    messageField.addEventListener("input", () => {
+      messageField.dataset.soilvocGeneratedMessage = "false";
+      messageField.dataset.soilvocRawMessage = messageField.value || "";
+    });
+  }
+
+  function injectConceptSuggestionTemplate(form) {
+    if (form.querySelector(".soilvoc-concept-suggestion")) {
+      return;
+    }
+
+    const messageField = findFeedbackControl(form, [
+      "textarea[name='message']",
+      "textarea#message",
+      "[name='message']",
+    ]);
+    rememberRawMessage(messageField);
+
+    const section = document.createElement("section");
+    section.className = "soilvoc-concept-suggestion";
+    section.setAttribute("aria-labelledby", "soilvoc-concept-suggestion-title");
+
+    const title = document.createElement("h2");
+    title.id = "soilvoc-concept-suggestion-title";
+    title.textContent = "Suggest a SoilVoc concept";
+
+    const intro = document.createElement("p");
+    intro.className = "soilvoc-concept-suggestion-intro";
+    intro.textContent = "Use this template when you want to propose a new concept, improve a definition, or suggest a hierarchy or mapping change.";
+
+    const grid = document.createElement("div");
+    grid.className = "soilvoc-concept-suggestion-grid";
+    for (const field of CONCEPT_SUGGESTION_FIELDS) {
+      grid.appendChild(createTemplateField(field));
+    }
+
+    section.appendChild(title);
+    section.appendChild(intro);
+    section.appendChild(grid);
+
+    const submitButton = form.querySelector("#submit-feedback");
+    const target = messageField?.closest?.(".form-group, .form-field, .input-group, p, div") || messageField || submitButton?.parentElement || submitButton;
+    if (target?.parentElement) {
+      target.parentElement.insertBefore(section, target);
+    } else if (submitButton) {
+      form.insertBefore(section, submitButton);
+    } else {
+      form.appendChild(section);
+    }
+  }
+
+  function getConceptSuggestionValues(form) {
+    const values = {};
+    const controls = form.querySelectorAll("[data-soilvoc-feedback-template-field]");
+    for (const control of controls) {
+      const fieldName = control.dataset.soilvocFeedbackTemplateField;
+      values[fieldName] = (control.value || "").trim();
+    }
+    return values;
+  }
+
+  function hasConceptSuggestionContent(values) {
+    return Object.entries(values).some(([key, value]) => key !== "suggestionType" && Boolean(value));
+  }
+
+  function formatConceptSuggestionMessage(values, rawMessage) {
+    const lines = [
+      "Concept suggestion template",
+      `Suggestion type: ${values.suggestionType || "New concept"}`,
+    ];
+    const fieldLabels = new Map(CONCEPT_SUGGESTION_FIELDS.map((field) => [field.name, field.label]));
+
+    for (const field of CONCEPT_SUGGESTION_FIELDS) {
+      if (field.name === "suggestionType") {
+        continue;
+      }
+      const value = values[field.name];
+      if (value) {
+        lines.push(`${fieldLabels.get(field.name)}: ${value}`);
+      }
+    }
+
+    if (rawMessage) {
+      lines.push("", "Additional notes:", rawMessage);
+    }
+
+    return lines.join("\n");
+  }
+
+  function prepareConceptSuggestionFeedback(form) {
+    const values = getConceptSuggestionValues(form);
+    if (!hasConceptSuggestionContent(values)) {
+      return;
+    }
+
+    const subjectField = findFeedbackControl(form, [
+      "input[name='msgsubject']",
+      "input#msgsubject",
+      "[name='msgsubject']",
+    ]);
+    const messageField = findFeedbackControl(form, [
+      "textarea[name='message']",
+      "textarea#message",
+      "[name='message']",
+    ]);
+
+    if (subjectField && !subjectField.value.trim()) {
+      subjectField.value = values.preferredTerm
+        ? `Concept suggestion: ${values.preferredTerm}`
+        : "Concept suggestion for SoilVoc";
+    }
+
+    if (messageField) {
+      const rawMessage = (messageField.dataset.soilvocRawMessage ?? messageField.value ?? "").trim();
+      messageField.value = formatConceptSuggestionMessage(values, rawMessage);
+      messageField.dataset.soilvocGeneratedMessage = "true";
+    }
+  }
+
   function installFeedbackWorkerForm() {
     const form = document.querySelector("#feedback-form");
     if (!form || form.dataset.soilvocFeedbackWorker === "true") {
@@ -668,6 +903,7 @@
 
     form.dataset.soilvocFeedbackWorker = "true";
     form.action = FEEDBACK_ENDPOINT;
+    injectConceptSuggestionTemplate(form);
     injectTurnstile(form);
 
     const status = ensureFeedbackStatus(form);
@@ -675,6 +911,7 @@
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
+      prepareConceptSuggestionFeedback(form);
       if (typeof form.reportValidity === "function" && !form.reportValidity()) {
         return;
       }
@@ -709,11 +946,11 @@
   }
 
   function soilvocDefinitionSource() {
+    installFeedbackWorkerForm();
+
     if (!window.location.pathname.includes("/soilvoc/")) {
       return;
     }
-
-    installFeedbackWorkerForm();
 
     const { context, graph } = readJsonLdDocument();
     const nodeMap = buildNodeMap(graph, context);
