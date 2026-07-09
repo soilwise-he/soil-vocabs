@@ -7,7 +7,10 @@ Harmonising terminology within or between communities is an important aspect in 
 On this repository we collect soil related vocabularies, glossaries, thesauri and ontologies. Also technologies to create, maintain and publish such vocabularies are collected here. The viewer to interact with such vocabularies is available at [Soil-Vocabs Viewer](https://soilwise-he.github.io/soil-vocabs/).
 
 ## How to contribute
-The current process for uploading new properties and procedures is through a [Github issue](https://github.com/soilwise-he/soil-vocabs/issues/new/choose). Please use the issue template `new properties` or `new procedures` for properties and procedures respectively, and fill in the concept information to the table of the issue.
+The current process for uploading new properties and procedures is through a [Github issue](https://github.com/soilwise-he/soil-vocabs/issues/new/choose). The workflow is displayed as below:
+
+![soil-voc workflow](./assets/Soilwise%20workflow%20soilvoc.png)
+![terminologies](./assets/terminology.png)
 
 
 ## Relevant terminologies
