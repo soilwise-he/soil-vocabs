@@ -47,4 +47,4 @@ Link to the authoritative source defining this concept.
 
 Download the template below, complete it with your content, attach it to this Git issue, and submit the issue.
 
-[template_changeconcepts.csv](https://github.com/soilwise-he/soil-vocabs/blob/main/SoilVoc_concepts.csv)
+[template_changeconcepts.csv](https://github.com/soilwise-he/soil-vocabs/blob/main/templates/template_changeconcepts.csv)

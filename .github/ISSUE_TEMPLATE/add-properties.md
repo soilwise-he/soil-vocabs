@@ -1,7 +1,7 @@
 ---
-name: New properties
+name: Add properties
 about: To add new soil properties to SoilVoc.
-title: "[new-properties]"
+title: "[add-properties]"
 labels: ''
 assignees: ''
 type: Feature
@@ -40,4 +40,4 @@ Link to the authoritative source defining this property.
 
 Download the template below, complete it with your content, attach it to this Git issue, and submit the issue.
 
-[template_addproperty.csv](https://github.com/soilwise-he/soil-vocabs/blob/main/SoilVoc_concepts.csv)
+[template_addproperty.csv](https://github.com/soilwise-he/soil-vocabs/blob/main/templates/template_addproperty.csv)

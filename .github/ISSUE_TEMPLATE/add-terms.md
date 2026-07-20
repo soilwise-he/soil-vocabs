@@ -1,5 +1,5 @@
 ---
-name: New terms
+name: Add terms
 about: To add new terms (non-property, non-procedure) to SoilVoc
 title: "[add-terms]"
 labels: ''
@@ -49,4 +49,4 @@ Title or reference of the source document.
 
 Download the template below, complete it with your content, attach it to this Git issue, and submit the issue.
 
-[template_addterms.csv](https://github.com/soilwise-he/soil-vocabs/blob/main/SoilVoc_concepts.csv)
+[template_addterms.csv](https://github.com/soilwise-he/soil-vocabs/blob/main/templates/template_addterms.csv)

@@ -1,7 +1,7 @@
 ---
-name: New procedures
+name: Add procedures
 about: To add new soil procedures to SoilVoc.
-title: "[new-procedures]"
+title: "[add-procedures]"
 labels: ''
 assignees: ''
 type: Feature
@@ -42,4 +42,4 @@ Link to the authoritative source defining this procedure.
 
 Download the template below, complete it with your content, attach it to this Git issue, and submit the issue.
 
-[template_addprocedure.csv](https://github.com/soilwise-he/soil-vocabs/blob/main/SoilVoc_concepts.csv)
+[template_addprocedure.csv](https://github.com/soilwise-he/soil-vocabs/blob/main/templates/template_addprocedure.csv)
