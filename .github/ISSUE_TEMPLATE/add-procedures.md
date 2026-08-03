@@ -26,6 +26,10 @@ A clear textual definition of the procedure in English. Should describe the proc
 Go to soilvoc and find the URI of the property your procedure falls under.  
 *Use a soilvoc URI. If your property is not yet applied, use the prefLabel defined by you instead.*
 
+**`broader`**  
+Reference to a more general procedure. This indicates a broader (hierarchical) relationship with another procedure in SoilVoc, not with the property.  
+*Use a soilvoc URI; separate multiple values with semicolons.*
+
 **`exactMatch`**  
 Reference to an equivalent concept in an external vocabulary or authoritative source.  
 *Use a URI; separate multiple values with semicolons.*

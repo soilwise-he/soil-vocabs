@@ -20,7 +20,7 @@ The preferred label of the property in English.
 **`definition`** *(required)*  
 A clear textual definition of the concept in English. Should describe the meaning of the property, not just restate the label.
 
-**`broaderTerm`** *(required)*  
+**`broader`** *(required)*  
 Reference to a more general term.  
 *Use a soilvoc URI; separate multiple values with semicolons.*
 
