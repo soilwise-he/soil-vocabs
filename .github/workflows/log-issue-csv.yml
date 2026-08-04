@@ -1,0 +1,74 @@
+name: Log CSV attached to an issue
+
+# Test workflow: confirms we can pick up a CSV attached to an issue and read it.
+# Trigger it by opening/editing an issue whose title starts with one of the
+# template prefixes, by commenting "/log-csv" on an issue, or manually from the
+# Actions tab with an issue number.
+
+on:
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      issue:
+        description: "Issue number to read the attachment from"
+        required: true
+
+permissions:
+  contents: read
+  issues: read
+
+concurrency:
+  group: log-issue-csv-${{ github.event.issue.number || inputs.issue }}
+  cancel-in-progress: true
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'issues' &&
+        (startsWith(github.event.issue.title, '[add-terms]') ||
+         startsWith(github.event.issue.title, '[add-properties]') ||
+         startsWith(github.event.issue.title, '[add-procedures]') ||
+         startsWith(github.event.issue.title, '[change-concepts]'))) ||
+      (github.event_name == 'issue_comment' &&
+        startsWith(github.event.comment.body, '/log-csv'))
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Read the issue through the API rather than the event payload so that
+      # edits and attachments added in later comments are picked up too.
+      - name: Collect issue text
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.number || inputs.issue }}
+        run: |
+          gh issue view "$ISSUE" --repo "$GITHUB_REPOSITORY" \
+            --json body,comments \
+            --jq '.body, (.comments[] | select(.author.login != "github-actions") | .body)' \
+            > issue_text.md
+          echo "Collected $(wc -c < issue_text.md) bytes of issue text."
+
+      - name: Download and log the attached CSV
+        run: |
+          python scripts/log_issue_csv.py \
+            --body-file issue_text.md \
+            --out-dir issue-attachments
+
+      - name: Upload the CSV as an artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: issue-csv-${{ github.event.issue.number || inputs.issue }}
+          path: issue-attachments/
+          if-no-files-found: ignore
