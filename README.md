@@ -21,8 +21,8 @@ For the soil domain we should distinghuish various types of entities for which d
 - Soil **properties** / Soil health indicators to be monitored
 - **Results**, in those cases that a result is a reference to a classification (low, medium, high) a proper definition of the class needs to be defined
 - **Observation Procedures** describe how an observation has been performed
-- The potential occurence of a soil **thread** can be determined by combining a number of indicators
-- **Remediation procedures** describe how soil threads can be reduced
+- The potential occurence of a soil **threat** can be determined by combining a number of indicators
+- **Remediation procedures** describe how soil threats can be reduced
 - Ability to perform Soil **functions** is estimated by the quality indicators
 - Feature Of Interest **types**, an (set of) observation should be representative for a FOI, eg a horizon, profile, plot, site, body
 
