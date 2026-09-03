@@ -1,27 +1,27 @@
 # Skosmos Deployment for SoilVoc
 
-This folder contains a Docker Compose deployment for browsing SoilVoc in Skosmos. By default, Skosmos reads the SoilVoc graph from the online Virtuoso SPARQL endpoint.
+This folder contains a Docker Compose deployment for browsing SoilVoc in Skosmos. By default, it runs the complete stack locally with Apache Jena Fuseki as the triplestore.
 
 Default stack:
 
-- `skosmos`: Skosmos web UI from `quay.io/natlibfi/skosmos`
-- `plugins/soilvoc-definition-source`: a SoilVoc-only Skosmos plugin that displays definition text with its source and enriches the hierarchy sidebar with semantic SOSA procedure children
-
-Optional local fallback:
-
+- `skosmos`: official AMD64 Skosmos v3.2 image from `quay.io/natlibfi/skosmos`
 - `fuseki`: Apache Jena Fuseki with Jena Text indexing
 - `fuseki-cache`: Varnish cache in front of Fuseki
+- `plugins/soilvoc-definition-source`: a SoilVoc-only Skosmos plugin that displays definition text with its source and enriches the hierarchy sidebar with semantic SOSA procedure children
+
+The online Virtuoso endpoint remains available as an optional backend through `.env.virtuoso.example` and `config/skosmos-config.ttl`.
 
 ## Prerequisites
 
 - For local Windows use, Docker Desktop must be running and accessible from this shell.
 - For remote Linux deployment, use Docker Engine and the Docker Compose plugin; see [Publish Online With W3ID](#publish-online-with-w3id).
-- Internet access is required for the first run to pull the Skosmos image and for runtime access to the Virtuoso endpoint.
-- The remote Virtuoso graph must contain the generated Skosmos Turtle file in graph `https://w3id.org/eusoilvoc`.
+- Internet access is required for the first run to pull the official Skosmos image and build the Fuseki image.
+- The official Skosmos image is AMD64. ARM64 deployments must select a compatible image with `SKOSMOS_IMAGE`.
+- The optional remote mode requires access to the Virtuoso endpoint and an updated graph at `https://w3id.org/eusoilvoc`.
 
 ## Generate Skosmos Data
 
-`../SoilVoc.ttl` remains the canonical source. Generate the Skosmos display copy before uploading it to Virtuoso:
+`../SoilVoc.ttl` remains the canonical source. Generate the Skosmos display copy before loading it into Fuseki or uploading it to Virtuoso:
 
 ```powershell
 python .\generate_skosmos_ttl.py
@@ -29,13 +29,18 @@ python .\generate_skosmos_ttl.py
 
 This writes `SoilVoc_skosmos.ttl`. The generated copy preserves canonical definition blank-node `rdf:value` text, rewrites legacy `schema:text` values if present, keeps SKOS and SOSA links semantic, adds display-only `eusoilvoc:skosmosHierarchyParent` triples for Skosmos sidebar traversal, and embeds `soilvoc_ontology.ttl` so property/class labels are available from the same RDF file. This lets procedures appear in the sidebar without becoming false SKOS narrower concepts. The canonical `../SoilVoc.ttl` is not changed by this script.
 
-## Start With Remote Virtuoso
+## Start With Local Fuseki
 
 ```powershell
-cd C:\Users\wang479\Downloads\soil-vocabs\skosmos
+cd path\to\soil-vocabs\skosmos
 Copy-Item .env.example .env
-docker compose up -d
+docker compose up -d --build
+docker compose ps
+.\load-soilvoc.ps1
+docker compose restart fuseki-cache skosmos
 ```
+
+`COMPOSE_PROFILES=local-fuseki` in `.env.example` activates Fuseki and Varnish automatically. The build step builds Fuseki locally and pulls the official Skosmos v3.2 image; it does not build Skosmos.
 
 Skosmos will be available at:
 
@@ -43,13 +48,14 @@ Skosmos will be available at:
 http://localhost:9090/
 ```
 
-No local RDF load step is needed in this mode. Skosmos queries the remote endpoint directly:
+Fuseki and its cache are available on the host for diagnostics at:
 
 ```text
-https://sparql.soilwise.wetransform.eu/sparql/
+http://localhost:9030/skosmos/
+http://localhost:9031/skosmos/
 ```
 
-## Remote Smoke Tests
+## Local Smoke Tests
 
 Check container status:
 
@@ -57,7 +63,7 @@ Check container status:
 docker compose ps
 ```
 
-Check that the remote graph is reachable:
+Check that the local graph is loaded:
 
 ```powershell
 Invoke-RestMethod `
@@ -65,7 +71,7 @@ Invoke-RestMethod `
   -ContentType "application/sparql-query" `
   -Headers @{ Accept = "application/sparql-results+json" } `
   -Body "SELECT (COUNT(*) AS ?triples) WHERE { GRAPH <https://w3id.org/eusoilvoc> { ?s ?p ?o } }" `
-  -Uri "https://sparql.soilwise.wetransform.eu/sparql/"
+  -Uri "http://localhost:9030/skosmos/query"
 ```
 
 Check a known concept and the custom hierarchy projection:
@@ -76,14 +82,14 @@ Invoke-RestMethod `
   -ContentType "application/sparql-query" `
   -Headers @{ Accept = "application/sparql-results+json" } `
   -Body "PREFIX skos: <http://www.w3.org/2004/02/skos/core#> SELECT ?label WHERE { GRAPH <https://w3id.org/eusoilvoc> { <https://w3id.org/eusoilvoc#SoilpH> skos:prefLabel ?label } } LIMIT 1" `
-  -Uri "https://sparql.soilwise.wetransform.eu/sparql/"
+  -Uri "http://localhost:9030/skosmos/query"
 
 Invoke-RestMethod `
   -Method Post `
   -ContentType "application/sparql-query" `
   -Headers @{ Accept = "application/sparql-results+json" } `
   -Body "PREFIX eusoilvoc: <https://w3id.org/eusoilvoc#> SELECT ?parent WHERE { GRAPH <https://w3id.org/eusoilvoc> { eusoilvoc:pHProcedure-pHCaCl2 eusoilvoc:skosmosHierarchyParent ?parent } } LIMIT 1" `
-  -Uri "https://sparql.soilwise.wetransform.eu/sparql/"
+  -Uri "http://localhost:9030/skosmos/query"
 ```
 
 Check Skosmos search through the local UI service:
@@ -95,9 +101,21 @@ Invoke-RestMethod `
 
 Then open `http://localhost:9090/soilvoc/en/` and search for `soil porosity`. Open a concept with a sourced definition such as `MineralConcVolume` and confirm the Definition row includes a Source line. Open `BaseSaturation` to confirm `Has procedure` is shown on the concept page and procedure children are available through the hierarchy navigation.
 
+## Optional Remote Virtuoso
+
+The remote option starts only Skosmos and reads the SoilVoc graph from `https://sparql.soilwise.wetransform.eu/sparql/`:
+
+```powershell
+docker compose --profile local-fuseki down
+Copy-Item .env.virtuoso.example .env -Force
+docker compose up -d
+```
+
+No local RDF load is needed in this mode. To return to local Fuseki, copy `.env.example` back to `.env`, start the stack, and run `load-soilvoc.ps1` again.
+
 ## Publish Skosmos Alongside W3ID
 
-Current public shape:
+Example public shape using the optional remote Virtuoso backend:
 
 ```text
 https://w3id.org/eusoilvoc
@@ -123,7 +141,7 @@ Use a Linux server with:
 - Docker Engine and Docker Compose plugin.
 - A public DNS name, for example `soilvoc.example.org`.
 - Inbound ports `80` and `443` open for HTTP/TLS.
-- Outbound HTTPS access to `https://sparql.soilwise.wetransform.eu/sparql/`.
+- Outbound HTTPS access to `https://sparql.soilwise.wetransform.eu/sparql/` when using the optional remote backend.
 
 Clone or copy this repository to the server:
 
@@ -134,9 +152,9 @@ git clone https://github.com/soilwise-he/soil-vocabs.git /opt/soil-vocabs
 cd /opt/soil-vocabs/skosmos
 ```
 
-If the server receives a deployment archive instead of using `git clone`, make sure the `skosmos/config`, `skosmos/plugins`, and `skosmos/docker-compose.yml` files are present.
+If the server receives a deployment archive instead of using `git clone`, make sure the `skosmos/config`, `skosmos/plugins`, `skosmos/custom-templates`, `skosmos/Soilwise_workflow_soilvoc.png`, and `skosmos/docker-compose.yml` files are present.
 
-For the remote-Virtuoso deployment, cloning this repository is enough to get the Skosmos Compose file, configuration, and SoilVoc plugin onto the server. The runtime vocabulary data comes from the Virtuoso graph, not from local Fuseki, so no local RDF load step is needed unless you deliberately use the `local-fuseki` fallback.
+For the remote-Virtuoso deployment, cloning this repository is enough to get the Skosmos Compose file, configuration, and SoilVoc customizations onto the server. The runtime vocabulary data comes from the Virtuoso graph, so no local RDF load step is needed. The default local-Fuseki deployment also needs `SoilVoc_skosmos.ttl` loaded with `load-soilvoc.ps1` or an equivalent Graph Store Protocol request.
 
 ### 2. Configure the Production Container
 
@@ -144,7 +162,7 @@ Create a production `.env` file:
 
 ```bash
 cd /opt/soil-vocabs/skosmos
-cp .env.example .env
+cp .env.virtuoso.example .env
 nano .env
 ```
 
@@ -153,17 +171,14 @@ Recommended production values:
 ```dotenv
 SKOSMOS_PORT=127.0.0.1:9090
 SKOSMOS_CONFIG=./config/skosmos-config.ttl
-SKOSMOS_TAG=3.2
-FUSEKI_PORT=9030
-CACHE_PORT=9031
-JENA_VERSION=5.4.0
+SKOSMOS_IMAGE=quay.io/natlibfi/skosmos:v3.2
 ```
 
 Binding `SKOSMOS_PORT` to `127.0.0.1:9090` keeps the unencrypted container port private. Public traffic should enter through the HTTPS reverse proxy.
 
-Pin `SKOSMOS_TAG` to a Skosmos image tag you have tested. Avoid `latest` for production unless you intentionally want automatic image changes during redeploys.
+Set `SKOSMOS_IMAGE` to a Skosmos image tag or digest you have tested. Avoid `latest` unless you intentionally want automatic image changes during redeploys. The official image above is AMD64; an ARM64 host must override it with a compatible image.
 
-To make production look the same as the local deployment, use the same Skosmos image tag, the same `config/skosmos-config.ttl`, and the same `plugins/soilvoc-definition-source` directory. No Skosmos source-code fork or front-end redesign is needed for a normal public deployment.
+To make production look the same as the local deployment, use the same Skosmos image and the same tracked plugin, custom-template, and image assets. The backend-specific `SKOSMOS_CONFIG` selects either local Fuseki or remote Virtuoso. No Skosmos source-code fork or front-end redesign is needed for a normal AMD64 deployment.
 
 Keep `config/skosmos-config.ttl` pointed at Virtuoso:
 
@@ -178,7 +193,7 @@ skosmos:sparqlDialect "Generic" ;
     skosmos:mainConceptScheme <https://w3id.org/eusoilvoc> .
 ```
 
-Do not start the `local-fuseki` profile in production unless you intentionally want to use a local fallback triplestore.
+Do not start the `local-fuseki` profile in this remote-Virtuoso deployment.
 
 ### 3. Start Skosmos
 
@@ -189,7 +204,7 @@ docker compose up -d
 docker compose ps
 ```
 
-Only the `skosmos` service should be running in the remote-default mode.
+Only the `skosmos` service should be running in remote-Virtuoso mode.
 
 Check the container directly from the server:
 
@@ -316,23 +331,22 @@ docker compose up -d
 docker compose restart skosmos
 ```
 
-For vocabulary data changes:
+For vocabulary data changes in this remote-Virtuoso production example:
 
 1. Regenerate `skosmos/SoilVoc_skosmos.ttl` locally or in CI.
 2. Upload the regenerated TTL to the Virtuoso graph `https://w3id.org/eusoilvoc`.
 3. If you publish a static RDF dump, copy the regenerated TTL to `/var/www/soilvoc-rdf/SoilVoc_skosmos.ttl` on the server.
 4. Re-run the public smoke tests above.
 
-Because production Skosmos queries Virtuoso directly, no local Fuseki reload is needed. Restart Skosmos only when its config, plugin files, or container image changes.
+Because this production example queries Virtuoso directly, no local Fuseki reload is needed. Restart Skosmos only when its config, plugin files, or container image changes.
 
-## Optional Local Fuseki Fallback
+## Local Fuseki Maintenance
 
-Use this only when you want an offline/local triplestore. It uses `config/skosmos-config.local-fuseki.ttl`, starts Fuseki and Varnish through the `local-fuseki` profile, and loads `SoilVoc_skosmos.ttl` into the local graph.
+The default `.env.example` uses `config/skosmos-config.local-fuseki.ttl`, starts Fuseki and Varnish through the `local-fuseki` profile, and loads `SoilVoc_skosmos.ttl` into the local graph.
 
 ```powershell
-cd C:\Users\wang479\Downloads\soil-vocabs\skosmos
-$env:SKOSMOS_CONFIG = "./config/skosmos-config.local-fuseki.ttl"
-docker compose --profile local-fuseki up -d --build
+cd path\to\soil-vocabs\skosmos
+docker compose up -d --build
 .\load-soilvoc.ps1
 ```
 
@@ -342,10 +356,10 @@ If your PowerShell execution policy blocks local scripts, run:
 powershell -ExecutionPolicy Bypass -File .\load-soilvoc.ps1
 ```
 
-If the fallback stack was already running before a reload, restart the cache and frontend so old responses do not mask the updated graph:
+If the stack was already running before a reload, restart the cache and frontend so old responses do not mask the updated graph:
 
 ```powershell
-docker compose --profile local-fuseki restart fuseki-cache skosmos
+docker compose restart fuseki-cache skosmos
 ```
 
 Equivalent manual load command:
@@ -365,21 +379,14 @@ Invoke-WebRequest `
 docker compose down
 ```
 
-For the local Fuseki fallback, include the profile when you want to stop profiled services explicitly:
-
-```powershell
-docker compose --profile local-fuseki down
-```
-
 ## Clean Local Fuseki Reset
 
 This removes the local Fuseki data volume and reloads the Skosmos copy from scratch:
 
 ```powershell
-docker compose --profile local-fuseki down -v
+docker compose down -v
 python .\generate_skosmos_ttl.py
-$env:SKOSMOS_CONFIG = "./config/skosmos-config.local-fuseki.ttl"
-docker compose --profile local-fuseki up -d --build
+docker compose up -d --build
 .\load-soilvoc.ps1
 ```
 
@@ -389,11 +396,12 @@ docker compose --profile local-fuseki up -d --build
 - Skosmos vocabulary graph URI: `https://w3id.org/eusoilvoc`
 - SoilVoc concept URI space: `https://w3id.org/eusoilvoc#`
 - Skosmos UI port: `9090`
-- Local Fuseki fallback host port: `9030`
-- Local Varnish fallback host port: `9031`
-- The remote default uses Skosmos' Generic SPARQL dialect. Exact label searches such as `soil porosity` work directly; use wildcard terms such as `*porosity*` for partial single-word search checks.
+- Local Fuseki host port: `9030`
+- Local Varnish host port: `9031`
+- Local Fuseki is the default backend and uses Skosmos' Jena Text dialect. The optional remote Virtuoso configuration uses the Generic SPARQL dialect.
+- The feedback plugin posts to the same-origin path `/api/feedback`. Email delivery is available only on a deployment that provides that route, such as the production Cloudflare Worker; it is not part of the local Compose stack.
 - `SoilVoc_skosmos.ttl` is a generated Skosmos display copy; regenerate it from `../SoilVoc.ttl` and `soilvoc_ontology.ttl`.
-- Override ports, image versions, or `SKOSMOS_CONFIG` by copying `.env.example` to `.env` and editing the values.
+- Override ports, `SKOSMOS_IMAGE`, or `SKOSMOS_CONFIG` by copying an environment example to `.env` and editing the values.
 - W3ID identifier setup: `https://w3id.org/`
 - Skosmos Docker notes: `https://github.com/NatLibFi/Skosmos/wiki/Install-Skosmos-with-Fuseki-in-Docker`
 - Skosmos configuration reference: `https://github.com/NatLibFi/Skosmos/wiki/Configuration`

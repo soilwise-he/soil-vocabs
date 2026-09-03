@@ -40,7 +40,7 @@ services:
 
   skosmos:
     hostname: skosmos
-    image: ${SKOSMOS_IMAGE:-soilvoc-skosmos:arm64}
+    image: ${SKOSMOS_IMAGE:-quay.io/natlibfi/skosmos:v3.2}
     ports:
       - ${SKOSMOS_PORT:-9090}:80
     volumes:

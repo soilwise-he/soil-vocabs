@@ -188,7 +188,7 @@ vm.runInNewContext(fs.readFileSync(new URL("./definition-source.js", import.meta
 context.window.soilvocDefinitionSource();
 
 assert.equal(form.dataset.soilvocFeedbackWorker, "true");
-assert.equal(form.action, "https://soilvoc.wangbeichen.com/api/feedback");
+assert.equal(form.action, "/api/feedback");
 assert.equal(typeof form.listeners.get("submit"), "function");
 assert.ok(form.querySelector(".soilvoc-concept-suggestion"));
 assert.equal(form.querySelectorAll("[data-soilvoc-feedback-template-field]").length, 8);
@@ -213,7 +213,7 @@ assert.match(messageField.value, /Concept suggestion template/);
 assert.match(messageField.value, /Proposed preferred term: soil enzyme activity/);
 assert.match(messageField.value, /Suggested broader concept: soil biological properties/);
 assert.match(messageField.value, /Additional notes:\nPlease consider adding this term/);
-assert.equal(fetchCall.input, "https://soilvoc.wangbeichen.com/api/feedback");
+assert.equal(fetchCall.input, "/api/feedback");
 assert.equal(fetchCall.options.method, "POST");
 assert.equal(fetchCall.options.body.source, form);
 assert.equal(submitButton.disabled, true);

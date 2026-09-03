@@ -52,7 +52,7 @@
   ];
   const SOILVOC_DATA_FORMAT = "application/ld+json";
   const FALLBACK_HIERARCHY_MAX_NODES = 50;
-  const FEEDBACK_ENDPOINT = "https://soilvoc.wangbeichen.com/api/feedback";
+  const FEEDBACK_ENDPOINT = "/api/feedback";
   const TURNSTILE_SITE_KEY = "";
   const CONCEPT_SUGGESTION_FIELDS = [
     {

@@ -5,6 +5,9 @@ Cloudflare Worker used by the Skosmos feedback page at
 
 The Worker receives the existing Skosmos form fields, validates the submission,
 and sends one email notification through Cloudflare's `send_email` binding.
+The Skosmos plugin posts to the same-origin path `/api/feedback`; the production
+route below maps that path to this Worker. Local Skosmos deployments do not run
+the Worker and therefore do not provide email delivery by default.
 
 ## Local Checks
 
