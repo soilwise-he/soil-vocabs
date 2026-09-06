@@ -10,11 +10,13 @@ services:
       dockerfile: Dockerfile
       args:
         JENA_VERSION: ${JENA_VERSION:-5.4.0}
-    command: --config=/fuseki/config/skosmos.ttl
+    command:
+      - --config=/fuseki/config/skosmos.ttl
+      - --base=/fuseki/webapp
     environment:
       - JAVA_OPTIONS=-Xmx2g -Xms1g
     ports:
-      - ${FUSEKI_PORT:-9030}:3030
+      - ${FUSEKI_PORT:-127.0.0.1:9030}:3030
     volumes:
       - ./config/fuseki-skosmos.ttl:/fuseki/config/skosmos.ttl:ro
       - fuseki-databases:/fuseki/databases
@@ -29,7 +31,7 @@ services:
     security_opt:
       - seccomp:unconfined
     ports:
-      - ${CACHE_PORT:-9031}:80
+      - ${CACHE_PORT:-127.0.0.1:9031}:80
     volumes:
       - type: bind
         source: ./config/varnish-default.vcl

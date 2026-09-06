@@ -40,8 +40,12 @@ RUN \
         --output "${JAVA_MINIMAL}" \
         --add-modules "${JDEPS},${JDEPS_EXTRA}"
 
+# Fuseki's --base option serves UI assets from the filesystem.
+RUN jar xf "${FUSEKI_JAR}" webapp && test -f webapp/index.html
+
 ADD entrypoint.sh .
 ADD log4j2.properties .
+COPY shiro.ini ./run/shiro.ini
 
 FROM alpine:${ALPINE_VERSION}
 

@@ -1,0 +1,2 @@
+# These scripts run inside a Linux container, including on Windows hosts.
+*.sh text eol=lf
