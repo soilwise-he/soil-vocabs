@@ -8,6 +8,9 @@ tests/
 # local worktrees
 .worktrees/
 
+# local Cloudflare deployment files
+/cloudflare/
+
 # similarity csv
 entity_similarity_gpt.csv
 
