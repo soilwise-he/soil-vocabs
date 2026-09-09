@@ -1,0 +1,8 @@
+{
+  "js": [
+    "contains-search.js?v=20260909-type-labels"
+  ],
+  "callback": [
+    "soilvocContainsSearch"
+  ]
+}

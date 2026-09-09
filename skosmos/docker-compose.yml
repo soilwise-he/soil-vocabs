@@ -55,6 +55,10 @@ services:
         target: /var/www/html/plugins/soilvoc-definition-source
         read_only: true
       - type: bind
+        source: ./plugins/soilvoc-contains-search
+        target: /var/www/html/plugins/soilvoc-contains-search
+        read_only: true
+      - type: bind
         source: ./custom-templates
         target: /var/www/html/custom-templates
         read_only: true

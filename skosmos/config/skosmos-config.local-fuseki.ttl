@@ -31,7 +31,7 @@
     skosmos:uiLanguageDropdown false ;
     skosmos:uiHoneypotEnabled true ;
     skosmos:uiHoneypotTime 5 ;
-    skosmos:globalPlugins ( "soilvoc-definition-source" ) .
+    skosmos:globalPlugins ( "soilvoc-definition-source" "soilvoc-contains-search" ) .
 
 :soilvoc a skosmos:Vocabulary, void:Dataset ;
     dc:title "SoilVoc - Soil science vocabulary"@en ;
@@ -69,7 +69,7 @@
             skosmos:memberOfArray
         )
     ] ;
-    skosmos:vocabularyPlugins ( "soilvoc-definition-source" ) ;
+    skosmos:vocabularyPlugins ( "soilvoc-definition-source" "soilvoc-contains-search" ) ;
     skosmos:loadExternalResources false .
 
 :categories a skos:ConceptScheme ;

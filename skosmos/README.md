@@ -8,6 +8,7 @@ Default stack:
 - `fuseki`: Apache Jena Fuseki with Jena Text indexing and its bundled browser query UI
 - `fuseki-cache`: Varnish cache in front of Fuseki
 - `plugins/soilvoc-definition-source`: a SoilVoc-only Skosmos plugin that displays definition text with its source and enriches the hierarchy sidebar with semantic SOSA procedure children
+- `plugins/soilvoc-contains-search`: searches anywhere within labels in both autocomplete and submitted searches, using the native Skosmos search components
 
 The local Skosmos instance can also use an existing Virtuoso endpoint through `.env.virtuoso.example` and `config/skosmos-config.ttl`.
 
@@ -124,6 +125,30 @@ Invoke-RestMethod `
 ```
 
 Then open `http://localhost:9090/soilvoc/en/` and search for `soil porosity`. Open a concept with a sourced definition such as `MineralConcVolume` and confirm the Definition row includes a Source line. Open `BaseSaturation` to confirm `Has procedure` is shown on the concept page and procedure children are available through the hierarchy navigation.
+
+## Search Matching
+
+The contains-search plugin converts `Hydraulic conductivity` (or `Hydraulic conductivity*`) into `*Hydraulic conductivity*`. Autocomplete and the results page then include soil, saturated, and unsaturated hydraulic conductivity. Existing boundary wildcards are not duplicated; internal wildcards are retained. Empty input does not trigger a search.
+
+The same behavior applies to the global search and vocabulary search. Language/vocabulary filters and the native autocomplete delay are preserved. Bookmarked search pages with an unwrapped `q` parameter are normalized once in the browser. Direct REST API callers retain native Skosmos semantics and must supply their own wildcards.
+
+Autocomplete uses the readable SOSA type labels `Observable Property` and `Procedure` when Skosmos omits them from its type dictionary. Native labels and translations take precedence over these English fallbacks.
+
+This is a JavaScript plugin for the official Skosmos 3.2 image; it does not change the RDF data or require rebuilding the Fuseki index. After adding the plugin mount to an existing installation, recreate only Skosmos:
+
+```powershell
+docker compose up -d --no-deps skosmos
+```
+
+Reload the browser afterward. To disable the plugin, remove `soilvoc-contains-search` from both plugin lists in the selected Skosmos configuration. Its query matching is backend-independent; the same plugin is enabled in the optional Virtuoso configuration.
+
+From the repository root, run its regression tests with:
+
+```powershell
+node --test skosmos/plugins/soilvoc-contains-search/contains-search.test.mjs
+```
+
+Set `SKOSMOS_TEST_URL=http://localhost:9090/` to also run compatibility tests against the native search JavaScript in the running image. These tests check both search components and should be rerun when upgrading Skosmos; the plugin relies on their synchronous URL construction.
 
 ## Optional Virtuoso Backend
 
