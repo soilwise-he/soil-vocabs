@@ -1,17 +1,20 @@
 [![DOI](https://zenodo.org/badge/1016805177.svg)](https://doi.org/10.5281/zenodo.19710233)
 
-# Soil Vocabs
+# EUSoilVoc
 
 Harmonising terminology within or between communities is an important aspect in cooperation. The SKOS ontology is a common mechanism to advertise (and link between) terminologies.  
 
-On this repository we collect soil related vocabularies, glossaries, thesauri and ontologies. Also technologies to create, maintain and publish such vocabularies are collected here. The viewer to interact with such vocabularies is available at [Soil-Vocabs Viewer](https://soilwise-he.github.io/soil-vocabs/).
+This repository aims to facilitate co-creation of a skos vocabulary around `soil observation data`. It includes definitions of soil properties (descriptors), indicators and observation methods. It also includes a number of tools to prepare and interact with the vocabulary:
+- Tooling to [traverse to and from RDF](#traverse-tooling) (ttl) to CSV. CSV facilitates reviews by content specialists. While the RDF can be read by engines.
+- A [REST API](#rest-api) to interact with the vocabulary (read only).
+- A human friendly [web interface](#web-interface) to browse through the vocabulary. This website is available at [Soil-Vocabs Viewer](https://soilwise-he.github.io/soil-vocabs/), which is also linked to [w3id.org/EUSoilVoc](https://w3id.org/EUSoilVoc)
+- A [traversing experiment](#soil-health-benchmarks) on the existing soil health benchmarks glossary 
 
 ## How to contribute
 The current process for uploading new properties and procedures is through a [Github issue](https://github.com/soilwise-he/soil-vocabs/issues/new/choose). The workflow is displayed as below:
 
 ![soil-voc workflow](./assets/Soilwise%20workflow%20soilvoc.png)
 ![terminologies](./assets/terminology.png)
-
 
 ## Relevant terminologies
 
@@ -26,30 +29,9 @@ For the soil domain we should distinghuish various types of entities for which d
 - Ability to perform Soil **functions** is estimated by the quality indicators
 - Feature Of Interest **types**, an (set of) observation should be representative for a FOI, eg a horizon, profile, plot, site, body
 
-## Interfaces
+## Traverse tooling
 
-- **SoilVoc Viewer** — a browser-based viewer to explore concepts in hierarchies. Available at [soil-vocabs](https://w3id.org/eusoilvoc).
-- **SoilVoc REST API** — a REST API for searching concepts, getting concept details and getting procedures linked to properties. Available at [SoilVoc api](https://api.soilwise-he.containers.wur.nl/vocab/docs#/concepts/search_api_v1_concepts_search_get). See [api/README.md](./api/README.md).
-
-## SoilWise Activities
-
-- Design, test and document strategies on the use of SKOS when designing and publishing glossaries in Soil Mission projects
-- [Soil Health Knowledge Graph](https://github.com/soilwise-he/soil-health-knowledge-graph) is a knowledge graph around soil health, based on EEA SoilHealth documentation
-- [keyword matching](https://github.com/soilwise-he/metadata-augmentation/tree/main/keyword-matcher) uses synynyms and translations in agrovoc to match keywords on metadata records to a matched subset of keywords, to cluster records in filters
-- [NER augmentation](https://github.com/soilwise-he/metadata-augmentation/tree/main/NER%20augmentation) is used to extract relevant keywords from the metadata record and its context
-- [Soil-Vocabs](https://github.com/soilwise-he/soil-vocabs/tree/main/soil_health_benchmarks) contains some initiatives around improving soil vocabularies. Tooling to create a SKOS representation of a CSV with terms and definitions. And a [viewer to browse such a knowledge graph](https://soilwise-he.github.io/soil-vocabs/)
-- A [vocview instance](https://voc.soilwise-he.containers.wur.nl/) to browse the Soil Health Knowledge Graph ([github](https://github.com/ternaustralia/vocview))
-- Search strategies based on keyword relations in known vocabularies (broader, narrower, ...)
-
-## Soil health Benchmarks
-
-This repository includes an effort to convert the existing Benchmarks glossary to RDF.
-
-Please go to [soil_health_benchmarks](./soil_health_benchmarks) for glossary to SKOS conversion and interlinking utilities.
-
-## Tooling layout
-
-The main published vocabulary files stay at the repository root, while support tooling lives in dedicated folders:
+The main published vocabulary files are available in the repository root, while support tooling lives in dedicated folders:
 
 - `scripts/restore_soilvoc_from_csv.py` rebuilds or compares `SoilVoc.ttl` from `SoilVoc_concepts.csv`
 - `scripts/generate_soilvoc_html.py` refreshes `assets/soilvoc_data.json` from `SoilVoc.ttl`
@@ -63,6 +45,27 @@ python scripts/restore_soilvoc_from_csv.py --csv SoilVoc_concepts.csv --out Soil
 python scripts/generate_soilvoc_html.py
 docker build -f docker/Dockerfile -t soilvoc .
 ```
+
+## Rest api
+
+A REST API for searching concepts, getting concept details and getting procedures linked to properties. Available at [SoilVoc api]([#/concepts/search_api_v1_concepts_search_get](http://api.soilwise.wetransform.eu/vocab/docs)). Read more at [api/README.md](./api/README.md).
+
+## Web interface
+
+A browser-based viewer to explore concepts in hierarchies. Updates to the vocabulary are automatically reflected on the web interface using a github action.
+Available at [soil-vocabs](https://w3id.org/eusoilvoc).
+
+## Soil health Benchmarks
+
+This repository includes an effort to convert the existing [Benchmarks glossary](https://soilhealthbenchmarks.eu/glossary/) to RDF.
+
+Visit the [soil_health_benchmarks](./soil_health_benchmarks) folder for glossary-to-SKOS conversion and interlinking utilities.
+
+## Installation instructions
+
+The software in this repository is available as [docker image](https://github.com/soilwise-he/soil-vocabs/pkgs/container/soil-vocabs). See details of the component on how to run the utility. 
+
+---
 
 ## Soilwise-he project
 This work has been initiated as part of the [Soilwise-he](https://soilwise-he.eu) project. The project receives
