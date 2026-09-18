@@ -64,6 +64,9 @@ eusoilvoc:SoilNutrientRetention a skos:Concept ;
     skos:prefLabel "soil nutrient retention"@en .
 
 eusoilvoc:SoilOrganicMatter a skos:Concept ;
+    # Textbook definition: audited printed page(s) 72; source term spp:SoilOrganicMatter.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A complex mixture of living and dead substances of plant and animal origin in soil."@en ] ;
     skos:broader eusoilvoc:SoilOrganicComponents ;
     skos:exactMatch spp:SoilOrganicMatter ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -82,12 +85,19 @@ eusoilvoc:SoilSolidTransport a skos:Concept ;
     skos:prefLabel "soil solid transport"@en .
 
 eusoilvoc:SoilWaterAdsorption a skos:Concept ;
+    # Scope qualification: The passage concerns clay surfaces; retain that material scope.
+    # Index-guided textbook definition: printed page(s) 65; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Attachment of water molecules to clay surfaces, where they may be held by hydrogen bonding or electrostatic attraction; the water so held is termed adsorbed water."@en ] ;
     skos:broader eusoilvoc:SoilAdsorption ;
     skos:exactMatch spp:SoilWaterAdsorption ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil water adsorption"@en .
 
 eusoilvoc:SoilWaterRetention a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 268; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Holding of water in soil pores and on soil particles by forces of cohesion and adhesion, with surface tension, capillarity and osmotic pressure contributing to that holding."@en ] ;
     skos:broader eusoilvoc:SoilRetention,
         eusoilvoc:SoilWaterPhysicalProcesses ;
     skos:exactMatch spp:SoilWaterRetention ;
@@ -102,30 +112,45 @@ eusoilvoc:Termites a skos:Concept ;
     skos:prefLabel "termites"@en .
 
 eusoilvoc:AerationPorosity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 522; source term spp:AerationPorosity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The pore space filled with air when a soil sample is placed on a porous plate and equilibrated at 50 cm of suction."@en ] ;
     skos:broader eusoilvoc:SoilPorosityIndex ;
     skos:exactMatch spp:AerationPorosity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "aeration porosity"@en .
 
 eusoilvoc:AggregatedSiltClay a skos:Concept ;
+    # Textbook definition: audited printed page(s) 123; source term spp:AggregatedSiltClay.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "An index of soil aggregation calculated as the actual silt-plus-clay percentage determined with dispersion minus the percentage in suspension determined without dispersion."@en ] ;
     skos:broader eusoilvoc:SoilStructureIndirectIndex ;
     skos:exactMatch spp:AggregatedSiltClay ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "aggregated silt clay"@en .
 
 eusoilvoc:AgriculturalSustainability a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 6; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Non-negative trends in agricultural productivity while preserving the resource base and maintaining environmental quality."@en ] ;
     skos:broader eusoilvoc:SoilAgriculturalFunctions ;
     skos:exactMatch spp:AgriculturalSustainability ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "agricultural sustainability"@en .
 
 eusoilvoc:AirFilledPorosity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 21; source term spp:AirFilledPorosity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ratio of the volume of air in soil pores to the total soil volume; it is also equal to total porosity minus volumetric soil moisture content."@en ] ;
     skos:broader eusoilvoc:SoilPorosity ;
     skos:exactMatch spp:AirFilledPorosity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "air filled porosity"@en .
 
 eusoilvoc:AirPorosity a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 20, 21; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The volume of air-filled pores divided by the total soil volume; equivalently, total porosity minus volumetric water content."@en ] ;
     skos:broader eusoilvoc:SoilPorosity ;
     skos:exactMatch spp:AirPorosity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -138,12 +163,18 @@ eusoilvoc:AirQuality a skos:Concept ;
     skos:prefLabel "air quality"@en .
 
 eusoilvoc:AirRatio a skos:Concept ;
+    # Textbook definition: audited printed page(s) 21; source term spp:AirRatio.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ratio of the volume of air in a soil to the volume of its solids."@en ] ;
     skos:broader eusoilvoc:SoilPorosity ;
     skos:exactMatch spp:AirRatio ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "air ratio"@en .
 
 eusoilvoc:AntecedentSoilMoistureContents a skos:Concept ;
+    # Textbook definition: audited printed page(s) 158; source term spp:AntecedentSoilMoistureContent.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The wetness of a soil at the beginning of a rainfall event."@en ] ;
     skos:altLabel "antecedent soil moisture content"@en ;
     skos:broader eusoilvoc:SoilMoistureContents ;
     skos:definition [ dcterms:source spp:AntecedentSoilMoistureContent ;
@@ -159,6 +190,9 @@ eusoilvoc:Biochannel a skos:Concept ;
     skos:prefLabel "biochannel"@en .
 
 eusoilvoc:BiologicalNitrogenFixation a skos:Concept ;
+    # Textbook definition: audited printed page(s) 516; source term spp:BiologicalNitrogenFixation.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The process by which bacteria absorb nitrogen gas from the air and convert it to ammonium that plants can use."@en ] ;
     skos:broader eusoilvoc:SoilBiologicalProcesses ;
     skos:exactMatch spp:BiologicalNitrogenFixation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -189,12 +223,18 @@ eusoilvoc:CationExchangeCapacity a skos:Concept ;
     skos:prefLabel "cation exchange capacity"@en .
 
 eusoilvoc:Clay a skos:Concept ;
+    # Textbook definition: audited printed page(s) 31; source term spp:Clay.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The fine, reactive soil-particle fraction consisting of particles less than 0.002 mm in diameter."@en ] ;
     skos:broader eusoilvoc:SoilPrimaryParticles ;
     skos:exactMatch spp:Clay ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "clay"@en .
 
 eusoilvoc:ClayRatio a skos:Concept ;
+    # Textbook definition: audited printed page(s) 123; source term spp:ClayRatio.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "An index, also called the mechanical ratio, equal to the sand content divided by the combined silt and clay content."@en ] ;
     skos:broader eusoilvoc:SoilStructureIndirectIndex ;
     skos:exactMatch spp:ClayRatio ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -213,18 +253,27 @@ eusoilvoc:CoarseSand a skos:Concept ;
     skos:prefLabel "coarse sand"@en .
 
 eusoilvoc:ColloidContentMoistureEquivalentRatio a skos:Concept ;
+    # Textbook definition: audited printed page(s) 123; source term spp:ColloidContentMoistureEquivalentRatio.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "An index of soil erodibility given by the ratio of soil colloid content to moisture equivalent. Colloid content is the combined percentage of clay and organic matter, and moisture equivalent is the soil moisture content retained under a centrifugal force of 1000 times gravity."@en ] ;
     skos:broader eusoilvoc:SoilErodibilityIndex ;
     skos:exactMatch spp:ColloidContentMoistureEquivalentRatio ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "colloid content moisture equivalent ratio"@en .
 
 eusoilvoc:ConservationTillage a skos:Concept ;
+    # Textbook definition: audited printed page(s) 427; source term spp:ConservationTillage.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Tillage that leaves a high percentage of residues from previous crops on the soil surface."@en ] ;
     skos:broader eusoilvoc:SoilTillage ;
     skos:exactMatch spp:ConservationTillage ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "conservation tillage"@en .
 
 eusoilvoc:ConservativeSolutes a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 433; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Solutes that remain physically and chemically unchanged and do not undergo irreversible reactions."@en ] ;
     skos:altLabel "conservative solute"@en ;
     skos:broader eusoilvoc:SoilSolutes ;
     skos:exactMatch spp:ConservativeSolute ;
@@ -232,12 +281,18 @@ eusoilvoc:ConservativeSolutes a skos:Concept ;
     skos:prefLabel "conservative solutes"@en .
 
 eusoilvoc:ControlledDrainage a skos:Concept ;
+    # Textbook definition: audited printed page(s) 545; source term spp:ControlledDrainage.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A drainage system in which a control device intercepts water outflow to maintain the water table at a specified level below the soil surface."@en ] ;
     skos:broader eusoilvoc:SoilDrainage ;
     skos:exactMatch spp:ControlledDrainage ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "controlled drainage"@en .
 
 eusoilvoc:ConventionalDrainage a skos:Concept ;
+    # Textbook definition: audited printed page(s) 544; source term spp:ConventionalDrainage.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Removal of excess water from the soil profile through perforated subsurface drainage pipes or tiles that discharge by gravity into a ditch or stream."@en ] ;
     skos:broader eusoilvoc:SoilDrainage ;
     skos:exactMatch spp:ConventionalDrainage ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -251,6 +306,9 @@ eusoilvoc:CriticalSoilOrganicMatterContents a skos:Concept ;
     skos:prefLabel "critical soil organic matter contents"@en .
 
 eusoilvoc:CropResidueMulch a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 115, 421; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Crop residues placed on the soil surface as a covering to reduce evaporation, control weeds, and improve the soil environment."@en ] ;
     skos:broader eusoilvoc:Mulch ;
     skos:exactMatch spp:CropResidueMulch ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -263,30 +321,45 @@ eusoilvoc:CropYield a skos:Concept ;
     skos:prefLabel "crop yield"@en .
 
 eusoilvoc:DegreeOfSaturation a skos:Concept ;
+    # Textbook definition: audited printed page(s) 21; source term spp:DegreeOfSaturation.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The volume of soil pore space containing water or another liquid divided by the total pore volume, expressed as a fraction or percentage."@en ] ;
     skos:broader eusoilvoc:SoilMoistureContents ;
     skos:exactMatch spp:DegreeOfSaturation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "degree of saturation"@en .
 
 eusoilvoc:DispersionRatio a skos:Concept ;
+    # Textbook definition: audited printed page(s) 121; source term spp:DispersionRatio.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "An index measuring the clay fraction present in a dispersed rather than an aggregated condition."@en ] ;
     skos:broader eusoilvoc:SoilStructureIndirectIndex ;
     skos:exactMatch spp:DispersionRatio ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "dispersion ratio"@en .
 
 eusoilvoc:DrainageToGroundwater a skos:Concept ;
+    # Textbook definition: audited printed page(s) 395; source term spp:DrainageToGroundwater.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Continued downward movement of water through the soil profile after infiltration has ceased, where a shallow water table is present."@en ] ;
     skos:broader eusoilvoc:SoilPhenomena ;
     skos:exactMatch spp:DrainageToGroundwater ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "drainage to groundwater"@en .
 
 eusoilvoc:DrySoilBulkDensity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 18; source term spp:DrySoilBulkDensity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The mass of soil solids, excluding water, divided by the total volume of the soil."@en ] ;
     skos:broader eusoilvoc:SoilBulkDensity ;
     skos:exactMatch spp:DrySoilBulkDensity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "dry soil bulk density"@en .
 
 eusoilvoc:ErosionRatio a skos:Concept ;
+    # Textbook definition: audited printed page(s) 124; source term spp:ErosionRatio.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "An index of soil erodibility calculated as the dispersion ratio divided by the ratio of colloid content to moisture equivalent."@en ] ;
     skos:broader eusoilvoc:SoilErodibilityIndex ;
     skos:exactMatch spp:ErosionRatio ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -299,6 +372,9 @@ eusoilvoc:Evapotranspiration a skos:Concept ;
     skos:prefLabel "evapotranspiration"@en .
 
 eusoilvoc:ExchangeableCations a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 50, 221; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Cations associated with charged soil-mineral surfaces that can be exchanged with cations in the soil solution."@en ] ;
     skos:altLabel "exchangeable cation"@en ;
     skos:broader eusoilvoc:Ions ;
     skos:exactMatch spp:ExchangeableCation ;
@@ -325,6 +401,9 @@ eusoilvoc:Floods a skos:Concept ;
     skos:prefLabel "floods"@en .
 
 eusoilvoc:FluxControlledWaterInfiltration a skos:Concept ;
+    # Textbook definition: audited printed page(s) 378; source term spp:FluxControlledWaterInfiltration.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Water infiltration in which the water-supply rate determines the infiltration rate because water is applied more slowly than the soil's instantaneous infiltration rate."@en ] ;
     skos:broader eusoilvoc:SoilWaterInfiltration ;
     skos:exactMatch spp:FluxControlledWaterInfiltration ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -349,12 +428,18 @@ eusoilvoc:FoundationStrength a skos:Concept ;
     skos:prefLabel "foundation strength"@en .
 
 eusoilvoc:FriableConsistence a skos:Concept ;
+    # Textbook definition: audited printed page(s) 215; source term spp:FriableConsistence.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The condition of a soil that easily crumbles into granules or crumbs."@en ] ;
     skos:broader eusoilvoc:SoilConsistence ;
     skos:exactMatch spp:FriableConsistence ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "friable consistence"@en .
 
 eusoilvoc:GeometricMeanDiametre a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 122; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "An aggregate-size index calculated as GMD = exp[sum(wi log xi) / sum(wi)], where xi is the mean diameter of a size class and wi is the aggregate mass in that class."@en ] ;
     skos:broader eusoilvoc:SoilAggregationIndex ;
     skos:exactMatch spp:GeometricMeanDiameter ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -374,12 +459,18 @@ eusoilvoc:Hail a skos:Concept ;
     skos:prefLabel "hail"@en .
 
 eusoilvoc:HarshConsistence a skos:Concept ;
+    # Textbook definition: audited printed page(s) 215; source term spp:HarshConsistence.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The hard, highly cohesive consistence of dry soil that feels harsh to the touch."@en ] ;
     skos:broader eusoilvoc:SoilConsistence ;
     skos:exactMatch spp:HarshConsistence ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "harsh consistence"@en .
 
 eusoilvoc:IndexBasedOnTextureAndCementingAgents a skos:Concept ;
+    # Textbook definition: audited printed page(s) 125; source term spp:IndexBasedOnTextureAndCementingAgents.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "An instability index for tropical soils calculated as I_s = (A + L_F)_max / (A_g/3 − 0.9S_G). The numerator is the maximum dispersed fraction obtained from an air-dried sample and samples immersed in alcohol or benzene; A_g is the aggregate content obtained after shaking and wet sieving the three treated samples, and S_G is the coarse mineral sand content."@en ] ;
     skos:altLabel "index based on texture and cementing agent"@en ;
     skos:broader eusoilvoc:SoilStructureIndirectIndex ;
     skos:exactMatch spp:IndexBasedOnTextureAndCementingAgents ;
@@ -387,24 +478,36 @@ eusoilvoc:IndexBasedOnTextureAndCementingAgents a skos:Concept ;
     skos:prefLabel "index based on texture and cementing agents"@en .
 
 eusoilvoc:IndexOfCrusting a skos:Concept ;
+    # Textbook definition: audited printed page(s) 125; source term spp:IndexOfCrusting.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "An index based on soil texture and organic matter, calculated as Ic = (1.5 Sf + 0.75 Sc) / (Cl + 10 SOM), where Sf, Sc, Cl, and SOM are the percentages of fine silt, coarse silt, clay, and soil organic matter, respectively."@en ] ;
     skos:broader eusoilvoc:SoilStructureIndirectIndex ;
     skos:exactMatch spp:IndexOfCrusting ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "index of crusting"@en .
 
 eusoilvoc:IndexOfErodibility a skos:Concept ;
+    # Textbook definition: audited printed page(s) 124; source term spp:IndexOfErodibility.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "An index of soil erodibility defined as Ie = 1/(Ir × k), where Ir is the index of resistance and k is permeability."@en ] ;
     skos:broader eusoilvoc:SoilErodibilityIndex ;
     skos:exactMatch spp:IndexOfErodibility ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "index of erodibility"@en .
 
 eusoilvoc:IndexOfResistance a skos:Concept ;
+    # Textbook definition: audited printed page(s) 124; source term spp:IndexOfResistance.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "An index of resistance to water erosion calculated as soil bulk density multiplied by the range of particle sizes and divided by soil moisture content."@en ] ;
     skos:broader eusoilvoc:SoilStructureIndirectIndex ;
     skos:exactMatch spp:IndexOfResistance ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "index of resistance"@en .
 
 eusoilvoc:IndexOfStructuralStability a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 124, 125; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "An index of soil structural stability based on the rate of change in the concentration of stabilizing material, such as humic fractions or organo-mineral complexes."@en ] ;
     skos:broader eusoilvoc:SoilStructureIndirectIndex ;
     skos:exactMatch spp:IndexOfStructuralStability ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -417,6 +520,9 @@ eusoilvoc:InterAggregatePorosity a skos:Concept ;
     skos:prefLabel "inter aggregate porosity"@en .
 
 eusoilvoc:InteraggregatePores a skos:Concept ;
+    # Textbook definition: audited printed page(s) 87; source term spp:InteraggregatePore.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A pore between soil aggregates that results from the arrangement of structural elements and the characteristics of the aggregates; also called a structural pore."@en ] ;
     skos:altLabel "interaggregate pore"@en ;
     skos:broader eusoilvoc:SoilPores ;
     skos:exactMatch spp:InteraggregatePore ;
@@ -442,6 +548,9 @@ eusoilvoc:InterparticleSwelling a skos:Concept ;
     skos:prefLabel "interparticle swelling"@en .
 
 eusoilvoc:InterstructuralPores a skos:Concept ;
+    # Textbook definition: audited printed page(s) 141; source term spp:InterstructuralPore.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A soil pore delimited by structural units, generally forming a planar crevice between those units."@en ] ;
     skos:altLabel "interstructural pore"@en ;
     skos:broader eusoilvoc:SoilPores ;
     skos:exactMatch spp:InterstructuralPore ;
@@ -455,6 +564,9 @@ eusoilvoc:IntraAggregatePorosity a skos:Concept ;
     skos:prefLabel "intra aggregate porosity"@en .
 
 eusoilvoc:IntraaggregatePores a skos:Concept ;
+    # Textbook definition: audited printed page(s) 87; source term spp:IntraaggregatePore.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A pore within a soil aggregate whose characteristics are determined by soil texture and the packing of elementary particles; also called a textural pore."@en ] ;
     skos:altLabel "intraaggregate pore"@en ;
     skos:broader eusoilvoc:SoilPores ;
     skos:exactMatch spp:IntraaggregatePore ;
@@ -462,6 +574,9 @@ eusoilvoc:IntraaggregatePores a skos:Concept ;
     skos:prefLabel "intraaggregate pores"@en .
 
 eusoilvoc:IntrinsicChargeDensity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 54; source term spp:IntrinsicChargeDensity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The total charge on mineral surfaces arising from structural properties, including isomorphic substitution and other alterations; also called permanent charge."@en ] ;
     skos:broader eusoilvoc:SoilChargeDensity ;
     skos:exactMatch spp:IntrinsicChargeDensity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -482,6 +597,9 @@ eusoilvoc:Irrigation a skos:Concept ;
     skos:prefLabel "irrigation"@en .
 
 eusoilvoc:LabileSolutes a skos:Concept ;
+    # Textbook definition: audited printed page(s) 433; source term spp:LabileSolute.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A solute that can undergo reversible or irreversible physicochemical, biochemical, or microbial reactions and can change its physical or chemical phase over time."@en ] ;
     skos:altLabel "labile solute"@en ;
     skos:broader eusoilvoc:NonconservativeSolutes ;
     skos:exactMatch spp:LabileSolute ;
@@ -495,12 +613,18 @@ eusoilvoc:LandUse a skos:Concept ;
     skos:topConceptOf <https://w3id.org/eusoilvoc> .
 
 eusoilvoc:LiquidConsistence a skos:Concept ;
+    # Textbook definition: audited printed page(s) 215; source term spp:LiquidConsistence.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The state of soil consistence near saturation in which the soil behaves as a viscous liquid."@en ] ;
     skos:broader eusoilvoc:SoilConsistence ;
     skos:exactMatch spp:LiquidConsistence ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "liquid consistence"@en .
 
 eusoilvoc:LiquidRatio a skos:Concept ;
+    # Textbook definition: audited printed page(s) 21; source term spp:LiquidRatio.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The volume of water in a soil divided by the volume of its solids."@en ] ;
     skos:broader eusoilvoc:SoilMoistureContents ;
     skos:exactMatch spp:LiquidRatio ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -513,6 +637,9 @@ eusoilvoc:LiquidWasteDisposal a skos:Concept ;
     skos:prefLabel "liquid waste disposal"@en .
 
 eusoilvoc:LongitudinalDispersion a skos:Concept ;
+    # Textbook definition: audited printed page(s) 439; source term spp:LongitudinalDispersion.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Mixing or dispersion of solutes along the direction of the flow path."@en ] ;
     skos:broader eusoilvoc:SoilSoluteDispersiveTransport ;
     skos:exactMatch spp:LongitudinalDispersion ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -525,6 +652,9 @@ eusoilvoc:Macroporosity a skos:Concept ;
     skos:prefLabel "macroporosity"@en .
 
 eusoilvoc:MatrixPores a skos:Concept ;
+    # Textbook definition: audited printed page(s) 141; source term spp:MatrixPore.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A generally small textural pore formed by the packing of primary soil particles."@en ] ;
     skos:altLabel "matrix pore"@en ;
     skos:broader eusoilvoc:SoilPores ;
     skos:exactMatch spp:MatrixPore ;
@@ -532,12 +662,18 @@ eusoilvoc:MatrixPores a skos:Concept ;
     skos:prefLabel "matrix pores"@en .
 
 eusoilvoc:MeanWeightDiametre a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 122; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The sum of the mean diameter of each aggregate-size fraction multiplied by that fraction’s proportion of the total sample mass: MWD = sum(xi wi)."@en ] ;
     skos:broader eusoilvoc:SoilAggregationIndex ;
     skos:exactMatch spp:MeanWeightDiameter ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "mean weight diametre"@en .
 
 eusoilvoc:MechanicalRatio a skos:Concept ;
+    # Textbook definition: audited printed page(s) 123; source term spp:MechanicalRatio.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ratio of a soil's sand content to its combined silt and clay content, also termed the clay ratio."@en ] ;
     skos:broader eusoilvoc:SoilStructureIndirectIndex ;
     skos:exactMatch spp:MechanicalRatio ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -556,12 +692,18 @@ eusoilvoc:Mist a skos:Concept ;
     skos:prefLabel "mist"@en .
 
 eusoilvoc:ModulusOfRupture a skos:Concept ;
+    # Textbook definition: audited printed page(s) 186; source term spp:ModulusOfRupture.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The maximum force per unit area that a material can withstand without breaking, used as a measure of the breaking strength of soil."@en ] ;
     skos:broader eusoilvoc:SoilStrengthIndex ;
     skos:exactMatch spp:ModulusOfRupture ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "modulus of rupture"@en .
 
 eusoilvoc:Mulch a skos:Concept ;
+    # Textbook definition: audited printed page(s) 421; source term spp:Mulch.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Any material placed on the soil surface primarily to cover it, reduce evaporation, control weeds, and produce beneficial changes in the soil environment."@en ] ;
     skos:broader eusoilvoc:SoilManagement ;
     skos:exactMatch spp:Mulch ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -575,18 +717,27 @@ eusoilvoc:MulchFarming a skos:Concept ;
     skos:prefLabel "mulch farming"@en .
 
 eusoilvoc:Mulching a skos:Concept ;
+    # Textbook definition: audited printed page(s) 421; source term spp:Mulching.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Covering the soil surface with material, such as a vapor barrier or reflective material, to modify conditions at the surface."@en ] ;
     skos:broader eusoilvoc:SoilManagement ;
     skos:exactMatch spp:Mulching ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "mulching"@en .
 
 eusoilvoc:NoTill a skos:Concept ;
+    # Textbook definition: audited printed page(s) 403, 469; source term spp:NoTill.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A farming practice under which the soil remains largely undisturbed by farming operations."@en ] ;
     skos:broader eusoilvoc:SoilManagement ;
     skos:exactMatch spp:NoTill ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "no till"@en .
 
 eusoilvoc:NonMatrixPores a skos:Concept ;
+    # Textbook definition: audited printed page(s) 141; source term spp:NonMatrixPore.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A large soil void created by roots, burrowing animals, compressed air, or other agents."@en ] ;
     skos:altLabel "non matrix pore"@en ;
     skos:broader eusoilvoc:SoilPores ;
     skos:exactMatch spp:NonMatrixPore ;
@@ -594,12 +745,18 @@ eusoilvoc:NonMatrixPores a skos:Concept ;
     skos:prefLabel "non matrix pores"@en .
 
 eusoilvoc:NormalShrinkage a skos:Concept ;
+    # Textbook definition: audited printed page(s) 226; source term spp:NormalShrinkage.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Soil shrinkage in which the decrease in total soil volume is proportional to the volume of water withdrawn from the soil and is represented by a 45° line on the shrinkage diagram."@en ] ;
     skos:broader eusoilvoc:SoilShrinkage ;
     skos:exactMatch spp:NormalShrinkage ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "normal shrinkage"@en .
 
 eusoilvoc:OverlandFlow a skos:Concept ;
+    # Textbook definition: audited printed page(s) 376; source term spp:OverlandFlow.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The flow over the soil surface of rainfall or irrigation water that does not enter the soil matrix."@en ] ;
     skos:broader eusoilvoc:WaterInterchange ;
     skos:exactMatch spp:OverlandFlow ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -624,12 +781,18 @@ eusoilvoc:Percolation a skos:Concept ;
     skos:prefLabel "percolation"@en .
 
 eusoilvoc:PermanentCharge a skos:Concept ;
+    # Textbook definition: audited printed page(s) 54; source term spp:PermanentCharge.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The total charge on mineral surfaces arising from structural properties, including isomorphic substitution and other alterations; also called intrinsic charge density."@en ] ;
     skos:broader eusoilvoc:SoilSurfaceCharge ;
     skos:exactMatch spp:PermanentCharge ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "permanent charge"@en .
 
 eusoilvoc:PermanentWiltingPoint a skos:Concept ;
+    # Textbook definition: audited printed page(s) 272; source term spp:PermanentWiltingPoint.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The soil moisture content beyond which soil water is no longer available to plants and wilted leaves do not regain turgidity even at 100% relative humidity."@en ] ;
     skos:broader eusoilvoc:SoilMoistureContents ;
     skos:exactMatch spp:PermanentWiltingPoint ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -678,12 +841,18 @@ eusoilvoc:PlantWaterUptake a skos:Concept ;
     skos:prefLabel "plant water uptake"@en .
 
 eusoilvoc:PlasticConsistence a skos:Concept ;
+    # Textbook definition: audited printed page(s) 215; source term spp:PlasticConsistence.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The condition of a soil that is wet enough to be molded into different forms and shapes."@en ] ;
     skos:broader eusoilvoc:SoilConsistence ;
     skos:exactMatch spp:PlasticConsistence ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "plastic consistence"@en .
 
 eusoilvoc:ProfileControlledWaterInfiltration a skos:Concept ;
+    # Textbook definition: audited printed page(s) 378; source term spp:ProfileControlledWaterInfiltration.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Infiltration in which soil water-transmission properties determine the actual infiltration rate and cumulative infiltration because the water-application rate exceeds the instantaneous infiltration rate."@en ] ;
     skos:broader eusoilvoc:SoilWaterInfiltration ;
     skos:exactMatch spp:ProfileControlledWaterInfiltration ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -696,6 +865,9 @@ eusoilvoc:Rain a skos:Concept ;
     skos:prefLabel "rain"@en .
 
 eusoilvoc:ReactiveSolutes a skos:Concept ;
+    # Textbook definition: audited printed page(s) 433, 434; source term spp:ReactiveSolute.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A solute that undergoes reversible or irreversible reactions with soil constituents through processes such as adsorption, precipitation, or dissolution."@en ] ;
     skos:altLabel "reactive solute"@en ;
     skos:broader eusoilvoc:NonconservativeSolutes ;
     skos:exactMatch spp:ReactiveSolute ;
@@ -703,6 +875,9 @@ eusoilvoc:ReactiveSolutes a skos:Concept ;
     skos:prefLabel "reactive solutes"@en .
 
 eusoilvoc:ResidualShrinkage a skos:Concept ;
+    # Textbook definition: audited printed page(s) 227; source term spp:ResidualShrinkage.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The stage of soil shrinkage following normal shrinkage, in which further shrinkage results from compression and orientation of particles, air enters the soil, and the shrinkage-curve slope is less than one."@en ] ;
     skos:broader eusoilvoc:SoilShrinkage ;
     skos:exactMatch spp:ResidualShrinkage ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -721,6 +896,9 @@ eusoilvoc:RootBiomass a skos:Concept ;
     skos:prefLabel "root biomass"@en .
 
 eusoilvoc:RootRespiration a skos:Concept ;
+    # Textbook definition: audited printed page(s) 522; source term spp:RootRespiration.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The oxidation of organic compounds by plant roots, accompanied by oxygen absorption and carbon dioxide release."@en ] ;
     skos:broader eusoilvoc:SoilBiologicalProcesses ;
     skos:exactMatch spp:RootRespiration ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -740,24 +918,36 @@ eusoilvoc:SaltIncrustation a skos:Concept ;
     skos:prefLabel "salt incrustation"@en .
 
 eusoilvoc:SaltSieving a skos:Concept ;
+    # Textbook definition: audited printed page(s) 331; source term spp:SaltSieving.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The restriction of salt passage by soil pores when water is forced through the soil, while the pores permit water molecules to pass."@en ] ;
     skos:broader eusoilvoc:SoilPhenomena ;
     skos:exactMatch spp:SaltSieving ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "salt sieving"@en .
 
 eusoilvoc:SaturatedHydraulicConductivity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 336; source term spp:SaturatedHydraulicConductivity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ability of a porous soil medium to conduct water when all its pores are filled with water."@en ] ;
     skos:broader eusoilvoc:SoilHydraulicConductivity ;
     skos:exactMatch spp:SaturatedHydraulicConductivity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "saturated hydraulic conductivity"@en .
 
 eusoilvoc:SaturatedVapourPressure a skos:Concept ;
+    # Textbook definition: audited printed page(s) 246; source term spp:SaturatedVaporPressure.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The pressure of water vapor at saturation, when liquid and vapor are in equilibrium and molecules escape from and condense into the liquid at equal rates."@en ] ;
     skos:broader eusoilvoc:SoilVapourPressure ;
     skos:exactMatch spp:SaturatedVaporPressure ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "saturated vapour pressure"@en .
 
 eusoilvoc:SaturatedWaterFlow a skos:Concept ;
+    # Textbook definition: audited printed page(s) 354; source term spp:SaturatedWaterFlow.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Water flow through soil with constant water content, zero or nearly zero air content, and continuous water-filled flow paths."@en ] ;
     skos:broader eusoilvoc:SoilWaterFlow ;
     skos:exactMatch spp:SaturatedWaterFlow ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -782,12 +972,18 @@ eusoilvoc:SeedlingEmergence a skos:Concept ;
     skos:prefLabel "seedling emergence"@en .
 
 eusoilvoc:SilicaSesquioxideRatio a skos:Concept ;
+    # Textbook definition: audited printed page(s) 124; source term spp:SilicaSesquioxideRatio.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "An index of soil erodibility based on the relative proportions of silica (SiO2), the material being cemented, and sesquioxides (R2O3), the cementing agents."@en ] ;
     skos:broader eusoilvoc:SoilErodibilityIndex ;
     skos:exactMatch spp:SilicaSesquioxideRatio ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "silica sesquioxide ratio"@en .
 
 eusoilvoc:Silt a skos:Concept ;
+    # Textbook definition: audited printed page(s) 31; source term spp:Silt.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The intermediate soil-particle fraction that forms part of the soil skeleton, with particle diameters of 0.002–0.02 mm in the classification presented in the textbook."@en ] ;
     skos:broader eusoilvoc:SoilPrimaryParticles ;
     skos:exactMatch spp:Silt ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -806,12 +1002,18 @@ eusoilvoc:Snow a skos:Concept ;
     skos:prefLabel "snow"@en .
 
 eusoilvoc:SoftConsistence a skos:Concept ;
+    # Textbook definition: audited printed page(s) 215; source term spp:SoftConsistence.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The condition of a visibly wet soil that is not trafficable and is prone to the formation of deep ruts."@en ] ;
     skos:broader eusoilvoc:SoilConsistence ;
     skos:exactMatch spp:SoftConsistence ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soft consistence"@en .
 
 eusoilvoc:Soil a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 1; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The uppermost layer of the Earth’s crust, supporting terrestrial life and forming the interface between the lithosphere and atmosphere."@en ] ;
     skos:exactMatch spp:Soil ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil"@en ;
@@ -824,12 +1026,18 @@ eusoilvoc:SoilAcidification a skos:Concept ;
     skos:prefLabel "soil acidification"@en .
 
 eusoilvoc:SoilAdhesion a skos:Concept ;
+    # Textbook definition: audited printed page(s) 214; source term spp:SoilAdhesion.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The attraction of water to soil solids, through which water molecules adhere to soil particles."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilAdhesion ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil adhesion"@en .
 
 eusoilvoc:SoilAggregate a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 89; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A naturally occurring cluster of soil particles whose internal binding forces are much stronger than the forces between adjacent aggregates."@en ] ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:exactMatch spp:SoilAggregate ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -842,6 +1050,9 @@ eusoilvoc:SoilAggregateDegree a skos:Concept ;
     skos:prefLabel "soil aggregate degree"@en .
 
 eusoilvoc:SoilAggregateDispersion a skos:Concept ;
+    # Textbook definition: audited printed page(s) 392; source term spp:SoilAggregateDispersion.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The separation of finer particles from soil macroaggregates, after which the separated particles occupy the interaggregate space."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProcesses ;
     skos:exactMatch spp:SoilAggregateDispersion ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -860,12 +1071,18 @@ eusoilvoc:SoilAggregateSize a skos:Concept ;
     skos:prefLabel "soil aggregate size"@en .
 
 eusoilvoc:SoilAggregateStability a skos:Concept ;
+    # Textbook definition: audited printed page(s) 581; source term spp:SoilAggregateStability.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A measure of a soil aggregate's resistance to breakdown."@en ] ;
     skos:broader eusoilvoc:SoilAggregatePhysicalProperties ;
     skos:exactMatch spp:SoilAggregateStability ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil aggregate stability"@en .
 
 eusoilvoc:SoilAggregation a skos:Concept ;
+    # Textbook definition: audited printed page(s) 102; source term spp:SoilAggregation.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The formation of soil aggregates or organomineral complexes from primary particles and humic and other bonding substances."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProcesses ;
     skos:exactMatch spp:SoilAggregation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -878,6 +1095,9 @@ eusoilvoc:SoilAggregationDegree a skos:Concept ;
     skos:prefLabel "soil aggregation degree"@en .
 
 eusoilvoc:SoilAirConvection a skos:Concept ;
+    # Textbook definition: audited printed page(s) 527; source term spp:SoilAirConvection.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The flow of air through soil caused by a difference in total pressure between soil air and the external atmosphere."@en ] ;
     skos:broader eusoilvoc:SoilAirFlow ;
     skos:exactMatch spp:SoilAirConvection ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -890,18 +1110,27 @@ eusoilvoc:SoilAirConvectiveFlow a skos:Concept ;
     skos:prefLabel "soil air convective flow"@en .
 
 eusoilvoc:SoilAirDiffusion a skos:Concept ;
+    # Textbook definition: audited printed page(s) 529; source term spp:SoilAirDiffusion.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The random thermal movement of gas molecules from higher to lower concentration that maintains air exchange between soil and the surrounding atmosphere."@en ] ;
     skos:broader eusoilvoc:SoilAirFlow ;
     skos:exactMatch spp:SoilAirDiffusion ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil air diffusion"@en .
 
 eusoilvoc:SoilAirDiffusionCoefficient a skos:Concept ;
+    # Textbook definition: audited printed page(s) 501; source term spp:SoilAirDiffusionCoefficient.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The coefficient for diffusion in soil air, tabulated as Ds = 0.66 × D0 × fa and expressed in units of area per time."@en ] ;
     skos:broader eusoilvoc:SoilAerationIndex ;
     skos:exactMatch spp:SoilAirDiffusionCoefficient ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil air diffusion coefficient"@en .
 
 eusoilvoc:SoilAirExchange a skos:Concept ;
+    # Textbook definition: audited printed page(s) 521; source term spp:SoilAirExchange.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The exchange of oxygen and carbon dioxide between the soil, including plant roots and soil microorganisms, and the atmosphere."@en ] ;
     skos:broader eusoilvoc:SoilAirPhysicalProcesses ;
     skos:definition [ dcterms:source spp:SoilAirExchange ;
             rdf:value "the exchange of air between soil and the atmosphere"@en ] ;
@@ -910,6 +1139,9 @@ eusoilvoc:SoilAirExchange a skos:Concept ;
     skos:prefLabel "soil air exchange"@en .
 
 eusoilvoc:SoilAirPermeability a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 537; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The soil’s intrinsic permeability to air, expressed by the coefficient ka in Darcy’s relation qa = −(ka/ηa)(dp/dx), where qa is air-volume flux per area, ηa is air viscosity, and dp/dx is the pressure gradient."@en ] ;
     skos:broader eusoilvoc:SoilPermeability ;
     skos:exactMatch spp:SoilAirPermeability ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -923,6 +1155,9 @@ eusoilvoc:SoilAlgalCrusts a skos:Concept ;
     skos:prefLabel "soil algal crusts"@en .
 
 eusoilvoc:SoilAnionExclusion a skos:Concept ;
+    # Textbook definition: audited printed page(s) 450; source term spp:SoilAnionExclusion.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A process opposite to adsorption in which the concentration in the soil solution is higher than in the solid phase."@en ] ;
     skos:broader eusoilvoc:SoilChemicalProcesses ;
     skos:exactMatch spp:SoilAnionExclusion ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -935,24 +1170,36 @@ eusoilvoc:SoilApparentDensity a skos:Concept ;
     skos:prefLabel "soil apparent density"@en .
 
 eusoilvoc:SoilAvailableWaterCapacity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 274; source term spp:SoilAvailableWaterCapacity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The difference between soil moisture content at field capacity and at the permanent wilting point: AWC = FC − PWP."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalCapacity ;
     skos:exactMatch spp:SoilAvailableWaterCapacity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil available water capacity"@en .
 
 eusoilvoc:SoilBiopore a skos:Concept ;
+    # Textbook definition: audited printed page(s) 583; source term spp:SoilBiopore.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A soil pore formed through interactions between soil and its biota, such as a root channel, wormhole, or animal burrow."@en ] ;
     skos:broader eusoilvoc:SoilMacropore ;
     skos:exactMatch spp:SoilBiopore ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil biopore"@en .
 
 eusoilvoc:SoilBiota a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 1; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The living organisms inhabiting soil, comprising its flora and fauna."@en ] ;
     skos:broader eusoilvoc:SoilBiologicalProperties ;
     skos:exactMatch spp:SoilBiota ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil biota"@en .
 
 eusoilvoc:SoilBufferingCapacity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 29; source term spp:SoilBufferingCapacity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ability of soil to withstand or adapt to sudden perturbations, such as a change in soil reaction or pH."@en ] ;
     skos:broader eusoilvoc:SoilChemicalCapacity ;
     skos:exactMatch spp:SoilBufferingCapacity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -965,6 +1212,9 @@ eusoilvoc:SoilChannel a skos:Concept ;
     skos:prefLabel "soil channel"@en .
 
 eusoilvoc:SoilChemicalCrusts a skos:Concept ;
+    # Textbook definition: audited printed page(s) 154; source term spp:SoilChemicalCrust.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A crust formed on the soil surface by salt incrustation, as described for arid and semiarid regions."@en ] ;
     skos:altLabel "soil chemical crust"@en ;
     skos:broader eusoilvoc:SoilCrusts ;
     skos:exactMatch spp:SoilChemicalCrust ;
@@ -978,6 +1228,9 @@ eusoilvoc:SoilChemicalTransport a skos:Concept ;
     skos:prefLabel "soil chemical transport"@en .
 
 eusoilvoc:SoilClayContents a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 30, 221; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The proportion of soil particles in the clay-size fraction, expressed as a percentage; the clay fraction consists of particles smaller than 2 micrometres."@en ] ;
     skos:altLabel "soil clay content"@en ;
     skos:broader eusoilvoc:SoilContents ;
     skos:exactMatch spp:SoilClayContent ;
@@ -985,6 +1238,9 @@ eusoilvoc:SoilClayContents a skos:Concept ;
     skos:prefLabel "soil clay contents"@en .
 
 eusoilvoc:SoilClayMineral a skos:Concept ;
+    # Textbook definition: audited printed page(s) 47; source term spp:SoilClayMineral.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A hydrous aluminum silicate mineral occurring in soil."@en ] ;
     skos:broader eusoilvoc:SoilContents ;
     skos:exactMatch spp:SoilClayMineral ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -997,6 +1253,9 @@ eusoilvoc:SoilClayMineralogy a skos:Concept ;
     skos:prefLabel "soil clay mineralogy"@en .
 
 eusoilvoc:SoilCohesion a skos:Concept ;
+    # Textbook definition: audited printed page(s) 214; source term spp:SoilCohesion.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The attraction and bonding between soil particles."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilCohesion ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1021,12 +1280,18 @@ eusoilvoc:SoilColour a skos:Concept ;
     skos:prefLabel "soil colour"@en .
 
 eusoilvoc:SoilCompactability a skos:Concept ;
+    # Textbook definition: audited printed page(s) 191, 192; source term spp:SoilCompactability.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The difference between a soil's initial bulk density and the maximum bulk density to which it can be compacted by a given amount of energy at a defined moisture content."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilCompactability ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil compactability"@en .
 
 eusoilvoc:SoilCompressibility a skos:Concept ;
+    # Textbook definition: audited printed page(s) 191; source term spp:SoilCompressibility.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The resistance of a soil to a decrease in volume under an external load."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:definition [ dcterms:source spp:SoilCompressibility ;
             rdf:value "resistance of a soil against volume decrease by external load."@en ] ;
@@ -1035,12 +1300,18 @@ eusoilvoc:SoilCompressibility a skos:Concept ;
     skos:prefLabel "soil compressibility"@en .
 
 eusoilvoc:SoilConsistency a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 214; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The expression of cohesion and adhesion within soil at different moisture contents, manifested in its resistance to deformation, rupture, or flow."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilConsistency ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil consistency"@en .
 
 eusoilvoc:SoilConsolidation a skos:Concept ;
+    # Textbook definition: audited printed page(s) 205; source term spp:SoilConsolidation.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The densification of saturated soil through a reduction in volume caused by the expulsion of water."@en ] ;
     skos:broader eusoilvoc:SoilCompression ;
     skos:exactMatch spp:SoilConsolidation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1053,6 +1324,9 @@ eusoilvoc:SoilCrackingIntensity a skos:Concept ;
     skos:prefLabel "soil cracking intensity"@en .
 
 eusoilvoc:SoilCrackingNumber a skos:Concept ;
+    # Textbook definition: audited printed page(s) 172; source term spp:SoilCrackingNumber.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The number of soil cracks per unit area."@en ] ;
     skos:broader eusoilvoc:SoilCrackingPhysicalProperties ;
     skos:definition [ dcterms:source spp:SoilCrackingNumber ;
             rdf:value "number of cracks per unit area formed in a soil"@en ] ;
@@ -1061,6 +1335,9 @@ eusoilvoc:SoilCrackingNumber a skos:Concept ;
     skos:prefLabel "soil cracking number"@en .
 
 eusoilvoc:SoilCracks a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 582, 583; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Openings in soil that can form through shrinkage of clayey soil, chemical weathering of bedrock, cultivation, or freeze-thaw cycling."@en ] ;
     skos:altLabel "soil crack"@en ;
     skos:broader eusoilvoc:SoilMacropore ;
     skos:exactMatch spp:SoilCrack ;
@@ -1074,6 +1351,10 @@ eusoilvoc:SoilCrustDensity a skos:Concept ;
     skos:prefLabel "soil crust density"@en .
 
 eusoilvoc:SoilCrustStrength a skos:Concept ;
+    # Scope qualification: The candidate is tied to the modulus-of-rupture measurement; the book also discusses other crust-strength measurement methods.
+    # Index-guided textbook definition: printed page(s) 164, 186; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The breaking strength of a soil crust, operationally assessed by the modulus of rupture: the maximum force per unit area that a soil specimen prepared to simulate crust formation can withstand without breaking. For a rectangular briquette, the modulus of rupture is 3Fl/(2bd²), where F is the failure force, l the briquette length, b its breadth, and d its thickness."@en ] ;
     skos:broader eusoilvoc:SoilCrustPhysicalProperties ;
     skos:exactMatch spp:SoilCrustStrength ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1086,12 +1367,18 @@ eusoilvoc:SoilCrustThickness a skos:Concept ;
     skos:prefLabel "soil crust thickness"@en .
 
 eusoilvoc:SoilDenitrification a skos:Concept ;
+    # Textbook definition: audited printed page(s) 525; source term spp:SoilDenitrification.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The anaerobic reduction of nitrate in flooded or saturated soil through nitrite and nitrous oxide toward elemental nitrogen, decreasing soil nitrate content and producing gaseous nitrogen compounds."@en ] ;
     skos:broader eusoilvoc:SoilOxidationReductionReaction ;
     skos:exactMatch spp:SoilDenitrification ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil denitrification"@en .
 
 eusoilvoc:SoilDepositionalCrusts a skos:Concept ;
+    # Textbook definition: audited printed page(s) 155; source term spp:SoilDepositionalCrust.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A soil-surface crust formed by the transport and deposition of fine particles by surface flow."@en ] ;
     skos:altLabel "soil depositional crust"@en ;
     skos:broader eusoilvoc:SoilPhysicalCrusts ;
     skos:exactMatch spp:SoilDepositionalCrust ;
@@ -1117,24 +1404,37 @@ eusoilvoc:SoilDispersibility a skos:Concept ;
     skos:prefLabel "soil dispersibility"@en .
 
 eusoilvoc:SoilDispersion a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 58; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The breakdown of flocculated soil colloids into particles suspended in water, reversing flocculation; also called deflocculation or peptization."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProcesses ;
     skos:exactMatch spp:SoilDispersion ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil dispersion"@en .
 
 eusoilvoc:SoilDrySpecificVolume a skos:Concept ;
+    # Textbook definition: audited printed page(s) 19; source term spp:SoilDrySpecificVolume.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The reciprocal of dry soil bulk density, expressing soil volume per unit dry mass."@en ] ;
     skos:broader eusoilvoc:SoilDensity ;
     skos:exactMatch spp:SoilDrySpecificVolume ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil dry specific volume"@en .
 
 eusoilvoc:SoilElasticity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 179; source term spp:SoilElasticity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The behavior by which soil deforms instantaneously under stress, retains the changed form while the stress acts, and returns toward its original form when the stress is released; soil need not be perfectly elastic and may retain residual deformation."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilElasticity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil elasticity"@en .
 
 eusoilvoc:SoilElectricalCapacitance a skos:Concept ;
+    # Scope qualification: The ratio describes a capacitor measurement with moist soil in its dielectric; it is not presented as a geometry-independent soil constant.
+    # Index-guided textbook definition: printed page(s) 287; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ratio of electric charge Q acquired by each capacitor plate to potential difference V, C = Q/V, measured in a capacitor whose dielectric includes moist soil."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilElectricalCapacitance ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1159,18 +1459,27 @@ eusoilvoc:SoilErosion a skos:Concept ;
     skos:prefLabel "soil erosion"@en .
 
 eusoilvoc:SoilFieldMoistureCapacity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 268, 269; source term spp:SoilFieldMoistureCapacity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The soil moisture content reached after a soil has been thoroughly wetted and allowed to drain freely under gravity without loss by evaporation, with transmission pores drained and their water replaced by air."@en ] ;
     skos:broader eusoilvoc:SoilMoistureContents ;
     skos:exactMatch spp:SoilFieldMoistureCapacity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil field moisture capacity"@en .
 
 eusoilvoc:SoilFilteringCapacity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 29; source term spp:SoilFilteringCapacity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ability of soil to remove pollutants from percolating water by denaturing pollutants or mechanically sieving suspended particles."@en ] ;
     skos:broader eusoilvoc:SoilChemicalCapacity ;
     skos:exactMatch spp:SoilFilteringCapacity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil filtering capacity"@en .
 
 eusoilvoc:SoilFlocculation a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 58; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The sticking together of colloidal soil particles into loose, irregular clusters called floccules, also termed coagulation."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProcesses ;
     skos:exactMatch spp:SoilFlocculation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1207,18 +1516,27 @@ eusoilvoc:SoilFragmentation a skos:Concept ;
     skos:prefLabel "soil fragmentation"@en .
 
 eusoilvoc:SoilFreezing a skos:Concept ;
+    # Textbook definition: audited printed page(s) 581; source term spp:SoilFreezing.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The conversion of liquid water within soil pores into ice."@en ] ;
     skos:broader eusoilvoc:SoilWaterPhysicalProcesses ;
     skos:exactMatch spp:SoilFreezing ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil freezing"@en .
 
 eusoilvoc:SoilGaseousExchange a skos:Concept ;
+    # Textbook definition: audited printed page(s) 527; source term spp:SoilGaseousExchange.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The exchange of gases between soil and the atmosphere through convection and diffusion."@en ] ;
     skos:broader eusoilvoc:SoilAirPhysicalProcesses ;
     skos:exactMatch spp:SoilGaseousExchange ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil gaseous exchange"@en .
 
 eusoilvoc:SoilGravelContents a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 558; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The amount of gravel in topsoil, expressed as gravimetric content, volumetric content, or soil-surface coverage; gravimetric content is assessed by sieving and weighing the gravel fraction, and gravel volume by water displacement."@en ] ;
     skos:altLabel "soil gravel content"@en ;
     skos:broader eusoilvoc:SoilContents ;
     skos:exactMatch spp:SoilGravelContent ;
@@ -1226,6 +1544,9 @@ eusoilvoc:SoilGravelContents a skos:Concept ;
     skos:prefLabel "soil gravel contents"@en .
 
 eusoilvoc:SoilGravimetricMoistureContents a skos:Concept ;
+    # Textbook definition: audited printed page(s) 21; source term spp:SoilGravimetricMoistureContent.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ratio of the mass of water in soil to the mass of soil solids, expressed as a fraction or percentage."@en ] ;
     skos:altLabel "soil gravimetric moisture content"@en ;
     skos:broader eusoilvoc:SoilMoistureContents ;
     skos:exactMatch spp:SoilGravimetricMoistureContent ;
@@ -1233,66 +1554,99 @@ eusoilvoc:SoilGravimetricMoistureContents a skos:Concept ;
     skos:prefLabel "soil gravimetric moisture contents"@en .
 
 eusoilvoc:SoilGravitationalPotential a skos:Concept ;
+    # Textbook definition: audited printed page(s) 307; source term spp:SoilGravitationalPotential.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The energy required to move an infinitesimal amount of pure, free water from a reference elevation to the elevation of the soil water."@en ] ;
     skos:broader eusoilvoc:SoilMoisturePotential ;
     skos:exactMatch spp:SoilGravitationalPotential ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil gravitational potential"@en .
 
 eusoilvoc:SoilHardsetting a skos:Concept ;
+    # Textbook definition: audited printed page(s) 169; source term spp:SoilHardsetting.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The process by which soil sets into a hard, structureless mass following drying and ultradesiccation."@en ] ;
     skos:broader eusoilvoc:SoilDensification ;
     skos:exactMatch spp:SoilHardsetting ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil hardsetting"@en .
 
 eusoilvoc:SoilHeatConduction a skos:Concept ;
+    # Textbook definition: audited printed page(s) 492; source term spp:SoilHeatConduction.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The propagation of heat within soil by molecular motion."@en ] ;
     skos:broader eusoilvoc:SoilHeatTransfer ;
     skos:exactMatch spp:SoilHeatConduction ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil heat conduction"@en .
 
 eusoilvoc:SoilHeatConvection a skos:Concept ;
+    # Textbook definition: audited printed page(s) 492; source term spp:SoilHeatConvection.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The transfer of heat in soil through movement of a mass that carries heat."@en ] ;
     skos:broader eusoilvoc:SoilHeatTransfer ;
     skos:exactMatch spp:SoilHeatConvection ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil heat convection"@en .
 
 eusoilvoc:SoilHeatExchange a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 490, 498; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The transfer of thermal energy through soil by conduction, convection, or radiation, with conduction and convection identified as the principal transport processes within the soil matrix."@en ] ;
     skos:broader eusoilvoc:SoilThermalProcesses ;
     skos:exactMatch spp:SoilHeatExchange ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil heat exchange"@en .
 
 eusoilvoc:SoilHeatRadiation a skos:Concept ;
+    # Textbook definition: audited printed page(s) 490; source term spp:SoilHeatRadiation.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Heat transfer involving the emission of energy as electromagnetic waves in the soil system."@en ] ;
     skos:broader eusoilvoc:SoilHeatTransfer ;
     skos:exactMatch spp:SoilHeatRadiation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil heat radiation"@en .
 
 eusoilvoc:SoilHeatTransport a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 490, 498; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The transfer of thermal energy through soil by conduction, convection, or radiation, with conduction and convection identified as the principal transport processes within the soil matrix."@en ] ;
     skos:broader eusoilvoc:SoilHeatMovement ;
     skos:exactMatch spp:SoilHeatTransport ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil heat transport"@en .
 
 eusoilvoc:SoilHydraulicDiffusivity a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 360, 361; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The soil-water flow coefficient D(θ) = K(θ)dΦm/dθ used in the diffusivity form of Richards’ equation, where K(θ) is hydraulic conductivity, θ is soil moisture content, and Φm is matric potential or suction; the formulation requires a unique moisture-potential relation without hysteresis."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilHydraulicDiffusivity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil hydraulic diffusivity"@en .
 
 eusoilvoc:SoilHydraulicGradient a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 333, 355; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The difference in hydraulic head between two positions in a soil divided by the distance along the flow path between them; for a soil column it is (Hi − Ho)/L, where Hi and Ho are inlet and outlet heads and L is column length."@en ] ;
     skos:broader eusoilvoc:SoilWaterTransmissionIndex ;
     skos:exactMatch spp:SoilHydraulicGradient ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil hydraulic gradient"@en .
 
 eusoilvoc:SoilHydrophobicity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 600; source term spp:SoilHydrophobicity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The water-repellent or non-wetting condition of soil in which soil particles repel water and the soil has a reduced affinity for water."@en ] ;
     skos:broader eusoilvoc:SoilPhenomena ;
     skos:exactMatch spp:SoilHydrophobicity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil hydrophobicity"@en .
 
 eusoilvoc:SoilImmobileWaterContents a skos:Concept ;
+    # Textbook definition: audited printed page(s) 466; source term spp:SoilImmobileWaterContent.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The component of total soil water content considered immobile, which may be estimated as the water retained at field capacity, taken in the stated procedure as 24 hours after an infiltration test or at a suction of 330 kPa."@en ] ;
     skos:altLabel "soil immobile water content"@en ;
     skos:broader eusoilvoc:SoilWaterContents ;
     skos:exactMatch spp:SoilImmobileWaterContent ;
@@ -1300,6 +1654,9 @@ eusoilvoc:SoilImmobileWaterContents a skos:Concept ;
     skos:prefLabel "soil immobile water contents"@en .
 
 eusoilvoc:SoilInorganicComponents a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 13, 29; compositional.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The primary and secondary mineral constituents of soil derived from its parent material."@en ] ;
     skos:altLabel "soil inorganic component"@en ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:exactMatch spp:SoilInorganicComponent ;
@@ -1307,18 +1664,27 @@ eusoilvoc:SoilInorganicComponents a skos:Concept ;
     skos:prefLabel "soil inorganic components"@en .
 
 eusoilvoc:SoilInorganicSolid a skos:Concept ;
+    # Textbook definition: audited printed page(s) 13; source term spp:SoilInorganicSolid.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The inorganic solid component of soil, consisting of primary and secondary minerals derived from the parent material."@en ] ;
     skos:broader eusoilvoc:SoilSolid ;
     skos:exactMatch spp:SoilInorganicSolid ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil inorganic solid"@en .
 
 eusoilvoc:SoilIntrinsicPermeability a skos:Concept ;
+    # Textbook definition: audited printed page(s) 337; source term spp:SoilIntrinsicPermeability.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The property of the soil as a porous medium that describes its ability to transmit fluid."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilIntrinsicPermeability ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil intrinsic permeability"@en .
 
 eusoilvoc:SoilLeaching a skos:Concept ;
+    # Textbook definition: audited printed page(s) 599; source term spp:SoilLeaching.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A managed salt-removal process in which water equal to the leaching requirement is applied to a field and allowed to flow through and beyond the root zone to remove excess salts."@en ] ;
     skos:broader eusoilvoc:SoilChemicalDegradativeProcesses ;
     skos:definition [ dcterms:source spp:SoilLeaching ;
             rdf:value "leaching of nutrients and pesticides"@en ] ;
@@ -1333,30 +1699,46 @@ eusoilvoc:SoilLocation a skos:Concept ;
     skos:prefLabel "soil location"@en .
 
 eusoilvoc:SoilLongitudinalStrain a skos:Concept ;
+    # Textbook definition: audited printed page(s) 178; source term spp:SoilLongitudinalStrain.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The relative change in soil length under deformation, expressed for small deformations as ε = ΔL/L, where ΔL is the change in soil length and L is its original length."@en ] ;
     skos:broader eusoilvoc:SoilStrain ;
     skos:exactMatch spp:SoilLongitudinalStrain ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil longitudinal strain"@en .
 
 eusoilvoc:SoilMatricPotential a skos:Concept ;
+    # Textbook definition: audited printed page(s) 303; source term spp:SoilMatricPotential.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The negative potential of water in unsaturated soil arising from soil solids, curvature at interfaces due to surface tension, and cohesion and adhesion within the soil matrix; also called capillary potential."@en ] ;
     skos:broader eusoilvoc:SoilMoisturePotential ;
     skos:exactMatch spp:SoilMatricPotential ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil matric potential"@en .
 
 eusoilvoc:SoilMelting a skos:Concept ;
+    # Textbook definition: audited printed page(s) 493; source term spp:SoilMelting.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The conversion of ice in soil to liquid water."@en ] ;
     skos:broader eusoilvoc:SoilWaterPhysicalProcesses ;
     skos:exactMatch spp:SoilMelting ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil melting"@en .
 
 eusoilvoc:SoilMesopore a skos:Concept ;
+    # Scope qualification: The numerical limits belong to the pore-size classification recommended in this textbook; retain that qualification.
+    # Index-guided textbook definition: printed page(s) 143; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A soil pore with an equivalent cylindrical diameter between 0.2 and 30 µm in the size classification recommended in this text."@en ] ;
     skos:broader eusoilvoc:SoilPores ;
     skos:exactMatch spp:SoilMesopore ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil mesopore"@en .
 
 eusoilvoc:SoilMethanogenesis a skos:Concept ;
+    # Textbook definition: audited printed page(s) 525, 526; source term spp:SoilMethanogenesis.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The biological production of methane in soil by methanogenic bacteria under anaerobic conditions."@en ] ;
     skos:broader eusoilvoc:SoilOxidationReductionReaction ;
     skos:exactMatch spp:SoilMethanogenesis ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1388,12 +1770,19 @@ eusoilvoc:SoilMicrofauna a skos:Concept ;
     skos:prefLabel "soil microfauna"@en .
 
 eusoilvoc:SoilMicropore a skos:Concept ;
+    # Scope qualification: The numerical limit belongs to the pore-size classification recommended in this textbook; retain that qualification.
+    # Index-guided textbook definition: printed page(s) 143; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A soil pore with an equivalent cylindrical diameter less than 0.2 µm in the size classification recommended in this text."@en ] ;
     skos:broader eusoilvoc:SoilPores ;
     skos:exactMatch spp:SoilMicropore ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil micropore"@en .
 
 eusoilvoc:SoilMineralMatter a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 5, 13; compositional.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The inorganic solid component of soil, comprising primary and secondary minerals derived from parent material."@en ] ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:exactMatch spp:SoilMineralMatter ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1406,6 +1795,9 @@ eusoilvoc:SoilMineralization a skos:Concept ;
     skos:prefLabel "soil mineralization"@en .
 
 eusoilvoc:SoilMobileWaterContents a skos:Concept ;
+    # Textbook definition: audited printed page(s) 466; source term spp:SoilMobileWaterContent.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The component of soil water content equal to total water content minus immobile water content: θ_m = θ − θ_im."@en ] ;
     skos:altLabel "soil mobile water content"@en ;
     skos:broader eusoilvoc:SoilWaterContents ;
     skos:exactMatch spp:SoilMobileWaterContent ;
@@ -1413,12 +1805,18 @@ eusoilvoc:SoilMobileWaterContents a skos:Concept ;
     skos:prefLabel "soil mobile water contents"@en .
 
 eusoilvoc:SoilMoisture a skos:Concept ;
+    # Textbook definition: audited printed page(s) 21; source term spp:SoilMoisture.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Water contained in the soil."@en ] ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:exactMatch spp:SoilMoisture ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil moisture"@en .
 
 eusoilvoc:SoilMoistureCharacteristics a skos:Concept ;
+    # Textbook definition: audited printed page(s) 318; source term spp:SoilMoistureCharacteristics.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The relationship between a soil's moisture content and its soil-matric potential."@en ] ;
     skos:altLabel "soil moisture characteristic"@en ;
     skos:broader eusoilvoc:SoilWaterPhysicalProperties ;
     skos:exactMatch spp:SoilMoistureCharacteristics ;
@@ -1426,24 +1824,36 @@ eusoilvoc:SoilMoistureCharacteristics a skos:Concept ;
     skos:prefLabel "soil moisture characteristics"@en .
 
 eusoilvoc:SoilMoistureHysteresis a skos:Concept ;
+    # Textbook definition: audited printed page(s) 324; source term spp:SoilMoistureHysteresis.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The dependence of the soil moisture-retention curve on the soil’s previous wetting and drainage history."@en ] ;
     skos:broader eusoilvoc:SoilPhenomena ;
     skos:exactMatch spp:SoilMoistureHysteresis ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil moisture hysteresis"@en .
 
 eusoilvoc:SoilMoistureMovement a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 331, 355; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Movement of water through the soil pore system in response to differences in water potential, from positions of higher potential energy toward lower potential energy."@en ] ;
     skos:broader eusoilvoc:SoilWaterPhysicalProcesses ;
     skos:exactMatch spp:SoilMoistureMovement ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil moisture movement"@en .
 
 eusoilvoc:SoilMoistureRedistribution a skos:Concept ;
+    # Textbook definition: audited printed page(s) 395; source term spp:SoilMoistureRedistribution.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The continued downward movement of water through a soil profile after infiltration ceases, by which wetted topsoil wets drier subsoil in the absence of a water table."@en ] ;
     skos:broader eusoilvoc:SoilPhenomena ;
     skos:exactMatch spp:SoilMoistureRedistribution ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil moisture redistribution"@en .
 
 eusoilvoc:SoilNegativeAdsorption a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 452; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The exclusion of anions from the liquid region adjacent to negatively charged soil-particle surfaces, also called anion exclusion."@en ] ;
     skos:broader eusoilvoc:SoilChemicalProcesses ;
     skos:exactMatch spp:SoilNegativeAdsorption ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1491,78 +1901,121 @@ eusoilvoc:SoilOrganicMatterContents a skos:Concept ;
     skos:prefLabel "soil organic matter contents"@en .
 
 eusoilvoc:SoilOrganicSolid a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 13, 23; compositional.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The organic component of the soil's solid phase, consisting of remains of plants and animals at various stages of decay and decomposition."@en ] ;
     skos:broader eusoilvoc:SoilSolid ;
     skos:exactMatch spp:SoilOrganicSolid ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil organic solid"@en .
 
 eusoilvoc:SoilOsmoticPotential a skos:Concept ;
+    # Textbook definition: audited printed page(s) 307; source term spp:SoilOsmoticPotential.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The change in energy per unit volume of water when solutes matching the composition of the soil solution at the point of interest are added to pure, free water at the elevation of the soil."@en ] ;
     skos:broader eusoilvoc:SoilMoisturePotential ;
     skos:exactMatch spp:SoilOsmoticPotential ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil osmotic potential"@en .
 
 eusoilvoc:SoilOverburdenPotential a skos:Concept ;
+    # Textbook definition: audited printed page(s) 308; source term spp:SoilOverburdenPotential.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The change in energy per unit volume of soil water caused by the weight of unsupported soil material above it."@en ] ;
     skos:broader eusoilvoc:SoilMoisturePotential ;
     skos:exactMatch spp:SoilOverburdenPotential ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil overburden potential"@en .
 
 eusoilvoc:SoilOxidationReaction a skos:Concept ;
+    # Scope qualification: The source defines oxide formation in an oxygen-reaction context. This is narrower than a general electron-transfer definition of oxidation; do not treat it as an unrestricted definition of every oxidation reaction.
+    # Index-guided textbook definition: printed page(s) 516; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "In the textbook's oxygen-reaction context, a chemical reaction in which an oxide is formed."@en ] ;
     skos:broader eusoilvoc:SoilChemicalReaction ;
     skos:exactMatch spp:SoilOxidationReaction ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil oxidation reaction"@en .
 
 eusoilvoc:SoilOxygenDeficiency a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 522, 523; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "An insufficient supply of oxygen in soil for metabolic activities, including root respiration."@en ] ;
     skos:broader eusoilvoc:SoilPhenomena ;
     skos:exactMatch spp:SoilOxygenDeficiency ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil oxygen deficiency"@en .
 
 eusoilvoc:SoilOxygenDiffusionRate a skos:Concept ;
+    # Scope qualification: An electrode-based operational definition. The rate equation has source-specific unit/formula details discussed in the evidence; the candidate does not silently repair them.
+    # Index-guided textbook definition: printed page(s) 522, 534, 535; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The mass flux of oxygen to a platinum electrode surface under constant electric potential, used as an index of oxygen availability to plant roots."@en ] ;
     skos:broader eusoilvoc:SoilAerationIndex ;
     skos:exactMatch spp:SoilOxygenDiffusionRate ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil oxygen diffusion rate"@en .
 
 eusoilvoc:SoilPackingArrangement a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 68, 71, 72; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The configuration in which soil solid particles are arranged, including close packing with smaller particles occupying voids between larger particles and open packing based on particles of uniform size."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilPackingArrangement ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil packing arrangement"@en .
 
 eusoilvoc:SoilParticleArrangement a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 68, 71, 72; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The configuration in which soil solid particles are arranged, including close packing with smaller particles occupying voids between larger particles and open packing based on particles of uniform size."@en ] ;
     skos:broader eusoilvoc:SoilParticlePhysicalProperties ;
     skos:exactMatch spp:SoilParticleArrangement ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil particle arrangement"@en .
 
 eusoilvoc:SoilParticleDensity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 17; source term spp:SoilParticleDensity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ratio of the mass of soil solids to the volume occupied by those solids; also called true density."@en ] ;
     skos:broader eusoilvoc:SoilDensity ;
     skos:exactMatch spp:SoilParticleDensity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil particle density"@en .
 
 eusoilvoc:SoilParticleShape a skos:Concept ;
+    # Scope qualification: Operational characterization using roundness and sphericity, not an exhaustive taxonomy of every particle shape.
+    # Index-guided textbook definition: printed page(s) 39, 42; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The form of soil particles as characterized from micrographs by roundness, which measures corner sharpness, and sphericity, which measures how closely a particle approaches a sphere."@en ] ;
     skos:broader eusoilvoc:SoilParticlePhysicalProperties ;
     skos:exactMatch spp:SoilParticleShape ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil particle shape"@en .
 
 eusoilvoc:SoilParticleSize a skos:Concept ;
+    # Scope qualification: Operational diameter-based synthesis; sedimentation sizing assumes the particle behavior specified by Stokes law.
+    # Index-guided textbook definition: printed page(s) 30, 33, 35; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The diameter used to classify soil particles into size fractions; in sedimentation sizing, particle size is obtained from settling behavior under Stokes-law assumptions."@en ] ;
     skos:broader eusoilvoc:SoilParticlePhysicalProperties ;
     skos:exactMatch spp:SoilParticleSize ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil particle size"@en .
 
 eusoilvoc:SoilParticleSizeDistribution a skos:Concept ;
+    # Textbook definition: audited printed page(s) 30; source term spp:SoilParticleSizeDistribution.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A quantitative description of the sizes of particles making up the solid fraction of a soil."@en ] ;
     skos:broader eusoilvoc:SoilParticlePhysicalProperties ;
     skos:exactMatch spp:SoilParticleSizeDistribution ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil particle size distribution"@en .
 
 eusoilvoc:SoilParticleSpecificSurfaceArea a skos:Concept ;
+    # Textbook definition: audited printed page(s) 42; source term spp:SoilParticleSpecificSurfaceArea.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The total surface area of soil particles expressed per unit soil mass, per unit volume of soil solids, or per unit total soil volume."@en ] ;
     skos:broader eusoilvoc:SoilParticlePhysicalProperties ;
     skos:exactMatch spp:SoilParticleSpecificSurfaceArea ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1575,6 +2028,9 @@ eusoilvoc:SoilParticleSurfaceCharge a skos:Concept ;
     skos:prefLabel "soil particle surface charge"@en .
 
 eusoilvoc:SoilPermanentDeformation a skos:Concept ;
+    # Textbook definition: audited printed page(s) 181; source term spp:SoilPermanentDeformation.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Deformation of soil that persists after the applied stress is released, also called plastic deformation."@en ] ;
     skos:broader eusoilvoc:SoilDeformation ;
     skos:exactMatch spp:SoilPermanentDeformation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1593,6 +2049,9 @@ eusoilvoc:SoilPhysicalQuality a skos:Concept ;
     skos:prefLabel "soil physical quality"@en .
 
 eusoilvoc:SoilPlasticity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 217; source term spp:SoilPlasticity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ability of soil to change shape without cracking under a deforming stress and to retain the deformed shape after the stress is removed."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:definition [ dcterms:source spp:SoilPlasticity ;
             rdf:value "soil’s ability to change its shape without cracking when it is subjected to deforming stress."@en ] ;
@@ -1607,6 +2066,9 @@ eusoilvoc:SoilPollutantTransport a skos:Concept ;
     skos:prefLabel "soil pollutant transport"@en .
 
 eusoilvoc:SoilPolymerAdsorption a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 131; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The transfer of a polymer molecule from the solution phase to an adsorbed state on a soil clay-particle surface, with interaction between the soil particle and the polymer molecule."@en ] ;
     skos:broader eusoilvoc:SoilAdsorption ;
     skos:exactMatch spp:SoilPolymerAdsorption ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1619,12 +2081,18 @@ eusoilvoc:SoilPoreConnectivity a skos:Concept ;
     skos:prefLabel "soil pore connectivity"@en .
 
 eusoilvoc:SoilPoreGeometry a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 341; compositional.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The geometrical characteristics of the soil pore system, including porosity, pore-size distribution, and internal surface area."@en ] ;
     skos:broader eusoilvoc:SoilPorePhysicalProperties ;
     skos:exactMatch spp:SoilPoreGeometry ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil pore geometry"@en .
 
 eusoilvoc:SoilPoreHeterogeneity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 438; source term spp:SoilPoreHeterogeneity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Variation in the shapes, sizes, and orientations of pores within the soil matrix."@en ] ;
     skos:broader eusoilvoc:SoilPorePhysicalProperties ;
     skos:exactMatch spp:SoilPoreHeterogeneity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1637,6 +2105,9 @@ eusoilvoc:SoilPoreHorizontalContinuity a skos:Concept ;
     skos:prefLabel "soil pore horizontal continuity"@en .
 
 eusoilvoc:SoilPoreNumber a skos:Concept ;
+    # Textbook definition: audited printed page(s) 141, 142; source term spp:SoilPoreNumber.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The number of non-matrix soil pores per specified unit area, using 1 cm² for very fine and fine pores, 1 dm² for medium and coarse pores, and 1 m² for very coarse pores."@en ] ;
     skos:broader eusoilvoc:SoilPorePhysicalProperties ;
     skos:exactMatch spp:SoilPoreNumber ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1655,42 +2126,64 @@ eusoilvoc:SoilPoreShape a skos:Concept ;
     skos:prefLabel "soil pore shape"@en .
 
 eusoilvoc:SoilPoreSize a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 142, 143; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The dimension used to characterize soil pores by diameter, including equivalent cylindrical diameter in soil-pore size classifications."@en ] ;
     skos:broader eusoilvoc:SoilPorePhysicalProperties ;
     skos:exactMatch spp:SoilPoreSize ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil pore size"@en .
 
 eusoilvoc:SoilPoreSpace a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 13; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The void space between the solid components of soil, occupied by water, air, or both."@en ] ;
     skos:broader eusoilvoc:SoilPorePhysicalProperties ;
     skos:exactMatch spp:SoilPoreSpace ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil pore space"@en .
 
 eusoilvoc:SoilPoreVerticalContinuity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 145; source term spp:SoilPoreVerticalContinuity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The average vertical distance over which the mean pore diameter exceeds 0.5 mm, assessed when the soil is moist."@en ] ;
     skos:broader eusoilvoc:SoilPoreContinuity ;
     skos:exactMatch spp:SoilPoreVerticalContinuity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil pore vertical continuity"@en .
 
 eusoilvoc:SoilPoreVolume a skos:Concept ;
+    # Scope qualification: The physical void-volume definition is retained. The indexed breakthrough-curve use of 'pore volumes' is a different, dimensionless displacement quantity and is excluded.
+    # Index-guided textbook definition: printed page(s) 70; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The volume occupied by voids in soil, equal to the total volume minus the volume of soil solids."@en ] ;
     skos:broader eusoilvoc:SoilPorePhysicalProperties ;
     skos:exactMatch spp:SoilPoreVolume ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil pore volume"@en .
 
 eusoilvoc:SoilPoreWaterVelocity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 434; source term spp:SoilPoreWaterVelocity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Darcian velocity divided by volumetric soil moisture content."@en ] ;
     skos:broader eusoilvoc:SoilSolutePhysicalProperties ;
     skos:exactMatch spp:SoilPoreWaterVelocity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil pore water velocity"@en .
 
 eusoilvoc:SoilPreferentialFlowPath a skos:Concept ;
+    # Textbook definition: audited printed page(s) 582; source term spp:SoilPreferentialFlowPath.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A distinct conducting pathway that occupies a small fraction of the total soil pore space and carries preferential water flow through the soil profile rather than through the whole pore network."@en ] ;
     skos:broader eusoilvoc:SoilPores ;
     skos:exactMatch spp:SoilPreferentialFlowPath ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil preferential flow path"@en .
 
 eusoilvoc:SoilPressurePotential a skos:Concept ;
+    # Textbook definition: audited printed page(s) 301; source term spp:SoilPressurePotential.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The water pressure exerted at a position within saturated soil by the overlying column of water."@en ] ;
     skos:broader eusoilvoc:SoilMoisturePotential ;
     skos:exactMatch spp:SoilPressurePotential ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1703,6 +2196,9 @@ eusoilvoc:SoilProductivity a skos:Concept ;
     skos:prefLabel "soil productivity"@en .
 
 eusoilvoc:SoilPuddling a skos:Concept ;
+    # Textbook definition: audited printed page(s) 167; source term spp:SoilPuddling.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Physical manipulation of wet soil to slake and disrupt structural aggregates and decrease total porosity and macroporosity."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProcesses ;
     skos:exactMatch spp:SoilPuddling ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1721,18 +2217,27 @@ eusoilvoc:SoilRapidWetting a skos:Concept ;
     skos:prefLabel "soil rapid wetting"@en .
 
 eusoilvoc:SoilReactivity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 29; source term spp:SoilReactivity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The chemical, physical, and biological reactions occurring in soil."@en ] ;
     skos:broader eusoilvoc:SoilChemicalProperties ;
     skos:exactMatch spp:SoilReactivity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil reactivity"@en .
 
 eusoilvoc:SoilRedoxPotential a skos:Concept ;
+    # Textbook definition: audited printed page(s) 526; source term spp:SoilRedoxPotential.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The potential, measured in volts relative to a reference electrode, required to produce oxidation at an anode and reduction at a cathode, expressing the tendency of soil substances to donate or accept electrons."@en ] ;
     skos:broader eusoilvoc:SoilChemicalProperties ;
     skos:exactMatch spp:SoilRedoxPotential ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil redox potential"@en .
 
 eusoilvoc:SoilRespiration a skos:Concept ;
+    # Textbook definition: audited printed page(s) 524; source term spp:SoilRespiration.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The amount of oxygen consumed or carbon dioxide evolved in the soil."@en ] ;
     skos:broader eusoilvoc:SoilAgriculturalFunctions ;
     skos:exactMatch spp:SoilRespiration ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1745,6 +2250,9 @@ eusoilvoc:SoilRupture a skos:Concept ;
     skos:prefLabel "soil rupture"@en .
 
 eusoilvoc:SoilSalinity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 594; source term spp:SoilSalinity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A soil condition in which the concentration of soluble salts reaches a level harmful to crops."@en ] ;
     skos:broader eusoilvoc:SoilChemicalProperties ;
     skos:exactMatch spp:SoilSalinity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1764,12 +2272,18 @@ eusoilvoc:SoilSandContents a skos:Concept ;
     skos:prefLabel "soil sand contents"@en .
 
 eusoilvoc:SoilSaturation a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 13, 338; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The state in which the entire pore space between soil solids is filled with water."@en ] ;
     skos:broader eusoilvoc:SoilWaterPhysicalProperties ;
     skos:exactMatch spp:SoilSaturation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil saturation"@en .
 
 eusoilvoc:SoilSecondaryParticles a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 29; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Soil particles composed of primary particles that can be subdivided into their soil separates by chemical or mechanical dispersion."@en ] ;
     skos:altLabel "soil secondary particle"@en ;
     skos:broader eusoilvoc:SoilParticles ;
     skos:exactMatch spp:SoilSecondaryParticle ;
@@ -1777,6 +2291,10 @@ eusoilvoc:SoilSecondaryParticles a skos:Concept ;
     skos:prefLabel "soil secondary particles"@en .
 
 eusoilvoc:SoilSedimentation a skos:Concept ;
+    # Scope qualification: The extracted definition describes particle settling in liquid during laboratory analysis; it does not establish a broader landscape-deposition definition.
+    # Index-guided textbook definition: printed page(s) 33; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "In particle-size analysis, the settling of soil particles through a liquid at rates that depend on particle size and the properties of the liquid."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProcesses ;
     skos:exactMatch spp:SoilSedimentation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1789,12 +2307,18 @@ eusoilvoc:SoilSeepage a skos:Concept ;
     skos:prefLabel "soil seepage"@en .
 
 eusoilvoc:SoilSensitivity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 88; source term spp:SoilSensitivity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ratio of the strength of undisturbed soil to the strength of the same soil completely remolded at constant volume."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilSensitivity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil sensitivity"@en .
 
 eusoilvoc:SoilSeparate a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 29; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A discrete primary soil-particle unit that cannot be further subdivided."@en ] ;
     skos:broader eusoilvoc:SoilParticles ;
     skos:exactMatch spp:SoilSeparate ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1807,18 +2331,27 @@ eusoilvoc:SoilSettlement a skos:Concept ;
     skos:prefLabel "soil settlement"@en .
 
 eusoilvoc:SoilShearStrain a skos:Concept ;
+    # Textbook definition: audited printed page(s) 178; source term spp:SoilShearStrain.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Angular deformation of soil, expressed for small deformations as γ = u/h, where u is lateral or tangential displacement and h is soil height; this ratio is the tangent of the deformation angle."@en ] ;
     skos:broader eusoilvoc:SoilStrain ;
     skos:exactMatch spp:SoilShearStrain ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil shear strain"@en .
 
 eusoilvoc:SoilShearStrength a skos:Concept ;
+    # Textbook definition: audited printed page(s) 182; source term spp:SoilShearStrength.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The resistance of soil to deformation by continuous shear displacement of its particles under tangential stress."@en ] ;
     skos:broader eusoilvoc:SoilStrength ;
     skos:exactMatch spp:SoilShearStrength ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil shear strength"@en .
 
 eusoilvoc:SoilShrinking a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 226, 228, 229; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The decrease in total soil volume associated with removal of soil water during drying."@en ] ;
     skos:broader eusoilvoc:SoilVolumeChange ;
     skos:exactMatch spp:SoilShrinking ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1832,6 +2365,9 @@ eusoilvoc:SoilSiltContents a skos:Concept ;
     skos:prefLabel "soil silt contents"@en .
 
 eusoilvoc:SoilSlaking a skos:Concept ;
+    # Textbook definition: audited printed page(s) 377, 378; source term spp:SoilSlaking.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The initial fragmentation of soil aggregates several millimetres in diameter, which may disintegrate further into microaggregates."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProcesses ;
     skos:exactMatch spp:SoilSlaking ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1862,6 +2398,9 @@ eusoilvoc:SoilSoluteConvection a skos:Concept ;
     skos:prefLabel "soil solute convection"@en .
 
 eusoilvoc:SoilSoluteConvectiveTransport a skos:Concept ;
+    # Textbook definition: audited printed page(s) 437; source term spp:SoilSoluteConvectiveTransport.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The passive movement of solutes through the soil matrix with flowing soil water, also called advective transport."@en ] ;
     skos:broader eusoilvoc:SoilSoluteTransport ;
     skos:exactMatch spp:SoilSoluteConvectiveTransport ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1874,42 +2413,64 @@ eusoilvoc:SoilSoluteDiffusion a skos:Concept ;
     skos:prefLabel "soil solute diffusion"@en .
 
 eusoilvoc:SoilSoluteDiffusiveTransport a skos:Concept ;
+    # Textbook definition: audited printed page(s) 438; source term spp:SoilSoluteDiffusiveTransport.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The spontaneous movement of dissolved ions and molecules through soil due to random thermal motion, tending to reduce concentration gradients."@en ] ;
     skos:broader eusoilvoc:SoilSoluteTransport ;
     skos:exactMatch spp:SoilSoluteDiffusiveTransport ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil solute diffusive transport"@en .
 
 eusoilvoc:SoilSoluteDispersion a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 434, 435; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A passive mixing process in soil that tends to even out solute concentration gradients, described as hydrodynamic dispersion."@en ] ;
     skos:broader eusoilvoc:SoilSoluteTransport ;
     skos:exactMatch spp:SoilSoluteDispersion ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil solute dispersion"@en .
 
 eusoilvoc:SoilSoluteDispersivity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 446; source term spp:SoilSoluteDispersivity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The proportionality constant λ relating the hydrodynamic dispersion coefficient D to pore-water velocity v in the relation D = λv."@en ] ;
     skos:broader eusoilvoc:SoilSolutePhysicalProperties ;
     skos:exactMatch spp:SoilSoluteDispersivity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil solute dispersivity"@en .
 
 eusoilvoc:SoilSoluteFluxDensity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 436; source term spp:SoilSoluteFluxDensity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The net amount of solute crossing a plane of unit area in unit time within a soil transport system."@en ] ;
     skos:broader eusoilvoc:SoilSolutePhysicalProperties ;
     skos:exactMatch spp:SoilSoluteFluxDensity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil solute flux density"@en .
 
 eusoilvoc:SoilSorption a skos:Concept ;
+    # Scope qualification: Operational breakthrough-curve characterization, not a general chemical definition or an unconditional synonym for adsorption.
+    # Index-guided textbook definition: printed page(s) 444; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "In the book's breakthrough-curve description, soil sorption is the soil-solute interaction represented by retardation of the solute breakthrough curve relative to transport without soil-solute interaction."@en ] ;
     skos:broader eusoilvoc:SoilChemicalProcesses ;
     skos:exactMatch spp:SoilSorption ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil sorption"@en .
 
 eusoilvoc:SoilSpecificGravity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 19; source term spp:SoilSpecificGravity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ratio of soil particle density to the density of water."@en ] ;
     skos:broader eusoilvoc:SoilDensity ;
     skos:exactMatch spp:SoilSpecificGravity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil specific gravity"@en .
 
 eusoilvoc:SoilStrainHardening a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 180; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A material property governing a gradual transition from elastic to plastic behavior under stress; soil under compactive stress may exhibit it as its structure changes."@en ] ;
     skos:broader eusoilvoc:SoilPhenomena ;
     skos:exactMatch spp:SoilStrainHardening ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1922,6 +2483,9 @@ eusoilvoc:SoilStructuralChange a skos:Concept ;
     skos:prefLabel "soil structural change"@en .
 
 eusoilvoc:SoilStructuralCrusts a skos:Concept ;
+    # Textbook definition: audited printed page(s) 155; source term spp:SoilStructuralCrust.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A soil crust formed by disruption of aggregates through raindrop impact and physicochemical dispersion of soil clays."@en ] ;
     skos:altLabel "soil structural crust"@en ;
     skos:broader eusoilvoc:SoilPhysicalCrusts ;
     skos:exactMatch spp:SoilStructuralCrust ;
@@ -1935,24 +2499,36 @@ eusoilvoc:SoilStructuralMovement a skos:Concept ;
     skos:prefLabel "soil structural movement"@en .
 
 eusoilvoc:SoilStructuralResilience a skos:Concept ;
+    # Textbook definition: audited printed page(s) 126; source term spp:SoilStructuralResilience.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ability of soil structure to recover after a major disruption of the aggregation process."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilStructuralResilience ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil structural resilience"@en .
 
 eusoilvoc:SoilStructuralStability a skos:Concept ;
+    # Textbook definition: audited printed page(s) 104; source term spp:SoilStructuralStability.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ability of a soil to retain its arrangement of solids and void space when external forces are applied."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilStructuralStability ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil structural stability"@en .
 
 eusoilvoc:SoilStructure a skos:Concept ;
+    # Textbook definition: audited printed page(s) 87; source term spp:SoilStructure.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The size, shape, arrangement and packing of soil particles into identifiable units called aggregates or peds."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilStructure ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil structure"@en .
 
 eusoilvoc:SoilSurfaceSeal a skos:Concept ;
+    # Textbook definition: audited printed page(s) 153; source term spp:SoilSurfaceSeal.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A thin, dense layer at the soil surface characterized by low porosity, high density, and low permeability to air and water."@en ] ;
     skos:broader eusoilvoc:SoilSubstance ;
     skos:exactMatch spp:SoilSurfaceSeal ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1977,12 +2553,18 @@ eusoilvoc:SoilTangentialStrain a skos:Concept ;
     skos:prefLabel "soil tangential strain"@en .
 
 eusoilvoc:SoilTemperature a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 475, 477; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A measure of the thermal state of soil with respect to its ability to transfer heat."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilTemperature ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil temperature"@en .
 
 eusoilvoc:SoilTexture a skos:Concept ;
+    # Textbook definition: audited printed page(s) 30; source term spp:SoilTexture.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A qualitative characterization of soil particle sizes based on the feel of the soil material, such as coarse, gritty, fine or smooth."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilTexture ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1995,18 +2577,27 @@ eusoilvoc:SoilThawing a skos:Concept ;
     skos:prefLabel "soil thawing"@en .
 
 eusoilvoc:SoilThermalConductivity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 497; source term spp:SoilThermalConductivity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The quantity of heat transferred through soil per unit cross-sectional area and unit time under a unit temperature gradient."@en ] ;
     skos:broader eusoilvoc:SoilThermalProperties ;
     skos:exactMatch spp:SoilThermalConductivity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil thermal conductivity"@en .
 
 eusoilvoc:SoilThermalDiffusivity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 501; source term spp:SoilThermalDiffusivity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ratio of soil thermal conductivity KT to volumetric heat capacity CV, expressed as DT = KT/CV."@en ] ;
     skos:broader eusoilvoc:SoilThermalProperties ;
     skos:exactMatch spp:SoilThermalDiffusivity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil thermal diffusivity"@en .
 
 eusoilvoc:SoilTilth a skos:Concept ;
+    # Textbook definition: audited printed page(s) 217; source term spp:SoilTilth.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The physical condition of soil in relation to its ease of tillage, suitability as a seedbed, and support for seedling emergence and root penetration."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilTilth ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2032,6 +2623,9 @@ eusoilvoc:SoilTypes a skos:Concept ;
     skos:prefLabel "soil types"@en .
 
 eusoilvoc:SoilViscosity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 225, 226; source term spp:SoilViscosity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The coefficient k identified as viscosity in the soil-flow expression V = kμ(F − F′), where V is the volume of flow, μ is the coefficient of mobility, F is the applied force, and F′ is the force needed to overcome cohesion; in viscous flow F′ is zero."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilViscosity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2045,12 +2639,18 @@ eusoilvoc:SoilVoids a skos:Concept ;
     skos:prefLabel "soil voids"@en .
 
 eusoilvoc:SoilVolume a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 17; compositional.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The total volume of a soil quantity, comprising the volumes of its solid, liquid and gaseous components; the solid volume includes inorganic and organic components."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilVolume ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil volume"@en .
 
 eusoilvoc:SoilVolumetricMoistureContents a skos:Concept ;
+    # Textbook definition: audited printed page(s) 21; source term spp:SoilVolumetricMoistureContent.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The volume of soil water divided by the total volume of soil."@en ] ;
     skos:altLabel "soil volumetric moisture content"@en ;
     skos:broader eusoilvoc:SoilMoistureContents ;
     skos:exactMatch spp:SoilVolumetricMoistureContent ;
@@ -2064,12 +2664,19 @@ eusoilvoc:SoilWarming a skos:Concept ;
     skos:prefLabel "soil warming"@en .
 
 eusoilvoc:SoilWater a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 21; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Water contained in soil, usually not free water and therefore also termed soil moisture."@en ] ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:exactMatch spp:SoilWater ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil water"@en .
 
 eusoilvoc:SoilWaterAbsorption a skos:Concept ;
+    # Scope qualification: The candidate is supported for soil colloids under changing vapor pressure. The book's absorption/adsorption terminology is retained and should not be silently equated.
+    # Index-guided textbook definition: printed page(s) 63; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Uptake of water by soil colloids, described as hydration at exchange sites and exchangeable cations, followed by growth of water films and capillary condensation as relative vapor pressure rises."@en ] ;
     skos:broader eusoilvoc:SoilAbsorption ;
     skos:exactMatch spp:SoilWaterAbsorption ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2082,6 +2689,9 @@ eusoilvoc:SoilWaterAffinity a skos:Concept ;
     skos:prefLabel "soil water affinity"@en .
 
 eusoilvoc:SoilWaterCharacteristics a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 318; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The relationship between soil moisture content and soil matric potential, also expressed as a soil moisture characteristic curve or pF curve."@en ] ;
     skos:altLabel "soil water characteristic"@en ;
     skos:broader eusoilvoc:SoilWaterPhysicalProperties ;
     skos:exactMatch spp:SoilWaterCharacteristics ;
@@ -2089,6 +2699,9 @@ eusoilvoc:SoilWaterCharacteristics a skos:Concept ;
     skos:prefLabel "soil water characteristics"@en .
 
 eusoilvoc:SoilWaterCondensation a skos:Concept ;
+    # Textbook definition: audited printed page(s) 493; source term spp:SoilWaterCondensation.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The conversion of water vapor to liquid water in the soil system."@en ] ;
     skos:broader eusoilvoc:SoilWaterPhysicalProcesses ;
     skos:exactMatch spp:SoilWaterCondensation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2101,18 +2714,27 @@ eusoilvoc:SoilWaterConductivity a skos:Concept ;
     skos:prefLabel "soil water conductivity"@en .
 
 eusoilvoc:SoilWaterDiffusivity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 501; source term spp:SoilWaterDiffusivity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The soil-water transport coefficient tabulated as Dθ = Kθ(dΦm/dθ), with dimensions of area per time."@en ] ;
     skos:broader eusoilvoc:SoilWaterPhysicalProperties ;
     skos:exactMatch spp:SoilWaterDiffusivity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil water diffusivity"@en .
 
 eusoilvoc:SoilWaterEvapourationRate a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 409, 417; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The rate at which water is lost from soil by evaporation, expressed as water depth per unit time; in the book’s modeled profile of depth L, it is expressed as e = -L ∂θ/∂t, where θ is soil water content and t is time."@en ] ;
     skos:broader eusoilvoc:SoilWaterTransmissionIndex ;
     skos:exactMatch spp:SoilWaterEvaporationRate ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil water evapouration rate"@en .
 
 eusoilvoc:SoilWaterInfiltrationRate a skos:Concept ;
+    # Textbook definition: audited printed page(s) 377, 403; source term spp:SoilWaterInfiltrationRate.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The volume of water entering soil through a unit surface area per unit time, equivalently the infiltrated water depth per unit time."@en ] ;
     skos:broader eusoilvoc:SoilWaterTransmissionIndex ;
     skos:exactMatch spp:SoilWaterInfiltrationRate ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2125,12 +2747,18 @@ eusoilvoc:SoilWaterLoss a skos:Concept ;
     skos:prefLabel "soil water loss"@en .
 
 eusoilvoc:SoilWaterPotential a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 300; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The amount of work that a unit quantity of water in an equilibrium soil-moisture system can do when it moves to a reference pool of pure water at atmospheric pressure, at the same temperature and level as the soil moisture."@en ] ;
     skos:broader eusoilvoc:SoilWaterPhysicalProperties ;
     skos:exactMatch spp:SoilWaterPotential ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil water potential"@en .
 
 eusoilvoc:SoilWaterRepellency a skos:Concept ;
+    # Textbook definition: audited printed page(s) 600; source term spp:SoilWaterRepellency.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The repulsion of water by soil particles."@en ] ;
     skos:broader eusoilvoc:SoilPhenomena ;
     skos:exactMatch spp:SoilWaterRepellency ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2150,6 +2778,9 @@ eusoilvoc:SoilWaterSorptionProperties a skos:Concept ;
     skos:prefLabel "soil water sorption properties"@en .
 
 eusoilvoc:SoilWaterStorage a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 249, 250; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The quantity of water contained in soil as a reservoir; change in this storage is the balance of precipitation and irrigation inputs against surface runoff, deep drainage and evapotranspiration losses."@en ] ;
     skos:broader eusoilvoc:SoilRetention ;
     skos:exactMatch spp:SoilWaterStorage ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2168,6 +2799,9 @@ eusoilvoc:SoilWaterTablePosition a skos:Concept ;
     skos:prefLabel "soil water table position"@en .
 
 eusoilvoc:SoilWaterTransport a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 331; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Movement of water through the porous soil matrix, driven under isothermal conditions by differences in potential energy from a region of greater potential toward one of smaller potential."@en ] ;
     skos:broader eusoilvoc:SoilWaterMovement ;
     skos:exactMatch spp:SoilWaterTransport ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2186,12 +2820,18 @@ eusoilvoc:SoilpH a skos:Concept ;
     skos:prefLabel "soil pH"@en .
 
 eusoilvoc:StickyConsistence a skos:Concept ;
+    # Textbook definition: audited printed page(s) 215; source term spp:StickyConsistence.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A soil consistence in which the soil adheres to other objects, such as farm implements or shoes."@en ] ;
     skos:broader eusoilvoc:SoilConsistence ;
     skos:exactMatch spp:StickyConsistence ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "sticky consistence"@en .
 
 eusoilvoc:StructuralPores a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 87; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Pores between aggregates that result from the arrangement of structural elements and aggregate characteristics; also called interaggregate pores."@en ] ;
     skos:altLabel "structural pore"@en ;
     skos:broader eusoilvoc:SoilPores ;
     skos:exactMatch spp:StructuralPore ;
@@ -2199,24 +2839,36 @@ eusoilvoc:StructuralPores a skos:Concept ;
     skos:prefLabel "structural pores"@en .
 
 eusoilvoc:StructuralPorosity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 141; source term spp:StructuralPorosity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The pore space between soil aggregates, defined by their spatial arrangement; also called interaggregate porosity."@en ] ;
     skos:broader eusoilvoc:SoilPorosity ;
     skos:exactMatch spp:StructuralPorosity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "structural porosity"@en .
 
 eusoilvoc:SurfaceAggregationRatio a skos:Concept ;
+    # Textbook definition: audited printed page(s) 124; source term spp:SurfaceAggregationRatio.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The total surface area of soil particles larger than 0.05 mm in diameter divided by the quantity of aggregated silt and clay."@en ] ;
     skos:broader eusoilvoc:SoilStructureIndirectIndex ;
     skos:exactMatch spp:SurfaceAggregationRatio ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "surface aggregation ratio"@en .
 
 eusoilvoc:SurfaceRunoff a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 376; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Water moving downslope over the soil surface as overland flow when water application exceeds infiltration into the soil."@en ] ;
     skos:broader eusoilvoc:Runoff ;
     skos:exactMatch spp:SurfaceRunoff ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "surface runoff"@en .
 
 eusoilvoc:TexturalPores a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 87; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Pores within an aggregate, determined by textural characteristics and the packing state of elementary particles; also called intraaggregate pores."@en ] ;
     skos:altLabel "textural pore"@en ;
     skos:broader eusoilvoc:SoilPores ;
     skos:exactMatch spp:TexturalPore ;
@@ -2224,12 +2876,18 @@ eusoilvoc:TexturalPores a skos:Concept ;
     skos:prefLabel "textural pores"@en .
 
 eusoilvoc:TexturalPorosity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 141; source term spp:TexturalPorosity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The porosity defined by the spatial distribution of soil separates or primary particles."@en ] ;
     skos:broader eusoilvoc:SoilPorosity ;
     skos:exactMatch spp:TexturalPorosity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "textural porosity"@en .
 
 eusoilvoc:TotalSoilMoisturePotential a skos:Concept ;
+    # Textbook definition: audited printed page(s) 301; source term spp:TotalSoilMoisturePotential.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The sum of the pressure, matric, gravitational or positional, osmotic, and overburden components of soil-moisture potential: Φt = Φp + Φm + Φz + Φπ + Φo, respectively."@en ] ;
     skos:broader eusoilvoc:SoilMoisturePotential ;
     skos:exactMatch spp:TotalSoilMoisturePotential ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2242,6 +2900,9 @@ eusoilvoc:Transpiration a skos:Concept ;
     skos:prefLabel "transpiration"@en .
 
 eusoilvoc:TransverseDispersion a skos:Concept ;
+    # Textbook definition: audited printed page(s) 439; source term spp:TransverseDispersion.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Dispersion of solutes in the direction perpendicular to the direction of flow."@en ] ;
     skos:broader eusoilvoc:SoilSoluteDispersiveTransport ;
     skos:exactMatch spp:TransverseDispersion ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2255,24 +2916,36 @@ eusoilvoc:Trees a skos:Concept ;
     skos:prefLabel "trees"@en .
 
 eusoilvoc:UnsaturatedHydraulicConductivity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 356; source term spp:UnsaturatedHydraulicConductivity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The coefficient relating water flux through unsaturated soil to the hydraulic potential gradient, expressed by q = K(θ) ∂(Φ_m + Φ_z)/∂z, where q is water flux, K(θ) is unsaturated hydraulic conductivity, Φ_m and Φ_z are matric and gravitational potentials, and z is position. It is a nonlinear function of soil moisture content and matric potential."@en ] ;
     skos:broader eusoilvoc:SoilHydraulicConductivity ;
     skos:exactMatch spp:UnsaturatedHydraulicConductivity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "unsaturated hydraulic conductivity"@en .
 
 eusoilvoc:UnsaturatedWaterFlow a skos:Concept ;
+    # Textbook definition: audited printed page(s) 354; source term spp:UnsaturatedWaterFlow.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Water movement through a soil matrix that contains air-filled pores, following tortuous paths around those pores."@en ] ;
     skos:broader eusoilvoc:SoilWaterFlow ;
     skos:exactMatch spp:UnsaturatedWaterFlow ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "unsaturated water flow"@en .
 
 eusoilvoc:VariableCharge a skos:Concept ;
+    # Textbook definition: audited printed page(s) 54, 55; source term spp:VariableCharge.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A pH-dependent or proton-dependent surface charge caused by an imbalance of complexed proton and hydroxyl charges."@en ] ;
     skos:broader eusoilvoc:SoilSurfaceCharge ;
     skos:exactMatch spp:VariableCharge ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "variable charge"@en .
 
 eusoilvoc:VoidRatio a skos:Concept ;
+    # Textbook definition: audited printed page(s) 21; source term spp:VoidRatio.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The volume of soil voids divided by the volume of soil solids."@en ] ;
     skos:broader eusoilvoc:SoilPorosity ;
     skos:exactMatch spp:VoidRatio ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2285,12 +2958,18 @@ eusoilvoc:Weather a skos:Concept ;
     skos:prefLabel "weather"@en .
 
 eusoilvoc:WetSoilBulkDensity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 18; source term spp:WetSoilBulkDensity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ratio of the combined mass of soil solids and soil water to the total soil volume."@en ] ;
     skos:broader eusoilvoc:SoilBulkDensity ;
     skos:exactMatch spp:WetSoilBulkDensity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "wet soil bulk density"@en .
 
 eusoilvoc:pFcurve a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 318; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The relationship between soil moisture content and soil matric potential, also called the soil moisture characteristic curve."@en ] ;
     skos:broader eusoilvoc:SoilWaterPhysicalProperties ;
     skos:exactMatch spp:pFcurve ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2305,6 +2984,9 @@ eusoilvoc:Biomass a skos:Concept ;
     skos:prefLabel "biomass"@en .
 
 eusoilvoc:Evapouration a skos:Concept ;
+    # Textbook definition: audited printed page(s) 410; source term spp:Evaporation.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The conversion of water from the liquid state to the vapor state through the uptake of latent heat of vaporization."@en ] ;
     skos:broader eusoilvoc:WaterInterchange ;
     skos:exactMatch spp:Evaporation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2319,6 +3001,9 @@ eusoilvoc:Filtration a skos:Concept ;
     skos:prefLabel "filtration"@en .
 
 eusoilvoc:GaseousCompositionOfSoilAir a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 13, 24; compositional.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The mixture of gases constituting soil air, including major gases such as nitrogen and oxygen and trace gases such as carbon dioxide, methane, and nitrous oxide; its composition varies over time and space."@en ] ;
     skos:broader eusoilvoc:SoilAirPhysicalProperties,
         eusoilvoc:SoilContents ;
     skos:exactMatch spp:GaseousCompositionOfSoilAir ;
@@ -2333,6 +3018,9 @@ eusoilvoc:Inundation a skos:Concept ;
     skos:prefLabel "inundation"@en .
 
 eusoilvoc:IonExchange a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 50, 452; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Exchange of ions associated with charged soil-mineral surfaces with ions in the soil solution."@en ] ;
     skos:broader eusoilvoc:SoilChemicalProcesses ;
     skos:exactMatch spp:IonExchange ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2340,6 +3028,9 @@ eusoilvoc:IonExchange a skos:Concept ;
     skos:prefLabel "ion exchange"@en .
 
 eusoilvoc:LeastLimitingWaterRange a skos:Concept ;
+    # Textbook definition: audited printed page(s) 275; source term spp:LeastLimitingWaterRange.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The range of soil moisture content within which plant growth is least limited by soil strength or poor aeration."@en ] ;
     skos:broader eusoilvoc:SoilMoistureContents,
         eusoilvoc:SoilWaterRetentionIndex ;
     skos:exactMatch spp:LeastLimitingWaterRange ;
@@ -2355,6 +3046,9 @@ eusoilvoc:Pavements a skos:Concept ;
     skos:prefLabel "pavements"@en .
 
 eusoilvoc:PlantAvailableWaterCapacity a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 274; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The difference between soil water content at field capacity and at the permanent wilting point: AWC = FC − PWP."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalCapacity,
         eusoilvoc:SoilWaterRetentionIndex ;
     skos:exactMatch spp:PlantAvailableWaterCapacity ;
@@ -2376,6 +3070,9 @@ eusoilvoc:Runoff a skos:Concept ;
     skos:prefLabel "runoff"@en .
 
 eusoilvoc:SoilAeration a skos:Concept ;
+    # Textbook definition: audited printed page(s) 521; source term spp:SoilAeration.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The exchange of oxygen and carbon dioxide between the soil, including plant roots and soil microorganisms, and the atmosphere."@en ] ;
     skos:broader eusoilvoc:SoilAgriculturalFunctions,
         eusoilvoc:SoilAirPhysicalProcesses ;
     skos:exactMatch spp:SoilAeration ;
@@ -2390,6 +3087,9 @@ eusoilvoc:SoilAggregateSizeDistribution a skos:Concept ;
     skos:prefLabel "soil aggregate size distribution"@en .
 
 eusoilvoc:SoilAggregateStrength a skos:Concept ;
+    # Textbook definition: audited printed page(s) 109; source term spp:SoilAggregateStrength.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ability of soil aggregates to withstand disruptive forces."@en ] ;
     skos:broader eusoilvoc:SoilAggregatePhysicalProperties,
         eusoilvoc:SoilAggregationIndex ;
     skos:exactMatch spp:SoilAggregateStrength ;
@@ -2397,6 +3097,9 @@ eusoilvoc:SoilAggregateStrength a skos:Concept ;
     skos:prefLabel "soil aggregate strength"@en .
 
 eusoilvoc:SoilAir a skos:Concept ;
+    # Textbook definition: audited printed page(s) 518; source term spp:SoilAir.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Air occupying the air-filled pore space in soil."@en ] ;
     skos:broader eusoilvoc:SoilComponents,
         eusoilvoc:SoilGas ;
     skos:exactMatch spp:SoilAir ;
@@ -2412,6 +3115,9 @@ eusoilvoc:SoilAirContents a skos:Concept ;
     skos:prefLabel "soil air contents"@en .
 
 eusoilvoc:SoilAirMovement a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 527, 535; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Transport and exchange of air or gases within soil and between soil and the atmosphere by convection and diffusion."@en ] ;
     skos:broader eusoilvoc:SoilAirPhysicalProcesses ;
     skos:exactMatch spp:SoilAirMovement ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2426,6 +3132,9 @@ eusoilvoc:SoilBearingCapacity a skos:Concept ;
     skos:prefLabel "soil bearing capacity"@en .
 
 eusoilvoc:SoilBiologicalCrusts a skos:Concept ;
+    # Textbook definition: audited printed page(s) 154; source term spp:SoilBiologicalCrust.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A soil-surface crust formed primarily by algal growth; also called a microbiotic crust."@en ] ;
     skos:altLabel "soil biological crust"@en ;
     skos:broader eusoilvoc:SoilCrusts ;
     skos:exactMatch spp:SoilBiologicalCrust ;
@@ -2448,6 +3157,9 @@ eusoilvoc:SoilChargeDensity a skos:Concept ;
     skos:prefLabel "soil charge density"@en .
 
 eusoilvoc:SoilCompaction a skos:Concept ;
+    # Textbook definition: audited printed page(s) 188, 191; source term spp:SoilCompaction.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Compression and deformation of an unsaturated soil mass into a smaller volume, decreasing total porosity and macroporosity; the volume decrease occurs primarily through expulsion or compression of soil air."@en ] ;
     skos:broader eusoilvoc:SoilCompression,
         eusoilvoc:SoilPhysicalDegradativeProcesses ;
     skos:exactMatch spp:SoilCompaction ;
@@ -2455,6 +3167,9 @@ eusoilvoc:SoilCompaction a skos:Concept ;
     skos:prefLabel "soil compaction"@en .
 
 eusoilvoc:SoilCracking a skos:Concept ;
+    # Textbook definition: audited printed page(s) 172; source term spp:SoilCracking.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Soil failure through crack formation, occurring when the energy released by a crack exceeds the increase in surface energy associated with the new surfaces."@en ] ;
     skos:broader eusoilvoc:SoilFailure,
         eusoilvoc:SoilPhysicalProcesses ;
     skos:exactMatch spp:SoilCracking ;
@@ -2462,6 +3177,9 @@ eusoilvoc:SoilCracking a skos:Concept ;
     skos:prefLabel "soil cracking"@en .
 
 eusoilvoc:SoilCrustFormation a skos:Concept ;
+    # Textbook definition: audited printed page(s) 159; source term spp:SoilCrustFormation.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The process in which soil aggregates disperse, followed by particle orientation and hardening through desiccation to form a crust."@en ] ;
     skos:broader eusoilvoc:SoilChemicalDegradativeProcesses,
         eusoilvoc:SoilPhysicalDegradativeProcesses ;
     skos:exactMatch spp:SoilCrustFormation ;
@@ -2469,6 +3187,9 @@ eusoilvoc:SoilCrustFormation a skos:Concept ;
     skos:prefLabel "soil crust formation"@en .
 
 eusoilvoc:SoilCrusting a skos:Concept ;
+    # Textbook definition: audited printed page(s) 153; source term spp:SoilCrusting.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The formation of a thin soil-surface crust through disruption of aggregates at the soil-air interface, followed by dispersion, particle reorientation, and drying or desiccation."@en ] ;
     skos:broader eusoilvoc:SoilChemicalDegradativeProcesses,
         eusoilvoc:SoilPhysicalDegradativeProcesses ;
     skos:exactMatch spp:SoilCrusting ;
@@ -2476,6 +3197,9 @@ eusoilvoc:SoilCrusting a skos:Concept ;
     skos:prefLabel "soil crusting"@en .
 
 eusoilvoc:SoilDegradation a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 4; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A decline in soil quality such that the soil cannot perform one or several of its principal functions."@en ] ;
     skos:broader eusoilvoc:SoilChemicalDegradativeProcesses,
         eusoilvoc:SoilPhysicalDegradativeProcesses ;
     skos:exactMatch spp:SoilDegradation ;
@@ -2498,6 +3222,9 @@ eusoilvoc:SoilFauna a skos:Concept ;
     skos:prefLabel "soil fauna"@en .
 
 eusoilvoc:SoilGas a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 13; compositional.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The gaseous component of soil, consisting of a mixture of major gases such as nitrogen and oxygen and trace gases such as carbon dioxide, methane, and nitrous oxide."@en ] ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:exactMatch spp:SoilGas ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2521,6 +3248,9 @@ eusoilvoc:SoilHeatAbsorption a skos:Concept ;
     skos:prefLabel "soil heat absorption"@en .
 
 eusoilvoc:SoilHeatCapacity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 495; source term spp:SoilHeatCapacity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The amount of heat energy required to change the temperature of a body of soil by 1 °C."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalCapacity,
         eusoilvoc:SoilThermalProperties ;
     skos:exactMatch spp:SoilHeatCapacity ;
@@ -2528,6 +3258,9 @@ eusoilvoc:SoilHeatCapacity a skos:Concept ;
     skos:prefLabel "soil heat capacity"@en .
 
 eusoilvoc:SoilLiquid a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 13; compositional.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The liquid component of soil, consisting of a dilute aqueous solution of inorganic and organic compounds."@en ] ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:exactMatch spp:SoilLiquid ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2535,6 +3268,9 @@ eusoilvoc:SoilLiquid a skos:Concept ;
     skos:prefLabel "soil liquid"@en .
 
 eusoilvoc:SoilOrganicComponents a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 13, 72; compositional.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The organic constituents of soil, comprising living and dead substances of plant and animal origin, including remains at different stages of decomposition."@en ] ;
     skos:altLabel "soil organic component"@en ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:exactMatch spp:SoilOrganicComponent ;
@@ -2556,6 +3292,9 @@ eusoilvoc:SoilOxygenConsumption a skos:Concept ;
     skos:prefLabel "soil oxygen consumption"@en .
 
 eusoilvoc:SoilOxygenContents a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 518; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The proportion of soil air composed of oxygen (O2), expressed as a percentage by volume."@en ] ;
     skos:altLabel "soil oxygen content"@en ;
     skos:broader eusoilvoc:SoilAirPhysicalProperties,
         eusoilvoc:SoilContents ;
@@ -2564,6 +3303,9 @@ eusoilvoc:SoilOxygenContents a skos:Concept ;
     skos:prefLabel "soil oxygen contents"@en .
 
 eusoilvoc:SoilPenetrationResistance a skos:Concept ;
+    # Textbook definition: audited printed page(s) 199; source term spp:SoilPenetrationResistance.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The capacity of soil in a confined state to resist penetration by a rigid object."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilStrengthIndex ;
     skos:exactMatch spp:SoilPenetrationResistance ;
@@ -2571,6 +3313,9 @@ eusoilvoc:SoilPenetrationResistance a skos:Concept ;
     skos:prefLabel "soil penetration resistance"@en .
 
 eusoilvoc:SoilPoreSizeDistribution a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 147, 149; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The distribution of soil pores across size classes, characterized by the number of pores of different sizes or by pore volume associated with different sizes."@en ] ;
     skos:broader eusoilvoc:SoilPorePhysicalProperties,
         eusoilvoc:SoilPorosityIndex ;
     skos:exactMatch spp:SoilPoreSizeDistribution ;
@@ -2578,6 +3323,9 @@ eusoilvoc:SoilPoreSizeDistribution a skos:Concept ;
     skos:prefLabel "soil pore size distribution"@en .
 
 eusoilvoc:SoilPoreTortuosity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 434; source term spp:SoilPoreTortuosity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The irregular, non-straight character of flow paths through soil pores."@en ] ;
     skos:broader eusoilvoc:SoilPorePhysicalProperties,
         eusoilvoc:SoilStructureIndex ;
     skos:exactMatch spp:SoilPoreTortuosity ;
@@ -2585,6 +3333,13 @@ eusoilvoc:SoilPoreTortuosity a skos:Concept ;
     skos:prefLabel "soil pore tortuosity"@en .
 
 eusoilvoc:SoilRelativeDensity a skos:Concept ;
+    # Scope qualification: Two incompatible senses are explicitly defined. No single candidate is selected; the two alternatives must remain distinct.
+    # Index-guided textbook definition: printed page(s) 19; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "In the specific gravity sense, the dimensionless ratio of soil particle density to water density, Gs = ρs/ρw."@en ] ;
+    # Index-guided textbook definition: printed page(s) 194; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "In the packing-relative density sense, Rd = (emax - e)/(emax - emin), where e is the in-situ soil void ratio, emax the void ratio of the loose state attainable in the laboratory, and emin the void ratio of the densest state."@en ] ;
     skos:broader eusoilvoc:SoilDensity,
         eusoilvoc:SoilStrengthIndex ;
     skos:exactMatch spp:SoilRelativeDensity ;
@@ -2592,6 +3347,9 @@ eusoilvoc:SoilRelativeDensity a skos:Concept ;
     skos:prefLabel "soil relative density"@en .
 
 eusoilvoc:SoilSolution a skos:Concept ;
+    # Textbook definition: audited printed page(s) 13; source term spp:SoilSolution.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The liquid component of soil, consisting of a dilute aqueous solution of inorganic and organic compounds."@en ] ;
     skos:broader eusoilvoc:SoilComponents,
         eusoilvoc:SoilLiquid ;
     skos:exactMatch spp:SoilSolution ;
@@ -2606,6 +3364,9 @@ eusoilvoc:SoilStability a skos:Concept ;
     skos:prefLabel "soil stability"@en .
 
 eusoilvoc:SoilStrength a skos:Concept ;
+    # Textbook definition: audited printed page(s) 181; source term spp:SoilStrength.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The resistance that must be overcome to produce a specified deformation of soil."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilStrength ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2613,6 +3374,9 @@ eusoilvoc:SoilStrength a skos:Concept ;
     skos:prefLabel "soil strength"@en .
 
 eusoilvoc:SoilStructuralDecline a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 127; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Deterioration of soil structure through reduction or reversal of the aggregation process."@en ] ;
     skos:broader eusoilvoc:SoilChemicalDegradativeProcesses,
         eusoilvoc:SoilPhysicalDegradativeProcesses ;
     skos:exactMatch spp:SoilStructuralDecline ;
@@ -2627,6 +3391,10 @@ eusoilvoc:SoilSubsidence a skos:Concept ;
     skos:prefLabel "soil subsidence"@en .
 
 eusoilvoc:SoilSurfaceSealFormation a skos:Concept ;
+    # Scope qualification: This textbook explicitly treats crust and surface seal together. The candidate follows that local terminology.
+    # Index-guided textbook definition: printed page(s) 153, 159; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Formation of a thin, dense layer at the soil surface through dispersion and reorientation of particles followed by drying and hardening; the resulting seal has low porosity and low permeability to air and water."@en ] ;
     skos:broader eusoilvoc:SoilChemicalDegradativeProcesses,
         eusoilvoc:SoilPhysicalDegradativeProcesses ;
     skos:exactMatch spp:SoilSurfaceSealFormation ;
@@ -2634,6 +3402,10 @@ eusoilvoc:SoilSurfaceSealFormation a skos:Concept ;
     skos:prefLabel "soil surface seal formation"@en .
 
 eusoilvoc:SoilSurfaceSealing a skos:Concept ;
+    # Scope qualification: This textbook explicitly treats crust and surface seal together. The candidate follows that local terminology.
+    # Index-guided textbook definition: printed page(s) 153, 159; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Formation of a thin, dense layer at the soil surface through dispersion and reorientation of particles followed by drying and hardening; the resulting seal has low porosity and low permeability to air and water."@en ] ;
     skos:broader eusoilvoc:SoilChemicalDegradativeProcesses,
         eusoilvoc:SoilPhysicalDegradativeProcesses ;
     skos:exactMatch spp:SoilSurfaceSealing ;
@@ -2641,6 +3413,9 @@ eusoilvoc:SoilSurfaceSealing a skos:Concept ;
     skos:prefLabel "soil surface sealing"@en .
 
 eusoilvoc:SoilTillage a skos:Concept ;
+    # Textbook definition: audited printed page(s) 541; source term spp:SoilTillage.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The mechanical manipulation of soil to improve aeration, control weeds and incorporate organic matter."@en ] ;
     skos:broader eusoilvoc:SoilManagement ;
     skos:exactMatch spp:SoilTillage ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2678,6 +3453,9 @@ eusoilvoc:SoilWaterAvailability a skos:Concept ;
     skos:prefLabel "soil water availability"@en .
 
 eusoilvoc:SoilWaterEvapouration a skos:Concept ;
+    # Textbook definition: audited printed page(s) 409; source term spp:SoilWaterEvaporation.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The loss of water from bare soil to the atmosphere through conversion of liquid water to water vapor."@en ] ;
     skos:broader eusoilvoc:Evapouration,
         eusoilvoc:SoilWaterPhysicalProcesses ;
     skos:exactMatch spp:SoilWaterEvaporation ;
@@ -2706,6 +3484,9 @@ eusoilvoc:SoilWaterTransmission a skos:Concept ;
     skos:prefLabel "soil water transmission"@en .
 
 eusoilvoc:TotalPorosity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 20; source term spp:TotalPorosity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ratio of the volume occupied by soil water and air to the total soil volume."@en ] ;
     skos:broader eusoilvoc:SoilPorosity,
         eusoilvoc:SoilPorosityIndex ;
     skos:exactMatch spp:TotalPorosity ;
@@ -2728,6 +3509,9 @@ eusoilvoc:WaterQuality a skos:Concept ;
     skos:prefLabel "water quality"@en .
 
 eusoilvoc:NonconservativeSolutes a skos:Concept ;
+    # Textbook definition: audited printed page(s) 433; source term spp:NonconservativeSolute.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A solute that can undergo irreversible reactions and change its physical or chemical phase."@en ] ;
     skos:altLabel "nonconservative solute"@en ;
     skos:broader eusoilvoc:SoilSolutes ;
     skos:exactMatch spp:NonconservativeSolute ;
@@ -2745,6 +3529,9 @@ eusoilvoc:SoilAbsorption a skos:Concept ;
     skos:prefLabel "soil absorption"@en .
 
 eusoilvoc:SoilAdsorption a skos:Concept ;
+    # Textbook definition: audited printed page(s) 450; source term spp:SoilAdsorption.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The process by which ions or molecules attach to the surfaces of soil solids."@en ] ;
     skos:broader eusoilvoc:SoilChemicalProcesses ;
     skos:exactMatch spp:SoilAdsorption ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2760,6 +3547,9 @@ eusoilvoc:SoilAerationIndex a skos:Concept ;
     skos:prefLabel "soil aeration index"@en .
 
 eusoilvoc:SoilBulkDensity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 18; source term spp:SoilBulkDensity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ratio of the mass of soil solids to the total soil volume; also called apparent density."@en ] ;
     skos:broader eusoilvoc:SoilDensity ;
     skos:exactMatch spp:SoilBulkDensity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2801,6 +3591,9 @@ eusoilvoc:SoilDensification a skos:Concept ;
     skos:prefLabel "soil densification"@en .
 
 eusoilvoc:SoilHeatMovement a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 490, 498; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The transfer of thermal energy through soil by conduction, convection, or radiation, with conduction and convection identified as the principal transport processes within the soil matrix."@en ] ;
     skos:broader eusoilvoc:SoilThermalProcesses ;
     skos:exactMatch spp:SoilHeatMovement ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2815,6 +3608,9 @@ eusoilvoc:SoilMacrofauna a skos:Concept ;
     skos:prefLabel "soil macrofauna"@en .
 
 eusoilvoc:SoilMacropore a skos:Concept ;
+    # Textbook definition: audited printed page(s) 582; source term spp:SoilMacropore.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A soil pore that serves as a preferential water-flow path, identified by its flow behavior and continuity."@en ] ;
     skos:broader eusoilvoc:SoilPores ;
     skos:exactMatch spp:SoilMacropore ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2836,6 +3632,9 @@ eusoilvoc:SoilOrganisms a skos:Concept ;
     skos:prefLabel "soil organisms"@en .
 
 eusoilvoc:SoilOxidationReductionReaction a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 494, 526; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Coupled oxidation and reduction reactions in biological systems involving electron transfer, with electron release during oxidation and electron acceptance during reduction."@en ] ;
     skos:broader eusoilvoc:SoilChemicalReaction ;
     skos:exactMatch spp:SoilOxidationReductionReaction ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2844,6 +3643,9 @@ eusoilvoc:SoilOxidationReductionReaction a skos:Concept ;
     skos:prefLabel "soil oxidation reduction reaction"@en .
 
 eusoilvoc:SoilPermeability a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 337; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ability of soil, as a porous medium, to transmit fluid, expressed by its intrinsic permeability."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilPermeability ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2852,6 +3654,9 @@ eusoilvoc:SoilPermeability a skos:Concept ;
     skos:prefLabel "soil permeability"@en .
 
 eusoilvoc:SoilPhysicalCrusts a skos:Concept ;
+    # Textbook definition: audited printed page(s) 154; source term spp:SoilPhysicalCrust.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A soil crust formed by alteration of soil structural properties, including structural and depositional crusts."@en ] ;
     skos:altLabel "soil physical crust"@en ;
     skos:broader eusoilvoc:SoilCrusts ;
     skos:exactMatch spp:SoilPhysicalCrust ;
@@ -2869,6 +3674,9 @@ eusoilvoc:SoilPoreContinuity a skos:Concept ;
     skos:prefLabel "soil pore continuity"@en .
 
 eusoilvoc:SoilShrinkage a skos:Concept ;
+    # Textbook definition: audited printed page(s) 226, 228; source term spp:SoilShrinkage.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The decrease in total soil volume associated with loss of soil water during drying."@en ] ;
     skos:broader eusoilvoc:SoilVolumeChange ;
     skos:exactMatch spp:SoilShrinkage ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2877,6 +3685,9 @@ eusoilvoc:SoilShrinkage a skos:Concept ;
     skos:prefLabel "soil shrinkage"@en .
 
 eusoilvoc:SoilSolid a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 29; compositional.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The inorganic and organic components that form the matrix or body of most soils."@en ] ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:exactMatch spp:SoilSolid ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2885,6 +3696,9 @@ eusoilvoc:SoilSolid a skos:Concept ;
     skos:prefLabel "soil solid"@en .
 
 eusoilvoc:SoilSoluteDispersiveTransport a skos:Concept ;
+    # Textbook definition: audited printed page(s) 434, 438, 439; source term spp:SoilSoluteDispersiveTransport.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The spreading and mixing of solutes during soil-water movement caused by variations in pore-water velocity around the average velocity and by differences in pore pathways."@en ] ;
     skos:broader eusoilvoc:SoilSoluteTransport ;
     skos:exactMatch spp:SoilSoluteDispersiveTransport ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2893,6 +3707,10 @@ eusoilvoc:SoilSoluteDispersiveTransport a skos:Concept ;
     skos:prefLabel "soil solute dispersive transport"@en .
 
 eusoilvoc:SoilSolutes a skos:Concept ;
+    # Scope qualification: The chapter uses solutes broadly and lists transported materials including pathogens. The candidate follows that usage rather than silently imposing a narrower chemical-only sense.
+    # Index-guided textbook definition: printed page(s) 433, 434; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "In the textbook's soil-water transport context, substances dissolved or carried in soil water, such as salts, fertilizers, and pesticides, that may remain physically and chemically unchanged or undergo reactions and changes of phase within the soil."@en ] ;
     skos:altLabel "soil solute"@en ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:exactMatch spp:SoilSolute ;
@@ -2902,6 +3720,9 @@ eusoilvoc:SoilSolutes a skos:Concept ;
     skos:prefLabel "soil solutes"@en .
 
 eusoilvoc:SoilSurfaceCharge a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 54, 159; compositional.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Electric charge on soil-particle surfaces, comprising permanent charge associated with structural properties and variable charge associated with surface proton and hydroxyl imbalance."@en ] ;
     skos:broader eusoilvoc:SoilChargeProperties ;
     skos:exactMatch spp:SoilSurfaceCharge ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2927,6 +3748,9 @@ eusoilvoc:SoilSwellShrinkProperties a skos:Concept ;
     skos:prefLabel "soil swell shrink properties"@en .
 
 eusoilvoc:SoilSwelling a skos:Concept ;
+    # Textbook definition: audited printed page(s) 61; source term spp:SoilSwelling.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "An increase in soil volume caused by absorption of water or other polar liquids."@en ] ;
     skos:broader eusoilvoc:SoilVolumeChange ;
     skos:exactMatch spp:SoilSwelling ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2935,6 +3759,9 @@ eusoilvoc:SoilSwelling a skos:Concept ;
     skos:prefLabel "soil swelling"@en .
 
 eusoilvoc:SoilWaterFlow a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 331; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Movement of water through the porous soil matrix, driven under isothermal conditions by differences in potential energy from a region of greater potential toward one of smaller potential."@en ] ;
     skos:broader eusoilvoc:SoilWaterMovement ;
     skos:exactMatch spp:SoilWaterFlow ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2943,6 +3770,9 @@ eusoilvoc:SoilWaterFlow a skos:Concept ;
     skos:prefLabel "soil water flow"@en .
 
 eusoilvoc:SoilWaterInfiltrationCapacity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 376, 377; source term spp:SoilWaterInfiltrationCapacity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The maximum rate at which water can infiltrate into the soil profile."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalCapacity,
         eusoilvoc:SoilWaterPhysicalProperties,
         eusoilvoc:SoilWaterTransmissionIndex ;
@@ -2959,6 +3789,9 @@ eusoilvoc:SoilWaterRetentionIndex a skos:Concept ;
     skos:prefLabel "soil water retention index"@en .
 
 eusoilvoc:SoilWetting a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 601; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The spreading of applied water along soil-particle surfaces as attraction between soil and water overcomes cohesion within the water; a continuous water film on the particles permits uniform infiltration or percolation into the soil matrix."@en ] ;
     skos:broader eusoilvoc:SoilWaterPhysicalProcesses ;
     skos:exactMatch spp:SoilWetting ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2981,6 +3814,9 @@ eusoilvoc:PlantCover a skos:Concept ;
     skos:prefLabel "plant cover"@en .
 
 eusoilvoc:Sand a skos:Concept ;
+    # Textbook definition: audited printed page(s) 30; source term spp:Sand.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The coarse soil fraction that forms the skeleton of the soil body, with particle diameters of 0.05–2.00 mm in the USDA system or 0.02–2.00 mm in the ISSS system."@en ] ;
     skos:broader eusoilvoc:SoilPrimaryParticles ;
     skos:exactMatch spp:Sand ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2990,6 +3826,9 @@ eusoilvoc:Sand a skos:Concept ;
     skos:prefLabel "sand"@en .
 
 eusoilvoc:SoilAirFlow a skos:Concept ;
+    # Textbook definition: audited printed page(s) 527, 536; source term spp:SoilAirFlow.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Movement of air within soil and between soil and the atmosphere by convection driven by pressure differences and diffusion driven by concentration or partial-pressure gradients."@en ] ;
     skos:broader eusoilvoc:SoilAirMovement ;
     skos:exactMatch spp:SoilAirFlow ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -3018,6 +3857,9 @@ eusoilvoc:SoilChemicalCapacity a skos:Concept ;
     skos:prefLabel "soil chemical capacity"@en .
 
 eusoilvoc:SoilCompression a skos:Concept ;
+    # Textbook definition: audited printed page(s) 191; source term spp:SoilCompression.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "An increase in soil mass per unit volume caused by an external load."@en ] ;
     skos:broader eusoilvoc:SoilDensification,
         eusoilvoc:SoilVolumeChange ;
     skos:exactMatch spp:SoilCompression ;
@@ -3039,6 +3881,9 @@ eusoilvoc:SoilCrustPhysicalProperties a skos:Concept ;
     skos:prefLabel "soil crust physical properties"@en .
 
 eusoilvoc:SoilDrying a skos:Concept ;
+    # Textbook definition: audited printed page(s) 411; source term spp:SoilDrying.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The loss of water from soil by evaporation, depleting its moisture reserves."@en ] ;
     skos:broader eusoilvoc:SoilWaterPhysicalProcesses ;
     skos:exactMatch spp:SoilDrying ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -3048,6 +3893,9 @@ eusoilvoc:SoilDrying a skos:Concept ;
     skos:prefLabel "soil drying"@en .
 
 eusoilvoc:SoilFunctions a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 4; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Roles performed by soil, including sustaining biomass, providing habitat and biodiversity, cycling elements, moderating environmental quality, supporting engineering uses, and preserving records, landscapes, and cultural heritage."@en ] ;
     skos:altLabel "soil function"@en ;
     skos:exactMatch spp:SoilFunction ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -3069,6 +3917,9 @@ eusoilvoc:SoilHeatTransfer a skos:Concept ;
     skos:prefLabel "soil heat transfer"@en .
 
 eusoilvoc:SoilHydraulicConductivity a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 333, 337, 355; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The proportionality coefficient relating water flux density through soil to the hydraulic gradient; its value characterizes both the soil medium and the water and depends on the saturation or moisture state."@en ] ;
     skos:broader eusoilvoc:SoilWaterPhysicalProperties,
         eusoilvoc:SoilWaterTransmissionIndex ;
     skos:exactMatch spp:SoilHydraulicConductivity ;
@@ -3078,6 +3929,10 @@ eusoilvoc:SoilHydraulicConductivity a skos:Concept ;
     skos:prefLabel "soil hydraulic conductivity"@en .
 
 eusoilvoc:SoilParticles a skos:Concept ;
+    # Scope qualification: The supporting passage describes the inorganic component and primary/secondary particles. Its scope should remain explicit.
+    # Index-guided textbook definition: printed page(s) 29; compositional.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The units of the inorganic soil component: discrete primary particles that cannot be further subdivided, and secondary particles composed of primary particles that can be separated by chemical or mechanical dispersion."@en ] ;
     skos:altLabel "soil particle"@en ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:exactMatch spp:SoilParticle ;
@@ -3097,6 +3952,9 @@ eusoilvoc:SoilPorosityIndex a skos:Concept ;
     skos:prefLabel "soil porosity index"@en .
 
 eusoilvoc:SoilPrimaryParticles a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 29; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Discrete soil-particle units that cannot be further subdivided, also called soil separates."@en ] ;
     skos:altLabel "soil primary particle"@en ;
     skos:broader eusoilvoc:SoilParticles ;
     skos:exactMatch spp:SoilPrimaryParticle ;
@@ -3139,6 +3997,9 @@ eusoilvoc:SoilSolutePhysicalProperties a skos:Concept ;
     skos:prefLabel "soil solute physical properties"@en .
 
 eusoilvoc:SoilStrain a skos:Concept ;
+    # Textbook definition: audited printed page(s) 178; source term spp:SoilStrain.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Deformation of soil produced in response to stress."@en ] ;
     skos:broader eusoilvoc:SoilDeformation ;
     skos:exactMatch spp:SoilStrain ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -3167,6 +4028,10 @@ eusoilvoc:SoilThermalProperties a skos:Concept ;
     skos:prefLabel "soil thermal properties"@en .
 
 eusoilvoc:SoilWaterContents a skos:Concept ;
+    # Scope qualification: Operational oven-drying definition, with the source's 105°C limitation; it does not specify a gravimetric or volumetric denominator.
+    # Index-guided textbook definition: printed page(s) 268; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The water that may be evaporated from soil by heating it at 105°C to constant weight; the temperature limit is operational, and clayey soils may retain water at that temperature."@en ] ;
     skos:altLabel "soil water content"@en ;
     skos:broader eusoilvoc:SoilWaterPhysicalProperties ;
     skos:exactMatch spp:SoilWaterContent ;
@@ -3177,6 +4042,9 @@ eusoilvoc:SoilWaterContents a skos:Concept ;
     skos:prefLabel "soil water contents"@en .
 
 eusoilvoc:SoilWaterInfiltration a skos:Concept ;
+    # Textbook definition: audited printed page(s) 376; source term spp:SoilWaterInfiltration.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The entry of water into the soil matrix through the air–soil interface."@en ] ;
     skos:broader eusoilvoc:SoilWaterPhysicalProcesses,
         eusoilvoc:WaterInterchange ;
     skos:definition [ dcterms:source spp:SoilWaterInfiltration ;
@@ -3221,6 +4089,9 @@ eusoilvoc:SoilAirPhysicalProperties a skos:Concept ;
     skos:prefLabel "soil air physical properties"@en .
 
 eusoilvoc:SoilCrusts a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 153; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A thin, dense layer on the soil surface characterized by low porosity, high density, and low permeability to air and water."@en ] ;
     skos:altLabel "soil crust"@en ;
     skos:broader eusoilvoc:SoilSubstance ;
     skos:exactMatch spp:SoilCrust ;
@@ -3232,6 +4103,9 @@ eusoilvoc:SoilCrusts a skos:Concept ;
     skos:prefLabel "soil crusts"@en .
 
 eusoilvoc:SoilDeformation a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 181, 183; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A change in the shape or arrangement of soil under applied stress as its solid particles separate and move relative to one another; the change may be recoverable or permanent."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProcesses ;
     skos:exactMatch spp:SoilDeformation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -3242,6 +4116,9 @@ eusoilvoc:SoilDeformation a skos:Concept ;
     skos:prefLabel "soil deformation"@en .
 
 eusoilvoc:SoilDrainage a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 269, 508; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The removal of excess water from soil, through surface or subsurface pathways; under free drainage, gravity transfers the water from upper soil layers to lower layers."@en ] ;
     skos:broader eusoilvoc:SoilEngineeringFunctions,
         eusoilvoc:SoilManagement,
         eusoilvoc:SoilWaterTransmissionIndex ;
@@ -3252,6 +4129,9 @@ eusoilvoc:SoilDrainage a skos:Concept ;
     skos:prefLabel "soil drainage"@en .
 
 eusoilvoc:SoilErodibilityIndex a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 124; operational_or_formula.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The index Ie = 1/(Ir × k), where Ir is the index of resistance against water erosion and k is soil permeability."@en ] ;
     skos:broader eusoilvoc:SoilStructureIndirectIndex ;
     skos:exactMatch spp:SoilErodibilityIndex ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -3352,6 +4232,9 @@ eusoilvoc:SoilAirPhysicalProcesses a skos:Concept ;
     skos:prefLabel "soil air physical processes"@en .
 
 eusoilvoc:SoilEnvironmentalFunctions a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 4, 9; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Roles performed by soil in moderating environmental quality, including maintaining air and water quality and treating or remediating wastes and pollutants."@en ] ;
     skos:altLabel "soil environmental function"@en ;
     skos:broader eusoilvoc:SoilFunctions ;
     skos:exactMatch spp:SoilEnvironmentalFunction ;
@@ -3388,6 +4271,9 @@ eusoilvoc:SoilRetention a skos:Concept ;
     skos:prefLabel "soil retention"@en .
 
 eusoilvoc:SoilSoluteTransport a skos:Concept ;
+    # Textbook definition: audited printed page(s) 433, 437; source term spp:SoilSoluteTransport.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Movement of dissolved substances through the soil matrix with soil water and along concentration gradients, involving convection, diffusion, and dispersion."@en ] ;
     skos:broader eusoilvoc:SoilTransport ;
     skos:exactMatch spp:SoilSoluteTransport ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -3414,6 +4300,9 @@ eusoilvoc:Precipitation a skos:Concept ;
     skos:prefLabel "precipitation"@en .
 
 eusoilvoc:SoilConsistence a skos:Concept ;
+    # Textbook definition: audited printed page(s) 214; source term spp:SoilConsistence.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The manifestation of cohesion and adhesion within soil over a range of moisture contents, expressed through its resistance to deformation, rupture or flow."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilConsistence ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -3426,6 +4315,9 @@ eusoilvoc:SoilConsistence a skos:Concept ;
     skos:prefLabel "soil consistence"@en .
 
 eusoilvoc:SoilMoisturePotential a skos:Concept ;
+    # Textbook definition: audited printed page(s) 300; source term spp:SoilMoisturePotential.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The work that a unit quantity of water in an equilibrium soil-moisture system can do when moving to a reference pool of pure water at atmospheric pressure, at the same temperature and level."@en ] ;
     skos:broader eusoilvoc:SoilWaterPhysicalProperties ;
     skos:definition [ dcterms:source spp:SoilMoisturePotential ;
             rdf:value "the amount of work that a unit quantity of water in an equilibrium soil-moisture system is capable of doing when it moves to a pool of water in the reference state at the same temperature."@en ] ;
@@ -3519,6 +4411,9 @@ eusoilvoc:SoilChemicalProperties a skos:Concept ;
     skos:prefLabel "soil chemical properties"@en .
 
 eusoilvoc:SoilDensity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 17; source term spp:SoilDensity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ratio of soil mass to soil volume."@en ] ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:exactMatch spp:SoilDensity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -3547,6 +4442,9 @@ eusoilvoc:SoilChemicalDegradativeProcesses a skos:Concept ;
     skos:prefLabel "soil chemical degradative processes"@en .
 
 eusoilvoc:SoilMoistureContents a skos:Concept ;
+    # Textbook definition: audited printed page(s) 268, 280; source term spp:SoilMoistureContent.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The amount of water removed from soil by heating at 105°C to constant weight, expressed as a fraction or percentage on a mass or volume basis. On a gravimetric basis it equals the difference between wet and dry soil mass divided by dry soil mass."@en ] ;
     skos:altLabel "soil moisture content"@en ;
     skos:broader eusoilvoc:SoilWaterPhysicalProperties ;
     skos:exactMatch spp:SoilMoistureContent ;
@@ -3577,6 +4475,10 @@ eusoilvoc:SoilPhysicalDegradativeProcesses a skos:Concept ;
     skos:prefLabel "soil physical degradative processes"@en .
 
 eusoilvoc:SoilStructureIndex a skos:Concept ;
+    # Scope qualification: This broad category includes aggregate-analysis and other-property indices; it must not be restricted to SoilStructureIndirectIndex.
+    # Index-guided textbook definition: printed page(s) 120, 121, 122; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A measure used to assess soil structure from aggregate analysis or from other soil properties related to structure."@en ] ;
     skos:exactMatch spp:SoilStructureIndex ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilAerationIndex,
@@ -3607,6 +4509,9 @@ eusoilvoc:SoilPhenomena a skos:Concept ;
     skos:topConceptOf <https://w3id.org/eusoilvoc> .
 
 eusoilvoc:WaterInterchange a skos:Concept ;
+    # Textbook definition: audited printed page(s) 247; source term spp:WaterInterchange.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The transfer of water between the principal water pools, forms, or environments of the hydrologic cycle."@en ] ;
     skos:broader eusoilvoc:PlanetaryPhenomena ;
     skos:exactMatch spp:WaterInterchange ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -3670,6 +4575,9 @@ eusoilvoc:SoilPhysicalCapacity a skos:Concept ;
     skos:prefLabel "soil physical capacity"@en .
 
 eusoilvoc:SoilPorosity a skos:Concept ;
+    # Textbook definition: audited printed page(s) 20; source term spp:SoilPorosity.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The relative volume of soil voids or pores, expressed as a fraction or percentage of total soil volume or of the volume of soil solids, according to the measure used."@en ] ;
     skos:broader eusoilvoc:SoilPorePhysicalProperties ;
     skos:exactMatch spp:SoilPorosity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -3686,6 +4594,9 @@ eusoilvoc:SoilPorosity a skos:Concept ;
     skos:prefLabel "soil porosity"@en .
 
 eusoilvoc:SoilEngineeringFunctions a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 4, 9; supported_paraphrase.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Roles performed by soil in engineering, including providing foundations for civil structures and supplying raw materials for industrial uses."@en ] ;
     skos:altLabel "soil engineering function"@en ;
     skos:broader eusoilvoc:SoilFunctions ;
     skos:exactMatch spp:SoilEngineeringFunction ;
@@ -3721,6 +4632,9 @@ eusoilvoc:SoilStructureIndirectIndex a skos:Concept ;
     skos:prefLabel "soil structure indirect index"@en .
 
 eusoilvoc:SoilAgriculturalFunctions a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 4, 9; compositional.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The roles of soil in sustaining agricultural biomass production, including support for root growth and the supply of water and nutrients to plants."@en ] ;
     skos:altLabel "soil agricultural function"@en ;
     skos:broader eusoilvoc:SoilFunctions ;
     skos:exactMatch spp:SoilAgriculturalFunction ;
@@ -3740,6 +4654,9 @@ eusoilvoc:SoilAgriculturalFunctions a skos:Concept ;
     skos:prefLabel "soil agricultural functions"@en .
 
 eusoilvoc:SoilPores a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 13; explicit_text.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Voids or spaces between the solid components of soil, which may be occupied by water or air."@en ] ;
     skos:altLabel "soil pore"@en ;
     skos:broader eusoilvoc:SoilSubstance ;
     skos:exactMatch spp:SoilPore ;
@@ -3781,6 +4698,9 @@ eusoilvoc:SoilChemicalProcesses a skos:Concept ;
     skos:prefLabel "soil chemical processes"@en .
 
 eusoilvoc:SoilComponents a skos:Concept ;
+    # Index-guided textbook definition: printed page(s) 13; compositional.
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The constituent materials of soil: inorganic solids, organic solids, water, and air."@en ] ;
     skos:altLabel "soil component"@en ;
     skos:broader eusoilvoc:SoilSubstance ;
     skos:exactMatch spp:SoilComponent ;
