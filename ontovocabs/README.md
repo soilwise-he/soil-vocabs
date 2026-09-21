@@ -2,6 +2,9 @@
 
 A concise **summary and background** for soil/environment/agronomy-related ontologies/vocabularies in this repository
 
+The [local SoilVoc module](soilvoc/README.md) contains the locally curated
+concept declarations used alongside the SPP, SHKG and GloSIS modules.
+
 ## [ISO 11074](https://www.iso.org/standard/83168.html) – Soil Quality Vocabulary
 
 **What it is:**

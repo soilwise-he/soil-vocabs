@@ -223,12 +223,6 @@ eusoilvoc:SlopePathways a skos:Concept ;
     skos:exactMatch glosis_sp:slopePathwaysProperty ;
     skos:prefLabel "slope pathways"@en .
 
-eusoilvoc:SoilAge a skos:Concept ;
-    skos:altLabel "age of soil"@en ;
-    skos:broader eusoilvoc:SoilProperties ;
-    skos:narrower eusoilvoc:SoilSurfaceAge ;
-    skos:prefLabel "soil age"@en .
-
 eusoilvoc:SoilCarbonDensity a skos:Concept ;
     skos:broader eusoilvoc:SoilOrganicCarbon ;
     skos:definition [ dcterms:source glosis_sp:soilCarbonDensityProperty ;
@@ -302,24 +296,10 @@ eusoilvoc:Floods a skos:Concept ;
         eusoilvoc:FloodFrequency ;
     skos:prefLabel "floods"@en .
 
-eusoilvoc:SlopeGradient a skos:Concept ;
-    skos:narrower eusoilvoc:SlopeGradientNumeric ;
-    skos:prefLabel "slope gradient"@en .
-
-eusoilvoc:SlopeOrientation a skos:Concept ;
-    skos:narrower eusoilvoc:SlopeOrientationNumeric ;
-    skos:prefLabel "slope orientation"@en .
-
 eusoilvoc:Weather a skos:Concept ;
     skos:narrower eusoilvoc:WeatherCurrent,
         eusoilvoc:WeatherPast ;
     skos:prefLabel "weather"@en .
-
-eusoilvoc:RockOutcrops a skos:Concept ;
-    skos:altLabel "rock outcrop"@en ;
-    skos:narrower eusoilvoc:RockOutcropCover,
-        eusoilvoc:RockOutcropDistance ;
-    skos:prefLabel "rock outcrops"@en .
 
 eusoilvoc:Slope a skos:Concept ;
     skos:narrower eusoilvoc:SlopeForms,

@@ -2937,17 +2937,6 @@ eusoilvoc:Cadmium a skos:Concept ;
         eusoilvoc:CadmiumTotalElements ;
     skos:prefLabel "cadmium"@en .
 
-eusoilvoc:MineralParticles a skos:Concept ;
-    skos:altLabel "mineral particle"@en ;
-    skos:broader eusoilvoc:SoilPhysicalProperties ;
-    skos:narrower eusoilvoc:MineralContents,
-        eusoilvoc:MineralFragments ;
-    skos:prefLabel "mineral particles"@en .
-
-eusoilvoc:Nitrogen a skos:Concept ;
-    skos:narrower eusoilvoc:NitrogenTotal ;
-    skos:prefLabel "nitrogen"@en .
-
 eusoilvoc:Roots a skos:Concept ;
     skos:altLabel "root"@en ;
     skos:narrower eusoilvoc:RootAbundance,
@@ -2958,12 +2947,6 @@ eusoilvoc:SoilConsistence a skos:Concept ;
     skos:narrower eusoilvoc:ConsistenceDry,
         eusoilvoc:ConsistenceMoist ;
     skos:prefLabel "soil consistence"@en .
-
-eusoilvoc:SoilHorizonBoundary a skos:Concept ;
-    skos:broader eusoilvoc:SoilPhysicalProperties ;
-    skos:narrower eusoilvoc:BoundaryDistinctness,
-        eusoilvoc:BoundaryTopography ;
-    skos:prefLabel "soil horizon boundary"@en .
 
 eusoilvoc:SoilPores a skos:Concept ;
     skos:altLabel "soil pore"@en ;
@@ -2994,12 +2977,6 @@ eusoilvoc:Boron a skos:Concept ;
     skos:narrower eusoilvoc:BoronExtractableElements,
         eusoilvoc:BoronTotalElements ;
     skos:prefLabel "boron"@en .
-
-eusoilvoc:Carbonate a skos:Concept ;
-    skos:broader eusoilvoc:SoilChemicalProperties ;
-    skos:narrower eusoilvoc:CarbonateContents,
-        eusoilvoc:CarbonateForms ;
-    skos:prefLabel "carbonate"@en .
 
 eusoilvoc:CationExchangeCapacity a skos:Concept ;
     skos:definition [ dcterms:source glosis_lh:cationExchangeCapacityProperty ;
@@ -3076,11 +3053,6 @@ eusoilvoc:SolubleSalts a skos:Concept ;
     sosa:hasProcedure eusoilvoc:solubleSaltsProcedure-SlbAn_calcul-unkn,
         eusoilvoc:solubleSaltsProcedure-SlbCat_calcul-unkn .
 
-eusoilvoc:Sulfur a skos:Concept ;
-    skos:narrower eusoilvoc:SulfurExtractableElements,
-        eusoilvoc:SulfurTotalElements ;
-    skos:prefLabel "sulfur"@en .
-
 eusoilvoc:Zinc a skos:Concept ;
     skos:narrower eusoilvoc:ZincExtractableElements,
         eusoilvoc:ZincTotalElements ;
@@ -3091,14 +3063,6 @@ eusoilvoc:Calcium a skos:Concept ;
         eusoilvoc:CalciumExtractableElements,
         eusoilvoc:CalciumTotalElements ;
     skos:prefLabel "calcium"@en .
-
-eusoilvoc:Cementation a skos:Concept ;
-    skos:broader eusoilvoc:SoilPhysicalProperties ;
-    skos:narrower eusoilvoc:CementationContinuity,
-        eusoilvoc:CementationDegree,
-        eusoilvoc:CementationFabric,
-        eusoilvoc:CementationNature ;
-    skos:prefLabel "cementation"@en .
 
 eusoilvoc:Magnesium a skos:Concept ;
     skos:narrower eusoilvoc:MagnesiumExchangeableBases,
@@ -3111,12 +3075,6 @@ eusoilvoc:Manganese a skos:Concept ;
         eusoilvoc:ManganeseExtractableElements,
         eusoilvoc:ManganeseTotalElements ;
     skos:prefLabel "manganese"@en .
-
-eusoilvoc:Phosphorus a skos:Concept ;
-    skos:narrower eusoilvoc:PhosphorusExtractableElements,
-        eusoilvoc:PhosphorusRetention,
-        eusoilvoc:PhosphorusTotalElements ;
-    skos:prefLabel "phosphorus"@en .
 
 eusoilvoc:Potassium a skos:Concept ;
     skos:narrower eusoilvoc:PotassiumExchangeableBases,
@@ -3131,9 +3089,6 @@ eusoilvoc:SoilBulkDensity a skos:Concept ;
         eusoilvoc:BulkDensityWholeSoil ;
     skos:prefLabel "soil bulk density"@en .
 
-eusoilvoc:SoilDescription a skos:Concept ;
-    skos:prefLabel "soil description"@en .
-
 eusoilvoc:nitrogenTotalProcedure-TotalN_dc a skos:Concept ;
     skos:definition [ dcterms:source glosis_proc:nitrogenTotalProcedure-TotalN_dc ;
             rdf:value "Dry combustion"@en ] ;
@@ -3142,25 +3097,6 @@ eusoilvoc:nitrogenTotalProcedure-TotalN_dc a skos:Concept ;
         eusoilvoc:nitrogenTotalProcedure-TotalN_dc-ht-leco,
         eusoilvoc:nitrogenTotalProcedure-TotalN_dc-spec ;
     skos:prefLabel "TotalN_dc"@en .
-
-eusoilvoc:SoilCoating a skos:Concept ;
-    skos:broader eusoilvoc:SoilPhysicalProperties ;
-    skos:narrower eusoilvoc:CoatingAbundance,
-        eusoilvoc:CoatingContrast,
-        eusoilvoc:CoatingForms,
-        eusoilvoc:CoatingLocation,
-        eusoilvoc:CoatingNature ;
-    skos:prefLabel "soil coating"@en .
-
-eusoilvoc:SoilMottle a skos:Concept ;
-    skos:broader eusoilvoc:SoilPhysicalProperties ;
-    skos:narrower eusoilvoc:MottleAbundance,
-        eusoilvoc:MottleBoundaryClassification,
-        eusoilvoc:MottleColour,
-        eusoilvoc:MottleContrast,
-        eusoilvoc:MottlePresence,
-        eusoilvoc:MottleSize ;
-    skos:prefLabel "soil mottle"@en .
 
 eusoilvoc:pHProcedure-pHKCl a skos:Concept ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHKCl ;
@@ -3262,18 +3198,6 @@ eusoilvoc:pHProcedure-pHNaF a skos:Concept ;
         eusoilvoc:pHProcedure-pHNaF_ratio1-5,
         eusoilvoc:pHProcedure-pHNaF_sat ;
     skos:prefLabel "pHNaF"@en .
-
-eusoilvoc:MineralConcentration a skos:Concept ;
-    skos:broader eusoilvoc:SoilPhysicalProperties ;
-    skos:narrower eusoilvoc:MineralConcAbundance,
-        eusoilvoc:MineralConcColour,
-        eusoilvoc:MineralConcHardness,
-        eusoilvoc:MineralConcKind,
-        eusoilvoc:MineralConcNature,
-        eusoilvoc:MineralConcShape,
-        eusoilvoc:MineralConcSize,
-        eusoilvoc:MineralConcVolume ;
-    skos:prefLabel "mineral concentration"@en .
 
 eusoilvoc:pHProcedure-pHH2O a skos:Concept ;
     skos:definition [ dcterms:source glosis_proc:pHProcedure-pHH2O ;

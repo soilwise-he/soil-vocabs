@@ -1,0 +1,146 @@
+@prefix eusoilvoc: <https://w3id.org/eusoilvoc#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+# Locally curated SoilVoc concepts, migrated from the GloSIS and SHKG SKOS modules.
+# Keep these concept declarations here; other modules may link to these URIs.
+
+eusoilvoc:CarbonPools a skos:Concept ;
+    skos:altLabel "carbon pool"@en ;
+    skos:prefLabel "carbon pools"@en .
+
+eusoilvoc:Carbonate a skos:Concept ;
+    skos:broader eusoilvoc:SoilChemicalProperties ;
+    skos:narrower eusoilvoc:CarbonateContents,
+        eusoilvoc:CarbonateForms ;
+    skos:prefLabel "carbonate"@en .
+
+eusoilvoc:Cementation a skos:Concept ;
+    skos:broader eusoilvoc:SoilPhysicalProperties ;
+    skos:narrower eusoilvoc:CementationContinuity,
+        eusoilvoc:CementationDegree,
+        eusoilvoc:CementationFabric,
+        eusoilvoc:CementationNature ;
+    skos:prefLabel "cementation"@en .
+
+eusoilvoc:Fragments a skos:Concept ;
+    skos:altLabel "fragment"@en ;
+    skos:broader eusoilvoc:SoilPhysicalProperties ;
+    skos:narrower eusoilvoc:FragmentCover,
+        eusoilvoc:FragmentSize,
+        eusoilvoc:Rock,
+        eusoilvoc:WeatheringFragments ;
+    skos:prefLabel "fragments"@en .
+
+eusoilvoc:Habitats a skos:Concept ;
+    skos:altLabel "habitat"@en ;
+    skos:prefLabel "habitats"@en .
+
+eusoilvoc:MineralConcentration a skos:Concept ;
+    skos:broader eusoilvoc:SoilPhysicalProperties ;
+    skos:narrower eusoilvoc:MineralConcAbundance,
+        eusoilvoc:MineralConcColour,
+        eusoilvoc:MineralConcHardness,
+        eusoilvoc:MineralConcKind,
+        eusoilvoc:MineralConcNature,
+        eusoilvoc:MineralConcShape,
+        eusoilvoc:MineralConcSize,
+        eusoilvoc:MineralConcVolume ;
+    skos:prefLabel "mineral concentration"@en .
+
+eusoilvoc:MineralParticles a skos:Concept ;
+    skos:altLabel "mineral particle"@en ;
+    skos:broader eusoilvoc:SoilPhysicalProperties ;
+    skos:narrower eusoilvoc:MineralContents,
+        eusoilvoc:MineralFragments ;
+    skos:prefLabel "mineral particles"@en .
+
+eusoilvoc:Nitrogen a skos:Concept ;
+    skos:narrower eusoilvoc:NitrogenTotal ;
+    skos:prefLabel "nitrogen"@en .
+
+eusoilvoc:Phosphorus a skos:Concept ;
+    skos:narrower eusoilvoc:PhosphorusExtractableElements,
+        eusoilvoc:PhosphorusRetention,
+        eusoilvoc:PhosphorusTotalElements ;
+    skos:prefLabel "phosphorus"@en .
+
+eusoilvoc:Rock a skos:Concept ;
+    skos:broader eusoilvoc:Fragments ;
+    skos:narrower eusoilvoc:RockAbundance,
+        eusoilvoc:RockShape,
+        eusoilvoc:RockSize ;
+    skos:prefLabel "rock"@en .
+
+eusoilvoc:RockOutcrops a skos:Concept ;
+    skos:altLabel "rock outcrop"@en ;
+    skos:narrower eusoilvoc:RockOutcropCover,
+        eusoilvoc:RockOutcropDistance ;
+    skos:prefLabel "rock outcrops"@en .
+
+eusoilvoc:SlopeGradient a skos:Concept ;
+    skos:narrower eusoilvoc:SlopeGradientNumeric ;
+    skos:prefLabel "slope gradient"@en .
+
+eusoilvoc:SlopeOrientation a skos:Concept ;
+    skos:narrower eusoilvoc:SlopeOrientationNumeric ;
+    skos:prefLabel "slope orientation"@en .
+
+eusoilvoc:SoilAge a skos:Concept ;
+    skos:altLabel "age of soil"@en ;
+    skos:broader eusoilvoc:SoilProperties ;
+    skos:narrower eusoilvoc:SoilSurfaceAge ;
+    skos:prefLabel "soil age"@en .
+
+eusoilvoc:SoilClassification a skos:Concept ;
+    skos:narrower eusoilvoc:SoilClassificationFAO,
+        eusoilvoc:SoilClassificationUSDA,
+        eusoilvoc:SoilClassificationWRB ;
+    skos:prefLabel "soil classification"@en .
+
+eusoilvoc:SoilClassificationFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassification ;
+    skos:prefLabel "soil classification FAO"@en .
+
+eusoilvoc:SoilClassificationUSDA a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassification ;
+    skos:prefLabel "soil classification USDA"@en .
+
+eusoilvoc:SoilClassificationWRB a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassification ;
+    skos:prefLabel "soil classification WRB"@en .
+
+eusoilvoc:SoilCoating a skos:Concept ;
+    skos:broader eusoilvoc:SoilPhysicalProperties ;
+    skos:narrower eusoilvoc:CoatingAbundance,
+        eusoilvoc:CoatingContrast,
+        eusoilvoc:CoatingForms,
+        eusoilvoc:CoatingLocation,
+        eusoilvoc:CoatingNature ;
+    skos:prefLabel "soil coating"@en .
+
+eusoilvoc:SoilDescription a skos:Concept ;
+    skos:prefLabel "soil description"@en .
+
+eusoilvoc:SoilHorizonBoundary a skos:Concept ;
+    skos:broader eusoilvoc:SoilPhysicalProperties ;
+    skos:narrower eusoilvoc:BoundaryDistinctness,
+        eusoilvoc:BoundaryTopography ;
+    skos:prefLabel "soil horizon boundary"@en .
+
+eusoilvoc:SoilMesofauna a skos:Concept ;
+    skos:prefLabel "soil mesofauna"@en .
+
+eusoilvoc:SoilMottle a skos:Concept ;
+    skos:broader eusoilvoc:SoilPhysicalProperties ;
+    skos:narrower eusoilvoc:MottleAbundance,
+        eusoilvoc:MottleBoundaryClassification,
+        eusoilvoc:MottleColour,
+        eusoilvoc:MottleContrast,
+        eusoilvoc:MottlePresence,
+        eusoilvoc:MottleSize ;
+    skos:prefLabel "soil mottle"@en .
+
+eusoilvoc:Sulfur a skos:Concept ;
+    skos:narrower eusoilvoc:SulfurExtractableElements,
+        eusoilvoc:SulfurTotalElements ;
+    skos:prefLabel "sulfur"@en .

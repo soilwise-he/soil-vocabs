@@ -153,19 +153,3 @@ eusoilvoc:SoilDepth a skos:Concept ;
         eusoilvoc:SoilDepthSampled ;
     skos:prefLabel "soil depth"@en .
 
-eusoilvoc:Fragments a skos:Concept ;
-    skos:altLabel "fragment"@en ;
-    skos:broader eusoilvoc:SoilPhysicalProperties ;
-    skos:narrower eusoilvoc:FragmentCover,
-        eusoilvoc:FragmentSize,
-        eusoilvoc:Rock,
-        eusoilvoc:WeatheringFragments ;
-    skos:prefLabel "fragments"@en .
-
-eusoilvoc:Rock a skos:Concept ;
-    skos:broader eusoilvoc:Fragments ;
-    skos:narrower eusoilvoc:RockAbundance,
-        eusoilvoc:RockShape,
-        eusoilvoc:RockSize ;
-    skos:prefLabel "rock"@en .
-

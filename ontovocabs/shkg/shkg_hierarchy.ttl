@@ -68,10 +68,6 @@ eusoilvoc:SoilThreats a skos:Concept ;
 eusoilvoc:BiomassProductivity a skos:Concept ;
     skos:prefLabel "biomass productivity"@en .
 
-eusoilvoc:CarbonPools a skos:Concept ;
-    skos:altLabel "carbon pool"@en ;
-    skos:prefLabel "carbon pools"@en .
-
 eusoilvoc:CarbonStorageCapacity a skos:Concept ;
     skos:prefLabel "carbon storage capacity"@en .
 
@@ -109,10 +105,6 @@ eusoilvoc:GroundwaterReproduction a skos:Concept ;
 
 eusoilvoc:HabitatProvisionCapacity a skos:Concept ;
     skos:prefLabel "habitat provision capacity"@en .
-
-eusoilvoc:Habitats a skos:Concept ;
-    skos:altLabel "habitat"@en ;
-    skos:prefLabel "habitats"@en .
 
 eusoilvoc:Inputs a skos:Concept ;
     skos:altLabel "input"@en ;
@@ -234,9 +226,6 @@ eusoilvoc:SoilFunctionIndicators a skos:Concept ;
 
 eusoilvoc:SoilMacrofauna a skos:Concept ;
     skos:prefLabel "soil macrofauna"@en .
-
-eusoilvoc:SoilMesofauna a skos:Concept ;
-    skos:prefLabel "soil mesofauna"@en .
 
 eusoilvoc:SoilMicrofauna a skos:Concept ;
     skos:prefLabel "soil microfauna"@en .

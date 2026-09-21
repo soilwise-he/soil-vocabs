@@ -18,21 +18,3 @@ eusoilvoc:SoilTypes a skos:Concept ;
     skos:exactMatch glosis_pr:soilTypeProperty ;
     skos:prefLabel "soil types"@en .
 
-eusoilvoc:SoilClassificationFAO a skos:Concept ;
-    skos:broader eusoilvoc:SoilClassification ;
-    skos:prefLabel "soil classification FAO"@en .
-
-eusoilvoc:SoilClassificationUSDA a skos:Concept ;
-    skos:broader eusoilvoc:SoilClassification ;
-    skos:prefLabel "soil classification USDA"@en .
-
-eusoilvoc:SoilClassificationWRB a skos:Concept ;
-    skos:broader eusoilvoc:SoilClassification ;
-    skos:prefLabel "soil classification WRB"@en .
-
-eusoilvoc:SoilClassification a skos:Concept ;
-    skos:narrower eusoilvoc:SoilClassificationFAO,
-        eusoilvoc:SoilClassificationUSDA,
-        eusoilvoc:SoilClassificationWRB ;
-    skos:prefLabel "soil classification"@en .
-
