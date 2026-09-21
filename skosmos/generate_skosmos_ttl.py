@@ -1,4 +1,4 @@
-"""Generate the Skosmos display copy of SoilVoc.
+"""Generate the Skosmos display copy of the augmented SoilVoc vocabulary.
 
 The source vocabulary keeps definition provenance in blank nodes using
 rdf:value. For legacy inputs, this script still rewrites definition blank-node
@@ -26,7 +26,7 @@ SCHEMA_TEXT = URIRef("https://schema.org/text")
 SKOSMOS_HIERARCHY_PARENT = EUSOILVOC.skosmosHierarchyParent
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent
-DEFAULT_SOURCE = REPO_ROOT / "SoilVoc.ttl"
+DEFAULT_SOURCE = REPO_ROOT / "SoilVoc_augmented.ttl"
 DEFAULT_OUTPUT = SCRIPT_DIR / "SoilVoc_skosmos.ttl"
 DEFAULT_ONTOLOGY = SCRIPT_DIR / "soilvoc_ontology.ttl"
 
@@ -122,13 +122,13 @@ def generate_skosmos_ttl(
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Generate skosmos/SoilVoc_skosmos.ttl from SoilVoc.ttl."
+        description="Generate skosmos/SoilVoc_skosmos.ttl from SoilVoc_augmented.ttl."
     )
     parser.add_argument(
         "--source",
         type=Path,
         default=DEFAULT_SOURCE,
-        help="Source SoilVoc Turtle file.",
+        help="Source SoilVoc Turtle file (default: SoilVoc_augmented.ttl).",
     )
     parser.add_argument(
         "--output",

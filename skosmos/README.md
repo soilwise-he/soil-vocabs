@@ -21,13 +21,13 @@ The local Skosmos instance can also use an existing Virtuoso endpoint through `.
 
 ## Generate Skosmos Data
 
-`../SoilVoc.ttl` remains the canonical source. The repository includes `SoilVoc_skosmos.ttl` for initial setup. After vocabulary changes, regenerate this display copy from the `skosmos/` directory before reloading Fuseki:
+`../SoilVoc.ttl` remains the canonical vocabulary. The generator uses `../SoilVoc_augmented.ttl` by default and embeds `soilvoc_ontology.ttl` in the Skosmos display copy. After updating the augmented vocabulary, regenerate this display copy from the `skosmos/` directory before reloading Fuseki:
 
 ```powershell
 python .\generate_skosmos_ttl.py
 ```
 
-This writes `SoilVoc_skosmos.ttl`. The generated copy preserves canonical definition blank-node `rdf:value` text, rewrites legacy `schema:text` values if present, keeps SKOS and SOSA links semantic, adds display-only `eusoilvoc:skosmosHierarchyParent` triples for Skosmos sidebar traversal, and embeds `soilvoc_ontology.ttl` so property/class labels are available from the same RDF file. This lets procedures appear in the sidebar without becoming false SKOS narrower concepts. The canonical `../SoilVoc.ttl` is not changed by this script.
+This writes `SoilVoc_skosmos.ttl`. The generated copy preserves source definition blank-node `rdf:value` text, rewrites legacy `schema:text` values if present, keeps SKOS and SOSA links semantic, adds display-only `eusoilvoc:skosmosHierarchyParent` triples for Skosmos sidebar traversal, and embeds `soilvoc_ontology.ttl` so property/class labels are available from the same RDF file. This lets procedures appear in the sidebar without becoming false SKOS narrower concepts. The input files are not changed by this script. Use `--source` to select another vocabulary file.
 
 ## Start With Local Fuseki
 
@@ -222,7 +222,7 @@ docker compose up -d --build
 - Local Varnish host port: `9031`
 - Local Fuseki is the default backend and uses Skosmos' Jena Text dialect. The optional remote Virtuoso configuration uses the Generic SPARQL dialect.
 - The feedback plugin posts to the same-origin path `/api/feedback`; the local Compose stack does not include email delivery.
-- `SoilVoc_skosmos.ttl` is a generated Skosmos display copy; regenerate it from `../SoilVoc.ttl` and `soilvoc_ontology.ttl`.
+- `SoilVoc_skosmos.ttl` is a generated Skosmos display copy; regenerate it from `../SoilVoc_augmented.ttl` and `soilvoc_ontology.ttl`.
 - Override ports, `SKOSMOS_IMAGE`, or `SKOSMOS_CONFIG` by copying an environment example to `.env` and editing the values.
 - Skosmos Docker notes: `https://github.com/NatLibFi/Skosmos/wiki/Install-Skosmos-with-Fuseki-in-Docker`
 - Skosmos configuration reference: `https://github.com/NatLibFi/Skosmos/wiki/Configuration`
