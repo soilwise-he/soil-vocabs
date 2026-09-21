@@ -488,9 +488,9 @@ eusoilvoc:BulkDensityPeat a skos:Concept ;
 
 eusoilvoc:BulkDensityWholeSoil a skos:Concept ;
     skos:broader eusoilvoc:SoilBulkDensity ;
-    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-BulDfine ;
-            rdf:value "This parameter measures the bulk density of the soil fraction smaller than 2 mm (excluding rocks and coarse fragments). It is used to assess the physical properties of soil related to root growth, water movement, and compaction. Source: Soil Science Society of America."@en ] ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-BulDfine ;
+    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-BulDwhole ;
+            rdf:value "Bulk density measures the mass of soil per unit volume, including both solids and pore spaces. It is a critical parameter for assessing soil compaction, porosity, and water infiltration capacity. High bulk density often indicates poor aeration and root penetration, while low values are associated with high organic matter content and good structure. Source: USDA NRCS."@en ] ;
+    skos:exactMatch glosis_cl:physioChemicalPropertyCode-BulDwhole ;
     skos:prefLabel "bulk density whole soil"@en ;
     sosa:hasProcedure eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-fc,
         eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-cl-od,
@@ -504,9 +504,9 @@ eusoilvoc:BulkDensityWholeSoil a skos:Concept ;
 eusoilvoc:CadmiumExtractableElements a skos:Concept ;
     skos:altLabel "cadmium extractable element"@en ;
     skos:broader eusoilvoc:Cadmium ;
-    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Cad ;
-            rdf:value "Cadmium is a heavy metal present in trace amounts in soils, often introduced through industrial pollution or phosphate fertilizers. It is toxic to plants, animals, and humans even at low concentrations. Monitoring cadmium levels is crucial to ensure soil safety and reduce contamination risks in the food chain. Source: Sparks, D.L. (2003)."@en ] ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cad ;
+    skos:definition [ dcterms:source glosis_lh:CadmiumExtractableElements ;
+            rdf:value "Extractable cadmium refers to the portion of cadmium in soil that is readily soluble or bioavailable. It is measured using chemical extractants and is critical for assessing soil contamination and plant uptake risks. Source: Adriano, D.C. (2001). Trace Elements in Terrestrial Environments."@en ] ;
+    skos:closeMatch glosis_cl:physioChemicalPropertyCode-Cad ;
     skos:prefLabel "cadmium extractable elements"@en ;
     sosa:hasProcedure eusoilvoc:extractableElementsProcedure-Extr_ap14,
         eusoilvoc:extractableElementsProcedure-Extr_ap15,
@@ -537,9 +537,9 @@ eusoilvoc:CadmiumExtractableElements a skos:Concept ;
 eusoilvoc:CadmiumTotalElements a skos:Concept ;
     skos:altLabel "cadmium total element"@en ;
     skos:broader eusoilvoc:Cadmium ;
-    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Cad ;
-            rdf:value "Cadmium is a heavy metal present in trace amounts in soils, often introduced through industrial pollution or phosphate fertilizers. It is toxic to plants, animals, and humans even at low concentrations. Monitoring cadmium levels is crucial to ensure soil safety and reduce contamination risks in the food chain. Source: Sparks, D.L. (2003)."@en ] ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Cad ;
+    skos:definition [ dcterms:source glosis_lh:CadmiumTotalElements ;
+            rdf:value "Total cadmium includes all forms of cadmium in soil, such as bound, mineralized, and free forms. It is used to assess long-term contamination levels. Source: Kabata-Pendias, A., & Pendias, H. (2001). Trace Elements in Soils and Plants."@en ] ;
+    skos:closeMatch glosis_cl:physioChemicalPropertyCode-Cad ;
     skos:prefLabel "cadmium total elements"@en ;
     sosa:hasProcedure eusoilvoc:totalElementsProcedure-Total_h2so4,
         eusoilvoc:totalElementsProcedure-Total_hcl,
@@ -992,9 +992,9 @@ eusoilvoc:MagnesiumTotalElements a skos:Concept ;
 eusoilvoc:ManganeseExchangeableBases a skos:Concept ;
     skos:altLabel "manganese exchangeable base"@en ;
     skos:broader eusoilvoc:Manganese ;
-    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Mantot ;
-            rdf:value "Total manganese refers to all forms of manganese in the soil, which is critical for photosynthesis, enzyme activation, and nitrogen metabolism in plants. Manganese deficiencies or toxicities are influenced by soil pH, with deficiencies occurring in high-pH soils and toxicities in low-pH, waterlogged soils.  Source: Brady & Weil (2017)."@en ] ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mantot ;
+    skos:definition [ dcterms:source glosis_lh:ManganeseExchangeableBases ;
+            rdf:value "Manganese exchangeable bases represent manganese ions adsorbed onto soil particles that can be readily exchanged. It plays a role in redox processes and plant nutrition. Source: Lindsay, W.L. (1979). Chemical Equilibria in Soils."@en ] ;
+    skos:closeMatch glosis_cl:physioChemicalPropertyCode-Mantot ;
     skos:prefLabel "manganese exchangeable bases"@en ;
     sosa:hasProcedure eusoilvoc:exchangeableBasesProcedure-ExchBases_ph-unkn-edta,
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph-unkn-m3,
@@ -1042,9 +1042,9 @@ eusoilvoc:ManganeseExtractableElements a skos:Concept ;
 
 eusoilvoc:ManganeseTotalElements a skos:Concept ;
     skos:broader eusoilvoc:Manganese ;
-    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Mantot ;
-            rdf:value "Total manganese refers to all forms of manganese in the soil, which is critical for photosynthesis, enzyme activation, and nitrogen metabolism in plants. Manganese deficiencies or toxicities are influenced by soil pH, with deficiencies occurring in high-pH soils and toxicities in low-pH, waterlogged soils.  Source: Brady & Weil (2017)."@en ] ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mantot ;
+    skos:definition [ dcterms:source glosis_lh:ManganeseTotalElements ;
+            rdf:value "Total manganese is the sum of all manganese forms in soil, including both bioavailable and mineral-bound fractions, important for soil fertility assessment. Source: Adriano, D.C. (2001). Trace Elements in Terrestrial Environments."@en ] ;
+    skos:closeMatch glosis_cl:physioChemicalPropertyCode-Mantot ;
     skos:prefLabel "manganese total elements"@en ;
     sosa:hasProcedure eusoilvoc:totalElementsProcedure-Total_h2so4,
         eusoilvoc:totalElementsProcedure-Total_hcl,
@@ -1140,9 +1140,9 @@ eusoilvoc:MineralFragments a skos:Concept ;
 
 eusoilvoc:MolybdenumExtractableElements a skos:Concept ;
     skos:broader eusoilvoc:Molybdenum ;
-    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Mol ;
-            rdf:value "Molybdenum is a micronutrient essential for plant enzymes involved in nitrogen fixation and nitrate reduction. Deficiency, often observed in acidic soils, can lead to stunted growth and poor nitrogen utilization. Its availability increases with higher pH, making liming a common solution for molybdenum deficiencies. Source: Havlin et al. (2014)."@en ] ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mol ;
+    skos:definition [ dcterms:source glosis_lh:MolybdenumExtractableElements ;
+            rdf:value "Extractable molybdenum refers to the portion of molybdenum in soil that is chemically available for plant uptake, typically measured using extractants like ammonium oxalate. Source: Lindsay, W.L. (1979). Chemical Equilibria in Soils."@en ] ;
+    skos:closeMatch glosis_cl:physioChemicalPropertyCode-Mol ;
     skos:prefLabel "molybdenum extractable elements"@en ;
     sosa:hasProcedure eusoilvoc:extractableElementsProcedure-Extr_ap14,
         eusoilvoc:extractableElementsProcedure-Extr_ap15,
@@ -1172,9 +1172,9 @@ eusoilvoc:MolybdenumExtractableElements a skos:Concept ;
 
 eusoilvoc:MolybdenumTotalElements a skos:Concept ;
     skos:broader eusoilvoc:Molybdenum ;
-    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Mol ;
-            rdf:value "Molybdenum is a micronutrient essential for plant enzymes involved in nitrogen fixation and nitrate reduction. Deficiency, often observed in acidic soils, can lead to stunted growth and poor nitrogen utilization. Its availability increases with higher pH, making liming a common solution for molybdenum deficiencies. Source: Havlin et al. (2014)."@en ] ;
-    skos:exactMatch glosis_cl:physioChemicalPropertyCode-Mol ;
+    skos:definition [ dcterms:source glosis_lh:MolybdenumTotalElements ;
+            rdf:value "Total molybdenum includes all molybdenum present in the soil, both in available and mineral-bound forms. Molybdenum is an essential micronutrient for plant nitrogen metabolism. Source: Adriano, D.C. (2001). Trace Elements in Terrestrial Environments."@en ] ;
+    skos:closeMatch glosis_cl:physioChemicalPropertyCode-Mol ;
     skos:prefLabel "molybdenum total elements"@en ;
     sosa:hasProcedure eusoilvoc:totalElementsProcedure-Total_h2so4,
         eusoilvoc:totalElementsProcedure-Total_hcl,

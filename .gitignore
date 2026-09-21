@@ -1,9 +1,5 @@
 # coding agents
-docs/
 AGENTS.md
-
-# test scripts
-tests/
 
 # local worktrees
 .worktrees/
