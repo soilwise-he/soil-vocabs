@@ -17,7 +17,7 @@ from rdflib import BNode, Graph, Namespace, URIRef
 from rdflib.namespace import DCTERMS, RDF, RDFS, SDO, SKOS, SOSA
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_TTL_PATH = REPO_ROOT / "SoilVoc.ttl"
+DEFAULT_TTL_PATH = REPO_ROOT / "SoilVoc_augmented.ttl"
 DEFAULT_OUTPUT_DIR = REPO_ROOT / "assets"
 DEFAULT_VERSION_FILE = DEFAULT_OUTPUT_DIR / "VERSION"
 
@@ -160,7 +160,10 @@ def parse_skos_vocabulary_enhanced(ttl_file_path):
             })
 
         # Check if this is a procedure (exactMatch to glosis_proc)
-        is_procedure = any('glosis/model/procedure/' in m['uri'] for m in exact_matches)
+        is_procedure = (
+            (concept_uri, RDF.type, SOSA.Procedure) in g
+            or any('glosis/model/procedure/' in m['uri'] for m in exact_matches)
+        )
 
         # Get narrower concepts
         narrower = list(g.objects(concept_uri, SKOS.narrower))
