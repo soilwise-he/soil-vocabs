@@ -2,6 +2,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix eusoilvoc: <https://w3id.org/eusoilvoc#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix she: <https://soilwise-he.github.io/soil-health#> .
 
 eusoilvoc:EcosystemServices a skos:Concept ;
     skos:altLabel "ecosystem service"@en ;
@@ -204,6 +205,10 @@ eusoilvoc:SoilEcologicalDegradation a skos:Concept ;
     skos:prefLabel "soil ecological degradation"@en .
 
 eusoilvoc:SoilErosion a skos:Concept ;
+    skos:exactMatch she:SoilErosion ;
+    skos:narrower eusoilvoc:AnthropogenicErosion,
+        eusoilvoc:WaterErosion,
+        eusoilvoc:WindErosion ;
     skos:prefLabel "soil erosion"@en .
 
 eusoilvoc:SoilFauna a skos:Concept ;
@@ -266,11 +271,14 @@ eusoilvoc:SoilPhysicalProperties a skos:Concept ;
 
 eusoilvoc:SoilPollution a skos:Concept ;
     skos:prefLabel "soil pollution"@en ;
-    skos:narrower eusoilvoc:SoilContaminants .
+    skos:narrower eusoilvoc:SoilPollutants .
 
-eusoilvoc:SoilContaminants a skos:Concept ;
-    skos:prefLabel "soil contaminants"@en ;
-    skos:altLabel "soil contaminant"@en .
+eusoilvoc:SoilPollutants a skos:Concept ;
+    skos:prefLabel "soil pollutants"@en ;
+    skos:altLabel "soil Contaminants"@en,
+        "soil contaminant"@en ;
+    skos:broader eusoilvoc:SoilPollution ;
+    skos:exactMatch she:SoilContaminants .
 
 eusoilvoc:SoilSealing a skos:Concept ;
     skos:prefLabel "soil sealing"@en .
@@ -291,3 +299,84 @@ eusoilvoc:WaterStorageCapacity a skos:Concept ;
 eusoilvoc:SoilQuality a skos:Concept ;
     skos:prefLabel "soil quality"@en .
 
+eusoilvoc:AnthropogenicErosion a skos:Concept ;
+    skos:broader eusoilvoc:SoilErosion ;
+    skos:exactMatch she:AnthropogenicErosion ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:HarvestingErosion,
+        eusoilvoc:LivestockTramplingErosion,
+        eusoilvoc:TillageErosion ;
+    skos:prefLabel "anthropogenic erosion"@en .
+
+eusoilvoc:EphemeralGullyErosion a skos:Concept ;
+    skos:broader eusoilvoc:WaterErosion ;
+    skos:exactMatch she:EphemeralGullyErosion ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "ephemeral gully erosion"@en .
+
+eusoilvoc:GullyErosion a skos:Concept ;
+    skos:broader eusoilvoc:WaterErosion ;
+    skos:definition [ dcterms:source she:GullyErosion ;
+            rdf:value "Gully erosion is a special and very intense form of water erosion in areas with concentrated run-off leading to large gullies as the typical landform."@en ] ;
+    skos:exactMatch she:GullyErosion ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "gully erosion"@en .
+
+eusoilvoc:HarvestingErosion a skos:Concept ;
+    skos:broader eusoilvoc:AnthropogenicErosion ;
+    skos:definition [ dcterms:source she:HarvestingErosion ;
+            rdf:value "Harvesting erosion is offsite losses of soil adhering to the crop during harvest, mainly of root and tuber crops."@en ] ;
+    skos:exactMatch she:HarvestingErosion ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "harvesting erosion"@en .
+
+eusoilvoc:InterrillErosion a skos:Concept ;
+    skos:broader eusoilvoc:WaterErosion ;
+    skos:exactMatch she:InterrillErosion ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "interrill erosion"@en .
+
+eusoilvoc:LivestockTramplingErosion a skos:Concept ;
+    skos:broader eusoilvoc:AnthropogenicErosion ;
+    skos:definition [ dcterms:source she:LivestockTramplingErosion ;
+            rdf:value "Erosion caused by livestock trampling is onsite soil loss occurring after soil compaction, overgrazing and removal or reduction of vegetation cover."@en ] ;
+    skos:exactMatch she:LivestockTramplingErosion ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "livestock trampling erosion"@en .
+
+eusoilvoc:PipingErosion a skos:Concept ;
+    skos:broader eusoilvoc:WaterErosion ;
+    skos:exactMatch she:PipingErosion ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "piping erosion"@en .
+
+eusoilvoc:RillErosion a skos:Concept ;
+    skos:broader eusoilvoc:WaterErosion ;
+    skos:exactMatch she:RillErosion ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "rill erosion"@en .
+
+eusoilvoc:TillageErosion a skos:Concept ;
+    skos:broader eusoilvoc:AnthropogenicErosion ;
+    skos:exactMatch she:TillageErosion ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "tillage erosion"@en .
+
+eusoilvoc:WaterErosion a skos:Concept ;
+    skos:altLabel "soil erosion by water"@en ;
+    skos:broader eusoilvoc:SoilErosion ;
+    skos:exactMatch she:SoilErosionByWater ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:EphemeralGullyErosion,
+        eusoilvoc:GullyErosion,
+        eusoilvoc:InterrillErosion,
+        eusoilvoc:PipingErosion,
+        eusoilvoc:RillErosion ;
+    skos:prefLabel "water erosion"@en .
+
+eusoilvoc:WindErosion a skos:Concept ;
+    skos:altLabel "soil erosion by wind"@en ;
+    skos:broader eusoilvoc:SoilErosion ;
+    skos:exactMatch she:SoilErosionByWind ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "wind erosion"@en .

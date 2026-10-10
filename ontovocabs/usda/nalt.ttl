@@ -1,0 +1,168 @@
+# USDA soil orders and reviewed erosion contributions from USDA NALT.
+# Generated offline by scripts/build_usda_classification_module.py.
+# Source records retrieved 2026-09-22; local URI and hierarchy adaptations.
+# Shared NALT WRB/USDA records use closeMatch; source cross-mappings are not imported.
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eusoilvoc: <https://w3id.org/eusoilvoc#> .
+@prefix nalt: <https://lod.nal.usda.gov/nalt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+eusoilvoc:AlfisolsUSDA a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationUSDA ;
+    skos:exactMatch nalt:6336 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Alfisols"@en ;
+    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+
+eusoilvoc:AndisolsUSDA a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationUSDA ;
+    skos:exactMatch nalt:8668 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Andisols"@en ;
+    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+
+eusoilvoc:AridisolsUSDA a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationUSDA ;
+    skos:exactMatch nalt:12092 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Aridisols"@en ;
+    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+
+eusoilvoc:EntisolsUSDA a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationUSDA ;
+    skos:exactMatch nalt:11535 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Entisols"@en ;
+    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+
+eusoilvoc:GelisolsUSDA a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationUSDA ;
+    skos:exactMatch nalt:42526 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Gelisols"@en ;
+    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+
+eusoilvoc:HistosolsUSDA a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationUSDA ;
+    skos:closeMatch nalt:40066 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Histosols"@en ;
+    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+
+eusoilvoc:InceptisolsUSDA a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationUSDA ;
+    skos:exactMatch nalt:10070 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Inceptisols"@en ;
+    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+
+eusoilvoc:MollisolsUSDA a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationUSDA ;
+    skos:exactMatch nalt:6020 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Mollisols"@en ;
+    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+
+eusoilvoc:OxisolsUSDA a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationUSDA ;
+    skos:exactMatch nalt:11617 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Oxisols"@en ;
+    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+
+eusoilvoc:SpodosolsUSDA a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationUSDA ;
+    skos:definition [ dcterms:source nalt:11601 ;
+            rdf:value "Acidic forest soil of low fertility"@en ] ;
+    skos:exactMatch nalt:11601 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Spodosols"@en ;
+    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+
+eusoilvoc:UltisolsUSDA a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationUSDA ;
+    skos:exactMatch nalt:11621 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Ultisols"@en ;
+    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+
+eusoilvoc:VertisolsUSDA a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationUSDA ;
+    skos:closeMatch nalt:11557 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Vertisols"@en ;
+    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+
+eusoilvoc:SoilClassificationUSDA skos:narrower eusoilvoc:AlfisolsUSDA,
+        eusoilvoc:AndisolsUSDA,
+        eusoilvoc:AridisolsUSDA,
+        eusoilvoc:EntisolsUSDA,
+        eusoilvoc:GelisolsUSDA,
+        eusoilvoc:HistosolsUSDA,
+        eusoilvoc:InceptisolsUSDA,
+        eusoilvoc:MollisolsUSDA,
+        eusoilvoc:OxisolsUSDA,
+        eusoilvoc:SpodosolsUSDA,
+        eusoilvoc:UltisolsUSDA,
+        eusoilvoc:VertisolsUSDA .
+
+eusoilvoc:AcceleratedErosion a skos:Concept ;
+    skos:broader eusoilvoc:SoilErosion ;
+    skos:definition [ dcterms:source nalt:225015 ;
+            rdf:value "Erosion much more rapid than normal erosion, natural erosion, or geologic erosion, and occurring primarily as a result of the influence of the activities of man or, in some cases, of other animals or natural catastrophes that expose bare surfaces (for example, fires)."@en ] ;
+    skos:exactMatch nalt:225015 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "accelerated erosion"@en .
+
+eusoilvoc:GullyErosion skos:broader eusoilvoc:WaterErosion ;
+    skos:exactMatch nalt:44106 .
+
+eusoilvoc:InterrillErosion skos:broader eusoilvoc:WaterErosion ;
+    skos:exactMatch nalt:47543 .
+
+eusoilvoc:RillErosion skos:broader eusoilvoc:WaterErosion ;
+    skos:definition [ dcterms:source nalt:61575 ;
+            rdf:value "The process by which numerous small channels, at the most only several inches deep, are formed on recently cultivated or exposed soils."@en ] ;
+    skos:exactMatch nalt:61575 .
+
+eusoilvoc:SheetErosion a skos:Concept ;
+    skos:broader eusoilvoc:WaterErosion ;
+    skos:definition [ dcterms:source nalt:62999 ;
+            rdf:value "Soil erosion occurring from a thin, relatively uniform layer of soil particles on the soil surface."@en ] ;
+    skos:exactMatch nalt:62999 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "sheet erosion"@en .
+
+eusoilvoc:SoilErosion skos:closeMatch nalt:501 ;
+    skos:narrower eusoilvoc:AcceleratedErosion,
+        eusoilvoc:TillageErosion,
+        eusoilvoc:WaterErosion,
+        eusoilvoc:WindErosion .
+
+eusoilvoc:SplashErosion a skos:Concept ;
+    skos:broader eusoilvoc:WaterErosion ;
+    skos:definition [ dcterms:source nalt:63944 ;
+            rdf:value "The spattering of small soil particles caused by the impact of raindrops on wet soils. The loosened and spattered particles may or may not be subsequently removed by surface runoff."@en ] ;
+    skos:exactMatch nalt:63944 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "splash erosion"@en .
+
+eusoilvoc:TillageErosion skos:broader eusoilvoc:SoilErosion ;
+    skos:definition [ dcterms:source nalt:266421 ;
+            rdf:value "The downslope movement of soil by tillage operations."@en ] ;
+    skos:exactMatch nalt:266421 .
+
+eusoilvoc:WaterErosion skos:broader eusoilvoc:SoilErosion ;
+    skos:closeMatch nalt:15764 ;
+    skos:narrower eusoilvoc:GullyErosion,
+        eusoilvoc:InterrillErosion,
+        eusoilvoc:RillErosion,
+        eusoilvoc:SheetErosion,
+        eusoilvoc:SplashErosion .
+
+eusoilvoc:WindErosion skos:broader eusoilvoc:SoilErosion ;
+    skos:definition [ dcterms:source nalt:63376 ;
+            rdf:value "The process of detachment, transport, and deposition of soil by wind."@en ] ;
+    skos:exactMatch nalt:63376 .

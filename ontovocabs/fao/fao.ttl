@@ -1,0 +1,163 @@
+# FAO-UNESCO 1974: the 19 major groups missing from the AGROVOC module.
+# Generated offline by scripts/build_fao_module.py from classification_manifest.json.
+# Definitions: FAO, Key to the FAO Soil Units (1974); whitespace normalized.
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eusoilvoc: <https://w3id.org/eusoilvoc#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+eusoilvoc:AcrisolsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils having an argillic B horizon; having a base saturation which is less than 50 percent (by NH4OAc) in at least some part of the B horizon within 125 cm of the surface."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Acrisols"@en .
+
+eusoilvoc:AndosolsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils having either a mollic or an umbric A horizon possibly overlying a cambic B horizon, or an ochric A horizon and a cambic B horizon; having no other diagnostic horizons (unless buried by 50 cm or more new material); having to a depth of 35 cm or more one or both of: (a) a bulk density (at 1/3-bar water retention) of the fine earth (less than 2 mm) fraction of the soil of less than 0.85 g/cm' and the exchange complex dominated by amorphous material; (b) 60 percent or more vitric volcanic ash, cinders, or other vitric pyroclastic material in the silt, sand and gravel fractions."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Andosols"@en .
+
+eusoilvoc:ArenosolsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Soils of coarse texture consisting of albic material occurring over a depth of at least 50 cm from the surface, or showing characteristics of argillic, cambic or oxic B horizons which, however, do not qualify as diagnostic horizons because of the textural requirements; having no diagnostic horizons other than (unless buried by 50 cm or more new material) an ochric A horizon."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Arenosols"@en .
+
+eusoilvoc:CambisolsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils having a cambic B horizon or an umbric A horizon which is more than 25 cm thick."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Cambisols"@en .
+
+eusoilvoc:ChernozemsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils having a mollic A horizon with a moist chroma of 2 or less to a depth of at least IS cm; having one or more of the following: a calcic or a gypsic horizon, or concentrations of soft powdery lime within 125 cm of the surface when the weighted average textural class is coarse, within 90 cm for medium textures, within 75 cm for fine textures."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Chernozems"@en .
+
+eusoilvoc:FerralsolsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils having an oxic B horizon."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Ferralsols"@en .
+
+eusoilvoc:FluvisolsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils developed from recent alluvial deposits, having no diagnostic horizons other than (unless buried by 50 cm or more new material) an ochric or an umbric A horizon, an H horizon, or a sulfuric horizon."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Fluvisols"@en .
+
+eusoilvoc:GleysolsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils showing hydromorphic properties within 50 cm of the surface; having no diagnostic horizons other than (unless buried by 50 cm or more new material) an A horizon, an H horizon, a cambic B horizon, a calcic or a gypsic horizon."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Gleysols"@en .
+
+eusoilvoc:HistosolsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Soils having an H horizon of 40 cm or more (60 cm or more if the organic material consists mainly of sphagnum or moss or has a bulk density of less than 0.1) either extending down from the surface or taken cumulatively within the upper 80 cm of the soil; the thickness of the H horizon may be less when it rests on rocks or on fragmental material of which the interstices are filled with organic matter."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Histosols"@en .
+
+eusoilvoc:KastanozemsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils having a mollic A horizon with a moist chroma of more than 2 to a depth of at least 15 cm. having one or more of the following: a calcic or gypsic horizon, or concentrations of soft powdery lime within 125 cm of the surface when the weighted average textural class is coarse, within 90 cm for medium textures, within 75 cm for fine textures."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Kastanozems"@en .
+
+eusoilvoc:LuvisolsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils having an argillic B horizon."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Luvisols"@en .
+
+eusoilvoc:NitosolsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils having an argillic B horizon with a clay distribution where the percentage of clay does not decrease from its maximum amount by as much as 20 percent within 150 cm of the surface; lacking plinthite within 125 cm of the surface; lacking vertic and ferric properties."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Nitosols"@en .
+
+eusoilvoc:PhaeozemsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils having a mollic A horizon."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Phaeozems"@en .
+
+eusoilvoc:PlanosolsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils having an albic E horizon overlying a slowly permeable horizon (for example, an argillic or natric B horizon showing an abrupt textural change, a heavy clay, a fragipan) within 125 cm of the surface; showing hydromorphic properties at least in a part of the E horizon."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Planosols"@en .
+
+eusoilvoc:PodzolsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils having a spodic B horizon."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Podzols"@en .
+
+eusoilvoc:RegosolsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils having no diagnostic horizons or none other than (unless buried by 50 cm or more new material) an ochric A horizon."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Regosols"@en .
+
+eusoilvoc:SolonchaksFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils having high salinity and having no diagnostic horizons other than (unless buried by 50 cm or more new material) an A horizon, an H horizon, a cambic B horizon, a calcic or a gypsic horizon"@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Solonchaks"@en .
+
+eusoilvoc:SolonetzFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils having a natric B horizon."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Solonetz"@en .
+
+eusoilvoc:VertisolsFAO a skos:Concept ;
+    skos:broader eusoilvoc:SoilClassificationFAO ;
+    skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+            rdf:value "Other soils which, after the upper 20 cm are mixed, have 30 percent or more clay in all horizons to at least 50 cm from the surface; at some period in most years have cracks at least 1 cm wide at a depth of 50 cm, unless irrigated, and have one or more of the following characteristics: gilgai microrelief, intersecting slickensides or wedge-shaped or parallelepiped structural aggregates at some depth between 25 and 100 cm from the surface."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "Vertisols"@en .
+
+eusoilvoc:SoilClassificationFAO dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
+    skos:narrower eusoilvoc:AcrisolsFAO,
+        eusoilvoc:AndosolsFAO,
+        eusoilvoc:ArenosolsFAO,
+        eusoilvoc:CambisolsFAO,
+        eusoilvoc:ChernozemsFAO,
+        eusoilvoc:FerralsolsFAO,
+        eusoilvoc:FluvisolsFAO,
+        eusoilvoc:GleysolsFAO,
+        eusoilvoc:HistosolsFAO,
+        eusoilvoc:KastanozemsFAO,
+        eusoilvoc:LuvisolsFAO,
+        eusoilvoc:NitosolsFAO,
+        eusoilvoc:PhaeozemsFAO,
+        eusoilvoc:PlanosolsFAO,
+        eusoilvoc:PodzolsFAO,
+        eusoilvoc:RegosolsFAO,
+        eusoilvoc:SolonchaksFAO,
+        eusoilvoc:SolonetzFAO,
+        eusoilvoc:VertisolsFAO .
+

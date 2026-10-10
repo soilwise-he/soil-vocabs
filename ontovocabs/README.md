@@ -4,6 +4,14 @@ A concise **summary and background** for soil/environment/agronomy-related ontol
 
 The [local SoilVoc module](soilvoc/README.md) contains the locally curated
 concept declarations used alongside the SPP, SHKG and GloSIS modules.
+The [curated AGROVOC module](agrovoc/README.md) adds reviewed AGROVOC concepts
+using SoilVoc identities, with saved source evidence and an import manifest.
+The [NALT module](usda/README.md) provides reviewed USDA soil orders and erosion
+contributions in a single `nalt.ttl` file. The curated [SHKG module](shkg/README.md)
+is `shkg/shkg.ttl`. Their shared [erosion review](soilvoc/EROSION_REVIEW.md)
+records source ownership, mappings and the approved combined hierarchy.
+The [FAO 1974 module](fao/README.md) completes the FAO-UNESCO major-group branch:
+19 groups in `fao/fao.ttl` supplement the seven already declared in AGROVOC.
 
 ## [ISO 11074](https://www.iso.org/standard/83168.html) – Soil Quality Vocabulary
 

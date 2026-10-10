@@ -2932,7 +2932,7 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc a skos:Concept ;
     skos:prefLabel "CaCO3_calcul-tc-oc"@en .
 
 eusoilvoc:Cadmium a skos:Concept ;
-    skos:broader eusoilvoc:SoilContaminants ;
+    skos:broader eusoilvoc:SoilPollutants ;
     skos:narrower eusoilvoc:CadmiumExtractableElements,
         eusoilvoc:CadmiumTotalElements ;
     skos:prefLabel "cadmium"@en .
@@ -2967,7 +2967,7 @@ eusoilvoc:SoilVoids a skos:Concept ;
     skos:prefLabel "soil voids"@en .
 
 eusoilvoc:Aluminium a skos:Concept ;
-    skos:broader eusoilvoc:SoilContaminants ;
+    skos:broader eusoilvoc:SoilPollutants ;
     skos:narrower eusoilvoc:AluminiumExchangeableBase,
         eusoilvoc:AluminiumExtractableElements,
         eusoilvoc:AluminiumTotalElements ;
