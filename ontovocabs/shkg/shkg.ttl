@@ -46,8 +46,7 @@ eusoilvoc:SoilOrganisms a skos:Concept ;
 eusoilvoc:SoilProperties a skos:Concept ;
     skos:altLabel "soil property"@en ;
     skos:narrower eusoilvoc:SoilBiologicalProperties,
-        eusoilvoc:SoilChemicalProperties,
-        eusoilvoc:SoilPhysicalProperties ;
+        eusoilvoc:SoilChemicophysicalProperties ;
     skos:prefLabel "soil properties"@en .
 
 eusoilvoc:SoilThreats a skos:Concept ;
@@ -184,12 +183,17 @@ eusoilvoc:SoilChemicalFunctions a skos:Concept ;
 
 eusoilvoc:SoilChemicalProperties a skos:Concept ;
     skos:altLabel "soil chemical property"@en ;
+    skos:broader eusoilvoc:SoilChemicophysicalProperties ;
     skos:definition [ dcterms:source <https://soilhealthnexus.org/resources/soil-properties/soil-chemical-properties/> ;
             rdf:value "Chemical properties of soils include the following aspects: inorganic matters of soil, organic matters in soil, colloidal properties of soil particles and soil reactions and buffering action in acidic soils and basic soils."@en ],
         [ dcterms:source <https://www.sciencedirect.com/topics/earth-and-planetary-sciences/soil-chemical-property> ;
             rdf:value "Soil chemical properties refer to the chemical attributes of soil that influence its ability to supply nutrients to plants, retain harmful elements, and affect plant growth and microbial populations. These properties include nutrient concentrations, pH levels, and the presence of elements such as nitrogen, phosphorus, and potassium, which are critical for soil quality assessment and agricultural productivity."@en ] ;
     skos:prefLabel "soil chemical properties"@en ;
     skos:related eusoilvoc:SoilQuality .
+
+eusoilvoc:SoilChemicophysicalProperties skos:broader eusoilvoc:SoilProperties ;
+    skos:narrower eusoilvoc:SoilChemicalProperties,
+        eusoilvoc:SoilPhysicalProperties .
 
 eusoilvoc:SoilCompaction a skos:Concept ;
     skos:prefLabel "soil compaction"@en .
@@ -260,6 +264,7 @@ eusoilvoc:SoilPhysicalFunctions a skos:Concept ;
 
 eusoilvoc:SoilPhysicalProperties a skos:Concept ;
     skos:altLabel "soil physical property"@en ;
+    skos:broader eusoilvoc:SoilChemicophysicalProperties ;
     skos:definition [ dcterms:source <https://www.cambridge.org/core/books/properties-and-management-of-soils-in-the-tropics/soil-physical-properties/275087D91E8849FA36F347D4964ED835> ;
             rdf:value "Soil physical properties are those responsible for the transport of water, solutes, air and heat in the soil. The main physical soil properties are depth, temperature, texture, structure, bulk density and water-holding capacity."@en ],
         [ dcterms:source <https://www.soils.org/publications/soils-glossary?q=publications/soils-glossary/> ;

@@ -3978,8 +3978,7 @@ eusoilvoc:SoilProperties a skos:Concept ;
     skos:altLabel "soil property"@en ;
     skos:exactMatch spp:SoilProperty ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:SoilChemicalProperties,
-        eusoilvoc:SoilPhysicalProperties,
+    skos:narrower eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilSpatialProperties ;
     skos:prefLabel "soil properties"@en ;
     skos:topConceptOf <https://w3id.org/eusoilvoc> .
@@ -4399,7 +4398,7 @@ eusoilvoc:SoilBiologicalProcesses a skos:Concept ;
 
 eusoilvoc:SoilChemicalProperties a skos:Concept ;
     skos:altLabel "soil chemical property"@en ;
-    skos:broader eusoilvoc:SoilProperties ;
+    skos:broader eusoilvoc:SoilChemicophysicalProperties ;
     skos:exactMatch spp:SoilChemicalProperty ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilChargeProperties,
@@ -4409,6 +4408,10 @@ eusoilvoc:SoilChemicalProperties a skos:Concept ;
         eusoilvoc:SoilSalinity,
         eusoilvoc:SoilpH ;
     skos:prefLabel "soil chemical properties"@en .
+
+eusoilvoc:SoilChemicophysicalProperties skos:broader eusoilvoc:SoilProperties ;
+    skos:narrower eusoilvoc:SoilChemicalProperties,
+        eusoilvoc:SoilPhysicalProperties .
 
 eusoilvoc:SoilDensity a skos:Concept ;
     # Textbook definition: audited printed page(s) 17; source term spp:SoilDensity.
@@ -4821,7 +4824,7 @@ eusoilvoc:SoilPhysicalProcesses a skos:Concept ;
 
 eusoilvoc:SoilPhysicalProperties a skos:Concept ;
     skos:altLabel "soil physical property"@en ;
-    skos:broader eusoilvoc:SoilProperties ;
+    skos:broader eusoilvoc:SoilChemicophysicalProperties ;
     skos:exactMatch spp:SoilPhysicalProperty ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilAdhesion,

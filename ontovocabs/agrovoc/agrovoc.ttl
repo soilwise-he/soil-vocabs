@@ -3722,7 +3722,6 @@ eusoilvoc:Soil skos:narrower eusoilvoc:FineSoil,
         eusoilvoc:Rhizosphere,
         eusoilvoc:SoilResources,
         eusoilvoc:SoilSkeleton,
-        eusoilvoc:SoilTypes,
         eusoilvoc:Subsoil,
         eusoilvoc:Topsoil .
 
@@ -3989,8 +3988,7 @@ eusoilvoc:SoilAnalysis a skos:Concept ;
         eusoilvoc:XRayDiffraction ;
     skos:prefLabel "soil analysis"@en .
 
-eusoilvoc:SoilTypes skos:broader eusoilvoc:Soil ;
-    skos:narrower eusoilvoc:AnthropogenicSoils,
+eusoilvoc:SoilTypes skos:narrower eusoilvoc:AnthropogenicSoils,
         eusoilvoc:ChemicalSoilTypes,
         eusoilvoc:ClimaticSoilTypes,
         eusoilvoc:CulturalSoilTypes,
