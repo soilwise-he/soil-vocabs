@@ -39,8 +39,7 @@ eusoilvoc:SoilIndicators a skos:Concept ;
 
 eusoilvoc:SoilOrganisms a skos:Concept ;
     skos:altLabel "soil organism"@en ;
-    skos:narrower eusoilvoc:Microorganisms,
-        eusoilvoc:SoilFauna ;
+    skos:narrower eusoilvoc:SoilFauna ;
     skos:prefLabel "soil organisms"@en .
 
 eusoilvoc:SoilProperties a skos:Concept ;
@@ -116,10 +115,6 @@ eusoilvoc:LandUse a skos:Concept ;
         [ dcterms:source <https://archive.ipcc.ch/ipccreports/sres/land_use/index.php?idp=45> ;
             rdf:value "The total of arrangements, activities, and inputs that people undertake in a certain land cover type (FAO, 1997a; FAO/UNEP, 1999)."@en ] ;
     skos:prefLabel "land use"@en .
-
-eusoilvoc:Microorganisms a skos:Concept ;
-    skos:altLabel "microorganism"@en ;
-    skos:prefLabel "microorganisms"@en .
 
 eusoilvoc:NonsoilIndicators a skos:Concept ;
     skos:altLabel "non-soil indicator"@en ;

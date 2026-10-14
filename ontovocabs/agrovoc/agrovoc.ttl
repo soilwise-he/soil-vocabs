@@ -55,14 +55,6 @@ eusoilvoc:AHorizons a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "A horizons"@en .
 
-eusoilvoc:AcidPhosphatase a skos:Concept ;
-    skos:broader eusoilvoc:Enzymes ;
-    skos:definition [ dcterms:source agrovoc:c_88 ;
-            rdf:value "Acid phosphatase (AP) is an enzyme that catalyzes the hydrolysis of phosphate esters in an acidic environment. This chemical reaction is essential to different metabolic processes. Therefore, AP exists in several biological kingdoms, including plants, animals, fungi, and bacteria."@en ] ;
-    skos:exactMatch agrovoc:c_88 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "acid phosphatase"@en .
-
 eusoilvoc:AcidSoils a skos:Concept ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:definition [ dcterms:source agrovoc:c_89 ;
@@ -100,14 +92,6 @@ eusoilvoc:AgriculturalSoils a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "agricultural soils"@en .
 
-eusoilvoc:Agroforestry a skos:Concept ;
-    skos:broader eusoilvoc:SoilManagement ;
-    skos:definition [ dcterms:source agrovoc:c_207 ;
-            rdf:value "Agroforestry: the collective term for land-use   systems   and   technologies   in   which   woody perennials (e.g. trees, shrubs, palms or   bamboos)   and   agricultural   crops   or   animals are used deliberately on the same parcel of land in some form of spatial and temporal arrangement."@en ] ;
-    skos:exactMatch agrovoc:c_207 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "agroforestry"@en .
-
 eusoilvoc:Agrology a skos:Concept ;
     skos:broader eusoilvoc:SoilSciences ;
     skos:definition [ dcterms:source agrovoc:c_8688 ;
@@ -124,12 +108,6 @@ eusoilvoc:AlisolsWRB a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Alisols"@en ;
     skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
-
-eusoilvoc:AlkalinePhosphatase a skos:Concept ;
-    skos:broader eusoilvoc:Enzymes ;
-    skos:exactMatch agrovoc:c_267 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "alkaline phosphatase"@en .
 
 eusoilvoc:AlkalineSoils a skos:Concept ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
@@ -158,14 +136,6 @@ eusoilvoc:AluminiumMulches a skos:Concept ;
     skos:exactMatch agrovoc:c_207ace25 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "aluminium mulches"@en .
-
-eusoilvoc:Ammonification a skos:Concept ;
-    skos:broader eusoilvoc:NitrogenMineralization ;
-    skos:definition [ dcterms:source agrovoc:c_37196 ;
-            rdf:value "Transformation by micro-organisms of organic nitrogenous matter in soil or sediment into ammonia compounds."@en ] ;
-    skos:exactMatch agrovoc:c_37196 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "ammonification"@en .
 
 eusoilvoc:AmmoniumFixation a skos:Concept ;
     skos:broader eusoilvoc:SoilNutrientAvailability ;
@@ -213,14 +183,6 @@ eusoilvoc:ArableSoils a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "arable soils"@en .
 
-eusoilvoc:ArbuscularMycorrhiza a skos:Concept ;
-    skos:broader eusoilvoc:Mycorrhizae ;
-    skos:definition [ dcterms:source agrovoc:c_1415699873241 ;
-            rdf:value "A mycorrhiza produced by species of Glomeromycota, in which highly branched haustorial structures (arbuscule) are formed within a host cell."@en ] ;
-    skos:exactMatch agrovoc:c_1415699873241 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "arbuscular mycorrhiza"@en .
-
 eusoilvoc:ArenosolsWRB a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_601 ;
@@ -243,14 +205,6 @@ eusoilvoc:Arsenic a skos:Concept ;
     skos:exactMatch agrovoc:c_629 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "arsenic"@en .
-
-eusoilvoc:AtomicAbsorptionSpectrometry a skos:Concept ;
-    skos:broader eusoilvoc:Spectrometry ;
-    skos:definition [ dcterms:source agrovoc:c_28567 ;
-            rdf:value "Atomic absorption spectrometry (AAS) is an important sensitive atomic spectrometric method that is suitable for the determination of selected elements at the trace and partly at the ultra-trace level."@en ] ;
-    skos:exactMatch agrovoc:c_28567 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "atomic absorption spectrometry"@en .
 
 eusoilvoc:BHorizons a skos:Concept ;
     skos:broader eusoilvoc:SoilHorizons ;
@@ -282,26 +236,6 @@ eusoilvoc:Bentonite a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "bentonite"@en .
 
-eusoilvoc:BetaGlucosidase a skos:Concept ;
-    skos:broader eusoilvoc:Enzymes ;
-    skos:exactMatch agrovoc:c_29494 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "beta glucosidase"@en .
-
-eusoilvoc:Biochar a skos:Concept ;
-    skos:broader eusoilvoc:SoilAmendments ;
-    skos:exactMatch agrovoc:c_e25876d3 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "biochar"@en .
-
-eusoilvoc:Biodegradation a skos:Concept ;
-    skos:broader eusoilvoc:SoilBiologicalProcesses ;
-    skos:definition [ dcterms:source agrovoc:c_9261 ;
-            rdf:value "Biodegradation is the physical and chemical breakdown of a substance by living organisms, mainly bacteria and/or fungi."@en ] ;
-    skos:exactMatch agrovoc:c_9261 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "biodegradation"@en .
-
 eusoilvoc:Biodrainage a skos:Concept ;
     skos:broader eusoilvoc:SoilDrainage ;
     skos:definition [ dcterms:source agrovoc:c_ac7696b9 ;
@@ -309,8 +243,6 @@ eusoilvoc:Biodrainage a skos:Concept ;
     skos:exactMatch agrovoc:c_ac7696b9 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "biodrainage"@en .
-
-eusoilvoc:BiologicalFeatures skos:narrower eusoilvoc:Mycorrhizae .
 
 eusoilvoc:BogSoils a skos:Concept ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
@@ -359,12 +291,6 @@ eusoilvoc:CalcisolsWRB a skos:Concept ;
     skos:prefLabel "Calcisols"@en ;
     skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
 
-eusoilvoc:Calcite a skos:Concept ;
-    skos:broader eusoilvoc:Minerals ;
-    skos:exactMatch agrovoc:c_32396 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "calcite"@en .
-
 eusoilvoc:CalciticLimeAmendment a skos:Concept ;
     skos:broader eusoilvoc:LimingMaterials ;
     skos:definition [ dcterms:source agrovoc:c_36453 ;
@@ -382,31 +308,11 @@ eusoilvoc:CambisolsWRB a skos:Concept ;
     skos:prefLabel "Cambisols"@en ;
     skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
 
-eusoilvoc:CarbonMineralization a skos:Concept ;
-    skos:broader eusoilvoc:SoilMineralization ;
-    skos:exactMatch agrovoc:c_36244 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "carbon mineralization"@en .
-
-eusoilvoc:Cellulase a skos:Concept ;
-    skos:broader eusoilvoc:Enzymes ;
-    skos:exactMatch agrovoc:c_1419 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "cellulase"@en .
-
 eusoilvoc:ChalkSoils a skos:Concept ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_1493 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "chalk soils"@en .
-
-eusoilvoc:ChemicalAnalysis a skos:Concept ;
-    skos:broader eusoilvoc:SoilAnalysis ;
-    skos:definition [ dcterms:source agrovoc:c_f5fd1a6c ;
-            rdf:value "Chemical analysis is the study of the chemical composition and characterization of substances."@en ] ;
-    skos:exactMatch agrovoc:c_f5fd1a6c ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "chemical analysis"@en .
 
 eusoilvoc:ChernozemsWRB a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
@@ -416,12 +322,6 @@ eusoilvoc:ChernozemsWRB a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Chernozems"@en ;
     skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
-
-eusoilvoc:Chitinase a skos:Concept ;
-    skos:broader eusoilvoc:Enzymes ;
-    skos:exactMatch agrovoc:c_1562 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "chitinase"@en .
 
 eusoilvoc:Chromium a skos:Concept ;
     skos:broader eusoilvoc:SoilPollutants ;
@@ -472,14 +372,6 @@ eusoilvoc:Colluvium a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "colluvium"@en .
 
-eusoilvoc:Colorimetry a skos:Concept ;
-    skos:broader eusoilvoc:SoilAnalysis ;
-    skos:definition [ dcterms:source agrovoc:c_16368 ;
-            rdf:value "Colorimetry is the science and technology used to quantify and describe physically the human color perception."@en ] ;
-    skos:exactMatch agrovoc:c_16368 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "colorimetry"@en .
-
 eusoilvoc:CompostMulches a skos:Concept ;
     skos:broader eusoilvoc:OrganicMulches ;
     skos:definition [ dcterms:source agrovoc:c_d2c183d0 ;
@@ -488,77 +380,11 @@ eusoilvoc:CompostMulches a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "compost mulches"@en .
 
-eusoilvoc:Conductimetry a skos:Concept ;
-    skos:broader eusoilvoc:SoilAnalysis ;
-    skos:exactMatch agrovoc:c_28313 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "conductimetry"@en .
-
-eusoilvoc:ConservationAgriculture a skos:Concept ;
-    skos:broader eusoilvoc:SoilManagement ;
-    skos:definition [ dcterms:source agrovoc:c_264f7edd ;
-            rdf:value "An approach to managing agroecosystems for improved and sustained productivity, increased profits and food security, while preserving and enhancing the resource base and the environment. Conservation agriculture is characterized by three principles: continuous minimum mechanical soil disturbance, permanent organic soil cover and diversification of crop species grown in sequences or associations."@en ] ;
-    skos:exactMatch agrovoc:c_264f7edd ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "conservation agriculture"@en .
-
-eusoilvoc:ContourBunding a skos:Concept ;
-    skos:broader eusoilvoc:SoilConservation ;
-    skos:definition [ dcterms:source agrovoc:c_330709 ;
-            rdf:value "Countour bunding is practice of building earthen  walls  or barriers built  across  a  slope  (along the  contours) to act  as a barrier  to  runoff."@en ] ;
-    skos:exactMatch agrovoc:c_330709 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "contour bunding"@en .
-
-eusoilvoc:ContourCultivation a skos:Concept ;
-    skos:broader eusoilvoc:SoilConservation ;
-    skos:exactMatch agrovoc:c_1837 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "contour cultivation"@en .
-
-eusoilvoc:ControlledTrafficFarming a skos:Concept ;
-    skos:broader eusoilvoc:SoilManagement ;
-    skos:definition [ dcterms:source agrovoc:c_9821f1a5 ;
-            rdf:value "Controlled-traffic farming (CTF) is a crop production system in which the crop zone and traffic lanes are distinctly and permanently separated. In practice, it requires: a. use of the same wheel tracks for all field operations; b. all machines to have the same wheel-track setting; c. all implements to have a particular span or multiple of it."@en ] ;
-    skos:exactMatch agrovoc:c_9821f1a5 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "controlled traffic farming"@en .
-
 eusoilvoc:ConventionalTillage a skos:Concept ;
     skos:broader eusoilvoc:SoilTillage ;
     skos:exactMatch agrovoc:c_34250 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "conventional tillage"@en .
-
-eusoilvoc:CoreSampling a skos:Concept ;
-    skos:broader eusoilvoc:SoilSampling ;
-    skos:exactMatch agrovoc:c_57f84e25 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "core sampling"@en .
-
-eusoilvoc:CoverPlants a skos:Concept ;
-    skos:broader eusoilvoc:SoilConservation ;
-    skos:definition [ dcterms:source agrovoc:c_1936 ;
-            rdf:value "Crop grown during fallow periods to protect soil, recycle nutrients and control weeds."@en ] ;
-    skos:exactMatch agrovoc:c_1936 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "cover plants"@en .
-
-eusoilvoc:CropResidueManagement a skos:Concept ;
-    skos:broader eusoilvoc:SoilManagement ;
-    skos:definition [ dcterms:source agrovoc:c_0da62559 ;
-            rdf:value "The operation and management of crop land to remove stubble, stalks, and other crop residue or maintain them on the surface to prevent wind and water erosion, to conserve water, and to decrease evaporation."@en ] ;
-    skos:exactMatch agrovoc:c_0da62559 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "crop residue management"@en .
-
-eusoilvoc:CropRotation a skos:Concept ;
-    skos:broader eusoilvoc:SoilManagement ;
-    skos:definition [ dcterms:source agrovoc:c_6662 ;
-            rdf:value "Technique of growing alternating species or families of crops in a specific field in a planned pattern or sequence."@en ] ;
-    skos:exactMatch agrovoc:c_6662 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "crop rotation"@en .
 
 eusoilvoc:CryosolsWRB a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
@@ -589,14 +415,6 @@ eusoilvoc:DesertSoils a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "desert soils"@en .
 
-eusoilvoc:DifferentialThermalAnalysis a skos:Concept ;
-    skos:broader eusoilvoc:ThermalAnalysis ;
-    skos:definition [ dcterms:source agrovoc:c_28242 ;
-            rdf:value "Differential thermal analysis (DTA) is a thermoanalytic technique that is similar to differential scanning calorimetry. In DTA, the material under study and an inert reference are made to undergo identical thermal cycles, (i.e., same cooling or heating programme) while recording any temperature difference between sample and reference."@en ] ;
-    skos:exactMatch agrovoc:c_28242 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "differential thermal analysis"@en .
-
 eusoilvoc:DigitalSoilMapping a skos:Concept ;
     skos:broader eusoilvoc:SoilSurveys ;
     skos:definition [ dcterms:source agrovoc:c_e4975629 ;
@@ -626,34 +444,6 @@ eusoilvoc:DispersiveSoils a skos:Concept ;
     skos:exactMatch agrovoc:c_2334 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "dispersive soils"@en .
-
-eusoilvoc:DissolvedOrganicCarbon a skos:Concept ;
-    skos:broader eusoilvoc:SoilOrganicCarbon ;
-    skos:definition [ dcterms:source agrovoc:c_02b11638 ;
-            rdf:value "DOC is the in water dissolved fraction of total organic carbon of a soil or a water body. It is predominantely composed of a diverse array humic substances."@en ] ;
-    skos:exactMatch agrovoc:c_02b11638 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "dissolved organic carbon"@en .
-
-eusoilvoc:DissolvedOrganicMatter a skos:Concept ;
-    skos:broader eusoilvoc:SoilOrganicMatter ;
-    skos:exactMatch agrovoc:c_f08ffa0c ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "dissolved organic matter"@en .
-
-eusoilvoc:DissolvedOrganicNitrogen a skos:Concept ;
-    skos:broader eusoilvoc:OrganicNitrogen ;
-    skos:exactMatch agrovoc:c_98cea8ba ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "dissolved organic nitrogen"@en .
-
-eusoilvoc:Dolomite a skos:Concept ;
-    skos:broader eusoilvoc:Minerals ;
-    skos:definition [ dcterms:source agrovoc:c_29215 ;
-            rdf:value "CAS No. 16389-88-1. Dolomite is a mineral with formula of CaMg(CO3)2."@en ] ;
-    skos:exactMatch agrovoc:c_29215 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "dolomite"@en .
 
 eusoilvoc:DolomiticLimeAmendment a skos:Concept ;
     skos:broader eusoilvoc:LimingMaterials ;
@@ -704,14 +494,6 @@ eusoilvoc:EHorizons a skos:Concept ;
 
 eusoilvoc:Earthworms skos:broader eusoilvoc:SoilOrganisms .
 
-eusoilvoc:Ectomycorrhizae a skos:Concept ;
-    skos:broader eusoilvoc:Mycorrhizae ;
-    skos:definition [ dcterms:source agrovoc:c_35482 ;
-            rdf:value "It is a type of mycorrhiza where the fungal hyphae surround the host externally like a mantle and feed by sending their mycelia into the intercellular spaces towards the center of the host."@en ] ;
-    skos:exactMatch agrovoc:c_35482 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Ectomycorrhizae"@en .
-
 eusoilvoc:EdaphicFactors a skos:Concept ;
     skos:altLabel "soil factors"@en ;
     skos:broader eusoilvoc:SoilProperties ;
@@ -721,35 +503,11 @@ eusoilvoc:EdaphicFactors a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "edaphic factors"@en .
 
-eusoilvoc:ElectronMicroscopy a skos:Concept ;
-    skos:broader eusoilvoc:Microscopy ;
-    skos:definition [ dcterms:source agrovoc:c_10573 ;
-            rdf:value "Electron microscopy (EM) is a technique for obtaining high resolution images of biological and non-biological specimens. It is used in biomedical research to investigate the detailed structure of tissues, cells, organelles and macromolecular complexes. "@en ] ;
-    skos:exactMatch agrovoc:c_10573 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "electron microscopy"@en .
-
-eusoilvoc:ElementalAnalysis a skos:Concept ;
-    skos:broader eusoilvoc:SoilAnalysis ;
-    skos:definition [ dcterms:source agrovoc:c_90cf3530 ;
-            rdf:value "Elemental analysis (EA) is an analytical technique applied in chemistry to determine the elemental composition of chemical compounds and their composites."@en ] ;
-    skos:exactMatch agrovoc:c_90cf3530 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "elemental analysis"@en .
-
 eusoilvoc:Enchytraeidae a skos:Concept ;
     skos:broader eusoilvoc:SoilMesofauna ;
     skos:exactMatch agrovoc:c_24996 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Enchytraeidae"@en .
-
-eusoilvoc:EnzymeActivity a skos:Concept ;
-    skos:broader eusoilvoc:SoilBiologicalProcesses ;
-    skos:definition [ dcterms:source agrovoc:c_2604 ;
-            rdf:value "The catalytic action of enzymes on biochemical reactions"@en ] ;
-    skos:exactMatch agrovoc:c_2604 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "enzyme activity"@en .
 
 eusoilvoc:ErodedSoils a skos:Concept ;
     skos:broader eusoilvoc:AnthropogenicSoils ;
@@ -768,14 +526,6 @@ eusoilvoc:EvaporationSuppressants a skos:Concept ;
     skos:exactMatch agrovoc:c_2740 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "evaporation suppressants"@en .
-
-eusoilvoc:Feldspar a skos:Concept ;
-    skos:broader eusoilvoc:SilicateMinerals ;
-    skos:definition [ dcterms:source agrovoc:c_35108 ;
-            rdf:value "Feldspars are a group of rock-forming aluminium tectosilicate minerals, containing sodium, calcium, potassium or barium."@en ] ;
-    skos:exactMatch agrovoc:c_35108 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "feldspar"@en .
 
 eusoilvoc:FenlandSoils a skos:Concept ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
@@ -839,28 +589,6 @@ eusoilvoc:FrostHeave a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "frost heave"@en .
 
-eusoilvoc:FulvicAcids a skos:Concept ;
-    skos:broader eusoilvoc:SoilOrganicMatter ;
-    skos:exactMatch agrovoc:c_15972 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "fulvic acids"@en .
-
-eusoilvoc:FunctionalDiversity a skos:Concept ;
-    skos:broader eusoilvoc:Biodiversity ;
-    skos:definition [ dcterms:source agrovoc:c_7ee18365 ;
-            rdf:value "The number of functionally different organisms in an ecosystem (also referred to as functional types and functional groups)."@en ] ;
-    skos:exactMatch agrovoc:c_7ee18365 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "functional diversity"@en .
-
-eusoilvoc:GasChromatography a skos:Concept ;
-    skos:broader eusoilvoc:Chromatography ;
-    skos:definition [ dcterms:source agrovoc:c_11097 ;
-            rdf:value "Fractionation of a vaporized sample as a consequence of partition between a mobile gaseous phase and a stationary phase held in a column. Two types are gas-solid chromatography, where the fixed phase is a solid, and gas-liquid, in which the stationary phase is a nonvolatile liquid supported on an inert solid matrix."@en ] ;
-    skos:exactMatch agrovoc:c_11097 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "gas chromatography"@en .
-
 eusoilvoc:GasTurbation a skos:Concept ;
     skos:broader eusoilvoc:Pedoturbation ;
     skos:definition [ dcterms:source agrovoc:c_b09277cb ;
@@ -892,14 +620,6 @@ eusoilvoc:GleysolsWRB a skos:Concept ;
     skos:prefLabel "Gleysols"@en ;
     skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
 
-eusoilvoc:GoodLaboratoryPractices a skos:Concept ;
-    skos:broader eusoilvoc:SoilAnalysis ;
-    skos:definition [ dcterms:source agrovoc:c_d79597fb ;
-            rdf:value "Written codes of practice designed to reduce to a minimum the chance of procedural or instrument problems which could adversely affect a research project or other laboratory work."@en ] ;
-    skos:exactMatch agrovoc:c_d79597fb ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "good laboratory practices"@en .
-
 eusoilvoc:GraniteSoils a skos:Concept ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_3356 ;
@@ -925,12 +645,6 @@ eusoilvoc:GravelMulches a skos:Concept ;
     skos:exactMatch agrovoc:c_11342 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "gravel mulches"@en .
-
-eusoilvoc:GreenManures a skos:Concept ;
-    skos:broader eusoilvoc:OrganicAmendments ;
-    skos:exactMatch agrovoc:c_3375 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "green manures"@en .
 
 eusoilvoc:GreenhouseSoils a skos:Concept ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
@@ -1017,12 +731,6 @@ eusoilvoc:HotWaterExtractableNitrogen a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "hot water-extractable nitrogen"@en .
 
-eusoilvoc:HumicAcids a skos:Concept ;
-    skos:broader eusoilvoc:SoilOrganicMatter ;
-    skos:exactMatch agrovoc:c_3685 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "humic acids"@en .
-
 eusoilvoc:HydromorphicSoils a skos:Concept ;
     skos:broader eusoilvoc:GeneticSoilTypes ;
     skos:definition [ dcterms:source agrovoc:c_25315 ;
@@ -1062,12 +770,6 @@ eusoilvoc:InfiltrationWater a skos:Concept ;
     skos:exactMatch agrovoc:c_25321 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "infiltration water"@en .
-
-eusoilvoc:IntegratedPlantNutrientManagement a skos:Concept ;
-    skos:broader eusoilvoc:NutrientManagement ;
-    skos:exactMatch agrovoc:c_330787 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "integrated plant nutrient management"@en .
 
 eusoilvoc:IntegratedSoilFertilityManagement a skos:Concept ;
     skos:broader eusoilvoc:SoilManagement ;
@@ -1125,14 +827,6 @@ eusoilvoc:LandRehabilitation a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "land rehabilitation"@en .
 
-eusoilvoc:LandRestoration a skos:Concept ;
-    skos:broader eusoilvoc:SoilImprovement ;
-    skos:definition [ dcterms:source agrovoc:c_d50d4695 ;
-            rdf:value "An intentional activity aimed at recovering degraded land."@en ] ;
-    skos:exactMatch agrovoc:c_d50d4695 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "land restoration"@en .
-
 eusoilvoc:LandTake a skos:Concept ;
     skos:broader eusoilvoc:SoilAnthropogenicChanges ;
     skos:definition [ dcterms:source agrovoc:c_03e78242 ;
@@ -1181,14 +875,6 @@ eusoilvoc:LeptosolsWRB a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Leptosols"@en ;
     skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
-
-eusoilvoc:LightMicroscopy a skos:Concept ;
-    skos:broader eusoilvoc:Microscopy ;
-    skos:definition [ dcterms:source agrovoc:c_01f95724 ;
-            rdf:value "Microscopy using visible light and a system of lenses to magnify images."@en ] ;
-    skos:exactMatch agrovoc:c_01f95724 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "light microscopy"@en .
 
 eusoilvoc:LimeAmendment a skos:Concept ;
     skos:broader eusoilvoc:LimingMaterials ;
@@ -1267,14 +953,6 @@ eusoilvoc:MarshlandSoils a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "marshland soils"@en .
 
-eusoilvoc:MassSpectrometry a skos:Concept ;
-    skos:broader eusoilvoc:Spectrometry ;
-    skos:definition [ dcterms:source agrovoc:c_12421 ;
-            rdf:value "Mass spectrometry (MS) is an analytical technique used to ascertain the composition of chemical substances by accurately measuring their molecular masses. "@en ] ;
-    skos:exactMatch agrovoc:c_12421 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "mass spectrometry"@en .
-
 eusoilvoc:MeadowSoils a skos:Concept ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
     skos:exactMatch agrovoc:c_16569 ;
@@ -1299,28 +977,13 @@ eusoilvoc:Mercury a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "mercury"@en .
 
-eusoilvoc:Methanogens a skos:Concept ;
-    skos:broader eusoilvoc:Archaea ;
-    skos:definition [ dcterms:source agrovoc:c_27572 ;
-            rdf:value "Methanogens are anaerobic archaea that grow by producing methane gas. Methane-producing archaea, or methanogens, are characterized by their ability to conserve energy for ATP (adenosine triphosphate) synthesis by producing methane gas."@en ] ;
-    skos:exactMatch agrovoc:c_27572 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "methanogens"@en .
-
-eusoilvoc:MicrobialDiversity a skos:Concept ;
-    skos:broader eusoilvoc:Biodiversity ;
-    skos:definition [ dcterms:source agrovoc:c_7f962590 ;
-            rdf:value "Microbial diversity comprises the variety that is observed within highly genetically distinct groups, namely, bacteria, archaea, cyanobacteria, fungi, and viruses."@en ] ;
-    skos:exactMatch agrovoc:c_7f962590 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "microbial diversity"@en .
-
 eusoilvoc:Microplastics a skos:Concept ;
     skos:broader eusoilvoc:SoilPollutants ;
     skos:definition [ dcterms:source agrovoc:c_ccc97cab ;
             rdf:value "Microplastics are usually defined as plastic items which measure less than 5 mm in their longest dimension, this definition includes also nanoplastics which are particles less than 100 nanometres (nm) in their longest dimension. Plastic items may be manufactured within this size range (primary micro- and nanoplastics) or result from the degradation and fragmentation of larger plastic items (secondary micro- and nanoplastics)."@en ] ;
     skos:exactMatch agrovoc:c_ccc97cab ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:Nanoplastics ;
     skos:prefLabel "microplastics"@en .
 
 eusoilvoc:MicrositePreparation a skos:Concept ;
@@ -1357,14 +1020,8 @@ eusoilvoc:ModifiedUniversalSoilLossEquation a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Modified Universal Soil Loss Equation"@en .
 
-eusoilvoc:MoleDrainage a skos:Concept ;
-    skos:broader eusoilvoc:SubsurfaceDrainage ;
-    skos:exactMatch agrovoc:c_25350 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "mole drainage"@en .
-
 eusoilvoc:Montmorillonites a skos:Concept ;
-    skos:broader eusoilvoc:Smectites ;
+    skos:broader eusoilvoc:SoilClayMineral ;
     skos:exactMatch agrovoc:c_16140 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "montmorillonites"@en .
@@ -1395,11 +1052,13 @@ eusoilvoc:MudFlows a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "mud flows"@en .
 
-eusoilvoc:NMRSpectroscopy a skos:Concept ;
-    skos:broader eusoilvoc:Spectroscopy ;
-    skos:exactMatch agrovoc:c_24405 ;
+eusoilvoc:Nanoplastics a skos:Concept ;
+    skos:broader eusoilvoc:Microplastics ;
+    skos:definition [ dcterms:source agrovoc:c_f5ac9b8e ;
+            rdf:value "Plastic particles of size ranging from 1 to 100 nanometres (nm) (0.001 µm-0.1 µm)."@en ] ;
+    skos:exactMatch agrovoc:c_f5ac9b8e ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "NMR spectroscopy"@en .
+    skos:prefLabel "nanoplastics"@en .
 
 eusoilvoc:NeutralSoils a skos:Concept ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
@@ -1419,18 +1078,6 @@ eusoilvoc:NitosolsWRB a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Nitosols"@en ;
     skos:scopeNote "AGROVOC places this source under WRB soil types but mixes the preferred label Nitosols with a Nitisols definition. Retained as a WRB-scoped source concept with closeMatch; the mixed definition is omitted. It is not asserted equivalent to a historical FAO Nitosols group."@en .
-
-eusoilvoc:Nitrification a skos:Concept ;
-    skos:broader eusoilvoc:SoilChemicalProcesses ;
-    skos:exactMatch agrovoc:c_12834 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "nitrification"@en .
-
-eusoilvoc:NitrogenFixingBacteria a skos:Concept ;
-    skos:broader eusoilvoc:SoilBacteria ;
-    skos:exactMatch agrovoc:c_27939 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "nitrogen-fixing bacteria"@en .
 
 eusoilvoc:NoTill skos:broader eusoilvoc:ConservationTillage ;
     skos:closeMatch agrovoc:c_8511 .
@@ -1501,28 +1148,6 @@ eusoilvoc:Palaeosols a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "palaeosols"@en .
 
-eusoilvoc:ParticulateOrganicCarbon a skos:Concept ;
-    skos:broader eusoilvoc:SoilOrganicCarbon ;
-    skos:definition [ dcterms:source agrovoc:c_dc22db2f ;
-            rdf:value "Particulate organic carbon refers specifically to the mass of carbon in the particulate organic material."@en ] ;
-    skos:exactMatch agrovoc:c_dc22db2f ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "particulate organic carbon"@en .
-
-eusoilvoc:ParticulateOrganicMatter a skos:Concept ;
-    skos:broader eusoilvoc:SoilOrganicMatter ;
-    skos:definition [ dcterms:source agrovoc:c_fdc64c4e ;
-            rdf:value "Particulate organic matter (POM) is a fraction of total organic matter operationally defined as that which does not pass through a filter pore size that typically ranges in size from 0.053 to 2 millimeters."@en ] ;
-    skos:exactMatch agrovoc:c_fdc64c4e ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "particulate organic matter"@en .
-
-eusoilvoc:ParticulateOrganicNitrogen a skos:Concept ;
-    skos:broader eusoilvoc:OrganicNitrogen ;
-    skos:exactMatch agrovoc:c_8e059197 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "particulate organic nitrogen"@en .
-
 eusoilvoc:PeatSoils a skos:Concept ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:exactMatch agrovoc:c_5648 ;
@@ -1565,14 +1190,6 @@ eusoilvoc:PhaeozemsWRB a skos:Concept ;
 
 eusoilvoc:PhosphorusTotalElements skos:broader eusoilvoc:PhosphorusContent ;
     skos:closeMatch agrovoc:c_ac4b3c22 .
-
-eusoilvoc:Phytoremediation a skos:Concept ;
-    skos:broader eusoilvoc:Bioremediation ;
-    skos:definition [ dcterms:source agrovoc:c_36976 ;
-            rdf:value "The use of plants actively to remove contaminants or pollutants from either soils (e.g. polluted fields) or water resources (e.g. polluted lakes)."@en ] ;
-    skos:exactMatch agrovoc:c_36976 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "phytoremediation"@en .
 
 eusoilvoc:PipeDrainage a skos:Concept ;
     skos:broader eusoilvoc:SoilDrainage ;
@@ -1620,12 +1237,6 @@ eusoilvoc:PlantAvailableWater a skos:Concept ;
     skos:exactMatch agrovoc:c_31e02b4d ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "plant available water"@en .
-
-eusoilvoc:PlantNematodes a skos:Concept ;
-    skos:broader eusoilvoc:Nematodes ;
-    skos:exactMatch agrovoc:c_5972 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "plant nematodes"@en .
 
 eusoilvoc:PlasticMulches a skos:Concept ;
     skos:broader eusoilvoc:DryMulches ;
@@ -1683,7 +1294,7 @@ eusoilvoc:PolychlorinatedBiphenyls a skos:Concept ;
     skos:prefLabel "polychlorinated biphenyls"@en .
 
 eusoilvoc:PolycyclicAromaticHydrocarbons a skos:Concept ;
-    skos:broader eusoilvoc:Hydrocarbons ;
+    skos:broader eusoilvoc:SoilPollutants ;
     skos:definition [ dcterms:source agrovoc:c_331394 ;
             rdf:value "A class of chemicals that result from burning coal, oil, gas, wood, garbage, or tobacco. They bind to or form small particles in the air. High heat when cooking meat and other foods will also form PAHs."@en ] ;
     skos:exactMatch agrovoc:c_331394 ;
@@ -1695,14 +1306,6 @@ eusoilvoc:PolygeneticSoilTypes a skos:Concept ;
     skos:exactMatch agrovoc:c_6083 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "polygenetic soil types"@en .
-
-eusoilvoc:Potentiometry a skos:Concept ;
-    skos:broader eusoilvoc:SoilAnalysis ;
-    skos:definition [ dcterms:source agrovoc:c_28517 ;
-            rdf:value "Potentiometry is a technique that is used in analytical chemistry, usually to find the concentration of a solute in solution."@en ] ;
-    skos:exactMatch agrovoc:c_28517 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "potentiometry"@en .
 
 eusoilvoc:PrairieSoils a skos:Concept ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
@@ -1718,61 +1321,11 @@ eusoilvoc:PrimaryTillage a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "primary tillage"@en .
 
-eusoilvoc:Proteases a skos:Concept ;
-    skos:broader eusoilvoc:Enzymes ;
-    skos:definition [ dcterms:source agrovoc:c_6242 ;
-            rdf:value "An enzyme that catalyses the hydrolysis of proteins, cleaving the peptide bonds that link amino acids in protein molecules."@en ] ;
-    skos:exactMatch agrovoc:c_6242 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "proteases"@en .
-
-eusoilvoc:Protozoa a skos:Concept ;
-    skos:broader eusoilvoc:SoilMicrofauna ;
-    skos:exactMatch agrovoc:c_6268 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Protozoa"@en .
-
-eusoilvoc:Pyrites a skos:Concept ;
-    skos:broader eusoilvoc:Minerals ;
-    skos:definition [ dcterms:source agrovoc:c_15922 ;
-            rdf:value "The mineral pyrite or iron pyrite, also known as fool's gold, is an iron sulfide with the chemical formula FeS2 (iron (II) disulfide). Pyrite is the most abundant sulfide mineral."@en ] ;
-    skos:exactMatch agrovoc:c_15922 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "pyrites"@en .
-
-eusoilvoc:QualityAssurance a skos:Concept ;
-    skos:broader eusoilvoc:SoilAnalysis ;
-    skos:definition [ dcterms:source agrovoc:c_35287 ;
-            rdf:value "All the planned and systematic activities implemented within the quality system and demonstrated as needed to provide adequate confidence that an entity will fulfil requirements for quality."@en ] ;
-    skos:exactMatch agrovoc:c_35287 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "quality assurance"@en .
-
-eusoilvoc:QualityControl a skos:Concept ;
-    skos:broader eusoilvoc:SoilAnalysis ;
-    skos:exactMatch agrovoc:c_6401 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "quality control"@en .
-
-eusoilvoc:Quartz a skos:Concept ;
-    skos:broader eusoilvoc:Minerals ;
-    skos:exactMatch agrovoc:c_36852 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "quartz"@en .
-
 eusoilvoc:RadioactiveDecontaminationSoil a skos:Concept ;
     skos:broader eusoilvoc:SoilTreatment ;
     skos:exactMatch agrovoc:c_36089 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "radioactive decontamination (soil)"@en .
-
-eusoilvoc:RandomSampling a skos:Concept ;
-    skos:broader eusoilvoc:SoilSampling ;
-    skos:definition [ dcterms:source agrovoc:c_24499 ;
-            rdf:value "Random sampling can also be thought of as a 'pick a name out of the hat' technique. Samples are chosen from a population either by using a random number table or a random number generator. Each member of the population has an equal, independent and known chance of being selected."@en ] ;
-    skos:exactMatch agrovoc:c_24499 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "random sampling"@en .
 
 eusoilvoc:RangelandSoils a skos:Concept ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
@@ -1808,14 +1361,6 @@ eusoilvoc:RendzinasFAO a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "rendzinas"@en ;
     skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en .
-
-eusoilvoc:RepresentativeSampling a skos:Concept ;
-    skos:broader eusoilvoc:SoilSampling ;
-    skos:definition [ dcterms:source agrovoc:c_798574b0 ;
-            rdf:value "“Representative sampling” is a type of statistical sampling that allows us to use data from a sample to make conclusions that are representative for the population from which the sample is taken."@en ] ;
-    skos:exactMatch agrovoc:c_798574b0 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "representative sampling"@en .
 
 eusoilvoc:RetisolsWRB a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
@@ -1896,20 +1441,6 @@ eusoilvoc:SalinityControl a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "salinity control"@en .
 
-eusoilvoc:SalinityManagement a skos:Concept ;
-    skos:broader eusoilvoc:SoilManagement ;
-    skos:definition [ dcterms:source agrovoc:c_a51d4016 ;
-            rdf:value "Salinity management in agriculture has the objective to reduce and manage the impact of high salt concentrations in the soil solution on crop production. In effect, salinity management’s role is to increase production within the available soil and water constraints."@en ] ;
-    skos:exactMatch agrovoc:c_a51d4016 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "salinity management"@en .
-
-eusoilvoc:SampleContamination a skos:Concept ;
-    skos:broader eusoilvoc:SoilSampling ;
-    skos:exactMatch agrovoc:c_2ac099d1 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "sample contamination"@en .
-
 eusoilvoc:SchistSoils a skos:Concept ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_6845 ;
@@ -1956,12 +1487,6 @@ eusoilvoc:SiltySoils a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "silty soils"@en .
 
-eusoilvoc:SiteSpecificNutrientManagement a skos:Concept ;
-    skos:broader eusoilvoc:NutrientManagement ;
-    skos:exactMatch agrovoc:c_330698 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "site-specific nutrient management"@en .
-
 eusoilvoc:SlippingOfSoil a skos:Concept ;
     skos:broader eusoilvoc:SoilMovement ;
     skos:exactMatch agrovoc:c_14336 ;
@@ -1996,7 +1521,7 @@ eusoilvoc:SoilAggregate skos:broader eusoilvoc:SoilStructure ;
     skos:closeMatch agrovoc:c_7195 .
 
 eusoilvoc:SoilAlgae a skos:Concept ;
-    skos:broader eusoilvoc:Microorganisms ;
+    skos:broader eusoilvoc:SoilMicroorganisms ;
     skos:definition [ dcterms:source agrovoc:c_e7a071ee ;
             rdf:value "Phylogenetically diverse, predominantly microscopic free-living, symbiotic organisms capable of oxygenic photosynthesis. Traditionally, soil algae include photoautotrophic prokaryotes (cyanobacteria, blue-green algae) and photoautotrophic protists (eukaryotic algae). "@en ] ;
     skos:exactMatch agrovoc:c_e7a071ee ;
@@ -2036,8 +1561,6 @@ eusoilvoc:SoilBreaking a skos:Concept ;
     skos:prefLabel "soil breaking"@en .
 
 eusoilvoc:SoilChemicalCapacity skos:narrower eusoilvoc:AnionExchangeCapacity .
-
-eusoilvoc:SoilChemicalProcesses skos:narrower eusoilvoc:Nitrification .
 
 eusoilvoc:SoilChemistry a skos:Concept ;
     skos:broader eusoilvoc:SoilSciences ;
@@ -2220,8 +1743,6 @@ eusoilvoc:SoilMulches a skos:Concept ;
     skos:exactMatch agrovoc:c_14397 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil mulches"@en .
-
-eusoilvoc:SoilOrganicComponents skos:narrower eusoilvoc:Enzymes .
 
 eusoilvoc:SoilPenetrationResistance skos:broader eusoilvoc:SoilMechanicalProperties .
 
@@ -2409,14 +1930,6 @@ eusoilvoc:SolonetzWRB a skos:Concept ;
     skos:prefLabel "Solonetz"@en ;
     skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
 
-eusoilvoc:SpeciesRichness a skos:Concept ;
-    skos:broader eusoilvoc:SoilBiologicalProperties ;
-    skos:definition [ dcterms:source agrovoc:c_322eb0cf ;
-            rdf:value "A measure of the number of different species in an area. "@en ] ;
-    skos:exactMatch agrovoc:c_322eb0cf ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "species richness"@en .
-
 eusoilvoc:StagnosolsWRB a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_d9028da2 ;
@@ -2437,14 +1950,6 @@ eusoilvoc:StonySoils a skos:Concept ;
     skos:exactMatch agrovoc:c_7425 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "stony soils"@en .
-
-eusoilvoc:StratifiedSampling a skos:Concept ;
-    skos:broader eusoilvoc:SoilSampling ;
-    skos:definition [ dcterms:source agrovoc:c_13e636a8 ;
-            rdf:value "In stratified sampling, the population is partitioned into regions or strata, and a sample is selected by some design within each stratum."@en ] ;
-    skos:exactMatch agrovoc:c_13e636a8 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "stratified sampling"@en .
 
 eusoilvoc:StratigraphicSoilTypes a skos:Concept ;
     skos:broader eusoilvoc:SoilTypes ;
@@ -2511,20 +2016,6 @@ eusoilvoc:TechnosolsWRB a skos:Concept ;
     skos:prefLabel "Technosols"@en ;
     skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
 
-eusoilvoc:ThermogravimetricAnalysis a skos:Concept ;
-    skos:broader eusoilvoc:ThermalAnalysis ;
-    skos:exactMatch agrovoc:c_37379 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "thermogravimetric analysis"@en .
-
-eusoilvoc:Titration a skos:Concept ;
-    skos:broader eusoilvoc:SoilAnalysis ;
-    skos:definition [ dcterms:source agrovoc:c_16377 ;
-            rdf:value "A laboratory method when the unknown amount/ concentration of the substance in a solution is ascertained by measuring the volume of a standard reagent required to react with it."@en ] ;
-    skos:exactMatch agrovoc:c_16377 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "titration"@en .
-
 eusoilvoc:TropicalSoils a skos:Concept ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
     skos:exactMatch agrovoc:c_7978 ;
@@ -2560,33 +2051,11 @@ eusoilvoc:UplandSoils a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "upland soils"@en .
 
-eusoilvoc:Urease a skos:Concept ;
-    skos:broader eusoilvoc:Enzymes ;
-    skos:exactMatch agrovoc:c_8092 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "urease"@en .
-
 eusoilvoc:Vanadium a skos:Concept ;
     skos:broader eusoilvoc:SoilPollutants ;
     skos:exactMatch agrovoc:c_8154 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "vanadium"@en .
-
-eusoilvoc:Vermicomposting a skos:Concept ;
-    skos:broader eusoilvoc:Composting ;
-    skos:definition [ dcterms:source agrovoc:c_24528 ;
-            rdf:value "Vermicomposting: use of earthworms to decompose household waste, for a faster composting process. "@en ] ;
-    skos:exactMatch agrovoc:c_24528 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "vermicomposting"@en .
-
-eusoilvoc:Vermicomposts a skos:Concept ;
-    skos:broader eusoilvoc:Composts ;
-    skos:definition [ dcterms:source agrovoc:c_c319a4d3 ;
-            rdf:value "Vermicompost is the product of the composting process using various species of worms, usually red wigglers, white worms, and other earthworms, to create a mixture of decomposing vegetable or food waste, bedding materials, and vermicast."@en ] ;
-    skos:exactMatch agrovoc:c_c319a4d3 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "vermicomposts"@en .
 
 eusoilvoc:Vermiculites a skos:Concept ;
     skos:broader eusoilvoc:SoilClayMineral ;
@@ -2627,14 +2096,6 @@ eusoilvoc:WaterRepellentSoils a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "water repellent soils"@en .
 
-eusoilvoc:Weathering a skos:Concept ;
-    skos:broader eusoilvoc:SoilFormation ;
-    skos:definition [ dcterms:source agrovoc:c_8343 ;
-            rdf:value "A material transformation process during which the properties of a material are changed as a result of in situ exposure to atmospheric processes."@en ] ;
-    skos:exactMatch agrovoc:c_8343 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "weathering"@en .
-
 eusoilvoc:WetlandSoils a skos:Concept ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:exactMatch agrovoc:c_8370 ;
@@ -2657,14 +2118,6 @@ eusoilvoc:WoodChipsMulches a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "wood chips mulches"@en .
 
-eusoilvoc:XRayDiffraction a skos:Concept ;
-    skos:broader eusoilvoc:SoilAnalysis ;
-    skos:definition [ dcterms:source agrovoc:c_79bab836 ;
-            rdf:value "The scattering of x-rays by matter, especially crystals, with accompanying variation in intensity due to interference effects. Analysis of the crystal structure of materials is performed by passing x-rays through them and registering the diffraction image of the rays."@en ] ;
-    skos:exactMatch agrovoc:c_79bab836 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "X-ray diffraction"@en .
-
 eusoilvoc:XericSoils a skos:Concept ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
     skos:exactMatch agrovoc:c_8462 ;
@@ -2685,33 +2138,6 @@ eusoilvoc:YermosolsFAO a skos:Concept ;
     skos:prefLabel "yermosols"@en ;
     skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en .
 
-eusoilvoc:AmmoniumNitrogen a skos:Concept ;
-    skos:broader eusoilvoc:InorganicNitrogen,
-        eusoilvoc:Nitrogen ;
-    skos:definition [ dcterms:source agrovoc:c_37457 ;
-            rdf:value "Amount of nitrogen as component of ammonium"@en ] ;
-    skos:exactMatch agrovoc:c_37457 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "ammonium nitrogen"@en .
-
-eusoilvoc:Archaea a skos:Concept ;
-    skos:broader eusoilvoc:Microorganisms ;
-    skos:definition [ dcterms:source agrovoc:c_95fbe471 ;
-            rdf:value "Archaea, a diverse group of prokaryotes constituting a distinct domain of life, are differentiated from bacteria and eukaryotes in numerous aspects, In 1990, Woese et al. proposed the classification of archaea into a novel domain of life, the archaeal domain, alongside the bacterial and eukaryotic domains, based on nucleic acid-based comparative and phylogenetic analysis,"@en ] ;
-    skos:exactMatch agrovoc:c_95fbe471 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Methanogens ;
-    skos:prefLabel "Archaea"@en .
-
-eusoilvoc:Bioremediation a skos:Concept ;
-    skos:broader eusoilvoc:SoilTreatment ;
-    skos:definition [ dcterms:source agrovoc:c_35028 ;
-            rdf:value "Bioremediation is any process that uses microorganisms, fungi or plants to return the natural environment altered by contaminants to its original condition. This process allows for reconditioning of flow-back frac fluid for reuse. Bioremediation of many synthetic or organic compounds is carried out by indigenous microorganisms, principally heterotrophic bacteria, which transform contaminants to intermediate products, innocuous end products or immobilized substances."@en ] ;
-    skos:exactMatch agrovoc:c_35028 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Phytoremediation ;
-    skos:prefLabel "bioremediation"@en .
-
 eusoilvoc:Bioturbation a skos:Concept ;
     skos:broader eusoilvoc:Pedoturbation,
         eusoilvoc:SoilBiologicalProcesses ;
@@ -2728,22 +2154,11 @@ eusoilvoc:CalcareousSoils a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "calcareous soils"@en .
 
-eusoilvoc:CarbonSequestration a skos:Concept ;
+eusoilvoc:SoilCarbonSequestration a skos:Concept ;
     skos:broader eusoilvoc:SoilProcesses ;
-    skos:definition [ dcterms:source agrovoc:c_331583 ;
-            rdf:value "The process of removing carbon from the atmosphere and depositing it in reservoirs such as oceans, forests or soils through physical or biological processes."@en ] ;
-    skos:exactMatch agrovoc:c_331583 ;
+    skos:closeMatch agrovoc:c_331583 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "carbon sequestration"@en .
-
-eusoilvoc:Chromatography a skos:Concept ;
-    skos:broader eusoilvoc:SoilAnalysis ;
-    skos:definition [ dcterms:source agrovoc:c_1594 ;
-            rdf:value "A physical method of separation in which the components to be separated are distributed between two phases, one of which is stationary (stationary phase) while the other (the mobile phase) moves in a definite direction."@en ] ;
-    skos:exactMatch agrovoc:c_1594 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:GasChromatography ;
-    skos:prefLabel "chromatography"@en .
+    skos:prefLabel "soil carbon sequestration"@en .
 
 eusoilvoc:Clay skos:broader eusoilvoc:SoilTexture ;
     skos:narrower eusoilvoc:Bentonite .
@@ -2754,24 +2169,6 @@ eusoilvoc:ClaySoils a skos:Concept ;
     skos:exactMatch agrovoc:c_1659 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "clay soils"@en .
-
-eusoilvoc:CompostedManure a skos:Concept ;
-    skos:broader eusoilvoc:Composts,
-        eusoilvoc:FarmyardManure ;
-    skos:definition [ dcterms:source agrovoc:c_8f17e9f1 ;
-            rdf:value "Solid manure that has undergone a composting process."@en ] ;
-    skos:exactMatch agrovoc:c_8f17e9f1 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "composted manure"@en .
-
-eusoilvoc:Composting a skos:Concept ;
-    skos:broader eusoilvoc:SoilManagement ;
-    skos:definition [ dcterms:source agrovoc:c_15956 ;
-            rdf:value "A managed process in which organic materials are digested aerobically or anaerobically bymicrobial action."@en ] ;
-    skos:exactMatch agrovoc:c_15956 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Vermicomposting ;
-    skos:prefLabel "composting"@en .
 
 eusoilvoc:DeepTillage a skos:Concept ;
     skos:broader eusoilvoc:SoilTillage ;
@@ -2789,30 +2186,12 @@ eusoilvoc:DiagnosticHorizons a skos:Concept ;
     skos:narrower eusoilvoc:SpodicHorizons ;
     skos:prefLabel "diagnostic horizons"@en .
 
-eusoilvoc:FarmyardManure a skos:Concept ;
-    skos:broader eusoilvoc:OrganicAmendments ;
-    skos:definition [ dcterms:source agrovoc:c_2810 ;
-            rdf:value "Farmyard manure refers to the bulky organic manure resulting from the naturally decomposed mixture of dung and urine of farm animals along with the litter (bedding material)."@en ] ;
-    skos:exactMatch agrovoc:c_2810 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:CompostedManure ;
-    skos:prefLabel "farmyard manure"@en .
-
 eusoilvoc:FreeLivingNematodes a skos:Concept ;
     skos:broader eusoilvoc:Nematodes,
         eusoilvoc:SoilFauna ;
     skos:exactMatch agrovoc:c_36731 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "free-living nematodes"@en .
-
-eusoilvoc:Geology skos:narrower eusoilvoc:Mineralogy .
-
-eusoilvoc:Goethite a skos:Concept ;
-    skos:broader eusoilvoc:IronOxides,
-        eusoilvoc:Minerals ;
-    skos:exactMatch agrovoc:c_15842 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "goethite"@en .
 
 eusoilvoc:GypsiferousSoils a skos:Concept ;
     skos:broader eusoilvoc:ChemicalSoilTypes,
@@ -2830,15 +2209,6 @@ eusoilvoc:Humus a skos:Concept ;
     skos:narrower eusoilvoc:LeafMould ;
     skos:prefLabel "humus"@en .
 
-eusoilvoc:Hydrocarbons a skos:Concept ;
-    skos:broader eusoilvoc:SoilPollutants ;
-    skos:definition [ dcterms:source agrovoc:c_3719 ;
-            rdf:value "In organic chemistry, a hydrocarbon is an organic compound consisting entirely of hydrogen and carbon."@en ] ;
-    skos:exactMatch agrovoc:c_3719 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:PolycyclicAromaticHydrocarbons ;
-    skos:prefLabel "hydrocarbons"@en .
-
 eusoilvoc:IgneousRockSoils a skos:Concept ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_3792 ;
@@ -2846,28 +2216,12 @@ eusoilvoc:IgneousRockSoils a skos:Concept ;
     skos:narrower eusoilvoc:SerpentineSoils ;
     skos:prefLabel "igneous rock soils"@en .
 
-eusoilvoc:InfraredSpectrophotometry a skos:Concept ;
-    skos:broader eusoilvoc:Spectrometry,
-        eusoilvoc:Spectroscopy ;
-    skos:exactMatch agrovoc:c_28568 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "infrared spectrophotometry"@en .
-
 eusoilvoc:InorganicAmendments a skos:Concept ;
     skos:broader eusoilvoc:SoilAmendments ;
     skos:exactMatch agrovoc:c_27871 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:LimingMaterials ;
     skos:prefLabel "inorganic amendments"@en .
-
-eusoilvoc:IronOxides a skos:Concept ;
-    skos:broader eusoilvoc:SoilMineralMatter ;
-    skos:definition [ dcterms:source agrovoc:c_2f72fa26 ;
-            rdf:value "Iron oxides are chemical compounds composed of iron and oxygen."@en ] ;
-    skos:exactMatch agrovoc:c_2f72fa26 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Goethite ;
-    skos:prefLabel "iron oxides"@en .
 
 eusoilvoc:LossesFromSoil a skos:Concept ;
     skos:broader eusoilvoc:SoilProcesses ;
@@ -2883,20 +2237,6 @@ eusoilvoc:MassMovement a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilSubsidence ;
     skos:prefLabel "mass movement"@en .
-
-eusoilvoc:Mineralogy a skos:Concept ;
-    skos:broader eusoilvoc:Geology,
-        eusoilvoc:SoilSciences ;
-    skos:exactMatch agrovoc:c_4856 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "mineralogy"@en .
-
-eusoilvoc:NitrogenMineralization a skos:Concept ;
-    skos:broader eusoilvoc:SoilMineralization ;
-    skos:exactMatch agrovoc:c_36243 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Ammonification ;
-    skos:prefLabel "nitrogen mineralization"@en .
 
 eusoilvoc:NitrogenTotal skos:broader eusoilvoc:NitrogenContent ;
     skos:definition [ dcterms:source agrovoc:c_bdc779f4 ;
@@ -2947,15 +2287,6 @@ eusoilvoc:SandySoils a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "sandy soils"@en .
 
-eusoilvoc:SilicateMinerals a skos:Concept ;
-    skos:broader eusoilvoc:Minerals ;
-    skos:definition [ dcterms:source agrovoc:c_18414ed6 ;
-            rdf:value "Silicate minerals are rock-forming minerals made up of silicate groups. They are the largest and most important class of minerals and make up approximately 90 percent of Earth's crust."@en ] ;
-    skos:exactMatch agrovoc:c_18414ed6 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Feldspar ;
-    skos:prefLabel "silicate minerals"@en .
-
 eusoilvoc:SitePreparation a skos:Concept ;
     skos:broader eusoilvoc:SoilManagement ;
     skos:exactMatch agrovoc:c_32545 ;
@@ -2967,7 +2298,6 @@ eusoilvoc:Smectites a skos:Concept ;
     skos:broader eusoilvoc:SoilClayMineral ;
     skos:exactMatch agrovoc:c_16666 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Montmorillonites ;
     skos:prefLabel "smectites"@en .
 
 eusoilvoc:SoilAnthropogenicChanges a skos:Concept ;
@@ -2978,9 +2308,6 @@ eusoilvoc:SoilAnthropogenicChanges a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:LandTake ;
     skos:prefLabel "soil anthropogenic changes"@en .
-
-eusoilvoc:SoilBiologicalProperties skos:narrower eusoilvoc:Biodiversity,
-        eusoilvoc:SpeciesRichness .
 
 eusoilvoc:SoilBorneViruses a skos:Concept ;
     skos:broader eusoilvoc:SoilBorneOrganisms ;
@@ -3006,8 +2333,7 @@ eusoilvoc:SoilFlora a skos:Concept ;
     skos:narrower eusoilvoc:SoilFungi ;
     skos:prefLabel "soil flora"@en .
 
-eusoilvoc:SoilFormation skos:narrower eusoilvoc:SoilAccumulation,
-        eusoilvoc:Weathering .
+eusoilvoc:SoilFormation skos:narrower eusoilvoc:SoilAccumulation .
 
 eusoilvoc:SoilFumigation a skos:Concept ;
     skos:broader eusoilvoc:SoilSterilization,
@@ -3044,23 +2370,13 @@ eusoilvoc:SoilMechanics a skos:Concept ;
     skos:narrower eusoilvoc:SoilDynamics ;
     skos:prefLabel "soil mechanics"@en .
 
-eusoilvoc:SoilMicrofauna skos:narrower eusoilvoc:Nematodes,
-        eusoilvoc:Protozoa .
-
-eusoilvoc:SoilMineralMatter skos:narrower eusoilvoc:IronOxides,
-        eusoilvoc:Minerals .
-
-eusoilvoc:SoilMineralization skos:narrower eusoilvoc:CarbonMineralization,
-        eusoilvoc:NitrogenMineralization .
+eusoilvoc:SoilMicrofauna skos:narrower eusoilvoc:Nematodes .
 
 eusoilvoc:SoilNutrientAvailability skos:definition [ dcterms:source agrovoc:c_37554 ;
             rdf:value "The amount of nutrient available in soil under specific (abiotic) conditions."@en ] ;
     skos:exactMatch agrovoc:c_37554 ;
     skos:narrower eusoilvoc:AmmoniumFixation,
         eusoilvoc:PlantAvailableNitrogen .
-
-eusoilvoc:SoilOrganicCarbon skos:narrower eusoilvoc:DissolvedOrganicCarbon,
-        eusoilvoc:ParticulateOrganicCarbon .
 
 eusoilvoc:SoilPhysicalProperties skos:broader eusoilvoc:SoilChemicophysicalProperties ;
     skos:narrower eusoilvoc:SoilMechanicalProperties .
@@ -3174,16 +2490,6 @@ eusoilvoc:Waterlogging a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "waterlogging"@en .
 
-eusoilvoc:Biodiversity a skos:Concept ;
-    skos:broader eusoilvoc:SoilBiologicalProperties ;
-    skos:definition [ dcterms:source agrovoc:c_33949 ;
-            rdf:value "The variability among living organisms from all sources including, inter alia, terrestrial, marine and other aquatic ecosystems and the ecological complexes of which they are part; this includes diversity within species, between species and of ecosystems."@en ] ;
-    skos:exactMatch agrovoc:c_33949 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:FunctionalDiversity,
-        eusoilvoc:MicrobialDiversity ;
-    skos:prefLabel "biodiversity"@en .
-
 eusoilvoc:BoronContent a skos:Concept ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilChemicophysicalProperties ;
@@ -3191,16 +2497,6 @@ eusoilvoc:BoronContent a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:PlantAvailableBoron ;
     skos:prefLabel "boron content"@en .
-
-eusoilvoc:Composts a skos:Concept ;
-    skos:broader eusoilvoc:OrganicAmendments ;
-    skos:definition [ dcterms:source agrovoc:c_1795 ;
-            rdf:value "Organic materials of animal, plant or human origin, partially decomposed through fermentation, used to improve soil structure and provide nutrients."@en ] ;
-    skos:exactMatch agrovoc:c_1795 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:CompostedManure,
-        eusoilvoc:Vermicomposts ;
-    skos:prefLabel "composts"@en .
 
 eusoilvoc:ErosionControl a skos:Concept ;
     skos:broader eusoilvoc:SoilConservation ;
@@ -3233,36 +2529,13 @@ eusoilvoc:InorganicNitrogen a skos:Concept ;
             rdf:value "Inorganic fraction of the total nitrogen content in soils or in fertilizers"@en ] ;
     skos:exactMatch agrovoc:c_19dbe72d ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:AmmoniumNitrogen,
-        eusoilvoc:NitrateNitrogen ;
+    skos:narrower eusoilvoc:NitrateNitrogen ;
     skos:prefLabel "inorganic nitrogen"@en .
-
-eusoilvoc:Microorganisms skos:narrower eusoilvoc:Archaea,
-        eusoilvoc:SoilAlgae,
-        eusoilvoc:SoilMicroorganisms .
-
-eusoilvoc:Microscopy a skos:Concept ;
-    skos:broader eusoilvoc:SoilAnalysis ;
-    skos:exactMatch agrovoc:c_4810 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:ElectronMicroscopy,
-        eusoilvoc:LightMicroscopy ;
-    skos:prefLabel "microscopy"@en .
 
 eusoilvoc:Mulch skos:broader eusoilvoc:SoilAmendments ;
     skos:closeMatch agrovoc:c_4977 ;
     skos:narrower eusoilvoc:DryMulches,
         eusoilvoc:OrganicMulches .
-
-eusoilvoc:Mycorrhizae a skos:Concept ;
-    skos:broader eusoilvoc:BiologicalFeatures ;
-    skos:definition [ dcterms:source agrovoc:c_5023 ;
-            rdf:value "Symbiotic associations between a fungus and the roots of vascular plants."@en ] ;
-    skos:exactMatch agrovoc:c_5023 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:ArbuscularMycorrhiza,
-        eusoilvoc:Ectomycorrhizae ;
-    skos:prefLabel "mycorrhizae"@en .
 
 eusoilvoc:Nematodes a skos:Concept ;
     skos:broader eusoilvoc:SoilMicrofauna ;
@@ -3270,8 +2543,7 @@ eusoilvoc:Nematodes a skos:Concept ;
             rdf:value "Elongated, cylindrical, unsegmented worm; includes a number of plant and animal parasites."@en ] ;
     skos:exactMatch agrovoc:c_47faeccc ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:FreeLivingNematodes,
-        eusoilvoc:PlantNematodes ;
+    skos:narrower eusoilvoc:FreeLivingNematodes ;
     skos:prefLabel "nematodes"@en .
 
 eusoilvoc:NitrateNitrogen a skos:Concept ;
@@ -3283,26 +2555,6 @@ eusoilvoc:NitrateNitrogen a skos:Concept ;
     skos:exactMatch agrovoc:c_0e5d9815 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "nitrate-nitrogen"@en .
-
-eusoilvoc:NutrientManagement a skos:Concept ;
-    skos:broader eusoilvoc:SoilManagement ;
-    skos:definition [ dcterms:source agrovoc:c_330697 ;
-            rdf:value "Nutrient management is the science and practice directed to link soil, crop, weather, and hydrologic factors with cultural, irrigation, and soil and water conservation practices to achieve optimal nutrient use efficiency, crop yields, crop quality, and economic returns, while reducing off-site transport of nutrients (fertilizer) that may impact the environment."@en ] ;
-    skos:exactMatch agrovoc:c_330697 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:IntegratedPlantNutrientManagement,
-        eusoilvoc:SiteSpecificNutrientManagement ;
-    skos:prefLabel "nutrient management"@en .
-
-eusoilvoc:OrganicNitrogen a skos:Concept ;
-    skos:broader eusoilvoc:Nitrogen ;
-    skos:definition [ dcterms:source agrovoc:c_13c21a25 ;
-            rdf:value "The nitrogen combined in organic molecules such as proteins, amines, and amino acids."@en ] ;
-    skos:exactMatch agrovoc:c_13c21a25 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:DissolvedOrganicNitrogen,
-        eusoilvoc:ParticulateOrganicNitrogen ;
-    skos:prefLabel "organic nitrogen"@en .
 
 eusoilvoc:PalaeosolicSoilTypes a skos:Concept ;
     skos:broader eusoilvoc:SoilTypes ;
@@ -3373,13 +2625,13 @@ eusoilvoc:SoilMesofauna skos:narrower eusoilvoc:Collembola,
         eusoilvoc:Mites .
 
 eusoilvoc:SoilMicroorganisms a skos:Concept ;
-    skos:broader eusoilvoc:Microorganisms,
-        eusoilvoc:SoilOrganisms ;
+    skos:broader eusoilvoc:SoilOrganisms ;
     skos:definition [ dcterms:source agrovoc:c_36167 ;
             rdf:value "Microorganisms in soil are important because they affect soil structure and fertility. Soil microorganisms can be classified as bacteria, actinomycetes, fungi, algae and protozoa. Each of these groups has characteristics that define them and their functions in soil"@en ] ;
     skos:exactMatch agrovoc:c_36167 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:SoilBacteria ;
+    skos:narrower eusoilvoc:SoilAlgae,
+        eusoilvoc:SoilBacteria ;
     skos:prefLabel "soil microorganisms"@en .
 
 eusoilvoc:SoilStabilization a skos:Concept ;
@@ -3435,17 +2687,8 @@ eusoilvoc:SubsurfaceDrainage a skos:Concept ;
             rdf:value "The removal of excess water and salts from soils via groundwater flow to the drains, so that the watertable and rootzone salinity are controlled."@en ] ;
     skos:exactMatch agrovoc:c_25349 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:MoleDrainage,
-        eusoilvoc:TileDrainage ;
+    skos:narrower eusoilvoc:TileDrainage ;
     skos:prefLabel "subsurface drainage"@en .
-
-eusoilvoc:ThermalAnalysis a skos:Concept ;
-    skos:broader eusoilvoc:SoilAnalysis ;
-    skos:exactMatch agrovoc:c_7717 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:DifferentialThermalAnalysis,
-        eusoilvoc:ThermogravimetricAnalysis ;
-    skos:prefLabel "thermal analysis"@en .
 
 eusoilvoc:MineralogicalSoilTypes a skos:Concept ;
     skos:broader eusoilvoc:SoilTypes ;
@@ -3460,9 +2703,6 @@ eusoilvoc:OrganicAmendments a skos:Concept ;
     skos:broader eusoilvoc:SoilAmendments ;
     skos:exactMatch agrovoc:c_12965 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Composts,
-        eusoilvoc:FarmyardManure,
-        eusoilvoc:GreenManures ;
     skos:prefLabel "organic amendments"@en .
 
 eusoilvoc:PhosphorusContent a skos:Concept ;
@@ -3478,14 +2718,11 @@ eusoilvoc:SoilBacteria a skos:Concept ;
     skos:broader eusoilvoc:SoilMicroorganisms ;
     skos:exactMatch agrovoc:c_34c44dd1 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:NitrogenFixingBacteria,
-        eusoilvoc:PlantGrowthPromotingRhizobacteria,
+    skos:narrower eusoilvoc:PlantGrowthPromotingRhizobacteria,
         eusoilvoc:Rhizobacteria ;
     skos:prefLabel "soil bacteria"@en .
 
-eusoilvoc:SoilBiologicalProcesses skos:narrower eusoilvoc:Biodegradation,
-        eusoilvoc:Bioturbation,
-        eusoilvoc:EnzymeActivity,
+eusoilvoc:SoilBiologicalProcesses skos:narrower eusoilvoc:Bioturbation,
         eusoilvoc:SoilBiologicalActivity .
 
 eusoilvoc:SoilDegradation skos:narrower eusoilvoc:SoilCompaction,
@@ -3506,9 +2743,9 @@ eusoilvoc:SoilOrganisms skos:narrower eusoilvoc:Earthworms,
         eusoilvoc:SoilFlora,
         eusoilvoc:SoilMicroorganisms .
 
-eusoilvoc:SoilProcesses skos:narrower eusoilvoc:CarbonSequestration,
-        eusoilvoc:LossesFromSoil,
+eusoilvoc:SoilProcesses skos:narrower eusoilvoc:LossesFromSoil,
         eusoilvoc:SoilAnthropogenicChanges,
+        eusoilvoc:SoilCarbonSequestration,
         eusoilvoc:SoilDenudation .
 
 eusoilvoc:SoilWaterConstants a skos:Concept ;
@@ -3519,15 +2756,6 @@ eusoilvoc:SoilWaterConstants a skos:Concept ;
     skos:narrower eusoilvoc:PermanentWiltingPoint,
         eusoilvoc:SoilFieldMoistureCapacity ;
     skos:prefLabel "soil water constants"@en .
-
-eusoilvoc:Spectroscopy a skos:Concept ;
-    skos:broader eusoilvoc:SoilAnalysis ;
-    skos:exactMatch agrovoc:c_14498 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:InfraredSpectrophotometry,
-        eusoilvoc:NMRSpectroscopy,
-        eusoilvoc:Spectrometry ;
-    skos:prefLabel "spectroscopy"@en .
 
 eusoilvoc:ConservationTillage skos:narrower eusoilvoc:MinimumTillage,
         eusoilvoc:NoTill,
@@ -3545,10 +2773,8 @@ eusoilvoc:DryMulches a skos:Concept ;
         eusoilvoc:SoilMulches ;
     skos:prefLabel "dry mulches"@en .
 
-eusoilvoc:Nitrogen skos:narrower eusoilvoc:AmmoniumNitrogen,
-        eusoilvoc:InorganicNitrogen,
+eusoilvoc:Nitrogen skos:narrower eusoilvoc:InorganicNitrogen,
         eusoilvoc:NitrateNitrogen,
-        eusoilvoc:OrganicNitrogen,
         eusoilvoc:PlantAvailableNitrogen .
 
 eusoilvoc:SoilDrainage skos:closeMatch agrovoc:c_2372 ;
@@ -3564,16 +2790,6 @@ eusoilvoc:SoilTexture skos:broader eusoilvoc:SoilChemicophysicalProperties ;
         eusoilvoc:CoarseSilt,
         eusoilvoc:FineSilt,
         eusoilvoc:MediumSilt .
-
-eusoilvoc:Spectrometry a skos:Concept ;
-    skos:broader eusoilvoc:SoilAnalysis,
-        eusoilvoc:Spectroscopy ;
-    skos:exactMatch agrovoc:c_7283 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:AtomicAbsorptionSpectrometry,
-        eusoilvoc:InfraredSpectrophotometry,
-        eusoilvoc:MassSpectrometry ;
-    skos:prefLabel "spectrometry"@en .
 
 eusoilvoc:LimingMaterials a skos:Concept ;
     skos:broader eusoilvoc:InorganicAmendments,
@@ -3599,6 +2815,7 @@ eusoilvoc:SoilClayMineral skos:narrower eusoilvoc:Allophane,
         eusoilvoc:Illites,
         eusoilvoc:Imogolite,
         eusoilvoc:Kaolinite,
+        eusoilvoc:Montmorillonites,
         eusoilvoc:Smectites,
         eusoilvoc:Vermiculites .
 
@@ -3620,7 +2837,6 @@ eusoilvoc:SoilImprovement a skos:Concept ;
     skos:exactMatch agrovoc:c_36315 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:LandRehabilitation,
-        eusoilvoc:LandRestoration,
         eusoilvoc:SoilStabilization ;
     skos:prefLabel "soil improvement"@en .
 
@@ -3635,22 +2851,13 @@ eusoilvoc:SoilMorphologicalFeatures a skos:Concept ;
         eusoilvoc:WheelTracks ;
     skos:prefLabel "soil morphological features"@en .
 
-eusoilvoc:SoilOrganicMatter skos:narrower eusoilvoc:DissolvedOrganicMatter,
-        eusoilvoc:FulvicAcids,
-        eusoilvoc:HumicAcids,
-        eusoilvoc:Humus,
-        eusoilvoc:OrganomineralComplexes,
-        eusoilvoc:ParticulateOrganicMatter .
+eusoilvoc:SoilOrganicMatter skos:narrower eusoilvoc:Humus,
+        eusoilvoc:OrganomineralComplexes .
 
 eusoilvoc:SoilSampling a skos:Concept ;
     skos:broader eusoilvoc:SoilSurveys ;
     skos:exactMatch agrovoc:c_25271 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:CoreSampling,
-        eusoilvoc:RandomSampling,
-        eusoilvoc:RepresentativeSampling,
-        eusoilvoc:SampleContamination,
-        eusoilvoc:StratifiedSampling ;
     skos:prefLabel "soil sampling"@en .
 
 eusoilvoc:SoilSurveys a skos:Concept ;
@@ -3691,20 +2898,6 @@ eusoilvoc:AnthropogenicSoils a skos:Concept ;
         eusoilvoc:ReclaimedSoils,
         eusoilvoc:RoadsideSoils ;
     skos:prefLabel "anthropogenic soils"@en .
-
-eusoilvoc:Minerals a skos:Concept ;
-    skos:broader eusoilvoc:SoilMineralMatter ;
-    skos:definition [ dcterms:source agrovoc:c_4857 ;
-            rdf:value "A naturally occurring, inorganic, solid, crystalline substance which has a fixed structure and a chemical composition which is either fixed or which may vary within certain defined limits."@en ] ;
-    skos:exactMatch agrovoc:c_4857 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Calcite,
-        eusoilvoc:Dolomite,
-        eusoilvoc:Goethite,
-        eusoilvoc:Pyrites,
-        eusoilvoc:Quartz,
-        eusoilvoc:SilicateMinerals ;
-    skos:prefLabel "minerals"@en .
 
 eusoilvoc:OrganicMulches a skos:Concept ;
     skos:broader eusoilvoc:Mulch ;
@@ -3767,21 +2960,6 @@ eusoilvoc:CulturalSoilTypes a skos:Concept ;
         eusoilvoc:OrchardSoils ;
     skos:prefLabel "cultural soil types"@en .
 
-eusoilvoc:Enzymes a skos:Concept ;
-    skos:broader eusoilvoc:SoilOrganicComponents ;
-    skos:definition [ dcterms:source agrovoc:c_2603 ;
-            rdf:value "A type of protein present in living organisms that catalyses (speeds up) chemical changes without being changed itself."@en ] ;
-    skos:exactMatch agrovoc:c_2603 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:AcidPhosphatase,
-        eusoilvoc:AlkalinePhosphatase,
-        eusoilvoc:BetaGlucosidase,
-        eusoilvoc:Cellulase,
-        eusoilvoc:Chitinase,
-        eusoilvoc:Proteases,
-        eusoilvoc:Urease ;
-    skos:prefLabel "enzymes"@en .
-
 eusoilvoc:NitrogenContent a skos:Concept ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilChemicophysicalProperties ;
@@ -3801,8 +2979,7 @@ eusoilvoc:SoilAmendments a skos:Concept ;
             rdf:value "Any material added to the soil to improve its physical and chemical properties. The application of amendments depends on the characteristics of the soils, and may include compost, livestock manure, magnesium sulphate, vinasse, zeolite (minerals or adsorbents that hydrate and dehydrate reversibly), charcoal or biochar, calcium sulphate, lime, cane by-product (bagasse), zinc sulphate, dolomite (calcium magnesium carbonate), vermicompost, sugar cane, palm kernel cake, phosphate rock, and other organic matter."@en ] ;
     skos:exactMatch agrovoc:c_7159 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Biochar,
-        eusoilvoc:EvaporationSuppressants,
+    skos:narrower eusoilvoc:EvaporationSuppressants,
         eusoilvoc:InorganicAmendments,
         eusoilvoc:LimingMaterials,
         eusoilvoc:Mulch,
@@ -3816,10 +2993,7 @@ eusoilvoc:SoilConservation a skos:Concept ;
             rdf:value "Soil conservation is a combination of all methods of management and land use that safeguard the soil against depletion or deterioration by natural or human-induced factors. It most often attempts to ensure that soil does not erode and wash into streams and lakes or blow away in the wind, but it also involves the protection of the soil from damage by machinery (e.g., compaction) or by harmful changes to its chemistry (e.g., acidification or salinization)."@en ] ;
     skos:exactMatch agrovoc:c_7165 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:ContourBunding,
-        eusoilvoc:ContourCultivation,
-        eusoilvoc:CoverPlants,
-        eusoilvoc:ErosionControl,
+    skos:narrower eusoilvoc:ErosionControl,
         eusoilvoc:InSituSoilConservation,
         eusoilvoc:SoilConservationLegislation,
         eusoilvoc:SoilStabilization ;
@@ -3855,7 +3029,6 @@ eusoilvoc:SoilSciences a skos:Concept ;
     skos:exactMatch agrovoc:c_7188 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:Agrology,
-        eusoilvoc:Mineralogy,
         eusoilvoc:Pedology,
         eusoilvoc:SoilBiology,
         eusoilvoc:SoilChemistry,
@@ -3871,8 +3044,7 @@ eusoilvoc:SoilTreatment a skos:Concept ;
     skos:broader eusoilvoc:SoilManagement ;
     skos:exactMatch agrovoc:c_7203 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Bioremediation,
-        eusoilvoc:RadioactiveDecontaminationSoil,
+    skos:narrower eusoilvoc:RadioactiveDecontaminationSoil,
         eusoilvoc:SoilDisinfection,
         eusoilvoc:SoilFumigation,
         eusoilvoc:SoilHeating,
@@ -3906,13 +3078,13 @@ eusoilvoc:SoilPollutants skos:definition [ dcterms:source agrovoc:c_e9c250f9 ;
         eusoilvoc:Arsenic,
         eusoilvoc:Chromium,
         eusoilvoc:Cobalt,
-        eusoilvoc:Hydrocarbons,
         eusoilvoc:Lead,
         eusoilvoc:Mercury,
         eusoilvoc:Microplastics,
         eusoilvoc:Nickel,
         eusoilvoc:PerfluoroalkylAcids,
         eusoilvoc:PolychlorinatedBiphenyls,
+        eusoilvoc:PolycyclicAromaticHydrocarbons,
         eusoilvoc:Vanadium .
 
 eusoilvoc:SoilProperties skos:narrower eusoilvoc:EdaphicFactors,
@@ -3971,21 +3143,6 @@ eusoilvoc:SoilAnalysis a skos:Concept ;
     skos:broader eusoilvoc:SoilSurveys ;
     skos:exactMatch agrovoc:c_7198 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:ChemicalAnalysis,
-        eusoilvoc:Chromatography,
-        eusoilvoc:Colorimetry,
-        eusoilvoc:Conductimetry,
-        eusoilvoc:ElementalAnalysis,
-        eusoilvoc:GoodLaboratoryPractices,
-        eusoilvoc:Microscopy,
-        eusoilvoc:Potentiometry,
-        eusoilvoc:QualityAssurance,
-        eusoilvoc:QualityControl,
-        eusoilvoc:Spectrometry,
-        eusoilvoc:Spectroscopy,
-        eusoilvoc:ThermalAnalysis,
-        eusoilvoc:Titration,
-        eusoilvoc:XRayDiffraction ;
     skos:prefLabel "soil analysis"@en .
 
 eusoilvoc:SoilTypes skos:narrower eusoilvoc:AnthropogenicSoils,
@@ -4049,17 +3206,9 @@ eusoilvoc:SoilTillage skos:definition [ dcterms:source agrovoc:c_7771 ;
         eusoilvoc:Subsoiling,
         eusoilvoc:SurfaceCultivation .
 
-eusoilvoc:SoilManagement skos:narrower eusoilvoc:Agroforestry,
-        eusoilvoc:Composting,
-        eusoilvoc:ConservationAgriculture,
-        eusoilvoc:ControlledTrafficFarming,
-        eusoilvoc:CropResidueManagement,
-        eusoilvoc:CropRotation,
-        eusoilvoc:IntegratedSoilFertilityManagement,
+eusoilvoc:SoilManagement skos:narrower eusoilvoc:IntegratedSoilFertilityManagement,
         eusoilvoc:Liming,
-        eusoilvoc:NutrientManagement,
         eusoilvoc:SalinityControl,
-        eusoilvoc:SalinityManagement,
         eusoilvoc:SitePreparation,
         eusoilvoc:SoilAmendments,
         eusoilvoc:SoilConservation,
