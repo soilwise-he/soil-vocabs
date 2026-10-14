@@ -1,9 +1,6 @@
 # coding agents
 AGENTS.md
 
-# local worktrees
-.worktrees/
-
 # local Cloudflare deployment files
 /cloudflare/
 

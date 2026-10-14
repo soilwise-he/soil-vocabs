@@ -129,6 +129,15 @@ eusoilvoc:AlluvialSoils a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "alluvial soils"@en .
 
+eusoilvoc:Alluvium a skos:Concept ;
+    skos:altLabel "alluvial deposits"@en ;
+    skos:broader eusoilvoc:ParentMaterial ;
+    skos:definition [ dcterms:source agrovoc:c_25347 ;
+            rdf:value "Deposit made by a river or running water, often very productive agricultural soil."@en ] ;
+    skos:exactMatch agrovoc:c_25347 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "alluvium"@en .
+
 eusoilvoc:AluminiumMulches a skos:Concept ;
     skos:broader eusoilvoc:DryMulches ;
     skos:definition [ dcterms:source agrovoc:c_207ace25 ;
@@ -682,6 +691,12 @@ eusoilvoc:GypsisolsWRB a skos:Concept ;
     skos:prefLabel "Gypsisols"@en ;
     skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
 
+eusoilvoc:Halloysite a skos:Concept ;
+    skos:broader eusoilvoc:SoilClayMineral ;
+    skos:exactMatch agrovoc:c_15838 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "halloysite"@en .
+
 eusoilvoc:Hardpans a skos:Concept ;
     skos:broader eusoilvoc:SoilHorizons ;
     skos:definition [ dcterms:source agrovoc:c_c27ddf24 ;
@@ -1094,6 +1109,14 @@ eusoilvoc:NonproteinNitrogenContent a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "nonprotein nitrogen content"@en .
 
+eusoilvoc:Nontronite a skos:Concept ;
+    skos:broader eusoilvoc:SoilClayMineral ;
+    skos:definition [ dcterms:source agrovoc:c_55aaa84c ;
+            rdf:value "Nontronite is the iron(III) rich member of the smectite group of clay minerals."@en ] ;
+    skos:exactMatch agrovoc:c_55aaa84c ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "nontronite"@en .
+
 eusoilvoc:NotPlantAvailableWater a skos:Concept ;
     skos:broader eusoilvoc:SoilWater ;
     skos:definition [ dcterms:source agrovoc:c_aa83b262 ;
@@ -1147,6 +1170,12 @@ eusoilvoc:Palaeosols a skos:Concept ;
     skos:exactMatch agrovoc:c_5511 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "palaeosols"@en .
+
+eusoilvoc:Palygorskite a skos:Concept ;
+    skos:broader eusoilvoc:SoilClayMineral ;
+    skos:exactMatch agrovoc:c_15837 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "palygorskite"@en .
 
 eusoilvoc:PeatSoils a skos:Concept ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
@@ -1441,6 +1470,14 @@ eusoilvoc:SalinityControl a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "salinity control"@en .
 
+eusoilvoc:Saponite a skos:Concept ;
+    skos:broader eusoilvoc:SoilClayMineral ;
+    skos:definition [ dcterms:source agrovoc:c_96e7c0f8 ;
+            rdf:value "Saponite is a trioctahedral mineral of the smectite group."@en ] ;
+    skos:exactMatch agrovoc:c_96e7c0f8 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "saponite"@en .
+
 eusoilvoc:SchistSoils a skos:Concept ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_6845 ;
@@ -1468,6 +1505,15 @@ eusoilvoc:SemiAridSoils a skos:Concept ;
     skos:exactMatch agrovoc:c_14192 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "semi-arid soils"@en .
+
+eusoilvoc:Sepiolite a skos:Concept ;
+    skos:altLabel "meerschaum"@en ;
+    skos:broader eusoilvoc:SoilClayMineral ;
+    skos:definition [ dcterms:source agrovoc:c_f92d89de ;
+            rdf:value "Sepiolite, also known as meerschaum is a soft white clay mineral, often used to make tobacco pipes (known as meerschaum pipes)."@en ] ;
+    skos:exactMatch agrovoc:c_f92d89de ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "sepiolite"@en .
 
 eusoilvoc:SerpentineSoils a skos:Concept ;
     skos:broader eusoilvoc:IgneousRockSoils ;
@@ -2565,7 +2611,8 @@ eusoilvoc:PalaeosolicSoilTypes a skos:Concept ;
     skos:prefLabel "palaeosolic soil types"@en .
 
 eusoilvoc:ParentMaterial skos:exactMatch agrovoc:c_7181 ;
-    skos:narrower eusoilvoc:Colluvium,
+    skos:narrower eusoilvoc:Alluvium,
+        eusoilvoc:Colluvium,
         eusoilvoc:Gravel,
         eusoilvoc:Loess .
 
@@ -2812,10 +2859,15 @@ eusoilvoc:SoilChemicalProperties skos:broader eusoilvoc:SoilChemicophysicalPrope
         eusoilvoc:SoilToxicity .
 
 eusoilvoc:SoilClayMineral skos:narrower eusoilvoc:Allophane,
+        eusoilvoc:Halloysite,
         eusoilvoc:Illites,
         eusoilvoc:Imogolite,
         eusoilvoc:Kaolinite,
         eusoilvoc:Montmorillonites,
+        eusoilvoc:Nontronite,
+        eusoilvoc:Palygorskite,
+        eusoilvoc:Saponite,
+        eusoilvoc:Sepiolite,
         eusoilvoc:Smectites,
         eusoilvoc:Vermiculites .
 
