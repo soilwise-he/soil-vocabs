@@ -273,8 +273,9 @@ eusoilvoc:SoilPollution a skos:Concept ;
 
 eusoilvoc:SoilPollutants a skos:Concept ;
     skos:prefLabel "soil pollutants"@en ;
-    skos:altLabel "soil Contaminants"@en,
-        "soil contaminant"@en ;
+    skos:altLabel "soil contaminant"@en,
+        "soil contaminants"@en,
+        "soil pollutant"@en ;
     skos:broader eusoilvoc:SoilPollution ;
     skos:exactMatch she:SoilContaminants .
 

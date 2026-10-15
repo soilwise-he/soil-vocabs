@@ -191,7 +191,8 @@ eusoilvoc:SoilHydraulicConductivity a skos:Concept ;
         eusoilvoc:hydraulicConductivityProcedure-Ksat_invbhole .
 
 eusoilvoc:SoilMoistureContents a skos:Concept ;
-    skos:altLabel "moisture content"@en ;
+    skos:altLabel "moisture content"@en,
+        "soil moisture content"@en ;
     skos:broader eusoilvoc:SoilWaterPhysicalProperties ;
     skos:definition [ dcterms:source glosis_lh:moistureContentProperty ;
             rdf:value "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ] ;
