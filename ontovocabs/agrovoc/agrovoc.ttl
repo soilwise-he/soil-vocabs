@@ -75,8 +75,7 @@ eusoilvoc:AcrisolsWRB a skos:Concept ;
             rdf:value "Acrisols have a higher clay content in the subsoil than in the topsoil, as a result of pedogenetic processes (especially clay migration) leading to an argic subsoil horizon. Acrisols have low-activity clays in the argic horizon and a low base saturation in the 50–100 cm depth. Many Acrisols correlate with Red yellow podzolic soils (e.g. Indonesia), Argissolos (Brazil), Kurosols (Australia), Sols ferralitiques fortement ou moyennement désaturés (France) and Ultisols with low-activity clays (United States of America)."@en ] ;
     skos:exactMatch agrovoc:c_101 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Acrisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Acrisols"@en .
 
 eusoilvoc:AgriculturalLime a skos:Concept ;
     skos:broader eusoilvoc:LimingMaterials ;
@@ -106,8 +105,7 @@ eusoilvoc:AlisolsWRB a skos:Concept ;
             rdf:value "Alisols have a higher clay content in the subsoil than in the topsoil, as a result of pedogenetic processes (especially clay migration) leading to an argic subsoil horizon. Alisols have high-activity clays throughout the argic horizon and a low base saturation in the 50–100 cm depth. They occur predominantly in humid tropical, humid subtropical and humid temperate regions. Many Alisols correlate with Parabraunerden (Germany), Argissolos (Brazil), Ultisols with high-activity clays (United States of America), Kurosols (Australia), and Fersialsols and Sols fersiallitiques très lessivés (France)."@en ] ;
     skos:exactMatch agrovoc:c_479c499a ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Alisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Alisols"@en .
 
 eusoilvoc:AlkalineSoils a skos:Concept ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
@@ -158,8 +156,7 @@ eusoilvoc:AndosolsWRB a skos:Concept ;
             rdf:value "Andosols accommodate soils that develop in glass-rich volcanic ejecta under almost any climate (except under hyperarid climate conditions). However, Andosols may also develop in other silicate-rich materials under acid weathering in humid and perhumid climates. Many Andosols belong to Kuroboku (Japan), Andisols (United States of America), Andosols and Vitrisols (France), and Volcanic ash soils (Russia)."@en ] ;
     skos:exactMatch agrovoc:c_404 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Andosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Andosols"@en .
 
 eusoilvoc:AnionExchangeCapacity a skos:Concept ;
     skos:broader eusoilvoc:SoilChemicalCapacity ;
@@ -175,8 +172,7 @@ eusoilvoc:AnthrosolsWRB a skos:Concept ;
             rdf:value "Anthrosols comprise soils that have been modified profoundly through human activities, such as addition of organic or mineral material, charcoal or household wastes, or irrigation and cultivation. The group includes soils otherwise known as Plaggen soils, Paddy soils, Oasis soils, or Terra Preta de Indio. Many of them correspond to Highly cultivated soils and Anciently irrigated soils (Russia), Terrestrische anthropogene Böden (Germany), Anthroposols (Australia) and Anthrosols (China)."@en ] ;
     skos:exactMatch agrovoc:c_4515b13e ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Anthrosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Anthrosols"@en .
 
 eusoilvoc:Antimony a skos:Concept ;
     skos:broader eusoilvoc:SoilPollutants ;
@@ -198,8 +194,7 @@ eusoilvoc:ArenosolsWRB a skos:Concept ;
             rdf:value "Arenosols comprise deep sandy soils. This includes soils in residual sands after in situ weathering of usually quartz-rich sediments or rock, and soils in recently deposited sands such as dunes in deserts and beach lands. Corresponding soils in other classification systems include Psamments (United States of America), Sols minéraux bruts and Sols peu évolués (France), Arenic Rudosols/Tenosols (Australia), Psammozems (Russia) and Neossolos (Brazil)."@en ] ;
     skos:exactMatch agrovoc:c_601 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Arenosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Arenosols"@en .
 
 eusoilvoc:AridSoils a skos:Concept ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
@@ -297,8 +292,7 @@ eusoilvoc:CalcisolsWRB a skos:Concept ;
             rdf:value "Calcisols accommodate soils with substantial accumulation of secondary carbonates. Calcisols are widespread in arid and semi-arid environments, often associated with highly calcareous parent materials. Many Calcisols have formerly been called Desert soils. In the United States of America most of them belong to the Calcids, and in Australia to the Calcarosols. In the Soil Map of the World (FAO–UNESCO, 1971–1981) most of them belong to the Xerosols and to a lesser extent to the Yermosols."@en ] ;
     skos:exactMatch agrovoc:c_ea60e31f ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Calcisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Calcisols"@en .
 
 eusoilvoc:CalciticLimeAmendment a skos:Concept ;
     skos:broader eusoilvoc:LimingMaterials ;
@@ -314,8 +308,7 @@ eusoilvoc:CambisolsWRB a skos:Concept ;
             rdf:value "Cambisols combine soils with at least an incipient subsurface soil formation. Transformation of parent material is evident from structure formation and mostly brownish discoloration, increasing clay percentage, and/or carbonate removal. Other soil classification systems refer to many Cambisols as Braunerden and Terrae fuscae (Germany), Sols bruns (France), burozems (Russia) and Tenosols (Australia). The name Cambisols was coined for the Soil Map of the World (FAO–UNESCO, 1971–1981) and later adopted by Brazil (Cambissolos). In the United States of America they were formerly called Brown soils/Brown forest soils and are now named Inceptisols."@en ] ;
     skos:exactMatch agrovoc:c_1224 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Cambisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Cambisols"@en .
 
 eusoilvoc:ChalkSoils a skos:Concept ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
@@ -329,8 +322,7 @@ eusoilvoc:ChernozemsWRB a skos:Concept ;
             rdf:value "Chernozems accommodate soils with a thick blackish mineral surface layer that is rich in organic matter. The Russian soil scientist V.V. Dokuchaev coined the name Chernozem in 1883 to denote the typical soils of the tall-grass steppes in continental Russia. Many Chernozems correspond to Kalktschernoseme (Germany), Chernosols (France), Eluviated black soils (Canada) and Chernossolos (Brazil). In the United States of America they were formerly called Calcareous black soils and belong now to several Suborders (especially Udolls) of the Mollisols."@en ] ;
     skos:exactMatch agrovoc:c_1533 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Chernozems"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Chernozems"@en .
 
 eusoilvoc:Chromium a skos:Concept ;
     skos:broader eusoilvoc:SoilPollutants ;
@@ -401,8 +393,7 @@ eusoilvoc:CryosolsWRB a skos:Concept ;
             rdf:value "Cryosols comprise mineral soils formed in a permafrost environment. The subsurface layers (cryic horizon) are permanently frozen, and if present, water occurs in the form of ice. Cryogenic processes are the dominant soil-forming processes in most Cryosols. Cryosols are widely known as Permafrost soils, Cryomorphic soils or Polar desert soils. Other common names for many Cryosols are Gelisols (United States of America) and Cryozems (Russia)."@en ] ;
     skos:exactMatch agrovoc:c_829043c3 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Cryosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Cryosols"@en .
 
 eusoilvoc:DeepPloughing a skos:Concept ;
     skos:broader eusoilvoc:Ploughing ;
@@ -490,8 +481,7 @@ eusoilvoc:DurisolsWRB a skos:Concept ;
             rdf:value "Durisols are associated mainly with old surfaces in arid and semi-arid environments and accommodate shallow to moderately deep, moderately well- to well-drained soils that contain cemented secondary silica (SiO2) within 100 cm of the soil surface. Many Durisols are known as Hardpan soils or Duric Kandosols (Australia), Dorbank (South Africa), or Durids (United States of America). In the Soil Map of the World (FAO–UNESCO, 1971–1981) they are the Duripan phases of other soils, e.g. of Calcisols."@en ] ;
     skos:exactMatch agrovoc:c_51ec138f ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Durisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Durisols"@en .
 
 eusoilvoc:EHorizons a skos:Concept ;
     skos:broader eusoilvoc:SoilHorizons ;
@@ -548,8 +538,7 @@ eusoilvoc:FerralsolsWRB a skos:Concept ;
             rdf:value "Ferralsols represent the classical, deeply weathered, red or yellow soils of the humid tropics. These soils have diffuse horizon boundaries, a clay assemblage dominated by low-activity clays (mainly kaolinite) and a high content of sesquioxides. Local names usually refer to the colour of the soil. Many Ferralsols are known as Oxisols (United States of America), Latossolos (Brazil), Alítico, Ferrítico and Ferralítico (Cuba), Kandosols (Australia), Sols ferralitiques (France) and Ferralitic soils (Russia)."@en ] ;
     skos:exactMatch agrovoc:c_2858 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Ferralsols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Ferralsols"@en .
 
 eusoilvoc:FineSand skos:broader eusoilvoc:SandyTexture .
 
@@ -573,8 +562,7 @@ eusoilvoc:FluvisolsWRB a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:exactMatch agrovoc:c_3000 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Fluvisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Fluvisols"@en .
 
 eusoilvoc:ForestSoils a skos:Concept ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
@@ -626,8 +614,7 @@ eusoilvoc:GleysolsWRB a skos:Concept ;
             rdf:value "Gleysols comprise soils saturated with groundwater for long enough periods to develop reducing conditions resulting in gleyic properties, including underwater and tidal soils. This pattern is essentially made up of reddish, brownish or yellowish colours at aggregate surfaces and/or in the upper soil layers, in combination with greyish/bluish colours inside the aggregates and/or deeper in the soil. Many underwater soils have only the latter. Gleysols with a thionic horizon or hypersulfidic material (acid sulfate soils) are common. Redox processes may also be caused by upmoving gases, like CO2 or CH4. Common names for many Gleysols are Gley (former Soviet Union), Gleyzems (Russia), Gleye, Marschen, Watten and Unterwasserböden (Germany), Gleissolos (Brazil) and Hydrosols (Australia). In the United States of America many Gleysols belong to Aquic Suborders and Endoaquic Great Groups of various Orders (Aqualfs, Aquents, Aquepts, Aquolls, etc.) or to the Wassents."@en ] ;
     skos:exactMatch agrovoc:c_3276 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Gleysols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Gleysols"@en .
 
 eusoilvoc:GraniteSoils a skos:Concept ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
@@ -671,8 +658,7 @@ eusoilvoc:GreyzemsFAO a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:exactMatch agrovoc:c_3386 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "greyzems"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en .
+    skos:prefLabel "greyzems"@en .
 
 eusoilvoc:GullyControl a skos:Concept ;
     skos:broader eusoilvoc:ErosionControl ;
@@ -688,8 +674,7 @@ eusoilvoc:GypsisolsWRB a skos:Concept ;
             rdf:value "Gypsisols are soils with substantial accumulation of secondary gypsum (CaSO4·2H2O). These soils are found in the driest parts of the arid climate zone, which explains why leading soil classification systems labelled many of them Desert grey-brown soils (former Soviet Union). The Soil Map of the World (FAO–UNESCO, 1971–1981) accommodates them among Yermosols or Xerosols. In the United States of America most of them belong to the Gypsids."@en ] ;
     skos:exactMatch agrovoc:c_61704b51 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Gypsisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Gypsisols"@en .
 
 eusoilvoc:Halloysite a skos:Concept ;
     skos:broader eusoilvoc:SoilClayMineral ;
@@ -729,8 +714,7 @@ eusoilvoc:HistosolsWRB a skos:Concept ;
             rdf:value "Histosols comprise soils formed in organic material accumulating as groundwater peat (fen), rainwater peat (raised bog) or mangroves or without water saturation in cool mountain areas. They vary from soils developed in predominantly moss peat in arctic, subarctic and boreal regions, via moss peat (Sphagnum species), reeds/sedge peat (fen) and forest peat in temperate regions to mangrove peat and swamp forest peat in the humid tropics. Histosols are found at all altitudes, but the vast majority occurs in lowlands. Common names are Peat soils, Muck soils, Bog soils and Organic soils. Many Histosols belong to Moore, Felshumusböden and Skeletthumusböden (Germany), Organosols (Australia), Organossolos (Brazil), Peat soils (Russia), Organic order (Canada) and Histosols and Histels (United States of America)."@en ] ;
     skos:exactMatch agrovoc:c_3636 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Histosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Histosols"@en .
 
 eusoilvoc:HorticulturalSoils a skos:Concept ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
@@ -824,8 +808,7 @@ eusoilvoc:KastanozemsWRB a skos:Concept ;
             rdf:value "Kastanozems accommodate dry grassland soils, among them the soils of the short-grass steppe belt, south of the Eurasian tall-grass steppe belt with Chernozems. Kastanozems have a similar profile to that of Chernozems but the humus-rich surface horizon is thinner and not as dark as that of the Chernozems, and they show more prominent accumulation of secondary carbonates. The chestnut-brown colour of the surface soil is reflected in the name Kastanozem. Common names for many Kastanozems are (Dark) Chestnut soils (Russia), Kalktschernoseme (Germany), (Dark) Brown soils (Canada), Ustolls and Xerolls (United States of America) and Chernossolos (Brazil)."@en ] ;
     skos:exactMatch agrovoc:c_4079 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Kastanozems"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Kastanozems"@en .
 
 eusoilvoc:SoilReclamation a skos:Concept ;
     skos:broader eusoilvoc:SoilManagement ;
@@ -888,8 +871,7 @@ eusoilvoc:LeptosolsWRB a skos:Concept ;
             rdf:value "Leptosols comprise very thin soils over continuous rock and soils that are extremely rich in coarse fragments. Leptosols are particularly common in mountainous regions. Leptosols include Lithosols of the Soil Map of the World (FAO–UNESCO, 1971–1981), Lithic subgroups of the Entisol Order (United States of America), Leptic Rudosols or Tenosols (Australia), and Petrozems and Litozems (Russia). In many national systems and in the Soil Map of the World, Leptosols on calcareous rocks belong to Rendzinas and those on other rocks to Rankers. Continuous rock at the surface is considered nonsoil in many soil classification systems."@en ] ;
     skos:exactMatch agrovoc:c_da0af025 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Leptosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Leptosols"@en .
 
 eusoilvoc:LimeAmendment a skos:Concept ;
     skos:broader eusoilvoc:LimingMaterials ;
@@ -909,8 +891,7 @@ eusoilvoc:LithosolsFAO a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:exactMatch agrovoc:c_4389 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "lithosols"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en .
+    skos:prefLabel "lithosols"@en .
 
 eusoilvoc:LiveMulches a skos:Concept ;
     skos:broader eusoilvoc:OrganicMulches ;
@@ -924,8 +905,7 @@ eusoilvoc:LixisolsWRB a skos:Concept ;
             rdf:value "Lixisols have a higher clay content in the subsoil than in the topsoil, as a result of pedogenetic processes (especially clay migration) leading to an argic subsoil horizon. Lixisols have low-activity clays in the argic horizon and a high base saturation in the 50–100 cm depth. Many Lixisols are included in Red yellow podzolic soils (e.g. Indonesia), Chromosols (Australia), Argissolos (Brazil), Sols ferralitiques faiblement desaturés appauvris (France) and Alfisols with low-activity clays (United States of America)."@en ] ;
     skos:exactMatch agrovoc:c_7283bd0a ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Lixisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Lixisols"@en .
 
 eusoilvoc:LoamSoils a skos:Concept ;
     skos:broader eusoilvoc:TexturalSoilTypes ;
@@ -953,8 +933,7 @@ eusoilvoc:LuvisolsWRB a skos:Concept ;
             rdf:value "Luvisols have a higher clay content in the subsoil than in the topsoil, as a result of pedogenetic processes (especially clay migration) leading to an argic subsoil horizon. Luvisols have high-activity clays throughout the argic horizon and a high base saturation in the 50–100 cm depth. Many Luvisols are known as Texturally-differentiated soils and part of Metamorphic soils (Russia), Sols lessivés (France), Parabraunerden (Germany), Chromosols (Australia) and Luvissolos (Brazil). In the United States of America, they were formerly named Grey-brown podzolic soils and belong now to the Alfisols with high-activity clays."@en ] ;
     skos:exactMatch agrovoc:c_4470 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Luvisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Luvisols"@en .
 
 eusoilvoc:MainFieldPreparation a skos:Concept ;
     skos:broader eusoilvoc:FieldPreparation ;
@@ -1091,8 +1070,7 @@ eusoilvoc:NitosolsWRB a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:closeMatch agrovoc:c_5185 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Nitosols"@en ;
-    skos:scopeNote "AGROVOC places this source under WRB soil types but mixes the preferred label Nitosols with a Nitisols definition. Retained as a WRB-scoped source concept with closeMatch; the mixed definition is omitted. It is not asserted equivalent to a historical FAO Nitosols group."@en .
+    skos:prefLabel "Nitosols"@en .
 
 eusoilvoc:NoTill skos:broader eusoilvoc:ConservationTillage ;
     skos:closeMatch agrovoc:c_8511 .
@@ -1214,8 +1192,7 @@ eusoilvoc:PhaeozemsWRB a skos:Concept ;
             rdf:value "Phaeozems accommodate soils of relatively wet grassland and forest regions in moderately continental climates. Phaeozems are much like Chernozems and Kastanozems but are leached more intensively. Consequently, they have dark, humusrich surface horizons that, in comparison with Chernozems and Kastanozems, are less rich in bases. Phaeozems are either free of secondary carbonates or have them only at greater depths. They all have a high base saturation in the upper metre of the soil. Commonly used names for many Phaeozems are Brunizems (Argentina and France), Dark grey forest soils and Leached and Podzolized chernozems (former Soviet Union), Tschernoseme (Germany) and Chernossolos (Brazil). In the Soil Map of the World (FAO–UNESCO, 1971–1981) they belong to the Phaeozems and partly to the Greyzems. Dusky-red prairie soils was their name in older systems of the United States of America, where most of them now belong to Udolls and Albolls."@en ] ;
     skos:exactMatch agrovoc:c_5755 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Phaeozems"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Phaeozems"@en .
 
 eusoilvoc:PhosphorusTotalElements skos:broader eusoilvoc:PhosphorusContent ;
     skos:closeMatch agrovoc:c_ac4b3c22 .
@@ -1242,8 +1219,7 @@ eusoilvoc:PlanosolsWRB a skos:Concept ;
             rdf:value "Planosols are soils with a mostly light-coloured horizon that shows signs of periodic water stagnation and that abruptly overlies a dense, slowly permeable subsoil with significantly more clay. The name Planosols was coined in 1938 in the United States of America, where now most of them are included in the Great Groups of the Albaqualfs, Albaquults and Argialbolls. The name has been adopted in Brazil (Planossolos)."@en ] ;
     skos:exactMatch agrovoc:c_5953 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Planosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Planosols"@en .
 
 eusoilvoc:PlantAvailableBoron a skos:Concept ;
     skos:broader eusoilvoc:BoronContent ;
@@ -1281,8 +1257,7 @@ eusoilvoc:PlinthosolsWRB a skos:Concept ;
             rdf:value "Plinthosols are soils with plinthite, petroplinthite or pisoliths. Plinthite is a Fe-rich (in some cases also Mn-rich), humus-poor mixture of kaolinitic clay (and other products of strong weathering such as gibbsite) with quartz and other constituents. It usually changes irreversibly to a layer with hard concretions or nodules or to a hardpan on exposure to repeated wetting and drying. Petroplinthite is a continuous or fractured sheet of connected, strongly cemented to indurated concretions or nodules or concentrations in platy, polygonal or reticulate patterns. Pisoliths are discrete, strongly cemented to indurated concretions or nodules. Both petroplinthite and pisoliths develop from plinthite by hardening. Traditional names are Groundwater Laterite Soils and Perched Water Laterite Soils. Many of these soils are known as Plintossolos (Brazil), Sols gris latéritiques (France), Petroferric Kandosols (Australia) and Plinthaquox, Plinthaqualfs, Plinthoxeralfs, Plinthustalfs, Plinthaquults, Plinthohumults, Plinthudults and Plinthustults (United States of America)."@en ] ;
     skos:exactMatch agrovoc:c_309e7c25 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Plinthosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Plinthosols"@en .
 
 eusoilvoc:PodzolsWRB a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
@@ -1290,15 +1265,13 @@ eusoilvoc:PodzolsWRB a skos:Concept ;
             rdf:value "Podzols have an illuvial horizon with accumulation of black organic matter and/or reddish Fe oxides. This illuvial horizon is typically overlain by an ash-grey eluvial horizon. Podzols occur in humid areas in the boreal and temperate zones and locally also in the tropics. The name Podzol is used in most national soil classification systems; other names for many of these soils are Spodosols (China and United States of America), Espodossolos (Brazil) and Podosols (Australia)."@en ] ;
     skos:exactMatch agrovoc:c_6044 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Podzols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Podzols"@en .
 
 eusoilvoc:PodzoluvisolsFAO a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:exactMatch agrovoc:c_6045 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "podzoluvisols"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en .
+    skos:prefLabel "podzoluvisols"@en .
 
 eusoilvoc:PolderSoils a skos:Concept ;
     skos:broader eusoilvoc:AnthropogenicSoils ;
@@ -1366,8 +1339,7 @@ eusoilvoc:RankersFAO a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:exactMatch agrovoc:c_6450 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "rankers"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en .
+    skos:prefLabel "rankers"@en .
 
 eusoilvoc:ReclaimedSoils a skos:Concept ;
     skos:broader eusoilvoc:AnthropogenicSoils ;
@@ -1381,15 +1353,13 @@ eusoilvoc:RegosolsWRB a skos:Concept ;
             rdf:value "Regosols are very weakly developed mineral soils in unconsolidated materials that do not have a mollic or umbric horizon, are not very thin or very rich in coarse fragments (Leptosols), not sandy (Arenosols), and not with fluvic materials (Fluvisols). Regosols are extensive in eroding lands and accumulation zones, particularly in arid and semiarid areas and in mountainous terrain. Many Regosols correlate with soil taxa that are marked by incipient soil formation such as Entisols (United States of America), Rudosols (Australia), Regosole (Germany), Sols peu évolués régosoliques d’érosion or even Sols minéraux bruts d’apport éolien ou volcanique (France), Pelozems (Russia) and Neossolos (Brazil)."@en ] ;
     skos:exactMatch agrovoc:c_6492 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Regosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Regosols"@en .
 
 eusoilvoc:RendzinasFAO a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:closeMatch agrovoc:c_6501 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "rendzinas"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en .
+    skos:prefLabel "rendzinas"@en .
 
 eusoilvoc:RetisolsWRB a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
@@ -1397,8 +1367,7 @@ eusoilvoc:RetisolsWRB a skos:Concept ;
             rdf:value "Retisols have a clay illuviation horizon with an interfingering of bleached coarsertextured soil material into the illuviation horizon forming a net-like pattern. The interfingering bleached coarser-textured material is characterized by a partial removal of clay and free iron oxides. There may be also bleached coarser-textured material falling from the overlying horizon into cracks in the illuvial horizon. Many Retisols correlate with the Podzoluvisols of the Soil Map of the World (FAO–UNESCO, 1971–1981). In other systems they are called Soddy-podzolic or Sodzolic soils (Russia), Fahlerden (Germany), and Glossaqualfs, Glossocryalfs and Glossudalfs (United States of America). Albeluvisols of the former editions of WRB are included in the concept of Retisols."@en ] ;
     skos:exactMatch agrovoc:c_ff831af0 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Retisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Retisols"@en .
 
 eusoilvoc:RevisedUniversalSoilLossEquation a skos:Concept ;
     skos:broader eusoilvoc:SoilErosionModels ;
@@ -1973,8 +1942,7 @@ eusoilvoc:SolonetzWRB a skos:Concept ;
             rdf:value "Solonetz have a dense, strongly structured, clayey subsurface horizon that has a high proportion of adsorbed Na and in some cases also Mg ions. Solonetz that contain free soda (Na2CO3) are strongly alkaline (field pH > 8.5). Common international names are Alkali soils and Sodic soils. In national soil classification systems many Solonetz correlate with Sodosols (Australia), the Solonetzic Order (Canada) and Solonetz (Russia). In the United States of America, they belong to the Natric Great Groups of several Orders."@en ] ;
     skos:exactMatch agrovoc:c_7232 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Solonetz"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Solonetz"@en .
 
 eusoilvoc:StagnosolsWRB a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
@@ -1982,8 +1950,7 @@ eusoilvoc:StagnosolsWRB a skos:Concept ;
             rdf:value "Stagnosols are soils with perched water. They show periodically reducing conditions resulting in stagnic properties. Stagnosols have a mottled layer (with oxides predominantly inside the aggregates) with or without an overlying layer with albic material. Redox processes may also be caused by intruding liquids other than water (e.g. gasoline). A common name in many national soil classification systems for most Stagnosols is Pseudogley. In the United States of America many Stagnosols belong to Aquic Suborders and Epiaquic Great Groups of various Orders (Aqualfs, Aquults, Aquents, Aquepts and Aquolls)."@en ] ;
     skos:exactMatch agrovoc:c_d9028da2 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Stagnosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Stagnosols"@en .
 
 eusoilvoc:StoneClearing a skos:Concept ;
     skos:broader eusoilvoc:SoilTillage ;
@@ -2059,8 +2026,7 @@ eusoilvoc:TechnosolsWRB a skos:Concept ;
             rdf:value "Technosols combine soils whose properties and pedogenesis are dominated by their technical origin. They contain a significant amount of artefacts (something in the soil recognizably made or strongly altered by humans or extracted from greater depths) or are sealed by technic hard material (hard material created by humans, having properties unlike natural rock) or contain a geomembrane. They include soils from wastes (landfills, sludge, cinders, mine spoils and ashes), pavements with their underlying unconsolidated materials, soils with geomembranes and constructed soils. Technosols are often referred to as Urban or Mine soils. They are recognized in the Russian soil classification system as Technogenic superficial formations and in the Australian soil classification, they are included in Anthroposols."@en ] ;
     skos:exactMatch agrovoc:c_3a0750ba ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Technosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Technosols"@en .
 
 eusoilvoc:TropicalSoils a skos:Concept ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
@@ -2074,8 +2040,7 @@ eusoilvoc:UmbrisolsWRB a skos:Concept ;
             rdf:value "Umbrisols have a significant accumulation of organic matter in the mineral surface soil and a low base saturation somewhere within the first metre (in most cases in the mineral surface soil). Umbrisols are the logical counterpart of soils with a chernic or mollic horizon and a high base saturation throughout (Chernozems, Kastanozems and Phaeozems). Many of these soils are classified in other systems as several Great Groups of Entisols and Inceptisols (United States of America), Sombric Brunisols and Humic Regosols (France), Mountain-meadow soils (former USSR) and Mucky-dark-humus soils (Russia), Brown podzolic soils (e.g. Indonesia) and Umbrisols (Romania). In the Soil Map of the World (FAO–UNESCO, 1971–1981) most of them belong to Humic Cambisols and Umbric Regosols."@en ] ;
     skos:exactMatch agrovoc:c_9e95a849 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Umbrisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Umbrisols"@en .
 
 eusoilvoc:Underdrainage a skos:Concept ;
     skos:broader eusoilvoc:SoilDrainage ;
@@ -2115,8 +2080,7 @@ eusoilvoc:VertisolsWRB a skos:Concept ;
             rdf:value "Vertisols are heavy clay soils with a high proportion of swelling clays. These soils form deep wide cracks from the surface downward when they dry out, which happens in most years. Common local names for Vertisols are Black cotton soils and Regur (India), Black turf soils (South Africa) or Margalites (Indonesia). In national soil classification systems they are called Slitozems or Dark vertic soils (Russia), Vertosols (Australia), Vertissolos (Brazil) and Vertisols (United States of America)."@en ] ;
     skos:exactMatch agrovoc:c_8199 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Vertisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Vertisols"@en .
 
 eusoilvoc:VirginSoils a skos:Concept ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
@@ -2174,15 +2138,13 @@ eusoilvoc:XerosolsFAO a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:exactMatch agrovoc:c_8463 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "xerosols"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en .
+    skos:prefLabel "xerosols"@en .
 
 eusoilvoc:YermosolsFAO a skos:Concept ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:exactMatch agrovoc:c_8484 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "yermosols"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en .
+    skos:prefLabel "yermosols"@en .
 
 eusoilvoc:Bioturbation a skos:Concept ;
     skos:broader eusoilvoc:Pedoturbation,
@@ -2404,8 +2366,7 @@ eusoilvoc:SoilInvestigations a skos:Concept ;
     skos:exactMatch agrovoc:c_8595c402 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilExposureTypes ;
-    skos:prefLabel "soil investigations"@en ;
-    skos:scopeNote "Field studies of soil, following AGROVOC scope."@en .
+    skos:prefLabel "soil investigations"@en .
 
 eusoilvoc:SoilMechanics a skos:Concept ;
     skos:broader eusoilvoc:SoilSciences ;
@@ -2479,8 +2440,7 @@ eusoilvoc:SolonchaksWRB a skos:Concept ;
             rdf:value "Solonchaks have a high concentration of soluble salts at some time in the year. Solonchaks are largely confined to the arid and semi-arid climate zones and to coastal regions in all climates. Common international names are Saline soils and Salt-affected soils. In national soil classification systems many Solonchaks belong to Halomorphic soils (Russia), Halosols (China) and Salids (United States of America)."@en ] ;
     skos:exactMatch agrovoc:c_7231 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Solonchaks"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Solonchaks"@en .
 
 eusoilvoc:SpodicHorizons a skos:Concept ;
     skos:broader eusoilvoc:DiagnosticHorizons,
@@ -2566,8 +2526,7 @@ eusoilvoc:GeneticSoilTypes a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:HydromorphicSoils,
         eusoilvoc:SoilClassification ;
-    skos:prefLabel "genetic soil types"@en ;
-    skos:scopeNote "AGROVOC has a legacy FAO-UNESCO scope note on this source but mixes FAO, USDA and WRB descendants. SoilVoc uses it as a genetic-soil-types organizer and keeps every formal system in a separate branch."@en .
+    skos:prefLabel "genetic soil types"@en .
 
 eusoilvoc:InorganicNitrogen a skos:Concept ;
     skos:broader eusoilvoc:Nitrogen ;
