@@ -1262,12 +1262,12 @@ eusoilvoc:NitrogenTotal a skos:Concept ;
         eusoilvoc:nitrogenTotalProcedure-TotalN_tn06,
         eusoilvoc:nitrogenTotalProcedure-TotalN_tn08 .
 
-eusoilvoc:PeatDecompostion a skos:Concept ;
+eusoilvoc:PeatDecomposition a skos:Concept ;
     skos:broader eusoilvoc:Peat ;
     skos:definition [ dcterms:source glosis_lh:peatDecompostionProperty ;
             rdf:value "The Peat Decomposition evaluates the degree of decomposition in organic soils or peat. Categories include fibric (least decomposed), hemic (moderately decomposed), and sapric (highly decomposed), which influence soil fertility and drainage. Source: Soil Survey Manual (USDA, 2017)."@en ] ;
     skos:exactMatch glosis_lh:peatDecompostionProperty ;
-    skos:prefLabel "peat decompostion"@en .
+    skos:prefLabel "peat decomposition"@en .
 
 eusoilvoc:PeatDrainage a skos:Concept ;
     skos:broader eusoilvoc:Peat ;
@@ -3021,7 +3021,7 @@ eusoilvoc:Molybdenum a skos:Concept ;
 
 eusoilvoc:Peat a skos:Concept ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
-    skos:narrower eusoilvoc:PeatDecompostion,
+    skos:narrower eusoilvoc:PeatDecomposition,
         eusoilvoc:PeatDrainage,
         eusoilvoc:PeatVolume ;
     skos:prefLabel "peat"@en .

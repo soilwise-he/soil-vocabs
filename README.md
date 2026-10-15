@@ -8,7 +8,6 @@ This repository aims to facilitate co-creation of a skos vocabulary around `soil
 - Tooling to [traverse to and from RDF](#traverse-tooling) (ttl) to CSV. CSV facilitates reviews by content specialists. While the RDF can be read by engines.
 - A [REST API](#rest-api) to interact with the vocabulary (read only).
 - A human friendly [web interface](#web-interface) to browse through the vocabulary. This website is available at [Soil-Vocabs Viewer](https://soilwise-he.github.io/soil-vocabs/), which is also linked to [w3id.org/EUSoilVoc](https://w3id.org/EUSoilVoc)
-- A [traversing experiment](#soil-health-benchmarks) on the existing soil health benchmarks glossary 
 
 ## How to contribute
 The current process for uploading new properties and procedures is through a [Github issue](https://github.com/soilwise-he/soil-vocabs/issues/new/choose). The workflow is displayed as below:
@@ -55,11 +54,9 @@ A REST API for searching concepts, getting concept details and getting procedure
 A browser-based viewer to explore concepts in hierarchies. Updates to the vocabulary are automatically reflected on the web interface using a github action.
 Available at [soil-vocabs](https://w3id.org/eusoilvoc).
 
-## Soil health Benchmarks
+## Source vocabularies
 
-This repository includes an effort to convert the existing [Benchmarks glossary](https://soilhealthbenchmarks.eu/glossary/) to RDF.
-
-Visit the [soil_health_benchmarks](./soil_health_benchmarks) folder for glossary-to-SKOS conversion and interlinking utilities.
+Source vocabulary data is stored under [ontovocabs](./ontovocabs). Every source is retained as a SKOS Turtle file and a derived CSV label index, with columns `concept`, `prefLabel`, and `altLabels`. Multiple alternative labels are separated by semicolons; definitions, mappings, and relationships remain in the Turtle file.
 
 ## Installation instructions
 
