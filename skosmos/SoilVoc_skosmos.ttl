@@ -1842,7 +1842,8 @@ eusoilvoc:DrainageToGroundwater a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhenomena .
 
 eusoilvoc:EdaphicFactors a skos:Concept ;
-    skos:altLabel "soil factors"@en ;
+    skos:altLabel "edaphic factor"@en,
+        "soil factors"@en ;
     skos:broader eusoilvoc:SoilProperties ;
     skos:broaderTransitive eusoilvoc:SoilProperties ;
     skos:definition [ dcterms:source agrovoc:c_15617 ;
@@ -2010,6 +2011,7 @@ eusoilvoc:Lithology a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:Geology .
 
 eusoilvoc:LossesFromSoil a skos:Concept ;
+    skos:altLabel "loss from soil"@en ;
     skos:broader eusoilvoc:SoilProcesses ;
     skos:broaderTransitive eusoilvoc:SoilProcesses ;
     skos:exactMatch agrovoc:c_36778,
@@ -2157,14 +2159,6 @@ eusoilvoc:SOCLoss a skos:Concept ;
     skos:closeMatch she:SOCLosses ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil organic carbon loss"@en ;
-    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilThreats .
-
-eusoilvoc:Salinisation a skos:Concept ;
-    skos:broader eusoilvoc:SoilThreats ;
-    skos:broaderTransitive eusoilvoc:SoilThreats ;
-    skos:closeMatch she:SoilSalinisation ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "salinisation"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilThreats .
 
 eusoilvoc:SalinityControl a skos:Concept ;
@@ -2317,6 +2311,7 @@ eusoilvoc:SoilHydrophobicity a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhenomena .
 
 eusoilvoc:SoilLandscapes a skos:Concept ;
+    skos:altLabel "soil landscape"@en ;
     skos:broader eusoilvoc:SoilDescription ;
     skos:broaderTransitive eusoilvoc:SoilDescription ;
     skos:definition [ dcterms:source agrovoc:c_714b2285 ;
@@ -2406,7 +2401,23 @@ eusoilvoc:SoilPlantAtmosphereContinuum a skos:Concept ;
     skos:prefLabel "soil–plant–atmosphere continuum"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhenomena .
 
+eusoilvoc:SoilQuality a skos:Concept ;
+    skos:broader eusoilvoc:SoilProperties ;
+    skos:broaderTransitive eusoilvoc:SoilProperties ;
+    skos:definition [ dcterms:source agrovoc:c_a9645d28 ;
+            rdf:value "Ability of soil to provide ecosystem services through its capacities to perform soil functions such as biodiversity, productivity, water filtering and buffering, and nutrient cycling."@en ] ;
+    skos:exactMatch agrovoc:c_a9645d28,
+        inrae:c_661,
+        gemet:7884,
+        iso11074:3.466,
+        nalt:35826,
+        she:SoilQuality ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "soil quality"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilProperties .
+
 eusoilvoc:SoilResources a skos:Concept ;
+    skos:altLabel "soil resource"@en ;
     skos:broader eusoilvoc:Soil ;
     skos:broaderTransitive eusoilvoc:Soil ;
     skos:exactMatch agrovoc:c_7187,
@@ -2416,6 +2427,7 @@ eusoilvoc:SoilResources a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:Soil .
 
 eusoilvoc:SoilScientists a skos:Concept ;
+    skos:altLabel "soil scientist"@en ;
     skos:broader eusoilvoc:SoilSciences ;
     skos:broaderTransitive eusoilvoc:SoilSciences ;
     skos:exactMatch agrovoc:c_7189 ;
@@ -2434,6 +2446,7 @@ eusoilvoc:SoilSecurity a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilProperties .
 
 eusoilvoc:SoilSequences a skos:Concept ;
+    skos:altLabel "soil sequence"@en ;
     skos:broader eusoilvoc:SoilDescription ;
     skos:broaderTransitive eusoilvoc:SoilDescription ;
     skos:exactMatch agrovoc:c_7191,
@@ -2877,6 +2890,20 @@ eusoilvoc:AirQuality a skos:Concept ;
     skos:prefLabel "air quality"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilEnvironmentalFunctions .
 
+eusoilvoc:Alluvium a skos:Concept ;
+    skos:altLabel "alluvial deposits"@en ;
+    skos:broader eusoilvoc:ParentMaterial ;
+    skos:broaderTransitive eusoilvoc:Geology,
+        eusoilvoc:ParentMaterial ;
+    skos:definition [ dcterms:source agrovoc:c_25347 ;
+            rdf:value "Deposit made by a river or running water, often very productive agricultural soil."@en ] ;
+    skos:exactMatch agrovoc:c_25347,
+        inrae:c_11416,
+        nalt:6750 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "alluvium"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:ParentMaterial .
+
 eusoilvoc:BiologicalAbundance a skos:Concept,
         sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilBiologicalProperties ;
@@ -3030,6 +3057,7 @@ eusoilvoc:EnvironmentalFactors a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:NonsoilIndicators .
 
 eusoilvoc:EvaporationSuppressants a skos:Concept ;
+    skos:altLabel "evaporation suppressant"@en ;
     skos:broader eusoilvoc:SoilAmendments ;
     skos:broaderTransitive eusoilvoc:SoilAmendments,
         eusoilvoc:SoilManagement ;
@@ -3222,6 +3250,7 @@ eusoilvoc:NutrientMobilisationCapacity a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilFunctionIndicators .
 
 eusoilvoc:OrganicAmendments a skos:Concept ;
+    skos:altLabel "organic amendment"@en ;
     skos:broader eusoilvoc:SoilAmendments ;
     skos:broaderTransitive eusoilvoc:SoilAmendments,
         eusoilvoc:SoilManagement ;
@@ -3583,6 +3612,7 @@ eusoilvoc:SoilChemicalTransport a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilAgriculturalFunctions .
 
 eusoilvoc:SoilClods a skos:Concept ;
+    skos:altLabel "soil clod"@en ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:broaderTransitive eusoilvoc:SoilComponents,
         eusoilvoc:SoilSubstance ;
@@ -3593,6 +3623,7 @@ eusoilvoc:SoilClods a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilComponents .
 
 eusoilvoc:SoilConditioners a skos:Concept ;
+    skos:altLabel "soil conditioner"@en ;
     skos:broader eusoilvoc:SoilAmendments ;
     skos:broaderTransitive eusoilvoc:SoilAmendments,
         eusoilvoc:SoilManagement ;
@@ -3718,6 +3749,7 @@ eusoilvoc:SoilInjection a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilTreatment .
 
 eusoilvoc:SoilInjectors a skos:Concept ;
+    skos:altLabel "soil injector"@en ;
     skos:broader eusoilvoc:SoilManagementEquipment ;
     skos:broaderTransitive eusoilvoc:SoilManagement,
         eusoilvoc:SoilManagementEquipment ;
@@ -3746,6 +3778,7 @@ eusoilvoc:SoilLocation a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilSpatialProperties .
 
 eusoilvoc:SoilMaps a skos:Concept ;
+    skos:altLabel "soil map"@en ;
     skos:broader eusoilvoc:SoilInformation ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilInformation ;
@@ -3757,6 +3790,7 @@ eusoilvoc:SoilMaps a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilInformation .
 
 eusoilvoc:SoilMicromorphologicalFeatures a skos:Concept ;
+    skos:altLabel "soil micromorphological feature"@en ;
     skos:broader eusoilvoc:SoilMorphologicalFeatures ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilMorphologicalFeatures ;
@@ -3841,6 +3875,7 @@ eusoilvoc:SoilPLoss a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilNutrientLoss .
 
 eusoilvoc:SoilProfiles a skos:Concept ;
+    skos:altLabel "soil profile"@en ;
     skos:broader eusoilvoc:SoilMorphologicalFeatures ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilMorphologicalFeatures ;
@@ -3853,6 +3888,7 @@ eusoilvoc:SoilProfiles a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilMorphologicalFeatures .
 
 eusoilvoc:SoilReclamationPlants a skos:Concept ;
+    skos:altLabel "soil reclamation plant"@en ;
     skos:broader eusoilvoc:SoilReclamation ;
     skos:broaderTransitive eusoilvoc:SoilManagement,
         eusoilvoc:SoilReclamation ;
@@ -3916,6 +3952,7 @@ eusoilvoc:SoilSedimentation a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhysicalProcesses .
 
 eusoilvoc:SoilSeedBanks a skos:Concept ;
+    skos:altLabel "soil seed bank"@en ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:broaderTransitive eusoilvoc:SoilComponents,
         eusoilvoc:SoilSubstance ;
@@ -3980,6 +4017,7 @@ eusoilvoc:SoilSurfaceAge a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilAge .
 
 eusoilvoc:SoilSurveyGuidelines a skos:Concept ;
+    skos:altLabel "soil survey guideline"@en ;
     skos:broader eusoilvoc:SoilSurveys ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilSurveys ;
@@ -4097,6 +4135,7 @@ eusoilvoc:WeatherPast a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:Weather .
 
 eusoilvoc:WheelTracks a skos:Concept ;
+    skos:altLabel "wheel track"@en ;
     skos:broader eusoilvoc:SoilMorphologicalFeatures ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilMorphologicalFeatures ;
@@ -4109,6 +4148,7 @@ eusoilvoc:WheelTracks a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilMorphologicalFeatures .
 
 eusoilvoc:AHorizons a skos:Concept ;
+    skos:altLabel "A horizon"@en ;
     skos:broader eusoilvoc:SoilHorizons ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilHorizons,
@@ -4176,6 +4216,7 @@ eusoilvoc:Arsenic a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPollutants .
 
 eusoilvoc:BHorizons a skos:Concept ;
+    skos:altLabel "B horizon"@en ;
     skos:broader eusoilvoc:SoilHorizons ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilHorizons,
@@ -4189,6 +4230,7 @@ eusoilvoc:BHorizons a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilHorizons .
 
 eusoilvoc:CHorizons a skos:Concept ;
+    skos:altLabel "C horizon"@en ;
     skos:broader eusoilvoc:SoilHorizons ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilHorizons,
@@ -4303,6 +4345,7 @@ eusoilvoc:DispersionRatio a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilStructureIndirectIndex .
 
 eusoilvoc:EHorizons a skos:Concept ;
+    skos:altLabel "E horizon"@en ;
     skos:broader eusoilvoc:SoilHorizons ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilHorizons,
@@ -4328,6 +4371,7 @@ eusoilvoc:Emissions a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:ExternalFactors .
 
 eusoilvoc:ErosionControlPlants a skos:Concept ;
+    skos:altLabel "erosion control plant"@en ;
     skos:broader eusoilvoc:ErosionControl ;
     skos:broaderTransitive eusoilvoc:ErosionControl,
         eusoilvoc:SoilConservation,
@@ -4445,6 +4489,7 @@ eusoilvoc:Hail a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:Precipitation .
 
 eusoilvoc:Hardpans a skos:Concept ;
+    skos:altLabel "hardpan"@en ;
     skos:broader eusoilvoc:SoilHorizons ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilHorizons,
@@ -4645,6 +4690,7 @@ eusoilvoc:ModulusOfRupture a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilStrengthIndex .
 
 eusoilvoc:MudFlows a skos:Concept ;
+    skos:altLabel "mud flow"@en ;
     skos:broader eusoilvoc:SoilMovement ;
     skos:broaderTransitive eusoilvoc:SoilMovement,
         eusoilvoc:SoilPhysicalProcesses,
@@ -4696,6 +4742,7 @@ eusoilvoc:NurseryBedPreparation a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:FieldPreparation .
 
 eusoilvoc:OrganicHorizons a skos:Concept ;
+    skos:altLabel "organic horizon"@en ;
     skos:broader eusoilvoc:SoilHorizons ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilHorizons,
@@ -4733,6 +4780,7 @@ eusoilvoc:PercentWaterStableAggregation a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilAggregationIndex .
 
 eusoilvoc:PerfluoroalkylAcids a skos:Concept ;
+    skos:altLabel "perfluoroalkyl acid"@en ;
     skos:broader eusoilvoc:SoilPollutants ;
     skos:broaderTransitive eusoilvoc:SoilPollutants,
         eusoilvoc:SoilPollution,
@@ -4759,6 +4807,7 @@ eusoilvoc:PlantAvailableWater a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilWater .
 
 eusoilvoc:PolychlorinatedBiphenyls a skos:Concept ;
+    skos:altLabel "polychlorinated biphenyl"@en ;
     skos:broader eusoilvoc:SoilPollutants ;
     skos:broaderTransitive eusoilvoc:SoilPollutants,
         eusoilvoc:SoilPollution,
@@ -4773,6 +4822,7 @@ eusoilvoc:PolychlorinatedBiphenyls a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPollutants .
 
 eusoilvoc:PolycyclicAromaticHydrocarbons a skos:Concept ;
+    skos:altLabel "polycyclic aromatic hydrocarbon"@en ;
     skos:broader eusoilvoc:SoilPollutants ;
     skos:broaderTransitive eusoilvoc:SoilPollutants,
         eusoilvoc:SoilPollution,
@@ -4959,6 +5009,18 @@ eusoilvoc:SoilAccumulation a skos:Concept ;
     skos:prefLabel "soil accumulation"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilFormation .
 
+eusoilvoc:SoilAdhesion a skos:Concept ;
+    skos:broader eusoilvoc:SoilPhysicalProperties ;
+    skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
+        eusoilvoc:SoilPhysicalProperties,
+        eusoilvoc:SoilProperties ;
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The attraction of water to soil solids, through which water molecules adhere to soil particles."@en ] ;
+    skos:exactMatch spp:SoilAdhesion ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "soil adhesion"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhysicalProperties .
+
 eusoilvoc:SoilAirDiffusionCoefficient a skos:Concept ;
     skos:broader eusoilvoc:SoilAerationIndex ;
     skos:broaderTransitive eusoilvoc:SoilAerationIndex,
@@ -4986,6 +5048,7 @@ eusoilvoc:SoilAirExchange a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilAirPhysicalProcesses .
 
 eusoilvoc:SoilAlgae a skos:Concept ;
+    skos:altLabel "soil alga"@en ;
     skos:broader eusoilvoc:SoilMicroorganisms ;
     skos:broaderTransitive eusoilvoc:SoilMicroorganisms,
         eusoilvoc:SoilOrganisms,
@@ -4998,6 +5061,7 @@ eusoilvoc:SoilAlgae a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilMicroorganisms .
 
 eusoilvoc:SoilBorneFungi a skos:Concept ;
+    skos:altLabel "soil-borne fungus"@en ;
     skos:broader eusoilvoc:SoilBorneOrganisms ;
     skos:broaderTransitive eusoilvoc:SoilBorneOrganisms,
         eusoilvoc:SoilOrganisms,
@@ -5163,6 +5227,7 @@ eusoilvoc:SoilErodibility a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhysicalProperties .
 
 eusoilvoc:SoilExposureTypes a skos:Concept ;
+    skos:altLabel "soil exposure type"@en ;
     skos:broader eusoilvoc:SoilInvestigations ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilInvestigations,
@@ -5207,6 +5272,7 @@ eusoilvoc:SoilFreezing a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilWaterPhysicalProcesses .
 
 eusoilvoc:SoilFungi a skos:Concept ;
+    skos:altLabel "soil fungus"@en ;
     skos:broader eusoilvoc:SoilFlora ;
     skos:broaderTransitive eusoilvoc:SoilFlora,
         eusoilvoc:SoilOrganisms,
@@ -5746,7 +5812,6 @@ eusoilvoc:Solifluction a skos:Concept ;
 
 eusoilvoc:Stickiness a skos:Concept,
         sosa:ObservableProperty ;
-    sio:equivalentTo eusoilvoc:SoilAdhesion ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -5875,6 +5940,7 @@ eusoilvoc:AgriculturalLime a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:LimingMaterials .
 
 eusoilvoc:AluminiumMulches a skos:Concept ;
+    skos:altLabel "aluminium mulch"@en ;
     skos:broader eusoilvoc:DryMulches ;
     skos:broaderTransitive eusoilvoc:DryMulches,
         eusoilvoc:Mulch,
@@ -5913,6 +5979,7 @@ eusoilvoc:AnionExchangeCapacity a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalCapacity .
 
 eusoilvoc:BarkMulches a skos:Concept ;
+    skos:altLabel "bark mulch"@en ;
     skos:broader eusoilvoc:OrganicMulches ;
     skos:broaderTransitive eusoilvoc:Mulch,
         eusoilvoc:OrganicMulches,
@@ -6180,6 +6247,7 @@ eusoilvoc:ColloidContentMoistureEquivalentRatio a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilErodibilityIndex .
 
 eusoilvoc:CompostMulches a skos:Concept ;
+    skos:altLabel "compost mulch"@en ;
     skos:broader eusoilvoc:OrganicMulches ;
     skos:broaderTransitive eusoilvoc:Mulch,
         eusoilvoc:OrganicMulches,
@@ -6368,6 +6436,7 @@ eusoilvoc:GasTurbation a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:Pedoturbation .
 
 eusoilvoc:GravelMulches a skos:Concept ;
+    skos:altLabel "gravel mulch"@en ;
     skos:broader eusoilvoc:DryMulches ;
     skos:broaderTransitive eusoilvoc:DryMulches,
         eusoilvoc:Mulch,
@@ -6535,6 +6604,7 @@ eusoilvoc:LandUseShrubs a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:LandUse .
 
 eusoilvoc:LayeredSoils a skos:Concept ;
+    skos:altLabel "layered soil"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -6549,6 +6619,7 @@ eusoilvoc:LayeredSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilTypes .
 
 eusoilvoc:LeafMulches a skos:Concept ;
+    skos:altLabel "leaf mulch"@en ;
     skos:broader eusoilvoc:OrganicMulches ;
     skos:broaderTransitive eusoilvoc:Mulch,
         eusoilvoc:OrganicMulches,
@@ -6597,6 +6668,7 @@ eusoilvoc:LiquidWasteDisposal a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:WasteDisposal .
 
 eusoilvoc:LiveMulches a skos:Concept ;
+    skos:altLabel "live mulch"@en ;
     skos:broader eusoilvoc:OrganicMulches ;
     skos:broaderTransitive eusoilvoc:Mulch,
         eusoilvoc:OrganicMulches,
@@ -6764,6 +6836,7 @@ eusoilvoc:MineralFragments a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:MineralParticles .
 
 eusoilvoc:Mites a skos:Concept ;
+    skos:altLabel "mite"@en ;
     skos:broader eusoilvoc:SoilMesofauna ;
     skos:broaderTransitive eusoilvoc:SoilFauna,
         eusoilvoc:SoilMesofauna,
@@ -6883,6 +6956,7 @@ eusoilvoc:MottleSize a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilMottle .
 
 eusoilvoc:Nanoplastics a skos:Concept ;
+    skos:altLabel "nanoplastic"@en ;
     skos:broader eusoilvoc:Microplastics ;
     skos:broaderTransitive eusoilvoc:Microplastics,
         eusoilvoc:SoilPollutants,
@@ -6937,6 +7011,7 @@ eusoilvoc:NonproteinNitrogenContent a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:NitrogenContent .
 
 eusoilvoc:OrganomineralComplexes a skos:Concept ;
+    skos:altLabel "organomineral complex"@en ;
     skos:broader eusoilvoc:SoilOrganicMatter ;
     skos:broaderTransitive eusoilvoc:SoilComponents,
         eusoilvoc:SoilOrganicComponents,
@@ -6974,7 +7049,7 @@ eusoilvoc:Pavements a skos:Concept ;
     skos:prefLabel "pavements"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:LandCover .
 
-eusoilvoc:PeatDecompostion a skos:Concept,
+eusoilvoc:PeatDecomposition a skos:Concept,
         sosa:ObservableProperty ;
     skos:broader eusoilvoc:Peat ;
     skos:broaderTransitive eusoilvoc:Peat,
@@ -6985,7 +7060,7 @@ eusoilvoc:PeatDecompostion a skos:Concept,
             rdf:value "The Peat Decomposition evaluates the degree of decomposition in organic soils or peat. Categories include fibric (least decomposed), hemic (moderately decomposed), and sapric (highly decomposed), which influence soil fertility and drainage. Source: Soil Survey Manual (USDA, 2017)."@en ] ;
     skos:exactMatch glosis_lh:peatDecompostionProperty ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "peat decompostion"@en ;
+    skos:prefLabel "peat decomposition"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:Peat .
 
 eusoilvoc:PeatDrainage a skos:Concept,
@@ -7054,6 +7129,7 @@ eusoilvoc:PlasticConsistence a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilConsistence .
 
 eusoilvoc:PlasticMulches a skos:Concept ;
+    skos:altLabel "plastic mulch"@en ;
     skos:broader eusoilvoc:DryMulches ;
     skos:broaderTransitive eusoilvoc:DryMulches,
         eusoilvoc:Mulch,
@@ -7068,6 +7144,7 @@ eusoilvoc:PlasticMulches a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:DryMulches .
 
 eusoilvoc:PolygeneticSoilTypes a skos:Concept ;
+    skos:altLabel "polygenetic soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -7202,18 +7279,6 @@ eusoilvoc:SoftConsistence a skos:Concept ;
     skos:prefLabel "soft consistence"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilConsistence .
 
-eusoilvoc:SoilAdhesion a skos:Concept ;
-    skos:broader eusoilvoc:SoilPhysicalProperties ;
-    skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
-        eusoilvoc:SoilPhysicalProperties,
-        eusoilvoc:SoilProperties ;
-    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "The attraction of water to soil solids, through which water molecules adhere to soil particles."@en ] ;
-    skos:exactMatch spp:SoilAdhesion ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil adhesion"@en ;
-    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhysicalProperties .
-
 eusoilvoc:SoilAge a skos:Concept ;
     skos:altLabel "age of soil"@en ;
     skos:broader eusoilvoc:SoilProperties ;
@@ -7317,6 +7382,7 @@ eusoilvoc:SoilAirPermeability a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPermeability .
 
 eusoilvoc:SoilAnthropogenicChanges a skos:Concept ;
+    skos:altLabel "soil anthropogenic change"@en ;
     skos:broader eusoilvoc:SoilProcesses ;
     skos:broaderTransitive eusoilvoc:SoilProcesses ;
     skos:definition [ dcterms:source agrovoc:c_8b0b0337 ;
@@ -7510,6 +7576,7 @@ eusoilvoc:SoilCrustThickness a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilCrustPhysicalProperties .
 
 eusoilvoc:SoilDeficiencies a skos:Concept ;
+    skos:altLabel "soil deficiency"@en ;
     skos:broader eusoilvoc:SoilThreats ;
     skos:broaderTransitive eusoilvoc:SoilThreats ;
     skos:exactMatch agrovoc:c_7166 ;
@@ -7713,6 +7780,7 @@ eusoilvoc:SoilMoistureCharacteristics a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilWaterPhysicalProperties .
 
 eusoilvoc:SoilMulches a skos:Concept ;
+    skos:altLabel "soil mulch"@en ;
     skos:broader eusoilvoc:DryMulches ;
     skos:broaderTransitive eusoilvoc:DryMulches,
         eusoilvoc:Mulch,
@@ -7974,21 +8042,6 @@ eusoilvoc:SoilProductivity a skos:Concept ;
     skos:prefLabel "soil productivity"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilAgriculturalFunctions,
         eusoilvoc:SoilProperties .
-
-eusoilvoc:SoilQuality a skos:Concept ;
-    skos:broader eusoilvoc:SoilProperties ;
-    skos:broaderTransitive eusoilvoc:SoilProperties ;
-    skos:definition [ dcterms:source agrovoc:c_a9645d28 ;
-            rdf:value "Ability of soil to provide ecosystem services through its capacities to perform soil functions such as biodiversity, productivity, water filtering and buffering, and nutrient cycling."@en ] ;
-    skos:exactMatch agrovoc:c_a9645d28,
-        inrae:c_661,
-        gemet:7884,
-        iso11074:3.466,
-        nalt:35826,
-        she:SoilQuality ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil quality"@en ;
-    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilProperties .
 
 eusoilvoc:SoilRapidDrying a skos:Concept ;
     skos:broader eusoilvoc:SoilDrying ;
@@ -8253,6 +8306,7 @@ eusoilvoc:SoilSpecificGravity a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilDensity .
 
 eusoilvoc:SoilSurfaceProperties a skos:Concept ;
+    skos:altLabel "soil surface property"@en ;
     skos:broader eusoilvoc:SoilProperties ;
     skos:broaderTransitive eusoilvoc:SoilProperties ;
     skos:exactMatch agrovoc:c_14702 ;
@@ -8436,6 +8490,7 @@ eusoilvoc:StickyConsistence a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilConsistence .
 
 eusoilvoc:StratigraphicSoilTypes a skos:Concept ;
+    skos:altLabel "stratigraphic soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -8448,6 +8503,7 @@ eusoilvoc:StratigraphicSoilTypes a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilTypes .
 
 eusoilvoc:StrawMulches a skos:Concept ;
+    skos:altLabel "straw mulch"@en ;
     skos:broader eusoilvoc:OrganicMulches ;
     skos:broaderTransitive eusoilvoc:Mulch,
         eusoilvoc:OrganicMulches,
@@ -8597,6 +8653,7 @@ eusoilvoc:WetPlasticity a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPlasticity .
 
 eusoilvoc:WoodChipsMulches a skos:Concept ;
+    skos:altLabel "wood chip mulch"@en ;
     skos:broader eusoilvoc:OrganicMulches ;
     skos:broaderTransitive eusoilvoc:Mulch,
         eusoilvoc:OrganicMulches,
@@ -8637,6 +8694,7 @@ eusoilvoc:AcceleratedErosion a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilErosion .
 
 eusoilvoc:AcidSoils a skos:Concept ;
+    skos:altLabel "acid soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:ChemicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -8652,6 +8710,7 @@ eusoilvoc:AcidSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:ChemicalSoilTypes .
 
 eusoilvoc:AcidSulphateSoils a skos:Concept ;
+    skos:altLabel "acid sulphate soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:ChemicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -8667,6 +8726,7 @@ eusoilvoc:AcidSulphateSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:ChemicalSoilTypes .
 
 eusoilvoc:AgriculturalSoils a skos:Concept ;
+    skos:altLabel "agricultural soil"@en ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
     skos:broaderTransitive eusoilvoc:CulturalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -8723,6 +8783,7 @@ eusoilvoc:AirRatio a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPorosity .
 
 eusoilvoc:AlkalineSoils a skos:Concept ;
+    skos:altLabel "alkaline soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:ChemicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -8752,6 +8813,7 @@ eusoilvoc:Allophane a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClayMineral .
 
 eusoilvoc:AlluvialSoils a skos:Concept ;
+    skos:altLabel "alluvial soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -8784,6 +8846,7 @@ eusoilvoc:AntecedentSoilMoistureContents a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilMoistureContents .
 
 eusoilvoc:ArableSoils a skos:Concept ;
+    skos:altLabel "arable soil"@en ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
     skos:broaderTransitive eusoilvoc:CulturalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -8798,6 +8861,7 @@ eusoilvoc:ArableSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:CulturalSoilTypes .
 
 eusoilvoc:AridSoils a skos:Concept ;
+    skos:altLabel "arid soil"@en ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
     skos:broaderTransitive eusoilvoc:ClimaticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -8811,6 +8875,7 @@ eusoilvoc:AridSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:ClimaticSoilTypes .
 
 eusoilvoc:BasalticSoils a skos:Concept ;
+    skos:altLabel "basaltic soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -8839,6 +8904,7 @@ eusoilvoc:BleachedSand a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:Sand .
 
 eusoilvoc:BogSoils a skos:Concept ;
+    skos:altLabel "bog soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:EcologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -8852,6 +8918,7 @@ eusoilvoc:BogSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:EcologicalSoilTypes .
 
 eusoilvoc:BottomlandSoils a skos:Concept ;
+    skos:altLabel "bottomland soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:broaderTransitive eusoilvoc:PhysiographicSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -8865,6 +8932,7 @@ eusoilvoc:BottomlandSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:PhysiographicSoilTypes .
 
 eusoilvoc:BoulderClaySoils a skos:Concept ;
+    skos:altLabel "boulder clay soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -8909,6 +8977,7 @@ eusoilvoc:BulkDensityPeat a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilBulkDensity .
 
 eusoilvoc:BuriedSoils a skos:Concept ;
+    skos:altLabel "buried soil"@en ;
     skos:broader eusoilvoc:PalaeosolicSoilTypes ;
     skos:broaderTransitive eusoilvoc:PalaeosolicSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -8922,6 +8991,7 @@ eusoilvoc:BuriedSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:PalaeosolicSoilTypes .
 
 eusoilvoc:CalamineSoils a skos:Concept ;
+    skos:altLabel "calamine soil"@en ;
     skos:broader eusoilvoc:MineralogicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:MineralogicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -8949,6 +9019,7 @@ eusoilvoc:CationExchangeCapacityEffective a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:CationExchangeCapacity .
 
 eusoilvoc:ChalkSoils a skos:Concept ;
+    skos:altLabel "chalk soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -8962,6 +9033,7 @@ eusoilvoc:ChalkSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:LithologicalSoilTypes .
 
 eusoilvoc:ClaypanSoils a skos:Concept ;
+    skos:altLabel "claypan soil"@en ;
     skos:broader eusoilvoc:StructuralSoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -8995,6 +9067,7 @@ eusoilvoc:Climate a skos:Concept ;
         eusoilvoc:PlanetaryPhenomena .
 
 eusoilvoc:CoastalSoils a skos:Concept ;
+    skos:altLabel "coastal soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:broaderTransitive eusoilvoc:PhysiographicSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9052,6 +9125,7 @@ eusoilvoc:DegreeOfSaturation a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilMoistureContents .
 
 eusoilvoc:DeltaSoils a skos:Concept ;
+    skos:altLabel "delta soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:broaderTransitive eusoilvoc:PhysiographicSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9065,6 +9139,7 @@ eusoilvoc:DeltaSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:PhysiographicSoilTypes .
 
 eusoilvoc:DesertSoils a skos:Concept ;
+    skos:altLabel "desert soil"@en ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
     skos:broaderTransitive eusoilvoc:ClimaticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9078,6 +9153,7 @@ eusoilvoc:DesertSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:ClimaticSoilTypes .
 
 eusoilvoc:DioriteSoils a skos:Concept ;
+    skos:altLabel "diorite soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9092,6 +9168,7 @@ eusoilvoc:DioriteSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:LithologicalSoilTypes .
 
 eusoilvoc:DispersiveSoils a skos:Concept ;
+    skos:altLabel "dispersive soil"@en ;
     skos:broader eusoilvoc:StructuralSoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -9106,6 +9183,7 @@ eusoilvoc:DispersiveSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:StructuralSoilTypes .
 
 eusoilvoc:DrumlinSoils a skos:Concept ;
+    skos:altLabel "drumlin soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:broaderTransitive eusoilvoc:PhysiographicSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9132,6 +9210,7 @@ eusoilvoc:DrySoilBulkDensity a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilBulkDensity .
 
 eusoilvoc:DuneSoils a skos:Concept ;
+    skos:altLabel "dune soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:broaderTransitive eusoilvoc:PhysiographicSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9164,6 +9243,7 @@ eusoilvoc:Earthworms a skos:Concept ;
         eusoilvoc:SoilOrganisms .
 
 eusoilvoc:ErodedSoils a skos:Concept ;
+    skos:altLabel "eroded soil"@en ;
     skos:broader eusoilvoc:AnthropogenicSoils ;
     skos:broaderTransitive eusoilvoc:AnthropogenicSoils,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9190,6 +9270,7 @@ eusoilvoc:Evapouration a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:WaterInterchange .
 
 eusoilvoc:FenlandSoils a skos:Concept ;
+    skos:altLabel "fenland soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:broaderTransitive eusoilvoc:PhysiographicSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9203,6 +9284,7 @@ eusoilvoc:FenlandSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:PhysiographicSoilTypes .
 
 eusoilvoc:ForestSoils a skos:Concept ;
+    skos:altLabel "forest soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:EcologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9219,6 +9301,7 @@ eusoilvoc:ForestSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:EcologicalSoilTypes .
 
 eusoilvoc:FrigidSoils a skos:Concept ;
+    skos:altLabel "frigid soil"@en ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
     skos:broaderTransitive eusoilvoc:ClimaticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9232,6 +9315,7 @@ eusoilvoc:FrigidSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:ClimaticSoilTypes .
 
 eusoilvoc:GlacialTillSoils a skos:Concept ;
+    skos:altLabel "glacial till soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9245,6 +9329,7 @@ eusoilvoc:GlacialTillSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:LithologicalSoilTypes .
 
 eusoilvoc:GraniteSoils a skos:Concept ;
+    skos:altLabel "granite soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9258,6 +9343,7 @@ eusoilvoc:GraniteSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:LithologicalSoilTypes .
 
 eusoilvoc:GrasslandSoils a skos:Concept ;
+    skos:altLabel "grassland soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:EcologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9271,6 +9357,7 @@ eusoilvoc:GrasslandSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:EcologicalSoilTypes .
 
 eusoilvoc:GreenhouseSoils a skos:Concept ;
+    skos:altLabel "greenhouse soil"@en ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
     skos:broaderTransitive eusoilvoc:CulturalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9284,6 +9371,7 @@ eusoilvoc:GreenhouseSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:CulturalSoilTypes .
 
 eusoilvoc:GreywackeSoils a skos:Concept ;
+    skos:altLabel "greywacke soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9295,7 +9383,21 @@ eusoilvoc:GreywackeSoils a skos:Concept ;
     skos:prefLabel "greywacke soils"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:LithologicalSoilTypes .
 
+eusoilvoc:Halloysite a skos:Concept ;
+    skos:broader eusoilvoc:SoilClayMineral ;
+    skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
+        eusoilvoc:SoilClayMineral,
+        eusoilvoc:SoilContents,
+        eusoilvoc:SoilPhysicalProperties,
+        eusoilvoc:SoilProperties ;
+    skos:exactMatch agrovoc:c_15838,
+        nalt:26743 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "halloysite"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClayMineral .
+
 eusoilvoc:HeathlandSoils a skos:Concept ;
+    skos:altLabel "heathland soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:EcologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9309,6 +9411,7 @@ eusoilvoc:HeathlandSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:EcologicalSoilTypes .
 
 eusoilvoc:HillSoils a skos:Concept ;
+    skos:altLabel "hill soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:broaderTransitive eusoilvoc:PhysiographicSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9321,6 +9424,7 @@ eusoilvoc:HillSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:PhysiographicSoilTypes .
 
 eusoilvoc:HorticulturalSoils a skos:Concept ;
+    skos:altLabel "horticultural soil"@en ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
     skos:broaderTransitive eusoilvoc:CulturalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9334,6 +9438,7 @@ eusoilvoc:HorticulturalSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:CulturalSoilTypes .
 
 eusoilvoc:HydromorphicSoils a skos:Concept ;
+    skos:altLabel "hydromorphic soil"@en ;
     skos:broader eusoilvoc:GeneticSoilTypes ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9349,6 +9454,7 @@ eusoilvoc:HydromorphicSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:GeneticSoilTypes .
 
 eusoilvoc:Illites a skos:Concept ;
+    skos:altLabel "illite"@en ;
     skos:broader eusoilvoc:SoilClayMineral ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilClayMineral,
@@ -9361,6 +9467,7 @@ eusoilvoc:Illites a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClayMineral .
 
 eusoilvoc:IlliticSoils a skos:Concept ;
+    skos:altLabel "illitic soil"@en ;
     skos:broader eusoilvoc:MineralogicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:MineralogicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9468,6 +9575,7 @@ eusoilvoc:IonExchange a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalProcesses .
 
 eusoilvoc:IrrigatedSoils a skos:Concept ;
+    skos:altLabel "irrigated soil"@en ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
     skos:broaderTransitive eusoilvoc:CulturalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9495,6 +9603,7 @@ eusoilvoc:Kaolinite a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClayMineral .
 
 eusoilvoc:KarstSoils a skos:Concept ;
+    skos:altLabel "karst soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:broaderTransitive eusoilvoc:PhysiographicSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9536,6 +9645,7 @@ eusoilvoc:LiquidRatio a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilMoistureContents .
 
 eusoilvoc:LoamSoils a skos:Concept ;
+    skos:altLabel "loam soil"@en ;
     skos:broader eusoilvoc:TexturalSoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -9549,6 +9659,7 @@ eusoilvoc:LoamSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:TexturalSoilTypes .
 
 eusoilvoc:LoessSoils a skos:Concept ;
+    skos:altLabel "loess soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9589,6 +9700,7 @@ eusoilvoc:Macroporosity a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPorosity .
 
 eusoilvoc:MarshlandSoils a skos:Concept ;
+    skos:altLabel "marshland soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:EcologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9601,6 +9713,7 @@ eusoilvoc:MarshlandSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:EcologicalSoilTypes .
 
 eusoilvoc:MeadowSoils a skos:Concept ;
+    skos:altLabel "meadow soil"@en ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
     skos:broaderTransitive eusoilvoc:CulturalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9616,6 +9729,7 @@ eusoilvoc:MeadowSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:CulturalSoilTypes .
 
 eusoilvoc:MineralSoils a skos:Concept ;
+    skos:altLabel "mineral soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:ChemicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9630,6 +9744,7 @@ eusoilvoc:MineralSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:ChemicalSoilTypes .
 
 eusoilvoc:Montmorillonites a skos:Concept ;
+    skos:altLabel "montmorillonite"@en ;
     skos:broader eusoilvoc:SoilClayMineral ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilClayMineral,
@@ -9642,6 +9757,7 @@ eusoilvoc:Montmorillonites a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClayMineral .
 
 eusoilvoc:MontmorilloniticSoils a skos:Concept ;
+    skos:altLabel "montmorillonitic soil"@en ;
     skos:broader eusoilvoc:MineralogicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:MineralogicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9655,6 +9771,7 @@ eusoilvoc:MontmorilloniticSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:MineralogicalSoilTypes .
 
 eusoilvoc:MoraineSoils a skos:Concept ;
+    skos:altLabel "moraine soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:broaderTransitive eusoilvoc:PhysiographicSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9668,6 +9785,7 @@ eusoilvoc:MoraineSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:PhysiographicSoilTypes .
 
 eusoilvoc:MountainSoils a skos:Concept ;
+    skos:altLabel "mountain soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:broaderTransitive eusoilvoc:PhysiographicSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9681,6 +9799,7 @@ eusoilvoc:MountainSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:PhysiographicSoilTypes .
 
 eusoilvoc:NeutralSoils a skos:Concept ;
+    skos:altLabel "neutral soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:ChemicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9691,6 +9810,20 @@ eusoilvoc:NeutralSoils a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "neutral soils"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:ChemicalSoilTypes .
+
+eusoilvoc:Nontronite a skos:Concept ;
+    skos:broader eusoilvoc:SoilClayMineral ;
+    skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
+        eusoilvoc:SoilClayMineral,
+        eusoilvoc:SoilContents,
+        eusoilvoc:SoilPhysicalProperties,
+        eusoilvoc:SoilProperties ;
+    skos:definition [ dcterms:source agrovoc:c_55aaa84c ;
+            rdf:value "Nontronite is the iron(III) rich member of the smectite group of clay minerals."@en ] ;
+    skos:exactMatch agrovoc:c_55aaa84c ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "nontronite"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClayMineral .
 
 eusoilvoc:NormalShrinkage a skos:Concept ;
     skos:broader eusoilvoc:SoilShrinkage ;
@@ -9707,6 +9840,7 @@ eusoilvoc:NormalShrinkage a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilShrinkage .
 
 eusoilvoc:OrchardSoils a skos:Concept ;
+    skos:altLabel "orchard soil"@en ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
     skos:broaderTransitive eusoilvoc:CulturalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9720,6 +9854,7 @@ eusoilvoc:OrchardSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:CulturalSoilTypes .
 
 eusoilvoc:OrganicSoils a skos:Concept ;
+    skos:altLabel "organic soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:ChemicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9733,6 +9868,7 @@ eusoilvoc:OrganicSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:ChemicalSoilTypes .
 
 eusoilvoc:PaddySoils a skos:Concept ;
+    skos:altLabel "paddy soil"@en ;
     skos:broader eusoilvoc:AnthropogenicSoils ;
     skos:broaderTransitive eusoilvoc:AnthropogenicSoils,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9746,6 +9882,7 @@ eusoilvoc:PaddySoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:AnthropogenicSoils .
 
 eusoilvoc:Palaeosols a skos:Concept ;
+    skos:altLabel "palaeosol"@en ;
     skos:broader eusoilvoc:PalaeosolicSoilTypes ;
     skos:broaderTransitive eusoilvoc:PalaeosolicSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9758,7 +9895,21 @@ eusoilvoc:Palaeosols a skos:Concept ;
     skos:prefLabel "palaeosols"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:PalaeosolicSoilTypes .
 
+eusoilvoc:Palygorskite a skos:Concept ;
+    skos:broader eusoilvoc:SoilClayMineral ;
+    skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
+        eusoilvoc:SoilClayMineral,
+        eusoilvoc:SoilContents,
+        eusoilvoc:SoilPhysicalProperties,
+        eusoilvoc:SoilProperties ;
+    skos:exactMatch agrovoc:c_15837,
+        nalt:26752 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "palygorskite"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClayMineral .
+
 eusoilvoc:PeatSoils a skos:Concept ;
+    skos:altLabel "peat soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:ChemicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9816,6 +9967,7 @@ eusoilvoc:Ploughing a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilTillage .
 
 eusoilvoc:PolderSoils a skos:Concept ;
+    skos:altLabel "polder soil"@en ;
     skos:broader eusoilvoc:AnthropogenicSoils ;
     skos:broaderTransitive eusoilvoc:AnthropogenicSoils,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9831,6 +9983,7 @@ eusoilvoc:PolderSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:AnthropogenicSoils .
 
 eusoilvoc:PollutedSoils a skos:Concept ;
+    skos:altLabel "polluted soil"@en ;
     skos:broader eusoilvoc:AnthropogenicSoils ;
     skos:broaderTransitive eusoilvoc:AnthropogenicSoils,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9845,6 +9998,7 @@ eusoilvoc:PollutedSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:AnthropogenicSoils .
 
 eusoilvoc:PrairieSoils a skos:Concept ;
+    skos:altLabel "prairie soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:EcologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9858,6 +10012,7 @@ eusoilvoc:PrairieSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:EcologicalSoilTypes .
 
 eusoilvoc:RangelandSoils a skos:Concept ;
+    skos:altLabel "rangeland soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:EcologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9871,6 +10026,7 @@ eusoilvoc:RangelandSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:EcologicalSoilTypes .
 
 eusoilvoc:ReclaimedSoils a skos:Concept ;
+    skos:altLabel "reclaimed soil"@en ;
     skos:broader eusoilvoc:AnthropogenicSoils ;
     skos:broaderTransitive eusoilvoc:AnthropogenicSoils,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9898,6 +10054,7 @@ eusoilvoc:ResidualShrinkage a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilShrinkage .
 
 eusoilvoc:RiverTerraceSoils a skos:Concept ;
+    skos:altLabel "river terrace soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:broaderTransitive eusoilvoc:PhysiographicSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -9911,6 +10068,7 @@ eusoilvoc:RiverTerraceSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:PhysiographicSoilTypes .
 
 eusoilvoc:RoadsideSoils a skos:Concept ;
+    skos:altLabel "roadside soil"@en ;
     skos:broader eusoilvoc:AnthropogenicSoils ;
     skos:broaderTransitive eusoilvoc:AnthropogenicSoils,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -10002,6 +10160,7 @@ eusoilvoc:Runoff a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:WaterInterchange .
 
 eusoilvoc:SalineSodicSoils a skos:Concept ;
+    skos:altLabel "saline sodic soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:ChemicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -10016,7 +10175,22 @@ eusoilvoc:SalineSodicSoils a skos:Concept ;
     skos:prefLabel "saline sodic soils"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:ChemicalSoilTypes .
 
+eusoilvoc:Saponite a skos:Concept ;
+    skos:broader eusoilvoc:SoilClayMineral ;
+    skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
+        eusoilvoc:SoilClayMineral,
+        eusoilvoc:SoilContents,
+        eusoilvoc:SoilPhysicalProperties,
+        eusoilvoc:SoilProperties ;
+    skos:definition [ dcterms:source agrovoc:c_96e7c0f8 ;
+            rdf:value "Saponite is a trioctahedral mineral of the smectite group."@en ] ;
+    skos:exactMatch agrovoc:c_96e7c0f8 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "saponite"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClayMineral .
+
 eusoilvoc:SchistSoils a skos:Concept ;
+    skos:altLabel "schist soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -10029,6 +10203,7 @@ eusoilvoc:SchistSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:LithologicalSoilTypes .
 
 eusoilvoc:ScrublandSoils a skos:Concept ;
+    skos:altLabel "scrubland soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:EcologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -10042,6 +10217,7 @@ eusoilvoc:ScrublandSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:EcologicalSoilTypes .
 
 eusoilvoc:SemiAridSoils a skos:Concept ;
+    skos:altLabel "semi-arid soil"@en ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
     skos:broaderTransitive eusoilvoc:ClimaticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -10054,7 +10230,24 @@ eusoilvoc:SemiAridSoils a skos:Concept ;
     skos:prefLabel "semi-arid soils"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:ClimaticSoilTypes .
 
+eusoilvoc:Sepiolite a skos:Concept ;
+    skos:altLabel "meerschaum"@en ;
+    skos:broader eusoilvoc:SoilClayMineral ;
+    skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
+        eusoilvoc:SoilClayMineral,
+        eusoilvoc:SoilContents,
+        eusoilvoc:SoilPhysicalProperties,
+        eusoilvoc:SoilProperties ;
+    skos:definition [ dcterms:source agrovoc:c_f92d89de ;
+            rdf:value "Sepiolite, also known as meerschaum is a soft white clay mineral, often used to make tobacco pipes (known as meerschaum pipes)."@en ] ;
+    skos:exactMatch agrovoc:c_f92d89de,
+        nalt:26753 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "sepiolite"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClayMineral .
+
 eusoilvoc:ShaleSoils a skos:Concept ;
+    skos:altLabel "shale soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -10067,6 +10260,7 @@ eusoilvoc:ShaleSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:LithologicalSoilTypes .
 
 eusoilvoc:SiltySoils a skos:Concept ;
+    skos:altLabel "silty soil"@en ;
     skos:broader eusoilvoc:TexturalSoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -10101,6 +10295,7 @@ eusoilvoc:SlopeOrientation a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:Slope .
 
 eusoilvoc:Smectites a skos:Concept ;
+    skos:altLabel "smectite"@en ;
     skos:broader eusoilvoc:SoilClayMineral ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilClayMineral,
@@ -10115,6 +10310,7 @@ eusoilvoc:Smectites a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClayMineral .
 
 eusoilvoc:SodicSoils a skos:Concept ;
+    skos:altLabel "sodic soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:ChemicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -10488,6 +10684,7 @@ eusoilvoc:SoilInorganicComponents a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilComponents .
 
 eusoilvoc:SoilInvestigations a skos:Concept ;
+    skos:altLabel "soil investigation"@en ;
     skos:broader eusoilvoc:SoilSurveys ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilSurveys ;
@@ -10498,7 +10695,6 @@ eusoilvoc:SoilInvestigations a skos:Concept ;
     skos:narrower eusoilvoc:SoilExposureTypes ;
     skos:narrowerTransitive eusoilvoc:SoilExposureTypes ;
     skos:prefLabel "soil investigations"@en ;
-    skos:scopeNote "Field studies of soil, following AGROVOC scope."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilSurveys .
 
 eusoilvoc:SoilMicrobialRespiration a skos:Concept ;
@@ -10655,6 +10851,7 @@ eusoilvoc:SoilStructuralCrusts a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhysicalCrusts .
 
 eusoilvoc:SoilThermalRegimes a skos:Concept ;
+    skos:altLabel "soil thermal regime"@en ;
     skos:broader eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilThermalProperties ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
@@ -10734,6 +10931,7 @@ eusoilvoc:SolubleCationTotal a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilSolutes .
 
 eusoilvoc:SpodicHorizons a skos:Concept ;
+    skos:altLabel "spodic horizon"@en ;
     skos:broader eusoilvoc:DiagnosticHorizons,
         eusoilvoc:SoilHorizons ;
     skos:broaderTransitive eusoilvoc:DiagnosticHorizons,
@@ -10750,6 +10948,7 @@ eusoilvoc:SpodicHorizons a skos:Concept ;
         eusoilvoc:SoilHorizons .
 
 eusoilvoc:StonySoils a skos:Concept ;
+    skos:altLabel "stony soil"@en ;
     skos:broader eusoilvoc:TexturalSoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -10777,6 +10976,7 @@ eusoilvoc:StructuralPorosity a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPorosity .
 
 eusoilvoc:SubtropicalSoils a skos:Concept ;
+    skos:altLabel "subtropical soil"@en ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
     skos:broaderTransitive eusoilvoc:ClimaticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -10790,6 +10990,7 @@ eusoilvoc:SubtropicalSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:ClimaticSoilTypes .
 
 eusoilvoc:SwampSoils a skos:Concept ;
+    skos:altLabel "swamp soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:EcologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -10845,6 +11046,7 @@ eusoilvoc:TransverseDispersion a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilSoluteDispersiveTransport .
 
 eusoilvoc:TropicalSoils a skos:Concept ;
+    skos:altLabel "tropical soil"@en ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
     skos:broaderTransitive eusoilvoc:ClimaticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -10858,6 +11060,7 @@ eusoilvoc:TropicalSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:ClimaticSoilTypes .
 
 eusoilvoc:UplandSoils a skos:Concept ;
+    skos:altLabel "upland soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:broaderTransitive eusoilvoc:PhysiographicSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -10886,6 +11089,7 @@ eusoilvoc:VariableCharge a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilSurfaceCharge .
 
 eusoilvoc:Vermiculites a skos:Concept ;
+    skos:altLabel "vermiculite"@en ;
     skos:broader eusoilvoc:SoilClayMineral ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilClayMineral,
@@ -10898,6 +11102,7 @@ eusoilvoc:Vermiculites a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClayMineral .
 
 eusoilvoc:VirginSoils a skos:Concept ;
+    skos:altLabel "virgin soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:EcologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -10959,6 +11164,7 @@ eusoilvoc:VoidRatio a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPorosity .
 
 eusoilvoc:VolcanicSoils a skos:Concept ;
+    skos:altLabel "volcanic soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -10973,6 +11179,7 @@ eusoilvoc:VolcanicSoils a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:LithologicalSoilTypes .
 
 eusoilvoc:WaterRepellentSoils a skos:Concept ;
+    skos:altLabel "water repellent soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:ChemicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -11017,6 +11224,7 @@ eusoilvoc:WetSoilBulkDensity a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilBulkDensity .
 
 eusoilvoc:WetlandSoils a skos:Concept ;
+    skos:altLabel "wetland soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:EcologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -11051,6 +11259,7 @@ eusoilvoc:WindErosion a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilErosion .
 
 eusoilvoc:XericSoils a skos:Concept ;
+    skos:altLabel "xeric soil"@en ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
     skos:broaderTransitive eusoilvoc:ClimaticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -11095,6 +11304,7 @@ eusoilvoc:Bioturbation a skos:Concept ;
         eusoilvoc:SoilBiologicalProcesses .
 
 eusoilvoc:DiagnosticHorizons a skos:Concept ;
+    skos:altLabel "diagnostic horizon"@en ;
     skos:broader eusoilvoc:SoilHorizons ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilHorizons,
@@ -11138,6 +11348,7 @@ eusoilvoc:FluxControlledWaterInfiltration a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilWaterInfiltration .
 
 eusoilvoc:FreeLivingNematodes a skos:Concept ;
+    skos:altLabel "free-living nematode"@en ;
     skos:broader eusoilvoc:Nematodes,
         eusoilvoc:SoilFauna ;
     skos:broaderTransitive eusoilvoc:Nematodes,
@@ -11328,6 +11539,7 @@ eusoilvoc:MatrixPores a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPores .
 
 eusoilvoc:Microplastics a skos:Concept ;
+    skos:altLabel "microplastic"@en ;
     skos:broader eusoilvoc:SoilPollutants ;
     skos:broaderTransitive eusoilvoc:SoilPollutants,
         eusoilvoc:SoilPollution,
@@ -11373,6 +11585,7 @@ eusoilvoc:PipingErosion a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:WaterErosion .
 
 eusoilvoc:PlantGrowthPromotingRhizobacteria a skos:Concept ;
+    skos:altLabel "plant growth-promoting rhizobacterium"@en ;
     skos:broader eusoilvoc:Rhizobacteria,
         eusoilvoc:SoilBacteria ;
     skos:broaderTransitive eusoilvoc:Rhizobacteria,
@@ -11473,6 +11686,7 @@ eusoilvoc:SaturatedWaterFlow a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilWaterFlow .
 
 eusoilvoc:SerpentineSoils a skos:Concept ;
+    skos:altLabel "serpentine soil"@en ;
     skos:broader eusoilvoc:IgneousRockSoils ;
     skos:broaderTransitive eusoilvoc:IgneousRockSoils,
         eusoilvoc:LithologicalSoilTypes,
@@ -11537,6 +11751,7 @@ eusoilvoc:SoilAirContents a skos:Concept ;
         eusoilvoc:SoilContents .
 
 eusoilvoc:SoilBorneViruses a skos:Concept ;
+    skos:altLabel "soil-borne virus"@en ;
     skos:broader eusoilvoc:SoilBorneOrganisms ;
     skos:broaderTransitive eusoilvoc:SoilBorneOrganisms,
         eusoilvoc:SoilOrganisms,
@@ -12248,6 +12463,7 @@ eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-unkn a skos:Concept,
         eusoilvoc:SodiumExchangeableBases .
 
 eusoilvoc:AcrisolsFAO a skos:Concept ;
+    skos:altLabel "Acrisol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12263,6 +12479,7 @@ eusoilvoc:AcrisolsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:AcrisolsWRB a skos:Concept ;
+    skos:altLabel "Acrisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12276,10 +12493,10 @@ eusoilvoc:AcrisolsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_101 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Acrisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:AlfisolsUSDA a skos:Concept ;
+    skos:altLabel "Alfisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12293,10 +12510,10 @@ eusoilvoc:AlfisolsUSDA a skos:Concept ;
         she:Alfisols ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Alfisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationUSDA .
 
 eusoilvoc:AlisolsWRB a skos:Concept ;
+    skos:altLabel "Alisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12311,10 +12528,10 @@ eusoilvoc:AlisolsWRB a skos:Concept ;
         nalt:216339 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Alisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:AndisolsUSDA a skos:Concept ;
+    skos:altLabel "Andisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12327,10 +12544,10 @@ eusoilvoc:AndisolsUSDA a skos:Concept ;
     skos:exactMatch nalt:8668 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Andisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationUSDA .
 
 eusoilvoc:AndosolsFAO a skos:Concept ;
+    skos:altLabel "Andosol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12346,6 +12563,7 @@ eusoilvoc:AndosolsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:AndosolsWRB a skos:Concept ;
+    skos:altLabel "Andosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12359,10 +12577,10 @@ eusoilvoc:AndosolsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_404 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Andosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:AnthrosolsWRB a skos:Concept ;
+    skos:altLabel "Anthrosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12377,10 +12595,10 @@ eusoilvoc:AnthrosolsWRB a skos:Concept ;
         nalt:216341 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Anthrosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:ArenosolsFAO a skos:Concept ;
+    skos:altLabel "Arenosol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12396,6 +12614,7 @@ eusoilvoc:ArenosolsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:ArenosolsWRB a skos:Concept ;
+    skos:altLabel "Arenosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12409,10 +12628,10 @@ eusoilvoc:ArenosolsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_601 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Arenosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:AridisolsUSDA a skos:Concept ;
+    skos:altLabel "Aridisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12427,7 +12646,6 @@ eusoilvoc:AridisolsUSDA a skos:Concept ;
         nalt:12092 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Aridisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationUSDA .
 
 eusoilvoc:BaseSaturation a skos:Concept,
@@ -12481,6 +12699,7 @@ eusoilvoc:BoronContent a skos:Concept ;
         eusoilvoc:SoilChemicophysicalProperties .
 
 eusoilvoc:CalcareousSoils a skos:Concept ;
+    skos:altLabel "calcareous soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes,
         eusoilvoc:LithologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:ChemicalSoilTypes,
@@ -12497,6 +12716,7 @@ eusoilvoc:CalcareousSoils a skos:Concept ;
         eusoilvoc:LithologicalSoilTypes .
 
 eusoilvoc:CalcisolsWRB a skos:Concept ;
+    skos:altLabel "Calcisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12512,10 +12732,10 @@ eusoilvoc:CalcisolsWRB a skos:Concept ;
         she:Calcisols ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Calcisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:CambisolsFAO a skos:Concept ;
+    skos:altLabel "Cambisol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12531,6 +12751,7 @@ eusoilvoc:CambisolsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:CambisolsWRB a skos:Concept ;
+    skos:altLabel "Cambisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12544,10 +12765,10 @@ eusoilvoc:CambisolsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_1224 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Cambisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:ChernozemsFAO a skos:Concept ;
+    skos:altLabel "Chernozem"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12563,6 +12784,7 @@ eusoilvoc:ChernozemsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:ChernozemsWRB a skos:Concept ;
+    skos:altLabel "Chernozem"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12576,10 +12798,10 @@ eusoilvoc:ChernozemsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_1533 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Chernozems"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:ClaySoils a skos:Concept ;
+    skos:altLabel "clay soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:TexturalSoilTypes ;
     skos:broaderTransitive eusoilvoc:LithologicalSoilTypes,
@@ -12628,6 +12850,7 @@ eusoilvoc:ConventionalDrainage a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilDrainage .
 
 eusoilvoc:CryosolsWRB a skos:Concept ;
+    skos:altLabel "Cryosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12642,10 +12865,10 @@ eusoilvoc:CryosolsWRB a skos:Concept ;
         nalt:216346 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Cryosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:DurisolsWRB a skos:Concept ;
+    skos:altLabel "Durisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12660,10 +12883,10 @@ eusoilvoc:DurisolsWRB a skos:Concept ;
         nalt:216347 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Durisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:EntisolsUSDA a skos:Concept ;
+    skos:altLabel "Entisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12679,10 +12902,10 @@ eusoilvoc:EntisolsUSDA a skos:Concept ;
         she:Entisols ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Entisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationUSDA .
 
 eusoilvoc:FerralsolsFAO a skos:Concept ;
+    skos:altLabel "Ferralsol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12698,6 +12921,7 @@ eusoilvoc:FerralsolsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:FerralsolsWRB a skos:Concept ;
+    skos:altLabel "Ferralsol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12711,10 +12935,10 @@ eusoilvoc:FerralsolsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_2858 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Ferralsols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:FluvisolsFAO a skos:Concept ;
+    skos:altLabel "Fluvisol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12730,6 +12954,7 @@ eusoilvoc:FluvisolsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:FluvisolsWRB a skos:Concept ;
+    skos:altLabel "Fluvisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12743,10 +12968,10 @@ eusoilvoc:FluvisolsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_3000 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Fluvisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:GelisolsUSDA a skos:Concept ;
+    skos:altLabel "Gelisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12761,10 +12986,10 @@ eusoilvoc:GelisolsUSDA a skos:Concept ;
         nalt:42526 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Gelisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationUSDA .
 
 eusoilvoc:GleysolsFAO a skos:Concept ;
+    skos:altLabel "Gleysol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12780,6 +13005,7 @@ eusoilvoc:GleysolsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:GleysolsWRB a skos:Concept ;
+    skos:altLabel "Gleysol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12793,10 +13019,10 @@ eusoilvoc:GleysolsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_3276 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Gleysols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:GreyzemsFAO a skos:Concept ;
+    skos:altLabel "greyzem"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12809,10 +13035,10 @@ eusoilvoc:GreyzemsFAO a skos:Concept ;
         nalt:216359 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "greyzems"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:GypsiferousSoils a skos:Concept ;
+    skos:altLabel "gypsiferous soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes,
         eusoilvoc:LithologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:ChemicalSoilTypes,
@@ -12829,6 +13055,7 @@ eusoilvoc:GypsiferousSoils a skos:Concept ;
         eusoilvoc:LithologicalSoilTypes .
 
 eusoilvoc:GypsisolsWRB a skos:Concept ;
+    skos:altLabel "Gypsisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12843,10 +13070,10 @@ eusoilvoc:GypsisolsWRB a skos:Concept ;
         nalt:216350 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Gypsisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:HistosolsFAO a skos:Concept ;
+    skos:altLabel "Histosol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12862,6 +13089,7 @@ eusoilvoc:HistosolsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:HistosolsUSDA a skos:Concept ;
+    skos:altLabel "Histosol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12873,10 +13101,10 @@ eusoilvoc:HistosolsUSDA a skos:Concept ;
     skos:closeMatch nalt:40066 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Histosols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationUSDA .
 
 eusoilvoc:HistosolsWRB a skos:Concept ;
+    skos:altLabel "Histosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12890,7 +13118,6 @@ eusoilvoc:HistosolsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_3636 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Histosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:Humus a skos:Concept ;
@@ -12913,6 +13140,7 @@ eusoilvoc:Humus a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilOrganicMatter .
 
 eusoilvoc:InceptisolsUSDA a skos:Concept ;
+    skos:altLabel "Inceptisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12927,7 +13155,6 @@ eusoilvoc:InceptisolsUSDA a skos:Concept ;
         nalt:10070 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Inceptisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationUSDA .
 
 eusoilvoc:Ions a skos:Concept ;
@@ -12949,6 +13176,7 @@ eusoilvoc:Ions a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemical .
 
 eusoilvoc:KastanozemsFAO a skos:Concept ;
+    skos:altLabel "Kastanozem"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12964,6 +13192,7 @@ eusoilvoc:KastanozemsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:KastanozemsWRB a skos:Concept ;
+    skos:altLabel "Kastanozem"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12977,10 +13206,10 @@ eusoilvoc:KastanozemsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_4079 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Kastanozems"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:LeptosolsWRB a skos:Concept ;
+    skos:altLabel "Leptosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -12996,10 +13225,10 @@ eusoilvoc:LeptosolsWRB a skos:Concept ;
         she:Leptosols ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Leptosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:LithosolsFAO a skos:Concept ;
+    skos:altLabel "lithosol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13011,10 +13240,10 @@ eusoilvoc:LithosolsFAO a skos:Concept ;
     skos:exactMatch agrovoc:c_4389 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "lithosols"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:LixisolsWRB a skos:Concept ;
+    skos:altLabel "Lixisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13030,10 +13259,10 @@ eusoilvoc:LixisolsWRB a skos:Concept ;
         she:Lixisols ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Lixisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:LuvisolsFAO a skos:Concept ;
+    skos:altLabel "Luvisol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13049,6 +13278,7 @@ eusoilvoc:LuvisolsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:LuvisolsWRB a skos:Concept ;
+    skos:altLabel "Luvisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13062,7 +13292,6 @@ eusoilvoc:LuvisolsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_4470 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Luvisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:MassMovement a skos:Concept ;
@@ -13082,6 +13311,7 @@ eusoilvoc:MassMovement a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilMovement .
 
 eusoilvoc:MollisolsUSDA a skos:Concept ;
+    skos:altLabel "Mollisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13096,10 +13326,10 @@ eusoilvoc:MollisolsUSDA a skos:Concept ;
         nalt:6020 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Mollisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationUSDA .
 
 eusoilvoc:Nematodes a skos:Concept ;
+    skos:altLabel "nematode"@en ;
     skos:broader eusoilvoc:SoilMicrofauna ;
     skos:broaderTransitive eusoilvoc:SoilFauna,
         eusoilvoc:SoilMicrofauna,
@@ -13117,6 +13347,7 @@ eusoilvoc:Nematodes a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilMicrofauna .
 
 eusoilvoc:NitosolsFAO a skos:Concept ;
+    skos:altLabel "Nitosol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13135,6 +13366,7 @@ eusoilvoc:NitosolsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:NitosolsWRB a skos:Concept ;
+    skos:altLabel "Nitosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13146,10 +13378,10 @@ eusoilvoc:NitosolsWRB a skos:Concept ;
     skos:closeMatch agrovoc:c_5185 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Nitosols"@en ;
-    skos:scopeNote "AGROVOC places this source under WRB soil types but mixes the preferred label Nitosols with a Nitisols definition. Retained as a WRB-scoped source concept with closeMatch; the mixed definition is omitted. It is not asserted equivalent to a historical FAO Nitosols group."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:OxisolsUSDA a skos:Concept ;
+    skos:altLabel "Oxisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13162,7 +13394,6 @@ eusoilvoc:OxisolsUSDA a skos:Concept ;
     skos:exactMatch nalt:11617 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Oxisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationUSDA .
 
 eusoilvoc:PermanentWiltingPoint a skos:Concept ;
@@ -13185,6 +13416,7 @@ eusoilvoc:PermanentWiltingPoint a skos:Concept ;
         eusoilvoc:SoilWaterConstants .
 
 eusoilvoc:PhaeozemsFAO a skos:Concept ;
+    skos:altLabel "Phaeozem"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13200,6 +13432,7 @@ eusoilvoc:PhaeozemsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:PhaeozemsWRB a skos:Concept ;
+    skos:altLabel "Phaeozem"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13213,7 +13446,6 @@ eusoilvoc:PhaeozemsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_5755 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Phaeozems"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:PipeDrainage a skos:Concept ;
@@ -13234,6 +13466,7 @@ eusoilvoc:PipeDrainage a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilDrainage .
 
 eusoilvoc:PlanosolsFAO a skos:Concept ;
+    skos:altLabel "Planosol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13249,6 +13482,7 @@ eusoilvoc:PlanosolsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:PlanosolsWRB a skos:Concept ;
+    skos:altLabel "Planosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13262,7 +13496,6 @@ eusoilvoc:PlanosolsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_5953 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Planosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:PlantPart a skos:Concept ;
@@ -13281,6 +13514,7 @@ eusoilvoc:PlantPart a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:PlantCover .
 
 eusoilvoc:PlinthosolsWRB a skos:Concept ;
+    skos:altLabel "Plinthosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13295,10 +13529,10 @@ eusoilvoc:PlinthosolsWRB a skos:Concept ;
         nalt:216361 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Plinthosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:PodzolsFAO a skos:Concept ;
+    skos:altLabel "Podzol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13314,6 +13548,7 @@ eusoilvoc:PodzolsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:PodzolsWRB a skos:Concept ;
+    skos:altLabel "Podzol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13327,10 +13562,10 @@ eusoilvoc:PodzolsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_6044 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Podzols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:PodzoluvisolsFAO a skos:Concept ;
+    skos:altLabel "podzoluvisol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13343,10 +13578,10 @@ eusoilvoc:PodzoluvisolsFAO a skos:Concept ;
     skos:exactMatch agrovoc:c_6045 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "podzoluvisols"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:RankersFAO a skos:Concept ;
+    skos:altLabel "ranker"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13359,10 +13594,10 @@ eusoilvoc:RankersFAO a skos:Concept ;
     skos:exactMatch agrovoc:c_6450 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "rankers"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:RegosolsFAO a skos:Concept ;
+    skos:altLabel "Regosol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13378,6 +13613,7 @@ eusoilvoc:RegosolsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:RegosolsWRB a skos:Concept ;
+    skos:altLabel "Regosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13391,10 +13627,10 @@ eusoilvoc:RegosolsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_6492 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Regosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:RendzinasFAO a skos:Concept ;
+    skos:altLabel "rendzina"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13406,10 +13642,10 @@ eusoilvoc:RendzinasFAO a skos:Concept ;
     skos:closeMatch agrovoc:c_6501 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "rendzinas"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:RetisolsWRB a skos:Concept ;
+    skos:altLabel "Retisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13423,10 +13659,10 @@ eusoilvoc:RetisolsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_ff831af0 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Retisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:Rhizobacteria a skos:Concept ;
+    skos:altLabel "Rhizobacterium"@en ;
     skos:broader eusoilvoc:SoilBacteria ;
     skos:broaderTransitive eusoilvoc:SoilBacteria,
         eusoilvoc:SoilMicroorganisms,
@@ -13456,6 +13692,7 @@ eusoilvoc:RockOutcrops a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:Geology .
 
 eusoilvoc:SandySoils a skos:Concept ;
+    skos:altLabel "sandy soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:TexturalSoilTypes ;
     skos:broaderTransitive eusoilvoc:LithologicalSoilTypes,
@@ -13686,6 +13923,7 @@ eusoilvoc:SoilMatricPotential a skos:Concept ;
         eusoilvoc:SoilWaterPotential .
 
 eusoilvoc:SoilMechanicalProperties a skos:Concept ;
+    skos:altLabel "soil mechanical property"@en ;
     skos:broader eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
@@ -13760,6 +13998,21 @@ eusoilvoc:SoilPoreTortuosity a skos:Concept ;
     skos:prefLabel "soil pore tortuosity"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPorePhysicalProperties,
         eusoilvoc:SoilStructureIndex .
+
+eusoilvoc:SoilSalinisation a skos:Concept ;
+    skos:broader eusoilvoc:SoilDegradation ;
+    skos:broaderTransitive eusoilvoc:SoilChemicalDegradativeProcesses,
+        eusoilvoc:SoilChemicalProcesses,
+        eusoilvoc:SoilDegradation,
+        eusoilvoc:SoilPhysicalDegradativeProcesses,
+        eusoilvoc:SoilPhysicalProcesses,
+        eusoilvoc:SoilProcesses,
+        eusoilvoc:SoilThreats ;
+    skos:closeMatch nalt:61970 ;
+    skos:exactMatch she:SoilSalinisation ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "soil salinisation"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilDegradation .
 
 eusoilvoc:SoilSickness a skos:Concept ;
     skos:broader eusoilvoc:SoilDegradation ;
@@ -13887,6 +14140,7 @@ eusoilvoc:SoilWaterEvapouration a skos:Concept ;
         eusoilvoc:SoilWaterPhysicalProcesses .
 
 eusoilvoc:SolonchaksFAO a skos:Concept ;
+    skos:altLabel "Solonchak"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13930,10 +14184,10 @@ eusoilvoc:SolonetzWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_7232 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Solonetz"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:SpodosolsUSDA a skos:Concept ;
+    skos:altLabel "Spodosol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13942,18 +14196,18 @@ eusoilvoc:SpodosolsUSDA a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
-    skos:definition [ dcterms:source nalt:11601 ;
-            rdf:value "Acidic forest soil of low fertility"@en ],
-        [ dcterms:source agrovoc:c_36874 ;
-            rdf:value "Spodosols are acid soils characterized by a subsurface accumulation of humus that is complexed with Al and Fe."@en ] ;
+    skos:definition [ dcterms:source agrovoc:c_36874 ;
+            rdf:value "Spodosols are acid soils characterized by a subsurface accumulation of humus that is complexed with Al and Fe."@en ],
+        [ dcterms:source nalt:11601 ;
+            rdf:value "Acidic forest soil of low fertility"@en ] ;
     skos:exactMatch agrovoc:c_36874,
         nalt:11601 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Spodosols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationUSDA .
 
 eusoilvoc:StagnosolsWRB a skos:Concept ;
+    skos:altLabel "Stagnosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -13969,7 +14223,6 @@ eusoilvoc:StagnosolsWRB a skos:Concept ;
         she:Stagnosols ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Stagnosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:SurfaceDrainage a skos:Concept ;
@@ -13990,6 +14243,7 @@ eusoilvoc:SurfaceDrainage a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilDrainage .
 
 eusoilvoc:TechnosolsWRB a skos:Concept ;
+    skos:altLabel "Technosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -14004,7 +14258,6 @@ eusoilvoc:TechnosolsWRB a skos:Concept ;
         nalt:216367 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Technosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:TillageErosion a skos:Concept ;
@@ -14029,6 +14282,7 @@ eusoilvoc:TillageErosion a skos:Concept ;
         eusoilvoc:SoilErosion .
 
 eusoilvoc:UltisolsUSDA a skos:Concept ;
+    skos:altLabel "Ultisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -14041,10 +14295,10 @@ eusoilvoc:UltisolsUSDA a skos:Concept ;
     skos:exactMatch nalt:11621 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Ultisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationUSDA .
 
 eusoilvoc:UmbrisolsWRB a skos:Concept ;
+    skos:altLabel "Umbrisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -14059,7 +14313,6 @@ eusoilvoc:UmbrisolsWRB a skos:Concept ;
         nalt:216368 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Umbrisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:Underdrainage a skos:Concept ;
@@ -14078,6 +14331,7 @@ eusoilvoc:Underdrainage a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilDrainage .
 
 eusoilvoc:VertisolsFAO a skos:Concept ;
+    skos:altLabel "Vertisol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -14093,6 +14347,7 @@ eusoilvoc:VertisolsFAO a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:VertisolsUSDA a skos:Concept ;
+    skos:altLabel "Vertisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -14104,10 +14359,10 @@ eusoilvoc:VertisolsUSDA a skos:Concept ;
     skos:closeMatch nalt:11557 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Vertisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationUSDA .
 
 eusoilvoc:VertisolsWRB a skos:Concept ;
+    skos:altLabel "Vertisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -14121,7 +14376,6 @@ eusoilvoc:VertisolsWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_8199 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Vertisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:WasteDisposal a skos:Concept ;
@@ -14183,6 +14437,7 @@ eusoilvoc:Weather a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:PlanetaryPhenomena .
 
 eusoilvoc:XerosolsFAO a skos:Concept ;
+    skos:altLabel "xerosol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -14195,10 +14450,10 @@ eusoilvoc:XerosolsFAO a skos:Concept ;
         nalt:306591 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "xerosols"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:YermosolsFAO a skos:Concept ;
+    skos:altLabel "yermosol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:broaderTransitive eusoilvoc:GeneticSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -14210,7 +14465,6 @@ eusoilvoc:YermosolsFAO a skos:Concept ;
     skos:exactMatch agrovoc:c_8484 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "yermosols"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationFAO .
 
 eusoilvoc:Colluvium a skos:Concept ;
@@ -14278,6 +14532,7 @@ eusoilvoc:Floods a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:Inundation .
 
 eusoilvoc:IgneousRockSoils a skos:Concept ;
+    skos:altLabel "igneous rock soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -14310,6 +14565,7 @@ eusoilvoc:PlantAvailableWaterCapacity a skos:Concept ;
         eusoilvoc:SoilWaterRetentionIndex .
 
 eusoilvoc:SalineSoils a skos:Concept ;
+    skos:altLabel "saline soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:broaderTransitive eusoilvoc:ChemicalSoilTypes,
         eusoilvoc:SoilChemicophysicalProperties,
@@ -14696,6 +14952,7 @@ eusoilvoc:SoilWaterBalance a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilHydraulicProperties .
 
 eusoilvoc:SoilWaterRegimes a skos:Concept ;
+    skos:altLabel "soil water regime"@en ;
     skos:broader eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilWaterPhysicalProperties ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
@@ -14856,6 +15113,7 @@ eusoilvoc:GaseousNitrogen a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:NitrogenTotal .
 
 eusoilvoc:InorganicAmendments a skos:Concept ;
+    skos:altLabel "inorganic amendment"@en ;
     skos:broader eusoilvoc:SoilAmendments ;
     skos:broaderTransitive eusoilvoc:SoilAmendments,
         eusoilvoc:SoilManagement ;
@@ -14976,6 +15234,7 @@ eusoilvoc:SoilAirMovement a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilAirPhysicalProcesses .
 
 eusoilvoc:SoilBacteria a skos:Concept ;
+    skos:altLabel "soil bacterium"@en ;
     skos:broader eusoilvoc:SoilMicroorganisms ;
     skos:broaderTransitive eusoilvoc:SoilMicroorganisms,
         eusoilvoc:SoilOrganisms,
@@ -14992,6 +15251,7 @@ eusoilvoc:SoilBacteria a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilMicroorganisms .
 
 eusoilvoc:SoilBorneOrganisms a skos:Concept ;
+    skos:altLabel "soil-borne organism"@en ;
     skos:broader eusoilvoc:SoilOrganisms ;
     skos:broaderTransitive eusoilvoc:SoilOrganisms,
         eusoilvoc:SoilSubstance ;
@@ -15324,6 +15584,7 @@ eusoilvoc:InorganicNitrogen a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:Nitrogen .
 
 eusoilvoc:PalaeosolicSoilTypes a skos:Concept ;
+    skos:altLabel "palaeosolic soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -15388,6 +15649,7 @@ eusoilvoc:SoilDensification a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhysicalProcesses .
 
 eusoilvoc:SoilErosionModels a skos:Concept ;
+    skos:altLabel "soil erosion model"@en ;
     skos:broader eusoilvoc:SoilSciences ;
     skos:broaderTransitive eusoilvoc:SoilSciences ;
     skos:exactMatch agrovoc:c_331058,
@@ -15403,6 +15665,7 @@ eusoilvoc:SoilErosionModels a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilSciences .
 
 eusoilvoc:SoilMicroorganisms a skos:Concept ;
+    skos:altLabel "soil microorganism"@en ;
     skos:broader eusoilvoc:SoilOrganisms ;
     skos:broaderTransitive eusoilvoc:SoilOrganisms,
         eusoilvoc:SoilSubstance ;
@@ -15602,6 +15865,7 @@ eusoilvoc:SoilWaterInfiltrationCapacity a skos:Concept ;
         eusoilvoc:SoilWaterTransmissionIndex .
 
 eusoilvoc:SolonchaksWRB a skos:Concept ;
+    skos:altLabel "Solonchak"@en ;
     skos:broader eusoilvoc:SalineSoils,
         eusoilvoc:SoilClassificationWRB ;
     skos:broaderTransitive eusoilvoc:ChemicalSoilTypes,
@@ -15618,11 +15882,11 @@ eusoilvoc:SolonchaksWRB a skos:Concept ;
     skos:exactMatch agrovoc:c_7231 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Solonchaks"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SalineSoils,
         eusoilvoc:SoilClassificationWRB .
 
 eusoilvoc:StructuralSoilTypes a skos:Concept ;
+    skos:altLabel "structural soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -15882,6 +16146,7 @@ eusoilvoc:SoilWater a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilComponents .
 
 eusoilvoc:SoilWaterConstants a skos:Concept ;
+    skos:altLabel "soil water constant"@en ;
     skos:broader eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilWaterPhysicalProperties ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
@@ -16173,10 +16438,10 @@ eusoilvoc:Peat a skos:Concept ;
         nalt:57128,
         she:Peat ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:PeatDecompostion,
+    skos:narrower eusoilvoc:PeatDecomposition,
         eusoilvoc:PeatDrainage,
         eusoilvoc:PeatVolume ;
-    skos:narrowerTransitive eusoilvoc:PeatDecompostion,
+    skos:narrowerTransitive eusoilvoc:PeatDecomposition,
         eusoilvoc:PeatDrainage,
         eusoilvoc:PeatVolume ;
     skos:prefLabel "peat"@en ;
@@ -16312,10 +16577,10 @@ eusoilvoc:SoilInorganicCarbon a skos:Concept,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilSubstance,
         eusoilvoc:SoilTotalCarbon ;
-    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Carinorg ;
-            rdf:value "Inorganic carbon in soil primarily consists of carbonates like calcium carbonate and magnesium carbonate. It contributes to soil pH buffering and is a significant feature of arid and calcareous soils. Excess inorganic carbon can immobilize certain nutrients, requiring careful management in agricultural systems. Source: Soil Science Society of America."@en ],
-        [ dcterms:source agrovoc:c_e3783c76 ;
-            rdf:value "Content or amount of total inorganic carbon in soil"@en ] ;
+    skos:definition [ dcterms:source agrovoc:c_e3783c76 ;
+            rdf:value "Content or amount of total inorganic carbon in soil"@en ],
+        [ dcterms:source glosis_cl:physioChemicalPropertyCode-Carinorg ;
+            rdf:value "Inorganic carbon in soil primarily consists of carbonates like calcium carbonate and magnesium carbonate. It contributes to soil pH buffering and is a significant feature of arid and calcareous soils. Excess inorganic carbon can immobilize certain nutrients, requiring careful management in agricultural systems. Source: Soil Science Society of America."@en ] ;
     skos:exactMatch agrovoc:c_e3783c76,
         glosis_cl:physioChemicalPropertyCode-Carinorg,
         nalt:338945 ;
@@ -16470,6 +16735,7 @@ eusoilvoc:CationExchangeCapacity a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalCapacity .
 
 eusoilvoc:MineralogicalSoilTypes a skos:Concept ;
+    skos:altLabel "mineralogical soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -16547,7 +16813,6 @@ eusoilvoc:SoilBiologicalProperties a skos:Concept ;
         eusoilvoc:SoilBiota,
         eusoilvoc:SoilMicrobialBiomass ;
     skos:prefLabel "soil biological properties"@en ;
-    skos:related eusoilvoc:SoilQuality ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilProperties .
 
 eusoilvoc:SoilFailure a skos:Concept ;
@@ -18333,6 +18598,7 @@ eusoilvoc:Cementation a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhysicalProperties .
 
 eusoilvoc:DryMulches a skos:Concept ;
+    skos:altLabel "dry mulch"@en ;
     skos:broader eusoilvoc:Mulch ;
     skos:broaderTransitive eusoilvoc:Mulch,
         eusoilvoc:SoilAmendments,
@@ -18786,6 +19052,7 @@ eusoilvoc:pHProcedure-pHKCl a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilpH .
 
 eusoilvoc:LimingMaterials a skos:Concept ;
+    skos:altLabel "liming material"@en ;
     skos:broader eusoilvoc:InorganicAmendments,
         eusoilvoc:SoilAmendments ;
     skos:broaderTransitive eusoilvoc:InorganicAmendments,
@@ -19002,33 +19269,6 @@ eusoilvoc:ConservationTillage a skos:Concept ;
     skos:prefLabel "conservation tillage"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilTillage .
 
-eusoilvoc:Geology a skos:Concept,
-        sosa:ObservableProperty ;
-    skos:definition [ dcterms:source glosis_sp:geologyProperty ;
-            rdf:value "Geology refers to the underlying geological composition of an area, including rock types, mineral content, and geological processes. The geology of a region influences soil formation, structure, fertility, and drainage properties. Source: AGI, 'Encyclopedia of Geology'"@en ] ;
-    skos:exactMatch agrovoc:c_3232,
-        inrae:c_11203,
-        glosis_sp:geologyProperty,
-        gemet:3650,
-        nalt:497 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Lithology,
-        eusoilvoc:ParentMaterial,
-        eusoilvoc:RockOutcrops ;
-    skos:narrowerTransitive eusoilvoc:Colluvium,
-        eusoilvoc:Gravel,
-        eusoilvoc:Lithology,
-        eusoilvoc:Loess,
-        eusoilvoc:ParentDeposition,
-        eusoilvoc:ParentLithology,
-        eusoilvoc:ParentMaterial,
-        eusoilvoc:ParentTextureUnconsolidated,
-        eusoilvoc:RockOutcropCover,
-        eusoilvoc:RockOutcropDistance,
-        eusoilvoc:RockOutcrops ;
-    skos:prefLabel "geology"@en ;
-    skos:topConceptOf <https://w3id.org/eusoilvoc> .
-
 eusoilvoc:SoilAggregationIndex a skos:Concept ;
     skos:broader eusoilvoc:SoilStructureIndex ;
     skos:broaderTransitive eusoilvoc:SoilIndicators,
@@ -19116,6 +19356,7 @@ eusoilvoc:SoilRetention a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhysicalProcesses .
 
 eusoilvoc:SoilSurveys a skos:Concept ;
+    skos:altLabel "soil survey"@en ;
     skos:broader eusoilvoc:SoilDescription ;
     skos:broaderTransitive eusoilvoc:SoilDescription ;
     skos:definition [ dcterms:source agrovoc:c_16551 ;
@@ -19208,6 +19449,34 @@ eusoilvoc:ExternalFactors a skos:Concept ;
         eusoilvoc:LandUseShrubs ;
     skos:prefLabel "external factors"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:NonsoilIndicators .
+
+eusoilvoc:Geology a skos:Concept,
+        sosa:ObservableProperty ;
+    skos:definition [ dcterms:source glosis_sp:geologyProperty ;
+            rdf:value "Geology refers to the underlying geological composition of an area, including rock types, mineral content, and geological processes. The geology of a region influences soil formation, structure, fertility, and drainage properties. Source: AGI, 'Encyclopedia of Geology'"@en ] ;
+    skos:exactMatch agrovoc:c_3232,
+        inrae:c_11203,
+        glosis_sp:geologyProperty,
+        gemet:3650,
+        nalt:497 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:Lithology,
+        eusoilvoc:ParentMaterial,
+        eusoilvoc:RockOutcrops ;
+    skos:narrowerTransitive eusoilvoc:Alluvium,
+        eusoilvoc:Colluvium,
+        eusoilvoc:Gravel,
+        eusoilvoc:Lithology,
+        eusoilvoc:Loess,
+        eusoilvoc:ParentDeposition,
+        eusoilvoc:ParentLithology,
+        eusoilvoc:ParentMaterial,
+        eusoilvoc:ParentTextureUnconsolidated,
+        eusoilvoc:RockOutcropCover,
+        eusoilvoc:RockOutcropDistance,
+        eusoilvoc:RockOutcrops ;
+    skos:prefLabel "geology"@en ;
+    skos:topConceptOf <https://w3id.org/eusoilvoc> .
 
 eusoilvoc:Soil a skos:Concept ;
     skos:closeMatch she:Soils ;
@@ -19370,30 +19639,6 @@ eusoilvoc:Nitrogen a skos:Concept ;
     skos:prefLabel "nitrogen"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:Macronutrients .
 
-eusoilvoc:ParentMaterial a skos:Concept ;
-    skos:broader eusoilvoc:Geology ;
-    skos:broaderTransitive eusoilvoc:Geology ;
-    skos:definition [ dcterms:source agrovoc:c_7181 ;
-            rdf:value "The material from which the soil has presumably been derived. The parent material should be described as accurately as possible, indicating its origin and nature. There are basically two groups of parent material on which the soil has formed: unconsolidated materials (mostly sediments); and weathering materials overlying the hard rock from which they originate."@en ] ;
-    skos:exactMatch agrovoc:c_7181,
-        iso11074:3.306,
-        she:ParentMaterial ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Colluvium,
-        eusoilvoc:Gravel,
-        eusoilvoc:Loess,
-        eusoilvoc:ParentDeposition,
-        eusoilvoc:ParentLithology,
-        eusoilvoc:ParentTextureUnconsolidated ;
-    skos:narrowerTransitive eusoilvoc:Colluvium,
-        eusoilvoc:Gravel,
-        eusoilvoc:Loess,
-        eusoilvoc:ParentDeposition,
-        eusoilvoc:ParentLithology,
-        eusoilvoc:ParentTextureUnconsolidated ;
-    skos:prefLabel "parent material"@en ;
-    eusoilvoc:skosmosHierarchyParent eusoilvoc:Geology .
-
 eusoilvoc:SoilCrusts a skos:Concept ;
     skos:altLabel "soil crust"@en ;
     skos:broader eusoilvoc:SoilMorphologicalFeatures,
@@ -19446,6 +19691,7 @@ eusoilvoc:SoilThermalProcesses a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhysicalProcesses .
 
 eusoilvoc:TexturalSoilTypes a skos:Concept ;
+    skos:altLabel "textural soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -19523,6 +19769,7 @@ eusoilvoc:SoilFauna a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilOrganisms .
 
 eusoilvoc:SoilHydraulicProperties a skos:Concept ;
+    skos:altLabel "soil hydraulic property"@en ;
     skos:broader eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilWaterPhysicalProperties ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
@@ -19571,6 +19818,7 @@ eusoilvoc:BulkDensityWholeSoil a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilBulkDensity .
 
 eusoilvoc:OrganicMulches a skos:Concept ;
+    skos:altLabel "organic mulch"@en ;
     skos:broader eusoilvoc:Mulch ;
     skos:broaderTransitive eusoilvoc:Mulch,
         eusoilvoc:SoilAmendments,
@@ -19774,6 +20022,30 @@ eusoilvoc:Mulch a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilAmendments,
         eusoilvoc:SoilManagement .
 
+eusoilvoc:ParentMaterial a skos:Concept ;
+    skos:broader eusoilvoc:Geology ;
+    skos:broaderTransitive eusoilvoc:Geology ;
+    skos:exactMatch agrovoc:c_7181,
+        iso11074:3.306,
+        she:ParentMaterial ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:Alluvium,
+        eusoilvoc:Colluvium,
+        eusoilvoc:Gravel,
+        eusoilvoc:Loess,
+        eusoilvoc:ParentDeposition,
+        eusoilvoc:ParentLithology,
+        eusoilvoc:ParentTextureUnconsolidated ;
+    skos:narrowerTransitive eusoilvoc:Alluvium,
+        eusoilvoc:Colluvium,
+        eusoilvoc:Gravel,
+        eusoilvoc:Loess,
+        eusoilvoc:ParentDeposition,
+        eusoilvoc:ParentLithology,
+        eusoilvoc:ParentTextureUnconsolidated ;
+    skos:prefLabel "parent material"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:Geology .
+
 eusoilvoc:SoilBulkDensity a skos:Concept ;
     skos:broader eusoilvoc:SoilDensity ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
@@ -19897,10 +20169,10 @@ eusoilvoc:SoilTotalCarbon a skos:Concept,
         eusoilvoc:SoilComponents,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilSubstance ;
-    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Cartot ;
-            rdf:value "Total carbon in soil includes both organic carbon (from plant and microbial residues) and inorganic carbon (primarily carbonates). It is a fundamental component of soil organic matter, influencing soil fertility, structure, and water retention. High carbon levels are associated with better soil health and productivity. Source: USDA NRCS."@en ],
-        [ dcterms:source agrovoc:c_24fb4269 ;
-            rdf:value "Content or amount of total carbon in soil, including organic carbon and carbon from lime."@en ] ;
+    skos:definition [ dcterms:source agrovoc:c_24fb4269 ;
+            rdf:value "Content or amount of total carbon in soil, including organic carbon and carbon from lime."@en ],
+        [ dcterms:source glosis_cl:physioChemicalPropertyCode-Cartot ;
+            rdf:value "Total carbon in soil includes both organic carbon (from plant and microbial residues) and inorganic carbon (primarily carbonates). It is a fundamental component of soil organic matter, influencing soil fertility, structure, and water retention. High carbon levels are associated with better soil health and productivity. Source: USDA NRCS."@en ] ;
     skos:exactMatch agrovoc:c_24fb4269,
         glosis_cl:physioChemicalPropertyCode-Cartot ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -20009,10 +20281,10 @@ eusoilvoc:SoilTexture a skos:Concept,
         eusoilvoc:SoilProperties ;
     skos:definition [ dcterms:source agrovoc:c_7199 ;
             rdf:value "The relative proportions of the various sized groups of individual soil grains in a mass of soil. Specifically, it refers to the proportions of clay, silt, and sand below 2 mm in size (fine earth fraction)."@en ],
-        [ dcterms:source glosis_cm:textureProperty ;
-            rdf:value "The Soil Texture refers to the relative proportions of sand, silt, and clay in a soil. It is a key indicator of the soil’s ability to retain moisture, drain water, and support root growth. Soils can be classified into textures such as sandy, loamy, or clayey, each with distinct characteristics affecting soil management. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ],
         [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "A qualitative characterization of soil particle sizes based on the feel of the soil material, such as coarse, gritty, fine or smooth."@en ] ;
+            rdf:value "A qualitative characterization of soil particle sizes based on the feel of the soil material, such as coarse, gritty, fine or smooth."@en ],
+        [ dcterms:source glosis_cm:textureProperty ;
+            rdf:value "The Soil Texture refers to the relative proportions of sand, silt, and clay in a soil. It is a key indicator of the soil’s ability to retain moisture, drain water, and support root growth. Soils can be classified into textures such as sandy, loamy, or clayey, each with distinct characteristics affecting soil management. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ] ;
     skos:exactMatch agrovoc:c_7199,
         spp:SoilTexture,
         inrae:c_394,
@@ -20104,6 +20376,7 @@ eusoilvoc:SoilPollution a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilThreats .
 
 eusoilvoc:AnthropogenicSoils a skos:Concept ;
+    skos:altLabel "anthropogenic soil"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -20156,6 +20429,7 @@ eusoilvoc:BulkDensityFineEarth a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilBulkDensity .
 
 eusoilvoc:ClimaticSoilTypes a skos:Concept ;
+    skos:altLabel "climatic soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -20182,6 +20456,7 @@ eusoilvoc:ClimaticSoilTypes a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilTypes .
 
 eusoilvoc:CulturalSoilTypes a skos:Concept ;
+    skos:altLabel "cultural soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -20231,33 +20506,6 @@ eusoilvoc:HydrogenExchangeableBases a skos:Concept,
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-bacl2tea,
         eusoilvoc:exchangeableBasesProcedure-ExchBases_ph8-unkn ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalProperties .
-
-eusoilvoc:SoilClayMineral a skos:Concept ;
-    skos:broader eusoilvoc:SoilContents ;
-    skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
-        eusoilvoc:SoilContents,
-        eusoilvoc:SoilPhysicalProperties,
-        eusoilvoc:SoilProperties ;
-    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "A hydrous aluminum silicate mineral occurring in soil."@en ] ;
-    skos:exactMatch spp:SoilClayMineral ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Allophane,
-        eusoilvoc:Illites,
-        eusoilvoc:Imogolite,
-        eusoilvoc:Kaolinite,
-        eusoilvoc:Montmorillonites,
-        eusoilvoc:Smectites,
-        eusoilvoc:Vermiculites ;
-    skos:narrowerTransitive eusoilvoc:Allophane,
-        eusoilvoc:Illites,
-        eusoilvoc:Imogolite,
-        eusoilvoc:Kaolinite,
-        eusoilvoc:Montmorillonites,
-        eusoilvoc:Smectites,
-        eusoilvoc:Vermiculites ;
-    skos:prefLabel "soil clay mineral"@en ;
-    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilContents .
 
 eusoilvoc:SoilFunctionIndicators a skos:Concept ;
     skos:altLabel "soil function indicator"@en ;
@@ -20392,6 +20640,7 @@ eusoilvoc:SodiumExchangeableBases a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:Sodium .
 
 eusoilvoc:SoilHorizons a skos:Concept ;
+    skos:altLabel "soil horizon"@en ;
     skos:broader eusoilvoc:SoilMorphologicalFeatures ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilMorphologicalFeatures ;
@@ -20764,6 +21013,7 @@ eusoilvoc:SoilDensity a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties .
 
 eusoilvoc:SoilMorphologicalFeatures a skos:Concept ;
+    skos:altLabel "soil morphological feature"@en ;
     skos:broader eusoilvoc:SoilDescription ;
     skos:broaderTransitive eusoilvoc:SoilDescription ;
     skos:exactMatch agrovoc:c_7179,
@@ -20877,10 +21127,10 @@ eusoilvoc:NitrogenTotal a skos:Concept,
         eusoilvoc:SoilNutrients,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilSubstance ;
-    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Nittot ;
-            rdf:value "Total nitrogen encompasses all nitrogen forms in soil, including organic nitrogen in humus and inorganic nitrogen such as ammonium (NH₄⁺) and nitrate (NO₃⁻). Nitrogen is essential for plant growth, being a vital component of amino acids, proteins, and chlorophyll. Total nitrogen is a key indicator of soil fertility and its capacity to sustain long-term crop productivity. Source: Brady & Weil (2017)."@en ],
-        [ dcterms:source agrovoc:c_bdc779f4 ;
-            rdf:value "Content or amount of total nitrogen in soil."@en ] ;
+    skos:definition [ dcterms:source agrovoc:c_bdc779f4 ;
+            rdf:value "Content or amount of total nitrogen in soil."@en ],
+        [ dcterms:source glosis_cl:physioChemicalPropertyCode-Nittot ;
+            rdf:value "Total nitrogen encompasses all nitrogen forms in soil, including organic nitrogen in humus and inorganic nitrogen such as ammonium (NH₄⁺) and nitrate (NO₃⁻). Nitrogen is essential for plant growth, being a vital component of amino acids, proteins, and chlorophyll. Total nitrogen is a key indicator of soil fertility and its capacity to sustain long-term crop productivity. Source: Brady & Weil (2017)."@en ] ;
     skos:exactMatch agrovoc:c_bdc779f4,
         glosis_cl:physioChemicalPropertyCode-Nittot ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -20900,50 +21150,6 @@ eusoilvoc:NitrogenTotal a skos:Concept,
         eusoilvoc:nitrogenTotalProcedure-TotalN_tn08 ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:Nitrogen,
         eusoilvoc:NitrogenContent .
-
-eusoilvoc:SoilDegradation a skos:Concept ;
-    skos:broader eusoilvoc:SoilChemicalDegradativeProcesses,
-        eusoilvoc:SoilPhysicalDegradativeProcesses,
-        eusoilvoc:SoilThreats ;
-    skos:broaderTransitive eusoilvoc:SoilChemicalDegradativeProcesses,
-        eusoilvoc:SoilChemicalProcesses,
-        eusoilvoc:SoilPhysicalDegradativeProcesses,
-        eusoilvoc:SoilPhysicalProcesses,
-        eusoilvoc:SoilProcesses,
-        eusoilvoc:SoilThreats ;
-    skos:definition [ dcterms:source agrovoc:c_7168 ;
-            rdf:value "Soil degradation refers to the diminishing capacity of the  soil to provide ecosystem goods and services as desired by its stakeholders."@en ],
-        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "A decline in soil quality such that the soil cannot perform one or several of its principal functions."@en ] ;
-    skos:exactMatch agrovoc:c_7168,
-        spp:SoilDegradation,
-        inrae:c_960,
-        gemet:7857,
-        nalt:958,
-        she:SoilDegradation ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:SoilBiologicalDegradation,
-        eusoilvoc:SoilChemicalDegradation,
-        eusoilvoc:SoilCompaction,
-        eusoilvoc:SoilEcologicalDegradation,
-        eusoilvoc:SoilPhysicalDegradation,
-        eusoilvoc:SoilSalinization,
-        eusoilvoc:SoilSealing,
-        eusoilvoc:SoilSickness ;
-    skos:narrowerTransitive eusoilvoc:SoilBiologicalDegradation,
-        eusoilvoc:SoilChemicalDegradation,
-        eusoilvoc:SoilCompaction,
-        eusoilvoc:SoilEcologicalDegradation,
-        eusoilvoc:SoilPhysicalDegradation,
-        eusoilvoc:SoilSalinization,
-        eusoilvoc:SoilSealing,
-        eusoilvoc:SoilSealingConsistence,
-        eusoilvoc:SoilSealingThickness,
-        eusoilvoc:SoilSickness ;
-    skos:prefLabel "soil degradation"@en ;
-    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalDegradativeProcesses,
-        eusoilvoc:SoilPhysicalDegradativeProcesses,
-        eusoilvoc:SoilThreats .
 
 eusoilvoc:SoilPhenomena a skos:Concept ;
     skos:altLabel "soil phenomenon"@en ;
@@ -20977,6 +21183,7 @@ eusoilvoc:SoilPhenomena a skos:Concept ;
     skos:topConceptOf <https://w3id.org/eusoilvoc> .
 
 eusoilvoc:SoilSciences a skos:Concept ;
+    skos:altLabel "soil science"@en ;
     skos:exactMatch agrovoc:c_7188 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:Agrology,
@@ -21081,6 +21288,7 @@ eusoilvoc:Macronutrients a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilNutrients .
 
 eusoilvoc:SoilAmendments a skos:Concept ;
+    skos:altLabel "soil amendment"@en ;
     skos:broader eusoilvoc:SoilManagement ;
     skos:broaderTransitive eusoilvoc:SoilManagement ;
     skos:definition [ dcterms:source agrovoc:c_7159 ;
@@ -21120,49 +21328,11 @@ eusoilvoc:SoilAmendments a skos:Concept ;
     skos:prefLabel "soil amendments"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilManagement .
 
-eusoilvoc:SoilChemicalDegradativeProcesses a skos:Concept ;
-    skos:altLabel "soil chemical degradative process"@en ;
-    skos:broader eusoilvoc:SoilChemicalProcesses ;
-    skos:broaderTransitive eusoilvoc:SoilChemicalProcesses,
-        eusoilvoc:SoilProcesses ;
-    skos:exactMatch spp:SoilChemicalDegradativeProcess ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:SoilAcidification,
-        eusoilvoc:SoilCrustFormation,
-        eusoilvoc:SoilCrusting,
-        eusoilvoc:SoilDegradation,
-        eusoilvoc:SoilLeaching,
-        eusoilvoc:SoilStructuralDecline,
-        eusoilvoc:SoilSurfaceSealFormation,
-        eusoilvoc:SoilSurfaceSealing ;
-    skos:narrowerTransitive eusoilvoc:SoilAcidification,
-        eusoilvoc:SoilBiologicalDegradation,
-        eusoilvoc:SoilChemicalDegradation,
-        eusoilvoc:SoilCompaction,
-        eusoilvoc:SoilCrustFormation,
-        eusoilvoc:SoilCrusting,
-        eusoilvoc:SoilDegradation,
-        eusoilvoc:SoilEcologicalDegradation,
-        eusoilvoc:SoilLeaching,
-        eusoilvoc:SoilPhysicalDegradation,
-        eusoilvoc:SoilSalinization,
-        eusoilvoc:SoilSealing,
-        eusoilvoc:SoilSealingConsistence,
-        eusoilvoc:SoilSealingThickness,
-        eusoilvoc:SoilSickness,
-        eusoilvoc:SoilStructuralDecline,
-        eusoilvoc:SoilSurfaceSealFormation,
-        eusoilvoc:SoilSurfaceSealing ;
-    skos:prefLabel "soil chemical degradative processes"@en ;
-    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalProcesses .
-
 eusoilvoc:SoilOrganisms a skos:Concept ;
     skos:altLabel "soil organism"@en ;
     skos:broader eusoilvoc:SoilSubstance ;
     skos:broaderTransitive eusoilvoc:SoilSubstance ;
     skos:closeMatch nalt:278109 ;
-    skos:definition [ dcterms:source agrovoc:c_33552 ;
-            rdf:value "It includes archaea, bacteria, protists, tardigrades, rotifers, nematodes, acari (mites), collembolans (springtails), worms (enchytraeids and earthworms), macroarthropods (e.g. ants, termites, centipedes, millipedes, woodlice, etc.) and burrowing mammals. It also includes plant roots, fungi and lichens. There are also animals, such as beetle larvae, flies and butterflies, that use the soil as a temporary habitat to reproduce or to spend their early life stages feeding on different live and dead plant materials until they reach their maturity."@en ] ;
     skos:exactMatch agrovoc:c_33552,
         she:SoilOrganisms ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -21249,6 +21419,7 @@ eusoilvoc:SoilStructure a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties .
 
 eusoilvoc:EcologicalSoilTypes a skos:Concept ;
+    skos:altLabel "ecological soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -21281,6 +21452,89 @@ eusoilvoc:EcologicalSoilTypes a skos:Concept ;
         eusoilvoc:WetlandSoils ;
     skos:prefLabel "ecological soil types"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilTypes .
+
+eusoilvoc:SoilChemicalDegradativeProcesses a skos:Concept ;
+    skos:altLabel "soil chemical degradative process"@en ;
+    skos:broader eusoilvoc:SoilChemicalProcesses ;
+    skos:broaderTransitive eusoilvoc:SoilChemicalProcesses,
+        eusoilvoc:SoilProcesses ;
+    skos:exactMatch spp:SoilChemicalDegradativeProcess ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:SoilAcidification,
+        eusoilvoc:SoilCrustFormation,
+        eusoilvoc:SoilCrusting,
+        eusoilvoc:SoilDegradation,
+        eusoilvoc:SoilLeaching,
+        eusoilvoc:SoilStructuralDecline,
+        eusoilvoc:SoilSurfaceSealFormation,
+        eusoilvoc:SoilSurfaceSealing ;
+    skos:narrowerTransitive eusoilvoc:SoilAcidification,
+        eusoilvoc:SoilBiologicalDegradation,
+        eusoilvoc:SoilChemicalDegradation,
+        eusoilvoc:SoilCompaction,
+        eusoilvoc:SoilCrustFormation,
+        eusoilvoc:SoilCrusting,
+        eusoilvoc:SoilDegradation,
+        eusoilvoc:SoilEcologicalDegradation,
+        eusoilvoc:SoilLeaching,
+        eusoilvoc:SoilPhysicalDegradation,
+        eusoilvoc:SoilSalinisation,
+        eusoilvoc:SoilSalinization,
+        eusoilvoc:SoilSealing,
+        eusoilvoc:SoilSealingConsistence,
+        eusoilvoc:SoilSealingThickness,
+        eusoilvoc:SoilSickness,
+        eusoilvoc:SoilStructuralDecline,
+        eusoilvoc:SoilSurfaceSealFormation,
+        eusoilvoc:SoilSurfaceSealing ;
+    skos:prefLabel "soil chemical degradative processes"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalProcesses .
+
+eusoilvoc:SoilDegradation a skos:Concept ;
+    skos:broader eusoilvoc:SoilChemicalDegradativeProcesses,
+        eusoilvoc:SoilPhysicalDegradativeProcesses,
+        eusoilvoc:SoilThreats ;
+    skos:broaderTransitive eusoilvoc:SoilChemicalDegradativeProcesses,
+        eusoilvoc:SoilChemicalProcesses,
+        eusoilvoc:SoilPhysicalDegradativeProcesses,
+        eusoilvoc:SoilPhysicalProcesses,
+        eusoilvoc:SoilProcesses,
+        eusoilvoc:SoilThreats ;
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A decline in soil quality such that the soil cannot perform one or several of its principal functions."@en ],
+        [ dcterms:source agrovoc:c_7168 ;
+            rdf:value "Soil degradation refers to the diminishing capacity of the  soil to provide ecosystem goods and services as desired by its stakeholders."@en ] ;
+    skos:exactMatch agrovoc:c_7168,
+        spp:SoilDegradation,
+        inrae:c_960,
+        gemet:7857,
+        nalt:958,
+        she:SoilDegradation ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:SoilBiologicalDegradation,
+        eusoilvoc:SoilChemicalDegradation,
+        eusoilvoc:SoilCompaction,
+        eusoilvoc:SoilEcologicalDegradation,
+        eusoilvoc:SoilPhysicalDegradation,
+        eusoilvoc:SoilSalinisation,
+        eusoilvoc:SoilSalinization,
+        eusoilvoc:SoilSealing,
+        eusoilvoc:SoilSickness ;
+    skos:narrowerTransitive eusoilvoc:SoilBiologicalDegradation,
+        eusoilvoc:SoilChemicalDegradation,
+        eusoilvoc:SoilCompaction,
+        eusoilvoc:SoilEcologicalDegradation,
+        eusoilvoc:SoilPhysicalDegradation,
+        eusoilvoc:SoilSalinisation,
+        eusoilvoc:SoilSalinization,
+        eusoilvoc:SoilSealing,
+        eusoilvoc:SoilSealingConsistence,
+        eusoilvoc:SoilSealingThickness,
+        eusoilvoc:SoilSickness ;
+    skos:prefLabel "soil degradation"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalDegradativeProcesses,
+        eusoilvoc:SoilPhysicalDegradativeProcesses,
+        eusoilvoc:SoilThreats .
 
 eusoilvoc:SoilPorosity a skos:Concept,
         sosa:ObservableProperty ;
@@ -21516,6 +21770,7 @@ eusoilvoc:SoilStructureIndirectIndex a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilStructureIndex .
 
 eusoilvoc:PhysiographicSoilTypes a skos:Concept ;
+    skos:altLabel "physiographic soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -21551,43 +21806,42 @@ eusoilvoc:PhysiographicSoilTypes a skos:Concept ;
     skos:prefLabel "physiographic soil types"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilTypes .
 
-eusoilvoc:SoilContents a skos:Concept ;
-    skos:altLabel "soil content"@en ;
-    skos:broader eusoilvoc:SoilPhysicalProperties ;
+eusoilvoc:SoilClayMineral a skos:Concept ;
+    skos:broader eusoilvoc:SoilContents ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
+        eusoilvoc:SoilContents,
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties ;
-    skos:exactMatch spp:SoilContent ;
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A hydrous aluminum silicate mineral occurring in soil."@en ] ;
+    skos:exactMatch spp:SoilClayMineral ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:GaseousCompositionOfSoilAir,
-        eusoilvoc:SoilAirContents,
-        eusoilvoc:SoilClayContents,
-        eusoilvoc:SoilClayMineral,
-        eusoilvoc:SoilGravelContents,
-        eusoilvoc:SoilOrganicMatterContents,
-        eusoilvoc:SoilOxygenConcentration,
-        eusoilvoc:SoilOxygenContents,
-        eusoilvoc:SoilSandContents,
-        eusoilvoc:SoilSiltContents ;
-    skos:narrowerTransitive eusoilvoc:Allophane,
-        eusoilvoc:GaseousCompositionOfSoilAir,
+    skos:narrower eusoilvoc:Allophane,
+        eusoilvoc:Halloysite,
         eusoilvoc:Illites,
         eusoilvoc:Imogolite,
         eusoilvoc:Kaolinite,
         eusoilvoc:Montmorillonites,
+        eusoilvoc:Nontronite,
+        eusoilvoc:Palygorskite,
+        eusoilvoc:Saponite,
+        eusoilvoc:Sepiolite,
         eusoilvoc:Smectites,
-        eusoilvoc:SoilAirContents,
-        eusoilvoc:SoilClayContents,
-        eusoilvoc:SoilClayMineral,
-        eusoilvoc:SoilGravelContents,
-        eusoilvoc:SoilOrganicMatterContents,
-        eusoilvoc:SoilOxygenConcentration,
-        eusoilvoc:SoilOxygenContents,
-        eusoilvoc:SoilSandContents,
-        eusoilvoc:SoilSiltContents,
         eusoilvoc:Vermiculites ;
-    skos:prefLabel "soil contents"@en ;
-    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhysicalProperties .
+    skos:narrowerTransitive eusoilvoc:Allophane,
+        eusoilvoc:Halloysite,
+        eusoilvoc:Illites,
+        eusoilvoc:Imogolite,
+        eusoilvoc:Kaolinite,
+        eusoilvoc:Montmorillonites,
+        eusoilvoc:Nontronite,
+        eusoilvoc:Palygorskite,
+        eusoilvoc:Saponite,
+        eusoilvoc:Sepiolite,
+        eusoilvoc:Smectites,
+        eusoilvoc:Vermiculites ;
+    skos:prefLabel "soil clay mineral"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilContents .
 
 eusoilvoc:SoilTransport a skos:Concept ;
     skos:broader eusoilvoc:SoilPhysicalProcesses ;
@@ -21889,6 +22143,7 @@ eusoilvoc:SoilEngineeringFunctions a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilFunctions .
 
 eusoilvoc:ChemicalSoilTypes a skos:Concept ;
+    skos:altLabel "chemical soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -22263,6 +22518,49 @@ eusoilvoc:PotassiumTotalElements a skos:Concept,
         eusoilvoc:totalElementsProcedure-Total_xtf-t ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:Potassium .
 
+eusoilvoc:SoilContents a skos:Concept ;
+    skos:altLabel "soil content"@en ;
+    skos:broader eusoilvoc:SoilPhysicalProperties ;
+    skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
+        eusoilvoc:SoilPhysicalProperties,
+        eusoilvoc:SoilProperties ;
+    skos:exactMatch spp:SoilContent ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:GaseousCompositionOfSoilAir,
+        eusoilvoc:SoilAirContents,
+        eusoilvoc:SoilClayContents,
+        eusoilvoc:SoilClayMineral,
+        eusoilvoc:SoilGravelContents,
+        eusoilvoc:SoilOrganicMatterContents,
+        eusoilvoc:SoilOxygenConcentration,
+        eusoilvoc:SoilOxygenContents,
+        eusoilvoc:SoilSandContents,
+        eusoilvoc:SoilSiltContents ;
+    skos:narrowerTransitive eusoilvoc:Allophane,
+        eusoilvoc:GaseousCompositionOfSoilAir,
+        eusoilvoc:Halloysite,
+        eusoilvoc:Illites,
+        eusoilvoc:Imogolite,
+        eusoilvoc:Kaolinite,
+        eusoilvoc:Montmorillonites,
+        eusoilvoc:Nontronite,
+        eusoilvoc:Palygorskite,
+        eusoilvoc:Saponite,
+        eusoilvoc:Sepiolite,
+        eusoilvoc:Smectites,
+        eusoilvoc:SoilAirContents,
+        eusoilvoc:SoilClayContents,
+        eusoilvoc:SoilClayMineral,
+        eusoilvoc:SoilGravelContents,
+        eusoilvoc:SoilOrganicMatterContents,
+        eusoilvoc:SoilOxygenConcentration,
+        eusoilvoc:SoilOxygenContents,
+        eusoilvoc:SoilSandContents,
+        eusoilvoc:SoilSiltContents,
+        eusoilvoc:Vermiculites ;
+    skos:prefLabel "soil contents"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhysicalProperties .
+
 eusoilvoc:SulfurTotalElements a skos:Concept,
         sosa:ObservableProperty ;
     skos:broader eusoilvoc:Sulfur ;
@@ -22387,10 +22685,10 @@ eusoilvoc:SoilMoistureContents a skos:Concept,
         eusoilvoc:SoilWaterPhysicalProperties ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "The amount of water removed from soil by heating at 105°C to constant weight, expressed as a fraction or percentage on a mass or volume basis. On a gravimetric basis it equals the difference between wet and dry soil mass divided by dry soil mass."@en ],
-        [ dcterms:source glosis_lh:moistureContentProperty ;
-            rdf:value "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ],
         [ dcterms:source agrovoc:c_7208 ;
-            rdf:value "Soil-water content is the basic state characteristic of soil; it expresses the relative quantity of water in the soil. Soil-water content can be expressed as the ratio of water amount and the amount of soil."@en ] ;
+            rdf:value "Soil-water content is the basic state characteristic of soil; it expresses the relative quantity of water in the soil. Soil-water content can be expressed as the ratio of water amount and the amount of soil."@en ],
+        [ dcterms:source glosis_lh:moistureContentProperty ;
+            rdf:value "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ] ;
     skos:exactMatch agrovoc:c_7208,
         spp:SoilMoistureContent,
         glosis_lh:moistureContentProperty ;
@@ -22425,8 +22723,9 @@ eusoilvoc:SoilMoistureContents a skos:Concept,
         eusoilvoc:SoilWaterPhysicalProperties .
 
 eusoilvoc:SoilPollutants a skos:Concept ;
-    skos:altLabel "soil Contaminants"@en,
-        "soil contaminant"@en ;
+    skos:altLabel "soil contaminant"@en,
+        "soil contaminants"@en,
+        "soil pollutant"@en ;
     skos:broader eusoilvoc:SoilPollution ;
     skos:broaderTransitive eusoilvoc:SoilPollution,
         eusoilvoc:SoilThreats ;
@@ -22592,60 +22891,6 @@ eusoilvoc:SodiumExtractableElements a skos:Concept,
         eusoilvoc:extractableElementsProcedure-Extr_nh4ch3ch-oh-cooh-leuven ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:Sodium .
 
-eusoilvoc:SoilPhysicalDegradativeProcesses a skos:Concept ;
-    skos:altLabel "soil physical degradative process"@en ;
-    skos:broader eusoilvoc:SoilPhysicalProcesses ;
-    skos:broaderTransitive eusoilvoc:SoilPhysicalProcesses,
-        eusoilvoc:SoilProcesses ;
-    skos:exactMatch spp:SoilPhysicalDegradativeProcess ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:SoilCompaction,
-        eusoilvoc:SoilCrustFormation,
-        eusoilvoc:SoilCrusting,
-        eusoilvoc:SoilDegradation,
-        eusoilvoc:SoilErosion,
-        eusoilvoc:SoilStructuralDecline,
-        eusoilvoc:SoilSurfaceSealFormation,
-        eusoilvoc:SoilSurfaceSealing ;
-    skos:narrowerTransitive eusoilvoc:AcceleratedErosion,
-        eusoilvoc:AnthropogenicErosion,
-        eusoilvoc:EphemeralGullyErosion,
-        eusoilvoc:GullyErosion,
-        eusoilvoc:HarvestingErosion,
-        eusoilvoc:InterrillErosion,
-        eusoilvoc:LivestockTramplingErosion,
-        eusoilvoc:PipingErosion,
-        eusoilvoc:RillErosion,
-        eusoilvoc:SheetErosion,
-        eusoilvoc:SoilBiologicalDegradation,
-        eusoilvoc:SoilChemicalDegradation,
-        eusoilvoc:SoilCompaction,
-        eusoilvoc:SoilCrustFormation,
-        eusoilvoc:SoilCrusting,
-        eusoilvoc:SoilDegradation,
-        eusoilvoc:SoilEcologicalDegradation,
-        eusoilvoc:SoilErosion,
-        eusoilvoc:SoilErosionActivityPeriod,
-        eusoilvoc:SoilErosionAreaAffected,
-        eusoilvoc:SoilErosionCategory,
-        eusoilvoc:SoilErosionDegree,
-        eusoilvoc:SoilErosionTotalAreaAffected,
-        eusoilvoc:SoilPhysicalDegradation,
-        eusoilvoc:SoilSalinization,
-        eusoilvoc:SoilSealing,
-        eusoilvoc:SoilSealingConsistence,
-        eusoilvoc:SoilSealingThickness,
-        eusoilvoc:SoilSickness,
-        eusoilvoc:SoilStructuralDecline,
-        eusoilvoc:SoilSurfaceSealFormation,
-        eusoilvoc:SoilSurfaceSealing,
-        eusoilvoc:SplashErosion,
-        eusoilvoc:TillageErosion,
-        eusoilvoc:WaterErosion,
-        eusoilvoc:WindErosion ;
-    skos:prefLabel "soil physical degradative processes"@en ;
-    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhysicalProcesses .
-
 eusoilvoc:SoilNutrients a skos:Concept ;
     skos:altLabel "soil nutrient"@en ;
     skos:broader eusoilvoc:SoilChemicalProperties,
@@ -22710,7 +22955,63 @@ eusoilvoc:SoilNutrients a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilSubstance .
 
+eusoilvoc:SoilPhysicalDegradativeProcesses a skos:Concept ;
+    skos:altLabel "soil physical degradative process"@en ;
+    skos:broader eusoilvoc:SoilPhysicalProcesses ;
+    skos:broaderTransitive eusoilvoc:SoilPhysicalProcesses,
+        eusoilvoc:SoilProcesses ;
+    skos:exactMatch spp:SoilPhysicalDegradativeProcess ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:SoilCompaction,
+        eusoilvoc:SoilCrustFormation,
+        eusoilvoc:SoilCrusting,
+        eusoilvoc:SoilDegradation,
+        eusoilvoc:SoilErosion,
+        eusoilvoc:SoilStructuralDecline,
+        eusoilvoc:SoilSurfaceSealFormation,
+        eusoilvoc:SoilSurfaceSealing ;
+    skos:narrowerTransitive eusoilvoc:AcceleratedErosion,
+        eusoilvoc:AnthropogenicErosion,
+        eusoilvoc:EphemeralGullyErosion,
+        eusoilvoc:GullyErosion,
+        eusoilvoc:HarvestingErosion,
+        eusoilvoc:InterrillErosion,
+        eusoilvoc:LivestockTramplingErosion,
+        eusoilvoc:PipingErosion,
+        eusoilvoc:RillErosion,
+        eusoilvoc:SheetErosion,
+        eusoilvoc:SoilBiologicalDegradation,
+        eusoilvoc:SoilChemicalDegradation,
+        eusoilvoc:SoilCompaction,
+        eusoilvoc:SoilCrustFormation,
+        eusoilvoc:SoilCrusting,
+        eusoilvoc:SoilDegradation,
+        eusoilvoc:SoilEcologicalDegradation,
+        eusoilvoc:SoilErosion,
+        eusoilvoc:SoilErosionActivityPeriod,
+        eusoilvoc:SoilErosionAreaAffected,
+        eusoilvoc:SoilErosionCategory,
+        eusoilvoc:SoilErosionDegree,
+        eusoilvoc:SoilErosionTotalAreaAffected,
+        eusoilvoc:SoilPhysicalDegradation,
+        eusoilvoc:SoilSalinisation,
+        eusoilvoc:SoilSalinization,
+        eusoilvoc:SoilSealing,
+        eusoilvoc:SoilSealingConsistence,
+        eusoilvoc:SoilSealingThickness,
+        eusoilvoc:SoilSickness,
+        eusoilvoc:SoilStructuralDecline,
+        eusoilvoc:SoilSurfaceSealFormation,
+        eusoilvoc:SoilSurfaceSealing,
+        eusoilvoc:SplashErosion,
+        eusoilvoc:TillageErosion,
+        eusoilvoc:WaterErosion,
+        eusoilvoc:WindErosion ;
+    skos:prefLabel "soil physical degradative processes"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhysicalProcesses .
+
 eusoilvoc:LithologicalSoilTypes a skos:Concept ;
+    skos:altLabel "lithological soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -23583,6 +23884,7 @@ eusoilvoc:SoilChemicalProcesses a skos:Concept ;
         eusoilvoc:SoilOxygenConsumption,
         eusoilvoc:SoilPhysicalDegradation,
         eusoilvoc:SoilPolymerAdsorption,
+        eusoilvoc:SoilSalinisation,
         eusoilvoc:SoilSalinization,
         eusoilvoc:SoilSealing,
         eusoilvoc:SoilSealingConsistence,
@@ -23831,6 +24133,7 @@ eusoilvoc:SoilIndicators a skos:Concept ;
     skos:topConceptOf <https://w3id.org/eusoilvoc> .
 
 eusoilvoc:GeneticSoilTypes a skos:Concept ;
+    skos:altLabel "genetic soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
@@ -23917,7 +24220,6 @@ eusoilvoc:GeneticSoilTypes a skos:Concept ;
         eusoilvoc:XerosolsFAO,
         eusoilvoc:YermosolsFAO ;
     skos:prefLabel "genetic soil types"@en ;
-    skos:scopeNote "AGROVOC has a legacy FAO-UNESCO scope note on this source but mixes FAO, USDA and WRB descendants. SoilVoc uses it as a genetic-soil-types organizer and keeps every formal system in a separate branch."@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilTypes .
 
 eusoilvoc:SoilClassification a skos:Concept ;
@@ -24159,7 +24461,6 @@ eusoilvoc:SoilThreats a skos:Concept ;
     skos:exactMatch she:SoilThreats ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SOCLoss,
-        eusoilvoc:Salinisation,
         eusoilvoc:SoilAcidification,
         eusoilvoc:SoilBiodiversityLoss,
         eusoilvoc:SoilCompaction,
@@ -24199,7 +24500,6 @@ eusoilvoc:SoilThreats a skos:Concept ;
         eusoilvoc:PolycyclicAromaticHydrocarbons,
         eusoilvoc:RillErosion,
         eusoilvoc:SOCLoss,
-        eusoilvoc:Salinisation,
         eusoilvoc:SheetErosion,
         eusoilvoc:SoilAcidification,
         eusoilvoc:SoilBiodiversityLoss,
@@ -24222,6 +24522,7 @@ eusoilvoc:SoilThreats a skos:Concept ;
         eusoilvoc:SoilPhysicalDegradation,
         eusoilvoc:SoilPollutants,
         eusoilvoc:SoilPollution,
+        eusoilvoc:SoilSalinisation,
         eusoilvoc:SoilSalinization,
         eusoilvoc:SoilSealing,
         eusoilvoc:SoilSealingConsistence,
@@ -24596,7 +24897,6 @@ eusoilvoc:SoilChemicalProperties a skos:Concept ;
         eusoilvoc:ZincExtractableElements,
         eusoilvoc:ZincTotalElements ;
     skos:prefLabel "soil chemical properties"@en ;
-    skos:related eusoilvoc:SoilQuality ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicophysicalProperties .
 
 eusoilvoc:SoilManagement a skos:Concept ;
@@ -25021,6 +25321,7 @@ eusoilvoc:SoilPhysicalProcesses a skos:Concept ;
         eusoilvoc:SoilRapidDrying,
         eusoilvoc:SoilRapidWetting,
         eusoilvoc:SoilRetention,
+        eusoilvoc:SoilSalinisation,
         eusoilvoc:SoilSalinization,
         eusoilvoc:SoilSealing,
         eusoilvoc:SoilSealingConsistence,
@@ -25220,6 +25521,7 @@ eusoilvoc:SoilProcesses a skos:Concept ;
         eusoilvoc:SoilRapidDrying,
         eusoilvoc:SoilRapidWetting,
         eusoilvoc:SoilRetention,
+        eusoilvoc:SoilSalinisation,
         eusoilvoc:SoilSalinization,
         eusoilvoc:SoilSealing,
         eusoilvoc:SoilSealingConsistence,
@@ -25679,6 +25981,7 @@ eusoilvoc:SoilPhysicalProperties a skos:Concept ;
         eusoilvoc:GypsumContents,
         eusoilvoc:GypsumForms,
         eusoilvoc:GypsumWeight,
+        eusoilvoc:Halloysite,
         eusoilvoc:HarshConsistence,
         eusoilvoc:HeathlandSoils,
         eusoilvoc:HillSoils,
@@ -25750,15 +26053,17 @@ eusoilvoc:SoilPhysicalProperties a skos:Concept ;
         eusoilvoc:NitosolsFAO,
         eusoilvoc:NitosolsWRB,
         eusoilvoc:NonMatrixPores,
+        eusoilvoc:Nontronite,
         eusoilvoc:OrchardSoils,
         eusoilvoc:OrganicSoils,
         eusoilvoc:OxisolsUSDA,
         eusoilvoc:PaddySoils,
         eusoilvoc:PalaeosolicSoilTypes,
         eusoilvoc:Palaeosols,
+        eusoilvoc:Palygorskite,
         eusoilvoc:ParticleSizeFractionSum,
         eusoilvoc:Peat,
-        eusoilvoc:PeatDecompostion,
+        eusoilvoc:PeatDecomposition,
         eusoilvoc:PeatDrainage,
         eusoilvoc:PeatSoils,
         eusoilvoc:PeatVolume,
@@ -25798,11 +26103,13 @@ eusoilvoc:SoilPhysicalProperties a skos:Concept ;
         eusoilvoc:SalineSoils,
         eusoilvoc:SandySoils,
         eusoilvoc:SandyTexture,
+        eusoilvoc:Saponite,
         eusoilvoc:SaturatedHydraulicConductivity,
         eusoilvoc:SaturatedVapourPressure,
         eusoilvoc:SchistSoils,
         eusoilvoc:ScrublandSoils,
         eusoilvoc:SemiAridSoils,
+        eusoilvoc:Sepiolite,
         eusoilvoc:SerpentineSoils,
         eusoilvoc:ShaleSoils,
         eusoilvoc:SiltySoils,
@@ -26032,10 +26339,10 @@ eusoilvoc:SoilPhysicalProperties a skos:Concept ;
         eusoilvoc:YermosolsFAO,
         eusoilvoc:pFcurve ;
     skos:prefLabel "soil physical properties"@en ;
-    skos:related eusoilvoc:SoilQuality ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicophysicalProperties .
 
 eusoilvoc:SoilChemicophysicalProperties a skos:Concept ;
+    skos:altLabel "soil chemicophysical property"@en ;
     skos:broader eusoilvoc:SoilProperties ;
     skos:broaderTransitive eusoilvoc:SoilProperties ;
     skos:exactMatch agrovoc:c_7182 ;
@@ -26195,6 +26502,7 @@ eusoilvoc:SoilChemicophysicalProperties a skos:Concept ;
         eusoilvoc:GypsumContents,
         eusoilvoc:GypsumForms,
         eusoilvoc:GypsumWeight,
+        eusoilvoc:Halloysite,
         eusoilvoc:HarshConsistence,
         eusoilvoc:HeathlandSoils,
         eusoilvoc:HillSoils,
@@ -26292,6 +26600,7 @@ eusoilvoc:SoilChemicophysicalProperties a skos:Concept ;
         eusoilvoc:NonMatrixPores,
         eusoilvoc:NonproteinNitrogen,
         eusoilvoc:NonproteinNitrogenContent,
+        eusoilvoc:Nontronite,
         eusoilvoc:OrchardSoils,
         eusoilvoc:OrganicSoils,
         eusoilvoc:OxalateExtractableOpticalDensity,
@@ -26299,9 +26608,10 @@ eusoilvoc:SoilChemicophysicalProperties a skos:Concept ;
         eusoilvoc:PaddySoils,
         eusoilvoc:PalaeosolicSoilTypes,
         eusoilvoc:Palaeosols,
+        eusoilvoc:Palygorskite,
         eusoilvoc:ParticleSizeFractionSum,
         eusoilvoc:Peat,
-        eusoilvoc:PeatDecompostion,
+        eusoilvoc:PeatDecomposition,
         eusoilvoc:PeatDrainage,
         eusoilvoc:PeatSoils,
         eusoilvoc:PeatVolume,
@@ -26354,11 +26664,13 @@ eusoilvoc:SoilChemicophysicalProperties a skos:Concept ;
         eusoilvoc:SalineSoils,
         eusoilvoc:SandySoils,
         eusoilvoc:SandyTexture,
+        eusoilvoc:Saponite,
         eusoilvoc:SaturatedHydraulicConductivity,
         eusoilvoc:SaturatedVapourPressure,
         eusoilvoc:SchistSoils,
         eusoilvoc:ScrublandSoils,
         eusoilvoc:SemiAridSoils,
+        eusoilvoc:Sepiolite,
         eusoilvoc:SerpentineSoils,
         eusoilvoc:ShaleSoils,
         eusoilvoc:SiltySoils,
@@ -26788,6 +27100,7 @@ eusoilvoc:SoilProperties a skos:Concept ;
         eusoilvoc:GypsumContents,
         eusoilvoc:GypsumForms,
         eusoilvoc:GypsumWeight,
+        eusoilvoc:Halloysite,
         eusoilvoc:HarshConsistence,
         eusoilvoc:HeathlandSoils,
         eusoilvoc:HillSoils,
@@ -26885,6 +27198,7 @@ eusoilvoc:SoilProperties a skos:Concept ;
         eusoilvoc:NonMatrixPores,
         eusoilvoc:NonproteinNitrogen,
         eusoilvoc:NonproteinNitrogenContent,
+        eusoilvoc:Nontronite,
         eusoilvoc:OrchardSoils,
         eusoilvoc:OrganicSoils,
         eusoilvoc:OxalateExtractableOpticalDensity,
@@ -26892,9 +27206,10 @@ eusoilvoc:SoilProperties a skos:Concept ;
         eusoilvoc:PaddySoils,
         eusoilvoc:PalaeosolicSoilTypes,
         eusoilvoc:Palaeosols,
+        eusoilvoc:Palygorskite,
         eusoilvoc:ParticleSizeFractionSum,
         eusoilvoc:Peat,
-        eusoilvoc:PeatDecompostion,
+        eusoilvoc:PeatDecomposition,
         eusoilvoc:PeatDrainage,
         eusoilvoc:PeatSoils,
         eusoilvoc:PeatVolume,
@@ -26948,11 +27263,13 @@ eusoilvoc:SoilProperties a skos:Concept ;
         eusoilvoc:SalineSoils,
         eusoilvoc:SandySoils,
         eusoilvoc:SandyTexture,
+        eusoilvoc:Saponite,
         eusoilvoc:SaturatedHydraulicConductivity,
         eusoilvoc:SaturatedVapourPressure,
         eusoilvoc:SchistSoils,
         eusoilvoc:ScrublandSoils,
         eusoilvoc:SemiAridSoils,
+        eusoilvoc:Sepiolite,
         eusoilvoc:SerpentineSoils,
         eusoilvoc:ShaleSoils,
         eusoilvoc:SiltySoils,

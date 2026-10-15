@@ -14,7 +14,6 @@
 @prefix nalt: <https://lod.nal.usda.gov/nalt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix she: <https://soilwise-he.github.io/soil-health#> .
-@prefix sio: <http://semanticscience.org/resource/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix spp: <http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#> .
@@ -3903,6 +3902,14 @@ eusoilvoc:SoilAccumulation a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil accumulation"@en .
 
+eusoilvoc:SoilAdhesion a skos:Concept ;
+    skos:broader eusoilvoc:SoilPhysicalProperties ;
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The attraction of water to soil solids, through which water molecules adhere to soil particles."@en ] ;
+    skos:exactMatch spp:SoilAdhesion ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "soil adhesion"@en .
+
 eusoilvoc:SoilAggregateDegree a skos:Concept ;
     skos:broader eusoilvoc:SoilAggregatePhysicalProperties ;
     skos:exactMatch spp:SoilAggregateDegree ;
@@ -6063,10 +6070,10 @@ eusoilvoc:SplashErosion a skos:Concept ;
 eusoilvoc:SpodosolsUSDA a skos:Concept ;
     skos:altLabel "Spodosol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
-    skos:definition [ dcterms:source nalt:11601 ;
-            rdf:value "Acidic forest soil of low fertility"@en ],
-        [ dcterms:source agrovoc:c_36874 ;
-            rdf:value "Spodosols are acid soils characterized by a subsurface accumulation of humus that is complexed with Al and Fe."@en ] ;
+    skos:definition [ dcterms:source agrovoc:c_36874 ;
+            rdf:value "Spodosols are acid soils characterized by a subsurface accumulation of humus that is complexed with Al and Fe."@en ],
+        [ dcterms:source nalt:11601 ;
+            rdf:value "Acidic forest soil of low fertility"@en ] ;
     skos:exactMatch agrovoc:c_36874,
         nalt:11601 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -6085,7 +6092,6 @@ eusoilvoc:StagnosolsWRB a skos:Concept ;
 
 eusoilvoc:Stickiness a skos:Concept,
         sosa:ObservableProperty ;
-    sio:equivalentTo eusoilvoc:SoilAdhesion ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:definition [ dcterms:source glosis_lh:stickinessProperty ;
             rdf:value "The Stickiness measures the soil’s tendency to adhere to surfaces or objects when wet. It is influenced by clay content and organic matter and affects soil workability and machinery use. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ] ;
@@ -8820,14 +8826,6 @@ eusoilvoc:SoilAcidification a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil acidification"@en .
 
-eusoilvoc:SoilAdhesion a skos:Concept ;
-    skos:broader eusoilvoc:SoilPhysicalProperties ;
-    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "The attraction of water to soil solids, through which water molecules adhere to soil particles."@en ] ;
-    skos:exactMatch spp:SoilAdhesion ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil adhesion"@en .
-
 eusoilvoc:SoilAeration a skos:Concept ;
     skos:broader eusoilvoc:SoilAgriculturalFunctions,
         eusoilvoc:SoilAirPhysicalProcesses ;
@@ -9224,12 +9222,12 @@ eusoilvoc:SoilOxygenContents a skos:Concept ;
 eusoilvoc:SoilPlasticity a skos:Concept,
         sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
-    skos:definition [ dcterms:source glosis_lh:plasticityProperty ;
-            rdf:value "The Plasticity measures the soil's ability to deform under stress without cracking or breaking, especially when wet. It is influenced by clay content and mineralogy and is important for engineering and agricultural applications. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ],
-        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "The ability of soil to change shape without cracking under a deforming stress and to retain the deformed shape after the stress is removed."@en ],
         [ dcterms:source spp:SoilPlasticity ;
-            rdf:value "soil’s ability to change its shape without cracking when it is subjected to deforming stress."@en ] ;
+            rdf:value "soil’s ability to change its shape without cracking when it is subjected to deforming stress."@en ],
+        [ dcterms:source glosis_lh:plasticityProperty ;
+            rdf:value "The Plasticity measures the soil's ability to deform under stress without cracking or breaking, especially when wet. It is influenced by clay content and mineralogy and is important for engineering and agricultural applications. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ] ;
     skos:exactMatch spp:SoilPlasticity,
         glosis_lh:plasticityProperty ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -9254,10 +9252,10 @@ eusoilvoc:SoilPoreSize a skos:Concept,
     skos:altLabel "pores size"@en ;
     skos:broader eusoilvoc:SoilPorePhysicalProperties,
         eusoilvoc:SoilPores ;
-    skos:definition [ dcterms:source glosis_lh:poresSizeProperty ;
-            rdf:value "The Pores Size categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ],
-        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "The dimension used to characterize soil pores by diameter, including equivalent cylindrical diameter in soil-pore size classifications."@en ] ;
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The dimension used to characterize soil pores by diameter, including equivalent cylindrical diameter in soil-pore size classifications."@en ],
+        [ dcterms:source glosis_lh:poresSizeProperty ;
+            rdf:value "The Pores Size categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ] ;
     skos:exactMatch spp:SoilPoreSize,
         glosis_lh:poresSizeProperty ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -11397,10 +11395,10 @@ eusoilvoc:SoilInorganicCarbon a skos:Concept,
     skos:broader eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilInorganicComponents,
         eusoilvoc:SoilTotalCarbon ;
-    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Carinorg ;
-            rdf:value "Inorganic carbon in soil primarily consists of carbonates like calcium carbonate and magnesium carbonate. It contributes to soil pH buffering and is a significant feature of arid and calcareous soils. Excess inorganic carbon can immobilize certain nutrients, requiring careful management in agricultural systems. Source: Soil Science Society of America."@en ],
-        [ dcterms:source agrovoc:c_e3783c76 ;
-            rdf:value "Content or amount of total inorganic carbon in soil"@en ] ;
+    skos:definition [ dcterms:source agrovoc:c_e3783c76 ;
+            rdf:value "Content or amount of total inorganic carbon in soil"@en ],
+        [ dcterms:source glosis_cl:physioChemicalPropertyCode-Carinorg ;
+            rdf:value "Inorganic carbon in soil primarily consists of carbonates like calcium carbonate and magnesium carbonate. It contributes to soil pH buffering and is a significant feature of arid and calcareous soils. Excess inorganic carbon can immobilize certain nutrients, requiring careful management in agricultural systems. Source: Soil Science Society of America."@en ] ;
     skos:exactMatch agrovoc:c_e3783c76,
         glosis_cl:physioChemicalPropertyCode-Carinorg,
         nalt:338945 ;
@@ -11917,10 +11915,10 @@ eusoilvoc:SoilTexture a skos:Concept,
         eusoilvoc:SoilPhysicalProperties ;
     skos:definition [ dcterms:source agrovoc:c_7199 ;
             rdf:value "The relative proportions of the various sized groups of individual soil grains in a mass of soil. Specifically, it refers to the proportions of clay, silt, and sand below 2 mm in size (fine earth fraction)."@en ],
-        [ dcterms:source glosis_cm:textureProperty ;
-            rdf:value "The Soil Texture refers to the relative proportions of sand, silt, and clay in a soil. It is a key indicator of the soil’s ability to retain moisture, drain water, and support root growth. Soils can be classified into textures such as sandy, loamy, or clayey, each with distinct characteristics affecting soil management. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ],
         [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "A qualitative characterization of soil particle sizes based on the feel of the soil material, such as coarse, gritty, fine or smooth."@en ] ;
+            rdf:value "A qualitative characterization of soil particle sizes based on the feel of the soil material, such as coarse, gritty, fine or smooth."@en ],
+        [ dcterms:source glosis_cm:textureProperty ;
+            rdf:value "The Soil Texture refers to the relative proportions of sand, silt, and clay in a soil. It is a key indicator of the soil’s ability to retain moisture, drain water, and support root growth. Soils can be classified into textures such as sandy, loamy, or clayey, each with distinct characteristics affecting soil management. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ] ;
     skos:exactMatch agrovoc:c_7199,
         spp:SoilTexture,
         inrae:c_394,
@@ -12272,10 +12270,10 @@ eusoilvoc:SoilOrganicMatter a skos:Concept,
     skos:broader eusoilvoc:SoilOrganicComponents ;
     skos:definition [ dcterms:source agrovoc:c_35657 ;
             rdf:value "Soil organic matter (SOM): matter consisting of plant and/or animal organic materials, and the conversion products of those materials in soils"@en ],
-        [ dcterms:source glosis_cl:physioChemicalPropertyCode-Orgmat ;
-            rdf:value "Soil organic matter is composed of decomposed plant and animal residues, living soil organisms, and humus. It improves soil structure, water retention, nutrient supply, and microbial activity, making it critical for sustainable agriculture and soil health. Source: Brady & Weil (2017)."@en ],
         [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "A complex mixture of living and dead substances of plant and animal origin in soil."@en ] ;
+            rdf:value "A complex mixture of living and dead substances of plant and animal origin in soil."@en ],
+        [ dcterms:source glosis_cl:physioChemicalPropertyCode-Orgmat ;
+            rdf:value "Soil organic matter is composed of decomposed plant and animal residues, living soil organisms, and humus. It improves soil structure, water retention, nutrient supply, and microbial activity, making it critical for sustainable agriculture and soil health. Source: Brady & Weil (2017)."@en ] ;
     skos:exactMatch agrovoc:c_35657,
         spp:SoilOrganicMatter,
         inrae:c_336,
@@ -12513,10 +12511,10 @@ eusoilvoc:SoilTotalCarbon a skos:Concept,
         sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilComponents ;
-    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Cartot ;
-            rdf:value "Total carbon in soil includes both organic carbon (from plant and microbial residues) and inorganic carbon (primarily carbonates). It is a fundamental component of soil organic matter, influencing soil fertility, structure, and water retention. High carbon levels are associated with better soil health and productivity. Source: USDA NRCS."@en ],
-        [ dcterms:source agrovoc:c_24fb4269 ;
-            rdf:value "Content or amount of total carbon in soil, including organic carbon and carbon from lime."@en ] ;
+    skos:definition [ dcterms:source agrovoc:c_24fb4269 ;
+            rdf:value "Content or amount of total carbon in soil, including organic carbon and carbon from lime."@en ],
+        [ dcterms:source glosis_cl:physioChemicalPropertyCode-Cartot ;
+            rdf:value "Total carbon in soil includes both organic carbon (from plant and microbial residues) and inorganic carbon (primarily carbonates). It is a fundamental component of soil organic matter, influencing soil fertility, structure, and water retention. High carbon levels are associated with better soil health and productivity. Source: USDA NRCS."@en ] ;
     skos:exactMatch agrovoc:c_24fb4269,
         glosis_cl:physioChemicalPropertyCode-Cartot ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -12982,10 +12980,10 @@ eusoilvoc:SoilHydraulicConductivity a skos:Concept,
         eusoilvoc:SoilWaterPhysicalProperties,
         eusoilvoc:SoilWaterTransmissionIndex ;
     skos:closeMatch agrovoc:c_25579 ;
-    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Hydcond ;
-            rdf:value "Hydraulic conductivity refers to the rate at which water moves through soil pores under a unit hydraulic gradient. It reflects the soil's ability to transmit water, influenced by texture, structure, and porosity. Soils with high hydraulic conductivity, like sandy soils, allow rapid water movement, while clayey soils exhibit slower water flow. This property is critical for understanding water infiltration, drainage, and irrigation management. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils."@en ],
-        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "The proportionality coefficient relating water flux density through soil to the hydraulic gradient; its value characterizes both the soil medium and the water and depends on the saturation or moisture state."@en ] ;
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The proportionality coefficient relating water flux density through soil to the hydraulic gradient; its value characterizes both the soil medium and the water and depends on the saturation or moisture state."@en ],
+        [ dcterms:source glosis_cl:physioChemicalPropertyCode-Hydcond ;
+            rdf:value "Hydraulic conductivity refers to the rate at which water moves through soil pores under a unit hydraulic gradient. It reflects the soil's ability to transmit water, influenced by texture, structure, and porosity. Soils with high hydraulic conductivity, like sandy soils, allow rapid water movement, while clayey soils exhibit slower water flow. This property is critical for understanding water infiltration, drainage, and irrigation management. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils."@en ] ;
     skos:exactMatch spp:SoilHydraulicConductivity,
         inrae:c_13934,
         glosis_cl:physioChemicalPropertyCode-Hydcond ;
@@ -13143,10 +13141,10 @@ eusoilvoc:SoilPorosity a skos:Concept,
         eusoilvoc:SoilProperties ;
     skos:definition [ dcterms:source agrovoc:c_35320 ;
             rdf:value "The degree to which the soil mass is permeated with pores or cavities."@en ],
-        [ dcterms:source glosis_cl:physioChemicalPropertyCode-Por ;
-            rdf:value "Porosity refers to the percentage of soil volume occupied by pores or voids, which hold air and water. It directly impacts water infiltration, drainage, and root growth. Soils with high porosity are better suited for crop cultivation, as they provide good aeration and water availability. Source: Brady & Weil (2017)."@en ],
         [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "The relative volume of soil voids or pores, expressed as a fraction or percentage of total soil volume or of the volume of soil solids, according to the measure used."@en ] ;
+            rdf:value "The relative volume of soil voids or pores, expressed as a fraction or percentage of total soil volume or of the volume of soil solids, according to the measure used."@en ],
+        [ dcterms:source glosis_cl:physioChemicalPropertyCode-Por ;
+            rdf:value "Porosity refers to the percentage of soil volume occupied by pores or voids, which hold air and water. It directly impacts water infiltration, drainage, and root growth. Soils with high porosity are better suited for crop cultivation, as they provide good aeration and water availability. Source: Brady & Weil (2017)."@en ] ;
     skos:exactMatch agrovoc:c_35320,
         spp:SoilPorosity,
         inrae:c_16324,
@@ -13191,10 +13189,10 @@ eusoilvoc:NitrogenTotal a skos:Concept,
         sosa:ObservableProperty ;
     skos:broader eusoilvoc:Nitrogen,
         eusoilvoc:NitrogenContent ;
-    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Nittot ;
-            rdf:value "Total nitrogen encompasses all nitrogen forms in soil, including organic nitrogen in humus and inorganic nitrogen such as ammonium (NH₄⁺) and nitrate (NO₃⁻). Nitrogen is essential for plant growth, being a vital component of amino acids, proteins, and chlorophyll. Total nitrogen is a key indicator of soil fertility and its capacity to sustain long-term crop productivity. Source: Brady & Weil (2017)."@en ],
-        [ dcterms:source agrovoc:c_bdc779f4 ;
-            rdf:value "Content or amount of total nitrogen in soil."@en ] ;
+    skos:definition [ dcterms:source agrovoc:c_bdc779f4 ;
+            rdf:value "Content or amount of total nitrogen in soil."@en ],
+        [ dcterms:source glosis_cl:physioChemicalPropertyCode-Nittot ;
+            rdf:value "Total nitrogen encompasses all nitrogen forms in soil, including organic nitrogen in humus and inorganic nitrogen such as ammonium (NH₄⁺) and nitrate (NO₃⁻). Nitrogen is essential for plant growth, being a vital component of amino acids, proteins, and chlorophyll. Total nitrogen is a key indicator of soil fertility and its capacity to sustain long-term crop productivity. Source: Brady & Weil (2017)."@en ] ;
     skos:exactMatch agrovoc:c_bdc779f4,
         glosis_cl:physioChemicalPropertyCode-Nittot ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -14473,12 +14471,12 @@ eusoilvoc:SoilMoistureContents a skos:Concept,
         "soil moisture content"@en ;
     skos:broader eusoilvoc:SoilProperties,
         eusoilvoc:SoilWaterPhysicalProperties ;
-    skos:definition [ dcterms:source glosis_lh:moistureContentProperty ;
-            rdf:value "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ],
-        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "The amount of water removed from soil by heating at 105°C to constant weight, expressed as a fraction or percentage on a mass or volume basis. On a gravimetric basis it equals the difference between wet and dry soil mass divided by dry soil mass."@en ],
         [ dcterms:source agrovoc:c_7208 ;
-            rdf:value "Soil-water content is the basic state characteristic of soil; it expresses the relative quantity of water in the soil. Soil-water content can be expressed as the ratio of water amount and the amount of soil."@en ] ;
+            rdf:value "Soil-water content is the basic state characteristic of soil; it expresses the relative quantity of water in the soil. Soil-water content can be expressed as the ratio of water amount and the amount of soil."@en ],
+        [ dcterms:source glosis_lh:moistureContentProperty ;
+            rdf:value "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ] ;
     skos:exactMatch agrovoc:c_7208,
         spp:SoilMoistureContent,
         glosis_lh:moistureContentProperty ;
