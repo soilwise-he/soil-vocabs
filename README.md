@@ -45,6 +45,52 @@ python scripts/generate_soilvoc_html.py
 docker build -f docker/Dockerfile -t soilvoc .
 ```
 
+### CSV interchange
+
+Cell 22 of `soil_vocabs.ipynb` contains the complete, self-contained exporter
+from `SoilVoc.ttl` to `SoilVoc_concepts.csv`. The master CSV uses these columns:
+
+```csv
+id,type,prefLabel,altLabel,definition,broader,narrower,property,exactMatch,closeMatch,definitionSource,conceptSource
+```
+
+- `type` explicitly lists `skos:Concept` and, where applicable,
+  `sosa:ObservableProperty` or `sosa:Procedure`. Types are not inferred from mappings.
+- Relationship columns contain full concept URIs, not labels. `broader` and
+  `narrower` contain only reciprocal SKOS links. `property` belongs only to
+  procedures and records explicit `sosa:isProcedureFor` links; restoration also
+  creates the inverse `sosa:hasProcedure`. Specialized procedures may have a
+  broader procedure and no direct `property` value.
+- List values use the exact separator ` | `. Escape literal pipes as `\|` and
+  backslashes as `\\`. Semicolons are ordinary text. CSV quoting handles commas,
+  quotes and line breaks. Literal whitespace is preserved.
+- `definition` and `definitionSource` are positionally paired lists. Retain empty
+  source positions, including leading/trailing ones. A missing source preserves
+  a direct definition literal; a supplied source creates a definition blank node
+  with `rdf:value` and `dcterms:source`. `conceptSource` records separate
+  concept-level provenance.
+
+The exporter and restoration script support the current English, single-scheme
+SoilVoc profile. They reject
+unsupported RDF, unknown columns, dangling references, inconsistent hierarchies
+and invalid procedure links instead of silently dropping information. Scheme and
+top-concept declarations are reconstructed. Comparison includes every triple,
+ignores blank-node identifiers, and exits nonzero on a mismatch.
+
+Headers `ID`, `sourceLink`/`source link` and `isProcedureFor` are accepted as
+aliases for `id`, `definitionSource` and `property`. All twelve master columns
+remain required: feedback templates still need a separate reviewed import step
+to supply IDs/types and reconcile reciprocal links. Curated modules remain the
+authoritative sources; CSV restoration is an explicitly requested operation.
+
+`scripts/restore_soilvoc_from_csv.py` is self-contained and both restores the RDF
+and verifies the serialized result against the reference vocabulary. No separate
+CSV helper module or test script is required:
+
+```bash
+python scripts/restore_soilvoc_from_csv.py --csv SoilVoc_concepts.csv --out SoilVoc_restored.ttl --compare SoilVoc.ttl
+```
+
 ## Rest api
 
 A REST API for searching concepts, getting concept details and getting procedures linked to properties. Available at [SoilVoc api]([#/concepts/search_api_v1_concepts_search_get](http://api.soilwise.wetransform.eu/vocab/docs)). Read more at [api/README.md](./api/README.md).
