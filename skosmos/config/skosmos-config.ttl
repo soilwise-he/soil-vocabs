@@ -45,6 +45,7 @@
     skosmos:defaultLanguage "en" ;
     skosmos:shortName "SoilVoc" ;
     skosmos:showTopConcepts true ;
+    skosmos:sidebarViews ( "alphabetical" "hierarchy" ) ;
     skosmos:fullAlphabeticalIndex true ;
     skosmos:hierarchyProperty eusoilvoc:skosmosHierarchyParent ;
     skosmos:propertyOrder [

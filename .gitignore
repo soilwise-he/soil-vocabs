@@ -4,8 +4,11 @@ AGENTS.md
 # local Cloudflare deployment files
 /cloudflare/
 
+# worktrees
+/.worktrees/
+
 # local Skosmos plugin tests
-/skosmos/plugins/**/*.test.mjs
+*.test.mjs
 
 # similarity csv
 entity_similarity_gpt.csv

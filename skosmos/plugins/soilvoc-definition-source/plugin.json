@@ -1,6 +1,7 @@
 {
   "js": [
-    "definition-source.js?v=20260903-portable-feedback"
+    "definition-source.js?v=20260903-portable-feedback",
+    "sidebar-preferred-labels.js?v=20261018"
   ],
   "css": [
     "definition-source.css?v=20260903-portable-feedback"
