@@ -101,7 +101,10 @@ local-only `cloudflare/` bundle and `viewer/test/` files.
 - Bottom-of-page mapping sections pairing complete concept URIs with source
   vocabulary URIs, using explicit RDF metadata or known-namespace display lookups.
 - Semantic relationships, mappings, labels, notes, arbitrary RDF properties,
-  nested blank nodes, and an ontology browser for declared classes/properties.
+  nested blank nodes, and an ontology browser limited to declared classes and
+  properties actually used in the loaded vocabulary. Usage includes concepts,
+  schemes, and their linked metadata, not standalone ontology descriptions.
+  Unused declarations remain available in the RDF and downloads.
 - Readable advanced type labels, preferred-label and URI copying, explanatory
   property tooltips, browser back/forward with results-page/scroll restoration,
   native modifier-click links, shareable query-string links, and a raw Turtle view.

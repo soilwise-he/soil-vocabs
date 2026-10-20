@@ -363,9 +363,29 @@ export function createVocabulary(turtle) {
     }
     throw new Error('Unsupported format: ' + format)
   }
+  const declaredClasses = new Set(store.getSubjects(namedNode(TYPE), namedNode(NS.rdfs + 'Class'), null).map(t => t.value))
+  const declaredProperties = new Set(store.getSubjects(namedNode(TYPE), namedNode(NS.rdf + 'Property'), null).map(t => t.value))
+  const declarations = new Set([...declaredClasses, ...declaredProperties])
+  const usedClasses = new Set(), usedProperties = new Set(), visited = new Set()
+  const pending = [...conceptUris, ...schemes].map(uri => namedNode(uri))
+  // Follow instance metadata, including definition nodes, without treating
+  // ontology descriptions themselves as evidence that a term is in use.
+  while (pending.length) {
+    const subject = pending.pop(), key = subject.termType + ':' + subject.value
+    if (visited.has(key)) continue
+    visited.add(key)
+    for (const { predicate, object } of store.getQuads(subject, null, null, null)) {
+      usedProperties.add(predicate.value)
+      if (predicate.value === TYPE) {
+        if (object.termType === 'NamedNode') usedClasses.add(object.value)
+      } else if (object.termType === 'BlankNode' || (object.termType === 'NamedNode' && !declarations.has(object.value))) {
+        pending.push(object)
+      }
+    }
+  }
   const ontology = {
-    classes: sort(new Set(store.getSubjects(namedNode(TYPE), namedNode(NS.rdfs + 'Class'), null).map(t => t.value))),
-    properties: sort(new Set(store.getSubjects(namedNode(TYPE), namedNode(NS.rdf + 'Property'), null).map(t => t.value))),
+    classes: sort([...declaredClasses].filter(uri => usedClasses.has(uri))),
+    properties: sort([...declaredProperties].filter(uri => usedProperties.has(uri))),
   }
   return {
     store, concepts, sortedConcepts, parents, children, roots, typeUris, schemeUri, ontology,
