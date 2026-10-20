@@ -10,7 +10,7 @@ import PropertyHeading from './components/PropertyHeading.vue'
 import MappingSection from './components/MappingSection.vue'
 import { createVocabulary, NS, TYPE, CONCEPT, PROCEDURE, PROPERTY, pathKey, compact } from './vocabulary.js'
 import { conceptHref, followLink, parseRoute } from './navigation.js'
-import { detailSections } from './presentation.js'
+import { detailSections, displayValues } from './presentation.js'
 
 const baseUrl = import.meta.env.BASE_URL
 const model = shallowRef(null), manifest = ref(null), error = ref(''), loading = ref(true)
@@ -243,22 +243,27 @@ onBeforeUnmount(() => {
 
       <main class="reading-pane" id="content" :inert="mobileSidebar">
         <template v-if="selected">
-          <nav class="breadcrumbs" aria-label="Concept path">
-            <template v-for="(uri, i) in crumbs" :key="`${uri}-${i}`"><a :href="conceptHref(uri, selectedPath.slice(0, i + 1))" @click="followLink($event, () => navigate({ uri, path: selectedPath.slice(0, i + 1) }))">{{ model.label(uri) }}</a><ChevronRight :size="13" /></template>
-          </nav>
-          <details v-if="hierarchyPaths.length > 1" :key="selected.uri" class="hierarchy-paths">
-            <summary>Hierarchy paths ({{ hierarchyPaths.length }})</summary>
-            <ul><li v-for="path in hierarchyPaths" :key="pathKey(path)"><a :class="{ current: pathKey(path) === pathKey(selectedPath) }" :aria-current="pathKey(path) === pathKey(selectedPath) ? 'true' : undefined" :href="conceptHref(selected.uri, path)" @click="followLink($event, () => navigate({ uri: selected.uri, path }))"><span class="path-chain"><template v-for="(uri, i) in path" :key="uri"><ChevronRight v-if="i" :size="12" /><span>{{ model.label(uri) }}</span></template></span><Check v-if="pathKey(path) === pathKey(selectedPath)" :size="15" aria-label="Current path" /></a></li></ul>
-          </details>
+          <div v-if="crumbs.length || hierarchyPaths.length > 1" class="concept-navigation">
+            <nav v-if="crumbs.length" class="breadcrumbs" aria-label="Concept path">
+              <template v-for="(uri, i) in crumbs" :key="`${uri}-${i}`"><ChevronRight v-if="i" :size="13" /><a :href="conceptHref(uri, selectedPath.slice(0, i + 1))" @click="followLink($event, () => navigate({ uri, path: selectedPath.slice(0, i + 1) }))">{{ model.label(uri) }}</a></template>
+            </nav>
+            <details v-if="hierarchyPaths.length > 1" :key="selected.uri" class="hierarchy-paths">
+              <summary>Hierarchy paths ({{ hierarchyPaths.length }})</summary>
+              <ul><li v-for="path in hierarchyPaths" :key="pathKey(path)"><a :class="{ current: pathKey(path) === pathKey(selectedPath) }" :aria-current="pathKey(path) === pathKey(selectedPath) ? 'true' : undefined" :href="conceptHref(selected.uri, path)" @click="followLink($event, () => navigate({ uri: selected.uri, path }))"><span class="path-chain"><template v-for="(uri, i) in path" :key="uri"><ChevronRight v-if="i" :size="12" /><span>{{ model.label(uri) }}</span></template></span><Check v-if="pathKey(path) === pathKey(selectedPath)" :size="15" aria-label="Current path" /></a></li></ul>
+            </details>
+          </div>
           <ItemDetails :item="model.asJskos(selected.uri)" class="concept-detail" :show-tabs="false" :show-ancestors="false" :show-broader="false" :show-narrower="false" :draggable="false" :dropzone="false">
             <template #beforeName><h1 class="sr-only">{{ selected.label }}</h1></template>
             <template #afterName>
-              <div class="concept-tools"><button class="icon-button bordered" title="Copy preferred label" aria-label="Copy preferred label" @click="copyText(selected.label, 'Preferred label')"><ClipboardCopy :size="17" /></button><DownloadMenu :model="model" :uri="selected.uri" @notice="notice" /></div>
+              <button class="icon-button copy-label" title="Copy preferred label" aria-label="Copy preferred label" @click="copyText(selected.label, 'Preferred label')"><ClipboardCopy :size="18" /></button>
               <div class="type-row"><a v-for="type in advancedTypes.length ? advancedTypes : [CONCEPT]" :key="type" class="type-label" :href="conceptHref(type)" :title="type" @click="followLink($event, () => navigate(type))">{{ model.label(type) }}</a></div>
               <div class="concept-identity"><span>URI</span><a :href="selected.uri" target="_blank" rel="noopener noreferrer" class="canonical-uri">{{ selected.uri }}<ArrowUpRight :size="13" /></a><button class="icon-button" aria-label="Copy concept URI" title="Copy concept URI" @click="copyUri(selected.uri)"><Copy :size="16" /></button></div>
             </template>
             <template #afterTabs>
-              <div class="detail-view-switch" role="tablist" aria-label="Concept representation"><button role="tab" :aria-selected="!rdfMode" @click="rdfMode = false">Details</button><button role="tab" :aria-selected="rdfMode" @click="rdfMode = true">RDF</button></div>
+              <div class="concept-toolbar">
+                <div class="detail-view-switch" role="tablist" aria-label="Concept representation"><button role="tab" :aria-selected="!rdfMode" @click="rdfMode = false">Details</button><button role="tab" :aria-selected="rdfMode" @click="rdfMode = true">RDF</button></div>
+                <DownloadMenu :model="model" :uri="selected.uri" @notice="notice" />
+              </div>
               <div v-if="rdfMode" class="rdf-view"><p v-if="rdfLoading">Preparing Turtle...</p><pre v-else>{{ rdfText }}</pre></div>
               <div v-else class="concept-sections">
                 <section v-if="selected.definitions.length" class="detail-section definitions-section" aria-label="Definitions">
@@ -267,12 +272,9 @@ onBeforeUnmount(() => {
                 </section>
                 <template v-for="section in sections" :key="section.id">
                   <template v-if="section.id === 'mappings'"><MappingSection v-for="group in section.groups" :key="group.predicate" :group="group" :model="model" @navigate="navigate" /></template>
-                  <section v-else class="detail-section" :aria-labelledby="`section-${section.id}`">
-                    <h2 :id="`section-${section.id}`">{{ section.label }}</h2>
-                    <div v-for="group in section.groups" :key="group.predicate" class="property-row" :data-predicate="group.predicate">
-                      <PropertyHeading :label="group.label" :predicate="group.predicate" :description="model.propertyTooltip(group.predicate)" as="h3" />
-                      <ul class="values-list"><li v-for="(value, i) in group.values" :key="i"><TermValue :model="model" :value="value" @navigate="navigate" /></li></ul>
-                    </div>
+                  <section v-else v-for="group in section.groups" :key="group.predicate" class="property-row" :data-predicate="group.predicate" :aria-label="group.label">
+                    <PropertyHeading :label="group.label" :predicate="group.predicate" :description="model.propertyTooltip(group.predicate)" />
+                    <ul class="values-list"><li v-for="(value, i) in displayValues(group.values)" :key="i"><TermValue :model="model" :value="value" @navigate="navigate" /></li></ul>
                   </section>
                 </template>
               </div>

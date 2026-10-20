@@ -12,7 +12,7 @@ const external = computed(() => safeExternalUrl(props.value.uri || ''))
 <template>
   <span v-if="value.kind === 'literal'" class="literal-value">{{ value.text }}<small v-if="value.language && value.language !== 'en'" class="language-tag">{{ value.language }}</small></span>
   <span v-else-if="value.kind === 'resource'" class="resource-value">
-    <a v-if="value.local || value.defined" :href="conceptHref(value.uri)" :title="value.uri" @click="followLink($event, () => emit('navigate', value.uri))">{{ value.label }}</a>
+    <a v-if="value.local || value.defined" :class="{ 'concept-link': value.local }" :href="conceptHref(value.uri)" :title="value.uri" @click="followLink($event, () => emit('navigate', value.uri))">{{ value.label }}</a>
     <a v-else-if="external" :href="external" :title="value.uri" target="_blank" rel="noopener noreferrer">{{ showUri ? value.uri : value.label }}<ArrowUpRight :size="13" aria-label="External resource" /></a>
     <span v-else :title="value.uri">{{ value.label }}</span>
     <span v-if="model.concepts.get(value.uri)?.isProcedure" class="procedure-badge">Procedure</span>

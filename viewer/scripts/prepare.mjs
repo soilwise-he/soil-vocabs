@@ -8,6 +8,10 @@ await mkdir(new URL('data/', publicDir), { recursive: true })
 const bytes = await readFile(source)
 await copyFile(source, new URL('data/SoilVoc.ttl', publicDir))
 await copyFile(new URL('../data/workflow.png', import.meta.url), new URL('workflow.png', publicDir))
+await mkdir(new URL('font-licenses/', publicDir), { recursive: true })
+for (const file of ['PublicSans-OFL.txt', 'EBGaramond-OFL.txt']) {
+  await copyFile(new URL('../assets/fonts/' + file, import.meta.url), new URL('font-licenses/' + file, publicDir))
+}
 // W3ID's Turtle content negotiation points to the canonical root-level file.
 for (const file of ['SoilVoc.ttl', 'SoilVoc_augmented.ttl', 'SoilVoc_concepts.csv', 'CITATION.cff', 'LICENSE']) {
   await copyFile(new URL('../../' + file, import.meta.url), new URL(file, publicDir))

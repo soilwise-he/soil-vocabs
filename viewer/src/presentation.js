@@ -3,6 +3,12 @@ import { NS } from './vocabulary.js'
 const mappings = new Set(['exactMatch', 'closeMatch', 'broadMatch', 'narrowMatch', 'relatedMatch', 'mappingRelation'].map(name => NS.skos + name))
 const annotations = new Set(['altLabel', 'hiddenLabel', 'notation', 'note', 'scopeNote', 'historyNote', 'editorialNote', 'changeNote', 'example'].map(name => NS.skos + name))
 
+export function displayValues(values) {
+  // Only unordered concept links are sorted; literals and RDF list nodes retain their order.
+  if (!values.every(value => value.kind === 'resource' && value.local)) return values
+  return [...values].sort((a, b) => a.label.localeCompare(b.label, 'en', { numeric: true }) || a.uri.localeCompare(b.uri))
+}
+
 // Group for reading only; retain every predicate and its original values.
 export function detailSections(groups) {
   const sections = [

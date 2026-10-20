@@ -41,6 +41,12 @@ disables dependency lifecycle scripts: jskos-tools distributes its compiled
 files, but its POSIX-only postinstall check fails on Windows. No build or startup
 script from this project is disabled by that setting.
 
+The interface uses self-hosted Public Sans and EB Garamond fonts from
+`assets/fonts/`. Their SIL Open Font Licenses are included in the build under
+`font-licenses/`; no external font service is needed. Property layouts adapt to
+the reading pane's width. Concept relationship lists are sorted by label for
+display, without changing RDF statement order or ordered list values.
+
 The optional regression tests in `test/` are local-only and Git-ignored. They
 are not included in fresh clones or Docker build contexts. On a machine that
 has these files, run `npm test` to check the viewer against the current RDF.
