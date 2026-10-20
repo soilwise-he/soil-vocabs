@@ -12,7 +12,7 @@ This repository aims to facilitate co-creation of a skos vocabulary around `soil
 ## How to contribute
 The current process for uploading new properties and procedures is through a [Github issue](https://github.com/soilwise-he/soil-vocabs/issues/new/choose). The workflow is displayed as below:
 
-![soil-voc workflow](./legacy/static-viewer/assets/Soilwise%20workflow%20soilvoc.png)
+![soil-voc workflow](./viewer/data/workflow.png)
 ![terminologies](./legacy/static-viewer/assets/terminology.png)
 
 ## Relevant terminologies
@@ -33,7 +33,7 @@ For the soil domain we should distinghuish various types of entities for which d
 The main published vocabulary files are available in the repository root, while support tooling lives in dedicated folders:
 
 - `scripts/restore_soilvoc_from_csv.py` rebuilds or compares `SoilVoc.ttl` from `SoilVoc_concepts.csv`
-- `viewer/` contains the current browser-based viewer and its build instructions
+- `viewer/` contains the current browser-based viewer, its data, and build instructions
 - `legacy/static-viewer/` preserves the previous HTML viewer, JSON snapshot, and generator
 - `docker/Dockerfile` builds the combined API + current viewer container
 
@@ -98,14 +98,20 @@ A REST API for searching concepts, getting concept details and getting procedure
 
 A browser-based viewer to explore the complete SKOS and procedure hierarchy,
 sourced definitions, types, relationships, and mappings. It reads the bundled
-`skosmos/SoilVoc_skosmos.ttl` without an API or triplestore.
+`viewer/data/SoilVoc.ttl` without an API or triplestore. Regenerate this display
+snapshot with `python viewer/scripts/generate_data.py` after updating
+`SoilVoc_augmented.ttl`; the display ontology is in `viewer/data/ontology.ttl`.
 
 The [viewer source and local instructions](./viewer/README.md) are in `viewer/`.
-GitHub Actions tests/builds the viewer and publishes it to
+GitHub Actions builds the viewer and publishes it to
 [GitHub Pages](https://soilwise-he.github.io/soil-vocabs/) when relevant files
 change on `main`. The existing [W3ID entry point](https://w3id.org/eusoilvoc)
 and fragment links such as [cultural services](https://w3id.org/eusoilvoc#CulturalServices)
 continue to work. RDF requests still resolve to the unchanged canonical Turtle.
+
+The Skosmos reference deployment is local-only under the Git-ignored `skosmos/`
+directory. It is not required to build or publish this viewer and is not included
+in fresh clones.
 
 The previous page is retained in [legacy/static-viewer](./legacy/static-viewer/)
 for reference and is not part of the new Pages build.

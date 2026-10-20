@@ -2,6 +2,7 @@
 .tmp
 .worktrees
 cloudflare
+skosmos
 legacy
 ontovocabs
 **/node_modules

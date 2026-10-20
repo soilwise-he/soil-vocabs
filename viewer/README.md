@@ -1,8 +1,8 @@
 # SoilVoc Viewer
 
 A static vocabulary viewer using Vue 3 and selected jskos-vue components. It reads the complete
-`../skosmos/SoilVoc_skosmos.ttl` directly in the browser. There is no triplestore,
-SPARQL server, external vocabulary API, or dependency on either Skosmos deployment.
+`data/SoilVoc.ttl` directly in the browser. There is no triplestore,
+SPARQL server, external vocabulary API, or dependency on Skosmos.
 
 The viewer is published at <https://soilwise-he.github.io/soil-vocabs/> and
 <https://w3id.org/eusoilvoc>. Existing canonical concept links such as
@@ -40,6 +40,25 @@ script from this project is disabled by that setting.
 The optional regression tests in `test/` are local-only and Git-ignored. They
 are not included in fresh clones or Docker build contexts. On a machine that
 has these files, run `npm test` to check the viewer against the current RDF.
+
+## Update Viewer Data
+
+The committed browser snapshot is `viewer/data/SoilVoc.ttl`. After updating
+`SoilVoc_augmented.ttl`, run this from the repository root (requires RDFLib):
+
+```powershell
+python viewer/scripts/generate_data.py
+```
+
+The generator embeds `viewer/data/ontology.ttl`, preserves sourced definitions,
+and retains the existing display hierarchy projection and SKOS closure. It does
+not change the input vocabulary or require a Skosmos installation. The historic
+`eusoilvoc:skosmosHierarchyParent` predicate remains for RDF compatibility only.
+Use `--source`, `--ontology`, or `--output` to select different files.
+
+Commit the updated snapshot to publish it. The workflow image lives in
+`viewer/data/workflow.png`. The ignored `skosmos/` folder is only a local
+reference deployment; changes there no longer update the public viewer.
 
 ## Implemented Features
 
@@ -83,8 +102,8 @@ Actions to GitHub Pages, with Vite's base set to `/soil-vocabs/`.
 The build also copies the unchanged canonical `SoilVoc.ttl` to the published
 root, preserving W3ID's Turtle content negotiation. `SoilVoc_augmented.ttl`,
 `SoilVoc_concepts.csv`, `CITATION.cff`, and `LICENSE` remain available there.
-The viewer itself continues to read the bundled `data/SoilVoc_skosmos.ttl`.
-Push an updated `skosmos/SoilVoc_skosmos.ttl` to `main` (or merge a pull request)
+The viewer itself continues to read the bundled `data/SoilVoc.ttl`.
+Push an updated `viewer/data/SoilVoc.ttl` to `main` (or merge a pull request)
 to rebuild and publish changed viewer data automatically. No manual HTML or JSON
 regeneration is needed. This workflow does not regenerate the source Turtle.
 The publishing workflow does not run the local regression suite or validate
@@ -123,6 +142,8 @@ benchmark or architecture decision for very large vocabularies.
 - `src/components/TermValue.vue`: generic RDF term and blank-node display.
 - `src/App.vue`: routes, browsing and details using jskos-vue components.
 - `scripts/prepare.mjs`: copy the source/image and calculate its checksum.
+- `scripts/generate_data.py`: regenerate the display snapshot from the augmented vocabulary.
+- `data/`: committed viewer snapshot, display ontology, and workflow image.
 - `test/` (optional, untracked): local source-consistency and viewer regression tests.
 
 The viewer does not change RDF source files or the Skosmos deployment. The

@@ -11,8 +11,6 @@ on:
       - 'SoilVoc.ttl'
       - 'SoilVoc_augmented.ttl'
       - 'SoilVoc_concepts.csv'
-      - 'skosmos/SoilVoc_skosmos.ttl'
-      - 'skosmos/Soilwise_workflow_soilvoc.png'
       - 'CITATION.cff'
       - 'LICENSE'
       - '.github/workflows/build-api-image.yml'

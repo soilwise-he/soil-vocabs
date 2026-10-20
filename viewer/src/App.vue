@@ -158,7 +158,7 @@ onMounted(async () => {
   desktopLayout.addEventListener('change', onDesktopLayoutChange)
   try {
     const base = import.meta.env.BASE_URL
-    const [response, metaResponse] = await Promise.all([fetch(base + 'data/SoilVoc_skosmos.ttl'), fetch(base + 'data/manifest.json')])
+    const [response, metaResponse] = await Promise.all([fetch(base + 'data/SoilVoc.ttl'), fetch(base + 'data/manifest.json')])
     if (!response.ok) throw new Error(`Vocabulary file could not be loaded (HTTP ${response.status}).`)
     const source = await response.text()
     if (metaResponse.ok) manifest.value = await metaResponse.json()
@@ -185,7 +185,7 @@ onBeforeUnmount(() => {
         <a href="?" :class="{ active: !['ontology', 'about'].includes(route.view) }" @click="followLink($event, () => go({}))">Browse</a>
         <a href="?view=ontology" :class="{ active: route.view === 'ontology' }" @click="followLink($event, () => go({ view: 'ontology' }))">Ontology</a>
         <a href="?view=about" :class="{ active: route.view === 'about' }" @click="followLink($event, () => go({ view: 'about' }))">About</a>
-        <a class="icon-button" :href="`${baseUrl}data/SoilVoc_skosmos.ttl`" download title="Download complete vocabulary (Turtle)" aria-label="Download complete vocabulary"><Download :size="21" /></a>
+        <a class="icon-button" :href="`${baseUrl}data/SoilVoc.ttl`" download title="Download complete vocabulary (Turtle)" aria-label="Download complete vocabulary"><Download :size="21" /></a>
       </nav>
     </header>
 
@@ -312,7 +312,7 @@ onBeforeUnmount(() => {
           <div v-if="route.view === 'about'" class="vocabulary-facts"><div><strong>{{ model.stats.concepts.toLocaleString() }}</strong><span>Concepts</span></div><div><strong>{{ model.stats.properties }}</strong><span>Observable properties</span></div><div><strong>{{ model.stats.procedures }}</strong><span>Procedures</span></div><div><strong>{{ model.stats.definitions.toLocaleString() }}</strong><span>Definitions</span></div></div>
           <section v-if="route.view === 'about'" class="label-statistics" aria-label="Label statistics"><h2>Labels</h2><dl><div><dt>Preferred labels</dt><dd>{{ model.stats.preferredLabels.toLocaleString() }}</dd></div><div><dt>Alternative labels</dt><dd>{{ model.stats.alternativeLabels.toLocaleString() }}</dd></div><div><dt>Hidden labels</dt><dd>{{ model.stats.hiddenLabels.toLocaleString() }}</dd></div></dl></section>
           <template v-if="route.view === 'home'"><section class="overview-section"><h2>Top concepts</h2><div class="top-concepts"><a v-for="uri in model.roots" :key="uri" :href="conceptHref(uri)" @click="followLink($event, () => navigate(uri))">{{ model.label(uri) }}<ChevronRight :size="15" /></a></div></section></template>
-          <template v-else><div class="property-table"><section class="property-row"><h2>Vocabulary URI</h2><a :href="model.schemeUri" target="_blank" rel="noopener noreferrer">{{ model.schemeUri }}</a></section><section class="property-row"><h2>Language</h2><span>English</span></section><section class="property-row"><h2>Source file</h2><code>{{ manifest?.source || 'skosmos/SoilVoc_skosmos.ttl' }}</code></section><section class="property-row"><h2>RDF statements</h2><span>{{ model.stats.triples.toLocaleString() }}</span></section><section class="property-row"><h2>Source checksum</h2><code class="checksum">{{ manifest?.sha256 }}</code></section><section class="property-row"><h2>Downloads</h2><DownloadMenu :model="model" @notice="notice" /></section></div><section class="overview-section"><h2>Ontology</h2><p>{{ model.ontology.classes.length }} classes and {{ model.ontology.properties.length }} properties are declared in the source.</p><button class="button secondary" @click="go({ view: 'ontology' })">Browse ontology<ArrowRight :size="16" /></button></section></template>
+          <template v-else><div class="property-table"><section class="property-row"><h2>Vocabulary URI</h2><a :href="model.schemeUri" target="_blank" rel="noopener noreferrer">{{ model.schemeUri }}</a></section><section class="property-row"><h2>Language</h2><span>English</span></section><section class="property-row"><h2>Source file</h2><code>{{ manifest?.source || 'viewer/data/SoilVoc.ttl' }}</code></section><section class="property-row"><h2>RDF statements</h2><span>{{ model.stats.triples.toLocaleString() }}</span></section><section class="property-row"><h2>Source checksum</h2><code class="checksum">{{ manifest?.sha256 }}</code></section><section class="property-row"><h2>Downloads</h2><DownloadMenu :model="model" @notice="notice" /></section></div><section class="overview-section"><h2>Ontology</h2><p>{{ model.ontology.classes.length }} classes and {{ model.ontology.properties.length }} properties are declared in the source.</p><button class="button secondary" @click="go({ view: 'ontology' })">Browse ontology<ArrowRight :size="16" /></button></section></template>
           <section v-if="route.view === 'about'" class="overview-section workflow-section"><h2>SoilVoc in SoilWise</h2><img class="workflow-image" :src="`${baseUrl}workflow.png`" alt="SoilWise workflow and the role of SoilVoc" loading="lazy" /></section>
         </template>
       </main>

@@ -14,7 +14,7 @@ async function download(format) {
     const url = URL.createObjectURL(blob)
     const link = document.createElement('a')
     link.href = url
-    link.download = (props.uri ? localName(props.uri) : 'SoilVoc_skosmos') + '.' + format
+    link.download = (props.uri ? localName(props.uri) : 'SoilVoc') + '.' + format
     link.click()
     setTimeout(() => URL.revokeObjectURL(url), 1000)
     menu.value.open = false

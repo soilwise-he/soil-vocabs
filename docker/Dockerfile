@@ -4,7 +4,6 @@ WORKDIR /build/viewer
 COPY viewer/package.json viewer/package-lock.json viewer/.npmrc ./
 RUN npm ci
 COPY viewer/ ./
-COPY skosmos/SoilVoc_skosmos.ttl skosmos/Soilwise_workflow_soilvoc.png /build/skosmos/
 COPY SoilVoc.ttl SoilVoc_augmented.ttl SoilVoc_concepts.csv CITATION.cff LICENSE /build/
 RUN npm run build
 

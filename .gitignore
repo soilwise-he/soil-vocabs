@@ -4,6 +4,9 @@ AGENTS.md
 # local Cloudflare deployment files
 /cloudflare/
 
+# local reference deployment (not part of the published viewer)
+/skosmos/
+
 # worktrees
 /.worktrees/
 
@@ -18,8 +21,6 @@ entity_similarity_gpt.csv
 
 # config
 config
-!skosmos/config/
-!skosmos/config/**
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

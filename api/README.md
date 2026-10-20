@@ -243,4 +243,6 @@ docker run -p8000:8000 ghcr.io/soilwise-he/soil-vocabs:latest
 The Docker build compiles the same `viewer/` frontend used by GitHub Pages.
 Static assets, bundled vocabulary data, and images are served below `/`, after
 the API and documentation routes. The API still loads canonical `SoilVoc.ttl`;
-the browser viewer reads its separate bundled `SoilVoc_skosmos.ttl`.
+the browser viewer reads its separate bundled `data/SoilVoc.ttl`, built from
+`viewer/data/SoilVoc.ttl`. Neither the API image nor the Pages build requires
+the local-only Skosmos deployment.
