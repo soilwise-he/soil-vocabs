@@ -16,9 +16,9 @@ from pathlib import Path
 from rdflib import BNode, Graph, Namespace, URIRef
 from rdflib.namespace import DCTERMS, RDF, RDFS, SDO, SKOS, SOSA
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_TTL_PATH = REPO_ROOT / "SoilVoc_augmented.ttl"
-DEFAULT_OUTPUT_DIR = REPO_ROOT / "assets"
+DEFAULT_OUTPUT_DIR = Path(__file__).resolve().parents[1] / "assets"
 DEFAULT_VERSION_FILE = DEFAULT_OUTPUT_DIR / "VERSION"
 
 def parse_skos_vocabulary_enhanced(ttl_file_path):

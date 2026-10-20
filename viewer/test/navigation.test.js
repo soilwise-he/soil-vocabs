@@ -40,3 +40,15 @@ test('only ordinary same-tab left clicks are intercepted', () => {
   assert.deepEqual(dispatch({}, { target: '_blank' }), { prevented: false, navigated: false })
   assert.deepEqual(dispatch({}, { hasAttribute: () => true }), { prevented: false, navigated: false })
 })
+
+test('canonical W3ID and existing Pages fragments open the corresponding concept', () => {
+  for (const id of ['CulturalServices', 'SoilWaterConstants', 'pHProcedure-pHCaCl2_ratio1-1']) {
+    const route = parseRoute('', NS.eusoilvoc, '#' + id)
+    assert.equal(route.view, 'concept')
+    assert.equal(route.uri, NS.eusoilvoc + id)
+  }
+  assert.equal(parseRoute('', NS.eusoilvoc, '#' + encodeURIComponent(NS.eusoilvoc + 'CulturalServices')).uri, NS.eusoilvoc + 'CulturalServices')
+  assert.equal(parseRoute('?q=soil', NS.eusoilvoc, '#CulturalServices').view, 'concept')
+  assert.equal(parseRoute('?uri=BaseSaturation', NS.eusoilvoc, '#CulturalServices').uri, NS.eusoilvoc + 'BaseSaturation')
+  for (const hash of ['', '#', '#%E0%A4%A']) assert.equal(parseRoute('', NS.eusoilvoc, hash).view, 'home')
+})

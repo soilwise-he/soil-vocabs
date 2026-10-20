@@ -7,13 +7,13 @@ Harmonising terminology within or between communities is an important aspect in 
 This repository aims to facilitate co-creation of a skos vocabulary around `soil observation data`. It includes definitions of soil properties (descriptors), indicators and observation methods. It also includes a number of tools to prepare and interact with the vocabulary:
 - Tooling to [traverse to and from RDF](#traverse-tooling) (ttl) to CSV. CSV facilitates reviews by content specialists. While the RDF can be read by engines.
 - A [REST API](#rest-api) to interact with the vocabulary (read only).
-- A human friendly [web interface](#web-interface) to browse through the vocabulary. This website is available at [Soil-Vocabs Viewer](https://soilwise-he.github.io/soil-vocabs/), which is also linked to [w3id.org/EUSoilVoc](https://w3id.org/EUSoilVoc)
+- A human friendly [web interface](#web-interface) to browse through the vocabulary. This website is available at [SoilVoc Viewer](https://soilwise-he.github.io/soil-vocabs/), which is also linked to [w3id.org/eusoilvoc](https://w3id.org/eusoilvoc)
 
 ## How to contribute
 The current process for uploading new properties and procedures is through a [Github issue](https://github.com/soilwise-he/soil-vocabs/issues/new/choose). The workflow is displayed as below:
 
-![soil-voc workflow](./assets/Soilwise%20workflow%20soilvoc.png)
-![terminologies](./assets/terminology.png)
+![soil-voc workflow](./legacy/static-viewer/assets/Soilwise%20workflow%20soilvoc.png)
+![terminologies](./legacy/static-viewer/assets/terminology.png)
 
 ## Relevant terminologies
 
@@ -33,15 +33,14 @@ For the soil domain we should distinghuish various types of entities for which d
 The main published vocabulary files are available in the repository root, while support tooling lives in dedicated folders:
 
 - `scripts/restore_soilvoc_from_csv.py` rebuilds or compares `SoilVoc.ttl` from `SoilVoc_concepts.csv`
-- `scripts/generate_soilvoc_html.py` refreshes `assets/soilvoc_data.json` from `SoilVoc.ttl`
-- `assets/VERSION` stores the viewer version used in the generated JSON payload
-- `docker/Dockerfile` builds the combined API + static viewer container
+- `viewer/` contains the current browser-based viewer and its build instructions
+- `legacy/static-viewer/` preserves the previous HTML viewer, JSON snapshot, and generator
+- `docker/Dockerfile` builds the combined API + current viewer container
 
 Typical local commands:
 
 ```bash
 python scripts/restore_soilvoc_from_csv.py --csv SoilVoc_concepts.csv --out SoilVoc_restored.ttl --compare SoilVoc.ttl
-python scripts/generate_soilvoc_html.py
 docker build -f docker/Dockerfile -t soilvoc .
 ```
 
@@ -97,8 +96,19 @@ A REST API for searching concepts, getting concept details and getting procedure
 
 ## Web interface
 
-A browser-based viewer to explore concepts in hierarchies. Updates to the vocabulary are automatically reflected on the web interface using a github action.
-Available at [soil-vocabs](https://w3id.org/eusoilvoc).
+A browser-based viewer to explore the complete SKOS and procedure hierarchy,
+sourced definitions, types, relationships, and mappings. It reads the bundled
+`skosmos/SoilVoc_skosmos.ttl` without an API or triplestore.
+
+The [viewer source and local instructions](./viewer/README.md) are in `viewer/`.
+GitHub Actions tests/builds the viewer and publishes it to
+[GitHub Pages](https://soilwise-he.github.io/soil-vocabs/) when relevant files
+change on `main`. The existing [W3ID entry point](https://w3id.org/eusoilvoc)
+and fragment links such as [cultural services](https://w3id.org/eusoilvoc#CulturalServices)
+continue to work. RDF requests still resolve to the unchanged canonical Turtle.
+
+The previous page is retained in [legacy/static-viewer](./legacy/static-viewer/)
+for reference and is not part of the new Pages build.
 
 ## Source vocabularies
 

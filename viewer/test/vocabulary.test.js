@@ -3,6 +3,7 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { Lexer, Parser, Store, DataFactory } from 'n3'
 import { createVocabulary, NS, TYPE, CONCEPT, PROCEDURE, PROPERTY, DISPLAY_PARENT, pathKey, safeExternalUrl, matchLabel } from '../src/vocabulary.js'
+import { parseRoute } from '../src/navigation.js'
 
 const source = readFileSync(new URL('../../skosmos/SoilVoc_skosmos.ttl', import.meta.url), 'utf8')
 const model = createVocabulary(source)
@@ -17,6 +18,17 @@ test('loads the full source, including procedures and ontology', () => {
   assert.equal(model.label(PROPERTY), 'Observable Property')
   assert.equal(model.label(PROCEDURE), 'Procedure')
   assert.equal(model.sourceText, source)
+})
+
+test('every current concept resolves through its canonical fragment identifier', () => {
+  for (const concept of model.concepts.values()) {
+    assert.ok(concept.uri.startsWith(NS.eusoilvoc))
+    const hash = '#' + encodeURIComponent(concept.uri.slice(NS.eusoilvoc.length))
+    const route = parseRoute('', NS.eusoilvoc, hash)
+    assert.equal(route.uri, concept.uri)
+    assert.equal(route.view, 'concept')
+  }
+  assert.equal(model.concepts.get(NS.eusoilvoc + 'CulturalServices').label, 'cultural services')
 })
 
 test('every direct SKOS, SOSA and projected edge is available in navigation', () => {
