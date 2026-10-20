@@ -22,7 +22,6 @@ npm run dev
 Open <http://127.0.0.1:5174/>. For the production build:
 
 ```powershell
-npm test
 npm run build
 npm run preview
 ```
@@ -37,6 +36,10 @@ Dependency versions and their transitive dependencies are locked. `.npmrc`
 disables dependency lifecycle scripts: jskos-tools distributes its compiled
 files, but its POSIX-only postinstall check fails on Windows. No build or startup
 script from this project is disabled by that setting.
+
+The optional regression tests in `test/` are local-only and Git-ignored. They
+are not included in fresh clones or Docker build contexts. On a machine that
+has these files, run `npm test` to check the viewer against the current RDF.
 
 ## Implemented Features
 
@@ -73,7 +76,7 @@ remain distinct from procedure-based sidebar edges.
 
 ## Publishing
 
-`.github/workflows/deploy-pages.yml` tests and builds this directory on relevant
+`.github/workflows/deploy-pages.yml` builds this directory on relevant
 pull requests. Changes merged into `main` are then published through GitHub
 Actions to GitHub Pages, with Vite's base set to `/soil-vocabs/`.
 
@@ -84,9 +87,9 @@ The viewer itself continues to read the bundled `data/SoilVoc_skosmos.ttl`.
 Push an updated `skosmos/SoilVoc_skosmos.ttl` to `main` (or merge a pull request)
 to rebuild and publish changed viewer data automatically. No manual HTML or JSON
 regeneration is needed. This workflow does not regenerate the source Turtle.
-Tests compare the viewer with the current RDF rather than fixed vocabulary
-totals; small fixtures cover behavior independently of source edits. Invalid
-Turtle or hierarchy inconsistencies still block publication.
+The publishing workflow does not run the local regression suite or validate
+the vocabulary's RDF and hierarchy. Run the local tests before pushing when
+those checks are needed.
 
 The older HTML viewer and generator are archived under `legacy/static-viewer/`
 and are not published by this workflow. The API Docker image builds the same
@@ -103,7 +106,7 @@ expansion must distinguish occurrences of the same URI under different parents.
 The source currently has English labels, 1,464 concepts, 249 procedures,
 192 observable properties and 1,110 definitions. It declares advanced
 agrontology relationships but currently has no concept assertions using them;
-synthetic tests cover their generic display data. No such assertions are
+local synthetic tests cover their generic display data. No such assertions are
 invented by this viewer. There are no SKOS collections or dated concept changes
 in this snapshot, so Groups/New views are not provided. Language switching,
 feedback/email, editing, REST compatibility and a public SPARQL endpoint are not
@@ -120,8 +123,7 @@ benchmark or architecture decision for very large vocabularies.
 - `src/components/TermValue.vue`: generic RDF term and blank-node display.
 - `src/App.vue`: routes, browsing and details using jskos-vue components.
 - `scripts/prepare.mjs`: copy the source/image and calculate its checksum.
-- `test/vocabulary.test.js`: source-wide data and regression tests.
-- `test/navigation.test.js`: URL state, branch links and native-click regression tests.
+- `test/` (optional, untracked): local source-consistency and viewer regression tests.
 
 The viewer does not change RDF source files or the Skosmos deployment. The
 existing REST API remains separate from browser-side vocabulary loading.

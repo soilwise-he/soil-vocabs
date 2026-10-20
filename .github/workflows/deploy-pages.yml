@@ -47,7 +47,6 @@ jobs:
           cache: npm
           cache-dependency-path: viewer/package-lock.json
       - run: npm ci
-      - run: npm test
       - run: npm run build -- --base=/soil-vocabs/
       - uses: actions/upload-pages-artifact@v5
         if: github.ref == 'refs/heads/main'

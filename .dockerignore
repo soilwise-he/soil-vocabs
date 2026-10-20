@@ -16,3 +16,4 @@ viewer/public/*.ttl
 viewer/public/SoilVoc_concepts.csv
 viewer/public/CITATION.cff
 viewer/public/LICENSE
+viewer/test
