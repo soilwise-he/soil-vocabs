@@ -220,7 +220,8 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
 .empty-state h2, .empty-state h1 { margin: 12px 0; color: var(--soil); font-size: 24px; }
 .empty-state .button { margin-top: 20px; }
 .ontology-tabs { border-bottom: 1px solid var(--line); }
-.ontology-list article { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr) auto; align-items: center; gap: 15px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.ontology-list { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr) auto; column-gap: 15px; }
+.ontology-list article { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; align-items: center; gap: 15px; padding: 16px 0; border-bottom: 1px solid var(--line); }
 .ontology-list code { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
 .resource-heading { position: relative; padding-right: 160px; }
 .resource-heading .resource-category { font-size: 12px; margin-bottom: 8px; }
@@ -286,6 +287,7 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
   .top-concepts { grid-template-columns: minmax(0,1fr); }
   .result-heading { flex-direction: column; gap: 6px; }
   .result-heading > a { font-size: 19px; }
+  .ontology-list { grid-template-columns: minmax(0,1fr); }
   .ontology-list article { grid-template-columns: minmax(0,1fr); gap: 4px; }
   .ontology-list .text-button { margin-top: 6px; }
   .resource-heading { padding-right: 0; }
