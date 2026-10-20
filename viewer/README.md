@@ -81,7 +81,12 @@ The build also copies the unchanged canonical `SoilVoc.ttl` to the published
 root, preserving W3ID's Turtle content negotiation. `SoilVoc_augmented.ttl`,
 `SoilVoc_concepts.csv`, `CITATION.cff`, and `LICENSE` remain available there.
 The viewer itself continues to read the bundled `data/SoilVoc_skosmos.ttl`.
-Update that source file and rebuild to publish changed viewer data.
+Push an updated `skosmos/SoilVoc_skosmos.ttl` to `main` (or merge a pull request)
+to rebuild and publish changed viewer data automatically. No manual HTML or JSON
+regeneration is needed. This workflow does not regenerate the source Turtle.
+Tests compare the viewer with the current RDF rather than fixed vocabulary
+totals; small fixtures cover behavior independently of source edits. Invalid
+Turtle or hierarchy inconsistencies still block publication.
 
 The older HTML viewer and generator are archived under `legacy/static-viewer/`
 and are not published by this workflow. The API Docker image builds the same
