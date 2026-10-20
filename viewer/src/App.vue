@@ -17,6 +17,8 @@ const model = shallowRef(null), manifest = ref(null), error = ref(''), loading =
 const route = ref(parseRoute('', NS.eusoilvoc))
 const query = ref(''), typeFilter = ref(''), sidebarTab = ref('hierarchy'), letter = ref('All'), alphabetLimit = ref(100)
 const expanded = ref(new Set()), selectedPath = ref([]), mobileSidebar = ref(false)
+const hierarchyTree = ref(null), focusedTreePath = ref([])
+const focusedTreeKey = computed(() => pathKey(focusedTreePath.value))
 const showSuggestions = ref(false), suggestionIndex = ref(-1), searchInput = ref(null), toast = ref('')
 const page = computed(() => Math.min(route.value.page, Math.max(0, Math.ceil(searchResults.value.length / 30) - 1)))
 const rdfMode = ref(false), rdfText = ref(''), rdfLoading = ref(false)
@@ -63,7 +65,12 @@ function go(params) {
   window.history.replaceState({ ...window.history.state, readingScroll: document.querySelector('.reading-pane')?.scrollTop || 0 }, '')
   window.history.pushState({ readingScroll: 0 }, '', url)
   readRoute()
+  if (mobileSidebar.value) focusContent()
+}
+async function focusContent() {
   mobileSidebar.value = false
+  await nextTick()
+  document.getElementById('content')?.focus({ preventScroll: true })
 }
 function navigate(input) {
   const uri = typeof input === 'string' ? input : input.uri
@@ -90,13 +97,62 @@ function searchKey(event) {
 function blurSearch() { blurTimer = setTimeout(() => { showSuggestions.value = false }, 150) }
 function toggle(path) {
   const key = pathKey(path)
-  if (expanded.value.has(key)) expanded.value.delete(key)
+  if (expanded.value.has(key)) {
+    expanded.value.delete(key)
+    if (path.every((uri, index) => focusedTreePath.value[index] === uri)) focusedTreePath.value = path
+  }
   else expanded.value.add(key)
 }
 function reveal(path, includeSelected = true) {
   for (let n = 1; n <= path.length - (includeSelected ? 0 : 1); n++) expanded.value.add(pathKey(path.slice(0, n)))
 }
-function collapseAll() { expanded.value = new Set(); reveal(selectedPath.value, false) }
+function collapseAll() {
+  expanded.value = new Set()
+  reveal(selectedPath.value, false)
+  focusedTreePath.value = selectedPath.value.length ? selectedPath.value : model.value.roots.slice(0, 1)
+}
+function treeFocus(event) {
+  const item = event.target.closest('[role="treeitem"]')
+  if (item) focusedTreePath.value = JSON.parse(item.dataset.path)
+}
+function focusTreeItem(item) {
+  if (!item) return
+  focusedTreePath.value = JSON.parse(item.dataset.path)
+  item.focus({ preventScroll: true })
+  item.querySelector('.tree-row')?.scrollIntoView({ block: 'nearest', inline: 'nearest' })
+}
+async function treeKey(event) {
+  if (event.altKey || event.ctrlKey || event.metaKey) return
+  const item = event.target.closest('[role="treeitem"]')
+  if (!item) return
+  const items = [...hierarchyTree.value.querySelectorAll('[role="treeitem"]')]
+  const index = items.indexOf(item), path = JSON.parse(item.dataset.path)
+  const open = item.getAttribute('aria-expanded') === 'true'
+  let target = item
+  switch (event.key) {
+    case 'ArrowDown': target = items[Math.min(index + 1, items.length - 1)]; break
+    case 'ArrowUp': target = items[Math.max(index - 1, 0)]; break
+    case 'Home': target = items[0]; break
+    case 'End': target = items.at(-1); break
+    case 'ArrowRight':
+      if (item.getAttribute('aria-expanded') === 'false') toggle(path)
+      else if (open) target = item.querySelector('[role="treeitem"]')
+      break
+    case 'ArrowLeft':
+      if (open) toggle(path)
+      else target = item.parentElement.closest('[role="treeitem"]') || item
+      break
+    case 'Enter':
+    case ' ':
+      event.preventDefault()
+      item.querySelector('.tree-select').click()
+      return
+    default: return
+  }
+  event.preventDefault()
+  await nextTick()
+  focusTreeItem(target)
+}
 function typeCaption(concept) { return concept.types.filter(uri => uri !== CONCEPT).map(uri => model.value.label(uri)).join(', ') || 'Concept' }
 function snippet(concept) { const text = concept.definitions[0]?.text || ''; return text.length > 220 ? text.slice(0, 220) + '...' : text }
 function navParents(uri) { return model.value.sort(model.value.parents.get(uri) || []) }
@@ -107,7 +163,10 @@ function changePage(delta) {
   go({ q: route.value.q, ...(route.value.type ? { type: route.value.type } : {}), page: page.value + delta + 1 })
 }
 function handleGlobalKey(event) {
-  if (event.key === 'Escape') mobileSidebar.value = false
+  if (event.key === 'Escape' && mobileSidebar.value) {
+    mobileSidebar.value = false
+    document.querySelector('.mobile-menu')?.focus()
+  }
   if (event.key === '/' && !/INPUT|TEXTAREA|SELECT/.test(event.target.tagName) && !event.ctrlKey && !event.metaKey) {
     event.preventDefault(); searchInput.value?.focus()
   }
@@ -134,6 +193,7 @@ watch([route, model], async () => {
   if (!model.value) return
   const uri = route.value.uri
   selectedPath.value = model.value.validPath(route.value.path, uri) ? route.value.path : model.value.pathTo(uri, selectedPath.value)
+  focusedTreePath.value = selectedPath.value.length ? selectedPath.value : model.value.roots.slice(0, 1)
   reveal(selectedPath.value)
   document.title = selected.value ? `${selected.value.label} | SoilVoc` : route.value.view === 'concept' ? `${model.value.label(uri)} | SoilVoc` : 'SoilVoc - Soil science vocabulary'
   await nextTick()
@@ -143,8 +203,12 @@ watch(rdfMode, updateRdf)
 watch(mobileSidebar, async open => {
   if (!open) return
   await nextTick()
+  if (sidebarTab.value === 'alphabetical') {
+    document.querySelector('.sidebar [role="tab"][aria-selected="true"]')?.focus()
+    return
+  }
   const current = revealSelectedRow()
-  current?.querySelector('a')?.focus({ preventScroll: true })
+  focusTreeItem(current?.parentElement || hierarchyTree.value?.querySelector('[role="treeitem"][tabindex="0"]'))
 })
 watch([suggestionIndex, showSuggestions], ([index, open]) => {
   if (open && index >= 0) document.getElementById(`suggestion-${index}`)?.scrollIntoView({ block: 'nearest', inline: 'nearest' })
@@ -178,6 +242,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="app-shell">
+    <a v-if="model" class="skip-link" href="#content" @click.prevent="focusContent">Skip to content</a>
     <header class="masthead">
       <a class="brand" href="?" @click="followLink($event, () => go({}))">SoilVoc</a>
       <span class="brand-description">Soil science vocabulary</span>
@@ -226,14 +291,14 @@ onBeforeUnmount(() => {
           <button class="icon-button collapse-button" title="Collapse all branches" aria-label="Collapse all branches" @click="collapseAll"><ChevronsDownUp :size="17" /></button>
         </div>
         <div class="sidebar-content">
-          <ul v-if="sidebarTab === 'hierarchy'" role="tree" aria-label="SoilVoc hierarchy" class="hierarchy-list">
-            <HierarchyNode v-for="root in model.roots" :key="root" :model="model" :uri="root" :path="[root]" :expanded="expanded" :selected-path="selectedPath" @toggle="toggle" @navigate="navigate" />
+          <ul v-if="sidebarTab === 'hierarchy'" ref="hierarchyTree" role="tree" aria-label="SoilVoc hierarchy" class="hierarchy-list" @focusin="treeFocus" @keydown="treeKey">
+            <HierarchyNode v-for="root in model.roots" :key="root" :model="model" :uri="root" :path="[root]" :expanded="expanded" :selected-path="selectedPath" :focused-key="focusedTreeKey" @toggle="toggle" @navigate="navigate" />
           </ul>
           <div v-else class="alphabetical-index">
             <div class="letters" aria-label="Alphabetical filter"><button v-for="char in ['All', ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '#']" :key="char" :class="{ active: letter === char }" @click="letter = char; alphabetLimit = 100">{{ char }}</button></div>
             <p class="list-count">{{ alphabet.length.toLocaleString() }} concepts</p>
             <ItemList :items="alphabet.slice(0, alphabetLimit).map(c => model.asJskos(c.uri))" :draggable="false" :row-mode="false" :item-name-options="{ showNotation: false }">
-              <template #beforeItem="{ item }"><a class="alphabetical-link" :href="conceptHref(item.uri)" @click="followLink($event, () => navigate(item.uri))"><ItemName :item="item" :show-notation="false" :draggable="false" /><span v-if="model.concepts.get(item.uri).isProcedure" class="procedure-badge">Procedure</span></a></template>
+              <template #beforeItem="{ item }"><a class="alphabetical-link" :aria-label="`${model.label(item.uri)}${model.concepts.get(item.uri).isProcedure ? ', Procedure' : ''}`" :href="conceptHref(item.uri)" @click="followLink($event, () => navigate(item.uri))"><ItemName :item="item" :show-notation="false" :draggable="false" /><span v-if="model.concepts.get(item.uri).isProcedure" class="procedure-badge">Procedure</span></a></template>
             </ItemList>
             <button v-if="alphabet.length > alphabetLimit" class="button secondary more-button" @click="alphabetLimit += 100">Show more</button>
           </div>
@@ -241,7 +306,7 @@ onBeforeUnmount(() => {
         <footer class="sidebar-footer"><span>{{ model.stats.concepts.toLocaleString() }} concepts</span><span>English</span></footer>
       </aside>
 
-      <main class="reading-pane" id="content" :inert="mobileSidebar">
+      <main class="reading-pane" id="content" tabindex="-1" :inert="mobileSidebar">
         <template v-if="selected">
           <div v-if="crumbs.length || hierarchyPaths.length > 1" class="concept-navigation">
             <nav v-if="crumbs.length" class="breadcrumbs" aria-label="Concept path">

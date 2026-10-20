@@ -1,11 +1,36 @@
 <script setup>
-import { ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { Download, ChevronDown } from '@lucide/vue'
 import { localName } from '../vocabulary.js'
 
 const props = defineProps({ model: Object, uri: String })
 const emit = defineEmits(['notice'])
 const menu = ref(null)
+function close(restoreFocus = false) {
+  if (!menu.value?.open) return
+  menu.value.open = false
+  if (restoreFocus) menu.value.querySelector('summary').focus()
+}
+function outside(event) {
+  if (!menu.value?.contains(event.target)) close()
+}
+function escape(event) {
+  if (event.key !== 'Escape' || !menu.value?.open) return
+  event.preventDefault()
+  event.stopPropagation()
+  close(true)
+}
+onMounted(() => {
+  document.addEventListener('pointerdown', outside)
+  document.addEventListener('focusin', outside)
+  document.addEventListener('keydown', escape)
+})
+onBeforeUnmount(() => {
+  document.removeEventListener('pointerdown', outside)
+  document.removeEventListener('focusin', outside)
+  document.removeEventListener('keydown', escape)
+})
+watch(() => props.uri, () => close())
 async function download(format) {
   try {
     const text = await props.model.serialize(props.uri, format)
@@ -17,7 +42,7 @@ async function download(format) {
     link.download = (props.uri ? localName(props.uri) : 'SoilVoc') + '.' + format
     link.click()
     setTimeout(() => URL.revokeObjectURL(url), 1000)
-    menu.value.open = false
+    close(true)
     emit('notice', 'Download prepared')
   } catch (error) { emit('notice', error.message) }
 }
