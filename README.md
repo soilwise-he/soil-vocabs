@@ -6,14 +6,13 @@ Harmonising terminology within or between communities is an important aspect in 
 
 This repository aims to facilitate co-creation of a skos vocabulary around `soil observation data`. It includes definitions of soil properties (descriptors), indicators and observation methods. It also includes a number of tools to prepare and interact with the vocabulary:
 - Tooling to [traverse to and from RDF](#traverse-tooling) (ttl) to CSV. CSV facilitates reviews by content specialists. While the RDF can be read by engines.
-- A [REST API](#rest-api) to interact with the vocabulary (read only).
+- An optional [REST API](#rest-api) to interact with the vocabulary (read only).
 - A human friendly [web interface](#web-interface) to browse through the vocabulary. This website is available at [SoilVoc Viewer](https://soilwise-he.github.io/soil-vocabs/), which is also linked to [w3id.org/eusoilvoc](https://w3id.org/eusoilvoc)
 
 ## How to contribute
 The current process for uploading new properties and procedures is through a [Github issue](https://github.com/soilwise-he/soil-vocabs/issues/new/choose). The workflow is displayed as below:
 
 ![soil-voc workflow](./viewer/data/workflow.png)
-![terminologies](./legacy/static-viewer/assets/terminology.png)
 
 ## Relevant terminologies
 
@@ -33,9 +32,10 @@ For the soil domain we should distinghuish various types of entities for which d
 The main published vocabulary files are available in the repository root, while support tooling lives in dedicated folders:
 
 - `scripts/restore_soilvoc_from_csv.py` rebuilds or compares `SoilVoc.ttl` from `SoilVoc_concepts.csv`
-- `viewer/` contains the current browser-based viewer, its data, and build instructions
-- `legacy/static-viewer/` preserves the previous HTML viewer, JSON snapshot, and generator
-- `docker/Dockerfile` builds the combined API + current viewer container
+- [viewer/](./viewer/README.md) contains the standalone browser viewer, its committed data, and build instructions
+- `viewer/scripts/generate_data.py` prepares the viewer snapshot from `SoilVoc_augmented.ttl` and `viewer/data/ontology.ttl`
+- [api/](./api/README.md) contains the separate REST API, which reads canonical `SoilVoc.ttl`
+- `docker/Dockerfile` builds the optional combined API and viewer container
 
 Typical local commands:
 
@@ -90,9 +90,12 @@ CSV helper module or test script is required:
 python scripts/restore_soilvoc_from_csv.py --csv SoilVoc_concepts.csv --out SoilVoc_restored.ttl --compare SoilVoc.ttl
 ```
 
-## Rest api
+## REST API
 
-A REST API for searching concepts, getting concept details and getting procedures linked to properties. Available at [SoilVoc api]([#/concepts/search_api_v1_concepts_search_get](http://api.soilwise.wetransform.eu/vocab/docs)). Read more at [api/README.md](./api/README.md).
+An optional read-only REST API provides concept search, concept details, and
+procedures linked to properties. See [api/README.md](./api/README.md) for setup
+and endpoints. The browser viewer does not call this API, and GitHub Pages does
+not run the Python service.
 
 ## Web interface
 
@@ -101,6 +104,8 @@ sourced definitions, types, relationships, and mappings. It reads the bundled
 `viewer/data/SoilVoc.ttl` without an API or triplestore. Regenerate this display
 snapshot with `python viewer/scripts/generate_data.py` after updating
 `SoilVoc_augmented.ttl`; the display ontology is in `viewer/data/ontology.ttl`.
+The root `SoilVoc.ttl` remains the canonical RDF publication and API input;
+the viewer snapshot is a separate display copy.
 
 The [viewer source and local instructions](./viewer/README.md) are in `viewer/`.
 GitHub Actions builds the viewer and publishes it to
@@ -109,12 +114,23 @@ change on `main`. The existing [W3ID entry point](https://w3id.org/eusoilvoc)
 and fragment links such as [cultural services](https://w3id.org/eusoilvoc#CulturalServices)
 continue to work. RDF requests still resolve to the unchanged canonical Turtle.
 
+The normal update sequence is to refresh the vocabulary data, regenerate
+`viewer/data/SoilVoc.ttl`, and commit the updated snapshot. A relevant push to
+`main` builds and deploys it automatically; pull requests build without deploying.
+Actions does not run the notebook or regenerate RDF, so changing
+`SoilVoc_augmented.ttl` alone does not refresh the concepts shown by the viewer.
+See [the viewer update guide](./viewer/README.md#update-viewer-data).
+
+## Local References
+
 The Skosmos reference deployment is local-only under the Git-ignored `skosmos/`
 directory. It is not required to build or publish this viewer and is not included
-in fresh clones.
+in fresh clones. The same applies to the local Cloudflare deployment bundle in
+`cloudflare/` and optional regression tests in `viewer/test/`. Existing local
+copies can be kept for reference; neither Pages nor the API image depends on them.
 
-The previous page is retained in [legacy/static-viewer](./legacy/static-viewer/)
-for reference and is not part of the new Pages build.
+The previous HTML/JSON viewer and its publishing workflow are no longer used.
+Older versions remain available in Git history rather than in the current tree.
 
 ## Source vocabularies
 
@@ -122,7 +138,13 @@ Source vocabulary data is stored under [ontovocabs](./ontovocabs). Every source 
 
 ## Installation instructions
 
-The software in this repository is available as [docker image](https://github.com/soilwise-he/soil-vocabs/pkgs/container/soil-vocabs). See details of the component on how to run the utility. 
+For the static viewer, follow [viewer/README.md](./viewer/README.md); only Node.js
+and npm are required to build the committed snapshot. GitHub Pages serves the
+result without Docker, Python, a triplestore, or an API server.
+
+The optional [Docker image](https://github.com/soilwise-he/soil-vocabs/pkgs/container/soil-vocabs)
+serves the API and the same viewer together. It is not a Skosmos or Fuseki image.
+See [the API Docker instructions](./api/README.md#docker) to run it locally.
 
 ---
 

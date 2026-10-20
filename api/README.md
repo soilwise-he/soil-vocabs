@@ -2,29 +2,64 @@
 
 REST API for querying the [SoilVoc](https://soilwise-he.github.io/soil-vocabs/) SKOS vocabulary, built with FastAPI and rdflib.
 
-The API loads `SoilVoc.ttl` into memory at startup and serves concept data directly from the RDF graph — no build step or intermediate JSON required.
+The API loads `SoilVoc.ttl` into memory at startup and serves concept data
+directly from the RDF graph. No RDF-to-JSON preprocessing is required; building
+the frontend served by the app is a separate step described below.
+
+This service is optional. The GitHub Pages viewer reads its own committed RDF
+snapshot in the browser and does not call the API. API requests use canonical
+`SoilVoc.ttl`, while the viewer uses `viewer/data/SoilVoc.ttl`; update the relevant
+input for each surface. Restart the API after changing its canonical RDF input.
 
 ## Setup
+
+Run from the repository root. On PowerShell:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+```
+
+On Linux/macOS:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 ## Running
 
-From the repository root:
+The FastAPI app also mounts the static frontend at startup, so the configured
+`SITEPATH` directory must exist even when only testing API endpoints. From the
+repository root, build the viewer with Node.js 24 and npm first:
 
 ```bash
-source .venv/bin/activate
-uvicorn api.main:app --reload
+npm --prefix viewer ci
+npm --prefix viewer run build
+```
+
+With the Python environment activated, start the app on PowerShell:
+
+```powershell
+$env:SITEPATH = "viewer/dist"
+python -m uvicorn api.main:app --reload
+```
+
+On Linux/macOS:
+
+```bash
+SITEPATH=viewer/dist python -m uvicorn api.main:app --reload
 ```
 
 The server starts at `http://localhost:8000`. Interactive API docs are available at:
 
 - Swagger UI: `http://localhost:8000/docs`
 - ReDoc: `http://localhost:8000/redoc`
+
+The same server hosts the built viewer at `http://localhost:8000/`. For a
+viewer-only setup without Python or this server, follow [viewer/README.md](../viewer/README.md).
 
 ## Concept types
 
@@ -223,10 +258,19 @@ api/
 
 ## Docker
 
-A docker image is available on ghcr.io. The container serves both the REST API and the static vocabulary viewer.
+The optional container serves both the REST API and the static vocabulary
+viewer. It does not run Skosmos, Fuseki, or a separate triplestore. Use the
+published GHCR image:
 
+```bash
+docker run --rm -p 127.0.0.1:8000:8000 ghcr.io/soilwise-he/soil-vocabs:latest
 ```
-docker run -p8000:8000 ghcr.io/soilwise-he/soil-vocabs:latest
+
+Or build from the current checkout at the repository root:
+
+```bash
+docker build -f docker/Dockerfile -t soilvoc .
+docker run --rm -p 127.0.0.1:8000:8000 soilvoc
 ```
 
 - `/` — static vocabulary viewer
@@ -238,7 +282,7 @@ docker run -p8000:8000 ghcr.io/soilwise-he/soil-vocabs:latest
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `ROOTPATH` | (empty) | Set to e.g. `/example` to run behind a reverse proxy at a sub-path |
-| `SITEPATH` | `site` | Built viewer directory. For local development, build `viewer/` and set this to `viewer/dist` |
+| `SITEPATH` | `site` | Existing built viewer directory. The image supplies `site`; for source-based development, use `viewer/dist` |
 
 The Docker build compiles the same `viewer/` frontend used by GitHub Pages.
 Static assets, bundled vocabulary data, and images are served below `/`, after
@@ -246,3 +290,8 @@ the API and documentation routes. The API still loads canonical `SoilVoc.ttl`;
 the browser viewer reads its separate bundled `data/SoilVoc.ttl`, built from
 `viewer/data/SoilVoc.ttl`. Neither the API image nor the Pages build requires
 the local-only Skosmos deployment.
+
+`.github/workflows/build-api-image.yml` builds and publishes the container image
+on relevant pushes to `main`. It is separate from the Pages workflow and does
+not deploy a server or update local reference containers. Local-only tests,
+Skosmos and Cloudflare files are excluded from the image build context.

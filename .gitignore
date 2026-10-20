@@ -7,12 +7,6 @@ AGENTS.md
 # local reference deployment (not part of the published viewer)
 /skosmos/
 
-# worktrees
-/.worktrees/
-
-# local Skosmos plugin tests
-*.test.mjs
-
 # similarity csv
 entity_similarity_gpt.csv
 
