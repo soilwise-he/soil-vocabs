@@ -1,0 +1,10 @@
+node_modules/
+dist/
+public/data/
+public/workflow.png
+public/SoilVoc.ttl
+public/SoilVoc_augmented.ttl
+public/SoilVoc_concepts.csv
+public/CITATION.cff
+public/LICENSE
+.qa/

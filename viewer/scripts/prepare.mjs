@@ -8,6 +8,10 @@ await mkdir(new URL('data/', publicDir), { recursive: true })
 const bytes = await readFile(source)
 await copyFile(source, new URL('data/SoilVoc_skosmos.ttl', publicDir))
 await copyFile(new URL('../../skosmos/Soilwise_workflow_soilvoc.png', import.meta.url), new URL('workflow.png', publicDir))
+// W3ID's Turtle content negotiation points to the canonical root-level file.
+for (const file of ['SoilVoc.ttl', 'SoilVoc_augmented.ttl', 'SoilVoc_concepts.csv', 'CITATION.cff', 'LICENSE']) {
+  await copyFile(new URL('../../' + file, import.meta.url), new URL(file, publicDir))
+}
 await writeFile(new URL('data/manifest.json', publicDir), JSON.stringify({
   source: 'skosmos/SoilVoc_skosmos.ttl',
   sha256: createHash('sha256').update(bytes).digest('hex'),

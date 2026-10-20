@@ -1,0 +1,44 @@
+name: Build API and viewer container
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'api/**'
+      - 'docker/**'
+      - 'viewer/**'
+      - 'requirements.txt'
+      - 'SoilVoc.ttl'
+      - 'SoilVoc_augmented.ttl'
+      - 'SoilVoc_concepts.csv'
+      - 'skosmos/SoilVoc_skosmos.ttl'
+      - 'skosmos/Soilwise_workflow_soilvoc.png'
+      - 'CITATION.cff'
+      - 'LICENSE'
+      - '.github/workflows/build-api-image.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: docker/Dockerfile
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}:main
+            ghcr.io/${{ github.repository }}:latest

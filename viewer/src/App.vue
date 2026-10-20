@@ -48,7 +48,7 @@ async function copyText(text, name) {
 }
 function copyUri(uri) { return copyText(uri, 'URI') }
 function readRoute() {
-  route.value = parseRoute(window.location.search, NS.eusoilvoc)
+  route.value = parseRoute(window.location.search, NS.eusoilvoc, window.location.hash)
   query.value = route.value.q
   typeFilter.value = route.value.type
   rdfMode.value = false
@@ -152,6 +152,7 @@ watch([suggestionIndex, showSuggestions], ([index, open]) => {
 watch([query, typeFilter], () => { suggestionIndex.value = -1 })
 onMounted(async () => {
   window.addEventListener('popstate', readRoute)
+  window.addEventListener('hashchange', readRoute)
   window.addEventListener('keydown', handleGlobalKey)
   desktopLayout = window.matchMedia('(min-width: 761px)')
   desktopLayout.addEventListener('change', onDesktopLayoutChange)
@@ -168,6 +169,7 @@ onMounted(async () => {
 })
 onBeforeUnmount(() => {
   window.removeEventListener('popstate', readRoute)
+  window.removeEventListener('hashchange', readRoute)
   window.removeEventListener('keydown', handleGlobalKey)
   desktopLayout?.removeEventListener('change', onDesktopLayoutChange)
   clearTimeout(toastTimer); clearTimeout(blurTimer)

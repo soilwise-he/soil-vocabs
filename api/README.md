@@ -238,4 +238,9 @@ docker run -p8000:8000 ghcr.io/soilwise-he/soil-vocabs:latest
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `ROOTPATH` | (empty) | Set to e.g. `/example` to run behind a reverse proxy at a sub-path |
-| `SITEPATH` | `site` | Directory containing `index.html` and `assets/`. Set to `.` for local development |
+| `SITEPATH` | `site` | Built viewer directory. For local development, build `viewer/` and set this to `viewer/dist` |
+
+The Docker build compiles the same `viewer/` frontend used by GitHub Pages.
+Static assets, bundled vocabulary data, and images are served below `/`, after
+the API and documentation routes. The API still loads canonical `SoilVoc.ttl`;
+the browser viewer reads its separate bundled `SoilVoc_skosmos.ttl`.
