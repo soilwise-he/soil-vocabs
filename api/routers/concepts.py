@@ -16,10 +16,9 @@ def search(
     q: str = Query(..., min_length=1, description="Search term (searches prefLabel, altLabel)"),
     limit: int = Query(20, ge=1, le=100, description="Max results to return"),
     offset: int = Query(0, ge=0, description="Number of results to skip"),
-    type: str | None = Query(
+    type: Literal["property", "procedure"] | None = Query(
         None,
         description="Filter by concept type: 'property' or 'procedure'. Omit for all.",
-        enum=["property", "procedure"],
     ),
 ):
     results, total = search_concepts(q, limit=limit, offset=offset, concept_type=type)
