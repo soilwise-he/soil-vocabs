@@ -33,12 +33,14 @@ eusoilvoc:Land a skos:Concept ;
     skos:prefLabel "land"@en .
 
 eusoilvoc:ManagedSoils a skos:Concept ;
+    skos:altLabel "managed soil"@en ;
     skos:broader eusoilvoc:SoilManagement ;
     skos:definition [ dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
             rdf:value "Soils where soil management practices are carried out"@en ] ;
     skos:prefLabel "managed soils"@en .
 
 eusoilvoc:MineralSoils a skos:Concept ;
+    skos:altLabel "mineral soil"@en ;
     skos:broader eusoilvoc:SoilDescription ;
     skos:definition [ dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
             rdf:value "Mineral soils within the meaning of the 2006 IPCC Guidelines for National Greenhouse Gas Inventories"@en ] ;
@@ -57,6 +59,7 @@ eusoilvoc:NetSealing a skos:Concept ;
     skos:prefLabel "net sealing"@en .
 
 eusoilvoc:OrganicSoils a skos:Concept ;
+    skos:altLabel "organic soil"@en ;
     skos:broader eusoilvoc:SoilDescription ;
     skos:definition [ dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
             rdf:value "Organic soils within the meaning of the 2006 IPCC Guidelines for National Greenhouse Gas Inventories"@en ] ;
@@ -80,6 +83,7 @@ eusoilvoc:Risk a skos:Concept ;
     skos:prefLabel "risk"@en .
 
 eusoilvoc:RiskReductionMeasures a skos:Concept ;
+    skos:altLabel "risk reduction measure"@en ;
     skos:broader eusoilvoc:SoilManagement ;
     skos:definition [ dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
             rdf:value "Measures that aim to reduce the risks that contaminated sites pose to human health and the environment, either by means of soil remediation or modification of the source-pathway-receptor linkage without changing the characteristics of the contamination itself."@en ] ;
@@ -133,6 +137,7 @@ eusoilvoc:SoilInvestigation a skos:Concept ;
     skos:prefLabel "soil investigation"@en .
 
 eusoilvoc:SoilManagementPractices a skos:Concept ;
+    skos:altLabel "soil management practice"@en ;
     skos:broader eusoilvoc:SoilManagement ;
     skos:definition [ dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
             rdf:value "Practices that ipact the physical, chemical, or biological properties of the soil"@en ] ;
@@ -173,6 +178,7 @@ eusoilvoc:TransferFunction a skos:Concept ;
     skos:prefLabel "transfer function"@en .
 
 eusoilvoc:EcosystemServices a skos:Concept ;
+    skos:altLabel "ecosystem service"@en ;
     skos:definition [ dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
             rdf:value "The direct or indirect contributions of ecosystems to the environmental, economic, social, cultural and other benefits that people derive from those ecosystems"@en ] ;
     skos:prefLabel "ecosystem services"@en .

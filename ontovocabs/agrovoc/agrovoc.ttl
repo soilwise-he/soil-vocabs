@@ -50,12 +50,14 @@ eusoilvoc:SpodosolsUSDA skos:definition [ dcterms:source agrovoc:c_36874 ;
     skos:exactMatch agrovoc:c_36874 .
 
 eusoilvoc:AHorizons a skos:Concept ;
+    skos:altLabel "A horizon"@en ;
     skos:broader eusoilvoc:SoilHorizons ;
     skos:exactMatch agrovoc:c_47a98f68 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "A horizons"@en .
 
 eusoilvoc:AcidSoils a skos:Concept ;
+    skos:altLabel "acid soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:definition [ dcterms:source agrovoc:c_89 ;
             rdf:value "A soil with a pH value of less than 7.0; for practical purposes, soils with pH below 6.6."@en ] ;
@@ -64,19 +66,20 @@ eusoilvoc:AcidSoils a skos:Concept ;
     skos:prefLabel "acid soils"@en .
 
 eusoilvoc:AcidSulphateSoils a skos:Concept ;
+    skos:altLabel "acid sulphate soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:exactMatch agrovoc:c_36929 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "acid sulphate soils"@en .
 
 eusoilvoc:AcrisolsWRB a skos:Concept ;
+    skos:altLabel "Acrisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_101 ;
             rdf:value "Acrisols have a higher clay content in the subsoil than in the topsoil, as a result of pedogenetic processes (especially clay migration) leading to an argic subsoil horizon. Acrisols have low-activity clays in the argic horizon and a low base saturation in the 50–100 cm depth. Many Acrisols correlate with Red yellow podzolic soils (e.g. Indonesia), Argissolos (Brazil), Kurosols (Australia), Sols ferralitiques fortement ou moyennement désaturés (France) and Ultisols with low-activity clays (United States of America)."@en ] ;
     skos:exactMatch agrovoc:c_101 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Acrisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Acrisols"@en .
 
 eusoilvoc:AgriculturalLime a skos:Concept ;
     skos:broader eusoilvoc:LimingMaterials ;
@@ -87,6 +90,7 @@ eusoilvoc:AgriculturalLime a skos:Concept ;
     skos:prefLabel "agricultural lime"@en .
 
 eusoilvoc:AgriculturalSoils a skos:Concept ;
+    skos:altLabel "agricultural soil"@en ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
     skos:exactMatch agrovoc:c_33934 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -101,15 +105,16 @@ eusoilvoc:Agrology a skos:Concept ;
     skos:prefLabel "agrology"@en .
 
 eusoilvoc:AlisolsWRB a skos:Concept ;
+    skos:altLabel "Alisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_479c499a ;
             rdf:value "Alisols have a higher clay content in the subsoil than in the topsoil, as a result of pedogenetic processes (especially clay migration) leading to an argic subsoil horizon. Alisols have high-activity clays throughout the argic horizon and a low base saturation in the 50–100 cm depth. They occur predominantly in humid tropical, humid subtropical and humid temperate regions. Many Alisols correlate with Parabraunerden (Germany), Argissolos (Brazil), Ultisols with high-activity clays (United States of America), Kurosols (Australia), and Fersialsols and Sols fersiallitiques très lessivés (France)."@en ] ;
     skos:exactMatch agrovoc:c_479c499a ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Alisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Alisols"@en .
 
 eusoilvoc:AlkalineSoils a skos:Concept ;
+    skos:altLabel "alkaline soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:exactMatch agrovoc:c_268 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -122,6 +127,7 @@ eusoilvoc:Allophane a skos:Concept ;
     skos:prefLabel "allophane"@en .
 
 eusoilvoc:AlluvialSoils a skos:Concept ;
+    skos:altLabel "alluvial soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:definition [ dcterms:source agrovoc:c_296 ;
             rdf:value "Soil that has been deposited by any form of running water."@en ] ;
@@ -129,7 +135,17 @@ eusoilvoc:AlluvialSoils a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "alluvial soils"@en .
 
+eusoilvoc:Alluvium a skos:Concept ;
+    skos:altLabel "alluvial deposits"@en ;
+    skos:broader eusoilvoc:ParentMaterial ;
+    skos:definition [ dcterms:source agrovoc:c_25347 ;
+            rdf:value "Deposit made by a river or running water, often very productive agricultural soil."@en ] ;
+    skos:exactMatch agrovoc:c_25347 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "alluvium"@en .
+
 eusoilvoc:AluminiumMulches a skos:Concept ;
+    skos:altLabel "aluminium mulch"@en ;
     skos:broader eusoilvoc:DryMulches ;
     skos:definition [ dcterms:source agrovoc:c_207ace25 ;
             rdf:value "A mulch where foil is used to cover soil surface."@en ] ;
@@ -144,13 +160,13 @@ eusoilvoc:AmmoniumFixation a skos:Concept ;
     skos:prefLabel "ammonium fixation"@en .
 
 eusoilvoc:AndosolsWRB a skos:Concept ;
+    skos:altLabel "Andosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_404 ;
             rdf:value "Andosols accommodate soils that develop in glass-rich volcanic ejecta under almost any climate (except under hyperarid climate conditions). However, Andosols may also develop in other silicate-rich materials under acid weathering in humid and perhumid climates. Many Andosols belong to Kuroboku (Japan), Andisols (United States of America), Andosols and Vitrisols (France), and Volcanic ash soils (Russia)."@en ] ;
     skos:exactMatch agrovoc:c_404 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Andosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Andosols"@en .
 
 eusoilvoc:AnionExchangeCapacity a skos:Concept ;
     skos:broader eusoilvoc:SoilChemicalCapacity ;
@@ -161,13 +177,13 @@ eusoilvoc:AnionExchangeCapacity a skos:Concept ;
     skos:prefLabel "anion exchange capacity"@en .
 
 eusoilvoc:AnthrosolsWRB a skos:Concept ;
+    skos:altLabel "Anthrosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_4515b13e ;
             rdf:value "Anthrosols comprise soils that have been modified profoundly through human activities, such as addition of organic or mineral material, charcoal or household wastes, or irrigation and cultivation. The group includes soils otherwise known as Plaggen soils, Paddy soils, Oasis soils, or Terra Preta de Indio. Many of them correspond to Highly cultivated soils and Anciently irrigated soils (Russia), Terrestrische anthropogene Böden (Germany), Anthroposols (Australia) and Anthrosols (China)."@en ] ;
     skos:exactMatch agrovoc:c_4515b13e ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Anthrosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Anthrosols"@en .
 
 eusoilvoc:Antimony a skos:Concept ;
     skos:broader eusoilvoc:SoilPollutants ;
@@ -178,21 +194,23 @@ eusoilvoc:Antimony a skos:Concept ;
     skos:prefLabel "antimony"@en .
 
 eusoilvoc:ArableSoils a skos:Concept ;
+    skos:altLabel "arable soil"@en ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
     skos:exactMatch agrovoc:c_568 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "arable soils"@en .
 
 eusoilvoc:ArenosolsWRB a skos:Concept ;
+    skos:altLabel "Arenosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_601 ;
             rdf:value "Arenosols comprise deep sandy soils. This includes soils in residual sands after in situ weathering of usually quartz-rich sediments or rock, and soils in recently deposited sands such as dunes in deserts and beach lands. Corresponding soils in other classification systems include Psamments (United States of America), Sols minéraux bruts and Sols peu évolués (France), Arenic Rudosols/Tenosols (Australia), Psammozems (Russia) and Neossolos (Brazil)."@en ] ;
     skos:exactMatch agrovoc:c_601 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Arenosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Arenosols"@en .
 
 eusoilvoc:AridSoils a skos:Concept ;
+    skos:altLabel "arid soil"@en ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
     skos:exactMatch agrovoc:c_612 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -207,6 +225,7 @@ eusoilvoc:Arsenic a skos:Concept ;
     skos:prefLabel "arsenic"@en .
 
 eusoilvoc:BHorizons a skos:Concept ;
+    skos:altLabel "B horizon"@en ;
     skos:broader eusoilvoc:SoilHorizons ;
     skos:definition [ dcterms:source agrovoc:c_6381571a ;
             rdf:value "B horizons form below an O, A, or E horizon and they have undergone sufficient changes during soil genesis, such that the properties of their original parent material are no longer discernible."@en ] ;
@@ -215,6 +234,7 @@ eusoilvoc:BHorizons a skos:Concept ;
     skos:prefLabel "B horizons"@en .
 
 eusoilvoc:BarkMulches a skos:Concept ;
+    skos:altLabel "bark mulch"@en ;
     skos:broader eusoilvoc:OrganicMulches ;
     skos:definition [ dcterms:source agrovoc:c_bc5f6400 ;
             rdf:value "A mulch where the outer corky bark layer of timber trees, shredded or not, are used to cover soil surface."@en ] ;
@@ -223,6 +243,7 @@ eusoilvoc:BarkMulches a skos:Concept ;
     skos:prefLabel "bark mulches"@en .
 
 eusoilvoc:BasalticSoils a skos:Concept ;
+    skos:altLabel "basaltic soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_832 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -245,18 +266,21 @@ eusoilvoc:Biodrainage a skos:Concept ;
     skos:prefLabel "biodrainage"@en .
 
 eusoilvoc:BogSoils a skos:Concept ;
+    skos:altLabel "bog soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:exactMatch agrovoc:c_986 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "bog soils"@en .
 
 eusoilvoc:BottomlandSoils a skos:Concept ;
+    skos:altLabel "bottomland soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:exactMatch agrovoc:c_1033 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "bottomland soils"@en .
 
 eusoilvoc:BoulderClaySoils a skos:Concept ;
+    skos:altLabel "boulder clay soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:definition [ dcterms:source agrovoc:c_1036 ;
             rdf:value "The boulder clay soils typically comprise very slightly stony (<5% stones), non-calcareous or very slightly calcareous (<1% CaCO-), heavy clay loam or clay topsoil overlying a clay or heavy clay loam upper subsoil passing to a clay lower subsoil within 45-60 cm."@en ] ;
@@ -265,31 +289,34 @@ eusoilvoc:BoulderClaySoils a skos:Concept ;
     skos:prefLabel "boulder clay soils"@en .
 
 eusoilvoc:BuriedSoils a skos:Concept ;
+    skos:altLabel "buried soil"@en ;
     skos:broader eusoilvoc:PalaeosolicSoilTypes ;
     skos:exactMatch agrovoc:c_1154 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "buried soils"@en .
 
 eusoilvoc:CHorizons a skos:Concept ;
+    skos:altLabel "C horizon"@en ;
     skos:broader eusoilvoc:SoilHorizons ;
     skos:exactMatch agrovoc:c_016fddeb ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "C horizons"@en .
 
 eusoilvoc:CalamineSoils a skos:Concept ;
+    skos:altLabel "calamine soil"@en ;
     skos:broader eusoilvoc:MineralogicalSoilTypes ;
     skos:exactMatch agrovoc:c_1189 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "calamine soils"@en .
 
 eusoilvoc:CalcisolsWRB a skos:Concept ;
+    skos:altLabel "Calcisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_ea60e31f ;
             rdf:value "Calcisols accommodate soils with substantial accumulation of secondary carbonates. Calcisols are widespread in arid and semi-arid environments, often associated with highly calcareous parent materials. Many Calcisols have formerly been called Desert soils. In the United States of America most of them belong to the Calcids, and in Australia to the Calcarosols. In the Soil Map of the World (FAO–UNESCO, 1971–1981) most of them belong to the Xerosols and to a lesser extent to the Yermosols."@en ] ;
     skos:exactMatch agrovoc:c_ea60e31f ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Calcisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Calcisols"@en .
 
 eusoilvoc:CalciticLimeAmendment a skos:Concept ;
     skos:broader eusoilvoc:LimingMaterials ;
@@ -300,28 +327,29 @@ eusoilvoc:CalciticLimeAmendment a skos:Concept ;
     skos:prefLabel "calcitic lime (amendment)"@en .
 
 eusoilvoc:CambisolsWRB a skos:Concept ;
+    skos:altLabel "Cambisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_1224 ;
             rdf:value "Cambisols combine soils with at least an incipient subsurface soil formation. Transformation of parent material is evident from structure formation and mostly brownish discoloration, increasing clay percentage, and/or carbonate removal. Other soil classification systems refer to many Cambisols as Braunerden and Terrae fuscae (Germany), Sols bruns (France), burozems (Russia) and Tenosols (Australia). The name Cambisols was coined for the Soil Map of the World (FAO–UNESCO, 1971–1981) and later adopted by Brazil (Cambissolos). In the United States of America they were formerly called Brown soils/Brown forest soils and are now named Inceptisols."@en ] ;
     skos:exactMatch agrovoc:c_1224 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Cambisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Cambisols"@en .
 
 eusoilvoc:ChalkSoils a skos:Concept ;
+    skos:altLabel "chalk soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_1493 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "chalk soils"@en .
 
 eusoilvoc:ChernozemsWRB a skos:Concept ;
+    skos:altLabel "Chernozem"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_1533 ;
             rdf:value "Chernozems accommodate soils with a thick blackish mineral surface layer that is rich in organic matter. The Russian soil scientist V.V. Dokuchaev coined the name Chernozem in 1883 to denote the typical soils of the tall-grass steppes in continental Russia. Many Chernozems correspond to Kalktschernoseme (Germany), Chernosols (France), Eluviated black soils (Canada) and Chernossolos (Brazil). In the United States of America they were formerly called Calcareous black soils and belong now to several Suborders (especially Udolls) of the Mollisols."@en ] ;
     skos:exactMatch agrovoc:c_1533 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Chernozems"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Chernozems"@en .
 
 eusoilvoc:Chromium a skos:Concept ;
     skos:broader eusoilvoc:SoilPollutants ;
@@ -330,6 +358,7 @@ eusoilvoc:Chromium a skos:Concept ;
     skos:prefLabel "chromium"@en .
 
 eusoilvoc:ClaypanSoils a skos:Concept ;
+    skos:altLabel "claypan soil"@en ;
     skos:broader eusoilvoc:StructuralSoilTypes ;
     skos:exactMatch agrovoc:c_1660 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -346,6 +375,7 @@ eusoilvoc:CoarseSilt a skos:Concept ;
     skos:prefLabel "coarse silt"@en .
 
 eusoilvoc:CoastalSoils a skos:Concept ;
+    skos:altLabel "coastal soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:exactMatch agrovoc:c_1699 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -373,6 +403,7 @@ eusoilvoc:Colluvium a skos:Concept ;
     skos:prefLabel "colluvium"@en .
 
 eusoilvoc:CompostMulches a skos:Concept ;
+    skos:altLabel "compost mulch"@en ;
     skos:broader eusoilvoc:OrganicMulches ;
     skos:definition [ dcterms:source agrovoc:c_d2c183d0 ;
             rdf:value "A mulch where compost is used to cover soil surface."@en ] ;
@@ -387,13 +418,13 @@ eusoilvoc:ConventionalTillage a skos:Concept ;
     skos:prefLabel "conventional tillage"@en .
 
 eusoilvoc:CryosolsWRB a skos:Concept ;
+    skos:altLabel "Cryosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_829043c3 ;
             rdf:value "Cryosols comprise mineral soils formed in a permafrost environment. The subsurface layers (cryic horizon) are permanently frozen, and if present, water occurs in the form of ice. Cryogenic processes are the dominant soil-forming processes in most Cryosols. Cryosols are widely known as Permafrost soils, Cryomorphic soils or Polar desert soils. Other common names for many Cryosols are Gelisols (United States of America) and Cryozems (Russia)."@en ] ;
     skos:exactMatch agrovoc:c_829043c3 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Cryosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Cryosols"@en .
 
 eusoilvoc:DeepPloughing a skos:Concept ;
     skos:broader eusoilvoc:Ploughing ;
@@ -404,12 +435,14 @@ eusoilvoc:DeepPloughing a skos:Concept ;
     skos:prefLabel "deep ploughing"@en .
 
 eusoilvoc:DeltaSoils a skos:Concept ;
+    skos:altLabel "delta soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:exactMatch agrovoc:c_2169 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "delta soils"@en .
 
 eusoilvoc:DesertSoils a skos:Concept ;
+    skos:altLabel "desert soil"@en ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
     skos:exactMatch agrovoc:c_2203 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -424,6 +457,7 @@ eusoilvoc:DigitalSoilMapping a skos:Concept ;
     skos:prefLabel "digital soil mapping"@en .
 
 eusoilvoc:DioriteSoils a skos:Concept ;
+    skos:altLabel "diorite soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_2286 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -438,6 +472,7 @@ eusoilvoc:Disking a skos:Concept ;
     skos:prefLabel "disking"@en .
 
 eusoilvoc:DispersiveSoils a skos:Concept ;
+    skos:altLabel "dispersive soil"@en ;
     skos:broader eusoilvoc:StructuralSoilTypes ;
     skos:definition [ dcterms:source agrovoc:c_2334 ;
             rdf:value "A structurally unstable soil that disintegrates into grains of sand, silt, and clay upon contact with water and is easily eroded."@en ] ;
@@ -458,6 +493,7 @@ eusoilvoc:DrainageEquipment a skos:Concept ;
     skos:prefLabel "drainage equipment"@en .
 
 eusoilvoc:DrumlinSoils a skos:Concept ;
+    skos:altLabel "drumlin soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:exactMatch agrovoc:c_2396 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -470,21 +506,23 @@ eusoilvoc:DuneFixation a skos:Concept ;
     skos:prefLabel "dune fixation"@en .
 
 eusoilvoc:DuneSoils a skos:Concept ;
+    skos:altLabel "dune soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:exactMatch agrovoc:c_2409 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "dune soils"@en .
 
 eusoilvoc:DurisolsWRB a skos:Concept ;
+    skos:altLabel "Durisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_51ec138f ;
             rdf:value "Durisols are associated mainly with old surfaces in arid and semi-arid environments and accommodate shallow to moderately deep, moderately well- to well-drained soils that contain cemented secondary silica (SiO2) within 100 cm of the soil surface. Many Durisols are known as Hardpan soils or Duric Kandosols (Australia), Dorbank (South Africa), or Durids (United States of America). In the Soil Map of the World (FAO–UNESCO, 1971–1981) they are the Duripan phases of other soils, e.g. of Calcisols."@en ] ;
     skos:exactMatch agrovoc:c_51ec138f ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Durisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Durisols"@en .
 
 eusoilvoc:EHorizons a skos:Concept ;
+    skos:altLabel "E horizon"@en ;
     skos:broader eusoilvoc:SoilHorizons ;
     skos:definition [ dcterms:source agrovoc:c_f4fd14d8 ;
             rdf:value "E (short for eluviated), is most commonly used to label a horizon that has been significantly leached of clay, iron, and aluminum oxides, which leaves a concentration of resistant minerals, such as quartz, in the sand and silt sizes. "@en ] ;
@@ -495,7 +533,8 @@ eusoilvoc:EHorizons a skos:Concept ;
 eusoilvoc:Earthworms skos:broader eusoilvoc:SoilOrganisms .
 
 eusoilvoc:EdaphicFactors a skos:Concept ;
-    skos:altLabel "soil factors"@en ;
+    skos:altLabel "edaphic factor"@en,
+        "soil factors"@en ;
     skos:broader eusoilvoc:SoilProperties ;
     skos:definition [ dcterms:source agrovoc:c_15617 ;
             rdf:value "Any characteristic or condition of soil - generally physical or chemical, that influences organisms."@en ] ;
@@ -510,37 +549,41 @@ eusoilvoc:Enchytraeidae a skos:Concept ;
     skos:prefLabel "Enchytraeidae"@en .
 
 eusoilvoc:ErodedSoils a skos:Concept ;
+    skos:altLabel "eroded soil"@en ;
     skos:broader eusoilvoc:AnthropogenicSoils ;
     skos:exactMatch agrovoc:c_2650 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "eroded soils"@en .
 
 eusoilvoc:ErosionControlPlants a skos:Concept ;
+    skos:altLabel "erosion control plant"@en ;
     skos:broader eusoilvoc:ErosionControl ;
     skos:exactMatch agrovoc:c_2653 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "erosion control plants"@en .
 
 eusoilvoc:EvaporationSuppressants a skos:Concept ;
+    skos:altLabel "evaporation suppressant"@en ;
     skos:broader eusoilvoc:SoilAmendments ;
     skos:exactMatch agrovoc:c_2740 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "evaporation suppressants"@en .
 
 eusoilvoc:FenlandSoils a skos:Concept ;
+    skos:altLabel "fenland soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:exactMatch agrovoc:c_2854 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "fenland soils"@en .
 
 eusoilvoc:FerralsolsWRB a skos:Concept ;
+    skos:altLabel "Ferralsol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_2858 ;
             rdf:value "Ferralsols represent the classical, deeply weathered, red or yellow soils of the humid tropics. These soils have diffuse horizon boundaries, a clay assemblage dominated by low-activity clays (mainly kaolinite) and a high content of sesquioxides. Local names usually refer to the colour of the soil. Many Ferralsols are known as Oxisols (United States of America), Latossolos (Brazil), Alítico, Ferrítico and Ferralítico (Cuba), Kandosols (Australia), Sols ferralitiques (France) and Ferralitic soils (Russia)."@en ] ;
     skos:exactMatch agrovoc:c_2858 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Ferralsols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Ferralsols"@en .
 
 eusoilvoc:FineSand skos:broader eusoilvoc:SandyTexture .
 
@@ -561,13 +604,14 @@ eusoilvoc:FineSoil a skos:Concept ;
     skos:prefLabel "fine soil"@en .
 
 eusoilvoc:FluvisolsWRB a skos:Concept ;
+    skos:altLabel "Fluvisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:exactMatch agrovoc:c_3000 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Fluvisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Fluvisols"@en .
 
 eusoilvoc:ForestSoils a skos:Concept ;
+    skos:altLabel "forest soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:definition [ dcterms:source agrovoc:c_3051 ;
             rdf:value "Forest soils, where soil formation has been influenced by forest vegetation, are generally characterized by deeply rooted trees, significant ‘litter layers’ or O horizons, recycling of organic matter and nutrients, including wood, and wide varieties of soil-dwelling organisms."@en ] ;
@@ -576,6 +620,7 @@ eusoilvoc:ForestSoils a skos:Concept ;
     skos:prefLabel "forest soils"@en .
 
 eusoilvoc:FrigidSoils a skos:Concept ;
+    skos:altLabel "frigid soil"@en ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
     skos:exactMatch agrovoc:c_3108 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -606,27 +651,30 @@ eusoilvoc:GaseousNitrogen a skos:Concept ;
     skos:prefLabel "gaseous nitrogen"@en .
 
 eusoilvoc:GlacialTillSoils a skos:Concept ;
+    skos:altLabel "glacial till soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_3269 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "glacial till soils"@en .
 
 eusoilvoc:GleysolsWRB a skos:Concept ;
+    skos:altLabel "Gleysol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_3276 ;
             rdf:value "Gleysols comprise soils saturated with groundwater for long enough periods to develop reducing conditions resulting in gleyic properties, including underwater and tidal soils. This pattern is essentially made up of reddish, brownish or yellowish colours at aggregate surfaces and/or in the upper soil layers, in combination with greyish/bluish colours inside the aggregates and/or deeper in the soil. Many underwater soils have only the latter. Gleysols with a thionic horizon or hypersulfidic material (acid sulfate soils) are common. Redox processes may also be caused by upmoving gases, like CO2 or CH4. Common names for many Gleysols are Gley (former Soviet Union), Gleyzems (Russia), Gleye, Marschen, Watten and Unterwasserböden (Germany), Gleissolos (Brazil) and Hydrosols (Australia). In the United States of America many Gleysols belong to Aquic Suborders and Endoaquic Great Groups of various Orders (Aqualfs, Aquents, Aquepts, Aquolls, etc.) or to the Wassents."@en ] ;
     skos:exactMatch agrovoc:c_3276 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Gleysols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Gleysols"@en .
 
 eusoilvoc:GraniteSoils a skos:Concept ;
+    skos:altLabel "granite soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_3356 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "granite soils"@en .
 
 eusoilvoc:GrasslandSoils a skos:Concept ;
+    skos:altLabel "grassland soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:exactMatch agrovoc:c_3365 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -641,29 +689,32 @@ eusoilvoc:Gravel a skos:Concept ;
     skos:prefLabel "gravel"@en .
 
 eusoilvoc:GravelMulches a skos:Concept ;
+    skos:altLabel "gravel mulch"@en ;
     skos:broader eusoilvoc:DryMulches ;
     skos:exactMatch agrovoc:c_11342 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "gravel mulches"@en .
 
 eusoilvoc:GreenhouseSoils a skos:Concept ;
+    skos:altLabel "greenhouse soil"@en ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
     skos:exactMatch agrovoc:c_3378 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "greenhouse soils"@en .
 
 eusoilvoc:GreywackeSoils a skos:Concept ;
+    skos:altLabel "greywacke soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_3385 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "greywacke soils"@en .
 
 eusoilvoc:GreyzemsFAO a skos:Concept ;
+    skos:altLabel "greyzem"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:exactMatch agrovoc:c_3386 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "greyzems"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en .
+    skos:prefLabel "greyzems"@en .
 
 eusoilvoc:GullyControl a skos:Concept ;
     skos:broader eusoilvoc:ErosionControl ;
@@ -674,15 +725,22 @@ eusoilvoc:GullyControl a skos:Concept ;
     skos:prefLabel "gully control"@en .
 
 eusoilvoc:GypsisolsWRB a skos:Concept ;
+    skos:altLabel "Gypsisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_61704b51 ;
             rdf:value "Gypsisols are soils with substantial accumulation of secondary gypsum (CaSO4·2H2O). These soils are found in the driest parts of the arid climate zone, which explains why leading soil classification systems labelled many of them Desert grey-brown soils (former Soviet Union). The Soil Map of the World (FAO–UNESCO, 1971–1981) accommodates them among Yermosols or Xerosols. In the United States of America most of them belong to the Gypsids."@en ] ;
     skos:exactMatch agrovoc:c_61704b51 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Gypsisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Gypsisols"@en .
+
+eusoilvoc:Halloysite a skos:Concept ;
+    skos:broader eusoilvoc:SoilClayMineral ;
+    skos:exactMatch agrovoc:c_15838 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "halloysite"@en .
 
 eusoilvoc:Hardpans a skos:Concept ;
+    skos:altLabel "hardpan"@en ;
     skos:broader eusoilvoc:SoilHorizons ;
     skos:definition [ dcterms:source agrovoc:c_c27ddf24 ;
             rdf:value "A hardened soil layer in the lower A or in the B horizon caused by cementation of soil particles with organic matter or with materials such as silica or calcium carbonate. The hardness does not change appreciably with changes in moisture content, and pieces of the hard layer do not disintegrate in water."@en ] ;
@@ -697,27 +755,30 @@ eusoilvoc:Harrowing a skos:Concept ;
     skos:prefLabel "harrowing"@en .
 
 eusoilvoc:HeathlandSoils a skos:Concept ;
+    skos:altLabel "heathland soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:exactMatch agrovoc:c_3523 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "heathland soils"@en .
 
 eusoilvoc:HillSoils a skos:Concept ;
+    skos:altLabel "hill soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:exactMatch agrovoc:c_3615 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "hill soils"@en .
 
 eusoilvoc:HistosolsWRB a skos:Concept ;
+    skos:altLabel "Histosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_3636 ;
             rdf:value "Histosols comprise soils formed in organic material accumulating as groundwater peat (fen), rainwater peat (raised bog) or mangroves or without water saturation in cool mountain areas. They vary from soils developed in predominantly moss peat in arctic, subarctic and boreal regions, via moss peat (Sphagnum species), reeds/sedge peat (fen) and forest peat in temperate regions to mangrove peat and swamp forest peat in the humid tropics. Histosols are found at all altitudes, but the vast majority occurs in lowlands. Common names are Peat soils, Muck soils, Bog soils and Organic soils. Many Histosols belong to Moore, Felshumusböden and Skeletthumusböden (Germany), Organosols (Australia), Organossolos (Brazil), Peat soils (Russia), Organic order (Canada) and Histosols and Histels (United States of America)."@en ] ;
     skos:exactMatch agrovoc:c_3636 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Histosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Histosols"@en .
 
 eusoilvoc:HorticulturalSoils a skos:Concept ;
+    skos:altLabel "horticultural soil"@en ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
     skos:exactMatch agrovoc:c_3670 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -732,6 +793,7 @@ eusoilvoc:HotWaterExtractableNitrogen a skos:Concept ;
     skos:prefLabel "hot water-extractable nitrogen"@en .
 
 eusoilvoc:HydromorphicSoils a skos:Concept ;
+    skos:altLabel "hydromorphic soil"@en ;
     skos:broader eusoilvoc:GeneticSoilTypes ;
     skos:definition [ dcterms:source agrovoc:c_25315 ;
             rdf:value "Hydromorphic soils are characterised by the reduction or localised segregation of iron, owing to the temporary or permanent waterlogging of the soil pores which causes a lack of oxygen over a long period."@en ] ;
@@ -740,12 +802,14 @@ eusoilvoc:HydromorphicSoils a skos:Concept ;
     skos:prefLabel "hydromorphic soils"@en .
 
 eusoilvoc:Illites a skos:Concept ;
+    skos:altLabel "illite"@en ;
     skos:broader eusoilvoc:SoilClayMineral ;
     skos:exactMatch agrovoc:c_15841 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "illites"@en .
 
 eusoilvoc:IlliticSoils a skos:Concept ;
+    skos:altLabel "illitic soil"@en ;
     skos:broader eusoilvoc:MineralogicalSoilTypes ;
     skos:exactMatch agrovoc:c_3797 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -786,6 +850,7 @@ eusoilvoc:IonTransportInSoil a skos:Concept ;
     skos:prefLabel "ion transport in soil"@en .
 
 eusoilvoc:IrrigatedSoils a skos:Concept ;
+    skos:altLabel "irrigated soil"@en ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
     skos:exactMatch agrovoc:c_3953 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -798,19 +863,20 @@ eusoilvoc:Kaolinite a skos:Concept ;
     skos:prefLabel "kaolinite"@en .
 
 eusoilvoc:KarstSoils a skos:Concept ;
+    skos:altLabel "karst soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:exactMatch agrovoc:c_34036 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "karst soils"@en .
 
 eusoilvoc:KastanozemsWRB a skos:Concept ;
+    skos:altLabel "Kastanozem"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_4079 ;
             rdf:value "Kastanozems accommodate dry grassland soils, among them the soils of the short-grass steppe belt, south of the Eurasian tall-grass steppe belt with Chernozems. Kastanozems have a similar profile to that of Chernozems but the humus-rich surface horizon is thinner and not as dark as that of the Chernozems, and they show more prominent accumulation of secondary carbonates. The chestnut-brown colour of the surface soil is reflected in the name Kastanozem. Common names for many Kastanozems are (Dark) Chestnut soils (Russia), Kalktschernoseme (Germany), (Dark) Brown soils (Canada), Ustolls and Xerolls (United States of America) and Chernossolos (Brazil)."@en ] ;
     skos:exactMatch agrovoc:c_4079 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Kastanozems"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Kastanozems"@en .
 
 eusoilvoc:SoilReclamation a skos:Concept ;
     skos:broader eusoilvoc:SoilManagement ;
@@ -836,6 +902,7 @@ eusoilvoc:LandTake a skos:Concept ;
     skos:prefLabel "land take"@en .
 
 eusoilvoc:LayeredSoils a skos:Concept ;
+    skos:altLabel "layered soil"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:definition [ dcterms:source agrovoc:c_4232 ;
             rdf:value "Soil composed of layers of different texture"@en ] ;
@@ -860,6 +927,7 @@ eusoilvoc:LeafMould a skos:Concept ;
     skos:prefLabel "leaf mould"@en .
 
 eusoilvoc:LeafMulches a skos:Concept ;
+    skos:altLabel "leaf mulch"@en ;
     skos:broader eusoilvoc:OrganicMulches ;
     skos:definition [ dcterms:source agrovoc:c_20c16f0f ;
             rdf:value "A mulch where leaves from tree or shrubs are used to cover soil surface. Leaves that have been mowed or shredded will decompose faster and are more likely to remain in place than unshredded leaves."@en ] ;
@@ -868,13 +936,13 @@ eusoilvoc:LeafMulches a skos:Concept ;
     skos:prefLabel "leaf mulches"@en .
 
 eusoilvoc:LeptosolsWRB a skos:Concept ;
+    skos:altLabel "Leptosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_da0af025 ;
             rdf:value "Leptosols comprise very thin soils over continuous rock and soils that are extremely rich in coarse fragments. Leptosols are particularly common in mountainous regions. Leptosols include Lithosols of the Soil Map of the World (FAO–UNESCO, 1971–1981), Lithic subgroups of the Entisol Order (United States of America), Leptic Rudosols or Tenosols (Australia), and Petrozems and Litozems (Russia). In many national systems and in the Soil Map of the World, Leptosols on calcareous rocks belong to Rendzinas and those on other rocks to Rankers. Continuous rock at the surface is considered nonsoil in many soil classification systems."@en ] ;
     skos:exactMatch agrovoc:c_da0af025 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Leptosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Leptosols"@en .
 
 eusoilvoc:LimeAmendment a skos:Concept ;
     skos:broader eusoilvoc:LimingMaterials ;
@@ -891,28 +959,30 @@ eusoilvoc:Liming a skos:Concept ;
     skos:prefLabel "liming"@en .
 
 eusoilvoc:LithosolsFAO a skos:Concept ;
+    skos:altLabel "lithosol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:exactMatch agrovoc:c_4389 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "lithosols"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en .
+    skos:prefLabel "lithosols"@en .
 
 eusoilvoc:LiveMulches a skos:Concept ;
+    skos:altLabel "live mulch"@en ;
     skos:broader eusoilvoc:OrganicMulches ;
     skos:exactMatch agrovoc:c_4394 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "live mulches"@en .
 
 eusoilvoc:LixisolsWRB a skos:Concept ;
+    skos:altLabel "Lixisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_7283bd0a ;
             rdf:value "Lixisols have a higher clay content in the subsoil than in the topsoil, as a result of pedogenetic processes (especially clay migration) leading to an argic subsoil horizon. Lixisols have low-activity clays in the argic horizon and a high base saturation in the 50–100 cm depth. Many Lixisols are included in Red yellow podzolic soils (e.g. Indonesia), Chromosols (Australia), Argissolos (Brazil), Sols ferralitiques faiblement desaturés appauvris (France) and Alfisols with low-activity clays (United States of America)."@en ] ;
     skos:exactMatch agrovoc:c_7283bd0a ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Lixisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Lixisols"@en .
 
 eusoilvoc:LoamSoils a skos:Concept ;
+    skos:altLabel "loam soil"@en ;
     skos:broader eusoilvoc:TexturalSoilTypes ;
     skos:exactMatch agrovoc:c_4408 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -927,19 +997,20 @@ eusoilvoc:Loess a skos:Concept ;
     skos:prefLabel "loess"@en .
 
 eusoilvoc:LoessSoils a skos:Concept ;
+    skos:altLabel "loess soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_4418 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "loess soils"@en .
 
 eusoilvoc:LuvisolsWRB a skos:Concept ;
+    skos:altLabel "Luvisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_4470 ;
             rdf:value "Luvisols have a higher clay content in the subsoil than in the topsoil, as a result of pedogenetic processes (especially clay migration) leading to an argic subsoil horizon. Luvisols have high-activity clays throughout the argic horizon and a high base saturation in the 50–100 cm depth. Many Luvisols are known as Texturally-differentiated soils and part of Metamorphic soils (Russia), Sols lessivés (France), Parabraunerden (Germany), Chromosols (Australia) and Luvissolos (Brazil). In the United States of America, they were formerly named Grey-brown podzolic soils and belong now to the Alfisols with high-activity clays."@en ] ;
     skos:exactMatch agrovoc:c_4470 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Luvisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Luvisols"@en .
 
 eusoilvoc:MainFieldPreparation a skos:Concept ;
     skos:broader eusoilvoc:FieldPreparation ;
@@ -948,12 +1019,14 @@ eusoilvoc:MainFieldPreparation a skos:Concept ;
     skos:prefLabel "main field preparation"@en .
 
 eusoilvoc:MarshlandSoils a skos:Concept ;
+    skos:altLabel "marshland soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:exactMatch agrovoc:c_4632 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "marshland soils"@en .
 
 eusoilvoc:MeadowSoils a skos:Concept ;
+    skos:altLabel "meadow soil"@en ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
     skos:exactMatch agrovoc:c_16569 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -978,6 +1051,7 @@ eusoilvoc:Mercury a skos:Concept ;
     skos:prefLabel "mercury"@en .
 
 eusoilvoc:Microplastics a skos:Concept ;
+    skos:altLabel "microplastic"@en ;
     skos:broader eusoilvoc:SoilPollutants ;
     skos:definition [ dcterms:source agrovoc:c_ccc97cab ;
             rdf:value "Microplastics are usually defined as plastic items which measure less than 5 mm in their longest dimension, this definition includes also nanoplastics which are particles less than 100 nanometres (nm) in their longest dimension. Plastic items may be manufactured within this size range (primary micro- and nanoplastics) or result from the degradation and fragmentation of larger plastic items (secondary micro- and nanoplastics)."@en ] ;
@@ -993,6 +1067,7 @@ eusoilvoc:MicrositePreparation a skos:Concept ;
     skos:prefLabel "microsite preparation"@en .
 
 eusoilvoc:MineralSoils a skos:Concept ;
+    skos:altLabel "mineral soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:exactMatch agrovoc:c_4853 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1007,6 +1082,7 @@ eusoilvoc:MinimumTillage a skos:Concept ;
     skos:prefLabel "minimum tillage"@en .
 
 eusoilvoc:Mites a skos:Concept ;
+    skos:altLabel "mite"@en ;
     skos:broader eusoilvoc:SoilMesofauna ;
     skos:exactMatch agrovoc:c_d1532eb7 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1021,30 +1097,35 @@ eusoilvoc:ModifiedUniversalSoilLossEquation a skos:Concept ;
     skos:prefLabel "Modified Universal Soil Loss Equation"@en .
 
 eusoilvoc:Montmorillonites a skos:Concept ;
+    skos:altLabel "montmorillonite"@en ;
     skos:broader eusoilvoc:SoilClayMineral ;
     skos:exactMatch agrovoc:c_16140 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "montmorillonites"@en .
 
 eusoilvoc:MontmorilloniticSoils a skos:Concept ;
+    skos:altLabel "montmorillonitic soil"@en ;
     skos:broader eusoilvoc:MineralogicalSoilTypes ;
     skos:exactMatch agrovoc:c_4926 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "montmorillonitic soils"@en .
 
 eusoilvoc:MoraineSoils a skos:Concept ;
+    skos:altLabel "moraine soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:exactMatch agrovoc:c_4933 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "moraine soils"@en .
 
 eusoilvoc:MountainSoils a skos:Concept ;
+    skos:altLabel "mountain soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:exactMatch agrovoc:c_4959 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "mountain soils"@en .
 
 eusoilvoc:MudFlows a skos:Concept ;
+    skos:altLabel "mud flow"@en ;
     skos:broader eusoilvoc:SoilMovement ;
     skos:definition [ dcterms:source agrovoc:c_f3c459ea ;
             rdf:value "A mudflow or mud flow is a form of mass wasting involving \"very rapid to extremely rapid surging flow\" of debris that has become partially or fully liquified by the addition of significant amounts of water to the source material"@en ] ;
@@ -1053,6 +1134,7 @@ eusoilvoc:MudFlows a skos:Concept ;
     skos:prefLabel "mud flows"@en .
 
 eusoilvoc:Nanoplastics a skos:Concept ;
+    skos:altLabel "nanoplastic"@en ;
     skos:broader eusoilvoc:Microplastics ;
     skos:definition [ dcterms:source agrovoc:c_f5ac9b8e ;
             rdf:value "Plastic particles of size ranging from 1 to 100 nanometres (nm) (0.001 µm-0.1 µm)."@en ] ;
@@ -1061,6 +1143,7 @@ eusoilvoc:Nanoplastics a skos:Concept ;
     skos:prefLabel "nanoplastics"@en .
 
 eusoilvoc:NeutralSoils a skos:Concept ;
+    skos:altLabel "neutral soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:exactMatch agrovoc:c_24138 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1073,11 +1156,11 @@ eusoilvoc:Nickel a skos:Concept ;
     skos:prefLabel "nickel"@en .
 
 eusoilvoc:NitosolsWRB a skos:Concept ;
+    skos:altLabel "Nitosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:closeMatch agrovoc:c_5185 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Nitosols"@en ;
-    skos:scopeNote "AGROVOC places this source under WRB soil types but mixes the preferred label Nitosols with a Nitisols definition. Retained as a WRB-scoped source concept with closeMatch; the mixed definition is omitted. It is not asserted equivalent to a historical FAO Nitosols group."@en .
+    skos:prefLabel "Nitosols"@en .
 
 eusoilvoc:NoTill skos:broader eusoilvoc:ConservationTillage ;
     skos:closeMatch agrovoc:c_8511 .
@@ -1093,6 +1176,14 @@ eusoilvoc:NonproteinNitrogenContent a skos:Concept ;
     skos:exactMatch agrovoc:c_330615 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "nonprotein nitrogen content"@en .
+
+eusoilvoc:Nontronite a skos:Concept ;
+    skos:broader eusoilvoc:SoilClayMineral ;
+    skos:definition [ dcterms:source agrovoc:c_55aaa84c ;
+            rdf:value "Nontronite is the iron(III) rich member of the smectite group of clay minerals."@en ] ;
+    skos:exactMatch agrovoc:c_55aaa84c ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "nontronite"@en .
 
 eusoilvoc:NotPlantAvailableWater a skos:Concept ;
     skos:broader eusoilvoc:SoilWater ;
@@ -1111,12 +1202,14 @@ eusoilvoc:NurseryBedPreparation a skos:Concept ;
     skos:prefLabel "nursery bed preparation"@en .
 
 eusoilvoc:OrchardSoils a skos:Concept ;
+    skos:altLabel "orchard soil"@en ;
     skos:broader eusoilvoc:CulturalSoilTypes ;
     skos:exactMatch agrovoc:c_5378 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "orchard soils"@en .
 
 eusoilvoc:OrganicHorizons a skos:Concept ;
+    skos:altLabel "organic horizon"@en ;
     skos:broader eusoilvoc:SoilHorizons ;
     skos:definition [ dcterms:source agrovoc:c_a4326722 ;
             rdf:value "This layer generally forms above the mineral soil or occurs in an organic soil profile. The \"O\" stands for organic matter."@en ] ;
@@ -1125,30 +1218,41 @@ eusoilvoc:OrganicHorizons a skos:Concept ;
     skos:prefLabel "organic horizons"@en .
 
 eusoilvoc:OrganicSoils a skos:Concept ;
+    skos:altLabel "organic soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:exactMatch agrovoc:c_5390 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "organic soils"@en .
 
 eusoilvoc:OrganomineralComplexes a skos:Concept ;
+    skos:altLabel "organomineral complex"@en ;
     skos:broader eusoilvoc:SoilOrganicMatter ;
     skos:exactMatch agrovoc:c_5391 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "organomineral complexes"@en .
 
 eusoilvoc:PaddySoils a skos:Concept ;
+    skos:altLabel "paddy soil"@en ;
     skos:broader eusoilvoc:AnthropogenicSoils ;
     skos:exactMatch agrovoc:c_5498 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "paddy soils"@en .
 
 eusoilvoc:Palaeosols a skos:Concept ;
+    skos:altLabel "palaeosol"@en ;
     skos:broader eusoilvoc:PalaeosolicSoilTypes ;
     skos:exactMatch agrovoc:c_5511 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "palaeosols"@en .
 
+eusoilvoc:Palygorskite a skos:Concept ;
+    skos:broader eusoilvoc:SoilClayMineral ;
+    skos:exactMatch agrovoc:c_15837 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "palygorskite"@en .
+
 eusoilvoc:PeatSoils a skos:Concept ;
+    skos:altLabel "peat soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:exactMatch agrovoc:c_5648 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1171,6 +1275,7 @@ eusoilvoc:Pedon a skos:Concept ;
     skos:prefLabel "pedon"@en .
 
 eusoilvoc:PerfluoroalkylAcids a skos:Concept ;
+    skos:altLabel "perfluoroalkyl acid"@en ;
     skos:broader eusoilvoc:SoilPollutants ;
     skos:exactMatch agrovoc:c_baa307f1 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1180,13 +1285,13 @@ eusoilvoc:PermanentWiltingPoint skos:broader eusoilvoc:SoilWaterConstants ;
     skos:closeMatch agrovoc:c_32626 .
 
 eusoilvoc:PhaeozemsWRB a skos:Concept ;
+    skos:altLabel "Phaeozem"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_5755 ;
             rdf:value "Phaeozems accommodate soils of relatively wet grassland and forest regions in moderately continental climates. Phaeozems are much like Chernozems and Kastanozems but are leached more intensively. Consequently, they have dark, humusrich surface horizons that, in comparison with Chernozems and Kastanozems, are less rich in bases. Phaeozems are either free of secondary carbonates or have them only at greater depths. They all have a high base saturation in the upper metre of the soil. Commonly used names for many Phaeozems are Brunizems (Argentina and France), Dark grey forest soils and Leached and Podzolized chernozems (former Soviet Union), Tschernoseme (Germany) and Chernossolos (Brazil). In the Soil Map of the World (FAO–UNESCO, 1971–1981) they belong to the Phaeozems and partly to the Greyzems. Dusky-red prairie soils was their name in older systems of the United States of America, where most of them now belong to Udolls and Albolls."@en ] ;
     skos:exactMatch agrovoc:c_5755 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Phaeozems"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Phaeozems"@en .
 
 eusoilvoc:PhosphorusTotalElements skos:broader eusoilvoc:PhosphorusContent ;
     skos:closeMatch agrovoc:c_ac4b3c22 .
@@ -1208,13 +1313,13 @@ eusoilvoc:Planking a skos:Concept ;
     skos:prefLabel "planking"@en .
 
 eusoilvoc:PlanosolsWRB a skos:Concept ;
+    skos:altLabel "Planosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_5953 ;
             rdf:value "Planosols are soils with a mostly light-coloured horizon that shows signs of periodic water stagnation and that abruptly overlies a dense, slowly permeable subsoil with significantly more clay. The name Planosols was coined in 1938 in the United States of America, where now most of them are included in the Great Groups of the Albaqualfs, Albaquults and Argialbolls. The name has been adopted in Brazil (Planossolos)."@en ] ;
     skos:exactMatch agrovoc:c_5953 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Planosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Planosols"@en .
 
 eusoilvoc:PlantAvailableBoron a skos:Concept ;
     skos:broader eusoilvoc:BoronContent ;
@@ -1239,6 +1344,7 @@ eusoilvoc:PlantAvailableWater a skos:Concept ;
     skos:prefLabel "plant available water"@en .
 
 eusoilvoc:PlasticMulches a skos:Concept ;
+    skos:altLabel "plastic mulch"@en ;
     skos:broader eusoilvoc:DryMulches ;
     skos:definition [ dcterms:source agrovoc:c_13452 ;
             rdf:value "A mulch where plastic sheet is used to cover soil surface. Plants grow through slits or holes in thin plastic sheeting."@en ] ;
@@ -1247,31 +1353,32 @@ eusoilvoc:PlasticMulches a skos:Concept ;
     skos:prefLabel "plastic mulches"@en .
 
 eusoilvoc:PlinthosolsWRB a skos:Concept ;
+    skos:altLabel "Plinthosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_309e7c25 ;
             rdf:value "Plinthosols are soils with plinthite, petroplinthite or pisoliths. Plinthite is a Fe-rich (in some cases also Mn-rich), humus-poor mixture of kaolinitic clay (and other products of strong weathering such as gibbsite) with quartz and other constituents. It usually changes irreversibly to a layer with hard concretions or nodules or to a hardpan on exposure to repeated wetting and drying. Petroplinthite is a continuous or fractured sheet of connected, strongly cemented to indurated concretions or nodules or concentrations in platy, polygonal or reticulate patterns. Pisoliths are discrete, strongly cemented to indurated concretions or nodules. Both petroplinthite and pisoliths develop from plinthite by hardening. Traditional names are Groundwater Laterite Soils and Perched Water Laterite Soils. Many of these soils are known as Plintossolos (Brazil), Sols gris latéritiques (France), Petroferric Kandosols (Australia) and Plinthaquox, Plinthaqualfs, Plinthoxeralfs, Plinthustalfs, Plinthaquults, Plinthohumults, Plinthudults and Plinthustults (United States of America)."@en ] ;
     skos:exactMatch agrovoc:c_309e7c25 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Plinthosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Plinthosols"@en .
 
 eusoilvoc:PodzolsWRB a skos:Concept ;
+    skos:altLabel "Podzol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_6044 ;
             rdf:value "Podzols have an illuvial horizon with accumulation of black organic matter and/or reddish Fe oxides. This illuvial horizon is typically overlain by an ash-grey eluvial horizon. Podzols occur in humid areas in the boreal and temperate zones and locally also in the tropics. The name Podzol is used in most national soil classification systems; other names for many of these soils are Spodosols (China and United States of America), Espodossolos (Brazil) and Podosols (Australia)."@en ] ;
     skos:exactMatch agrovoc:c_6044 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Podzols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Podzols"@en .
 
 eusoilvoc:PodzoluvisolsFAO a skos:Concept ;
+    skos:altLabel "podzoluvisol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:exactMatch agrovoc:c_6045 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "podzoluvisols"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en .
+    skos:prefLabel "podzoluvisols"@en .
 
 eusoilvoc:PolderSoils a skos:Concept ;
+    skos:altLabel "polder soil"@en ;
     skos:broader eusoilvoc:AnthropogenicSoils ;
     skos:definition [ dcterms:source agrovoc:c_6059 ;
             rdf:value "Polder soils develop from oceanic and lacustrine sediments covered with seawater, brackish water, and freshwater after artificial drainage."@en ] ;
@@ -1280,12 +1387,14 @@ eusoilvoc:PolderSoils a skos:Concept ;
     skos:prefLabel "polder soils"@en .
 
 eusoilvoc:PollutedSoils a skos:Concept ;
+    skos:altLabel "polluted soil"@en ;
     skos:broader eusoilvoc:AnthropogenicSoils ;
     skos:exactMatch agrovoc:c_34324 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "polluted soils"@en .
 
 eusoilvoc:PolychlorinatedBiphenyls a skos:Concept ;
+    skos:altLabel "polychlorinated biphenyl"@en ;
     skos:broader eusoilvoc:SoilPollutants ;
     skos:definition [ dcterms:source agrovoc:c_24066 ;
             rdf:value "PCB are toxic and can cause serious health effects in humans and animals, including reproductive impairment and immune system dysfunctions. Once in the environment, PCB enter the food chain. PCBs are toxic to wildlife, including fish, killing them at higher doses and causing spawning failures at lower doses."@en ] ;
@@ -1294,6 +1403,7 @@ eusoilvoc:PolychlorinatedBiphenyls a skos:Concept ;
     skos:prefLabel "polychlorinated biphenyls"@en .
 
 eusoilvoc:PolycyclicAromaticHydrocarbons a skos:Concept ;
+    skos:altLabel "polycyclic aromatic hydrocarbon"@en ;
     skos:broader eusoilvoc:SoilPollutants ;
     skos:definition [ dcterms:source agrovoc:c_331394 ;
             rdf:value "A class of chemicals that result from burning coal, oil, gas, wood, garbage, or tobacco. They bind to or form small particles in the air. High heat when cooking meat and other foods will also form PAHs."@en ] ;
@@ -1302,12 +1412,14 @@ eusoilvoc:PolycyclicAromaticHydrocarbons a skos:Concept ;
     skos:prefLabel "polycyclic aromatic hydrocarbons"@en .
 
 eusoilvoc:PolygeneticSoilTypes a skos:Concept ;
+    skos:altLabel "polygenetic soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:exactMatch agrovoc:c_6083 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "polygenetic soil types"@en .
 
 eusoilvoc:PrairieSoils a skos:Concept ;
+    skos:altLabel "prairie soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:exactMatch agrovoc:c_37707 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1328,48 +1440,50 @@ eusoilvoc:RadioactiveDecontaminationSoil a skos:Concept ;
     skos:prefLabel "radioactive decontamination (soil)"@en .
 
 eusoilvoc:RangelandSoils a skos:Concept ;
+    skos:altLabel "rangeland soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:exactMatch agrovoc:c_6447 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "rangeland soils"@en .
 
 eusoilvoc:RankersFAO a skos:Concept ;
+    skos:altLabel "ranker"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:exactMatch agrovoc:c_6450 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "rankers"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en .
+    skos:prefLabel "rankers"@en .
 
 eusoilvoc:ReclaimedSoils a skos:Concept ;
+    skos:altLabel "reclaimed soil"@en ;
     skos:broader eusoilvoc:AnthropogenicSoils ;
     skos:exactMatch agrovoc:c_6473 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "reclaimed soils"@en .
 
 eusoilvoc:RegosolsWRB a skos:Concept ;
+    skos:altLabel "Regosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_6492 ;
             rdf:value "Regosols are very weakly developed mineral soils in unconsolidated materials that do not have a mollic or umbric horizon, are not very thin or very rich in coarse fragments (Leptosols), not sandy (Arenosols), and not with fluvic materials (Fluvisols). Regosols are extensive in eroding lands and accumulation zones, particularly in arid and semiarid areas and in mountainous terrain. Many Regosols correlate with soil taxa that are marked by incipient soil formation such as Entisols (United States of America), Rudosols (Australia), Regosole (Germany), Sols peu évolués régosoliques d’érosion or even Sols minéraux bruts d’apport éolien ou volcanique (France), Pelozems (Russia) and Neossolos (Brazil)."@en ] ;
     skos:exactMatch agrovoc:c_6492 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Regosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Regosols"@en .
 
 eusoilvoc:RendzinasFAO a skos:Concept ;
+    skos:altLabel "rendzina"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:closeMatch agrovoc:c_6501 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "rendzinas"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en .
+    skos:prefLabel "rendzinas"@en .
 
 eusoilvoc:RetisolsWRB a skos:Concept ;
+    skos:altLabel "Retisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_ff831af0 ;
             rdf:value "Retisols have a clay illuviation horizon with an interfingering of bleached coarsertextured soil material into the illuviation horizon forming a net-like pattern. The interfingering bleached coarser-textured material is characterized by a partial removal of clay and free iron oxides. There may be also bleached coarser-textured material falling from the overlying horizon into cracks in the illuvial horizon. Many Retisols correlate with the Podzoluvisols of the Soil Map of the World (FAO–UNESCO, 1971–1981). In other systems they are called Soddy-podzolic or Sodzolic soils (Russia), Fahlerden (Germany), and Glossaqualfs, Glossocryalfs and Glossudalfs (United States of America). Albeluvisols of the former editions of WRB are included in the concept of Retisols."@en ] ;
     skos:exactMatch agrovoc:c_ff831af0 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Retisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Retisols"@en .
 
 eusoilvoc:RevisedUniversalSoilLossEquation a skos:Concept ;
     skos:broader eusoilvoc:SoilErosionModels ;
@@ -1410,12 +1524,14 @@ eusoilvoc:RippingTillage a skos:Concept ;
     skos:prefLabel "ripping (tillage)"@en .
 
 eusoilvoc:RiverTerraceSoils a skos:Concept ;
+    skos:altLabel "river terrace soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:exactMatch agrovoc:c_6616 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "river terrace soils"@en .
 
 eusoilvoc:RoadsideSoils a skos:Concept ;
+    skos:altLabel "roadside soil"@en ;
     skos:broader eusoilvoc:AnthropogenicSoils ;
     skos:exactMatch agrovoc:c_6622 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1430,6 +1546,7 @@ eusoilvoc:RotaryCultivation a skos:Concept ;
     skos:prefLabel "rotary cultivation"@en .
 
 eusoilvoc:SalineSodicSoils a skos:Concept ;
+    skos:altLabel "saline sodic soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:exactMatch agrovoc:c_6750 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1441,13 +1558,23 @@ eusoilvoc:SalinityControl a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "salinity control"@en .
 
+eusoilvoc:Saponite a skos:Concept ;
+    skos:broader eusoilvoc:SoilClayMineral ;
+    skos:definition [ dcterms:source agrovoc:c_96e7c0f8 ;
+            rdf:value "Saponite is a trioctahedral mineral of the smectite group."@en ] ;
+    skos:exactMatch agrovoc:c_96e7c0f8 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "saponite"@en .
+
 eusoilvoc:SchistSoils a skos:Concept ;
+    skos:altLabel "schist soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_6845 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "schist soils"@en .
 
 eusoilvoc:ScrublandSoils a skos:Concept ;
+    skos:altLabel "scrubland soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:exactMatch agrovoc:c_6886 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1464,24 +1591,37 @@ eusoilvoc:SecondaryTillage a skos:Concept ;
 eusoilvoc:SeedbedPreparation skos:broader eusoilvoc:SoilTillage .
 
 eusoilvoc:SemiAridSoils a skos:Concept ;
+    skos:altLabel "semi-arid soil"@en ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
     skos:exactMatch agrovoc:c_14192 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "semi-arid soils"@en .
 
+eusoilvoc:Sepiolite a skos:Concept ;
+    skos:altLabel "meerschaum"@en ;
+    skos:broader eusoilvoc:SoilClayMineral ;
+    skos:definition [ dcterms:source agrovoc:c_f92d89de ;
+            rdf:value "Sepiolite, also known as meerschaum is a soft white clay mineral, often used to make tobacco pipes (known as meerschaum pipes)."@en ] ;
+    skos:exactMatch agrovoc:c_f92d89de ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "sepiolite"@en .
+
 eusoilvoc:SerpentineSoils a skos:Concept ;
+    skos:altLabel "serpentine soil"@en ;
     skos:broader eusoilvoc:IgneousRockSoils ;
     skos:exactMatch agrovoc:c_6986 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "serpentine soils"@en .
 
 eusoilvoc:ShaleSoils a skos:Concept ;
+    skos:altLabel "shale soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_7021 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "shale soils"@en .
 
 eusoilvoc:SiltySoils a skos:Concept ;
+    skos:altLabel "silty soil"@en ;
     skos:broader eusoilvoc:TexturalSoilTypes ;
     skos:exactMatch agrovoc:c_7066 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1494,6 +1634,7 @@ eusoilvoc:SlippingOfSoil a skos:Concept ;
     skos:prefLabel "slipping of soil"@en .
 
 eusoilvoc:SodicSoils a skos:Concept ;
+    skos:altLabel "sodic soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:definition [ dcterms:source agrovoc:c_7144 ;
             rdf:value "A soil that contains sufficient sodium to adversely affect the growth of most crop plants (sodic soils are defined as those soils which have an exchangeable sodium percentage of more than 15)."@en ] ;
@@ -1521,6 +1662,7 @@ eusoilvoc:SoilAggregate skos:broader eusoilvoc:SoilStructure ;
     skos:closeMatch agrovoc:c_7195 .
 
 eusoilvoc:SoilAlgae a skos:Concept ;
+    skos:altLabel "soil alga"@en ;
     skos:broader eusoilvoc:SoilMicroorganisms ;
     skos:definition [ dcterms:source agrovoc:c_e7a071ee ;
             rdf:value "Phylogenetically diverse, predominantly microscopic free-living, symbiotic organisms capable of oxygenic photosynthesis. Traditionally, soil algae include photoautotrophic prokaryotes (cyanobacteria, blue-green algae) and photoautotrophic protists (eukaryotic algae). "@en ] ;
@@ -1541,6 +1683,7 @@ eusoilvoc:SoilBiology a skos:Concept ;
     skos:prefLabel "soil biology"@en .
 
 eusoilvoc:SoilBorneFungi a skos:Concept ;
+    skos:altLabel "soil-borne fungus"@en ;
     skos:broader eusoilvoc:SoilBorneOrganisms ;
     skos:exactMatch agrovoc:c_34904 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1571,6 +1714,7 @@ eusoilvoc:SoilChemistry a skos:Concept ;
 eusoilvoc:SoilClassification skos:broader eusoilvoc:GeneticSoilTypes .
 
 eusoilvoc:SoilClods a skos:Concept ;
+    skos:altLabel "soil clod"@en ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:exactMatch agrovoc:c_34900 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1579,6 +1723,7 @@ eusoilvoc:SoilClods a skos:Concept ;
 eusoilvoc:SoilCompaction skos:broader eusoilvoc:SoilDegradation .
 
 eusoilvoc:SoilConditioners a skos:Concept ;
+    skos:altLabel "soil conditioner"@en ;
     skos:broader eusoilvoc:SoilAmendments ;
     skos:definition [ dcterms:source agrovoc:c_7164 ;
             rdf:value "Any substance used for soil conditioning, such as lime or organic fertilizer."@en ] ;
@@ -1621,6 +1766,7 @@ eusoilvoc:SoilExhaustion a skos:Concept ;
     skos:prefLabel "soil exhaustion"@en .
 
 eusoilvoc:SoilExposureTypes a skos:Concept ;
+    skos:altLabel "soil exposure type"@en ;
     skos:broader eusoilvoc:SoilInvestigations ;
     skos:definition [ dcterms:source agrovoc:c_378b6841 ;
             rdf:value "Type of soil exposure (e.g. soil pit or soil core), to perform soil surveys in the field"@en ] ;
@@ -1636,6 +1782,7 @@ eusoilvoc:SoilFieldMoistureCapacity skos:broader eusoilvoc:SoilWaterConstants ;
     skos:exactMatch agrovoc:c_32445 .
 
 eusoilvoc:SoilFungi a skos:Concept ;
+    skos:altLabel "soil fungus"@en ;
     skos:broader eusoilvoc:SoilFlora ;
     skos:exactMatch agrovoc:c_33550 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1672,6 +1819,7 @@ eusoilvoc:SoilInjection a skos:Concept ;
     skos:prefLabel "soil injection"@en .
 
 eusoilvoc:SoilInjectors a skos:Concept ;
+    skos:altLabel "soil injector"@en ;
     skos:broader eusoilvoc:SoilManagementEquipment ;
     skos:exactMatch agrovoc:c_26094 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1689,6 +1837,7 @@ eusoilvoc:SoilInorganicCarbon skos:broader eusoilvoc:SoilChemicophysicalProperti
     skos:exactMatch agrovoc:c_e3783c76 .
 
 eusoilvoc:SoilLandscapes a skos:Concept ;
+    skos:altLabel "soil landscape"@en ;
     skos:broader eusoilvoc:SoilDescription ;
     skos:definition [ dcterms:source agrovoc:c_714b2285 ;
             rdf:value "The full array of attributes that describe a distinct type of soil and its associated landscape, such as surface form, slope, water table depth, permafrost and lakes, is called a soil landscape."@en ] ;
@@ -1709,6 +1858,7 @@ eusoilvoc:SoilDenudation a skos:Concept ;
     skos:prefLabel "soil denudation"@en .
 
 eusoilvoc:SoilMaps a skos:Concept ;
+    skos:altLabel "soil map"@en ;
     skos:broader eusoilvoc:SoilInformation ;
     skos:definition [ dcterms:source agrovoc:c_e6171c3e ;
             rdf:value "A map that shows the spatial distribution of soil types or soil properties."@en ] ;
@@ -1720,6 +1870,7 @@ eusoilvoc:SoilMatricPotential skos:broader eusoilvoc:SoilWaterPotential ;
     skos:exactMatch agrovoc:c_35951 .
 
 eusoilvoc:SoilMicromorphologicalFeatures a skos:Concept ;
+    skos:altLabel "soil micromorphological feature"@en ;
     skos:broader eusoilvoc:SoilMorphologicalFeatures ;
     skos:exactMatch agrovoc:c_26827 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1739,6 +1890,7 @@ eusoilvoc:SoilMorphology a skos:Concept ;
     skos:prefLabel "soil morphology"@en .
 
 eusoilvoc:SoilMulches a skos:Concept ;
+    skos:altLabel "soil mulch"@en ;
     skos:broader eusoilvoc:DryMulches ;
     skos:exactMatch agrovoc:c_14397 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1772,6 +1924,7 @@ eusoilvoc:SoilPorosity skos:broader eusoilvoc:SoilProperties .
 eusoilvoc:SoilProductivity skos:broader eusoilvoc:SoilProperties .
 
 eusoilvoc:SoilProfiles a skos:Concept ;
+    skos:altLabel "soil profile"@en ;
     skos:broader eusoilvoc:SoilMorphologicalFeatures ;
     skos:definition [ dcterms:source agrovoc:c_14402 ;
             rdf:value "A vertical section made through a soil that shows the thickness and sequence of the individual horizons."@en ] ;
@@ -1787,6 +1940,7 @@ eusoilvoc:SoilPuddling skos:broader eusoilvoc:SoilTillage ;
 eusoilvoc:SoilQuality skos:broader eusoilvoc:SoilProperties .
 
 eusoilvoc:SoilReclamationPlants a skos:Concept ;
+    skos:altLabel "soil reclamation plant"@en ;
     skos:broader eusoilvoc:SoilReclamation ;
     skos:exactMatch agrovoc:c_7185 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1803,6 +1957,7 @@ eusoilvoc:SoilScarification a skos:Concept ;
     skos:prefLabel "soil scarification"@en .
 
 eusoilvoc:SoilScientists a skos:Concept ;
+    skos:altLabel "soil scientist"@en ;
     skos:broader eusoilvoc:SoilSciences ;
     skos:exactMatch agrovoc:c_7189 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1819,6 +1974,7 @@ eusoilvoc:SoilSecurity a skos:Concept ;
     skos:prefLabel "soil security"@en .
 
 eusoilvoc:SoilSeedBanks a skos:Concept ;
+    skos:altLabel "soil seed bank"@en ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:definition [ dcterms:source agrovoc:c_35298 ;
             rdf:value "All the viable seeds present in the soil or mixed to soil debris constitute the soil seed bank."@en ] ;
@@ -1827,6 +1983,7 @@ eusoilvoc:SoilSeedBanks a skos:Concept ;
     skos:prefLabel "soil seed banks"@en .
 
 eusoilvoc:SoilSequences a skos:Concept ;
+    skos:altLabel "soil sequence"@en ;
     skos:broader eusoilvoc:SoilDescription ;
     skos:exactMatch agrovoc:c_7191 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -1864,6 +2021,7 @@ eusoilvoc:SoilSuitability a skos:Concept ;
     skos:prefLabel "soil suitability"@en .
 
 eusoilvoc:SoilSurveyGuidelines a skos:Concept ;
+    skos:altLabel "soil survey guideline"@en ;
     skos:broader eusoilvoc:SoilSurveys ;
     skos:definition [ dcterms:source agrovoc:c_7cedf142 ;
             rdf:value "Standardized guidelines define features and expressions of different soil parameters and characteristics, such as horizon names, soil types, soil color, or soil texture. These guidelines arose historically on national scales. There are efforts to bring them together internationally, e.g. FAO Guidelines for Soil Description (2006)"@en ] ;
@@ -1927,17 +2085,16 @@ eusoilvoc:SolonetzWRB a skos:Concept ;
             rdf:value "Solonetz have a dense, strongly structured, clayey subsurface horizon that has a high proportion of adsorbed Na and in some cases also Mg ions. Solonetz that contain free soda (Na2CO3) are strongly alkaline (field pH > 8.5). Common international names are Alkali soils and Sodic soils. In national soil classification systems many Solonetz correlate with Sodosols (Australia), the Solonetzic Order (Canada) and Solonetz (Russia). In the United States of America, they belong to the Natric Great Groups of several Orders."@en ] ;
     skos:exactMatch agrovoc:c_7232 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Solonetz"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Solonetz"@en .
 
 eusoilvoc:StagnosolsWRB a skos:Concept ;
+    skos:altLabel "Stagnosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_d9028da2 ;
             rdf:value "Stagnosols are soils with perched water. They show periodically reducing conditions resulting in stagnic properties. Stagnosols have a mottled layer (with oxides predominantly inside the aggregates) with or without an overlying layer with albic material. Redox processes may also be caused by intruding liquids other than water (e.g. gasoline). A common name in many national soil classification systems for most Stagnosols is Pseudogley. In the United States of America many Stagnosols belong to Aquic Suborders and Epiaquic Great Groups of various Orders (Aqualfs, Aquults, Aquents, Aquepts and Aquolls)."@en ] ;
     skos:exactMatch agrovoc:c_d9028da2 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Stagnosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Stagnosols"@en .
 
 eusoilvoc:StoneClearing a skos:Concept ;
     skos:broader eusoilvoc:SoilTillage ;
@@ -1946,18 +2103,21 @@ eusoilvoc:StoneClearing a skos:Concept ;
     skos:prefLabel "stone clearing"@en .
 
 eusoilvoc:StonySoils a skos:Concept ;
+    skos:altLabel "stony soil"@en ;
     skos:broader eusoilvoc:TexturalSoilTypes ;
     skos:exactMatch agrovoc:c_7425 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "stony soils"@en .
 
 eusoilvoc:StratigraphicSoilTypes a skos:Concept ;
+    skos:altLabel "stratigraphic soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:exactMatch agrovoc:c_7439 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "stratigraphic soil types"@en .
 
 eusoilvoc:StrawMulches a skos:Concept ;
+    skos:altLabel "straw mulch"@en ;
     skos:broader eusoilvoc:OrganicMulches ;
     skos:definition [ dcterms:source agrovoc:c_7442 ;
             rdf:value "A mulch where straw is used to cover soil surface."@en ] ;
@@ -1982,6 +2142,7 @@ eusoilvoc:StubbleTillage a skos:Concept ;
     skos:prefLabel "stubble tillage"@en .
 
 eusoilvoc:SubtropicalSoils a skos:Concept ;
+    skos:altLabel "subtropical soil"@en ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
     skos:exactMatch agrovoc:c_14657 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2002,34 +2163,36 @@ eusoilvoc:SurfaceDrainage a skos:Concept ;
     skos:prefLabel "surface drainage"@en .
 
 eusoilvoc:SwampSoils a skos:Concept ;
+    skos:altLabel "swamp soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:exactMatch agrovoc:c_7543 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "swamp soils"@en .
 
 eusoilvoc:TechnosolsWRB a skos:Concept ;
+    skos:altLabel "Technosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_3a0750ba ;
             rdf:value "Technosols combine soils whose properties and pedogenesis are dominated by their technical origin. They contain a significant amount of artefacts (something in the soil recognizably made or strongly altered by humans or extracted from greater depths) or are sealed by technic hard material (hard material created by humans, having properties unlike natural rock) or contain a geomembrane. They include soils from wastes (landfills, sludge, cinders, mine spoils and ashes), pavements with their underlying unconsolidated materials, soils with geomembranes and constructed soils. Technosols are often referred to as Urban or Mine soils. They are recognized in the Russian soil classification system as Technogenic superficial formations and in the Australian soil classification, they are included in Anthroposols."@en ] ;
     skos:exactMatch agrovoc:c_3a0750ba ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Technosols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Technosols"@en .
 
 eusoilvoc:TropicalSoils a skos:Concept ;
+    skos:altLabel "tropical soil"@en ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
     skos:exactMatch agrovoc:c_7978 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "tropical soils"@en .
 
 eusoilvoc:UmbrisolsWRB a skos:Concept ;
+    skos:altLabel "Umbrisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_9e95a849 ;
             rdf:value "Umbrisols have a significant accumulation of organic matter in the mineral surface soil and a low base saturation somewhere within the first metre (in most cases in the mineral surface soil). Umbrisols are the logical counterpart of soils with a chernic or mollic horizon and a high base saturation throughout (Chernozems, Kastanozems and Phaeozems). Many of these soils are classified in other systems as several Great Groups of Entisols and Inceptisols (United States of America), Sombric Brunisols and Humic Regosols (France), Mountain-meadow soils (former USSR) and Mucky-dark-humus soils (Russia), Brown podzolic soils (e.g. Indonesia) and Umbrisols (Romania). In the Soil Map of the World (FAO–UNESCO, 1971–1981) most of them belong to Humic Cambisols and Umbric Regosols."@en ] ;
     skos:exactMatch agrovoc:c_9e95a849 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Umbrisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Umbrisols"@en .
 
 eusoilvoc:Underdrainage a skos:Concept ;
     skos:broader eusoilvoc:SoilDrainage ;
@@ -2046,6 +2209,7 @@ eusoilvoc:UniversalSoilLossEquation a skos:Concept ;
     skos:prefLabel "Universal Soil Loss Equation"@en .
 
 eusoilvoc:UplandSoils a skos:Concept ;
+    skos:altLabel "upland soil"@en ;
     skos:broader eusoilvoc:PhysiographicSoilTypes ;
     skos:exactMatch agrovoc:c_8077 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2058,21 +2222,23 @@ eusoilvoc:Vanadium a skos:Concept ;
     skos:prefLabel "vanadium"@en .
 
 eusoilvoc:Vermiculites a skos:Concept ;
+    skos:altLabel "vermiculite"@en ;
     skos:broader eusoilvoc:SoilClayMineral ;
     skos:exactMatch agrovoc:c_8194 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "vermiculites"@en .
 
 eusoilvoc:VertisolsWRB a skos:Concept ;
+    skos:altLabel "Vertisol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_8199 ;
             rdf:value "Vertisols are heavy clay soils with a high proportion of swelling clays. These soils form deep wide cracks from the surface downward when they dry out, which happens in most years. Common local names for Vertisols are Black cotton soils and Regur (India), Black turf soils (South Africa) or Margalites (Indonesia). In national soil classification systems they are called Slitozems or Dark vertic soils (Russia), Vertosols (Australia), Vertissolos (Brazil) and Vertisols (United States of America)."@en ] ;
     skos:exactMatch agrovoc:c_8199 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Vertisols"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Vertisols"@en .
 
 eusoilvoc:VirginSoils a skos:Concept ;
+    skos:altLabel "virgin soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:definition [ dcterms:source agrovoc:c_35348 ;
             rdf:value "Soil that has not been used for agricultural purposes or disturbed by humans at all."@en ] ;
@@ -2081,6 +2247,7 @@ eusoilvoc:VirginSoils a skos:Concept ;
     skos:prefLabel "virgin soils"@en .
 
 eusoilvoc:VolcanicSoils a skos:Concept ;
+    skos:altLabel "volcanic soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_8287 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2089,6 +2256,7 @@ eusoilvoc:VolcanicSoils a skos:Concept ;
 eusoilvoc:WaterPurification skos:narrower eusoilvoc:SoilWaterFiltration .
 
 eusoilvoc:WaterRepellentSoils a skos:Concept ;
+    skos:altLabel "water repellent soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:definition [ dcterms:source agrovoc:c_8edcdbc5 ;
             rdf:value "Soils which have hydrophobic properties (also called water repellent soils) can resist or retard surface water inﬁltration."@en ] ;
@@ -2097,12 +2265,14 @@ eusoilvoc:WaterRepellentSoils a skos:Concept ;
     skos:prefLabel "water repellent soils"@en .
 
 eusoilvoc:WetlandSoils a skos:Concept ;
+    skos:altLabel "wetland soil"@en ;
     skos:broader eusoilvoc:EcologicalSoilTypes ;
     skos:exactMatch agrovoc:c_8370 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "wetland soils"@en .
 
 eusoilvoc:WheelTracks a skos:Concept ;
+    skos:altLabel "wheel track"@en ;
     skos:broader eusoilvoc:SoilMorphologicalFeatures ;
     skos:definition [ dcterms:source agrovoc:c_9093eccc ;
             rdf:value "Depressions in the soil which are caused by the rolling of vehicle wheels over the surface of the soil."@en ] ;
@@ -2111,6 +2281,7 @@ eusoilvoc:WheelTracks a skos:Concept ;
     skos:prefLabel "wheel tracks"@en .
 
 eusoilvoc:WoodChipsMulches a skos:Concept ;
+    skos:altLabel "wood chip mulch"@en ;
     skos:broader eusoilvoc:OrganicMulches ;
     skos:definition [ dcterms:source agrovoc:c_b6875485 ;
             rdf:value "A mulch where wood chips are used to cover soil surface. "@en ] ;
@@ -2119,24 +2290,25 @@ eusoilvoc:WoodChipsMulches a skos:Concept ;
     skos:prefLabel "wood chips mulches"@en .
 
 eusoilvoc:XericSoils a skos:Concept ;
+    skos:altLabel "xeric soil"@en ;
     skos:broader eusoilvoc:ClimaticSoilTypes ;
     skos:exactMatch agrovoc:c_8462 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "xeric soils"@en .
 
 eusoilvoc:XerosolsFAO a skos:Concept ;
+    skos:altLabel "xerosol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:exactMatch agrovoc:c_8463 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "xerosols"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en .
+    skos:prefLabel "xerosols"@en .
 
 eusoilvoc:YermosolsFAO a skos:Concept ;
+    skos:altLabel "yermosol"@en ;
     skos:broader eusoilvoc:SoilClassificationFAO ;
     skos:exactMatch agrovoc:c_8484 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "yermosols"@en ;
-    skos:scopeNote "Legacy FAO-UNESCO Soil Map of the World soil group. Kept separate from similarly named taxa in WRB and USDA Soil Taxonomy; this does not assert equivalence between classification systems."@en .
+    skos:prefLabel "yermosols"@en .
 
 eusoilvoc:Bioturbation a skos:Concept ;
     skos:broader eusoilvoc:Pedoturbation,
@@ -2148,6 +2320,7 @@ eusoilvoc:Bioturbation a skos:Concept ;
     skos:prefLabel "bioturbation"@en .
 
 eusoilvoc:CalcareousSoils a skos:Concept ;
+    skos:altLabel "calcareous soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes,
         eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_1194 ;
@@ -2164,6 +2337,7 @@ eusoilvoc:Clay skos:broader eusoilvoc:SoilTexture ;
     skos:narrower eusoilvoc:Bentonite .
 
 eusoilvoc:ClaySoils a skos:Concept ;
+    skos:altLabel "clay soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:TexturalSoilTypes ;
     skos:exactMatch agrovoc:c_1659 ;
@@ -2180,6 +2354,7 @@ eusoilvoc:DeepTillage a skos:Concept ;
     skos:prefLabel "deep tillage"@en .
 
 eusoilvoc:DiagnosticHorizons a skos:Concept ;
+    skos:altLabel "diagnostic horizon"@en ;
     skos:broader eusoilvoc:SoilHorizons ;
     skos:exactMatch agrovoc:c_29ac0905 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2187,6 +2362,7 @@ eusoilvoc:DiagnosticHorizons a skos:Concept ;
     skos:prefLabel "diagnostic horizons"@en .
 
 eusoilvoc:FreeLivingNematodes a skos:Concept ;
+    skos:altLabel "free-living nematode"@en ;
     skos:broader eusoilvoc:Nematodes,
         eusoilvoc:SoilFauna ;
     skos:exactMatch agrovoc:c_36731 ;
@@ -2194,6 +2370,7 @@ eusoilvoc:FreeLivingNematodes a skos:Concept ;
     skos:prefLabel "free-living nematodes"@en .
 
 eusoilvoc:GypsiferousSoils a skos:Concept ;
+    skos:altLabel "gypsiferous soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes,
         eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_3452 ;
@@ -2210,6 +2387,7 @@ eusoilvoc:Humus a skos:Concept ;
     skos:prefLabel "humus"@en .
 
 eusoilvoc:IgneousRockSoils a skos:Concept ;
+    skos:altLabel "igneous rock soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes ;
     skos:exactMatch agrovoc:c_3792 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2217,6 +2395,7 @@ eusoilvoc:IgneousRockSoils a skos:Concept ;
     skos:prefLabel "igneous rock soils"@en .
 
 eusoilvoc:InorganicAmendments a skos:Concept ;
+    skos:altLabel "inorganic amendment"@en ;
     skos:broader eusoilvoc:SoilAmendments ;
     skos:exactMatch agrovoc:c_27871 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2224,6 +2403,7 @@ eusoilvoc:InorganicAmendments a skos:Concept ;
     skos:prefLabel "inorganic amendments"@en .
 
 eusoilvoc:LossesFromSoil a skos:Concept ;
+    skos:altLabel "loss from soil"@en ;
     skos:broader eusoilvoc:SoilProcesses ;
     skos:exactMatch agrovoc:c_36778 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2245,6 +2425,7 @@ eusoilvoc:NitrogenTotal skos:broader eusoilvoc:NitrogenContent ;
     skos:narrower eusoilvoc:GaseousNitrogen .
 
 eusoilvoc:PlantGrowthPromotingRhizobacteria a skos:Concept ;
+    skos:altLabel "plant growth-promoting rhizobacterium"@en ;
     skos:broader eusoilvoc:Rhizobacteria,
         eusoilvoc:SoilBacteria ;
     skos:definition [ dcterms:source agrovoc:c_cd313ffc ;
@@ -2263,6 +2444,7 @@ eusoilvoc:Ploughing a skos:Concept ;
     skos:prefLabel "ploughing"@en .
 
 eusoilvoc:Rhizobacteria a skos:Concept ;
+    skos:altLabel "Rhizobacterium"@en ;
     skos:broader eusoilvoc:SoilBacteria ;
     skos:definition [ dcterms:source agrovoc:c_25068 ;
             rdf:value "Rhizobacteria are root-associated bacteria that can have a detrimental (parasitic varieties), neutral or beneficial effect on plant growth."@en ] ;
@@ -2272,6 +2454,7 @@ eusoilvoc:Rhizobacteria a skos:Concept ;
     skos:prefLabel "Rhizobacteria"@en .
 
 eusoilvoc:SalineSoils a skos:Concept ;
+    skos:altLabel "saline soil"@en ;
     skos:broader eusoilvoc:ChemicalSoilTypes ;
     skos:definition [ dcterms:source agrovoc:c_6748 ;
             rdf:value "The distinguishing characteristic of saline soils from the agricultural standpoint, is that they contain sufficient neutral soluble salts to adversely affect the growth of most crop plants."@en ] ;
@@ -2281,6 +2464,7 @@ eusoilvoc:SalineSoils a skos:Concept ;
     skos:prefLabel "saline soils"@en .
 
 eusoilvoc:SandySoils a skos:Concept ;
+    skos:altLabel "sandy soil"@en ;
     skos:broader eusoilvoc:LithologicalSoilTypes,
         eusoilvoc:TexturalSoilTypes ;
     skos:exactMatch agrovoc:c_6781 ;
@@ -2295,12 +2479,14 @@ eusoilvoc:SitePreparation a skos:Concept ;
     skos:prefLabel "site preparation"@en .
 
 eusoilvoc:Smectites a skos:Concept ;
+    skos:altLabel "smectite"@en ;
     skos:broader eusoilvoc:SoilClayMineral ;
     skos:exactMatch agrovoc:c_16666 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "smectites"@en .
 
 eusoilvoc:SoilAnthropogenicChanges a skos:Concept ;
+    skos:altLabel "soil anthropogenic change"@en ;
     skos:broader eusoilvoc:SoilProcesses ;
     skos:definition [ dcterms:source agrovoc:c_8b0b0337 ;
             rdf:value "Activities, such as construction or drainage, which cause profound changes in the soil system."@en ] ;
@@ -2310,6 +2496,7 @@ eusoilvoc:SoilAnthropogenicChanges a skos:Concept ;
     skos:prefLabel "soil anthropogenic changes"@en .
 
 eusoilvoc:SoilBorneViruses a skos:Concept ;
+    skos:altLabel "soil-borne virus"@en ;
     skos:broader eusoilvoc:SoilBorneOrganisms ;
     skos:exactMatch agrovoc:c_36398 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2320,6 +2507,7 @@ eusoilvoc:SoilComponents skos:narrower eusoilvoc:SoilClods,
         eusoilvoc:SoilSeedBanks .
 
 eusoilvoc:SoilDeficiencies a skos:Concept ;
+    skos:altLabel "soil deficiency"@en ;
     skos:broader eusoilvoc:SoilThreats ;
     skos:exactMatch agrovoc:c_7166 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2352,14 +2540,14 @@ eusoilvoc:SoilInformation a skos:Concept ;
     skos:prefLabel "soil information"@en .
 
 eusoilvoc:SoilInvestigations a skos:Concept ;
+    skos:altLabel "soil investigation"@en ;
     skos:broader eusoilvoc:SoilSurveys ;
     skos:definition [ dcterms:source agrovoc:c_8595c402 ;
             rdf:value "Comprise all soil studies and activities which are made in the field, such as soil sampling, description of soil horizons or soil penetration resistance measurements"@en ] ;
     skos:exactMatch agrovoc:c_8595c402 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilExposureTypes ;
-    skos:prefLabel "soil investigations"@en ;
-    skos:scopeNote "Field studies of soil, following AGROVOC scope."@en .
+    skos:prefLabel "soil investigations"@en .
 
 eusoilvoc:SoilMechanics a skos:Concept ;
     skos:broader eusoilvoc:SoilSciences ;
@@ -2382,6 +2570,7 @@ eusoilvoc:SoilPhysicalProperties skos:broader eusoilvoc:SoilChemicophysicalPrope
     skos:narrower eusoilvoc:SoilMechanicalProperties .
 
 eusoilvoc:SoilResources a skos:Concept ;
+    skos:altLabel "soil resource"@en ;
     skos:broader eusoilvoc:Soil ;
     skos:exactMatch agrovoc:c_7187 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2398,6 +2587,7 @@ eusoilvoc:SoilSterilization a skos:Concept ;
     skos:prefLabel "soil sterilization"@en .
 
 eusoilvoc:SoilSurfaceProperties a skos:Concept ;
+    skos:altLabel "soil surface property"@en ;
     skos:broader eusoilvoc:SoilProperties ;
     skos:exactMatch agrovoc:c_14702 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2405,6 +2595,7 @@ eusoilvoc:SoilSurfaceProperties a skos:Concept ;
     skos:prefLabel "soil surface properties"@en .
 
 eusoilvoc:SoilThermalRegimes a skos:Concept ;
+    skos:altLabel "soil thermal regime"@en ;
     skos:broader eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilThermalProperties ;
     skos:exactMatch agrovoc:c_7200 ;
@@ -2427,16 +2618,17 @@ eusoilvoc:SoilpH skos:broader eusoilvoc:SoilChemicophysicalProperties ;
     skos:narrower eusoilvoc:RhizospherePH .
 
 eusoilvoc:SolonchaksWRB a skos:Concept ;
+    skos:altLabel "Solonchak"@en ;
     skos:broader eusoilvoc:SalineSoils,
         eusoilvoc:SoilClassificationWRB ;
     skos:definition [ dcterms:source agrovoc:c_7231 ;
             rdf:value "Solonchaks have a high concentration of soluble salts at some time in the year. Solonchaks are largely confined to the arid and semi-arid climate zones and to coastal regions in all climates. Common international names are Saline soils and Salt-affected soils. In national soil classification systems many Solonchaks belong to Halomorphic soils (Russia), Halosols (China) and Salids (United States of America)."@en ] ;
     skos:exactMatch agrovoc:c_7231 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Solonchaks"@en ;
-    skos:scopeNote "WRB reference soil group. This concept is separate from similarly named FAO-UNESCO or USDA Soil Taxonomy concepts; its definition is not transferred to those systems."@en .
+    skos:prefLabel "Solonchaks"@en .
 
 eusoilvoc:SpodicHorizons a skos:Concept ;
+    skos:altLabel "spodic horizon"@en ;
     skos:broader eusoilvoc:DiagnosticHorizons,
         eusoilvoc:SoilHorizons ;
     skos:definition [ dcterms:source agrovoc:c_6843b260 ;
@@ -2515,13 +2707,13 @@ eusoilvoc:FieldPreparation a skos:Concept ;
     skos:prefLabel "field preparation"@en .
 
 eusoilvoc:GeneticSoilTypes a skos:Concept ;
+    skos:altLabel "genetic soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:exactMatch agrovoc:c_3219 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:HydromorphicSoils,
         eusoilvoc:SoilClassification ;
-    skos:prefLabel "genetic soil types"@en ;
-    skos:scopeNote "AGROVOC has a legacy FAO-UNESCO scope note on this source but mixes FAO, USDA and WRB descendants. SoilVoc uses it as a genetic-soil-types organizer and keeps every formal system in a separate branch."@en .
+    skos:prefLabel "genetic soil types"@en .
 
 eusoilvoc:InorganicNitrogen a skos:Concept ;
     skos:broader eusoilvoc:Nitrogen ;
@@ -2538,6 +2730,7 @@ eusoilvoc:Mulch skos:broader eusoilvoc:SoilAmendments ;
         eusoilvoc:OrganicMulches .
 
 eusoilvoc:Nematodes a skos:Concept ;
+    skos:altLabel "nematode"@en ;
     skos:broader eusoilvoc:SoilMicrofauna ;
     skos:definition [ dcterms:source agrovoc:c_47faeccc ;
             rdf:value "Elongated, cylindrical, unsegmented worm; includes a number of plant and animal parasites."@en ] ;
@@ -2557,6 +2750,7 @@ eusoilvoc:NitrateNitrogen a skos:Concept ;
     skos:prefLabel "nitrate-nitrogen"@en .
 
 eusoilvoc:PalaeosolicSoilTypes a skos:Concept ;
+    skos:altLabel "palaeosolic soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:exactMatch agrovoc:c_5510 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2565,7 +2759,8 @@ eusoilvoc:PalaeosolicSoilTypes a skos:Concept ;
     skos:prefLabel "palaeosolic soil types"@en .
 
 eusoilvoc:ParentMaterial skos:exactMatch agrovoc:c_7181 ;
-    skos:narrower eusoilvoc:Colluvium,
+    skos:narrower eusoilvoc:Alluvium,
+        eusoilvoc:Colluvium,
         eusoilvoc:Gravel,
         eusoilvoc:Loess .
 
@@ -2594,6 +2789,7 @@ eusoilvoc:SandyTexture skos:narrower eusoilvoc:CoarseSand,
         eusoilvoc:MediumSand .
 
 eusoilvoc:SoilBorneOrganisms a skos:Concept ;
+    skos:altLabel "soil-borne organism"@en ;
     skos:broader eusoilvoc:SoilOrganisms ;
     skos:exactMatch agrovoc:c_24902 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2602,6 +2798,7 @@ eusoilvoc:SoilBorneOrganisms a skos:Concept ;
     skos:prefLabel "soil-borne organisms"@en .
 
 eusoilvoc:SoilErosionModels a skos:Concept ;
+    skos:altLabel "soil erosion model"@en ;
     skos:broader eusoilvoc:SoilSciences ;
     skos:exactMatch agrovoc:c_331058 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2611,6 +2808,7 @@ eusoilvoc:SoilErosionModels a skos:Concept ;
     skos:prefLabel "soil erosion models"@en .
 
 eusoilvoc:SoilMechanicalProperties a skos:Concept ;
+    skos:altLabel "soil mechanical property"@en ;
     skos:broader eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties ;
     skos:definition [ dcterms:source agrovoc:c_8c9575f3 ;
@@ -2625,6 +2823,7 @@ eusoilvoc:SoilMesofauna skos:narrower eusoilvoc:Collembola,
         eusoilvoc:Mites .
 
 eusoilvoc:SoilMicroorganisms a skos:Concept ;
+    skos:altLabel "soil microorganism"@en ;
     skos:broader eusoilvoc:SoilOrganisms ;
     skos:definition [ dcterms:source agrovoc:c_36167 ;
             rdf:value "Microorganisms in soil are important because they affect soil structure and fertility. Soil microorganisms can be classified as bacteria, actinomycetes, fungi, algae and protozoa. Each of these groups has characteristics that define them and their functions in soil"@en ] ;
@@ -2664,6 +2863,7 @@ eusoilvoc:SoilWaterPotential skos:broader eusoilvoc:SoilChemicophysicalPropertie
         eusoilvoc:SoilMatricPotential .
 
 eusoilvoc:SoilWaterRegimes a skos:Concept ;
+    skos:altLabel "soil water regime"@en ;
     skos:broader eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilWaterPhysicalProperties ;
     skos:definition [ dcterms:source agrovoc:c_7211 ;
@@ -2674,6 +2874,7 @@ eusoilvoc:SoilWaterRegimes a skos:Concept ;
     skos:prefLabel "soil water regimes"@en .
 
 eusoilvoc:StructuralSoilTypes a skos:Concept ;
+    skos:altLabel "structural soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:exactMatch agrovoc:c_7466 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2691,6 +2892,7 @@ eusoilvoc:SubsurfaceDrainage a skos:Concept ;
     skos:prefLabel "subsurface drainage"@en .
 
 eusoilvoc:MineralogicalSoilTypes a skos:Concept ;
+    skos:altLabel "mineralogical soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:exactMatch agrovoc:c_4855 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2700,6 +2902,7 @@ eusoilvoc:MineralogicalSoilTypes a skos:Concept ;
     skos:prefLabel "mineralogical soil types"@en .
 
 eusoilvoc:OrganicAmendments a skos:Concept ;
+    skos:altLabel "organic amendment"@en ;
     skos:broader eusoilvoc:SoilAmendments ;
     skos:exactMatch agrovoc:c_12965 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2715,6 +2918,7 @@ eusoilvoc:PhosphorusContent a skos:Concept ;
     skos:prefLabel "phosphorus content"@en .
 
 eusoilvoc:SoilBacteria a skos:Concept ;
+    skos:altLabel "soil bacterium"@en ;
     skos:broader eusoilvoc:SoilMicroorganisms ;
     skos:exactMatch agrovoc:c_34c44dd1 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2749,6 +2953,7 @@ eusoilvoc:SoilProcesses skos:narrower eusoilvoc:LossesFromSoil,
         eusoilvoc:SoilDenudation .
 
 eusoilvoc:SoilWaterConstants a skos:Concept ;
+    skos:altLabel "soil water constant"@en ;
     skos:broader eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilWaterPhysicalProperties ;
     skos:exactMatch agrovoc:c_32444 ;
@@ -2764,6 +2969,7 @@ eusoilvoc:ConservationTillage skos:narrower eusoilvoc:MinimumTillage,
         eusoilvoc:StubbleTillage .
 
 eusoilvoc:DryMulches a skos:Concept ;
+    skos:altLabel "dry mulch"@en ;
     skos:broader eusoilvoc:Mulch ;
     skos:exactMatch agrovoc:c_2399 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2792,6 +2998,7 @@ eusoilvoc:SoilTexture skos:broader eusoilvoc:SoilChemicophysicalProperties ;
         eusoilvoc:MediumSilt .
 
 eusoilvoc:LimingMaterials a skos:Concept ;
+    skos:altLabel "liming material"@en ;
     skos:broader eusoilvoc:InorganicAmendments,
         eusoilvoc:SoilAmendments ;
     skos:definition [ dcterms:source agrovoc:c_200 ;
@@ -2812,14 +3019,20 @@ eusoilvoc:SoilChemicalProperties skos:broader eusoilvoc:SoilChemicophysicalPrope
         eusoilvoc:SoilToxicity .
 
 eusoilvoc:SoilClayMineral skos:narrower eusoilvoc:Allophane,
+        eusoilvoc:Halloysite,
         eusoilvoc:Illites,
         eusoilvoc:Imogolite,
         eusoilvoc:Kaolinite,
         eusoilvoc:Montmorillonites,
+        eusoilvoc:Nontronite,
+        eusoilvoc:Palygorskite,
+        eusoilvoc:Saponite,
+        eusoilvoc:Sepiolite,
         eusoilvoc:Smectites,
         eusoilvoc:Vermiculites .
 
 eusoilvoc:SoilHydraulicProperties a skos:Concept ;
+    skos:altLabel "soil hydraulic property"@en ;
     skos:broader eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilWaterPhysicalProperties ;
     skos:exactMatch agrovoc:c_34125 ;
@@ -2841,6 +3054,7 @@ eusoilvoc:SoilImprovement a skos:Concept ;
     skos:prefLabel "soil improvement"@en .
 
 eusoilvoc:SoilMorphologicalFeatures a skos:Concept ;
+    skos:altLabel "soil morphological feature"@en ;
     skos:broader eusoilvoc:SoilDescription ;
     skos:exactMatch agrovoc:c_7179 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2861,6 +3075,7 @@ eusoilvoc:SoilSampling a skos:Concept ;
     skos:prefLabel "soil sampling"@en .
 
 eusoilvoc:SoilSurveys a skos:Concept ;
+    skos:altLabel "soil survey"@en ;
     skos:broader eusoilvoc:SoilDescription ;
     skos:definition [ dcterms:source agrovoc:c_16551 ;
             rdf:value "Soil survey is a systematic study of the soil of an area including classification and mapping of the properties and the distribution of various soil units."@en ] ;
@@ -2874,6 +3089,7 @@ eusoilvoc:SoilSurveys a skos:Concept ;
     skos:prefLabel "soil surveys"@en .
 
 eusoilvoc:TexturalSoilTypes a skos:Concept ;
+    skos:altLabel "textural soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:exactMatch agrovoc:c_7698 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2885,6 +3101,7 @@ eusoilvoc:TexturalSoilTypes a skos:Concept ;
     skos:prefLabel "textural soil types"@en .
 
 eusoilvoc:AnthropogenicSoils a skos:Concept ;
+    skos:altLabel "anthropogenic soil"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:definition [ dcterms:source agrovoc:c_486 ;
             rdf:value "Anthropogenic soils (anthrosoils) are soils that have been influenced, modified or created by human activity, in contrast to soils formed by natural processes. They are found worldwide in urban and other human-impacted landscapes. Anthrosoils are formed by: (1) sealing a natural soil beneath pavement or other artificially manufactured impervious material, (2) transformation of a natural soil by human action, or (3) development of a new soil profile in parent materials created and deposited by human action."@en ] ;
@@ -2900,6 +3117,7 @@ eusoilvoc:AnthropogenicSoils a skos:Concept ;
     skos:prefLabel "anthropogenic soils"@en .
 
 eusoilvoc:OrganicMulches a skos:Concept ;
+    skos:altLabel "organic mulch"@en ;
     skos:broader eusoilvoc:Mulch ;
     skos:exactMatch agrovoc:c_51d7cf99 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2935,6 +3153,7 @@ eusoilvoc:SoilMovement skos:narrower eusoilvoc:FrostHeave,
         eusoilvoc:Solifluction .
 
 eusoilvoc:ClimaticSoilTypes a skos:Concept ;
+    skos:altLabel "climatic soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:exactMatch agrovoc:c_1668 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2948,6 +3167,7 @@ eusoilvoc:ClimaticSoilTypes a skos:Concept ;
     skos:prefLabel "climatic soil types"@en .
 
 eusoilvoc:CulturalSoilTypes a skos:Concept ;
+    skos:altLabel "cultural soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:exactMatch agrovoc:c_2022 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2974,6 +3194,7 @@ eusoilvoc:NitrogenContent a skos:Concept ;
     skos:prefLabel "nitrogen content"@en .
 
 eusoilvoc:SoilAmendments a skos:Concept ;
+    skos:altLabel "soil amendment"@en ;
     skos:broader eusoilvoc:SoilManagement ;
     skos:definition [ dcterms:source agrovoc:c_7159 ;
             rdf:value "Any material added to the soil to improve its physical and chemical properties. The application of amendments depends on the characteristics of the soils, and may include compost, livestock manure, magnesium sulphate, vinasse, zeolite (minerals or adsorbents that hydrate and dehydrate reversibly), charcoal or biochar, calcium sulphate, lime, cane by-product (bagasse), zinc sulphate, dolomite (calcium magnesium carbonate), vermicompost, sugar cane, palm kernel cake, phosphate rock, and other organic matter."@en ] ;
@@ -3010,6 +3231,7 @@ eusoilvoc:SoilDescription skos:narrower eusoilvoc:Pedon,
         eusoilvoc:Topsoil .
 
 eusoilvoc:SoilHorizons a skos:Concept ;
+    skos:altLabel "soil horizon"@en ;
     skos:broader eusoilvoc:SoilMorphologicalFeatures ;
     skos:definition [ dcterms:source agrovoc:c_32749 ;
             rdf:value "In soil science: relatively uniform materials that extend laterally, continuously or discontinuously, throughout the pedounit; it runs approximately parallel to the surface of the ground and differs from the related horizons in many chemical, physical and biological properties."@en ] ;
@@ -3026,6 +3248,7 @@ eusoilvoc:SoilHorizons a skos:Concept ;
     skos:prefLabel "soil horizons"@en .
 
 eusoilvoc:SoilSciences a skos:Concept ;
+    skos:altLabel "soil science"@en ;
     skos:exactMatch agrovoc:c_7188 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:Agrology,
@@ -3055,6 +3278,7 @@ eusoilvoc:SoilTreatment a skos:Concept ;
     skos:prefLabel "soil treatment"@en .
 
 eusoilvoc:EcologicalSoilTypes a skos:Concept ;
+    skos:altLabel "ecological soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:exactMatch agrovoc:c_2463 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -3103,6 +3327,7 @@ eusoilvoc:SoilProperties skos:narrower eusoilvoc:EdaphicFactors,
         eusoilvoc:SoilWaterRepellency .
 
 eusoilvoc:PhysiographicSoilTypes a skos:Concept ;
+    skos:altLabel "physiographic soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:exactMatch agrovoc:c_5835 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -3121,6 +3346,7 @@ eusoilvoc:PhysiographicSoilTypes a skos:Concept ;
     skos:prefLabel "physiographic soil types"@en .
 
 eusoilvoc:ChemicalSoilTypes a skos:Concept ;
+    skos:altLabel "chemical soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:exactMatch agrovoc:c_1519 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -3162,6 +3388,7 @@ eusoilvoc:SoilTypes skos:narrower eusoilvoc:AnthropogenicSoils,
         eusoilvoc:TexturalSoilTypes .
 
 eusoilvoc:LithologicalSoilTypes a skos:Concept ;
+    skos:altLabel "lithological soil type"@en ;
     skos:broader eusoilvoc:SoilTypes ;
     skos:exactMatch agrovoc:c_4387 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -3218,6 +3445,7 @@ eusoilvoc:SoilManagement skos:narrower eusoilvoc:IntegratedSoilFertilityManageme
         eusoilvoc:SoilTreatment .
 
 eusoilvoc:SoilChemicophysicalProperties a skos:Concept ;
+    skos:altLabel "soil chemicophysical property"@en ;
     skos:broader eusoilvoc:SoilProperties ;
     skos:exactMatch agrovoc:c_7182 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;

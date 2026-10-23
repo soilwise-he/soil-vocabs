@@ -1,327 +1,235 @@
+"""Restore and strictly compare SoilVoc using a self-contained CSV reader."""
+
 import argparse
 import csv
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
+from graphlib import CycleError, TopologicalSorter
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from rdflib import BNode, Graph, Literal, Namespace, URIRef
-from rdflib.namespace import DCTERMS, RDF, SKOS, SOSA
-from rdflib.compare import graph_diff, isomorphic, to_isomorphic
+from rdflib.compare import graph_diff, to_isomorphic
+from rdflib.namespace import DCTERMS, RDF, SKOS
+
+SOSA = Namespace("http://www.w3.org/ns/sosa/")
+SCHEME_URI = "https://w3id.org/eusoilvoc"
+COLUMNS = (
+    "id", "type", "prefLabel", "altLabel", "definition", "broader", "narrower",
+    "property", "exactMatch", "closeMatch", "definitionSource", "conceptSource",
+)
+TYPE_NAMES = {
+    SKOS.Concept: "skos:Concept",
+    SOSA.ObservableProperty: "sosa:ObservableProperty",
+    SOSA.Procedure: "sosa:Procedure",
+}
+URI_COLUMNS = {
+    "broader": SKOS.broader,
+    "narrower": SKOS.narrower,
+    "property": SOSA.isProcedureFor,
+    "exactMatch": SKOS.exactMatch,
+    "closeMatch": SKOS.closeMatch,
+    "conceptSource": DCTERMS.source,
+}
+SEPARATOR = " | "
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-EUSOILVOC_SCHEME_URI = "https://w3id.org/eusoilvoc"
-EUSOILVOC_NAMESPACE = Namespace(f"{EUSOILVOC_SCHEME_URI}#")
+EUSOILVOC_SCHEME_URI = SCHEME_URI
 
 
-COL_ID = "ID"
-COL_PREF = "prefLabel"
-COL_ALT = "altLabel"
-COL_DEF = "definition"
-COL_BROADER = "broader"
-COL_IS_PROCEDURE_FOR = "isProcedureFor"
-COL_EXACT = "exactMatch"
-COL_CLOSE = "closeMatch"
-COL_SOURCE = "source link"
+def graphs_isomorphic(left: Graph, right: Graph) -> bool:
+    """Compare all RDF triples, canonicalizing disconnected blank-node components.
 
-HAS_PROCEDURE = URIRef(str(SOSA) + "hasProcedure")
-IS_PROCEDURE_FOR = URIRef(str(SOSA) + "isProcedureFor")
-OBSERVABLE_PROPERTY = URIRef(str(SOSA) + "ObservableProperty")
-PROCEDURE_CLASS = URIRef(str(SOSA) + "Procedure")
+    URI/literal terms cannot be renamed by an isomorphism. Blank-node components
+    can be compared independently with those fixed terms as anchors. This avoids
+    globally canonicalizing hundreds of unrelated definition nodes; multiplicity
+    still matters when several components have identical RDFLib fingerprints.
+    """
+    def partition(graph):
+        named = set()
+        incident = defaultdict(set)
+        for triple in graph:
+            nodes = {term for term in triple if isinstance(term, BNode)}
+            if not nodes:
+                named.add(triple)
+            for node in nodes:
+                incident[node].add(triple)
+        remaining = set(incident)
+        components = Counter()
+        while remaining:
+            pending = [remaining.pop()]
+            component = Graph()
+            while pending:
+                node = pending.pop()
+                for triple in incident[node]:
+                    component.add(triple)
+                    for term in triple:
+                        if isinstance(term, BNode) and term in remaining:
+                            remaining.remove(term)
+                            pending.append(term)
+            components[to_isomorphic(component).graph_digest()] += 1
+        return named, components
 
-
-COLUMN_ALIASES: dict[str, list[str]] = {
-    COL_ID: [
-        "ID",
-        "ID (concepts' URIs)",
-        "concept_uri",
-        "concept uri",
-        "uri",
-    ],
-    COL_PREF: ["prefLabel", "preflabel", "pref label", "pref_label"],
-    COL_ALT: ["altLabel", "altlabel", "alt label", "alt_label"],
-    COL_DEF: ["definition", "Definition"],
-    COL_BROADER: [
-        "broader",
-        "broader term",
-        "broader term (immediate, semicolon-separated, use prefLabel)",
-    ],
-    COL_IS_PROCEDURE_FOR: [
-        "isProcedureFor",
-        "is procedure for",
-        "is_procedure_for",
-        "procedure for",
-    ],
-    COL_EXACT: [
-        "exactMatch",
-        "exact match",
-        "exact match (skos:exactMatch, semicolon-separated, use full URIs)",
-    ],
-    COL_CLOSE: [
-        "closeMatch",
-        "close match",
-        "close match (skos:closeMatch, semicolon-separated, use full URIs)",
-    ],
-    COL_SOURCE: [
-        "source link",
-        "source links",
-        "source_link",
-        "source",
-        "source uri",
-        "source uris",
-        "definition source",
-    ],
-}
-
-REQUIRED_COLUMNS: tuple[str, ...] = (
-    COL_ID,
-    COL_PREF,
-    COL_ALT,
-    COL_DEF,
-    COL_BROADER,
-    COL_EXACT,
-    COL_CLOSE,
-    COL_SOURCE,
-)
-
-OPTIONAL_COLUMNS: tuple[str, ...] = (COL_IS_PROCEDURE_FOR,)
+    return len(left) == len(right) and partition(left) == partition(right)
 
 
-def _norm_col(name: str) -> str:
-    return re.sub(r"\s+", "", str(name)).casefold()
-
-
-def canonicalize_fieldnames(fieldnames: list[str] | None) -> dict[str, str]:
-    """Return a mapping from actual CSV header -> canonical header."""
-    if not fieldnames:
-        raise ValueError("CSV has no header row")
-
-    norm_to_actual: dict[str, str] = {_norm_col(c): c for c in fieldnames}
-    rename_map: dict[str, str] = {}
-
-    missing: list[str] = []
-    for canonical, aliases in COLUMN_ALIASES.items():
-        found_actual = None
-        for candidate in aliases:
-            actual = norm_to_actual.get(_norm_col(candidate))
-            if actual is not None:
-                found_actual = actual
-                break
-        if found_actual is None:
-            if canonical in REQUIRED_COLUMNS:
-                missing.append(canonical)
+def split_values(value: str, *, keep_empty: bool = False) -> list[str]:
+    """Decode exactly ' | ', without stripping meaningful literal whitespace."""
+    if value == "":
+        return [""] if keep_empty else []
+    parts, current = [], []
+    index = 0
+    while index < len(value):
+        if value[index] == "\\":
+            index += 1
+            if index == len(value) or value[index] not in "\\|":
+                raise ValueError("Invalid CSV escape; escape backslashes as \\\\ and pipes as \\|.")
+            current.append(value[index])
+            index += 1
+        elif value.startswith(SEPARATOR, index):
+            parts.append("".join(current))
+            current = []
+            index += len(SEPARATOR)
+        elif value[index] == "|":
+            raise ValueError("Separate values with ' | '; escape literal pipes as \\|.")
         else:
-            rename_map[found_actual] = canonical
+            current.append(value[index])
+            index += 1
+    parts.append("".join(current))
+    if not keep_empty and any(part == "" for part in parts):
+        raise ValueError("Empty list entries are only allowed in definitionSource.")
+    return parts
 
-    if missing:
-        raise ValueError(
-            "CSV missing required columns (after alias matching): "
-            f"{missing}. Existing columns: {fieldnames}"
-        )
 
-    return rename_map
+def _uri(value: str) -> URIRef:
+    if not value or re.search(r'[\s<>"{}|\\^`]', value):
+        raise ValueError(f"Expected an absolute URI, got {value!r}")
+    parsed = urlsplit(value)
+    if not re.match(r"^[A-Za-z][A-Za-z0-9+.-]*:", value) or not (parsed.netloc or parsed.path):
+        raise ValueError(f"Expected an absolute URI, got {value!r}")
+    if parsed.scheme in ("http", "https") and not parsed.netloc:
+        raise ValueError(f"Invalid HTTP URI: {value!r}")
+    return URIRef(value)
+
+
+def _types(value: str) -> set[URIRef]:
+    names = {name: uri for uri, name in TYPE_NAMES.items()}
+    names.update({str(uri): uri for uri in TYPE_NAMES})
+    try:
+        types = {names[name] for name in split_values(value)}
+    except KeyError as error:
+        raise ValueError(f"Unsupported RDF type: {error.args[0]}") from error
+    if SKOS.Concept not in types:
+        raise ValueError("Every row must explicitly include skos:Concept in type.")
+    if {SOSA.Procedure, SOSA.ObservableProperty} <= types:
+        raise ValueError("A concept cannot be both a procedure and an observable property.")
+    return types
+
+
+def _header_key(value: str) -> str:
+    return re.sub(r"[\s_]", "", value).casefold()
 
 
 def read_rows(csv_path: Path) -> list[dict[str, str]]:
-    with csv_path.open("r", encoding="utf-8-sig", newline="") as f:
-        reader = csv.DictReader(f)
-        rename_map = canonicalize_fieldnames(reader.fieldnames)
-
-        rows: list[dict[str, str]] = []
-        for raw in reader:
-            row: dict[str, str] = {k: "" for k in COLUMN_ALIASES.keys()}
-            for actual_key, canonical_key in rename_map.items():
-                row[canonical_key] = str(raw.get(actual_key, "") or "").strip()
-            rows.append(row)
-        return rows
-
-
-def split_values(value: str, allow_legacy_semicolon: bool = True) -> list[str]:
-    if value is None:
-        return []
-    value = str(value).strip()
-    if not value or value.lower() == "nan":
-        return []
-    if "|" in value:
-        parts = value.split("|")
-    elif allow_legacy_semicolon and ";" in value:
-        parts = value.split(";")
-    else:
-        parts = [value]
-    parts = [p.strip() for p in parts]
-    return [p for p in parts if p]
+    aliases = {_header_key(column): column for column in COLUMNS}
+    aliases.update({
+        "sourcelink": "definitionSource",
+        "sourcelinks": "definitionSource",
+        "isprocedurefor": "property",
+    })
+    with Path(csv_path).open(encoding="utf-8-sig", newline="") as stream:
+        reader = csv.DictReader(stream)
+        headers = reader.fieldnames or []
+        unknown = [name for name in headers if _header_key(name) not in aliases]
+        if unknown:
+            raise ValueError(f"Unsupported CSV columns: {unknown}")
+        mapped = [aliases[_header_key(name)] for name in headers]
+        if len(mapped) != len(set(mapped)):
+            raise ValueError("Duplicate CSV columns or aliases for the same column.")
+        missing = set(COLUMNS) - set(mapped)
+        if missing:
+            raise ValueError(f"Missing CSV columns: {sorted(missing)}; regenerate using the notebook exporter.")
+        rows = []
+        for number, raw in enumerate(reader, start=2):
+            if None in raw or any(value is None for value in raw.values()):
+                raise ValueError(f"CSV row {number} has a different field count from the header.")
+            rows.append({aliases[_header_key(name)]: raw[name] for name in headers})
+    return rows
 
 
-def _graph_without_predicates(g: Graph, predicates: set[URIRef]) -> Graph:
-    if not predicates:
-        return g
-    g2 = Graph()
-    g2.namespace_manager = g.namespace_manager
-    for s, p, o in g:
-        if p in predicates:
-            continue
-        g2.add((s, p, o))
-    return g2
+def graph_from_rows(rows: list[dict[str, str]], scheme_uri: str = SCHEME_URI) -> Graph:
+    scheme = _uri(scheme_uri)
+    graph = Graph()
+    for prefix, ns in (("skos", SKOS), ("sosa", SOSA), ("dcterms", DCTERMS),
+                       ("eusoilvoc", Namespace(scheme_uri + "#"))):
+        graph.bind(prefix, ns)
+    graph.add((scheme, RDF.type, SKOS.ConceptScheme))
+    concepts = {}
+    for number, row in enumerate(rows, start=2):
+        if set(row) != set(COLUMNS):
+            raise ValueError(f"Row {number} does not have the complete CSV schema.")
+        concept = _uri(row["id"])
+        if not str(concept).startswith(scheme_uri + "#"):
+            raise ValueError(f"Concept is outside the local namespace: {concept}")
+        if concept in concepts:
+            raise ValueError(f"Duplicate concept id: {concept}")
+        concepts[concept] = _types(row["type"])
+        for typ in concepts[concept]:
+            graph.add((concept, RDF.type, typ))
+        graph.add((concept, SKOS.inScheme, scheme))
+        if not row["prefLabel"].strip():
+            raise ValueError(f"Missing prefLabel: {concept}")
+        graph.add((concept, SKOS.prefLabel, Literal(row["prefLabel"], lang="en")))
+        for label in split_values(row["altLabel"]):
+            graph.add((concept, SKOS.altLabel, Literal(label, lang="en")))
 
-
-def build_graph_from_csv(csv_path: Path, scheme_uri: str) -> tuple[Graph, dict[str, str]]:
-    rows = read_rows(csv_path)
-
-    PROCEDURE_EXACTMATCH_PREFIXES = (
-        "http://w3id.org/glosis/model/procedure/",
-        "http://w3id.org/glosis/model/procedure",
-    )
-
-    # Determine which concepts are procedures.
-    # Rule: if any skos:exactMatch URI starts with the GLOSIS procedure namespace, it's a procedure.
-    procedure_concept_uris: set[str] = set()
-    for row in rows:
-        concept_uri = str(row[COL_ID]).strip()
-        if not concept_uri:
-            continue
-        exacts = split_values(str(row[COL_EXACT]))
-        if any(u.startswith(PROCEDURE_EXACTMATCH_PREFIXES) for u in exacts):
-            procedure_concept_uris.add(concept_uri)
-
-    # Build lookup for mapping prefLabels -> concept URIs
-    pref_to_uris: defaultdict[str, list[str]] = defaultdict(list)
-    for row in rows:
-        uri = str(row[COL_ID]).strip()
-        pref = str(row[COL_PREF]).strip()
-        if not uri:
-            continue
-        if pref:
-            pref_to_uris[pref.casefold()].append(uri)
-
-    warnings: dict[str, str] = {}
-
-    def resolve_pref_to_uri(pref_label: str, relation_name: str) -> str | None:
-        key = pref_label.casefold()
-        uris = pref_to_uris.get(key, [])
-        if not uris:
-            unresolved_key = f"unresolved_{relation_name}_labels"
-            warnings.setdefault(unresolved_key, "")
-            warnings[unresolved_key] += f"- {pref_label}\n"
-            return None
-        if len(uris) > 1:
-            ambiguous_key = f"ambiguous_{relation_name}_labels"
-            warnings.setdefault(ambiguous_key, "")
-            warnings[ambiguous_key] += (
-                f"- {pref_label} -> {len(uris)} URIs; using lexicographically smallest\n"
-            )
-            return sorted(uris)[0]
-        return uris[0]
-
-    g = Graph()
-
-    SCHEME_URI = URIRef(scheme_uri)
-
-    g.bind("skos", SKOS)
-    g.bind("sosa", SOSA)
-    g.bind("dcterms", DCTERMS)
-    if scheme_uri == EUSOILVOC_SCHEME_URI:
-        g.bind("eusoilvoc", EUSOILVOC_NAMESPACE)
-
-    # Create concept scheme (CSV doesn't carry scheme metadata beyond URI)
-    g.add((SCHEME_URI, RDF.type, SKOS.ConceptScheme))
-
-    # Create concepts + literals + match links
-    for row in rows:
-        concept_uri = str(row[COL_ID]).strip()
-        if not concept_uri:
-            continue
-        concept = URIRef(concept_uri)
-
-        g.add((concept, RDF.type, SKOS.Concept))
-        g.add((concept, SKOS.inScheme, SCHEME_URI))
-
-        pref = str(row[COL_PREF]).strip()
-        if pref:
-            g.add((concept, SKOS.prefLabel, Literal(pref, lang="en")))
-
-        for alt in split_values(str(row[COL_ALT])):
-            g.add((concept, SKOS.altLabel, Literal(alt, lang="en")))
-
-        definitions = split_values(str(row[COL_DEF]), allow_legacy_semicolon=False)
-        sources = split_values(str(row[COL_SOURCE]), allow_legacy_semicolon=False)
-        if sources and len(sources) != len(definitions):
-            warnings.setdefault("definition_source_mismatch", "")
-            warnings["definition_source_mismatch"] += (
-                f"- {concept_uri}: {len(definitions)} definition(s), {len(sources)} source link(s)\n"
-            )
-        for idx, definition in enumerate(definitions):
-            source = sources[idx] if idx < len(sources) else ""
+        definitions = split_values(row["definition"])
+        sources = split_values(row["definitionSource"], keep_empty=bool(definitions))
+        if len(definitions) != len(sources):
+            raise ValueError(f"Definition/source count mismatch for {concept}: {len(definitions)} vs {len(sources)}")
+        for definition, source in zip(definitions, sources):
             if source:
-                bnode = BNode()
-                g.add((concept, SKOS.definition, bnode))
-                g.add((bnode, RDF.value, Literal(definition, lang="en")))
-                g.add((bnode, DCTERMS.source, URIRef(source)))
+                node = BNode()
+                graph.add((concept, SKOS.definition, node))
+                graph.add((node, RDF.value, Literal(definition, lang="en")))
+                graph.add((node, DCTERMS.source, _uri(source)))
             else:
-                g.add((concept, SKOS.definition, Literal(definition, lang="en")))
+                graph.add((concept, SKOS.definition, Literal(definition, lang="en")))
+        for column, predicate in URI_COLUMNS.items():
+            for value in split_values(row[column]):
+                graph.add((concept, predicate, _uri(value)))
 
-        for uri in split_values(str(row[COL_EXACT])):
-            g.add((concept, SKOS.exactMatch, URIRef(uri)))
+    for predicate in (SKOS.broader, SKOS.narrower, SOSA.isProcedureFor):
+        for subject, target in graph.subject_objects(predicate):
+            if target not in concepts:
+                raise ValueError(f"Unknown local target: {subject} {predicate} {target}")
+    broader = set(graph.subject_objects(SKOS.broader))
+    narrower = {(child, parent) for parent, child in graph.subject_objects(SKOS.narrower)}
+    if broader != narrower:
+        example = sorted(broader ^ narrower, key=str)[0]
+        raise ValueError(f"Inconsistent broader/narrower declarations: {example}")
+    parents = {concept: set(graph.objects(concept, SKOS.broader)) for concept in concepts}
+    try:
+        tuple(TopologicalSorter(parents).static_order())
+    except CycleError as error:
+        raise ValueError("Cycle in the SKOS hierarchy.") from error
+    for child, parent in broader:
+        if (SOSA.Procedure in concepts[child] and SOSA.ObservableProperty in concepts[parent]
+                or SOSA.ObservableProperty in concepts[child] and SOSA.Procedure in concepts[parent]):
+            raise ValueError("Use property, not broader/narrower, to connect procedures with observable properties.")
+    for procedure, prop in list(graph.subject_objects(SOSA.isProcedureFor)):
+        if SOSA.Procedure not in concepts[procedure] or SOSA.ObservableProperty not in concepts[prop]:
+            raise ValueError(f"property requires a Procedure and an ObservableProperty: {procedure}, {prop}")
+        graph.add((prop, SOSA.hasProcedure, procedure))
+    for concept, types in concepts.items():
+        if SOSA.Procedure not in types and not parents[concept]:
+            graph.add((scheme, SKOS.hasTopConcept, concept))
+            graph.add((concept, SKOS.topConceptOf, scheme))
+    return graph
 
-        for uri in split_values(str(row[COL_CLOSE])):
-            g.add((concept, SKOS.closeMatch, URIRef(uri)))
 
-    # Add broader links from the dedicated broader column only.
-    for row in rows:
-        concept_uri = str(row[COL_ID]).strip()
-        if not concept_uri:
-            continue
-        concept = URIRef(concept_uri)
-
-        for broader_label in split_values(str(row[COL_BROADER])):
-            broader_uri = resolve_pref_to_uri(broader_label, relation_name="broader")
-            if broader_uri:
-                broader_concept = URIRef(broader_uri)
-                g.add((concept, SKOS.broader, broader_concept))
-
-    # Add explicit procedure links from the dedicated isProcedureFor column.
-    for row in rows:
-        concept_uri = str(row[COL_ID]).strip()
-        if not concept_uri:
-            continue
-        concept = URIRef(concept_uri)
-
-        for target_label in split_values(str(row.get(COL_IS_PROCEDURE_FOR, ""))):
-            target_uri = resolve_pref_to_uri(target_label, relation_name="isprocedurefor")
-            if target_uri:
-                target_concept = URIRef(target_uri)
-                g.add((concept, IS_PROCEDURE_FOR, target_concept))
-                g.add((target_concept, HAS_PROCEDURE, concept))
-
-    # Infer SOSA class typing from existing triples.
-    # 1) Concepts with sosa:hasProcedure are sosa:ObservableProperty.
-    for concept, _, _ in g.triples((None, HAS_PROCEDURE, None)):
-        g.add((concept, RDF.type, OBSERVABLE_PROPERTY))
-
-    # 2) Concepts exact-matching glosis procedure URIs are sosa:Procedure.
-    for concept_uri in procedure_concept_uris:
-        g.add((URIRef(concept_uri), RDF.type, PROCEDURE_CLASS))
-
-    # Add inferred skos:narrower (original TTL contains these)
-    for child, _, parent in g.triples((None, SKOS.broader, None)):
-        g.add((parent, SKOS.narrower, child))
-
-    # Infer top concepts: all non-procedure concepts with no skos:broader.
-    # For this project we treat: blank CSV "broader" => top concept.
-    # (We only record skos:broader in CSV; procedures are excluded.)
-    top_concept_uris_from_csv: set[str] = set()
-    for row in rows:
-        concept_uri = str(row[COL_ID]).strip()
-        if not concept_uri or concept_uri in procedure_concept_uris:
-            continue
-        broader_raw = str(row[COL_BROADER]).strip()
-        if not broader_raw:
-            top_concept_uris_from_csv.add(concept_uri)
-
-    for tc_uri in sorted(top_concept_uris_from_csv):
-        tc = URIRef(tc_uri)
-        g.add((SCHEME_URI, SKOS.hasTopConcept, tc))
-        g.add((tc, SKOS.topConceptOf, SCHEME_URI))
-
-    return g, warnings
+def build_graph_from_csv(csv_path: Path, scheme_uri: str = SCHEME_URI) -> tuple[Graph, dict[str, str]]:
+    return graph_from_rows(read_rows(csv_path), scheme_uri), {}
 
 
 def diff_graphs(
@@ -396,150 +304,57 @@ def close_topconcept_inverses(g: Graph, scheme_uri: str) -> None:
         g.add((scheme, SKOS.hasTopConcept, tc))
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description="Restore SoilVoc.ttl from SoilVoc_concepts.csv")
-    parser.add_argument(
-        "--csv",
-        default=str(REPO_ROOT / "SoilVoc_concepts.csv"),
-        help="Input CSV path",
-    )
-    parser.add_argument(
-        "--out",
-        default=str(REPO_ROOT / "SoilVoc_restored.ttl"),
-        help="Output TTL path",
-    )
-    parser.add_argument(
-        "--scheme",
-        default=EUSOILVOC_SCHEME_URI,
-        help="ConceptScheme URI",
-    )
-    parser.add_argument(
-        "--compare",
-        default=str(REPO_ROOT / "SoilVoc.ttl"),
-        help="Existing TTL to compare against",
-    )
-    parser.add_argument(
-        "--include-related",
-        action="store_true",
-        help="Include skos:related in comparison (default: ignore skos:related)",
-    )
-    parser.add_argument(
-        "--include-topconceptof",
-        action="store_true",
-        help="Include skos:topConceptOf in comparison (default: ignore skos:topConceptOf)",
-    )
-    parser.add_argument(
-        "--include-equivalentto",
-        action="store_true",
-        help="Include semscience:equivalentTo in comparison (default: ignore it)",
-    )
-    parser.add_argument(
-        "--literal-diff-limit",
-        type=int,
-        default=10,
-        help="How many literal lexical-form mismatches to print",
-    )
-    parser.add_argument(
-        "--raw-bnode-diff",
-        action="store_true",
-        help="Show diffs with raw blank node IDs (default: canonicalize bnodes in diffs)",
-    )
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Restore SoilVoc.ttl from the lossless SoilVoc CSV profile")
+    parser.add_argument("--csv", default=str(REPO_ROOT / "SoilVoc_concepts.csv"), help="Input CSV path")
+    parser.add_argument("--out", default=str(REPO_ROOT / "SoilVoc_restored.ttl"), help="Output TTL path")
+    parser.add_argument("--scheme", default=EUSOILVOC_SCHEME_URI, help="ConceptScheme URI")
+    parser.add_argument("--compare", default=str(REPO_ROOT / "SoilVoc.ttl"), help="TTL reference for strict isomorphism")
+    parser.add_argument("--literal-diff-limit", type=int, default=10)
+    parser.add_argument("--raw-bnode-diff", action="store_true")
+    # Retain old CLI spellings, but comparisons now always include every triple.
+    for option in ("--include-related", "--include-topconceptof", "--include-equivalentto"):
+        parser.add_argument(option, action="store_true", help=argparse.SUPPRESS)
     args = parser.parse_args()
 
     csv_path = Path(args.csv)
     out_path = Path(args.out)
     compare_path = Path(args.compare)
+    if out_path.resolve() == compare_path.resolve():
+        parser.error("--out must differ from --compare; do not overwrite the reference vocabulary")
+    try:
+        expected = Graph().parse(compare_path, format="turtle")
+        restored, _ = build_graph_from_csv(csv_path, args.scheme)
+    except (ValueError, OSError) as error:
+        parser.error(str(error))
 
-    restored, warnings = build_graph_from_csv(csv_path, args.scheme)
-    restored.serialize(destination=str(out_path), format="turtle")
+    restored.serialize(destination=out_path, format="turtle")
+    # Compare the serialized artifact, not only the graph held before writing.
+    actual = Graph().parse(out_path, format="turtle")
+    same = graphs_isomorphic(expected, actual)
     print(f"Wrote restored TTL: {out_path}")
+    print(f"Triples: original={len(expected)}, restored={len(actual)}")
+    for typ in (SKOS.Concept, SOSA.ObservableProperty, SOSA.Procedure):
+        print(f"{typ}: {len(set(actual.subjects(RDF.type, typ)))}")
+    print(f"Graph isomorphic to {compare_path} (all triples): {same}")
 
-    if warnings.get("ambiguous_broader_labels"):
-        print("\nWARNING: Ambiguous broader labels detected:")
-        print(warnings["ambiguous_broader_labels"].rstrip())
-    if warnings.get("unresolved_broader_labels"):
-        print("\nWARNING: Unresolved broader labels (no matching prefLabel in CSV):")
-        print(warnings["unresolved_broader_labels"].rstrip())
-    if warnings.get("ambiguous_isprocedurefor_labels"):
-        print("\nWARNING: Ambiguous isProcedureFor labels detected:")
-        print(warnings["ambiguous_isprocedurefor_labels"].rstrip())
-    if warnings.get("unresolved_isprocedurefor_labels"):
-        print("\nWARNING: Unresolved isProcedureFor labels (no matching prefLabel in CSV):")
-        print(warnings["unresolved_isprocedurefor_labels"].rstrip())
-    if warnings.get("definition_source_mismatch"):
-        print("\nWARNING: Definition/source link count mismatch:")
-        print(warnings["definition_source_mismatch"].rstrip())
-
-    # Compare with existing TTL if present
-    if compare_path.exists():
-        g_existing = Graph()
-        g_existing.parse(str(compare_path), format="turtle")
-
-        SEMSCIENCE_EQUIVALENT_TO = URIRef("http://semanticscience.org/resource/equivalentTo")
-
-        ignored_predicates: set[URIRef] = set()
-        if not args.include_related:
-            ignored_predicates.add(SKOS.related)
-        if not args.include_equivalentto:
-            ignored_predicates.add(SEMSCIENCE_EQUIVALENT_TO)
-
-        g_existing_cmp = _graph_without_predicates(g_existing, ignored_predicates)
-        restored_cmp = _graph_without_predicates(restored, ignored_predicates)
-
-        # If requested, compare including skos:topConceptOf, but normalize both graphs so
-        # they are closed under the inverse relationship hasTopConcept <-> topConceptOf.
-        if args.include_topconceptof:
-            close_topconcept_inverses(g_existing_cmp, args.scheme)
-            close_topconcept_inverses(restored_cmp, args.scheme)
-
-        same_raw = isomorphic(restored, g_existing)
-        same_cmp = isomorphic(restored_cmp, g_existing_cmp)
-        if ignored_predicates:
-            print(f"\nGraph isomorphic to {compare_path} (raw): {same_raw}")
-            print(f"Graph isomorphic to {compare_path} (ignoring {', '.join(sorted(str(p) for p in ignored_predicates))}): {same_cmp}")
-        else:
-            print(f"\nGraph isomorphic to {compare_path}: {same_raw}")
-
-        existing_top = top_concepts_in_scheme(g_existing, args.scheme)
-        restored_top = top_concepts_in_scheme(restored, args.scheme)
-        print(f"\nTop concepts in existing TTL: {len(existing_top)}")
-        print(f"Top concepts in restored TTL: {len(restored_top)}")
-
-        if not same_cmp:
-            missing, extra = diff_graphs(
-                g_existing_cmp,
-                restored_cmp,
-                limit=25,
-                canonicalize_bnodes=not args.raw_bnode_diff,
-            )
-            print(f"\nTriples missing from restored (showing up to {len(missing)}):")
-            for s, p, o in missing:
-                print(f"- {s.n3(restored.namespace_manager)} {p.n3(restored.namespace_manager)} {o.n3(restored.namespace_manager)}")
-
-            print(f"\nTriples extra in restored (showing up to {len(extra)}):")
-            for s, p, o in extra:
-                print(f"- {s.n3(restored.namespace_manager)} {p.n3(restored.namespace_manager)} {o.n3(restored.namespace_manager)}")
-
-            # Targeted literal lexical-form differences (what the user can fix in CSV)
-            lit_preds = {SKOS.prefLabel, SKOS.altLabel, RDF.value, SKOS.definition}
-            literal_diffs = find_literal_lexical_differences(
-                g_existing_cmp,
-                restored_cmp,
-                predicates=lit_preds,
-                limit=max(0, int(args.literal_diff_limit)),
-            )
-            if literal_diffs:
-                print(f"\nExamples of literal lexical-form differences (up to {len(literal_diffs)}):")
-                for s, p, expected_lits, actual_lits in literal_diffs:
-                    print(f"- Subject: {s}")
-                    print(f"  Predicate: {p}")
-                    print("  Existing literals:")
-                    for lit in expected_lits:
-                        print(f"    - {lit.n3(g_existing.namespace_manager)}")
-                    print("  Restored literals:")
-                    for lit in actual_lits:
-                        print(f"    - {lit.n3(restored.namespace_manager)}")
+    if not same:
+        missing, extra = diff_graphs(
+            expected, actual, canonicalize_bnodes=not args.raw_bnode_diff,
+        )
+        for title, triples in (("Missing triples", missing), ("Extra triples", extra)):
+            print(f"\n{title} (up to 25):")
+            for s, p, o in triples:
+                print(f"- {s.n3()} {p.n3()} {o.n3()}")
+        differences = find_literal_lexical_differences(
+            expected, actual, {SKOS.prefLabel, SKOS.altLabel, RDF.value, SKOS.definition},
+            limit=max(0, args.literal_diff_limit),
+        )
+        for subject, predicate, before, after in differences:
+            print(f"Literal difference: {subject} {predicate}: {before!r} -> {after!r}")
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

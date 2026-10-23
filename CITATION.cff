@@ -66,7 +66,6 @@ keywords:
   - "INRAE thesaurus"
   - "GloSIS"
   - "ISO 11074"
-  - "Skosmos"
   - "vocabulary viewer"
   - "FastAPI"
   - "rdflib"

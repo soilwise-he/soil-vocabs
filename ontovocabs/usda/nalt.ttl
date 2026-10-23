@@ -10,90 +10,90 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 eusoilvoc:AlfisolsUSDA a skos:Concept ;
+    skos:altLabel "Alfisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:exactMatch nalt:6336 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Alfisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+    skos:prefLabel "Alfisols"@en .
 
 eusoilvoc:AndisolsUSDA a skos:Concept ;
+    skos:altLabel "Andisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:exactMatch nalt:8668 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Andisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+    skos:prefLabel "Andisols"@en .
 
 eusoilvoc:AridisolsUSDA a skos:Concept ;
+    skos:altLabel "Aridisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:exactMatch nalt:12092 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Aridisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+    skos:prefLabel "Aridisols"@en .
 
 eusoilvoc:EntisolsUSDA a skos:Concept ;
+    skos:altLabel "Entisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:exactMatch nalt:11535 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Entisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+    skos:prefLabel "Entisols"@en .
 
 eusoilvoc:GelisolsUSDA a skos:Concept ;
+    skos:altLabel "Gelisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:exactMatch nalt:42526 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Gelisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+    skos:prefLabel "Gelisols"@en .
 
 eusoilvoc:HistosolsUSDA a skos:Concept ;
+    skos:altLabel "Histosol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:closeMatch nalt:40066 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Histosols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+    skos:prefLabel "Histosols"@en .
 
 eusoilvoc:InceptisolsUSDA a skos:Concept ;
+    skos:altLabel "Inceptisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:exactMatch nalt:10070 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Inceptisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+    skos:prefLabel "Inceptisols"@en .
 
 eusoilvoc:MollisolsUSDA a skos:Concept ;
+    skos:altLabel "Mollisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:exactMatch nalt:6020 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Mollisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+    skos:prefLabel "Mollisols"@en .
 
 eusoilvoc:OxisolsUSDA a skos:Concept ;
+    skos:altLabel "Oxisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:exactMatch nalt:11617 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Oxisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+    skos:prefLabel "Oxisols"@en .
 
 eusoilvoc:SpodosolsUSDA a skos:Concept ;
+    skos:altLabel "Spodosol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:definition [ dcterms:source nalt:11601 ;
             rdf:value "Acidic forest soil of low fertility"@en ] ;
     skos:exactMatch nalt:11601 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Spodosols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+    skos:prefLabel "Spodosols"@en .
 
 eusoilvoc:UltisolsUSDA a skos:Concept ;
+    skos:altLabel "Ultisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:exactMatch nalt:11621 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Ultisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+    skos:prefLabel "Ultisols"@en .
 
 eusoilvoc:VertisolsUSDA a skos:Concept ;
+    skos:altLabel "Vertisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
     skos:closeMatch nalt:11557 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "Vertisols"@en ;
-    skos:scopeNote "USDA Soil Taxonomy order. This concept is separate from any similarly named FAO-UNESCO or WRB group; definitions are not transferred between systems."@en .
+    skos:prefLabel "Vertisols"@en .
 
 eusoilvoc:SoilClassificationUSDA skos:narrower eusoilvoc:AlfisolsUSDA,
         eusoilvoc:AndisolsUSDA,

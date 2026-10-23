@@ -1,7 +1,6 @@
 from contextlib import asynccontextmanager
 import os
 from fastapi import FastAPI
-from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from api.routers.concepts import router as concepts_router
@@ -27,9 +26,5 @@ app = FastAPI(
 app.include_router(concepts_router, prefix="/api/v1/concepts", tags=["concepts"])
 
 
-@app.get("/")
-async def root():
-    return FileResponse(os.path.join(sitepath, "index.html"))
-
-
-app.mount("/assets", StaticFiles(directory=os.path.join(sitepath, "assets")), name="assets")
+# Mount after the API/docs routes so bundled data and images use the same origin.
+app.mount("/", StaticFiles(directory=sitepath, html=True), name="site")
