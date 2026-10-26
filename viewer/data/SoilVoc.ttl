@@ -1,5 +1,6 @@
 @prefix agrontology: <http://aims.fao.org/aos/agrontology#> .
 @prefix agrovoc: <http://aims.fao.org/aos/agrovoc/> .
+@prefix bao: <http://www.bioassayontology.org/bao#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix eusoilvoc: <https://w3id.org/eusoilvoc#> .
 @prefix gemet: <http://www.eionet.europa.eu/gemet/concept/> .
@@ -13,6 +14,9 @@
 @prefix inrae: <http://opendata.inrae.fr/thesaurusINRAE/> .
 @prefix iso11074: <https://data.geoscience.earth/ncl/ISO11074v2025/> .
 @prefix nalt: <https://lod.nal.usda.gov/nalt/> .
+@prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix she: <https://soilwise-he.github.io/soil-health#> .
@@ -20,6 +24,23 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix spp: <http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+qudt:DerivedUnit a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Derived unit"@en ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> .
+
+qudt:FactorUnit a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Factor unit"@en ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> .
+
+qudt:Unit a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Unit"@en ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> .
 
 skos:Concept a rdfs:Class ;
     rdfs:label "Concept"@en .
@@ -90,8 +111,49 @@ agrontology:usesProcess a rdf:Property ;
 dcterms:source a rdf:Property ;
     rdfs:label "source"@en .
 
+qudt:exponent a rdf:Property,
+        owl:AnnotationProperty ;
+    rdfs:label "exponent"@en ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> .
+
+qudt:hasFactorUnit a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "has factor unit"@en ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> .
+
+qudt:hasUnit a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "has unit"@en ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> ;
+    rdfs:range qudt:Unit .
+
+qudt:symbol a rdf:Property,
+        owl:AnnotationProperty ;
+    rdfs:label "symbol"@en ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> .
+
+qudt:ucumCode a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "UCUM code"@en ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> .
+
 sio:equivalentTo a rdf:Property ;
     rdfs:label "equivalent to"@en .
+
+bao:BAO_0002586 a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "is indicator of"@en ;
+    rdfs:isDefinedBy <http://www.bioassayontology.org/bao/bao_vocabulary_properties.owl> .
+
+bao:BAO_0095002 a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "has indicator"@en ;
+    rdfs:isDefinedBy <http://www.bioassayontology.org/bao/bao_vocabulary_properties.owl> .
+
+om:centimetrePerDay a qudt:Unit ;
+    rdfs:label "centimetre per day"@en ;
+    qudt:symbol "cm/d" ;
+    rdfs:isDefinedBy om: .
 
 rdf:type a rdf:Property ;
     rdfs:label "type"@en .
@@ -137,6 +199,83 @@ sosa:hasProcedure a rdf:Property ;
 
 sosa:isProcedureFor a rdf:Property ;
     rdfs:label "is procedure for"@en .
+
+eusoilvoc:SquareKilometrePerYear a qudt:DerivedUnit,
+        qudt:Unit ;
+    rdfs:label "square kilometre per year"@en ;
+    qudt:hasFactorUnit [ a qudt:FactorUnit ;
+            qudt:exponent 1 ;
+            qudt:hasUnit unit:KiloM2 ],
+        [ a qudt:FactorUnit ;
+            qudt:exponent -1 ;
+            qudt:hasUnit unit:YR ] ;
+    qudt:symbol "km2/a" ;
+    qudt:ucumCode "km2.a-1" .
+
+unit:CentiM a qudt:Unit ;
+    rdfs:label "Centimetre"@en ;
+    qudt:symbol "cm" ;
+    rdfs:isDefinedBy unit:CentiM .
+
+unit:DAY a qudt:Unit ;
+    rdfs:label "Day"@en ;
+    qudt:symbol "d" ;
+    rdfs:isDefinedBy unit:DAY .
+
+unit:DeciS-PER-M a qudt:Unit ;
+    rdfs:label "Decisiemens per Metre"@en ;
+    qudt:symbol "dS/m" ;
+    rdfs:isDefinedBy unit:DeciS-PER-M .
+
+unit:GM-PER-CentiM3 a qudt:Unit ;
+    rdfs:label "Gram per Cubic Centimetre"@en ;
+    qudt:symbol "g/cm³" ;
+    rdfs:isDefinedBy unit:GM-PER-CentiM3 .
+
+unit:GM-PER-KiloGM a qudt:Unit ;
+    rdfs:label "Gram per Kilogram"@en ;
+    qudt:symbol "g/kg" ;
+    rdfs:isDefinedBy unit:GM-PER-KiloGM .
+
+unit:MilliGM-PER-GM a qudt:Unit ;
+    rdfs:label "Milligram per Gram"@en ;
+    qudt:symbol "mg/g" ;
+    rdfs:isDefinedBy unit:MilliGM-PER-GM .
+
+unit:MilliGM-PER-KiloGM a qudt:Unit ;
+    rdfs:label "Milligram per Kilogram"@en ;
+    qudt:symbol "mg/kg" ;
+    rdfs:isDefinedBy unit:MilliGM-PER-KiloGM .
+
+unit:PERCENT a qudt:Unit ;
+    rdfs:label "Percent"@en ;
+    qudt:symbol "%" ;
+    rdfs:isDefinedBy unit:PERCENT .
+
+unit:PERCENT-PER-YR a qudt:Unit ;
+    rdfs:label "Percent per Year"@en ;
+    qudt:symbol "%/a" ;
+    rdfs:isDefinedBy unit:PERCENT-PER-YR .
+
+unit:PH a qudt:Unit ;
+    rdfs:label "Acidity"@en ;
+    qudt:symbol "pH" ;
+    rdfs:isDefinedBy unit:PH .
+
+unit:TONNE-PER-HA a qudt:Unit ;
+    rdfs:label "Tonne per Hectare"@en ;
+    qudt:symbol "t/ha" ;
+    rdfs:isDefinedBy unit:TONNE-PER-HA .
+
+unit:TONNE-PER-HA-YR a qudt:Unit ;
+    rdfs:label "Tonne per Hectare Year"@en ;
+    qudt:symbol "t/(ha·a)" ;
+    rdfs:isDefinedBy unit:TONNE-PER-HA-YR .
+
+unit:UNITLESS a qudt:Unit ;
+    rdfs:label "Unitless"@en ;
+    qudt:symbol "一" ;
+    rdfs:isDefinedBy unit:UNITLESS .
 
 eusoilvoc:SoilHealth a skos:Concept ;
     skos:closeMatch agrovoc:c_a9645d28,
@@ -1768,6 +1907,16 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc a skos:Concept,
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:TotalCarbonateEquivalent .
 
+unit:KiloM2 a qudt:Unit ;
+    rdfs:label "Square Kilometre"@en ;
+    qudt:symbol "km²" ;
+    rdfs:isDefinedBy unit:KiloM2 .
+
+unit:YR a qudt:Unit ;
+    rdfs:label "Year"@en ;
+    qudt:symbol "a" ;
+    rdfs:isDefinedBy unit:YR .
+
 eusoilvoc:Agrology a skos:Concept ;
     skos:broader eusoilvoc:SoilSciences ;
     skos:broaderTransitive eusoilvoc:SoilSciences ;
@@ -1794,7 +1943,8 @@ eusoilvoc:CarbonPools a skos:Concept ;
     skos:altLabel "carbon pool"@en ;
     skos:broader eusoilvoc:SoilFunctions ;
     skos:broaderTransitive eusoilvoc:SoilFunctions ;
-    skos:closeMatch nalt:75002 ;
+    skos:closeMatch nalt:75002,
+        she:CarbonPool ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "carbon pools"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilFunctions .
@@ -1846,6 +1996,7 @@ eusoilvoc:EdaphicFactors a skos:Concept ;
         "soil factors"@en ;
     skos:broader eusoilvoc:SoilProperties ;
     skos:broaderTransitive eusoilvoc:SoilProperties ;
+    skos:closeMatch inrae:c_4402 ;
     skos:definition [ dcterms:source agrovoc:c_15617 ;
             rdf:value "Any characteristic or condition of soil - generally physical or chemical, that influences organisms."@en ] ;
     skos:exactMatch agrovoc:c_15617,
@@ -1907,6 +2058,8 @@ eusoilvoc:Habitats a skos:Concept ;
     skos:altLabel "habitat"@en ;
     skos:broader eusoilvoc:SoilFunctions ;
     skos:broaderTransitive eusoilvoc:SoilFunctions ;
+    skos:closeMatch gemet:3808,
+        she:Habitat ;
     skos:definition [ dcterms:source agrovoc:c_3456 ;
             rdf:value "The place where an organism lives or the place one would go to find it. The habitat is the organisms address, and the ecological niche its profession, biologically speaking"@en ] ;
     skos:exactMatch agrovoc:c_3456,
@@ -2271,6 +2424,7 @@ eusoilvoc:SoilDenudation a skos:Concept ;
     skos:altLabel "soil loss"@en ;
     skos:broader eusoilvoc:SoilProcesses ;
     skos:broaderTransitive eusoilvoc:SoilProcesses ;
+    skos:closeMatch she:SoilLoss ;
     skos:definition [ dcterms:source agrovoc:c_8dab65bc ;
             rdf:value "Removal of soil surface material, mostly caused by erosion. Loss of total soil material by single soil erosion events."@en ] ;
     skos:exactMatch agrovoc:c_8dab65bc ;
@@ -2314,6 +2468,7 @@ eusoilvoc:SoilLandscapes a skos:Concept ;
     skos:altLabel "soil landscape"@en ;
     skos:broader eusoilvoc:SoilDescription ;
     skos:broaderTransitive eusoilvoc:SoilDescription ;
+    skos:closeMatch inrae:c_4563 ;
     skos:definition [ dcterms:source agrovoc:c_714b2285 ;
             rdf:value "The full array of attributes that describe a distinct type of soil and its associated landscape, such as surface form, slope, water table depth, permafrost and lakes, is called a soil landscape."@en ] ;
     skos:exactMatch agrovoc:c_714b2285 ;
@@ -2420,6 +2575,8 @@ eusoilvoc:SoilResources a skos:Concept ;
     skos:altLabel "soil resource"@en ;
     skos:broader eusoilvoc:Soil ;
     skos:broaderTransitive eusoilvoc:Soil ;
+    skos:closeMatch inrae:c_1040,
+        gemet:7886 ;
     skos:exactMatch agrovoc:c_7187,
         nalt:63435 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2449,6 +2606,7 @@ eusoilvoc:SoilSequences a skos:Concept ;
     skos:altLabel "soil sequence"@en ;
     skos:broader eusoilvoc:SoilDescription ;
     skos:broaderTransitive eusoilvoc:SoilDescription ;
+    skos:closeMatch inrae:c_1186 ;
     skos:exactMatch agrovoc:c_7191,
         nalt:23008 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2895,6 +3053,7 @@ eusoilvoc:Alluvium a skos:Concept ;
     skos:broader eusoilvoc:ParentMaterial ;
     skos:broaderTransitive eusoilvoc:Geology,
         eusoilvoc:ParentMaterial ;
+    skos:closeMatch she:AlluvialDeposits ;
     skos:definition [ dcterms:source agrovoc:c_25347 ;
             rdf:value "Deposit made by a river or running water, often very productive agricultural soil."@en ] ;
     skos:exactMatch agrovoc:c_25347,
@@ -3047,6 +3206,7 @@ eusoilvoc:EnvironmentalFactors a skos:Concept ;
     skos:broader eusoilvoc:NonsoilIndicators ;
     skos:broaderTransitive eusoilvoc:NonsoilIndicators,
         eusoilvoc:SoilIndicators ;
+    skos:closeMatch inrae:c_4383 ;
     skos:definition [ dcterms:source agrovoc:c_2594 ;
             rdf:value "All factors conditioning structure and form of life within a defined space, both physical and biological."@en ] ;
     skos:exactMatch agrovoc:c_2594,
@@ -3254,6 +3414,7 @@ eusoilvoc:OrganicAmendments a skos:Concept ;
     skos:broader eusoilvoc:SoilAmendments ;
     skos:broaderTransitive eusoilvoc:SoilAmendments,
         eusoilvoc:SoilManagement ;
+    skos:closeMatch inrae:c_3105 ;
     skos:exactMatch agrovoc:c_12965 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "organic amendments"@en ;
@@ -3616,7 +3777,8 @@ eusoilvoc:SoilClods a skos:Concept ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:broaderTransitive eusoilvoc:SoilComponents,
         eusoilvoc:SoilSubstance ;
-    skos:closeMatch nalt:26938 ;
+    skos:closeMatch inrae:c_2546,
+        nalt:26938 ;
     skos:exactMatch agrovoc:c_34900 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil clods"@en ;
@@ -3782,6 +3944,9 @@ eusoilvoc:SoilMaps a skos:Concept ;
     skos:broader eusoilvoc:SoilInformation ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilInformation ;
+    skos:closeMatch inrae:c_16862,
+        gemet:7868,
+        nalt:225108 ;
     skos:definition [ dcterms:source agrovoc:c_e6171c3e ;
             rdf:value "A map that shows the spatial distribution of soil types or soil properties."@en ] ;
     skos:exactMatch agrovoc:c_e6171c3e ;
@@ -3879,6 +4044,8 @@ eusoilvoc:SoilProfiles a skos:Concept ;
     skos:broader eusoilvoc:SoilMorphologicalFeatures ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilMorphologicalFeatures ;
+    skos:closeMatch inrae:c_1235,
+        gemet:7882 ;
     skos:definition [ dcterms:source agrovoc:c_14402 ;
             rdf:value "A vertical section made through a soil that shows the thickness and sequence of the individual horizons."@en ] ;
     skos:exactMatch agrovoc:c_14402,
@@ -4364,6 +4531,8 @@ eusoilvoc:Emissions a skos:Concept ;
     skos:broaderTransitive eusoilvoc:ExternalFactors,
         eusoilvoc:NonsoilIndicators,
         eusoilvoc:SoilIndicators ;
+    skos:closeMatch agrovoc:c_331377,
+        gemet:2663 ;
     skos:exactMatch nalt:34940,
         she:Emissions ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -4376,6 +4545,7 @@ eusoilvoc:ErosionControlPlants a skos:Concept ;
     skos:broaderTransitive eusoilvoc:ErosionControl,
         eusoilvoc:SoilConservation,
         eusoilvoc:SoilManagement ;
+    skos:closeMatch inrae:c_9571 ;
     skos:exactMatch agrovoc:c_2653 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "erosion control plants"@en ;
@@ -4453,6 +4623,7 @@ eusoilvoc:Grasses a skos:Concept ;
     skos:broaderTransitive eusoilvoc:LandCover,
         eusoilvoc:PlantCover,
         eusoilvoc:Vegetation ;
+    skos:closeMatch gemet:3729 ;
     skos:exactMatch agrovoc:c_3362,
         spp:Grass,
         nalt:28913 ;
@@ -4695,6 +4866,7 @@ eusoilvoc:MudFlows a skos:Concept ;
     skos:broaderTransitive eusoilvoc:SoilMovement,
         eusoilvoc:SoilPhysicalProcesses,
         eusoilvoc:SoilProcesses ;
+    skos:closeMatch inrae:c_5523 ;
     skos:definition [ dcterms:source agrovoc:c_f3c459ea ;
             rdf:value "A mudflow or mud flow is a form of mass wasting involving \"very rapid to extremely rapid surging flow\" of debris that has become partially or fully liquified by the addition of significant amounts of water to the source material"@en ] ;
     skos:exactMatch agrovoc:c_f3c459ea,
@@ -4812,6 +4984,8 @@ eusoilvoc:PolychlorinatedBiphenyls a skos:Concept ;
     skos:broaderTransitive eusoilvoc:SoilPollutants,
         eusoilvoc:SoilPollution,
         eusoilvoc:SoilThreats ;
+    skos:closeMatch inrae:c_7917,
+        gemet:6485 ;
     skos:definition [ dcterms:source agrovoc:c_24066 ;
             rdf:value "PCB are toxic and can cause serious health effects in humans and animals, including reproductive impairment and immune system dysfunctions. Once in the environment, PCB enter the food chain. PCBs are toxic to wildlife, including fish, killing them at higher doses and causing spawning failures at lower doses."@en ] ;
     skos:exactMatch agrovoc:c_24066,
@@ -4827,6 +5001,9 @@ eusoilvoc:PolycyclicAromaticHydrocarbons a skos:Concept ;
     skos:broaderTransitive eusoilvoc:SoilPollutants,
         eusoilvoc:SoilPollution,
         eusoilvoc:SoilThreats ;
+    skos:closeMatch inrae:c_15778,
+        gemet:6492,
+        iso11074:3.329 ;
     skos:definition [ dcterms:source agrovoc:c_331394 ;
             rdf:value "A class of chemicals that result from burning coal, oil, gas, wood, garbage, or tobacco. They bind to or form small particles in the air. High heat when cooking meat and other foods will also form PAHs."@en ] ;
     skos:exactMatch agrovoc:c_331394,
@@ -6813,6 +6990,9 @@ eusoilvoc:MineralContents a skos:Concept,
         eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties ;
+    skos:closeMatch agrovoc:c_4848,
+        inrae:c_16283,
+        nalt:24610 ;
     skos:definition [ dcterms:source glosis_lh:mineralContentProperty ;
             rdf:value "The Mineral Content evaluates the overall abundance of mineral particles in soil, including sand, silt, and clay fractions. It provides essential information about soil texture, fertility, and parent material. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ] ;
     skos:exactMatch glosis_lh:mineralContentProperty ;
@@ -6842,6 +7022,8 @@ eusoilvoc:Mites a skos:Concept ;
         eusoilvoc:SoilMesofauna,
         eusoilvoc:SoilOrganisms,
         eusoilvoc:SoilSubstance ;
+    skos:closeMatch inrae:c_24492,
+        gemet:5310 ;
     skos:definition [ dcterms:source agrovoc:c_d1532eb7 ;
             rdf:value "Tiny eight-legged animals that live off plants, animals or stored food."@en ] ;
     skos:exactMatch agrovoc:c_d1532eb7,
@@ -7135,7 +7317,8 @@ eusoilvoc:PlasticMulches a skos:Concept ;
         eusoilvoc:Mulch,
         eusoilvoc:SoilAmendments,
         eusoilvoc:SoilManagement ;
-    skos:closeMatch nalt:53675 ;
+    skos:closeMatch inrae:c_3987,
+        nalt:53675 ;
     skos:definition [ dcterms:source agrovoc:c_13452 ;
             rdf:value "A mulch where plastic sheet is used to cover soil surface. Plants grow through slits or holes in thin plastic sheeting."@en ] ;
     skos:exactMatch agrovoc:c_13452 ;
@@ -7772,6 +7955,7 @@ eusoilvoc:SoilMoistureCharacteristics a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilWaterPhysicalProperties ;
+    skos:closeMatch nalt:63392 ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "The relationship between a soil's moisture content and its soil-matric potential."@en ] ;
     skos:exactMatch spp:SoilMoistureCharacteristics ;
@@ -8309,6 +8493,7 @@ eusoilvoc:SoilSurfaceProperties a skos:Concept ;
     skos:altLabel "soil surface property"@en ;
     skos:broader eusoilvoc:SoilProperties ;
     skos:broaderTransitive eusoilvoc:SoilProperties ;
+    skos:closeMatch inrae:c_189 ;
     skos:exactMatch agrovoc:c_14702 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilSorption ;
@@ -8567,7 +8752,8 @@ eusoilvoc:Termites a skos:Concept ;
         eusoilvoc:SoilMacrofauna,
         eusoilvoc:SoilOrganisms,
         eusoilvoc:SoilSubstance ;
-    skos:closeMatch nalt:45666 ;
+    skos:closeMatch gemet:8381,
+        nalt:45666 ;
     skos:definition [ dcterms:source agrovoc:c_b8039965 ;
             rdf:value "Termites are social insects that build large nests in soil or wood and can occasionally cause damage to wooden structures. They are sometimes called 'white ants', however they belong to a completely different insect group (Order Isoptera) to true ants (Order Hymenoptera)."@en ] ;
     skos:exactMatch agrovoc:c_b8039965,
@@ -8701,6 +8887,7 @@ eusoilvoc:AcidSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_1514 ;
     skos:definition [ dcterms:source agrovoc:c_89 ;
             rdf:value "A soil with a pH value of less than 7.0; for practical purposes, soils with pH below 6.6."@en ] ;
     skos:exactMatch agrovoc:c_89,
@@ -8733,6 +8920,7 @@ eusoilvoc:AgriculturalSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_245 ;
     skos:exactMatch agrovoc:c_33934,
         nalt:5472,
         she:AgriculturalSoils ;
@@ -8790,6 +8978,7 @@ eusoilvoc:AlkalineSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_354 ;
     skos:definition [ dcterms:source agrovoc:c_268 ;
             rdf:value "A soil with a pH value higher than 7.0; CaCO3 in the upper horizon from a few percent to 95%."@en ] ;
     skos:exactMatch agrovoc:c_268,
@@ -8820,6 +9009,7 @@ eusoilvoc:AlluvialSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_363 ;
     skos:definition [ dcterms:source agrovoc:c_296 ;
             rdf:value "Soil that has been deposited by any form of running water."@en ] ;
     skos:exactMatch agrovoc:c_296,
@@ -8853,6 +9043,7 @@ eusoilvoc:ArableSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_2123 ;
     skos:exactMatch agrovoc:c_568,
         nalt:11657,
         she:ArableSoils ;
@@ -9231,6 +9422,8 @@ eusoilvoc:Earthworms a skos:Concept ;
         eusoilvoc:SoilMacrofauna,
         eusoilvoc:SoilOrganisms,
         eusoilvoc:SoilSubstance ;
+    skos:closeMatch inrae:c_25956,
+        gemet:2408 ;
     skos:definition [ dcterms:source spp:Earthworm ;
             rdf:value "A burrowing annelid worm that lives in the soil, important in aerating and draining the soil and in burying organic matter."@en ] ;
     skos:exactMatch agrovoc:c_29109,
@@ -9250,6 +9443,8 @@ eusoilvoc:ErodedSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_11581,
+        she:ErodedSoil ;
     skos:exactMatch agrovoc:c_2650,
         nalt:10096 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -9291,6 +9486,7 @@ eusoilvoc:ForestSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_386 ;
     skos:definition [ dcterms:source agrovoc:c_3051 ;
             rdf:value "Forest soils, where soil formation has been influenced by forest vegetation, are generally characterized by deeply rooted trees, significant ‘litter layers’ or O horizons, recycling of organic matter and nutrients, including wood, and wide varieties of soil-dwelling organisms."@en ] ;
     skos:exactMatch agrovoc:c_3051,
@@ -9350,6 +9546,7 @@ eusoilvoc:GrasslandSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_435 ;
     skos:exactMatch agrovoc:c_3365,
         nalt:30686 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -9445,6 +9642,7 @@ eusoilvoc:HydromorphicSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_893 ;
     skos:definition [ dcterms:source agrovoc:c_25315 ;
             rdf:value "Hydromorphic soils are characterised by the reduction or localised segregation of iron, owing to the temporary or permanent waterlogging of the soil pores which causes a lack of oxygen over a long period."@en ] ;
     skos:exactMatch agrovoc:c_25315,
@@ -9461,6 +9659,7 @@ eusoilvoc:Illites a skos:Concept ;
         eusoilvoc:SoilContents,
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties ;
+    skos:closeMatch nalt:26745 ;
     skos:exactMatch agrovoc:c_15841 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "illites"@en ;
@@ -9582,6 +9781,7 @@ eusoilvoc:IrrigatedSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_1180 ;
     skos:exactMatch agrovoc:c_3953,
         nalt:30689 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -9666,6 +9866,7 @@ eusoilvoc:LoessSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_1406 ;
     skos:exactMatch agrovoc:c_4418,
         nalt:50384 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -9720,6 +9921,7 @@ eusoilvoc:MeadowSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_435 ;
     skos:definition [ dcterms:source agrovoc:c_16569 ;
             rdf:value "Meadow soils incorporate a sponge layer on top with fine-textured soils and a gravel layer below to hold moisture, feeding the plant's roots."@en ] ;
     skos:exactMatch agrovoc:c_16569,
@@ -9751,6 +9953,8 @@ eusoilvoc:Montmorillonites a skos:Concept ;
         eusoilvoc:SoilContents,
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties ;
+    skos:closeMatch inrae:c_5081,
+        nalt:26750 ;
     skos:exactMatch agrovoc:c_16140 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "montmorillonites"@en ;
@@ -9792,6 +9996,7 @@ eusoilvoc:MountainSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_11638 ;
     skos:exactMatch agrovoc:c_4959,
         nalt:53550 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -9806,6 +10011,7 @@ eusoilvoc:NeutralSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_67d02c9a ;
     skos:exactMatch agrovoc:c_24138 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "neutral soils"@en ;
@@ -9861,6 +10067,7 @@ eusoilvoc:OrganicSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_732 ;
     skos:exactMatch agrovoc:c_5390,
         nalt:24689 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -9875,6 +10082,7 @@ eusoilvoc:PaddySoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_403 ;
     skos:exactMatch agrovoc:c_5498,
         nalt:10101 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10267,6 +10475,7 @@ eusoilvoc:SiltySoils a skos:Concept ;
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes,
         eusoilvoc:TexturalSoilTypes ;
+    skos:closeMatch inrae:c_1306 ;
     skos:exactMatch agrovoc:c_7066,
         nalt:63101 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10302,6 +10511,8 @@ eusoilvoc:Smectites a skos:Concept ;
         eusoilvoc:SoilContents,
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties ;
+    skos:closeMatch inrae:c_4657,
+        nalt:16477 ;
     skos:definition [ dcterms:source agrovoc:c_16666 ;
             rdf:value "A smectite is a mineral mixture of various swelling sheet silicates (phyllosilicates), which have a three-layer 2:1 structure and belong to the clay minerals. Smectites mainly consist of montmorillonite, but can often contain secondary minerals such as quartz and calcite."@en ] ;
     skos:exactMatch agrovoc:c_16666 ;
@@ -10688,6 +10899,7 @@ eusoilvoc:SoilInvestigations a skos:Concept ;
     skos:broader eusoilvoc:SoilSurveys ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilSurveys ;
+    skos:closeMatch inrae:c_11640 ;
     skos:definition [ dcterms:source agrovoc:c_8595c402 ;
             rdf:value "Comprise all soil studies and activities which are made in the field, such as soil sampling, description of soil horizons or soil penetration resistance measurements"@en ] ;
     skos:exactMatch agrovoc:c_8595c402 ;
@@ -10955,6 +11167,7 @@ eusoilvoc:StonySoils a skos:Concept ;
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes,
         eusoilvoc:TexturalSoilTypes ;
+    skos:closeMatch inrae:c_1088 ;
     skos:exactMatch agrovoc:c_7425,
         nalt:64223 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10983,6 +11196,7 @@ eusoilvoc:SubtropicalSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_1456 ;
     skos:exactMatch agrovoc:c_14657,
         nalt:26889 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -11053,6 +11267,7 @@ eusoilvoc:TropicalSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_1456 ;
     skos:exactMatch agrovoc:c_7978,
         nalt:26891 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -11096,6 +11311,7 @@ eusoilvoc:Vermiculites a skos:Concept ;
         eusoilvoc:SoilContents,
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties ;
+    skos:closeMatch nalt:26754 ;
     skos:exactMatch agrovoc:c_8194 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "vermiculites"@en ;
@@ -11694,6 +11910,7 @@ eusoilvoc:SerpentineSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_269 ;
     skos:exactMatch agrovoc:c_6986,
         nalt:50387 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -12087,6 +12304,7 @@ eusoilvoc:SoilWaterCharacteristics a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilWaterPhysicalProperties ;
+    skos:closeMatch nalt:63392 ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "The relationship between soil moisture content and soil matric potential, also expressed as a soil moisture characteristic curve or pF curve."@en ] ;
     skos:exactMatch agrovoc:c_330770,
@@ -12194,6 +12412,8 @@ eusoilvoc:Trees a skos:Concept ;
     skos:broaderTransitive eusoilvoc:LandCover,
         eusoilvoc:PlantCover,
         eusoilvoc:Vegetation ;
+    skos:closeMatch inrae:c_6499,
+        gemet:8664 ;
     skos:definition [ dcterms:source agrovoc:c_7887 ;
             rdf:value "A woody perennial with a single main stem, or in the case of coppice with several stems, having a more or less definite crown."@en ] ;
     skos:exactMatch agrovoc:c_7887,
@@ -12540,7 +12760,8 @@ eusoilvoc:AndisolsUSDA a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
-    skos:closeMatch agrovoc:c_404 ;
+    skos:closeMatch agrovoc:c_404,
+        inrae:c_240 ;
     skos:exactMatch nalt:8668 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Andisols"@en ;
@@ -12607,6 +12828,7 @@ eusoilvoc:ArenosolsFAO a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_5263 ;
     skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
             rdf:value "Soils of coarse texture consisting of albic material occurring over a depth of at least 50 cm from the surface, or showing characteristics of argillic, cambic or oxic B horizons which, however, do not qualify as diagnostic horizons because of the textural requirements; having no diagnostic horizons other than (unless buried by 50 cm or more new material) an ochric A horizon."@en ] ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -12623,6 +12845,7 @@ eusoilvoc:ArenosolsWRB a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_5263 ;
     skos:definition [ dcterms:source agrovoc:c_601 ;
             rdf:value "Arenosols comprise deep sandy soils. This includes soils in residual sands after in situ weathering of usually quartz-rich sediments or rock, and soils in recently deposited sands such as dunes in deserts and beach lands. Corresponding soils in other classification systems include Psamments (United States of America), Sols minéraux bruts and Sols peu évolués (France), Arenic Rudosols/Tenosols (Australia), Psammozems (Russia) and Neossolos (Brazil)."@en ] ;
     skos:exactMatch agrovoc:c_601 ;
@@ -12708,6 +12931,7 @@ eusoilvoc:CalcareousSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_1227 ;
     skos:exactMatch agrovoc:c_1194,
         nalt:21069 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -12744,6 +12968,7 @@ eusoilvoc:CambisolsFAO a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_206 ;
     skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
             rdf:value "Other soils having a cambic B horizon or an umbric A horizon which is more than 25 cm thick."@en ] ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -12760,6 +12985,7 @@ eusoilvoc:CambisolsWRB a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_206 ;
     skos:definition [ dcterms:source agrovoc:c_1224 ;
             rdf:value "Cambisols combine soils with at least an incipient subsurface soil formation. Transformation of parent material is evident from structure formation and mostly brownish discoloration, increasing clay percentage, and/or carbonate removal. Other soil classification systems refer to many Cambisols as Braunerden and Terrae fuscae (Germany), Sols bruns (France), burozems (Russia) and Tenosols (Australia). The name Cambisols was coined for the Soil Map of the World (FAO–UNESCO, 1971–1981) and later adopted by Brazil (Cambissolos). In the United States of America they were formerly called Brown soils/Brown forest soils and are now named Inceptisols."@en ] ;
     skos:exactMatch agrovoc:c_1224 ;
@@ -12914,6 +13140,7 @@ eusoilvoc:FerralsolsFAO a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_4564 ;
     skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
             rdf:value "Other soils having an oxic B horizon."@en ] ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -12930,6 +13157,7 @@ eusoilvoc:FerralsolsWRB a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_4564 ;
     skos:definition [ dcterms:source agrovoc:c_2858 ;
             rdf:value "Ferralsols represent the classical, deeply weathered, red or yellow soils of the humid tropics. These soils have diffuse horizon boundaries, a clay assemblage dominated by low-activity clays (mainly kaolinite) and a high content of sesquioxides. Local names usually refer to the colour of the soil. Many Ferralsols are known as Oxisols (United States of America), Latossolos (Brazil), Alítico, Ferrítico and Ferralítico (Cuba), Kandosols (Australia), Sols ferralitiques (France) and Ferralitic soils (Russia)."@en ] ;
     skos:exactMatch agrovoc:c_2858 ;
@@ -13162,6 +13390,8 @@ eusoilvoc:Ions a skos:Concept ;
     skos:broader eusoilvoc:SoilChemical ;
     skos:broaderTransitive eusoilvoc:SoilChemical,
         eusoilvoc:SoilSubstance ;
+    skos:closeMatch inrae:c_13240,
+        gemet:4493 ;
     skos:definition [ dcterms:source agrovoc:c_16162 ;
             rdf:value "An ion is an atom or molecule with a net electrical charge."@en ] ;
     skos:exactMatch agrovoc:c_16162,
@@ -13271,6 +13501,7 @@ eusoilvoc:LuvisolsFAO a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_4219 ;
     skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
             rdf:value "Other soils having an argillic B horizon."@en ] ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -13287,6 +13518,7 @@ eusoilvoc:LuvisolsWRB a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_4219 ;
     skos:definition [ dcterms:source agrovoc:c_4470 ;
             rdf:value "Luvisols have a higher clay content in the subsoil than in the topsoil, as a result of pedogenetic processes (especially clay migration) leading to an argic subsoil horizon. Luvisols have high-activity clays throughout the argic horizon and a high base saturation in the 50–100 cm depth. Many Luvisols are known as Texturally-differentiated soils and part of Metamorphic soils (Russia), Sols lessivés (France), Parabraunerden (Germany), Chromosols (Australia) and Luvissolos (Brazil). In the United States of America, they were formerly named Grey-brown podzolic soils and belong now to the Alfisols with high-activity clays."@en ] ;
     skos:exactMatch agrovoc:c_4470 ;
@@ -13335,7 +13567,8 @@ eusoilvoc:Nematodes a skos:Concept ;
         eusoilvoc:SoilMicrofauna,
         eusoilvoc:SoilOrganisms,
         eusoilvoc:SoilSubstance ;
-    skos:closeMatch nalt:58 ;
+    skos:closeMatch gemet:5565,
+        nalt:58 ;
     skos:definition [ dcterms:source agrovoc:c_47faeccc ;
             rdf:value "Elongated, cylindrical, unsegmented worm; includes a number of plant and animal parasites."@en ] ;
     skos:exactMatch agrovoc:c_47faeccc,
@@ -13541,6 +13774,7 @@ eusoilvoc:PodzolsFAO a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_4164 ;
     skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
             rdf:value "Other soils having a spodic B horizon."@en ] ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -13557,6 +13791,7 @@ eusoilvoc:PodzolsWRB a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_4164 ;
     skos:definition [ dcterms:source agrovoc:c_6044 ;
             rdf:value "Podzols have an illuvial horizon with accumulation of black organic matter and/or reddish Fe oxides. This illuvial horizon is typically overlain by an ash-grey eluvial horizon. Podzols occur in humid areas in the boreal and temperate zones and locally also in the tropics. The name Podzol is used in most national soil classification systems; other names for many of these soils are Spodosols (China and United States of America), Espodossolos (Brazil) and Podosols (Australia)."@en ] ;
     skos:exactMatch agrovoc:c_6044 ;
@@ -13701,6 +13936,7 @@ eusoilvoc:SandySoils a skos:Concept ;
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes,
         eusoilvoc:TexturalSoilTypes ;
+    skos:closeMatch inrae:c_198 ;
     skos:exactMatch agrovoc:c_6781,
         nalt:62360,
         she:SandySoils ;
@@ -13929,6 +14165,7 @@ eusoilvoc:SoilMechanicalProperties a skos:Concept ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties ;
+    skos:closeMatch inrae:c_13175 ;
     skos:definition [ dcterms:source agrovoc:c_8c9575f3 ;
             rdf:value "Soil mechanical properties include basic properties, such as cohesion, and composite properties, such as penetration resistance."@en ] ;
     skos:exactMatch agrovoc:c_8c9575f3,
@@ -14252,6 +14489,7 @@ eusoilvoc:TechnosolsWRB a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_4289 ;
     skos:definition [ dcterms:source agrovoc:c_3a0750ba ;
             rdf:value "Technosols combine soils whose properties and pedogenesis are dominated by their technical origin. They contain a significant amount of artefacts (something in the soil recognizably made or strongly altered by humans or extracted from greater depths) or are sealed by technic hard material (hard material created by humans, having properties unlike natural rock) or contain a geomembrane. They include soils from wastes (landfills, sludge, cinders, mine spoils and ashes), pavements with their underlying unconsolidated materials, soils with geomembranes and constructed soils. Technosols are often referred to as Urban or Mine soils. They are recognized in the Russian soil classification system as Technogenic superficial formations and in the Australian soil classification, they are included in Anthroposols."@en ] ;
     skos:exactMatch agrovoc:c_3a0750ba,
@@ -14291,7 +14529,8 @@ eusoilvoc:UltisolsUSDA a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
-    skos:closeMatch agrovoc:c_101 ;
+    skos:closeMatch agrovoc:c_101,
+        inrae:c_5071 ;
     skos:exactMatch nalt:11621 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Ultisols"@en ;
@@ -14340,6 +14579,7 @@ eusoilvoc:VertisolsFAO a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_4235 ;
     skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-classification/fao-legend/key-to-the-fao-soil-units/en/> ;
             rdf:value "Other soils which, after the upper 20 cm are mixed, have 30 percent or more clay in all horizons to at least 50 cm from the surface; at some period in most years have cracks at least 1 cm wide at a depth of 50 cm, unless irrigated, and have one or more of the following characteristics: gilgai microrelief, intersecting slickensides or wedge-shaped or parallelepiped structural aggregates at some depth between 25 and 100 cm from the surface."@en ] ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -14356,7 +14596,8 @@ eusoilvoc:VertisolsUSDA a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
-    skos:closeMatch nalt:11557 ;
+    skos:closeMatch inrae:c_4235,
+        nalt:11557 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "Vertisols"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilClassificationUSDA .
@@ -14371,6 +14612,7 @@ eusoilvoc:VertisolsWRB a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_4235 ;
     skos:definition [ dcterms:source agrovoc:c_8199 ;
             rdf:value "Vertisols are heavy clay soils with a high proportion of swelling clays. These soils form deep wide cracks from the surface downward when they dry out, which happens in most years. Common local names for Vertisols are Black cotton soils and Regur (India), Black turf soils (South Africa) or Margalites (Indonesia). In national soil classification systems they are called Slitozems or Dark vertic soils (Russia), Vertosols (Australia), Vertissolos (Brazil) and Vertisols (United States of America)."@en ] ;
     skos:exactMatch agrovoc:c_8199 ;
@@ -14520,6 +14762,8 @@ eusoilvoc:Floods a skos:Concept ;
     skos:broader eusoilvoc:Inundation ;
     skos:broaderTransitive eusoilvoc:Inundation,
         eusoilvoc:PlanetaryPhenomena ;
+    skos:closeMatch inrae:c_4505,
+        gemet:3298 ;
     skos:exactMatch spp:Flood,
         nalt:33992,
         she:Floods ;
@@ -14572,6 +14816,7 @@ eusoilvoc:SalineSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_11619 ;
     skos:definition [ dcterms:source agrovoc:c_6748 ;
             rdf:value "The distinguishing characteristic of saline soils from the agricultural standpoint, is that they contain sufficient neutral soluble salts to adversely affect the growth of most crop plants."@en ] ;
     skos:exactMatch agrovoc:c_6748,
@@ -14594,6 +14839,9 @@ eusoilvoc:SaltContents a skos:Concept,
         eusoilvoc:SoilSolution,
         eusoilvoc:SoilSubstance,
         eusoilvoc:SolubleSalts ;
+    skos:closeMatch inrae:c_15877,
+        gemet:7390,
+        nalt:24615 ;
     skos:definition [ dcterms:source glosis_lh:saltContentProperty ;
             rdf:value "The Salt Content measures the concentration of soluble salts in soil, critical for assessing salinity. Excess salts can hinder plant growth by affecting osmotic potential, leading to reduced water uptake by roots. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ] ;
     skos:exactMatch glosis_lh:saltContentProperty ;
@@ -15117,6 +15365,7 @@ eusoilvoc:InorganicAmendments a skos:Concept ;
     skos:broader eusoilvoc:SoilAmendments ;
     skos:broaderTransitive eusoilvoc:SoilAmendments,
         eusoilvoc:SoilManagement ;
+    skos:closeMatch inrae:c_3874 ;
     skos:exactMatch agrovoc:c_27871 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:LimingMaterials ;
@@ -15184,6 +15433,8 @@ eusoilvoc:Roots a skos:Concept ;
     skos:broaderTransitive eusoilvoc:LandCover,
         eusoilvoc:PlantCover,
         eusoilvoc:PlantPart ;
+    skos:closeMatch inrae:c_9503,
+        gemet:7312 ;
     skos:exactMatch agrovoc:c_6651,
         spp:Root,
         nalt:4425,
@@ -16364,6 +16615,8 @@ eusoilvoc:Copper a skos:Concept ;
 
 eusoilvoc:EcosystemServices a skos:Concept ;
     skos:altLabel "ecosystem service"@en ;
+    skos:closeMatch inrae:c_1611,
+        iso11074:3.140 ;
     skos:definition [ dcterms:source agrovoc:c_1348040570280 ;
             rdf:value "Ecosystem services are the multitude of benefits that nature provides to society."@en ] ;
     skos:exactMatch agrovoc:c_1348040570280,
@@ -16796,6 +17049,7 @@ eusoilvoc:SoilBiologicalProperties a skos:Concept ;
     skos:altLabel "soil biological property"@en ;
     skos:broader eusoilvoc:SoilProperties ;
     skos:broaderTransitive eusoilvoc:SoilProperties ;
+    skos:closeMatch inrae:c_5702 ;
     skos:definition [ dcterms:source <https://www.fao.org/soils-portal/data-hub/soil-properties/biological-properties/en/> ;
             rdf:value "This concerns soil properties related to the microbial and faunal activity in soil. These organisms include earthworms, nematodes, protozoa, fungi, bacteria and different arthropods. Soil biology plays a vital role in determining many soil characteristics, yet, being a relatively new science, much remains unknown about soil biology and about how the nature of soil is affected."@en ],
         [ dcterms:source <https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/soil-biological-properties> ;
@@ -16857,6 +17111,10 @@ eusoilvoc:SoilWaterContents a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilWaterPhysicalProperties ;
+    skos:closeMatch agrovoc:c_7208,
+        inrae:c_11519,
+        nalt:21959,
+        she:SoilWaterContent ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "The water that may be evaporated from soil by heating it at 105°C to constant weight; the temperature limit is operational, and clayey soils may retain water at that temperature."@en ] ;
     skos:exactMatch spp:SoilWaterContent ;
@@ -18788,6 +19046,7 @@ eusoilvoc:Salts a skos:Concept,
     skos:broader eusoilvoc:SoilChemical ;
     skos:broaderTransitive eusoilvoc:SoilChemical,
         eusoilvoc:SoilSubstance ;
+    skos:closeMatch gemet:7401 ;
     skos:definition [ dcterms:source agrovoc:c_33129 ;
             rdf:value "In chemistry, a salt is a chemical compound consisting of an ionic assembly of positively charged cations and negatively charged anions, which results in a compound with no net electric charge."@en ],
         [ dcterms:source glosis_lh:saltProperty ;
@@ -19058,6 +19317,7 @@ eusoilvoc:LimingMaterials a skos:Concept ;
     skos:broaderTransitive eusoilvoc:InorganicAmendments,
         eusoilvoc:SoilAmendments,
         eusoilvoc:SoilManagement ;
+    skos:closeMatch inrae:c_4060 ;
     skos:definition [ dcterms:source agrovoc:c_200 ;
             rdf:value "An environmental material containing calcium and/or magnesium compounds  and applied to soil in order to neutralize soil acidity."@en ] ;
     skos:exactMatch agrovoc:c_200,
@@ -19646,6 +19906,7 @@ eusoilvoc:SoilCrusts a skos:Concept ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilMorphologicalFeatures,
         eusoilvoc:SoilSubstance ;
+    skos:closeMatch inrae:c_315 ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "A thin, dense layer on the soil surface characterized by low porosity, high density, and low permeability to air and water."@en ] ;
     skos:exactMatch agrovoc:c_26766,
@@ -19776,6 +20037,7 @@ eusoilvoc:SoilHydraulicProperties a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilWaterPhysicalProperties ;
+    skos:closeMatch inrae:c_14015 ;
     skos:exactMatch agrovoc:c_34125,
         nalt:14082 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -20137,6 +20399,7 @@ eusoilvoc:SoilParticles a skos:Concept ;
     skos:broader eusoilvoc:SoilComponents ;
     skos:broaderTransitive eusoilvoc:SoilComponents,
         eusoilvoc:SoilSubstance ;
+    skos:closeMatch inrae:c_13191 ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "The units of the inorganic soil component: discrete primary particles that cannot be further subdivided, and secondary particles composed of primary particles that can be separated by chemical or mechanical dispersion."@en ] ;
     skos:exactMatch spp:SoilParticle,
@@ -20382,6 +20645,7 @@ eusoilvoc:AnthropogenicSoils a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_543 ;
     skos:definition [ dcterms:source agrovoc:c_486 ;
             rdf:value "Anthropogenic soils (anthrosoils) are soils that have been influenced, modified or created by human activity, in contrast to soils formed by natural processes. They are found worldwide in urban and other human-impacted landscapes. Anthrosoils are formed by: (1) sealing a natural soil beneath pavement or other artificially manufactured impervious material, (2) transformation of a natural soil by human action, or (3) development of a new soil profile in parent materials created and deposited by human action."@en ] ;
     skos:exactMatch agrovoc:c_486 ;
@@ -20462,6 +20726,7 @@ eusoilvoc:CulturalSoilTypes a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilTypes ;
+    skos:closeMatch inrae:c_3418 ;
     skos:exactMatch agrovoc:c_2022,
         nalt:5473 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -20644,6 +20909,7 @@ eusoilvoc:SoilHorizons a skos:Concept ;
     skos:broader eusoilvoc:SoilMorphologicalFeatures ;
     skos:broaderTransitive eusoilvoc:SoilDescription,
         eusoilvoc:SoilMorphologicalFeatures ;
+    skos:closeMatch inrae:c_653 ;
     skos:definition [ dcterms:source agrovoc:c_32749 ;
             rdf:value "In soil science: relatively uniform materials that extend laterally, continuously or discontinuously, throughout the pedounit; it runs approximately parallel to the surface of the ground and differs from the related horizons in many chemical, physical and biological properties."@en ] ;
     skos:exactMatch agrovoc:c_32749,
@@ -21184,6 +21450,9 @@ eusoilvoc:SoilPhenomena a skos:Concept ;
 
 eusoilvoc:SoilSciences a skos:Concept ;
     skos:altLabel "soil science"@en ;
+    skos:closeMatch inrae:c_36c1af09,
+        gemet:7890,
+        nalt:956 ;
     skos:exactMatch agrovoc:c_7188 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:Agrology,
@@ -21253,6 +21522,7 @@ eusoilvoc:Macronutrients a skos:Concept ;
         eusoilvoc:SoilNutrients,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilSubstance ;
+    skos:closeMatch inrae:c_8556 ;
     skos:definition [ dcterms:source agrovoc:c_5dbd59ad ;
             rdf:value "The major source of energy and bulk (volume) in our diets, macronutrients are needed in large quantities (in gram range). They include carbohydrates, proteins and fats. They are a main source of dietary energy, which is measured in calories. Obtaining sufficient energy is essential for everyone in order to maintain body growth, development and good health. Carbohydrates, proteins and fats, in addition to providing energy, each have very specific functions in the body and must be supplied in sufficient amounts to carry out those functions."@en ] ;
     skos:exactMatch agrovoc:c_5dbd59ad,
@@ -21332,7 +21602,8 @@ eusoilvoc:SoilOrganisms a skos:Concept ;
     skos:altLabel "soil organism"@en ;
     skos:broader eusoilvoc:SoilSubstance ;
     skos:broaderTransitive eusoilvoc:SoilSubstance ;
-    skos:closeMatch nalt:278109 ;
+    skos:closeMatch gemet:7876,
+        nalt:278109 ;
     skos:exactMatch agrovoc:c_33552,
         she:SoilOrganisms ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -21961,7 +22232,8 @@ eusoilvoc:Micronutrients a skos:Concept ;
         eusoilvoc:SoilNutrients,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilSubstance ;
-    skos:closeMatch agrovoc:c_7834 ;
+    skos:closeMatch agrovoc:c_7834,
+        inrae:c_6692 ;
     skos:exactMatch she:Micronutrients ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:Boron,
@@ -22683,6 +22955,7 @@ eusoilvoc:SoilMoistureContents a skos:Concept,
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilWaterPhysicalProperties ;
+    skos:closeMatch inrae:c_16362 ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "The amount of water removed from soil by heating at 105°C to constant weight, expressed as a fraction or percentage on a mass or volume basis. On a gravimetric basis it equals the difference between wet and dry soil mass divided by dry soil mass."@en ],
         [ dcterms:source agrovoc:c_7208 ;
@@ -22729,7 +23002,8 @@ eusoilvoc:SoilPollutants a skos:Concept ;
     skos:broader eusoilvoc:SoilPollution ;
     skos:broaderTransitive eusoilvoc:SoilPollution,
         eusoilvoc:SoilThreats ;
-    skos:closeMatch nalt:961 ;
+    skos:closeMatch gemet:7878,
+        nalt:961 ;
     skos:definition [ dcterms:source agrovoc:c_e9c250f9 ;
             rdf:value "Organic or inorganic pollutants and impurities in the soil."@en ] ;
     skos:exactMatch agrovoc:c_e9c250f9,
@@ -22899,6 +23173,7 @@ eusoilvoc:SoilNutrients a skos:Concept ;
         eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilSubstance ;
+    skos:closeMatch inrae:c_941 ;
     skos:exactMatch spp:SoilNutrient,
         nalt:38806,
         she:SoilNutrients ;
@@ -23973,6 +24248,9 @@ eusoilvoc:SoilStructureIndex a skos:Concept ;
 
 eusoilvoc:SoilFunctions a skos:Concept ;
     skos:altLabel "soil function"@en ;
+    skos:closeMatch gemet:3524,
+        iso11074:3.453,
+        nalt:335251 ;
     skos:definition [ dcterms:source agrovoc:c_e5629cbd ;
             rdf:value "Performance and tasks of soils, determining their ecological and economical value, e.g., biomass production, water filtration and storage, nutrient storage and recycling, habitat for organisms, and carbon storage."@en ],
         [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
@@ -24783,6 +25061,7 @@ eusoilvoc:SoilChemicalProperties a skos:Concept ;
     skos:broader eusoilvoc:SoilChemicophysicalProperties ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilProperties ;
+    skos:closeMatch inrae:c_13418 ;
     skos:definition [ dcterms:source <https://soilhealthnexus.org/resources/soil-properties/soil-chemical-properties/> ;
             rdf:value "Chemical properties of soils include the following aspects: inorganic matters of soil, organic matters in soil, colloidal properties of soil particles and soil reactions and buffering action in acidic soils and basic soils."@en ],
         [ dcterms:source <https://www.sciencedirect.com/topics/earth-and-planetary-sciences/soil-chemical-property> ;
@@ -25382,6 +25661,7 @@ eusoilvoc:SoilPhysicalProcesses a skos:Concept ;
 
 eusoilvoc:SoilProcesses a skos:Concept ;
     skos:altLabel "soil process"@en ;
+    skos:closeMatch gemet:7881 ;
     skos:exactMatch spp:SoilProcess,
         iso11074:3.464,
         she:SoilProcesses ;
@@ -25589,6 +25869,8 @@ eusoilvoc:SoilTypes a skos:Concept,
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties ;
+    skos:closeMatch inrae:c_11511,
+        gemet:7899 ;
     skos:definition [ dcterms:source glosis_pr:soilTypeProperty ;
             rdf:value "The Soil Type categorizes soils based on their physical, chemical, and mineralogical characteristics, as well as their formation processes. It identifies specific soil types, such as sandy, loamy, or clayey soils, or more detailed classifications like Mollisols, Alfisols, or Vertisols, depending on the classification system used (e.g., USDA Soil Taxonomy or FAO WRB). Understanding soil type is essential for predicting soil behavior, determining suitable land uses, and managing resources effectively. Source: USDA-NRCS (1999). Soil Taxonomy: A Basic System of Soil Classification for Making and Interpreting Soil Surveys; FAO (2015). World Reference Base for Soil Resources."@en ] ;
     skos:exactMatch agrovoc:c_7204,
@@ -26937,6 +27219,7 @@ eusoilvoc:SoilChemicophysicalProperties a skos:Concept ;
 
 eusoilvoc:SoilProperties a skos:Concept ;
     skos:altLabel "soil property"@en ;
+    skos:closeMatch inrae:c_11270 ;
     skos:definition [ dcterms:source agrovoc:c_330883 ;
             rdf:value "Chemical, physical, or biological characteristics of soil which can indicate its level of function of ecosystem services. Properties can be dynamic or inherent characteristics."@en ] ;
     skos:exactMatch agrovoc:c_330883,

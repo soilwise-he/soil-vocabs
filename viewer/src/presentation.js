@@ -1,7 +1,19 @@
-import { NS } from './vocabulary.js'
+import { NS, safeExternalUrl } from './vocabulary.js'
 
 const mappings = new Set(['exactMatch', 'closeMatch', 'broadMatch', 'narrowMatch', 'relatedMatch', 'mappingRelation'].map(name => NS.skos + name))
 const annotations = new Set(['altLabel', 'hiddenLabel', 'notation', 'note', 'scopeNote', 'historyNote', 'editorialNote', 'changeNote', 'example'].map(name => NS.skos + name))
+
+export function externalHref(uri) {
+  if (!safeExternalUrl(uri)) return null
+  let url
+  try { url = new URL(uri) } catch { return null }
+  const conceptId = url.pathname.match(/^\/aos\/agrovoc\/(c_[A-Za-z0-9_-]+)$/)?.[1]
+  // Browser destinations are separate from the canonical RDF identifiers.
+  if (url.hostname === 'aims.fao.org' && !url.port && !url.username && !url.password && !url.search && !url.hash && conceptId) {
+    return `https://agrovoc.fao.org/browse/agrovoc/en/page/${conceptId}`
+  }
+  return uri
+}
 
 export function displayValues(values) {
   // Only unordered concept links are sorted; literals and RDF list nodes retain their order.

@@ -3,7 +3,7 @@ import { computed, useId } from 'vue'
 import { ArrowUpRight } from '@lucide/vue'
 import PropertyHeading from './PropertyHeading.vue'
 import TermValue from './TermValue.vue'
-import { safeExternalUrl } from '../vocabulary.js'
+import { externalHref } from '../presentation.js'
 import { mappingSources } from '../mapping-sources.js'
 
 const props = defineProps({ group: Object, model: Object })
@@ -21,7 +21,7 @@ const rows = computed(() => props.group.values.map(value => ({ value, sources: m
         <tr v-for="({ value, sources }, index) in rows" :key="index" role="row">
           <td class="mapping-target" role="cell">
             <span class="mapping-mobile-label" aria-hidden="true">Concept URI</span>
-            <a v-if="value.kind === 'resource' && safeExternalUrl(value.uri)" :href="value.uri" target="_blank" rel="noopener noreferrer">{{ value.uri }}<ArrowUpRight :size="13" aria-label="External resource" /></a>
+            <a v-if="value.kind === 'resource' && externalHref(value.uri)" :href="externalHref(value.uri)" target="_blank" rel="noopener noreferrer">{{ value.uri }}<ArrowUpRight :size="13" aria-label="External resource" /></a>
             <TermValue v-else :value="value" :model="model" show-uri @navigate="emit('navigate', $event)" />
           </td>
           <td class="mapping-source" role="cell">

@@ -1,10 +1,16 @@
 @prefix agrontology: <http://aims.fao.org/aos/agrontology#> .
+@prefix bao: <http://www.bioassayontology.org/bao#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eusoilvoc: <https://w3id.org/eusoilvoc#> .
+@prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
 
 skos:Concept a rdfs:Class ;
 	rdfs:label "Concept"@en .
@@ -123,3 +129,136 @@ sosa:hasProcedure a rdf:Property ;
 sosa:isProcedureFor a rdf:Property ;
 	rdfs:label "is procedure for"@en .
 
+# BAO does not declare this pair owl:inverseOf in its property module.
+# The SML vocabulary explicitly stores and validates both directions.
+bao:BAO_0095002 a rdf:Property, owl:ObjectProperty ;
+    rdfs:label "has indicator"@en ;
+    rdfs:isDefinedBy <http://www.bioassayontology.org/bao/bao_vocabulary_properties.owl> .
+
+bao:BAO_0002586 a rdf:Property, owl:ObjectProperty ;
+    rdfs:label "is indicator of"@en ;
+    rdfs:isDefinedBy <http://www.bioassayontology.org/bao/bao_vocabulary_properties.owl> .
+
+qudt:hasUnit a rdf:Property, owl:ObjectProperty ;
+    rdfs:label "has unit"@en ;
+    rdfs:range qudt:Unit ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> .
+
+qudt:hasFactorUnit a rdf:Property, owl:ObjectProperty ;
+    rdfs:label "has factor unit"@en ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> .
+
+qudt:exponent a rdf:Property, owl:AnnotationProperty ;
+    rdfs:label "exponent"@en ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> .
+
+qudt:symbol a rdf:Property, owl:AnnotationProperty ;
+    rdfs:label "symbol"@en ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> .
+
+qudt:ucumCode a rdf:Property, owl:DatatypeProperty ;
+    rdfs:label "UCUM code"@en ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> .
+
+qudt:Unit a rdfs:Class, owl:Class ;
+    rdfs:label "Unit"@en ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> .
+
+qudt:DerivedUnit a rdfs:Class, owl:Class ;
+    rdfs:label "Derived unit"@en ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> .
+
+qudt:FactorUnit a rdfs:Class, owl:Class ;
+    rdfs:label "Factor unit"@en ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt> .
+
+eusoilvoc:SquareKilometrePerYear a qudt:Unit, qudt:DerivedUnit ;
+    rdfs:label "square kilometre per year"@en ;
+    qudt:symbol "km2/a" ;
+    qudt:ucumCode "km2.a-1" ;
+    qudt:hasFactorUnit [ a qudt:FactorUnit ;
+            qudt:hasUnit unit:KiloM2 ;
+            qudt:exponent 1 ],
+        [ a qudt:FactorUnit ;
+            qudt:hasUnit unit:YR ;
+            qudt:exponent -1 ] .
+
+om:centimetrePerDay a qudt:Unit ;
+    rdfs:label "centimetre per day"@en ;
+    qudt:symbol "cm/d" ;
+    rdfs:isDefinedBy <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+
+unit:CentiM a qudt:Unit ;
+    rdfs:label "Centimetre"@en ;
+    qudt:symbol "cm" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit/CentiM> .
+
+unit:DAY a qudt:Unit ;
+    rdfs:label "Day"@en ;
+    qudt:symbol "d" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit/DAY> .
+
+unit:DeciS-PER-M a qudt:Unit ;
+    rdfs:label "Decisiemens per Metre"@en ;
+    qudt:symbol "dS/m" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit/DeciS-PER-M> .
+
+unit:GM-PER-CentiM3 a qudt:Unit ;
+    rdfs:label "Gram per Cubic Centimetre"@en ;
+    qudt:symbol "g/cm\u00B3" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit/GM-PER-CentiM3> .
+
+unit:GM-PER-KiloGM a qudt:Unit ;
+    rdfs:label "Gram per Kilogram"@en ;
+    qudt:symbol "g/kg" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit/GM-PER-KiloGM> .
+
+unit:KiloM2 a qudt:Unit ;
+    rdfs:label "Square Kilometre"@en ;
+    qudt:symbol "km\u00B2" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit/KiloM2> .
+
+unit:MilliGM-PER-GM a qudt:Unit ;
+    rdfs:label "Milligram per Gram"@en ;
+    qudt:symbol "mg/g" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit/MilliGM-PER-GM> .
+
+unit:MilliGM-PER-KiloGM a qudt:Unit ;
+    rdfs:label "Milligram per Kilogram"@en ;
+    qudt:symbol "mg/kg" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> .
+
+unit:PERCENT a qudt:Unit ;
+    rdfs:label "Percent"@en ;
+    qudt:symbol "%" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit/PERCENT> .
+
+unit:PERCENT-PER-YR a qudt:Unit ;
+    rdfs:label "Percent per Year"@en ;
+    qudt:symbol "%/a" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit/PERCENT-PER-YR> .
+
+unit:PH a qudt:Unit ;
+    rdfs:label "Acidity"@en ;
+    qudt:symbol "pH" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit/PH> .
+
+unit:TONNE-PER-HA a qudt:Unit ;
+    rdfs:label "Tonne per Hectare"@en ;
+    qudt:symbol "t/ha" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit/TONNE-PER-HA> .
+
+unit:TONNE-PER-HA-YR a qudt:Unit ;
+    rdfs:label "Tonne per Hectare Year"@en ;
+    qudt:symbol "t/(ha\u00B7a)" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit/TONNE-PER-HA-YR> .
+
+unit:UNITLESS a qudt:Unit ;
+    rdfs:label "Unitless"@en ;
+    qudt:symbol "\u4E00" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit/UNITLESS> .
+
+unit:YR a qudt:Unit ;
+    rdfs:label "Year"@en ;
+    qudt:symbol "a" ;
+    rdfs:isDefinedBy <http://qudt.org/vocab/unit/YR> .
