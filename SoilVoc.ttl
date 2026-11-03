@@ -4658,7 +4658,8 @@ eusoilvoc:SoilHardsetting a skos:Concept ;
 eusoilvoc:SoilHealth a skos:Concept ;
     skos:closeMatch agrovoc:c_a9645d28,
         nalt:35826 ;
-    skos:definition "Soil health is the level to which soil functions are fulfilled."@en ;
+    skos:definition [ dcterms:source <https://doi.org/10.2800/956606> ;
+            rdf:value "Soil health is the level to which soil functions are fulfilled."@en ] ;
     skos:exactMatch inrae:c_2d69fde2,
         she:SoilHealth ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;

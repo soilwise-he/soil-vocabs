@@ -7,6 +7,7 @@ const publicDir = new URL('../public/', import.meta.url)
 await mkdir(new URL('data/', publicDir), { recursive: true })
 const bytes = await readFile(source)
 await copyFile(source, new URL('data/SoilVoc.ttl', publicDir))
+await copyFile(new URL('../data/close-matches.json', import.meta.url), new URL('data/close-matches.json', publicDir))
 await copyFile(new URL('../data/workflow.png', import.meta.url), new URL('workflow.png', publicDir))
 await mkdir(new URL('font-licenses/', publicDir), { recursive: true })
 for (const file of ['PublicSans-OFL.txt', 'EBGaramond-OFL.txt']) {

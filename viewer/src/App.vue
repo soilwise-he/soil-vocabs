@@ -8,12 +8,21 @@ import DownloadMenu from './components/DownloadMenu.vue'
 import HighlightedText from './components/HighlightedText.vue'
 import PropertyHeading from './components/PropertyHeading.vue'
 import MappingSection from './components/MappingSection.vue'
+import { createCloseMatchLoader } from './close-matches.js'
 import { createVocabulary, NS, TYPE, CONCEPT, PROCEDURE, PROPERTY, pathKey, compact } from './vocabulary.js'
 import { conceptHref, followLink, parseRoute } from './navigation.js'
 import { detailSections, displayValues } from './presentation.js'
 
 const baseUrl = import.meta.env.BASE_URL
 const model = shallowRef(null), manifest = ref(null), error = ref(''), loading = ref(true)
+const previews = shallowRef({ status: 'idle', records: new Map() })
+const fetchPreviews = createCloseMatchLoader(baseUrl + 'data/close-matches.json')
+async function loadPreviews() {
+  if (previews.value.status === 'loading' || previews.value.status === 'ready') return
+  previews.value = { status: 'loading', records: new Map() }
+  try { previews.value = { status: 'ready', records: await fetchPreviews() } }
+  catch { previews.value = { status: 'error', records: new Map() } }
+}
 const route = ref(parseRoute('', NS.eusoilvoc))
 const query = ref(''), typeFilter = ref(''), sidebarTab = ref('hierarchy'), letter = ref('All'), alphabetLimit = ref(100)
 const expanded = ref(new Set()), selectedPath = ref([]), mobileSidebar = ref(false)
@@ -31,6 +40,9 @@ const types = computed(() => [PROPERTY, PROCEDURE, CONCEPT].map(uri => ({ uri, l
 const alphabet = computed(() => (model.value?.sortedConcepts || []).filter(c => letter.value === 'All' || (letter.value === '#' ? !/^[a-z]/i.test(c.label) : c.label.toUpperCase().startsWith(letter.value))))
 const groups = computed(() => model.value && selected.value ? model.value.propertiesFor(selected.value.uri) : [])
 const sections = computed(() => detailSections(groups.value))
+watch(groups, values => {
+  if (values.some(group => group.predicate === NS.skos + 'closeMatch')) loadPreviews()
+})
 const crumbs = computed(() => selectedPath.value.slice(0, -1))
 const hierarchyPaths = computed(() => selected.value ? model.value.pathsTo(selected.value.uri) : [])
 const advancedTypes = computed(() => selected.value?.types.filter(uri => uri !== CONCEPT) || [])
@@ -336,7 +348,7 @@ onBeforeUnmount(() => {
                   <div v-for="(definition, i) in selected.definitions" :key="i" class="definition-entry"><p class="definition-text">{{ definition.text }}</p><div v-for="(source, j) in definition.sources" :key="j" class="definition-source"><span>Source:</span><TermValue :value="model.describe(source)" :model="model" show-uri @navigate="navigate" /></div><small v-if="definition.language && definition.language !== 'en'" class="language-tag">{{ definition.language }}</small></div>
                 </section>
                 <template v-for="section in sections" :key="section.id">
-                  <template v-if="section.id === 'mappings'"><MappingSection v-for="group in section.groups" :key="group.predicate" :group="group" :model="model" @navigate="navigate" /></template>
+                  <template v-if="section.id === 'mappings'"><MappingSection v-for="group in section.groups" :key="group.predicate" :group="group" :model="model" :previews="previews" @navigate="navigate" @retry-previews="loadPreviews" /></template>
                   <section v-else v-for="group in section.groups" :key="group.predicate" class="property-row" :data-predicate="group.predicate" :aria-label="group.label">
                     <PropertyHeading :label="group.label" :predicate="group.predicate" :description="model.propertyTooltip(group.predicate)" />
                     <ul class="values-list"><li v-for="(value, i) in displayValues(group.values)" :key="i"><TermValue :model="model" :value="value" @navigate="navigate" /></li></ul>

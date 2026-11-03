@@ -4938,7 +4938,8 @@ eusoilvoc:SoilHealth a skos:Concept ;
             rdf:value "Soil health is defined as the actual capacity of a soil to perform its core functions and to provide ecosystem services."@en ],
         [ dcterms:source she:SoilHealth ;
             rdf:value "The definition of soil quality and soil health is the capacity of a soil to function within ecosystems and land-use boundaries to sustain biological productivity, maintain environmental quality, and promote plant and animal health."@en ],
-        "Soil health is the level to which soil functions are fulfilled."@en ;
+        [ dcterms:source <https://doi.org/10.2800/956606> ;
+            rdf:value "Soil health is the level to which soil functions are fulfilled."@en ] ;
     skos:exactMatch inrae:c_2d69fde2,
         she:SoilHealth ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;

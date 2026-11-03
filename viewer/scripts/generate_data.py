@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 from rdflib import Graph, Namespace, RDF, URIRef
 
@@ -78,6 +79,25 @@ def generate_data(source: Path, output: Path, ontology: Path) -> tuple[int, int,
     return rewritten, hierarchy, closure, ontology_triples
 
 
+def generate_with_close_matches(source: Path, output: Path, ontology: Path) -> tuple[int, int, int, int]:
+    from generate_close_matches import generate as generate_previews
+
+    previews = output.with_name("close-matches.json")
+    inputs = {source.resolve(), ontology.resolve()}
+    if output.resolve() == previews.resolve() or inputs.intersection({output.resolve(), previews.resolve()}):
+        raise ValueError("Generated outputs must be separate from each other and the input files")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    # Finish RDF generation and all external requests before replacing either file.
+    with TemporaryDirectory(dir=output.parent, prefix=".viewer-data-") as directory:
+        staged_rdf = Path(directory) / output.name
+        staged_previews = Path(directory) / previews.name
+        counts = generate_data(source, staged_rdf, ontology)
+        generate_previews(staged_rdf, staged_previews)
+        staged_rdf.replace(output)
+        staged_previews.replace(previews)
+    return counts
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Generate viewer/data/SoilVoc.ttl from SoilVoc_augmented.ttl."
@@ -85,13 +105,20 @@ def main() -> None:
     parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE, help="Source vocabulary Turtle file.")
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT, help="Generated viewer Turtle file.")
     parser.add_argument("--ontology", type=Path, default=DEFAULT_ONTOLOGY, help="Display ontology Turtle file to embed.")
+    parser.add_argument(
+        "--with-close-matches", action="store_true",
+        help="Also refresh close-matches.json beside the RDF output (requires network access).",
+    )
     args = parser.parse_args()
-    rewritten, hierarchy, closure, ontology = generate_data(args.source, args.output, args.ontology)
+    generate = generate_with_close_matches if args.with_close_matches else generate_data
+    rewritten, hierarchy, closure, ontology = generate(args.source, args.output, args.ontology)
     print(
         f"Wrote {args.output}: {rewritten} legacy definition text rewrites, "
         f"{hierarchy} display hierarchy triples, {closure} SKOS closure triples, "
         f"and {ontology} ontology triples."
     )
+    if args.with_close_matches:
+        print(f"Refreshed external previews: {args.output.with_name('close-matches.json')}")
 
 
 if __name__ == "__main__":

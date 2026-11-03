@@ -27,7 +27,8 @@ eusoilvoc:SoilFunctions a skos:Concept ;
     skos:prefLabel "soil functions"@en .
 
 eusoilvoc:SoilHealth a skos:Concept ;
-    skos:definition "Soil health is the level to which soil functions are fulfilled."@en ;
+    skos:definition [ dcterms:source <https://doi.org/10.2800/956606> ;
+            rdf:value "Soil health is the level to which soil functions are fulfilled."@en ] ;
     skos:prefLabel "soil health"@en .
 
 eusoilvoc:SoilIndicators a skos:Concept ;

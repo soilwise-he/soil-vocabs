@@ -62,6 +62,7 @@ The files have separate roles; paths below are relative to the repository root:
 | `viewer/data/ontology.ttl` | Display ontology labels and class/property declarations embedded by the generator |
 | `viewer/data/SoilVoc.ttl` | Committed display snapshot read by the browser |
 | `viewer/data/workflow.png` | Shared workflow image for the viewer and repository documentation |
+| `viewer/data/close-matches.json` | Separate external-concept previews, never merged into SoilVoc RDF |
 
 After updating `SoilVoc_augmented.ttl`, regenerate the display snapshot from
 the repository root. This step requires Python and RDFLib; install RDFLib first
@@ -70,6 +71,21 @@ with `python -m pip install rdflib` if it is not already available:
 ```powershell
 python viewer/scripts/generate_data.py
 ```
+
+To regenerate the viewer RDF **and** refresh its separate close-match previews
+in one command, use:
+
+```powershell
+python viewer/scripts/generate_data.py --with-close-matches
+```
+
+This option requires network access and prepares both files before replacing
+either. If RDF parsing or external retrieval fails, both previous outputs remain
+unchanged. The cache checksum refers to the newly generated RDF. With `--output`,
+`close-matches.json` is written beside that custom RDF output.
+Without the flag, generation remains offline and leaves the preview cache alone.
+Refresh previews when close-match targets change or when you want newer source
+descriptions; changing only SoilVoc's own labels or definitions does not require it.
 
 The generator embeds `viewer/data/ontology.ttl`, preserves sourced definitions,
 and retains the existing display hierarchy projection and SKOS closure. It does
@@ -81,7 +97,8 @@ RDFLib is also listed in the root `requirements.txt`. The generator does not
 run the curation notebook, regenerate the canonical vocabulary or CSV, or
 reload any reference deployment.
 
-Review and commit the updated snapshot, along with any intended ontology or
+Review and commit the updated snapshot and refreshed `close-matches.json` (when
+using the combined command), along with any intended ontology or
 image changes. A push to `main` publishes the new viewer data. Changing only
 `SoilVoc_augmented.ttl` can trigger a build but does not regenerate the browser
 snapshot. Never edit generated `public/data/` copies instead of the committed
@@ -90,6 +107,48 @@ input.
 The ignored `skosmos/` folder is only a local reference deployment; changes there
 no longer update the public viewer. It is absent from fresh clones, as are the
 local-only `cloudflare/` bundle and `viewer/test/` files.
+
+### Close-Match Previews
+
+The Close matches section displays original source preferred labels and expandable
+definitions. These describe the **external concepts**, not the SoilVoc concept.
+They never enter SoilVoc's definitions, search, hierarchy, statistics, or RDF exports.
+Exact matches and other mapping sections are unchanged.
+
+`data/close-matches.json` is a committed, display-only cache keyed by the exact
+external URI. The browser lazily loads this same-site file once when a concept has
+close matches; it does not contact external APIs. A failed load leaves the mapping
+links usable and offers Retry. An uncached new mapping is distinguished from a
+retrieved source record with no definition.
+
+The combined command above updates both files after vocabulary edits. To refresh
+only the cache against the existing viewer RDF, without regenerating that RDF:
+
+```powershell
+python viewer/scripts/generate_close_matches.py
+npm --prefix viewer run build
+```
+
+The refresh reads `viewer/data/SoilVoc.ttl` and queries AGROVOC SPARQL, NALT and
+INRAE Skosmos APIs, ISO 11074 RDF records, and the latest GEMET submission in
+AgroPortal SPARQL. SHKG records come from the unchanged original
+`ontovocabs/shkg/soil_health_KG.ttl`. The mapped legacy GLOSIS codelist URIs use the
+official historical revision pinned in the script; they are not substituted with
+GLOSIS v2 identifiers. Requests are bounded and retried; a retrieval/parsing failure
+or unsupported source stops the refresh without replacing the previous cache.
+Only the small extracted records are saved, not complete external vocabularies.
+
+The cache retains literal text, language tags, definition-specific citations, and
+retrieval provenance (including GEMET submission and local snapshot checksum).
+The English interface prefers English labels and definitions; when none exist it
+shows untagged or original-language text without translating it. Untagged definition
+text is marked as such. Missing definitions are not invented. Concept-level SHKG
+bibliographies are not attributed to individual definitions without evidence.
+
+Regeneration is explicit, not part of ordinary builds or GitHub Actions. Review
+and commit the JSON alongside intended viewer changes to publish previews. The
+cache is optional at runtime: later RDF updates still work before refreshing it,
+but newly mapped targets will show that a preview has not yet been cached.
 
 ## Implemented Features
 
@@ -106,6 +165,8 @@ local-only `cloudflare/` bundle and `viewer/test/` files.
 - Concept pages with each blank-node definition paired with its own sources.
 - Bottom-of-page mapping sections pairing complete concept URIs with source
   vocabulary URIs, using explicit RDF metadata or known-namespace display lookups.
+- Original close-match labels and expandable sourced definitions from a separate
+  static cache, clearly distinguished from SoilVoc definitions.
 - Semantic relationships, mappings, labels, notes, arbitrary RDF properties,
   nested blank nodes, and an ontology browser limited to declared classes and
   properties actually used in the loaded vocabulary. Usage includes concepts,
@@ -179,7 +240,9 @@ benchmark or architecture decision for very large vocabularies.
 - `src/App.vue`: routes, browsing and details using jskos-vue components.
 - `scripts/prepare.mjs`: copy the source/image and calculate its checksum.
 - `scripts/generate_data.py`: regenerate the display snapshot from the augmented vocabulary.
-- `data/`: committed viewer snapshot, display ontology, and workflow image.
+- `scripts/generate_close_matches.py`: refresh the separate external-concept cache.
+- `src/close-matches.js`: isolated preview loader and language selection.
+- `data/`: committed viewer snapshot, display ontology, workflow image, and external previews.
 - `test/` (optional, untracked): local source-consistency and viewer regression tests.
 
 The viewer does not change RDF source files or the Skosmos deployment. The
