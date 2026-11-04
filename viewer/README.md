@@ -163,6 +163,11 @@ but newly mapped targets will show that a preview has not yet been cached.
   notations, internal `*` wildcards, autocomplete with highlighted matching
   synonyms, type filters, and URL-backed paginated results.
 - Concept pages with each blank-node definition paired with its own sources.
+  Embedded HTML in source definitions (such as ISO 11074 term-reference markup)
+  is displayed as readable plain text, preserving reference wording and numbers.
+  This also applies to search snippets and close-match previews. Source markup
+  is never inserted into the page; original literals, citations, and RDF exports
+  remain unchanged.
 - Bottom-of-page mapping sections pairing complete concept URIs with source
   vocabulary URIs, using explicit RDF metadata or known-namespace display lookups.
 - Original close-match labels and expandable sourced definitions from a separate

@@ -12,6 +12,7 @@ import { createCloseMatchLoader } from './close-matches.js'
 import { createVocabulary, NS, TYPE, CONCEPT, PROCEDURE, PROPERTY, pathKey, compact } from './vocabulary.js'
 import { conceptHref, followLink, parseRoute } from './navigation.js'
 import { detailSections, displayValues } from './presentation.js'
+import { definitionText } from './definition-text.js'
 
 const baseUrl = import.meta.env.BASE_URL
 const model = shallowRef(null), manifest = ref(null), error = ref(''), loading = ref(true)
@@ -166,7 +167,7 @@ async function treeKey(event) {
   focusTreeItem(target)
 }
 function typeCaption(concept) { return concept.types.filter(uri => uri !== CONCEPT).map(uri => model.value.label(uri)).join(', ') || 'Concept' }
-function snippet(concept) { const text = concept.definitions[0]?.text || ''; return text.length > 220 ? text.slice(0, 220) + '...' : text }
+function snippet(concept) { const text = definitionText(concept.definitions[0]?.text || ''); return text.length > 220 ? text.slice(0, 220) + '...' : text }
 function navParents(uri) { return model.value.sort(model.value.parents.get(uri) || []) }
 function typeSearch(uri) { go({ q: '', type: uri }) }
 function resetQuery() { query.value = ''; suggestionIndex.value = -1; searchInput.value?.focus() }
@@ -345,7 +346,7 @@ onBeforeUnmount(() => {
               <div v-else class="concept-sections">
                 <section v-if="selected.definitions.length" class="detail-section definitions-section" aria-label="Definitions">
                   <PropertyHeading label="Definitions" :predicate="NS.skos + 'definition'" :description="model.propertyTooltip(NS.skos + 'definition')" />
-                  <div v-for="(definition, i) in selected.definitions" :key="i" class="definition-entry"><p class="definition-text">{{ definition.text }}</p><div v-for="(source, j) in definition.sources" :key="j" class="definition-source"><span>Source:</span><TermValue :value="model.describe(source)" :model="model" show-uri @navigate="navigate" /></div><small v-if="definition.language && definition.language !== 'en'" class="language-tag">{{ definition.language }}</small></div>
+                  <div v-for="(definition, i) in selected.definitions" :key="i" class="definition-entry"><p class="definition-text">{{ definitionText(definition.text) }}</p><div v-for="(source, j) in definition.sources" :key="j" class="definition-source"><span>Source:</span><TermValue :value="model.describe(source)" :model="model" show-uri @navigate="navigate" /></div><small v-if="definition.language && definition.language !== 'en'" class="language-tag">{{ definition.language }}</small></div>
                 </section>
                 <template v-for="section in sections" :key="section.id">
                   <template v-if="section.id === 'mappings'"><MappingSection v-for="group in section.groups" :key="group.predicate" :group="group" :model="model" :previews="previews" @navigate="navigate" @retry-previews="loadPreviews" /></template>
