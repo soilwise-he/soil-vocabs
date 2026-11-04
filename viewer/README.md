@@ -131,8 +131,15 @@ npm --prefix viewer run build
 
 The refresh reads `viewer/data/SoilVoc.ttl` and queries AGROVOC SPARQL, NALT and
 INRAE Skosmos APIs, ISO 11074 RDF records, and the latest GEMET submission in
-AgroPortal SPARQL. SHKG records come from the unchanged original
-`ontovocabs/shkg/soil_health_KG.ttl`. The mapped legacy GLOSIS codelist URIs use the
+AgroPortal SPARQL. SHKG and BENCHMARKS use local source snapshots:
+`ontovocabs/shkg/soil_health_KG.ttl` and `ontovocabs/shb/soil_health_benchmarks.ttl`.
+For matching, the notebook reads concept URIs and preferred/alternative labels from
+`ontovocabs/shb/soil_health_benchmarks.csv`, just like the other sources.
+Its exact-match enrichment cell adds English definitions to `SoilVoc_augmented.ttl`;
+close matches only supply viewer previews. Both definition paths read the Turtle file,
+including standard SKOS definitions
+and the glossary's policy and scientific definitions, citing the BENCHMARKS concept URI.
+The mapped legacy GLOSIS codelist URIs use the
 official historical revision pinned in the script; they are not substituted with
 GLOSIS v2 identifiers. Requests are bounded and retried; a retrieval/parsing failure
 or unsupported source stops the refresh without replacing the previous cache.

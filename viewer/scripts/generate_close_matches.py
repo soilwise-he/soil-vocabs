@@ -26,6 +26,14 @@ SOURCES = {
     "iso11074": {"prefix": "https://data.geoscience.earth/ncl/ISO11074v2025/"},
     "gemet": {"prefix": "http://www.eionet.europa.eu/gemet/concept/", "endpoint": "https://sparql.agroportal.eu/sparql"},
     "shkg": {"prefix": "https://soilwise-he.github.io/soil-health#", "path": "ontovocabs/shkg/soil_health_KG.ttl"},
+    "benchmarks": {
+        "prefix": "https://soilhealthbenchmarks.eu/glossary/",
+        "path": "ontovocabs/shb/soil_health_benchmarks.ttl",
+        "definition_predicates": (
+            SKOS.definition, URIRef("https://soilwise-he.github.io/soil-health#policyDefinition"),
+            URIRef("https://soilwise-he.github.io/soil-health#scientificDefinition"),
+        ),
+    },
     # These mapped identifiers predate GLOSIS v2. Keep the exact original records.
     "glosis": {
         "prefix": "http://w3id.org/glosis/model/codelists/",
@@ -76,7 +84,8 @@ def extract_record(graph, uri, source, provenance):
     if not labels:
         raise ValueError(f"No original preferred label found: {uri}")
     definitions = []
-    for node in graph.objects(uri, SKOS.definition):
+    predicates = SOURCES.get(source, {}).get("definition_predicates", (SKOS.definition,))
+    for node in {node for predicate in predicates for node in graph.objects(uri, predicate)}:
         citations = {uri}
         if isinstance(node, Literal):
             texts = [node]
@@ -156,7 +165,7 @@ def fetch_source(source, targets):
         return fetch_batch(source, targets)
     config = SOURCES[source]
     shared_graph = None
-    if source == "shkg":
+    if "path" in config:
         payload = (ROOT / config["path"]).read_bytes()
         shared_graph = Graph().parse(data=payload, format="turtle")
         provenance = {"file": config["path"], "sha256": sha256(payload).hexdigest()}

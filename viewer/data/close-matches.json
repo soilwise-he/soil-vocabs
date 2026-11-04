@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "retrievedAt": "2026-11-03T15:59:53.999326+00:00",
-  "vocabularySha256": "a4f5f794954915cdfef3fa5ab22f2cc3bc23690dda7e9b2133d94fafa7645ae8",
+  "retrievedAt": "2026-11-04T14:45:50.012212+00:00",
+  "vocabularySha256": "ffa36772a9908ed32ec9a57c42623636e56cce3f07295f1ca243a13102c22f0f",
   "records": {
     "http://aims.fao.org/aos/agrovoc/c_101": {
       "source": "agrovoc",
@@ -14579,6 +14579,30 @@
       ],
       "provenance": {
         "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
+      }
+    },
+    "https://soilhealthbenchmarks.eu/glossary/soil-threat": {
+      "source": "benchmarks",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "soil threat"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "en",
+          "sources": [
+            {
+              "uri": "https://soilhealthbenchmarks.eu/glossary/soil-threat"
+            }
+          ],
+          "text": "Soil threats are processes that could degrade (some of) the functions of soils and the services that soils provide. Examples of soil threats are: acidification, compaction, contamination (pollution), decline in soil organic matter, decline in soil biodiversity, desertification, erosion, flooding and water logging, landslides, salinization."
+        }
+      ],
+      "provenance": {
+        "file": "ontovocabs/shb/soil_health_benchmarks.ttl",
+        "sha256": "8d015a8091b899ed4c9270eac59adcc05adbda4bdc8a97aa7e4bcc4a96b5fcc8"
       }
     },
     "https://soilwise-he.github.io/soil-health#AlluvialDeposits": {

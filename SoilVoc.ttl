@@ -1,4 +1,5 @@
 @prefix agrovoc: <http://aims.fao.org/aos/agrovoc/> .
+@prefix benchmarks: <https://soilhealthbenchmarks.eu/glossary/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix eusoilvoc: <https://w3id.org/eusoilvoc#> .
 @prefix gemet: <http://www.eionet.europa.eu/gemet/concept/> .
@@ -4661,6 +4662,7 @@ eusoilvoc:SoilHealth a skos:Concept ;
     skos:definition [ dcterms:source <https://doi.org/10.2800/956606> ;
             rdf:value "Soil health is the level to which soil functions are fulfilled."@en ] ;
     skos:exactMatch inrae:c_2d69fde2,
+        benchmarks:4036,
         she:SoilHealth ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil health"@en ;
@@ -5339,6 +5341,7 @@ eusoilvoc:SoilQuality a skos:Concept ;
         gemet:7884,
         iso11074:3.466,
         nalt:35826,
+        benchmarks:soil-quality,
         she:SoilQuality ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil quality"@en .
@@ -5480,7 +5483,8 @@ eusoilvoc:SoilSecurity a skos:Concept ;
     skos:broader eusoilvoc:SoilProperties ;
     skos:definition [ dcterms:source agrovoc:c_f42c0d0e ;
             rdf:value "Soil security has been defined as the maintenance or improvement of the world’s soil resources so that they can provide sufficient food, fibre, and fresh water, contribute to energy sustainability and climate stability, maintain biodiversity, and deliver overall environmental protection and ecosystem services."@en ] ;
-    skos:exactMatch agrovoc:c_f42c0d0e ;
+    skos:exactMatch agrovoc:c_f42c0d0e,
+        benchmarks:soil-security ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil security"@en .
 
@@ -9273,7 +9277,8 @@ eusoilvoc:SoilProductivity a skos:Concept ;
     skos:closeMatch agrovoc:c_7170 ;
     skos:exactMatch spp:SoilProductivity,
         iso11074:3.465,
-        nalt:970 ;
+        nalt:970,
+        benchmarks:soil-productivity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil productivity"@en .
 
@@ -10871,6 +10876,7 @@ eusoilvoc:SoilNutrients a skos:Concept ;
     skos:closeMatch inrae:c_941 ;
     skos:exactMatch spp:SoilNutrient,
         nalt:38806,
+        benchmarks:soil-nutrients,
         she:SoilNutrients ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:Macronutrients,
@@ -10918,6 +10924,7 @@ eusoilvoc:SoilSealing a skos:Concept ;
     skos:closeMatch inrae:c_11338,
         nalt:5144 ;
     skos:exactMatch agrovoc:c_f9554e7c,
+        benchmarks:soil-sealing,
         she:SoilSealing ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilSealingConsistence,
@@ -11076,6 +11083,7 @@ eusoilvoc:EcosystemServices a skos:Concept ;
     skos:exactMatch agrovoc:c_1348040570280,
         gemet:15138,
         nalt:104863,
+        benchmarks:ecosystem-services,
         she:EcosystemServices ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:CulturalServices,
@@ -11111,7 +11119,8 @@ eusoilvoc:LandCover a skos:Concept ;
         spp:LandCover,
         inrae:c_0617cfcc,
         gemet:4612,
-        nalt:149093 ;
+        nalt:149093,
+        benchmarks:land-cover ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:Building,
         eusoilvoc:GroundCover,
@@ -11131,7 +11140,8 @@ eusoilvoc:LandUse a skos:Concept ;
         spp:LandUse,
         inrae:c_22741,
         gemet:4678,
-        nalt:1581 ;
+        nalt:1581,
+        benchmarks:land-use ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:LandUseBareCover,
         eusoilvoc:LandUseForests,
@@ -11593,6 +11603,7 @@ eusoilvoc:SoilStructure a skos:Concept ;
         gemet:7895,
         iso11074:3.475,
         nalt:63417,
+        benchmarks:soil-structure,
         she:SoilStructure ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilAggregate,
@@ -11684,7 +11695,8 @@ eusoilvoc:Soil a skos:Concept ;
         inrae:c_1524,
         gemet:7843,
         iso11074:3.448,
-        nalt:63334 ;
+        nalt:63334,
+        benchmarks:soil ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:FineSoil,
         eusoilvoc:Rhizosphere,
@@ -12214,6 +12226,7 @@ eusoilvoc:SoilProcesses a skos:Concept ;
     skos:closeMatch gemet:7881 ;
     skos:exactMatch spp:SoilProcess,
         iso11074:3.464,
+        benchmarks:soil-processes,
         she:SoilProcesses ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:LossesFromSoil,
@@ -12833,6 +12846,7 @@ eusoilvoc:SoilDegradation a skos:Concept ;
         inrae:c_960,
         gemet:7857,
         nalt:958,
+        benchmarks:soil-degradation,
         she:SoilDegradation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilBiologicalDegradation,
@@ -12874,6 +12888,7 @@ eusoilvoc:SoilErosion a skos:Concept ;
     skos:exactMatch spp:SoilErosion,
         inrae:c_1543,
         gemet:7858,
+        benchmarks:soil-erosion,
         she:SoilErosion ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:AcceleratedErosion,
@@ -12953,6 +12968,7 @@ eusoilvoc:SoilStructureIndirectIndex a skos:Concept ;
 
 eusoilvoc:SoilThreats a skos:Concept ;
     skos:altLabel "soil threat"@en ;
+    skos:closeMatch benchmarks:soil-threat ;
     skos:definition [ dcterms:source <https://soilhealthbenchmarks.eu/glossary/soil-threat/> ;
             rdf:value "Soil threats are processes that could degrade (some of) the functions of soils and the services that soils provide. Examples of soil threats are: acidification, compaction, contamination (pollution), decline in soil organic matter, decline in soil biodiversity, desertification, erosion, flooding and water logging, landslides, salinization."@en ] ;
     skos:exactMatch she:SoilThreats ;
@@ -13131,6 +13147,7 @@ eusoilvoc:SoilFunctions a skos:Concept ;
             rdf:value "Roles performed by soil, including sustaining biomass, providing habitat and biodiversity, cycling elements, moderating environmental quality, supporting engineering uses, and preserving records, landscapes, and cultural heritage."@en ] ;
     skos:exactMatch agrovoc:c_e5629cbd,
         spp:SoilFunction,
+        benchmarks:soil-functions,
         she:SoilFunctions ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:CarbonPools,
@@ -14359,6 +14376,7 @@ eusoilvoc:SoilProperties a skos:Concept ;
     skos:exactMatch agrovoc:c_330883,
         spp:SoilProperty,
         nalt:5084,
+        benchmarks:soil-properties,
         she:SoilProperties ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:EdaphicFactors,
@@ -14905,6 +14923,7 @@ eusoilvoc:SoilManagement a skos:Concept ;
         spp:SoilManagement,
         inrae:c_3542,
         nalt:21,
+        benchmarks:soil-management,
         she:SoilManagement ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:FertiliserUse,
@@ -15540,6 +15559,7 @@ eusoilvoc:SoilOrganicCarbon a skos:Concept,
         inrae:c_13665,
         glosis_cl:physioChemicalPropertyCode-Carorg,
         nalt:67854,
+        benchmarks:soil-organic-carbon-soc,
         she:SoilOrganicCarbon ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilCarbonDensity ;

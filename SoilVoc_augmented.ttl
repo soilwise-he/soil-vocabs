@@ -1,4 +1,5 @@
 @prefix agrovoc: <http://aims.fao.org/aos/agrovoc/> .
+@prefix benchmarks: <https://soilhealthbenchmarks.eu/glossary/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix eusoilvoc: <https://w3id.org/eusoilvoc#> .
 @prefix gemet: <http://www.eionet.europa.eu/gemet/concept/> .
@@ -4934,13 +4935,18 @@ eusoilvoc:SoilHardsetting a skos:Concept ;
 eusoilvoc:SoilHealth a skos:Concept ;
     skos:closeMatch agrovoc:c_a9645d28,
         nalt:35826 ;
-    skos:definition [ dcterms:source she:SoilHealth ;
+    skos:definition [ dcterms:source benchmarks:4036 ;
+            rdf:value "The physical, chemical and biological condition of the soil determining its capacity to function as a vital living system and to provide ecosystem services."@en ],
+        [ dcterms:source benchmarks:4036 ;
+            rdf:value "Soil health is the ability of a soil, at a specified point in time, to function as a vital living system, within natural or managed ecosystem boundaries and land-use boundaries, to sustain plant and animal productivity and health, maintain or enhance water and air quality and to further provide ecosystem services in the long-term without (increased) trade-offs between ecosystem services."@en ],
+        [ dcterms:source she:SoilHealth ;
             rdf:value "Soil health is defined as the actual capacity of a soil to perform its core functions and to provide ecosystem services."@en ],
         [ dcterms:source she:SoilHealth ;
             rdf:value "The definition of soil quality and soil health is the capacity of a soil to function within ecosystems and land-use boundaries to sustain biological productivity, maintain environmental quality, and promote plant and animal health."@en ],
         [ dcterms:source <https://doi.org/10.2800/956606> ;
             rdf:value "Soil health is the level to which soil functions are fulfilled."@en ] ;
     skos:exactMatch inrae:c_2d69fde2,
+        benchmarks:4036,
         she:SoilHealth ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil health"@en ;
@@ -5625,12 +5631,14 @@ eusoilvoc:SoilProfiles a skos:Concept ;
 
 eusoilvoc:SoilQuality a skos:Concept ;
     skos:broader eusoilvoc:SoilProperties ;
-    skos:definition [ dcterms:source gemet:7884 ;
-            rdf:value "All current positive or negative properties with regard to soil utilization and soil functions."@en ],
-        [ dcterms:source she:SoilQuality ;
-            rdf:value "The definition of soil quality and soil health is the capacity of a soil to function within ecosystems and land-use boundaries to sustain biological productivity, maintain environmental quality, and promote plant and animal health."@en ],
+    skos:definition [ dcterms:source benchmarks:soil-quality ;
+            rdf:value "The degree to which the inherent properties of a soil facilitate user-defined soil functions. A soil with ‘high soil quality’ can deliver the desired functions, whereas a soil with ‘low soil quality’ can only deliver those functions at sub-optimal rates."@en ],
         [ dcterms:source she:SoilQuality ;
             rdf:value "Soil quality is defined as the inherent capacity which provides the basic frame within which a soil evolves."@en ],
+        [ dcterms:source she:SoilQuality ;
+            rdf:value "The definition of soil quality and soil health is the capacity of a soil to function within ecosystems and land-use boundaries to sustain biological productivity, maintain environmental quality, and promote plant and animal health."@en ],
+        [ dcterms:source gemet:7884 ;
+            rdf:value "All current positive or negative properties with regard to soil utilization and soil functions."@en ],
         [ dcterms:source iso11074:3.466 ;
             rdf:value "positive or negative properties with regards to soil utilization and <span class=\"sts-tbx-entailedTerm\"><a href=\"https://data.geoscience.earth/ncl/ISO11074v2025/3.453\">soil functions <span class=\"sts-tbx-entailedTerm-num\">(3.453)</span></a></span>"@en ],
         [ dcterms:source nalt:35826,
@@ -5643,6 +5651,7 @@ eusoilvoc:SoilQuality a skos:Concept ;
         gemet:7884,
         iso11074:3.466,
         nalt:35826,
+        benchmarks:soil-quality,
         she:SoilQuality ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil quality"@en .
@@ -5786,9 +5795,12 @@ eusoilvoc:SoilSecondaryParticles a skos:Concept ;
 
 eusoilvoc:SoilSecurity a skos:Concept ;
     skos:broader eusoilvoc:SoilProperties ;
-    skos:definition [ dcterms:source agrovoc:c_f42c0d0e ;
+    skos:definition [ dcterms:source benchmarks:soil-security ;
+            rdf:value "Soil security has been defined as the maintenance or improvement of the world’s soil resources so that they can provide sufficient food, fibre, and fresh water, contribute to energy sustainability and climate stability, maintain biodiversity, and deliver overall environmental protection and ecosystem services."@en ],
+        [ dcterms:source agrovoc:c_f42c0d0e ;
             rdf:value "Soil security has been defined as the maintenance or improvement of the world’s soil resources so that they can provide sufficient food, fibre, and fresh water, contribute to energy sustainability and climate stability, maintain biodiversity, and deliver overall environmental protection and ecosystem services."@en ] ;
-    skos:exactMatch agrovoc:c_f42c0d0e ;
+    skos:exactMatch agrovoc:c_f42c0d0e,
+        benchmarks:soil-security ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil security"@en .
 
@@ -6970,11 +6982,11 @@ eusoilvoc:WheelTracks a skos:Concept ;
 eusoilvoc:WindErosion a skos:Concept ;
     skos:altLabel "soil erosion by wind"@en ;
     skos:broader eusoilvoc:SoilErosion ;
-    skos:definition [ dcterms:source gemet:9330,
+    skos:definition [ dcterms:source she:SoilErosionByWind ;
+            rdf:value "Wind erosion is strong air movements displacing loose soil particles."@en ],
+        [ dcterms:source gemet:9330,
                 "Allaby, M., Macmillan Dictionary of the Environment - Third Edition, The Macmillan Press Ltd., London, 1990"@en ;
             rdf:value "The breakdown of solid rock into smaller particles and its removal by wind. It may occur on any soil whose surface is dry, unprotected by vegetation (to bind it at root level and shelter the surface) and consists of light particles. The mechanisms include straightforward picking up of dust and soil particles by the airflow and the dislodging or abrasion of surface material by the impact of particles already airborne."@en ],
-        [ dcterms:source she:SoilErosionByWind ;
-            rdf:value "Wind erosion is strong air movements displacing loose soil particles."@en ],
         [ dcterms:source agrovoc:c_8393 ;
             rdf:value "Detachment and transport of soil particles by wind."@en ],
         [ dcterms:source nalt:63376,
@@ -9237,11 +9249,11 @@ eusoilvoc:SlopeOrientation a skos:Concept ;
 eusoilvoc:SoilAcidification a skos:Concept ;
     skos:broader eusoilvoc:SoilChemicalDegradativeProcesses,
         eusoilvoc:SoilThreats ;
-    skos:definition [ dcterms:source gemet:7844,
+    skos:definition [ dcterms:source she:SoilAcidification ;
+            rdf:value "Soil acidification occurs when the acid neutralising capacity of the soil is reduced, which leads to a decrease in pH."@en ],
+        [ dcterms:source gemet:7844,
                 "Parker, S. P. & Corbitt, R. A., McGraw-Hill Encyclopedia of Environmental Science & Engineering - Third Edition, McGraw-Hill, Inc., USA, 1993"@en ;
             rdf:value "A naturally occurring process in humid climates that has long been the subject of research, whose findings suggest acid precipitation effects. The generally accepted impact of soil acidification on the productivity of terrestrial plants is summarised as follows: as soil becomes more acidic the basic cations (Ca, Mg) on the soil exchange are replaced by hydrogen ions or solubilized metals. The basic cation, now in solution, can be leached through the soil. As time progresses the soil becomes less fertile and more acidic. Resultant decreases in soil pH cause reduced, less-active population of soil microorganisms, which in turn slow decomposition of plant residues and cycling of essential plant nutrients."@en ],
-        [ dcterms:source she:SoilAcidification ;
-            rdf:value "Soil acidification occurs when the acid neutralising capacity of the soil is reduced, which leads to a decrease in pH."@en ],
         [ dcterms:source nalt:63335,
                 "NAL Thesaurus Staff" ;
             rdf:value "Lowering of acid-neutralizing capacity (ANC) of the solid phase of a soil. It is basically a decrease in soil pH."@en ],
@@ -9741,11 +9753,14 @@ eusoilvoc:SoilProductivity a skos:Concept ;
     skos:broader eusoilvoc:SoilAgriculturalFunctions,
         eusoilvoc:SoilProperties ;
     skos:closeMatch agrovoc:c_7170 ;
-    skos:definition [ dcterms:source iso11074:3.465 ;
+    skos:definition [ dcterms:source benchmarks:soil-productivity ;
+            rdf:value "The capacity of a soil to produce plant biomass, providing food, feed, fibre, wood, fuel and ornemental resources within natural or managed ecosystem boundaries."@en ],
+        [ dcterms:source iso11074:3.465 ;
             rdf:value "ability of a soil to produce yields under current conditions"@en ] ;
     skos:exactMatch spp:SoilProductivity,
         iso11074:3.465,
-        nalt:970 ;
+        nalt:970,
+        benchmarks:soil-productivity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil productivity"@en .
 
@@ -10013,10 +10028,10 @@ eusoilvoc:SpodicHorizons a skos:Concept ;
 eusoilvoc:Subsoil a skos:Concept ;
     skos:broader eusoilvoc:Soil,
         eusoilvoc:SoilDescription ;
-    skos:definition [ dcterms:source gemet:8167 ;
-            rdf:value "Soil underlying surface soil, devoid of plant roots."@en ],
-        [ dcterms:source she:Subsoil ;
+    skos:definition [ dcterms:source she:Subsoil ;
             rdf:value "The subsoil in agriculture is defined as soil below the tillage depth (usually around 20-35cm)."@en ],
+        [ dcterms:source gemet:8167 ;
+            rdf:value "Soil underlying surface soil, devoid of plant roots."@en ],
         [ dcterms:source agrovoc:c_7486 ;
             rdf:value "A collective and general term for the layers of soil below the uppermost layer or topsoil. It can consist of sand, silt and clay but has little, if any, humus or other organic matter. Subsoil provides structure, holds moisture, and is a good foothold for rooting plants."@en ] ;
     skos:exactMatch agrovoc:c_7486,
@@ -10934,11 +10949,11 @@ eusoilvoc:SoilWaterRegimes a skos:Concept ;
     skos:altLabel "soil water regime"@en ;
     skos:broader eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilWaterPhysicalProperties ;
-    skos:definition [ dcterms:source nalt:11565,
-                "NAL Thesaurus Staff" ;
-            rdf:value "The presence or absence either of ground water or of plant available water (i.e., water held at a tension of less than 1500 kPa) in the soil or in specific horizons during periods of the year. A generally accepted classification of soil moisture regimes from wet to dry includes aquic, udic, ustic, aridic, and xeric."@en ],
-        [ dcterms:source <http://agclass.nal.usda.gov/mtwdk.exe?k=default&l=60&w=11566&n=1&s=5&t=2>,
+    skos:definition [ dcterms:source <http://agclass.nal.usda.gov/mtwdk.exe?k=default&l=60&w=11566&n=1&s=5&t=2>,
                 agrovoc:c_7211 ;
+            rdf:value "The presence or absence either of ground water or of plant available water (i.e., water held at a tension of less than 1500 kPa) in the soil or in specific horizons during periods of the year. A generally accepted classification of soil moisture regimes from wet to dry includes aquic, udic, ustic, aridic, and xeric."@en ],
+        [ dcterms:source nalt:11565,
+                "NAL Thesaurus Staff" ;
             rdf:value "The presence or absence either of ground water or of plant available water (i.e., water held at a tension of less than 1500 kPa) in the soil or in specific horizons during periods of the year. A generally accepted classification of soil moisture regimes from wet to dry includes aquic, udic, ustic, aridic, and xeric."@en ] ;
     skos:exactMatch agrovoc:c_7211,
         nalt:11565 ;
@@ -11398,11 +11413,11 @@ eusoilvoc:SoilCompaction a skos:Concept ;
         eusoilvoc:SoilDegradation,
         eusoilvoc:SoilPhysicalDegradativeProcesses,
         eusoilvoc:SoilThreats ;
-    skos:definition [ dcterms:source gemet:7850,
+    skos:definition [ dcterms:source she:SoilCompaction ;
+            rdf:value "Soil compaction occurs primarily if the internal soil strength is exceeded by additional stress."@en ],
+        [ dcterms:source gemet:7850,
                 "Dunster, J. & Dunster, K., Dictionary of Natural Resource Management - The comprehensive, single-source guide to natural resource management terms, CAB International, Canada, 1996"@en ;
             rdf:value "An increase in bulk density (mass per unit volume) and a decrease in soil porosity resulting from applied loads, vibration, or pressure. More compacted soils (or other materials) can support greater loads (load-bearing capacity). Bulk density can be increased by controlling the moisture content, compaction forces and treatment procedures, as well as by manipulating the type of material being compacted."@en ],
-        [ dcterms:source she:SoilCompaction ;
-            rdf:value "Soil compaction occurs primarily if the internal soil strength is exceeded by additional stress."@en ],
         [ dcterms:source agrovoc:c_7163 ;
             rdf:value "The increase in density and a decline of macro-porosity in a soil that impairs the functions of both the top- and subsoil, and impedes roots penetration and water gaseous exchanges."@en ],
         [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
@@ -11532,8 +11547,11 @@ eusoilvoc:SoilNutrients a skos:Concept ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilSubstance ;
     skos:closeMatch inrae:c_941 ;
+    skos:definition [ dcterms:source benchmarks:soil-nutrients ;
+            rdf:value "Soil nutrients include the macronutrients nitrogen (N), phosphorus (P), potassium (K), calcium (Ca),magnesium (Mg) and sulphur (S). In addition, the soil supplies micronutrients (boron, copper, iron,manganese, chloride, molybdenum, zinc), whose concentrations in plants are typically one or two orders of magnitude less than those of macronutrients."@en ] ;
     skos:exactMatch spp:SoilNutrient,
         nalt:38806,
+        benchmarks:soil-nutrients,
         she:SoilNutrients ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:Macronutrients,
@@ -11586,13 +11604,16 @@ eusoilvoc:SoilSealing a skos:Concept ;
         eusoilvoc:SoilThreats ;
     skos:closeMatch inrae:c_11338,
         nalt:5144 ;
-    skos:definition [ dcterms:source she:SoilSealing ;
+    skos:definition [ dcterms:source benchmarks:soil-sealing ;
+            rdf:value "The destruction or covering of soil by buildings, constructions and layers, or other bodies of artificial material which may be very slowly permeable to water (e.g. asphalt, concrete, etc.), causing a deterioration or loss of one or more soil functions."@en ],
+        [ dcterms:source she:SoilSealing ;
             rdf:value "Soil sealing is the destruction or covering of the soil by an impermeable material."@en ],
         [ dcterms:source she:SoilSealing ;
             rdf:value "Soil sealing refers to the destruction or covering of soil by buildings, other constructions and layers of impermeable artificial material (asphalt, concrete, etc.)."@en ],
         [ dcterms:source agrovoc:c_f9554e7c ;
             rdf:value "Permanent covering of the soil surface with impermeable artificial materials, leading to non-reversible loss of soil and most of its ecosystem services"@en ] ;
     skos:exactMatch agrovoc:c_f9554e7c,
+        benchmarks:soil-sealing,
         she:SoilSealing ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilSealingConsistence,
@@ -11760,10 +11781,14 @@ eusoilvoc:EcosystemServices a skos:Concept ;
     skos:altLabel "ecosystem service"@en ;
     skos:closeMatch inrae:c_1611,
         iso11074:3.140 ;
-    skos:definition [ dcterms:source gemet:15138 ;
-            rdf:value "benefits that people obtain from ecosystems contributing to human well-being"@en ],
+    skos:definition [ dcterms:source benchmarks:ecosystem-services ;
+            rdf:value "The contributions of ecosystems (i.e. living systems) to human well-being."@en ],
+        [ dcterms:source benchmarks:ecosystem-services ;
+            rdf:value "Indirect contributions of ecosystems to the economic, social,culturaland other benefits that people derive from those ecosystems."@en ],
         [ dcterms:source she:EcosystemServices ;
             rdf:value "Ecosystem services can be summarised as the goods and benefits people and societies receive from ecosystems."@en ],
+        [ dcterms:source gemet:15138 ;
+            rdf:value "benefits that people obtain from ecosystems contributing to human well-being"@en ],
         [ dcterms:source nalt:104863,
                 "NAL Thesaurus Staff" ;
             rdf:value "Benefits people and other organisms obtain from ecosystems; examples include: pure water and clean air, scenic landscapes, wildlife habitat and biodiversity."@en ],
@@ -11772,6 +11797,7 @@ eusoilvoc:EcosystemServices a skos:Concept ;
     skos:exactMatch agrovoc:c_1348040570280,
         gemet:15138,
         nalt:104863,
+        benchmarks:ecosystem-services,
         she:EcosystemServices ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:CulturalServices,
@@ -11803,7 +11829,11 @@ eusoilvoc:Fragments a skos:Concept ;
     skos:prefLabel "fragments"@en .
 
 eusoilvoc:LandCover a skos:Concept ;
-    skos:definition [ dcterms:source gemet:4612 ;
+    skos:definition [ dcterms:source benchmarks:land-cover ;
+            rdf:value "The physical and biological cover of the earth’s surface."@en ],
+        [ dcterms:source benchmarks:land-cover ;
+            rdf:value "LAND COVER(LC) = physical cover (“material”) observed at the earth’s surface. The main classes in the LUCAS land cover nomenclature are as follows:A00 Artificial land B00 Cropland C00 Woodland D00 Shrubland E00 Grassland F00 Bareland G00 Water H00 Wetland"@en ],
+        [ dcterms:source gemet:4612 ;
             rdf:value "Land cover is the physical state of the land surface. It is the combination of vegetation, soil, rock, water and human-made structures, which make up the earth's landscape. The land cover is the interface between the earth's crust and the atmosphere, influencing the exchange of energy and matter in the climatic system and biogeochemical cycles."@en ],
         [ dcterms:source nalt:149093,
                 "NAL Thesaurus Staff" ;
@@ -11814,7 +11844,8 @@ eusoilvoc:LandCover a skos:Concept ;
         spp:LandCover,
         inrae:c_0617cfcc,
         gemet:4612,
-        nalt:149093 ;
+        nalt:149093,
+        benchmarks:land-cover ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:Building,
         eusoilvoc:GroundCover,
@@ -11826,7 +11857,9 @@ eusoilvoc:LandCover a skos:Concept ;
 eusoilvoc:LandUse a skos:Concept ;
     skos:broader eusoilvoc:ExternalFactors ;
     skos:closeMatch she:LandUses ;
-    skos:definition [ dcterms:source gemet:4678,
+    skos:definition [ dcterms:source benchmarks:land-use ;
+            rdf:value "The term land use deals with the spatial aspects of all human activities on the land and with the way in which the land surface is adapted, or could be adapted, to serve human needs. (GEMET, AGROVOC) LAND USE (LU) = socio-economic function of the observed earth’s surface (LUCAS) Some examples for land use classes in the LUCAS nomenclature (which are of relevance for BENCHMARKS) are: U110 Agriculture U120 Forestry U150 Hunting U210 Energy production U360 Recreational, leisure and sport U370 Residential U400 Unused"@en ],
+        [ dcterms:source gemet:4678,
                 "Goodall, B., Dictionary of Human Geography, Penguin Books, London, 1987"@en ;
             rdf:value "The term land use deals with the spatial aspects of all human activities on the land and with the way in which the land surface is adapted, or could be adapted, to serve human needs."@en ],
         [ dcterms:source nalt:1581,
@@ -11842,7 +11875,8 @@ eusoilvoc:LandUse a skos:Concept ;
         spp:LandUse,
         inrae:c_22741,
         gemet:4678,
-        nalt:1581 ;
+        nalt:1581,
+        benchmarks:land-use ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:LandUseBareCover,
         eusoilvoc:LandUseForests,
@@ -11989,11 +12023,11 @@ eusoilvoc:SoilConservation a skos:Concept ;
     skos:broader eusoilvoc:SoilManagement ;
     skos:definition [ dcterms:source gemet:7852 ;
             rdf:value "Management of soil to prevent or reduce soil erosion and depletion by wind and water. Preservation of soil against deterioration and loss by using it within its capabilities; application of conservation practices needed for its protection and improvement."@en ],
-        [ dcterms:source agrovoc:c_7165 ;
-            rdf:value "Soil conservation is a combination of all methods of management and land use that safeguard the soil against depletion or deterioration by natural or human-induced factors. It most often attempts to ensure that soil does not erode and wash into streams and lakes or blow away in the wind, but it also involves the protection of the soil from damage by machinery (e.g., compaction) or by harmful changes to its chemistry (e.g., acidification or salinization)."@en ],
         [ dcterms:source inrae:c_11631,
                 "Adapté de : Acton, D., et al. (2015) Conservation des sols. Encyclopédie canadienne [Consulté le 14/01/22] https://www.thecanadianencyclopedia.ca/fr/article/conservation-des-sols" ;
-            rdf:value "A combination of land use and land management methods which prevent soil degradation or deterioration by natural or human causes. In most cases, it aims at managing soils so as to prevent erosion by rainwater and runoff or by wind. It also tries to protect soils from damage caused by farm machinery (e.g., compaction) and harmful changes to their chemical composition (e.g., acidification and salinisation)."@en ] ;
+            rdf:value "A combination of land use and land management methods which prevent soil degradation or deterioration by natural or human causes. In most cases, it aims at managing soils so as to prevent erosion by rainwater and runoff or by wind. It also tries to protect soils from damage caused by farm machinery (e.g., compaction) and harmful changes to their chemical composition (e.g., acidification and salinisation)."@en ],
+        [ dcterms:source agrovoc:c_7165 ;
+            rdf:value "Soil conservation is a combination of all methods of management and land use that safeguard the soil against depletion or deterioration by natural or human-induced factors. It most often attempts to ensure that soil does not erode and wash into streams and lakes or blow away in the wind, but it also involves the protection of the soil from damage by machinery (e.g., compaction) or by harmful changes to its chemistry (e.g., acidification or salinization)."@en ] ;
     skos:exactMatch agrovoc:c_7165,
         inrae:c_11631,
         gemet:7852,
@@ -12346,7 +12380,9 @@ eusoilvoc:SoilRetention a skos:Concept ;
 eusoilvoc:SoilStructure a skos:Concept ;
     skos:broader eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilPhysicalProperties ;
-    skos:definition [ dcterms:source gemet:7895,
+    skos:definition [ dcterms:source benchmarks:soil-structure ;
+            rdf:value "The arrangement of soil particles into aggregates which form structural units. Size, shape, and distinctness are used to describe soil structure."@en ],
+        [ dcterms:source gemet:7895,
                 "Bates, R.L.; Jackson, J.A., Glossary of Geology - Third Edition, American Geological Institute, Alexandria, USA, 1987"@en ;
             rdf:value "The combination or aggregation of primary soil particles into aggregates or clusters, which are separated from adjoining peds by surfaces of weakness. Soil structure is classified on the basis of size, shape, and distinctness into classes, types, and grades."@en ],
         [ dcterms:source iso11074:3.475 ;
@@ -12361,6 +12397,7 @@ eusoilvoc:SoilStructure a skos:Concept ;
         gemet:7895,
         iso11074:3.475,
         nalt:63417,
+        benchmarks:soil-structure,
         she:SoilStructure ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilAggregate,
@@ -12452,7 +12489,11 @@ eusoilvoc:Precipitation a skos:Concept ;
 
 eusoilvoc:Soil a skos:Concept ;
     skos:closeMatch she:Soils ;
-    skos:definition [ dcterms:source gemet:7843,
+    skos:definition [ dcterms:source benchmarks:soil ;
+            rdf:value "Soil, the biologically active, porous medium that has developed in the uppermost layer of Earth’s crust and is one of the principal substrata of life on Earth. Soil is a complex, dynamic, and living system that is formed over time through the interaction of physical, chemical, and biological processes. It is composed of mineral particles of varying sizes, organic matter, water, and air, all of which interact to form a matrix that supports plant growth and provides a habitat for soil organisms."@en ],
+        [ dcterms:source benchmarks:soil ;
+            rdf:value "The top layer of the Earth’s crust situated between the bedrock and the land surface, which is composed of mineral particles, organic matter, water, air and living organisms."@en ],
+        [ dcterms:source gemet:7843,
                 "Collins English Dictionary, Harper Collins Publishers, Glasgow, 1994"@en ;
             rdf:value "The top layer of the land surface of the earth that is composed of disintegrated rock particles, humus, water and air."@en ],
         [ dcterms:source iso11074:3.448 ;
@@ -12469,7 +12510,8 @@ eusoilvoc:Soil a skos:Concept ;
         inrae:c_1524,
         gemet:7843,
         iso11074:3.448,
-        nalt:63334 ;
+        nalt:63334,
+        benchmarks:soil ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:FineSoil,
         eusoilvoc:Rhizosphere,
@@ -13025,10 +13067,13 @@ eusoilvoc:SoilOrganicMatter a skos:Concept,
 eusoilvoc:SoilProcesses a skos:Concept ;
     skos:altLabel "soil process"@en ;
     skos:closeMatch gemet:7881 ;
-    skos:definition [ dcterms:source iso11074:3.464 ;
+    skos:definition [ dcterms:source benchmarks:soil-processes ;
+            rdf:value "Soil processes are the interactions among physical, chemical and biological soil components underlying soil functions and associated ecosystem services."@en ],
+        [ dcterms:source iso11074:3.464 ;
             rdf:value "physical or reactive geochemical and biological processes, which can attenuate, concentrate, immobilise, liberate, degrade, or otherwise transform substances in soil"@en ] ;
     skos:exactMatch spp:SoilProcess,
         iso11074:3.464,
+        benchmarks:soil-processes,
         she:SoilProcesses ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:LossesFromSoil,
@@ -13658,11 +13703,13 @@ eusoilvoc:SoilDegradation a skos:Concept ;
     skos:broader eusoilvoc:SoilChemicalDegradativeProcesses,
         eusoilvoc:SoilPhysicalDegradativeProcesses,
         eusoilvoc:SoilThreats ;
-    skos:definition [ dcterms:source gemet:7857,
-                "Gilpin, A., Dictionary of Environment and sustainable development, John Wiley & Sons, Chichester, 1996"@en ;
-            rdf:value "Soil may deteriorate either by physical movement of soil particles from a given site or by depletion of the water-soluble elements in the soil which contribute to the nourishment of crop, plants, grasses, trees, and other economically usable vegetation. The physical movement generally is referred to as erosion. Wind, water, glacial ice, animals and tools in use may be agents of erosion."@en ],
+    skos:definition [ dcterms:source benchmarks:soil-degradation ;
+            rdf:value "Negative process often accelerated by human activities (improper soil use and cultivation practices, soil sealing) that leads to deterioration of soil properties and functions or destruction of soil as a whole, e.g. compaction, erosion, salinisation."@en ],
         [ dcterms:source she:SoilDegradation ;
             rdf:value "Soil degradation can be defined as a decline in soil quality, resulting in the reduced functioning of the soil."@en ],
+        [ dcterms:source gemet:7857,
+                "Gilpin, A., Dictionary of Environment and sustainable development, John Wiley & Sons, Chichester, 1996"@en ;
+            rdf:value "Soil may deteriorate either by physical movement of soil particles from a given site or by depletion of the water-soluble elements in the soil which contribute to the nourishment of crop, plants, grasses, trees, and other economically usable vegetation. The physical movement generally is referred to as erosion. Wind, water, glacial ice, animals and tools in use may be agents of erosion."@en ],
         [ dcterms:source nalt:958,
                 "NAL Thesaurus Staff" ;
             rdf:value "Soil degradation is defined as the process, which lowers (quantitatively or qualitatively) the current and/or the potential capability of soil to produce goods or services."@en ],
@@ -13675,6 +13722,7 @@ eusoilvoc:SoilDegradation a skos:Concept ;
         inrae:c_960,
         gemet:7857,
         nalt:958,
+        benchmarks:soil-degradation,
         she:SoilDegradation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilBiologicalDegradation,
@@ -13713,16 +13761,19 @@ eusoilvoc:SoilErosion a skos:Concept ;
         eusoilvoc:SoilThreats ;
     skos:closeMatch agrovoc:c_2651,
         nalt:501 ;
-    skos:definition [ dcterms:source gemet:7858,
-                "Bates, R.L.; Jackson, J.A., Glossary of Geology - Third Edition, American Geological Institute, Alexandria, USA, 1987"@en ;
-            rdf:value "Detachment and movement of topsoil or soil material from the upper part of the profile, by the action of wind or running water, especially as a result of changes brought about by human activity, such as unsuitable or mismanaged agriculture."@en ],
+    skos:definition [ dcterms:source benchmarks:soil-erosion ;
+            rdf:value "The wearing away of the land surface by water, wind, ice, gravity or other natural or anthropogenic agents that abrade, detach and remove soil particles or rock material from one point on the earth’s surface, for deposition elsewhere."@en ],
+        [ dcterms:source she:SoilErosion ;
+            rdf:value "Soil erosion refers to the loss of fertile topsoil after erosive rain events on sensitive soils, largely in the absence of sufficient vegetation cover."@en ],
         [ dcterms:source she:SoilErosion ;
             rdf:value "Soil erosion is the detachment, transport and sedimentation of soil particles by water or by wind."@en ],
-        [ dcterms:source she:SoilErosion ;
-            rdf:value "Soil erosion refers to the loss of fertile topsoil after erosive rain events on sensitive soils, largely in the absence of sufficient vegetation cover."@en ] ;
+        [ dcterms:source gemet:7858,
+                "Bates, R.L.; Jackson, J.A., Glossary of Geology - Third Edition, American Geological Institute, Alexandria, USA, 1987"@en ;
+            rdf:value "Detachment and movement of topsoil or soil material from the upper part of the profile, by the action of wind or running water, especially as a result of changes brought about by human activity, such as unsuitable or mismanaged agriculture."@en ] ;
     skos:exactMatch spp:SoilErosion,
         inrae:c_1543,
         gemet:7858,
+        benchmarks:soil-erosion,
         she:SoilErosion ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:AcceleratedErosion,
@@ -13802,6 +13853,7 @@ eusoilvoc:SoilStructureIndirectIndex a skos:Concept ;
 
 eusoilvoc:SoilThreats a skos:Concept ;
     skos:altLabel "soil threat"@en ;
+    skos:closeMatch benchmarks:soil-threat ;
     skos:definition [ dcterms:source she:SoilThreats ;
             rdf:value "Soil threats are processes that damage soil and its functional properties, reducing the soil's capacity to provide ecosystem services."@en ],
         [ dcterms:source she:SoilThreats ;
@@ -13983,16 +14035,19 @@ eusoilvoc:SoilFunctions a skos:Concept ;
     skos:closeMatch gemet:3524,
         iso11074:3.453,
         nalt:335251 ;
-    skos:definition [ dcterms:source she:SoilFunctions ;
-            rdf:value "Soil functions are defined as bundles of soil processes that underpin the delivery of ecosystem services."@en ],
+    skos:definition [ dcterms:source benchmarks:soil-functions ;
+            rdf:value "Are one or a combination of soil processes that underpin the dynamics of the ecosystem structure and/or composition and can give rise to ecosystem services. Examples: Bio-remediation and filtration/sequestration/storage/accumulation by microorganisms, algae, plants and animals, control of erosion rates, buffering of mass movements, weathering processes, decomposition, maintenence and regulation by inorganic natural chemical and physical processes."@en ],
         [ dcterms:source she:SoilFunctions ;
             rdf:value "Soil functions describe the soil's capacity to support the ecosystem services essential for human well-being."@en ],
+        [ dcterms:source she:SoilFunctions ;
+            rdf:value "Soil functions are defined as bundles of soil processes that underpin the delivery of ecosystem services."@en ],
         [ dcterms:source agrovoc:c_e5629cbd ;
             rdf:value "Performance and tasks of soils, determining their ecological and economical value, e.g., biomass production, water filtration and storage, nutrient storage and recycling, habitat for organisms, and carbon storage."@en ],
         [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "Roles performed by soil, including sustaining biomass, providing habitat and biodiversity, cycling elements, moderating environmental quality, supporting engineering uses, and preserving records, landscapes, and cultural heritage."@en ] ;
     skos:exactMatch agrovoc:c_e5629cbd,
         spp:SoilFunction,
+        benchmarks:soil-functions,
         she:SoilFunctions ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:CarbonPools,
@@ -15220,12 +15275,15 @@ eusoilvoc:SoilComponents a skos:Concept ;
 eusoilvoc:SoilProperties a skos:Concept ;
     skos:altLabel "soil property"@en ;
     skos:closeMatch inrae:c_11270 ;
-    skos:definition [ dcterms:source agrovoc:c_330883,
+    skos:definition [ dcterms:source benchmarks:soil-properties ;
+            rdf:value "Chemical, physical, or biological characteristics of a soil which can be dynamic (e.g., soil organic matter, water and nutrient holding capacity) or inherent (e.g., soil texture, parent material)."@en ],
+        [ dcterms:source agrovoc:c_330883,
                 <http://soilquality.org/basics/glossary.html> ;
             rdf:value "Chemical, physical, or biological characteristics of soil which can indicate its level of function of ecosystem services. Properties can be dynamic or inherent characteristics."@en ] ;
     skos:exactMatch agrovoc:c_330883,
         spp:SoilProperty,
         nalt:5084,
+        benchmarks:soil-properties,
         she:SoilProperties ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:EdaphicFactors,
@@ -15770,12 +15828,15 @@ eusoilvoc:SoilChemicophysicalProperties a skos:Concept ;
     skos:prefLabel "soil chemicophysical properties"@en .
 
 eusoilvoc:SoilManagement a skos:Concept ;
-    skos:definition [ dcterms:source agrovoc:c_7176 ;
+    skos:definition [ dcterms:source benchmarks:soil-management ;
+            rdf:value "The application of variuos practices to protect soil and enhance its performance. It includes soil conservation, soil amendment, and optimal soil health."@en ],
+        [ dcterms:source agrovoc:c_7176 ;
             rdf:value "Soil management encompasses a range of practices that aim to improve and maintain soil health and resilience, enhance crop productivity, and conserve natural resources. It is a cornerstone of sustainable agriculture, ensuring that farmland remains productive and resilient for future production and food security. Key elements include soil fertility enhancement, soil structure enhancement, water management optimisation, pest and disease management along with nutrient cycling."@en ] ;
     skos:exactMatch agrovoc:c_7176,
         spp:SoilManagement,
         inrae:c_3542,
         nalt:21,
+        benchmarks:soil-management,
         she:SoilManagement ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:FertiliserUse,
@@ -16405,7 +16466,9 @@ eusoilvoc:SoilOrganicCarbon a skos:Concept,
         sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilOrganicMatter,
         eusoilvoc:SoilTotalCarbon ;
-    skos:definition [ dcterms:source nalt:67854,
+    skos:definition [ dcterms:source benchmarks:soil-organic-carbon-soc ;
+            rdf:value "Soil organic carbon (SOC) is the carbon located in soils, resulting from the degradation of organic matter (such as vegetation litter) by soil organisms."@en ],
+        [ dcterms:source nalt:67854,
                 "NAL Thesaurus Staff" ;
             rdf:value "That portion of non-living organic compounds in the top one meter of soil, e.g. humus, which is important to soil quality and plant nutrition and is replenished by the decomposition of plant material."@en ],
         [ dcterms:source agrovoc:c_389fe908 ;
@@ -16416,6 +16479,7 @@ eusoilvoc:SoilOrganicCarbon a skos:Concept,
         inrae:c_13665,
         glosis_cl:physioChemicalPropertyCode-Carorg,
         nalt:67854,
+        benchmarks:soil-organic-carbon-soc,
         she:SoilOrganicCarbon ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilCarbonDensity ;

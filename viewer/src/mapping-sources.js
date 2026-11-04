@@ -9,6 +9,7 @@ const sources = [
   { prefix: '//opendata.inrae.fr/thesaurusINRAE/', uri: 'http://opendata.inrae.fr/thesaurusINRAE/thesaurusINRAE', label: 'INRAE Thesaurus' },
   { prefix: '//www.eionet.europa.eu/gemet/concept/', uri: 'http://www.eionet.europa.eu/gemet/gemetThesaurus', label: 'GEMET' },
   { prefix: '//soilwise-he.github.io/soil-health#', uri: 'https://soilwise-he.github.io/soil-health', label: 'Soil Health Knowledge Graph' },
+  { prefix: '//soilhealthbenchmarks.eu/glossary/', uri: 'https://soilhealthbenchmarks.eu/glossary/', label: 'Soil Health BENCHMARKS Glossary' },
   { prefix: '//imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#', uri: 'http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl', label: 'Soil Property and Process Ontology' },
   { prefix: '//data.geoscience.earth/ncl/ISO11074v2025/', uri: 'https://data.geoscience.earth/ncl/ISO11074v2025', label: 'ISO 11074:2025' },
   ...['codelists', 'procedure', 'layerhorizon', 'siteplot', 'profile', 'common', 'surface'].map(module => ({
