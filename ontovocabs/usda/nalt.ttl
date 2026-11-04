@@ -9,6 +9,13 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
+# Retain reviewed mapping strengths independently of preferred-label spelling.
+eusoilvoc:Discing skos:closeMatch nalt:33996 .
+
+eusoilvoc:SoilSalinisation skos:exactMatch nalt:61970 .
+
+eusoilvoc:SoilSolarisation skos:exactMatch nalt:53677 .
+
 eusoilvoc:AlfisolsUSDA a skos:Concept ;
     skos:altLabel "Alfisol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;

@@ -408,13 +408,13 @@ eusoilvoc:FriableConsistence a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "friable consistence"@en .
 
-eusoilvoc:GeometricMeanDiametre a skos:Concept ;
+eusoilvoc:GeometricMeanDiameter a skos:Concept ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "An aggregate-size index calculated as GMD = exp[sum(wi log xi) / sum(wi)], where xi is the mean diameter of a size class and wi is the aggregate mass in that class."@en ] ;
     skos:broader eusoilvoc:SoilAggregationIndex ;
     skos:exactMatch spp:GeometricMeanDiameter ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "geometric mean diametre"@en .
+    skos:prefLabel "geometric mean diameter"@en .
 
 eusoilvoc:Grasses a skos:Concept ;
     skos:altLabel "grass"@en ;
@@ -616,13 +616,13 @@ eusoilvoc:MatrixPores a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "matrix pores"@en .
 
-eusoilvoc:MeanWeightDiametre a skos:Concept ;
+eusoilvoc:MeanWeightDiameter a skos:Concept ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "The sum of the mean diameter of each aggregate-size fraction multiplied by that fraction’s proportion of the total sample mass: MWD = sum(xi wi)."@en ] ;
     skos:broader eusoilvoc:SoilAggregationIndex ;
     skos:exactMatch spp:MeanWeightDiameter ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "mean weight diametre"@en .
+    skos:prefLabel "mean weight diameter"@en .
 
 eusoilvoc:MechanicalRatio a skos:Concept ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
@@ -1653,11 +1653,12 @@ eusoilvoc:SoilMineralMatter a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil mineral matter"@en .
 
-eusoilvoc:SoilMineralization a skos:Concept ;
+eusoilvoc:SoilMineralisation a skos:Concept ;
     skos:broader eusoilvoc:SoilChemicalProcesses ;
     skos:exactMatch spp:SoilMineralization ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil mineralization"@en .
+    skos:altLabel "soil mineralization"@en ;
+    skos:prefLabel "soil mineralisation"@en .
 
 eusoilvoc:SoilMobileWaterContents a skos:Concept ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
@@ -2080,11 +2081,14 @@ eusoilvoc:SoilSalinity a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil salinity"@en .
 
-eusoilvoc:SoilSalinization a skos:Concept ;
+eusoilvoc:SoilSalinisation a skos:Concept ;
+    skos:altLabel "soil salinization"@en ;
     skos:broader eusoilvoc:SoilChemicalProcesses ;
-    skos:exactMatch spp:SoilSalinization ;
+    skos:exactMatch spp:SoilSalinization,
+        <http://opendata.inrae.fr/thesaurusINRAE/c_836>,
+        <https://data.geoscience.earth/ncl/ISO11074v2025/3.472> ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil salinization"@en .
+    skos:prefLabel "soil salinisation"@en .
 
 eusoilvoc:SoilSandContents a skos:Concept ;
     skos:altLabel "soil sand content"@en ;
@@ -2506,13 +2510,13 @@ eusoilvoc:SoilWaterDiffusivity a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil water diffusivity"@en .
 
-eusoilvoc:SoilWaterEvapourationRate a skos:Concept ;
+eusoilvoc:SoilWaterEvaporationRate a skos:Concept ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "The rate at which water is lost from soil by evaporation, expressed as water depth per unit time; in the book’s modeled profile of depth L, it is expressed as e = -L ∂θ/∂t, where θ is soil water content and t is time."@en ] ;
     skos:broader eusoilvoc:SoilWaterTransmissionIndex ;
     skos:exactMatch spp:SoilWaterEvaporationRate ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil water evapouration rate"@en .
+    skos:prefLabel "soil water evaporation rate"@en .
 
 eusoilvoc:SoilWaterInfiltrationRate a skos:Concept ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
@@ -2746,14 +2750,14 @@ eusoilvoc:Biomass a skos:Concept ;
         eusoilvoc:SoilMicrobialBiomass ;
     skos:prefLabel "biomass"@en .
 
-eusoilvoc:Evapouration a skos:Concept ;
+eusoilvoc:Evaporation a skos:Concept ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "The conversion of water from the liquid state to the vapor state through the uptake of latent heat of vaporization."@en ] ;
     skos:broader eusoilvoc:WaterInterchange ;
     skos:exactMatch spp:Evaporation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:SoilWaterEvapouration ;
-    skos:prefLabel "evapouration"@en .
+    skos:narrower eusoilvoc:SoilWaterEvaporation ;
+    skos:prefLabel "evaporation"@en .
 
 eusoilvoc:Filtration a skos:Concept ;
     skos:broader eusoilvoc:SoilEngineeringFunctions,
@@ -3181,14 +3185,14 @@ eusoilvoc:SoilWaterAvailability a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil water availability"@en .
 
-eusoilvoc:SoilWaterEvapouration a skos:Concept ;
+eusoilvoc:SoilWaterEvaporation a skos:Concept ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "The loss of water from bare soil to the atmosphere through conversion of liquid water to water vapor."@en ] ;
-    skos:broader eusoilvoc:Evapouration,
+    skos:broader eusoilvoc:Evaporation,
         eusoilvoc:SoilWaterPhysicalProcesses ;
     skos:exactMatch spp:SoilWaterEvaporation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil water evapouration"@en .
+    skos:prefLabel "soil water evaporation"@en .
 
 eusoilvoc:SoilWaterHoldingCapacity a skos:Concept ;
     skos:broader eusoilvoc:SoilPhysicalCapacity,
@@ -3896,8 +3900,8 @@ eusoilvoc:SoilAggregationIndex a skos:Concept ;
     skos:broader eusoilvoc:SoilStructureIndex ;
     skos:exactMatch spp:SoilAggregationIndex ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:GeometricMeanDiametre,
-        eusoilvoc:MeanWeightDiametre,
+    skos:narrower eusoilvoc:GeometricMeanDiameter,
+        eusoilvoc:MeanWeightDiameter,
         eusoilvoc:PercentWaterStableAggregation,
         eusoilvoc:SoilAggregateSizeDistribution,
         eusoilvoc:SoilAggregateStrength ;
@@ -4043,7 +4047,7 @@ eusoilvoc:SoilWaterTransmissionIndex a skos:Concept ;
     skos:narrower eusoilvoc:SoilDrainage,
         eusoilvoc:SoilHydraulicConductivity,
         eusoilvoc:SoilHydraulicGradient,
-        eusoilvoc:SoilWaterEvapourationRate,
+        eusoilvoc:SoilWaterEvaporationRate,
         eusoilvoc:SoilWaterInfiltrationCapacity,
         eusoilvoc:SoilWaterInfiltrationRate ;
     skos:prefLabel "soil water transmission index"@en .
@@ -4194,7 +4198,7 @@ eusoilvoc:WaterInterchange a skos:Concept ;
     skos:exactMatch spp:WaterInterchange ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:Evapotranspiration,
-        eusoilvoc:Evapouration,
+        eusoilvoc:Evaporation,
         eusoilvoc:Interflow,
         eusoilvoc:OverlandFlow,
         eusoilvoc:Percolation,
@@ -4362,11 +4366,11 @@ eusoilvoc:SoilChemicalProcesses a skos:Concept ;
         eusoilvoc:SoilChemicalDegradativeProcesses,
         eusoilvoc:SoilChemicalReaction,
         eusoilvoc:SoilDesertification,
-        eusoilvoc:SoilMineralization,
+        eusoilvoc:SoilMineralisation,
         eusoilvoc:SoilNegativeAdsorption,
         eusoilvoc:SoilNutrientImmobilisation,
         eusoilvoc:SoilOxygenConsumption,
-        eusoilvoc:SoilSalinization,
+        eusoilvoc:SoilSalinisation,
         eusoilvoc:SoilSorption ;
     skos:prefLabel "soil chemical processes"@en .
 
@@ -4429,7 +4433,7 @@ eusoilvoc:SoilWaterPhysicalProcesses a skos:Concept ;
         eusoilvoc:SoilMoistureMovement,
         eusoilvoc:SoilThawing,
         eusoilvoc:SoilWaterCondensation,
-        eusoilvoc:SoilWaterEvapouration,
+        eusoilvoc:SoilWaterEvaporation,
         eusoilvoc:SoilWaterInfiltration,
         eusoilvoc:SoilWaterLoss,
         eusoilvoc:SoilWaterMovement,

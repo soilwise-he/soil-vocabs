@@ -146,6 +146,7 @@ eusoilvoc:SOCLoss a skos:Concept ;
 
 eusoilvoc:SoilSalinisation a skos:Concept ;
     skos:broader eusoilvoc:SoilDegradation ;
+    skos:exactMatch she:SoilSalinisation ;
     skos:prefLabel "soil salinisation"@en .
 
 eusoilvoc:SoilAcidification a skos:Concept ;
@@ -170,7 +171,14 @@ eusoilvoc:SoilBiologicalProperties a skos:Concept ;
     skos:prefLabel "soil biological properties"@en .
 
 eusoilvoc:SoilChemicalDegradation a skos:Concept ;
+    skos:narrower eusoilvoc:SoilSodification ;
     skos:prefLabel "soil chemical degradation"@en .
+
+eusoilvoc:SoilSodification a skos:Concept ;
+    skos:altLabel "sodification"@en ;
+    skos:broader eusoilvoc:SoilChemicalDegradation ;
+    skos:closeMatch she:Sodification ;
+    skos:prefLabel "soil sodification"@en .
 
 eusoilvoc:SoilChemicalFunctions a skos:Concept ;
     skos:altLabel "soil chemical function"@en ;

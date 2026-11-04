@@ -463,13 +463,14 @@ eusoilvoc:DioriteSoils a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "diorite soils"@en .
 
-eusoilvoc:Disking a skos:Concept ;
+eusoilvoc:Discing a skos:Concept ;
     skos:broader eusoilvoc:SoilTillage ;
     skos:definition [ dcterms:source agrovoc:c_24454 ;
             rdf:value "Disking: Agricultural term to describe the process of using a disk, or harrow, to disturb the soil, setting back natural succession by cutting up grassy vegetation, thus preventing an area from maturing into briars, shrubs, and trees."@en ] ;
     skos:exactMatch agrovoc:c_24454 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "disking"@en .
+    skos:altLabel "disking"@en ;
+    skos:prefLabel "discing"@en .
 
 eusoilvoc:DispersiveSoils a skos:Concept ;
     skos:altLabel "dispersive soil"@en ;
@@ -500,7 +501,7 @@ eusoilvoc:DrumlinSoils a skos:Concept ;
     skos:prefLabel "drumlin soils"@en .
 
 eusoilvoc:DuneFixation a skos:Concept ;
-    skos:broader eusoilvoc:SoilStabilization ;
+    skos:broader eusoilvoc:SoilStabilisation ;
     skos:exactMatch agrovoc:c_10483 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "dune fixation"@en .
@@ -1948,7 +1949,8 @@ eusoilvoc:SoilReclamationPlants a skos:Concept ;
 
 eusoilvoc:SoilSalinity skos:broader eusoilvoc:SoilChemicophysicalProperties .
 
-eusoilvoc:SoilSalinization skos:broader eusoilvoc:SoilDegradation .
+eusoilvoc:SoilSalinisation skos:broader eusoilvoc:SoilDegradation ;
+    skos:exactMatch agrovoc:c_35321 .
 
 eusoilvoc:SoilScarification a skos:Concept ;
     skos:broader eusoilvoc:SoilTillage ;
@@ -2003,11 +2005,12 @@ eusoilvoc:SoilSkeleton a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil skeleton"@en .
 
-eusoilvoc:SoilSolarization a skos:Concept ;
+eusoilvoc:SoilSolarisation a skos:Concept ;
     skos:broader eusoilvoc:SoilTreatment ;
     skos:exactMatch agrovoc:c_33263 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil solarization"@en .
+    skos:altLabel "soil solarization"@en ;
+    skos:prefLabel "soil solarisation"@en .
 
 eusoilvoc:SoilStrength skos:broader eusoilvoc:SoilChemicophysicalProperties .
 
@@ -2524,7 +2527,7 @@ eusoilvoc:SoilFlora a skos:Concept ;
 eusoilvoc:SoilFormation skos:narrower eusoilvoc:SoilAccumulation .
 
 eusoilvoc:SoilFumigation a skos:Concept ;
-    skos:broader eusoilvoc:SoilSterilization,
+    skos:broader eusoilvoc:SoilSterilisation,
         eusoilvoc:SoilTreatment ;
     skos:exactMatch agrovoc:c_34236 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -2579,12 +2582,13 @@ eusoilvoc:SoilResources a skos:Concept ;
 eusoilvoc:SoilSorption skos:broader eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilSurfaceProperties .
 
-eusoilvoc:SoilSterilization a skos:Concept ;
+eusoilvoc:SoilSterilisation a skos:Concept ;
     skos:broader eusoilvoc:SoilTreatment ;
     skos:exactMatch agrovoc:c_7194 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilFumigation ;
-    skos:prefLabel "soil sterilization"@en .
+    skos:altLabel "soil sterilization"@en ;
+    skos:prefLabel "soil sterilisation"@en .
 
 eusoilvoc:SoilSurfaceProperties a skos:Concept ;
     skos:altLabel "soil surface property"@en ;
@@ -2833,13 +2837,14 @@ eusoilvoc:SoilMicroorganisms a skos:Concept ;
         eusoilvoc:SoilBacteria ;
     skos:prefLabel "soil microorganisms"@en .
 
-eusoilvoc:SoilStabilization a skos:Concept ;
+eusoilvoc:SoilStabilisation a skos:Concept ;
     skos:broader eusoilvoc:SoilConservation,
         eusoilvoc:SoilImprovement ;
     skos:exactMatch agrovoc:c_7171 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:DuneFixation ;
-    skos:prefLabel "soil stabilization"@en .
+    skos:altLabel "soil stabilization"@en ;
+    skos:prefLabel "soil stabilisation"@en .
 
 eusoilvoc:SoilStructure skos:broader eusoilvoc:SoilChemicophysicalProperties ;
     skos:narrower eusoilvoc:SoilAggregate,
@@ -2930,7 +2935,7 @@ eusoilvoc:SoilBiologicalProcesses skos:narrower eusoilvoc:Bioturbation,
         eusoilvoc:SoilBiologicalActivity .
 
 eusoilvoc:SoilDegradation skos:narrower eusoilvoc:SoilCompaction,
-        eusoilvoc:SoilSalinization,
+        eusoilvoc:SoilSalinisation,
         eusoilvoc:SoilSealing,
         eusoilvoc:SoilSickness .
 
@@ -3050,7 +3055,7 @@ eusoilvoc:SoilImprovement a skos:Concept ;
     skos:exactMatch agrovoc:c_36315 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:LandRehabilitation,
-        eusoilvoc:SoilStabilization ;
+        eusoilvoc:SoilStabilisation ;
     skos:prefLabel "soil improvement"@en .
 
 eusoilvoc:SoilMorphologicalFeatures a skos:Concept ;
@@ -3217,7 +3222,7 @@ eusoilvoc:SoilConservation a skos:Concept ;
     skos:narrower eusoilvoc:ErosionControl,
         eusoilvoc:InSituSoilConservation,
         eusoilvoc:SoilConservationLegislation,
-        eusoilvoc:SoilStabilization ;
+        eusoilvoc:SoilStabilisation ;
     skos:prefLabel "soil conservation"@en .
 
 eusoilvoc:SoilDescription skos:narrower eusoilvoc:Pedon,
@@ -3273,8 +3278,8 @@ eusoilvoc:SoilTreatment a skos:Concept ;
         eusoilvoc:SoilHeating,
         eusoilvoc:SoilInjection,
         eusoilvoc:SoilInoculation,
-        eusoilvoc:SoilSolarization,
-        eusoilvoc:SoilSterilization ;
+        eusoilvoc:SoilSolarisation,
+        eusoilvoc:SoilSterilisation ;
     skos:prefLabel "soil treatment"@en .
 
 eusoilvoc:EcologicalSoilTypes a skos:Concept ;
@@ -3416,7 +3421,7 @@ eusoilvoc:SoilTillage skos:definition [ dcterms:source agrovoc:c_7771 ;
     skos:exactMatch agrovoc:c_7771 ;
     skos:narrower eusoilvoc:ConventionalTillage,
         eusoilvoc:DeepTillage,
-        eusoilvoc:Disking,
+        eusoilvoc:Discing,
         eusoilvoc:FieldPreparation,
         eusoilvoc:Harrowing,
         eusoilvoc:Planking,

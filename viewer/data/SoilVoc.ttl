@@ -282,9 +282,9 @@ eusoilvoc:SoilHealth a skos:Concept ;
     skos:closeMatch agrovoc:c_a9645d28,
         nalt:35826 ;
     skos:definition [ dcterms:source benchmarks:4036 ;
-            rdf:value "The physical, chemical and biological condition of the soil determining its capacity to function as a vital living system and to provide ecosystem services."@en ],
-        [ dcterms:source benchmarks:4036 ;
             rdf:value "Soil health is the ability of a soil, at a specified point in time, to function as a vital living system, within natural or managed ecosystem boundaries and land-use boundaries, to sustain plant and animal productivity and health, maintain or enhance water and air quality and to further provide ecosystem services in the long-term without (increased) trade-offs between ecosystem services."@en ],
+        [ dcterms:source benchmarks:4036 ;
+            rdf:value "The physical, chemical and biological condition of the soil determining its capacity to function as a vital living system and to provide ecosystem services."@en ],
         [ dcterms:source she:SoilHealth ;
             rdf:value "Soil health is defined as the actual capacity of a soil to perform its core functions and to provide ecosystem services."@en ],
         [ dcterms:source she:SoilHealth ;
@@ -3251,7 +3251,8 @@ eusoilvoc:DigitalSoilMapping a skos:Concept ;
     skos:prefLabel "digital soil mapping"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilSurveys .
 
-eusoilvoc:Disking a skos:Concept ;
+eusoilvoc:Discing a skos:Concept ;
+    skos:altLabel "disking"@en ;
     skos:broader eusoilvoc:SoilTillage ;
     skos:broaderTransitive eusoilvoc:SoilManagement,
         eusoilvoc:SoilTillage ;
@@ -3260,7 +3261,7 @@ eusoilvoc:Disking a skos:Concept ;
             rdf:value "Disking: Agricultural term to describe the process of using a disk, or harrow, to disturb the soil, setting back natural succession by cutting up grassy vegetation, thus preventing an area from maturing into briars, shrubs, and trees."@en ] ;
     skos:exactMatch agrovoc:c_24454 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "disking"@en ;
+    skos:prefLabel "discing"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilTillage .
 
 eusoilvoc:DrainageEquipment a skos:Concept ;
@@ -4082,13 +4083,14 @@ eusoilvoc:SoilMineralMatter a skos:Concept ;
     skos:prefLabel "soil mineral matter"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilComponents .
 
-eusoilvoc:SoilMineralization a skos:Concept ;
+eusoilvoc:SoilMineralisation a skos:Concept ;
+    skos:altLabel "soil mineralization"@en ;
     skos:broader eusoilvoc:SoilChemicalProcesses ;
     skos:broaderTransitive eusoilvoc:SoilChemicalProcesses,
         eusoilvoc:SoilProcesses ;
     skos:exactMatch spp:SoilMineralization ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil mineralization"@en ;
+    skos:prefLabel "soil mineralisation"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalProcesses .
 
 eusoilvoc:SoilMoisture a skos:Concept ;
@@ -4266,14 +4268,15 @@ eusoilvoc:SoilSlaking a skos:Concept ;
     skos:prefLabel "soil slaking"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPhysicalProcesses .
 
-eusoilvoc:SoilSolarization a skos:Concept ;
+eusoilvoc:SoilSolarisation a skos:Concept ;
+    skos:altLabel "soil solarization"@en ;
     skos:broader eusoilvoc:SoilTreatment ;
     skos:broaderTransitive eusoilvoc:SoilManagement,
         eusoilvoc:SoilTreatment ;
     skos:exactMatch agrovoc:c_33263,
         nalt:53677 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil solarization"@en ;
+    skos:prefLabel "soil solarisation"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilTreatment .
 
 eusoilvoc:SoilStructuralChange a skos:Concept ;
@@ -4758,7 +4761,7 @@ eusoilvoc:FrostHeave a skos:Concept ;
     skos:prefLabel "frost heave"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilMovement .
 
-eusoilvoc:GeometricMeanDiametre a skos:Concept ;
+eusoilvoc:GeometricMeanDiameter a skos:Concept ;
     skos:broader eusoilvoc:SoilAggregationIndex ;
     skos:broaderTransitive eusoilvoc:SoilAggregationIndex,
         eusoilvoc:SoilIndicators,
@@ -4767,7 +4770,7 @@ eusoilvoc:GeometricMeanDiametre a skos:Concept ;
             rdf:value "An aggregate-size index calculated as GMD = exp[sum(wi log xi) / sum(wi)], where xi is the mean diameter of a size class and wi is the aggregate mass in that class."@en ] ;
     skos:exactMatch spp:GeometricMeanDiameter ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "geometric mean diametre"@en ;
+    skos:prefLabel "geometric mean diameter"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilAggregationIndex .
 
 eusoilvoc:Grasses a skos:Concept ;
@@ -4946,7 +4949,7 @@ eusoilvoc:MainFieldPreparation a skos:Concept ;
     skos:prefLabel "main field preparation"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:FieldPreparation .
 
-eusoilvoc:MeanWeightDiametre a skos:Concept ;
+eusoilvoc:MeanWeightDiameter a skos:Concept ;
     skos:broader eusoilvoc:SoilAggregationIndex ;
     skos:broaderTransitive eusoilvoc:SoilAggregationIndex,
         eusoilvoc:SoilIndicators,
@@ -4955,7 +4958,7 @@ eusoilvoc:MeanWeightDiametre a skos:Concept ;
             rdf:value "The sum of the mean diameter of each aggregate-size fraction multiplied by that fraction’s proportion of the total sample mass: MWD = sum(xi wi)."@en ] ;
     skos:exactMatch spp:MeanWeightDiameter ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "mean weight diametre"@en ;
+    skos:prefLabel "mean weight diameter"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilAggregationIndex .
 
 eusoilvoc:MechanicalRatio a skos:Concept ;
@@ -6112,7 +6115,7 @@ eusoilvoc:SoilWaterCondensation a skos:Concept ;
     skos:prefLabel "soil water condensation"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilWaterPhysicalProcesses .
 
-eusoilvoc:SoilWaterEvapourationRate a skos:Concept ;
+eusoilvoc:SoilWaterEvaporationRate a skos:Concept ;
     skos:broader eusoilvoc:SoilWaterTransmissionIndex ;
     skos:broaderTransitive eusoilvoc:SoilIndicators,
         eusoilvoc:SoilStructureIndex,
@@ -6121,7 +6124,7 @@ eusoilvoc:SoilWaterEvapourationRate a skos:Concept ;
             rdf:value "The rate at which water is lost from soil by evaporation, expressed as water depth per unit time; in the book’s modeled profile of depth L, it is expressed as e = -L ∂θ/∂t, where θ is soil water content and t is time."@en ] ;
     skos:exactMatch spp:SoilWaterEvaporationRate ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil water evapouration rate"@en ;
+    skos:prefLabel "soil water evaporation rate"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilWaterTransmissionIndex .
 
 eusoilvoc:SoilWaterLoss a skos:Concept ;
@@ -6709,16 +6712,16 @@ eusoilvoc:DryConsistency a skos:Concept,
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilConsistency .
 
 eusoilvoc:DuneFixation a skos:Concept ;
-    skos:broader eusoilvoc:SoilStabilization ;
+    skos:broader eusoilvoc:SoilStabilisation ;
     skos:broaderTransitive eusoilvoc:SoilConservation,
         eusoilvoc:SoilImprovement,
         eusoilvoc:SoilManagement,
-        eusoilvoc:SoilStabilization ;
+        eusoilvoc:SoilStabilisation ;
     skos:exactMatch agrovoc:c_10483,
         inrae:c_530 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "dune fixation"@en ;
-    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilStabilization .
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilStabilisation .
 
 eusoilvoc:Enchytraeidae a skos:Concept ;
     skos:broader eusoilvoc:SoilMesofauna ;
@@ -8070,16 +8073,16 @@ eusoilvoc:SoilFilteringCapacity a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalCapacity .
 
 eusoilvoc:SoilFumigation a skos:Concept ;
-    skos:broader eusoilvoc:SoilSterilization,
+    skos:broader eusoilvoc:SoilSterilisation,
         eusoilvoc:SoilTreatment ;
     skos:broaderTransitive eusoilvoc:SoilManagement,
-        eusoilvoc:SoilSterilization,
+        eusoilvoc:SoilSterilisation,
         eusoilvoc:SoilTreatment ;
     skos:exactMatch agrovoc:c_34236,
         nalt:41750 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil fumigation"@en ;
-    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilSterilization,
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilSterilisation,
         eusoilvoc:SoilTreatment .
 
 eusoilvoc:SoilGravelContents a skos:Concept ;
@@ -9735,17 +9738,28 @@ eusoilvoc:ErodedSoils a skos:Concept ;
     skos:prefLabel "eroded soils"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:AnthropogenicSoils .
 
-eusoilvoc:Evapouration a skos:Concept ;
+eusoilvoc:Evaporation a skos:Concept ;
     skos:broader eusoilvoc:WaterInterchange ;
     skos:broaderTransitive eusoilvoc:PlanetaryPhenomena,
         eusoilvoc:WaterInterchange ;
-    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+    skos:definition [ dcterms:source gemet:3019,
+                "Collins English Dictionary, Harper Collins Publishers, Glasgow, 1994"@en ;
+            rdf:value "Conversion from a liquid or solid state to a vapour."@en ],
+        [ dcterms:source nalt:38816,
+                "National Oceanic and Atmospheric Administration Glossary" ;
+            rdf:value "The process of a liquid changing into a vapor or gas, usually water in meteorology."@en ],
+        [ dcterms:source agrovoc:c_2739 ;
+            rdf:value "The process of liquid water becoming water vapor, including vaporization from water surfaces, land surfaces, and snow fields, but not from leaf surfaces."@en ],
+        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "The conversion of water from the liquid state to the vapor state through the uptake of latent heat of vaporization."@en ] ;
-    skos:exactMatch spp:Evaporation ;
+    skos:exactMatch agrovoc:c_2739,
+        spp:Evaporation,
+        gemet:3019,
+        nalt:38816 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:SoilWaterEvapouration ;
-    skos:narrowerTransitive eusoilvoc:SoilWaterEvapouration ;
-    skos:prefLabel "evapouration"@en ;
+    skos:narrower eusoilvoc:SoilWaterEvaporation ;
+    skos:narrowerTransitive eusoilvoc:SoilWaterEvaporation ;
+    skos:prefLabel "evaporation"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:WaterInterchange .
 
 eusoilvoc:FenlandSoils a skos:Concept ;
@@ -11366,7 +11380,8 @@ eusoilvoc:SoilSettlement a skos:Concept ;
     skos:prefLabel "soil settlement"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilSubsidence .
 
-eusoilvoc:SoilSterilization a skos:Concept ;
+eusoilvoc:SoilSterilisation a skos:Concept ;
+    skos:altLabel "soil sterilization"@en ;
     skos:broader eusoilvoc:SoilTreatment ;
     skos:broaderTransitive eusoilvoc:SoilManagement,
         eusoilvoc:SoilTreatment ;
@@ -11375,7 +11390,7 @@ eusoilvoc:SoilSterilization a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilFumigation ;
     skos:narrowerTransitive eusoilvoc:SoilFumigation ;
-    skos:prefLabel "soil sterilization"@en ;
+    skos:prefLabel "soil sterilisation"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilTreatment .
 
 eusoilvoc:SoilStructuralCrusts a skos:Concept ;
@@ -14283,7 +14298,6 @@ eusoilvoc:Rhizobacteria a skos:Concept ;
         eusoilvoc:SoilMicroorganisms,
         eusoilvoc:SoilOrganisms,
         eusoilvoc:SoilSubstance ;
-    skos:closeMatch nalt:123183 ;
     skos:definition [ dcterms:source agrovoc:c_25068,
                 <https://en.wikipedia.org/wiki/Rhizobacteria> ;
             rdf:value "Rhizobacteria are root-associated bacteria that can have a detrimental (parasitic varieties), neutral or beneficial effect on plant growth."@en ] ;
@@ -14443,22 +14457,6 @@ eusoilvoc:SoilChargeDensity a skos:Concept ;
     skos:narrowerTransitive eusoilvoc:IntrinsicChargeDensity ;
     skos:prefLabel "soil charge density"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChargeProperties .
-
-eusoilvoc:SoilChemicalDegradation a skos:Concept ;
-    skos:broader eusoilvoc:SoilDegradation ;
-    skos:broaderTransitive eusoilvoc:SoilChemicalDegradativeProcesses,
-        eusoilvoc:SoilChemicalProcesses,
-        eusoilvoc:SoilDegradation,
-        eusoilvoc:SoilPhysicalDegradativeProcesses,
-        eusoilvoc:SoilPhysicalProcesses,
-        eusoilvoc:SoilProcesses,
-        eusoilvoc:SoilThreats ;
-    skos:definition [ dcterms:source she:SoilChemicalDegradation ;
-            rdf:value "Soil chemical degradation is characterised by changes in soil processes."@en ] ;
-    skos:exactMatch she:SoilChemicalDegradation ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil chemical degradation"@en ;
-    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilDegradation .
 
 eusoilvoc:SoilCracking a skos:Concept ;
     skos:broader eusoilvoc:SoilFailure,
@@ -14629,23 +14627,6 @@ eusoilvoc:SoilPoreTortuosity a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilPorePhysicalProperties,
         eusoilvoc:SoilStructureIndex .
 
-eusoilvoc:SoilSalinisation a skos:Concept ;
-    skos:broader eusoilvoc:SoilDegradation ;
-    skos:broaderTransitive eusoilvoc:SoilChemicalDegradativeProcesses,
-        eusoilvoc:SoilChemicalProcesses,
-        eusoilvoc:SoilDegradation,
-        eusoilvoc:SoilPhysicalDegradativeProcesses,
-        eusoilvoc:SoilPhysicalProcesses,
-        eusoilvoc:SoilProcesses,
-        eusoilvoc:SoilThreats ;
-    skos:closeMatch nalt:61970 ;
-    skos:definition [ dcterms:source she:SoilSalinisation ;
-            rdf:value "Soil salinisation is the increase in soluble salt concentration in soil."@en ] ;
-    skos:exactMatch she:SoilSalinisation ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil salinisation"@en ;
-    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilDegradation .
-
 eusoilvoc:SoilSickness a skos:Concept ;
     skos:broader eusoilvoc:SoilDegradation ;
     skos:broaderTransitive eusoilvoc:SoilChemicalDegradativeProcesses,
@@ -14684,19 +14665,24 @@ eusoilvoc:SoilSorption a skos:Concept ;
         eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilSurfaceProperties .
 
-eusoilvoc:SoilStabilization a skos:Concept ;
+eusoilvoc:SoilStabilisation a skos:Concept ;
+    skos:altLabel "soil stabilization"@en ;
     skos:broader eusoilvoc:SoilConservation,
         eusoilvoc:SoilImprovement ;
     skos:broaderTransitive eusoilvoc:SoilConservation,
         eusoilvoc:SoilImprovement,
         eusoilvoc:SoilManagement ;
     skos:closeMatch inrae:c_530 ;
+    skos:definition [ dcterms:source gemet:7894,
+                "Bates, R.L.; Jackson, J.A., Glossary of Geology - Third Edition, American Geological Institute, Alexandria, USA, 1987"@en ;
+            rdf:value "Chemical or mechanical treatment designed to increase or maintain the stability of a soil mass or otherwise to improve its engineering properties, as by increasing its shear strength, reducing its compressibility, or decreasing its tendency to absorb water. Stabilization methods include physical compaction and treatment with cement, lime, and bitumen."@en ] ;
     skos:exactMatch agrovoc:c_7171,
+        gemet:7894,
         nalt:62345 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:DuneFixation ;
     skos:narrowerTransitive eusoilvoc:DuneFixation ;
-    skos:prefLabel "soil stabilization"@en ;
+    skos:prefLabel "soil stabilisation"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilConservation,
         eusoilvoc:SoilImprovement .
 
@@ -14727,10 +14713,10 @@ eusoilvoc:SoilTrafficability a skos:Concept ;
         eusoilvoc:SoilFunctions,
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties ;
-    skos:definition [ dcterms:source agrovoc:c_093ee711 ;
-            rdf:value "Characterize the bearing capacity of soil, temporally dependent on the soil moisture. Overload causes unfavorable soil compaction."@en ],
-        [ dcterms:source spp:SoilTrafficability ;
-            rdf:value "ability to withstand vehicular traffic"@en ] ;
+    skos:definition [ dcterms:source spp:SoilTrafficability ;
+            rdf:value "ability to withstand vehicular traffic"@en ],
+        [ dcterms:source agrovoc:c_093ee711 ;
+            rdf:value "Characterize the bearing capacity of soil, temporally dependent on the soil moisture. Overload causes unfavorable soil compaction."@en ] ;
     skos:exactMatch agrovoc:c_093ee711,
         spp:SoilTrafficability ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -14755,10 +14741,10 @@ eusoilvoc:SoilWaterAvailability a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilAgriculturalFunctions,
         eusoilvoc:SoilWaterPhysicalProperties .
 
-eusoilvoc:SoilWaterEvapouration a skos:Concept ;
-    skos:broader eusoilvoc:Evapouration,
+eusoilvoc:SoilWaterEvaporation a skos:Concept ;
+    skos:broader eusoilvoc:Evaporation,
         eusoilvoc:SoilWaterPhysicalProcesses ;
-    skos:broaderTransitive eusoilvoc:Evapouration,
+    skos:broaderTransitive eusoilvoc:Evaporation,
         eusoilvoc:PlanetaryPhenomena,
         eusoilvoc:SoilPhysicalProcesses,
         eusoilvoc:SoilProcesses,
@@ -14768,8 +14754,8 @@ eusoilvoc:SoilWaterEvapouration a skos:Concept ;
             rdf:value "The loss of water from bare soil to the atmosphere through conversion of liquid water to water vapor."@en ] ;
     skos:exactMatch spp:SoilWaterEvaporation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil water evapouration"@en ;
-    eusoilvoc:skosmosHierarchyParent eusoilvoc:Evapouration,
+    skos:prefLabel "soil water evaporation"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:Evaporation,
         eusoilvoc:SoilWaterPhysicalProcesses .
 
 eusoilvoc:SolonchaksFAO a skos:Concept ;
@@ -15429,10 +15415,10 @@ eusoilvoc:SoilImprovement a skos:Concept ;
         gemet:7863 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:LandRehabilitation,
-        eusoilvoc:SoilStabilization ;
+        eusoilvoc:SoilStabilisation ;
     skos:narrowerTransitive eusoilvoc:DuneFixation,
         eusoilvoc:LandRehabilitation,
-        eusoilvoc:SoilStabilization ;
+        eusoilvoc:SoilStabilisation ;
     skos:prefLabel "soil improvement"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilManagement .
 
@@ -15514,7 +15500,8 @@ eusoilvoc:SoilRelativeDensity a skos:Concept ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilDensity,
         eusoilvoc:SoilStrengthIndex .
 
-eusoilvoc:SoilSalinization a skos:Concept ;
+eusoilvoc:SoilSalinisation a skos:Concept ;
+    skos:altLabel "soil salinization"@en ;
     skos:broader eusoilvoc:SoilChemicalProcesses,
         eusoilvoc:SoilDegradation ;
     skos:broaderTransitive eusoilvoc:SoilChemicalDegradativeProcesses,
@@ -15524,7 +15511,9 @@ eusoilvoc:SoilSalinization a skos:Concept ;
         eusoilvoc:SoilPhysicalProcesses,
         eusoilvoc:SoilProcesses,
         eusoilvoc:SoilThreats ;
-    skos:definition [ dcterms:source iso11074:3.472 ;
+    skos:definition [ dcterms:source she:SoilSalinisation ;
+            rdf:value "Soil salinisation is the increase in soluble salt concentration in soil."@en ],
+        [ dcterms:source iso11074:3.472 ;
             rdf:value "<span class=\"sts-tbx-entailedTerm\"><a href=\"https://data.geoscience.earth/ncl/ISO11074v2025/3.8\">accumulation <span class=\"sts-tbx-entailedTerm-num\">(3.8)</span></a></span> of water-soluble salts in soil"@en ],
         [ dcterms:source agrovoc:c_35321 ;
             rdf:value "Soil salinization is defined as the increase in water-soluble salts in soil which is responsible for increasing the osmotic pressure of the  soil.  In turn,  this negatively affects plant growth because less water is made available to plants."@en ] ;
@@ -15532,9 +15521,10 @@ eusoilvoc:SoilSalinization a skos:Concept ;
         spp:SoilSalinization,
         inrae:c_836,
         iso11074:3.472,
-        nalt:61970 ;
+        nalt:61970,
+        she:SoilSalinisation ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil salinization"@en ;
+    skos:prefLabel "soil salinisation"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalProcesses,
         eusoilvoc:SoilDegradation .
 
@@ -15573,6 +15563,22 @@ eusoilvoc:SoilSealingThickness a skos:Concept,
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil sealing thickness"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilSealing .
+
+eusoilvoc:SoilSodification a skos:Concept ;
+    skos:altLabel "sodification"@en ;
+    skos:broader eusoilvoc:SoilChemicalDegradation ;
+    skos:broaderTransitive eusoilvoc:SoilChemicalDegradation,
+        eusoilvoc:SoilChemicalDegradativeProcesses,
+        eusoilvoc:SoilChemicalProcesses,
+        eusoilvoc:SoilDegradation,
+        eusoilvoc:SoilPhysicalDegradativeProcesses,
+        eusoilvoc:SoilPhysicalProcesses,
+        eusoilvoc:SoilProcesses,
+        eusoilvoc:SoilThreats ;
+    skos:closeMatch she:Sodification ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "soil sodification"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalDegradation .
 
 eusoilvoc:SoilSolid a skos:Concept ;
     skos:broader eusoilvoc:SoilComponents ;
@@ -15635,11 +15641,11 @@ eusoilvoc:SoilWaterRegimes a skos:Concept ;
         eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilWaterPhysicalProperties ;
-    skos:definition [ dcterms:source <http://agclass.nal.usda.gov/mtwdk.exe?k=default&l=60&w=11566&n=1&s=5&t=2>,
-                agrovoc:c_7211 ;
-            rdf:value "The presence or absence either of ground water or of plant available water (i.e., water held at a tension of less than 1500 kPa) in the soil or in specific horizons during periods of the year. A generally accepted classification of soil moisture regimes from wet to dry includes aquic, udic, ustic, aridic, and xeric."@en ],
-        [ dcterms:source nalt:11565,
+    skos:definition [ dcterms:source nalt:11565,
                 "NAL Thesaurus Staff" ;
+            rdf:value "The presence or absence either of ground water or of plant available water (i.e., water held at a tension of less than 1500 kPa) in the soil or in specific horizons during periods of the year. A generally accepted classification of soil moisture regimes from wet to dry includes aquic, udic, ustic, aridic, and xeric."@en ],
+        [ dcterms:source <http://agclass.nal.usda.gov/mtwdk.exe?k=default&l=60&w=11566&n=1&s=5&t=2>,
+                agrovoc:c_7211 ;
             rdf:value "The presence or absence either of ground water or of plant available water (i.e., water held at a tension of less than 1500 kPa) in the soil or in specific horizons during periods of the year. A generally accepted classification of soil moisture regimes from wet to dry includes aquic, udic, ustic, aridic, and xeric."@en ] ;
     skos:exactMatch agrovoc:c_7211,
         nalt:11565 ;
@@ -16319,6 +16325,24 @@ eusoilvoc:PhosphorusContent a skos:Concept ;
     skos:prefLabel "phosphorus content"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilChemicophysicalProperties .
+
+eusoilvoc:SoilChemicalDegradation a skos:Concept ;
+    skos:broader eusoilvoc:SoilDegradation ;
+    skos:broaderTransitive eusoilvoc:SoilChemicalDegradativeProcesses,
+        eusoilvoc:SoilChemicalProcesses,
+        eusoilvoc:SoilDegradation,
+        eusoilvoc:SoilPhysicalDegradativeProcesses,
+        eusoilvoc:SoilPhysicalProcesses,
+        eusoilvoc:SoilProcesses,
+        eusoilvoc:SoilThreats ;
+    skos:definition [ dcterms:source she:SoilChemicalDegradation ;
+            rdf:value "Soil chemical degradation is characterised by changes in soil processes."@en ] ;
+    skos:exactMatch she:SoilChemicalDegradation ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:SoilSodification ;
+    skos:narrowerTransitive eusoilvoc:SoilSodification ;
+    skos:prefLabel "soil chemical degradation"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilDegradation .
 
 eusoilvoc:SoilChemicalReaction a skos:Concept ;
     skos:broader eusoilvoc:SoilChemicalProcesses ;
@@ -17097,9 +17121,9 @@ eusoilvoc:EcosystemServices a skos:Concept ;
     skos:closeMatch inrae:c_1611,
         iso11074:3.140 ;
     skos:definition [ dcterms:source benchmarks:ecosystem-services ;
-            rdf:value "The contributions of ecosystems (i.e. living systems) to human well-being."@en ],
-        [ dcterms:source benchmarks:ecosystem-services ;
             rdf:value "Indirect contributions of ecosystems to the economic, social,culturaland other benefits that people derive from those ecosystems."@en ],
+        [ dcterms:source benchmarks:ecosystem-services ;
+            rdf:value "The contributions of ecosystems (i.e. living systems) to human well-being."@en ],
         [ dcterms:source she:EcosystemServices ;
             rdf:value "Ecosystem services can be summarised as the goods and benefits people and societies receive from ecosystems."@en ],
         [ dcterms:source gemet:15138 ;
@@ -17333,13 +17357,13 @@ eusoilvoc:SoilInorganicCarbon a skos:Concept,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilSubstance,
         eusoilvoc:SoilTotalCarbon ;
-    skos:definition [ dcterms:source nalt:338945,
+    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Carinorg ;
+            rdf:value "Inorganic carbon in soil primarily consists of carbonates like calcium carbonate and magnesium carbonate. It contributes to soil pH buffering and is a significant feature of arid and calcareous soils. Excess inorganic carbon can immobilize certain nutrients, requiring careful management in agricultural systems. Source: Soil Science Society of America."@en ],
+        [ dcterms:source nalt:338945,
                 "NAL Thesaurus Staff" ;
             rdf:value "Soil inorganic carbon (SIC) is the result of mineral weathering. It is derived from soil carbonates and usually concentrated below the topsoil. Most of SIC is in the form of calcium carbonate (CaCO3) in lower soil layers of arid and semi-arid regions of the world."@en ],
         [ dcterms:source agrovoc:c_e3783c76 ;
-            rdf:value "Content or amount of total inorganic carbon in soil"@en ],
-        [ dcterms:source glosis_cl:physioChemicalPropertyCode-Carinorg ;
-            rdf:value "Inorganic carbon in soil primarily consists of carbonates like calcium carbonate and magnesium carbonate. It contributes to soil pH buffering and is a significant feature of arid and calcareous soils. Excess inorganic carbon can immobilize certain nutrients, requiring careful management in agricultural systems. Source: Soil Science Society of America."@en ] ;
+            rdf:value "Content or amount of total inorganic carbon in soil"@en ] ;
     skos:exactMatch agrovoc:c_e3783c76,
         glosis_cl:physioChemicalPropertyCode-Carinorg,
         nalt:338945 ;
@@ -17452,10 +17476,10 @@ eusoilvoc:Zinc a skos:Concept ;
         eusoilvoc:SoilNutrients,
         eusoilvoc:SoilProperties,
         eusoilvoc:SoilSubstance ;
-    skos:definition [ dcterms:source gemet:9412,
-                "Collins English Dictionary, Harper Collins Publishers, Glasgow, 1994"@en ;
+    skos:definition [ dcterms:source agrovoc:c_8517 ;
             rdf:value "A brittle bluish-white metallic element that becomes coated with a corrosion-resistant layer in moist air and occurs chiefly in sphalerite and smithsonite. It is a constituent of several alloys, especially brass and nickel-silver, and is used in die-casting, galvanizing metals, and in battery electrodes."@en ],
-        [ dcterms:source agrovoc:c_8517 ;
+        [ dcterms:source gemet:9412,
+                "Collins English Dictionary, Harper Collins Publishers, Glasgow, 1994"@en ;
             rdf:value "A brittle bluish-white metallic element that becomes coated with a corrosion-resistant layer in moist air and occurs chiefly in sphalerite and smithsonite. It is a constituent of several alloys, especially brass and nickel-silver, and is used in die-casting, galvanizing metals, and in battery electrodes."@en ] ;
     skos:exactMatch agrovoc:c_8517,
         inrae:c_15783,
@@ -19987,14 +20011,14 @@ eusoilvoc:SoilConservation a skos:Concept ;
     skos:narrower eusoilvoc:ErosionControl,
         eusoilvoc:InSituSoilConservation,
         eusoilvoc:SoilConservationLegislation,
-        eusoilvoc:SoilStabilization ;
+        eusoilvoc:SoilStabilisation ;
     skos:narrowerTransitive eusoilvoc:DuneFixation,
         eusoilvoc:ErosionControl,
         eusoilvoc:ErosionControlPlants,
         eusoilvoc:GullyControl,
         eusoilvoc:InSituSoilConservation,
         eusoilvoc:SoilConservationLegislation,
-        eusoilvoc:SoilStabilization ;
+        eusoilvoc:SoilStabilisation ;
     skos:prefLabel "soil conservation"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilManagement .
 
@@ -20101,13 +20125,13 @@ eusoilvoc:SoilAggregationIndex a skos:Concept ;
         eusoilvoc:SoilStructureIndex ;
     skos:exactMatch spp:SoilAggregationIndex ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:GeometricMeanDiametre,
-        eusoilvoc:MeanWeightDiametre,
+    skos:narrower eusoilvoc:GeometricMeanDiameter,
+        eusoilvoc:MeanWeightDiameter,
         eusoilvoc:PercentWaterStableAggregation,
         eusoilvoc:SoilAggregateSizeDistribution,
         eusoilvoc:SoilAggregateStrength ;
-    skos:narrowerTransitive eusoilvoc:GeometricMeanDiametre,
-        eusoilvoc:MeanWeightDiametre,
+    skos:narrowerTransitive eusoilvoc:GeometricMeanDiameter,
+        eusoilvoc:MeanWeightDiameter,
         eusoilvoc:PercentWaterStableAggregation,
         eusoilvoc:SoilAggregateSizeDistribution,
         eusoilvoc:SoilAggregateStrength ;
@@ -20822,9 +20846,9 @@ eusoilvoc:pHProcedure-pHH2O a skos:Concept,
 
 eusoilvoc:LandCover a skos:Concept ;
     skos:definition [ dcterms:source benchmarks:land-cover ;
-            rdf:value "The physical and biological cover of the earth’s surface."@en ],
-        [ dcterms:source benchmarks:land-cover ;
             rdf:value "LAND COVER(LC) = physical cover (“material”) observed at the earth’s surface. The main classes in the LUCAS land cover nomenclature are as follows:A00 Artificial land B00 Cropland C00 Woodland D00 Shrubland E00 Grassland F00 Bareland G00 Water H00 Wetland"@en ],
+        [ dcterms:source benchmarks:land-cover ;
+            rdf:value "The physical and biological cover of the earth’s surface."@en ],
         [ dcterms:source gemet:4612 ;
             rdf:value "Land cover is the physical state of the land surface. It is the combination of vegetation, soil, rock, water and human-made structures, which make up the earth's landscape. The land cover is the interface between the earth's crust and the atmosphere, influencing the exchange of energy and matter in the climatic system and biogeochemical cycles."@en ],
         [ dcterms:source nalt:149093,
@@ -21445,16 +21469,16 @@ eusoilvoc:SoilTreatment a skos:Concept ;
         eusoilvoc:SoilHeating,
         eusoilvoc:SoilInjection,
         eusoilvoc:SoilInoculation,
-        eusoilvoc:SoilSolarization,
-        eusoilvoc:SoilSterilization ;
+        eusoilvoc:SoilSolarisation,
+        eusoilvoc:SoilSterilisation ;
     skos:narrowerTransitive eusoilvoc:RadioactiveDecontaminationSoil,
         eusoilvoc:SoilDisinfection,
         eusoilvoc:SoilFumigation,
         eusoilvoc:SoilHeating,
         eusoilvoc:SoilInjection,
         eusoilvoc:SoilInoculation,
-        eusoilvoc:SoilSolarization,
-        eusoilvoc:SoilSterilization ;
+        eusoilvoc:SoilSolarisation,
+        eusoilvoc:SoilSterilisation ;
     skos:prefLabel "soil treatment"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilManagement .
 
@@ -21966,7 +21990,7 @@ eusoilvoc:SoilWaterTransmissionIndex a skos:Concept ;
     skos:narrower eusoilvoc:SoilDrainage,
         eusoilvoc:SoilHydraulicConductivity,
         eusoilvoc:SoilHydraulicGradient,
-        eusoilvoc:SoilWaterEvapourationRate,
+        eusoilvoc:SoilWaterEvaporationRate,
         eusoilvoc:SoilWaterInfiltrationCapacity,
         eusoilvoc:SoilWaterInfiltrationRate ;
     skos:narrowerTransitive eusoilvoc:Biodrainage,
@@ -21977,7 +22001,7 @@ eusoilvoc:SoilWaterTransmissionIndex a skos:Concept ;
         eusoilvoc:SoilDrainage,
         eusoilvoc:SoilHydraulicConductivity,
         eusoilvoc:SoilHydraulicGradient,
-        eusoilvoc:SoilWaterEvapourationRate,
+        eusoilvoc:SoilWaterEvaporationRate,
         eusoilvoc:SoilWaterInfiltrationCapacity,
         eusoilvoc:SoilWaterInfiltrationRate,
         eusoilvoc:SoilWaterInfiltrationRateNumeric,
@@ -22125,6 +22149,62 @@ eusoilvoc:SoilSciences a skos:Concept ;
         eusoilvoc:UniversalSoilLossEquation ;
     skos:prefLabel "soil sciences"@en ;
     skos:topConceptOf <https://w3id.org/eusoilvoc> .
+
+eusoilvoc:SoilDegradation a skos:Concept ;
+    skos:broader eusoilvoc:SoilChemicalDegradativeProcesses,
+        eusoilvoc:SoilPhysicalDegradativeProcesses,
+        eusoilvoc:SoilThreats ;
+    skos:broaderTransitive eusoilvoc:SoilChemicalDegradativeProcesses,
+        eusoilvoc:SoilChemicalProcesses,
+        eusoilvoc:SoilPhysicalDegradativeProcesses,
+        eusoilvoc:SoilPhysicalProcesses,
+        eusoilvoc:SoilProcesses,
+        eusoilvoc:SoilThreats ;
+    skos:definition [ dcterms:source benchmarks:soil-degradation ;
+            rdf:value "Negative process often accelerated by human activities (improper soil use and cultivation practices, soil sealing) that leads to deterioration of soil properties and functions or destruction of soil as a whole, e.g. compaction, erosion, salinisation."@en ],
+        [ dcterms:source she:SoilDegradation ;
+            rdf:value "Soil degradation can be defined as a decline in soil quality, resulting in the reduced functioning of the soil."@en ],
+        [ dcterms:source gemet:7857,
+                "Gilpin, A., Dictionary of Environment and sustainable development, John Wiley & Sons, Chichester, 1996"@en ;
+            rdf:value "Soil may deteriorate either by physical movement of soil particles from a given site or by depletion of the water-soluble elements in the soil which contribute to the nourishment of crop, plants, grasses, trees, and other economically usable vegetation. The physical movement generally is referred to as erosion. Wind, water, glacial ice, animals and tools in use may be agents of erosion."@en ],
+        [ dcterms:source nalt:958,
+                "NAL Thesaurus Staff" ;
+            rdf:value "Soil degradation is defined as the process, which lowers (quantitatively or qualitatively) the current and/or the potential capability of soil to produce goods or services."@en ],
+        [ dcterms:source agrovoc:c_7168 ;
+            rdf:value "Soil degradation refers to the diminishing capacity of the  soil to provide ecosystem goods and services as desired by its stakeholders."@en ],
+        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A decline in soil quality such that the soil cannot perform one or several of its principal functions."@en ] ;
+    skos:exactMatch agrovoc:c_7168,
+        spp:SoilDegradation,
+        inrae:c_960,
+        gemet:7857,
+        nalt:958,
+        benchmarks:soil-degradation,
+        she:SoilDegradation ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:SoilBiologicalDegradation,
+        eusoilvoc:SoilChemicalDegradation,
+        eusoilvoc:SoilCompaction,
+        eusoilvoc:SoilEcologicalDegradation,
+        eusoilvoc:SoilPhysicalDegradation,
+        eusoilvoc:SoilSalinisation,
+        eusoilvoc:SoilSealing,
+        eusoilvoc:SoilSickness ;
+    skos:narrowerTransitive eusoilvoc:SoilBiologicalDegradation,
+        eusoilvoc:SoilChemicalDegradation,
+        eusoilvoc:SoilCompaction,
+        eusoilvoc:SoilEcologicalDegradation,
+        eusoilvoc:SoilPhysicalDegradation,
+        eusoilvoc:SoilSalinisation,
+        eusoilvoc:SoilSealing,
+        eusoilvoc:SoilSealingConsistence,
+        eusoilvoc:SoilSealingThickness,
+        eusoilvoc:SoilSickness,
+        eusoilvoc:SoilSodification ;
+    skos:prefLabel "soil degradation"@en ;
+    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalDegradativeProcesses,
+        eusoilvoc:SoilPhysicalDegradativeProcesses,
+        eusoilvoc:SoilThreats .
 
 eusoilvoc:SoilPhysicalCapacity a skos:Concept ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
@@ -22406,73 +22486,16 @@ eusoilvoc:SoilChemicalDegradativeProcesses a skos:Concept ;
         eusoilvoc:SoilLeaching,
         eusoilvoc:SoilPhysicalDegradation,
         eusoilvoc:SoilSalinisation,
-        eusoilvoc:SoilSalinization,
         eusoilvoc:SoilSealing,
         eusoilvoc:SoilSealingConsistence,
         eusoilvoc:SoilSealingThickness,
         eusoilvoc:SoilSickness,
+        eusoilvoc:SoilSodification,
         eusoilvoc:SoilStructuralDecline,
         eusoilvoc:SoilSurfaceSealFormation,
         eusoilvoc:SoilSurfaceSealing ;
     skos:prefLabel "soil chemical degradative processes"@en ;
     eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalProcesses .
-
-eusoilvoc:SoilDegradation a skos:Concept ;
-    skos:broader eusoilvoc:SoilChemicalDegradativeProcesses,
-        eusoilvoc:SoilPhysicalDegradativeProcesses,
-        eusoilvoc:SoilThreats ;
-    skos:broaderTransitive eusoilvoc:SoilChemicalDegradativeProcesses,
-        eusoilvoc:SoilChemicalProcesses,
-        eusoilvoc:SoilPhysicalDegradativeProcesses,
-        eusoilvoc:SoilPhysicalProcesses,
-        eusoilvoc:SoilProcesses,
-        eusoilvoc:SoilThreats ;
-    skos:definition [ dcterms:source benchmarks:soil-degradation ;
-            rdf:value "Negative process often accelerated by human activities (improper soil use and cultivation practices, soil sealing) that leads to deterioration of soil properties and functions or destruction of soil as a whole, e.g. compaction, erosion, salinisation."@en ],
-        [ dcterms:source she:SoilDegradation ;
-            rdf:value "Soil degradation can be defined as a decline in soil quality, resulting in the reduced functioning of the soil."@en ],
-        [ dcterms:source gemet:7857,
-                "Gilpin, A., Dictionary of Environment and sustainable development, John Wiley & Sons, Chichester, 1996"@en ;
-            rdf:value "Soil may deteriorate either by physical movement of soil particles from a given site or by depletion of the water-soluble elements in the soil which contribute to the nourishment of crop, plants, grasses, trees, and other economically usable vegetation. The physical movement generally is referred to as erosion. Wind, water, glacial ice, animals and tools in use may be agents of erosion."@en ],
-        [ dcterms:source nalt:958,
-                "NAL Thesaurus Staff" ;
-            rdf:value "Soil degradation is defined as the process, which lowers (quantitatively or qualitatively) the current and/or the potential capability of soil to produce goods or services."@en ],
-        [ dcterms:source agrovoc:c_7168 ;
-            rdf:value "Soil degradation refers to the diminishing capacity of the  soil to provide ecosystem goods and services as desired by its stakeholders."@en ],
-        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "A decline in soil quality such that the soil cannot perform one or several of its principal functions."@en ] ;
-    skos:exactMatch agrovoc:c_7168,
-        spp:SoilDegradation,
-        inrae:c_960,
-        gemet:7857,
-        nalt:958,
-        benchmarks:soil-degradation,
-        she:SoilDegradation ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:SoilBiologicalDegradation,
-        eusoilvoc:SoilChemicalDegradation,
-        eusoilvoc:SoilCompaction,
-        eusoilvoc:SoilEcologicalDegradation,
-        eusoilvoc:SoilPhysicalDegradation,
-        eusoilvoc:SoilSalinisation,
-        eusoilvoc:SoilSalinization,
-        eusoilvoc:SoilSealing,
-        eusoilvoc:SoilSickness ;
-    skos:narrowerTransitive eusoilvoc:SoilBiologicalDegradation,
-        eusoilvoc:SoilChemicalDegradation,
-        eusoilvoc:SoilCompaction,
-        eusoilvoc:SoilEcologicalDegradation,
-        eusoilvoc:SoilPhysicalDegradation,
-        eusoilvoc:SoilSalinisation,
-        eusoilvoc:SoilSalinization,
-        eusoilvoc:SoilSealing,
-        eusoilvoc:SoilSealingConsistence,
-        eusoilvoc:SoilSealingThickness,
-        eusoilvoc:SoilSickness ;
-    skos:prefLabel "soil degradation"@en ;
-    eusoilvoc:skosmosHierarchyParent eusoilvoc:SoilChemicalDegradativeProcesses,
-        eusoilvoc:SoilPhysicalDegradativeProcesses,
-        eusoilvoc:SoilThreats .
 
 eusoilvoc:SoilPorosity a skos:Concept,
         sosa:ObservableProperty ;
@@ -22601,8 +22624,8 @@ eusoilvoc:WaterInterchange a skos:Concept ;
             rdf:value "The transfer of water between the principal water pools, forms, or environments of the hydrologic cycle."@en ] ;
     skos:exactMatch spp:WaterInterchange ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Evapotranspiration,
-        eusoilvoc:Evapouration,
+    skos:narrower eusoilvoc:Evaporation,
+        eusoilvoc:Evapotranspiration,
         eusoilvoc:Interflow,
         eusoilvoc:OverlandFlow,
         eusoilvoc:Percolation,
@@ -22610,8 +22633,8 @@ eusoilvoc:WaterInterchange a skos:Concept ;
         eusoilvoc:Runoff,
         eusoilvoc:SoilWaterInfiltration,
         eusoilvoc:Transpiration ;
-    skos:narrowerTransitive eusoilvoc:Evapotranspiration,
-        eusoilvoc:Evapouration,
+    skos:narrowerTransitive eusoilvoc:Evaporation,
+        eusoilvoc:Evapotranspiration,
         eusoilvoc:FluxControlledWaterInfiltration,
         eusoilvoc:Fog,
         eusoilvoc:Hail,
@@ -22625,7 +22648,7 @@ eusoilvoc:WaterInterchange a skos:Concept ;
         eusoilvoc:Runoff,
         eusoilvoc:Sleet,
         eusoilvoc:Snow,
-        eusoilvoc:SoilWaterEvapouration,
+        eusoilvoc:SoilWaterEvaporation,
         eusoilvoc:SoilWaterInfiltration,
         eusoilvoc:SurfaceRunoff,
         eusoilvoc:Transpiration ;
@@ -22642,8 +22665,8 @@ eusoilvoc:PlanetaryPhenomena a skos:Concept ;
         eusoilvoc:WaterInterchange,
         eusoilvoc:Weather ;
     skos:narrowerTransitive eusoilvoc:Climate,
+        eusoilvoc:Evaporation,
         eusoilvoc:Evapotranspiration,
-        eusoilvoc:Evapouration,
         eusoilvoc:FloodDuration,
         eusoilvoc:FloodFrequency,
         eusoilvoc:Floods,
@@ -22662,7 +22685,7 @@ eusoilvoc:PlanetaryPhenomena a skos:Concept ;
         eusoilvoc:Season,
         eusoilvoc:Sleet,
         eusoilvoc:Snow,
-        eusoilvoc:SoilWaterEvapouration,
+        eusoilvoc:SoilWaterEvaporation,
         eusoilvoc:SoilWaterInfiltration,
         eusoilvoc:SurfaceRunoff,
         eusoilvoc:Transpiration,
@@ -23134,9 +23157,9 @@ eusoilvoc:SoilErosion a skos:Concept ;
     skos:definition [ dcterms:source benchmarks:soil-erosion ;
             rdf:value "The wearing away of the land surface by water, wind, ice, gravity or other natural or anthropogenic agents that abrade, detach and remove soil particles or rock material from one point on the earth’s surface, for deposition elsewhere."@en ],
         [ dcterms:source she:SoilErosion ;
-            rdf:value "Soil erosion refers to the loss of fertile topsoil after erosive rain events on sensitive soils, largely in the absence of sufficient vegetation cover."@en ],
-        [ dcterms:source she:SoilErosion ;
             rdf:value "Soil erosion is the detachment, transport and sedimentation of soil particles by water or by wind."@en ],
+        [ dcterms:source she:SoilErosion ;
+            rdf:value "Soil erosion refers to the loss of fertile topsoil after erosive rain events on sensitive soils, largely in the absence of sufficient vegetation cover."@en ],
         [ dcterms:source gemet:7858,
                 "Bates, R.L.; Jackson, J.A., Glossary of Geology - Third Edition, American Geological Institute, Alexandria, USA, 1987"@en ;
             rdf:value "Detachment and movement of topsoil or soil material from the upper part of the profile, by the action of wind or running water, especially as a result of changes brought about by human activity, such as unsuitable or mismanaged agriculture."@en ] ;
@@ -23951,11 +23974,11 @@ eusoilvoc:SoilPhysicalDegradativeProcesses a skos:Concept ;
         eusoilvoc:SoilErosionTotalAreaAffected,
         eusoilvoc:SoilPhysicalDegradation,
         eusoilvoc:SoilSalinisation,
-        eusoilvoc:SoilSalinization,
         eusoilvoc:SoilSealing,
         eusoilvoc:SoilSealingConsistence,
         eusoilvoc:SoilSealingThickness,
         eusoilvoc:SoilSickness,
+        eusoilvoc:SoilSodification,
         eusoilvoc:SoilStructuralDecline,
         eusoilvoc:SoilSurfaceSealFormation,
         eusoilvoc:SoilSurfaceSealing,
@@ -24088,7 +24111,7 @@ eusoilvoc:SoilWaterPhysicalProcesses a skos:Concept ;
         eusoilvoc:SoilMoistureMovement,
         eusoilvoc:SoilThawing,
         eusoilvoc:SoilWaterCondensation,
-        eusoilvoc:SoilWaterEvapouration,
+        eusoilvoc:SoilWaterEvaporation,
         eusoilvoc:SoilWaterInfiltration,
         eusoilvoc:SoilWaterLoss,
         eusoilvoc:SoilWaterMovement,
@@ -24110,7 +24133,7 @@ eusoilvoc:SoilWaterPhysicalProcesses a skos:Concept ;
         eusoilvoc:SoilSlowWetting,
         eusoilvoc:SoilThawing,
         eusoilvoc:SoilWaterCondensation,
-        eusoilvoc:SoilWaterEvapouration,
+        eusoilvoc:SoilWaterEvaporation,
         eusoilvoc:SoilWaterFlow,
         eusoilvoc:SoilWaterInfiltration,
         eusoilvoc:SoilWaterLoss,
@@ -24756,7 +24779,7 @@ eusoilvoc:SoilTillage a skos:Concept ;
     skos:narrower eusoilvoc:ConservationTillage,
         eusoilvoc:ConventionalTillage,
         eusoilvoc:DeepTillage,
-        eusoilvoc:Disking,
+        eusoilvoc:Discing,
         eusoilvoc:FieldPreparation,
         eusoilvoc:Harrowing,
         eusoilvoc:Planking,
@@ -24776,7 +24799,7 @@ eusoilvoc:SoilTillage a skos:Concept ;
         eusoilvoc:ConventionalTillage,
         eusoilvoc:DeepPloughing,
         eusoilvoc:DeepTillage,
-        eusoilvoc:Disking,
+        eusoilvoc:Discing,
         eusoilvoc:FieldPreparation,
         eusoilvoc:Harrowing,
         eusoilvoc:MainFieldPreparation,
@@ -24816,11 +24839,11 @@ eusoilvoc:SoilChemicalProcesses a skos:Concept ;
         eusoilvoc:SoilChemicalDegradativeProcesses,
         eusoilvoc:SoilChemicalReaction,
         eusoilvoc:SoilDesertification,
-        eusoilvoc:SoilMineralization,
+        eusoilvoc:SoilMineralisation,
         eusoilvoc:SoilNegativeAdsorption,
         eusoilvoc:SoilNutrientImmobilisation,
         eusoilvoc:SoilOxygenConsumption,
-        eusoilvoc:SoilSalinization,
+        eusoilvoc:SoilSalinisation,
         eusoilvoc:SoilSorption ;
     skos:narrowerTransitive eusoilvoc:CationExchange,
         eusoilvoc:IonExchange,
@@ -24842,7 +24865,7 @@ eusoilvoc:SoilChemicalProcesses a skos:Concept ;
         eusoilvoc:SoilEcologicalDegradation,
         eusoilvoc:SoilLeaching,
         eusoilvoc:SoilMethanogenesis,
-        eusoilvoc:SoilMineralization,
+        eusoilvoc:SoilMineralisation,
         eusoilvoc:SoilNegativeAdsorption,
         eusoilvoc:SoilNutrientImmobilisation,
         eusoilvoc:SoilOxidationReaction,
@@ -24851,11 +24874,11 @@ eusoilvoc:SoilChemicalProcesses a skos:Concept ;
         eusoilvoc:SoilPhysicalDegradation,
         eusoilvoc:SoilPolymerAdsorption,
         eusoilvoc:SoilSalinisation,
-        eusoilvoc:SoilSalinization,
         eusoilvoc:SoilSealing,
         eusoilvoc:SoilSealingConsistence,
         eusoilvoc:SoilSealingThickness,
         eusoilvoc:SoilSickness,
+        eusoilvoc:SoilSodification,
         eusoilvoc:SoilSorption,
         eusoilvoc:SoilStructuralDecline,
         eusoilvoc:SoilSurfaceSealFormation,
@@ -24889,14 +24912,14 @@ eusoilvoc:SoilStructureIndex a skos:Concept ;
         eusoilvoc:CriticalSoilOrganicMatterContents,
         eusoilvoc:DispersionRatio,
         eusoilvoc:ErosionRatio,
-        eusoilvoc:GeometricMeanDiametre,
+        eusoilvoc:GeometricMeanDiameter,
         eusoilvoc:IndexBasedOnTextureAndCementingAgents,
         eusoilvoc:IndexOfCrusting,
         eusoilvoc:IndexOfErodibility,
         eusoilvoc:IndexOfResistance,
         eusoilvoc:IndexOfStructuralStability,
         eusoilvoc:LeastLimitingWaterRange,
-        eusoilvoc:MeanWeightDiametre,
+        eusoilvoc:MeanWeightDiameter,
         eusoilvoc:MechanicalRatio,
         eusoilvoc:ModulusOfRupture,
         eusoilvoc:PercentWaterStableAggregation,
@@ -24921,7 +24944,7 @@ eusoilvoc:SoilStructureIndex a skos:Concept ;
         eusoilvoc:SoilRelativeDensity,
         eusoilvoc:SoilStrengthIndex,
         eusoilvoc:SoilStructureIndirectIndex,
-        eusoilvoc:SoilWaterEvapourationRate,
+        eusoilvoc:SoilWaterEvaporationRate,
         eusoilvoc:SoilWaterInfiltrationCapacity,
         eusoilvoc:SoilWaterInfiltrationRate,
         eusoilvoc:SoilWaterInfiltrationRateNumeric,
@@ -25049,7 +25072,7 @@ eusoilvoc:SoilIndicators a skos:Concept ;
         eusoilvoc:EnvironmentalFactors,
         eusoilvoc:ErosionRatio,
         eusoilvoc:ExternalFactors,
-        eusoilvoc:GeometricMeanDiametre,
+        eusoilvoc:GeometricMeanDiameter,
         eusoilvoc:GroundwaterReproduction,
         eusoilvoc:HabitatProvisionCapacity,
         eusoilvoc:IndexBasedOnTextureAndCementingAgents,
@@ -25064,7 +25087,7 @@ eusoilvoc:SoilIndicators a skos:Concept ;
         eusoilvoc:LandUseGrasses,
         eusoilvoc:LandUseShrubs,
         eusoilvoc:LeastLimitingWaterRange,
-        eusoilvoc:MeanWeightDiametre,
+        eusoilvoc:MeanWeightDiameter,
         eusoilvoc:MechanicalRatio,
         eusoilvoc:ModulusOfRupture,
         eusoilvoc:NonsoilIndicators,
@@ -25095,7 +25118,7 @@ eusoilvoc:SoilIndicators a skos:Concept ;
         eusoilvoc:SoilStrengthIndex,
         eusoilvoc:SoilStructureIndex,
         eusoilvoc:SoilStructureIndirectIndex,
-        eusoilvoc:SoilWaterEvapourationRate,
+        eusoilvoc:SoilWaterEvaporationRate,
         eusoilvoc:SoilWaterInfiltrationCapacity,
         eusoilvoc:SoilWaterInfiltrationRate,
         eusoilvoc:SoilWaterInfiltrationRateNumeric,
@@ -25508,11 +25531,11 @@ eusoilvoc:SoilThreats a skos:Concept ;
         eusoilvoc:SoilPollutants,
         eusoilvoc:SoilPollution,
         eusoilvoc:SoilSalinisation,
-        eusoilvoc:SoilSalinization,
         eusoilvoc:SoilSealing,
         eusoilvoc:SoilSealingConsistence,
         eusoilvoc:SoilSealingThickness,
         eusoilvoc:SoilSickness,
+        eusoilvoc:SoilSodification,
         eusoilvoc:SplashErosion,
         eusoilvoc:TillageErosion,
         eusoilvoc:Vanadium,
@@ -25930,7 +25953,7 @@ eusoilvoc:SoilManagement a skos:Concept ;
         eusoilvoc:CropResidueMulch,
         eusoilvoc:DeepPloughing,
         eusoilvoc:DeepTillage,
-        eusoilvoc:Disking,
+        eusoilvoc:Discing,
         eusoilvoc:DolomiticLimeAmendment,
         eusoilvoc:DrainageEquipment,
         eusoilvoc:DryMulches,
@@ -25996,9 +26019,9 @@ eusoilvoc:SoilManagement a skos:Concept ;
         eusoilvoc:SoilReclamation,
         eusoilvoc:SoilReclamationPlants,
         eusoilvoc:SoilScarification,
-        eusoilvoc:SoilSolarization,
-        eusoilvoc:SoilStabilization,
-        eusoilvoc:SoilSterilization,
+        eusoilvoc:SoilSolarisation,
+        eusoilvoc:SoilStabilisation,
+        eusoilvoc:SoilSterilisation,
         eusoilvoc:SoilTillage,
         eusoilvoc:SoilTreatment,
         eusoilvoc:StoneClearing,
@@ -26311,7 +26334,6 @@ eusoilvoc:SoilPhysicalProcesses a skos:Concept ;
         eusoilvoc:SoilRapidWetting,
         eusoilvoc:SoilRetention,
         eusoilvoc:SoilSalinisation,
-        eusoilvoc:SoilSalinization,
         eusoilvoc:SoilSealing,
         eusoilvoc:SoilSealingConsistence,
         eusoilvoc:SoilSealingThickness,
@@ -26324,6 +26346,7 @@ eusoilvoc:SoilPhysicalProcesses a skos:Concept ;
         eusoilvoc:SoilSlaking,
         eusoilvoc:SoilSlowDrying,
         eusoilvoc:SoilSlowWetting,
+        eusoilvoc:SoilSodification,
         eusoilvoc:SoilSolidTransport,
         eusoilvoc:SoilSoluteConvection,
         eusoilvoc:SoilSoluteConvectiveTransport,
@@ -26348,7 +26371,7 @@ eusoilvoc:SoilPhysicalProcesses a skos:Concept ;
         eusoilvoc:SoilWarming,
         eusoilvoc:SoilWaterAbsorption,
         eusoilvoc:SoilWaterCondensation,
-        eusoilvoc:SoilWaterEvapouration,
+        eusoilvoc:SoilWaterEvaporation,
         eusoilvoc:SoilWaterFlow,
         eusoilvoc:SoilWaterInfiltration,
         eusoilvoc:SoilWaterLoss,
@@ -26495,7 +26518,7 @@ eusoilvoc:SoilProcesses a skos:Concept ;
         eusoilvoc:SoilMethanogenesis,
         eusoilvoc:SoilMicrobialActivity,
         eusoilvoc:SoilMicrobialRespiration,
-        eusoilvoc:SoilMineralization,
+        eusoilvoc:SoilMineralisation,
         eusoilvoc:SoilMoistureMovement,
         eusoilvoc:SoilMovement,
         eusoilvoc:SoilNegativeAdsorption,
@@ -26517,7 +26540,6 @@ eusoilvoc:SoilProcesses a skos:Concept ;
         eusoilvoc:SoilRapidWetting,
         eusoilvoc:SoilRetention,
         eusoilvoc:SoilSalinisation,
-        eusoilvoc:SoilSalinization,
         eusoilvoc:SoilSealing,
         eusoilvoc:SoilSealingConsistence,
         eusoilvoc:SoilSealingThickness,
@@ -26530,6 +26552,7 @@ eusoilvoc:SoilProcesses a skos:Concept ;
         eusoilvoc:SoilSlaking,
         eusoilvoc:SoilSlowDrying,
         eusoilvoc:SoilSlowWetting,
+        eusoilvoc:SoilSodification,
         eusoilvoc:SoilSolidTransport,
         eusoilvoc:SoilSoluteConvection,
         eusoilvoc:SoilSoluteConvectiveTransport,
@@ -26556,7 +26579,7 @@ eusoilvoc:SoilProcesses a skos:Concept ;
         eusoilvoc:SoilWaterAbsorption,
         eusoilvoc:SoilWaterAdsorption,
         eusoilvoc:SoilWaterCondensation,
-        eusoilvoc:SoilWaterEvapouration,
+        eusoilvoc:SoilWaterEvaporation,
         eusoilvoc:SoilWaterFlow,
         eusoilvoc:SoilWaterInfiltration,
         eusoilvoc:SoilWaterLoss,
@@ -26791,12 +26814,12 @@ eusoilvoc:SoilPhysicalProperties a skos:Concept ;
     skos:broaderTransitive eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilProperties ;
     skos:closeMatch agrovoc:c_7182 ;
-    skos:definition [ dcterms:source <https://soilhealthnexus.org/resources/soil-properties/soil-physical-properties/> ;
+    skos:definition [ dcterms:source <https://www.soils.org/publications/soils-glossary?q=publications/soils-glossary/> ;
+            rdf:value "Those characteristics, processes, or reactions of a soil that are caused by physical forces and that can be described by, or expressed in, physical terms or equations. Examples of physical properties are bulk density, hydraulic conductivity, porosity, pore-size distribution, etc."@en ],
+        [ dcterms:source <https://soilhealthnexus.org/resources/soil-properties/soil-physical-properties/> ;
             rdf:value "Soil physical properties include both inherent and dynamic soil properties. Inherent properties include soil texture, soil parent materials and soil depth. Dynamic properties are those that can be influenced by management include infiltration, aggregate stability, available soil water holding capacity, soil organic matter, soil porosity, compaction layers, crusting, bulk density, and structure. Optimal soil physical properties reduce limitations to root growth and productivity, improve seedling emergence, nutrient and water retention, infiltration, and movement of air and water within the soil profile. Physical properties are directly related to optimal chemical and biological properties which together improve nutrient and water cycling and other key soil functions."@en ],
         [ dcterms:source <https://www.cambridge.org/core/books/properties-and-management-of-soils-in-the-tropics/soil-physical-properties/275087D91E8849FA36F347D4964ED835> ;
-            rdf:value "Soil physical properties are those responsible for the transport of water, solutes, air and heat in the soil. The main physical soil properties are depth, temperature, texture, structure, bulk density and water-holding capacity."@en ],
-        [ dcterms:source <https://www.soils.org/publications/soils-glossary?q=publications/soils-glossary/> ;
-            rdf:value "Those characteristics, processes, or reactions of a soil that are caused by physical forces and that can be described by, or expressed in, physical terms or equations. Examples of physical properties are bulk density, hydraulic conductivity, porosity, pore-size distribution, etc."@en ] ;
+            rdf:value "Soil physical properties are those responsible for the transport of water, solutes, air and heat in the soil. The main physical soil properties are depth, temperature, texture, structure, bulk density and water-holding capacity."@en ] ;
     skos:exactMatch spp:SoilPhysicalProperty,
         nalt:5142,
         she:SoilPhysicalProperties ;

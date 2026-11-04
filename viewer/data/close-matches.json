@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "retrievedAt": "2026-11-04T14:45:50.012212+00:00",
-  "vocabularySha256": "ffa36772a9908ed32ec9a57c42623636e56cce3f07295f1ca243a13102c22f0f",
+  "retrievedAt": "2026-11-04T20:57:50.794828+00:00",
+  "vocabularySha256": "267be5c00f030b8ddea414c30bafa0f409577659ca3ad6dc0f309242bb93cf93",
   "records": {
     "http://aims.fao.org/aos/agrovoc/c_101": {
       "source": "agrovoc",
@@ -13163,23 +13163,6 @@
         "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
       }
     },
-    "https://lod.nal.usda.gov/nalt/123183": {
-      "source": "nalt",
-      "prefLabels": [
-        {
-          "language": "en",
-          "text": "rhizosphere bacteria"
-        },
-        {
-          "language": "es",
-          "text": "bacterias de la rizósfera"
-        }
-      ],
-      "definitions": [],
-      "provenance": {
-        "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
-      }
-    },
     "https://lod.nal.usda.gov/nalt/12582": {
       "source": "nalt",
       "prefLabels": [
@@ -14452,23 +14435,6 @@
         "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
       }
     },
-    "https://lod.nal.usda.gov/nalt/61970": {
-      "source": "nalt",
-      "prefLabels": [
-        {
-          "language": "en",
-          "text": "soil salinization"
-        },
-        {
-          "language": "es",
-          "text": "salinización del suelo"
-        }
-      ],
-      "definitions": [],
-      "provenance": {
-        "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
-      }
-    },
     "https://lod.nal.usda.gov/nalt/63386": {
       "source": "nalt",
       "prefLabels": [
@@ -14740,6 +14706,30 @@
         }
       ],
       "definitions": [],
+      "provenance": {
+        "file": "ontovocabs/shkg/soil_health_KG.ttl",
+        "sha256": "116b9bc37e86ff500f913c8d29351e589675d4ef2b5d99f4eed2ba72c2c97e23"
+      }
+    },
+    "https://soilwise-he.github.io/soil-health#Sodification": {
+      "source": "shkg",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "sodification"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "en",
+          "sources": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#Sodification"
+            }
+          ],
+          "text": "Sodification is the process by which the exchangeable sodium (Na+) content of soil is increased."
+        }
+      ],
       "provenance": {
         "file": "ontovocabs/shkg/soil_health_KG.ttl",
         "sha256": "116b9bc37e86ff500f913c8d29351e589675d4ef2b5d99f4eed2ba72c2c97e23"
