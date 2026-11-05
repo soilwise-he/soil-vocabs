@@ -13,10 +13,13 @@ from rdflib.compare import graph_diff, to_isomorphic
 from rdflib.namespace import DCTERMS, RDF, SKOS
 
 SOSA = Namespace("http://www.w3.org/ns/sosa/")
+QUDT = Namespace("http://qudt.org/schema/qudt/")
+BAO = Namespace("http://www.bioassayontology.org/bao#")
 SCHEME_URI = "https://w3id.org/eusoilvoc"
 COLUMNS = (
     "id", "type", "prefLabel", "altLabel", "definition", "broader", "narrower",
     "property", "exactMatch", "closeMatch", "definitionSource", "conceptSource",
+    "broadMatch", "unit", "hasIndicator", "isIndicatorOf",
 )
 TYPE_NAMES = {
     SKOS.Concept: "skos:Concept",
@@ -30,6 +33,10 @@ URI_COLUMNS = {
     "exactMatch": SKOS.exactMatch,
     "closeMatch": SKOS.closeMatch,
     "conceptSource": DCTERMS.source,
+    "broadMatch": SKOS.broadMatch,
+    "unit": QUDT.hasUnit,
+    "hasIndicator": BAO.BAO_0095002,
+    "isIndicatorOf": BAO.BAO_0002586,
 }
 SEPARATOR = " | "
 
@@ -161,6 +168,7 @@ def graph_from_rows(rows: list[dict[str, str]], scheme_uri: str = SCHEME_URI) ->
     scheme = _uri(scheme_uri)
     graph = Graph()
     for prefix, ns in (("skos", SKOS), ("sosa", SOSA), ("dcterms", DCTERMS),
+                       ("qudt", QUDT), ("bao", BAO),
                        ("eusoilvoc", Namespace(scheme_uri + "#"))):
         graph.bind(prefix, ns)
     graph.add((scheme, RDF.type, SKOS.ConceptScheme))

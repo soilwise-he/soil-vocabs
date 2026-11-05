@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "retrievedAt": "2026-11-04T20:57:50.794828+00:00",
-  "vocabularySha256": "267be5c00f030b8ddea414c30bafa0f409577659ca3ad6dc0f309242bb93cf93",
+  "retrievedAt": "2026-11-05T21:57:14.984594+00:00",
+  "vocabularySha256": "1c33a828a4a8d7214e5f3383cfce4d7d09e74b79ab69e61ba376f241b818c202",
   "records": {
     "http://aims.fao.org/aos/agrovoc/c_101": {
       "source": "agrovoc",
@@ -2606,6 +2606,150 @@
         "endpoint": "https://agrovoc.fao.org/sparql"
       }
     },
+    "http://aims.fao.org/aos/agrovoc/c_4ba65a4a": {
+      "source": "agrovoc",
+      "prefLabels": [
+        {
+          "language": "ar",
+          "text": "مادة مُلَوِّثة"
+        },
+        {
+          "language": "cs",
+          "text": "kontaminanty"
+        },
+        {
+          "language": "de",
+          "text": "Kontaminant"
+        },
+        {
+          "language": "en",
+          "text": "contaminants"
+        },
+        {
+          "language": "es",
+          "text": "Contaminante"
+        },
+        {
+          "language": "fr",
+          "text": "contaminant"
+        },
+        {
+          "language": "it",
+          "text": "Contaminanti"
+        },
+        {
+          "language": "lo",
+          "text": "ທາດປົນເປື້ອນ"
+        },
+        {
+          "language": "pt",
+          "text": "contaminante"
+        },
+        {
+          "language": "ru",
+          "text": "загрязняющие вещества"
+        },
+        {
+          "language": "sk",
+          "text": "kontaminanty"
+        },
+        {
+          "language": "sr",
+          "text": "контаминанти"
+        },
+        {
+          "language": "sw",
+          "text": "chafuzi"
+        },
+        {
+          "language": "th",
+          "text": "สารปนเปื้อน"
+        },
+        {
+          "language": "tr",
+          "text": "bulaşan"
+        },
+        {
+          "language": "uk",
+          "text": "забруднювачі"
+        },
+        {
+          "language": "zh",
+          "text": "致污物"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "ar",
+          "sources": [
+            {
+              "uri": "http://aims.fao.org/aos/agrovoc/c_4ba65a4a"
+            }
+          ],
+          "text": "تُشير الملوثات إلى أي مادة بيولوجية أو كيميائية أو فيزيائية أو إشعاعية يتم إدخالها أو توجد في بيئة أو وسط أو مادة ما، بما في ذلك المواد الناتجة عن عمليات الإنتاج أو المعالجة أو التداول أو العوامل الخارجية، والتي قد تؤدي إلى تضرر الجودة أو السلامة أو الصلاحية للغرض المقصود"
+        },
+        {
+          "language": "en",
+          "sources": [
+            {
+              "uri": "http://aims.fao.org/aos/agrovoc/c_4ba65a4a"
+            }
+          ],
+          "text": "Contaminants refer to any biological, chemical, physical, or radiological substance introduced into or present in an environment, medium, or material, including as a result of production, processing, handling, or external factors, that may impair quality, safety, or fitness for purpose."
+        },
+        {
+          "language": "es",
+          "sources": [
+            {
+              "uri": "http://aims.fao.org/aos/agrovoc/c_4ba65a4a"
+            }
+          ],
+          "text": "Los contaminantes se refieren a cualquier sustancia biológica, química, física o radiológica introducida en o presente en un entorno, medio o material, incluso como resultado de la producción, el procesamiento, la manipulación o factores externos, que pueda afectar la calidad, la seguridad o la aptitud para su uso."
+        },
+        {
+          "language": "fr",
+          "sources": [
+            {
+              "uri": "http://aims.fao.org/aos/agrovoc/c_4ba65a4a"
+            }
+          ],
+          "text": "Les contaminants désignent toute substance biologique, chimique, physique ou radiologique introduite ou présente dans un environnement, un milieu ou un matériau, que ce soit à la suite de la production, de la transformation, de la manipulation ou de facteurs externes, et susceptible d’en altérer la qualité, la sécurité ou l’aptitude à l’usage."
+        },
+        {
+          "language": "ru",
+          "sources": [
+            {
+              "uri": "http://aims.fao.org/aos/agrovoc/c_4ba65a4a"
+            }
+          ],
+          "text": "Под загрязняющими веществами понимаются любые биологические, химические, физические или радиологические вещества, попадающие в окружающую среду, питательную среду или материал или присутствующие в них, в том числе в результате производства, переработки, обращения или внешних факторов, которые могут ухудшить качество, безопасность или пригодность для использования по назначению."
+        },
+        {
+          "language": "tr",
+          "sources": [
+            {
+              "uri": "http://aims.fao.org/aos/agrovoc/c_4ba65a4a"
+            },
+            {
+              "uri": "http://terim.tuba.gov.tr/"
+            }
+          ],
+          "text": "Kaza sonucu ya da doğal olarak malzeme ya da ürünlere karışan ve bunların niteliğini ve saflığını bozan biyolojik, kimyasal, fiziksel veya radyolojik madde."
+        },
+        {
+          "language": "zh",
+          "sources": [
+            {
+              "uri": "http://aims.fao.org/aos/agrovoc/c_4ba65a4a"
+            }
+          ],
+          "text": "污染物是指任何生物性、化学性、物理性或放射性物质，这些物质被引入或存在于某一环境、介质或材料中（包括由于生产、加工、处理或外部因素所致），并可能损害其质量、安全性或适用性。"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://agrovoc.fao.org/sparql"
+      }
+    },
     "http://aims.fao.org/aos/agrovoc/c_5185": {
       "source": "agrovoc",
       "prefLabels": [
@@ -5006,6 +5150,37 @@
         "endpoint": "https://consultation.vocabulaires-ouverts.inrae.fr/rest/v1/thesaurus-inrae/data"
       }
     },
+    "http://opendata.inrae.fr/thesaurusINRAE/c_13420": {
+      "source": "inrae",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "contaminant"
+        },
+        {
+          "language": "fr",
+          "text": "contaminant"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "fr",
+          "sources": [
+            {
+              "language": "",
+              "text": "National research institute for agriculture food and environment, 2021, \"Thésaurus INRAE\", https://doi.org/10.15454/J8GANU, Recherche Data Gouv, V1 "
+            },
+            {
+              "uri": "http://opendata.inrae.fr/thesaurusINRAE/c_13420"
+            }
+          ],
+          "text": "Substance ou agent qui, lorsqu'il est présent dans un environnement, peut causer des effets nocifs sur la santé humaine, l'écosystème (ou les matériaux)."
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://consultation.vocabulaires-ouverts.inrae.fr/rest/v1/thesaurus-inrae/data"
+      }
+    },
     "http://opendata.inrae.fr/thesaurusINRAE/c_14015": {
       "source": "inrae",
       "prefLabels": [
@@ -6543,6 +6718,37 @@
         }
       ],
       "definitions": [],
+      "provenance": {
+        "endpoint": "https://consultation.vocabulaires-ouverts.inrae.fr/rest/v1/thesaurus-inrae/data"
+      }
+    },
+    "http://opendata.inrae.fr/thesaurusINRAE/c_c62d3822": {
+      "source": "inrae",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "soil contamination"
+        },
+        {
+          "language": "fr",
+          "text": "contamination du sol"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "fr",
+          "sources": [
+            {
+              "language": "",
+              "text": "Baize, D. (2016) Petit lexique de pédologie. Éditions Quae [ISBN : 978-2-7592-2445-6]"
+            },
+            {
+              "uri": "http://opendata.inrae.fr/thesaurusINRAE/c_c62d3822"
+            }
+          ],
+          "text": "Forte augmentation dans un sol de la teneur en une (ou plusieurs) substance(s) potentiellement toxique(s) minérale(s) (métaux traces) ou organique(s) (pesticides, PCB, dioxines, hydrocarbures, etc.), directement ou indirectement liée à une activité humaine, mais sans qu'il apparaisse de dommages aux écosystèmes ou agrosystèmes."
+        }
+      ],
       "provenance": {
         "endpoint": "https://consultation.vocabulaires-ouverts.inrae.fr/rest/v1/thesaurus-inrae/data"
       }
@@ -13329,6 +13535,23 @@
         "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
       }
     },
+    "https://lod.nal.usda.gov/nalt/17423": {
+      "source": "nalt",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "soil respiration"
+        },
+        {
+          "language": "es",
+          "text": "respiración del suelo"
+        }
+      ],
+      "definitions": [],
+      "provenance": {
+        "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
+      }
+    },
     "https://lod.nal.usda.gov/nalt/20438": {
       "source": "nalt",
       "prefLabels": [
@@ -14613,6 +14836,34 @@
         "sha256": "116b9bc37e86ff500f913c8d29351e589675d4ef2b5d99f4eed2ba72c2c97e23"
       }
     },
+    "https://soilwise-he.github.io/soil-health#Contaminants": {
+      "source": "shkg",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "contaminants"
+        }
+      ],
+      "definitions": [],
+      "provenance": {
+        "file": "ontovocabs/shkg/soil_health_KG.ttl",
+        "sha256": "116b9bc37e86ff500f913c8d29351e589675d4ef2b5d99f4eed2ba72c2c97e23"
+      }
+    },
+    "https://soilwise-he.github.io/soil-health#ContaminatedSites": {
+      "source": "shkg",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "contaminated sites"
+        }
+      ],
+      "definitions": [],
+      "provenance": {
+        "file": "ontovocabs/shkg/soil_health_KG.ttl",
+        "sha256": "116b9bc37e86ff500f913c8d29351e589675d4ef2b5d99f4eed2ba72c2c97e23"
+      }
+    },
     "https://soilwise-he.github.io/soil-health#CropYields": {
       "source": "shkg",
       "prefLabels": [
@@ -14633,6 +14884,20 @@
         {
           "language": "en",
           "text": "crops"
+        }
+      ],
+      "definitions": [],
+      "provenance": {
+        "file": "ontovocabs/shkg/soil_health_KG.ttl",
+        "sha256": "116b9bc37e86ff500f913c8d29351e589675d4ef2b5d99f4eed2ba72c2c97e23"
+      }
+    },
+    "https://soilwise-he.github.io/soil-health#Ecosystems": {
+      "source": "shkg",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "ecosystems"
         }
       ],
       "definitions": [],
@@ -14697,6 +14962,44 @@
         "sha256": "116b9bc37e86ff500f913c8d29351e589675d4ef2b5d99f4eed2ba72c2c97e23"
       }
     },
+    "https://soilwise-he.github.io/soil-health#SOCStocks": {
+      "source": "shkg",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "soil organic carbon stocks"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "en",
+          "sources": [
+            {
+              "uri": "https://soilwise-he.github.io/soil-health#SOCStocks"
+            }
+          ],
+          "text": "SOC stock represents the pool of organic carbon for a specific layer of soil."
+        }
+      ],
+      "provenance": {
+        "file": "ontovocabs/shkg/soil_health_KG.ttl",
+        "sha256": "116b9bc37e86ff500f913c8d29351e589675d4ef2b5d99f4eed2ba72c2c97e23"
+      }
+    },
+    "https://soilwise-he.github.io/soil-health#SettlementAreas": {
+      "source": "shkg",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "settlement areas"
+        }
+      ],
+      "definitions": [],
+      "provenance": {
+        "file": "ontovocabs/shkg/soil_health_KG.ttl",
+        "sha256": "116b9bc37e86ff500f913c8d29351e589675d4ef2b5d99f4eed2ba72c2c97e23"
+      }
+    },
     "https://soilwise-he.github.io/soil-health#Slopes": {
       "source": "shkg",
       "prefLabels": [
@@ -14741,6 +15044,20 @@
         {
           "language": "en",
           "text": "soil aggregates"
+        }
+      ],
+      "definitions": [],
+      "provenance": {
+        "file": "ontovocabs/shkg/soil_health_KG.ttl",
+        "sha256": "116b9bc37e86ff500f913c8d29351e589675d4ef2b5d99f4eed2ba72c2c97e23"
+      }
+    },
+    "https://soilwise-he.github.io/soil-health#SoilErosionRates": {
+      "source": "shkg",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "soil erosion rates"
         }
       ],
       "definitions": [],
