@@ -180,10 +180,12 @@ but newly mapped targets will show that a preview has not yet been cached.
 - Original close-match labels and expandable sourced definitions from a separate
   static cache, clearly distinguished from SoilVoc definitions.
 - Semantic relationships, mappings, labels, notes, arbitrary RDF properties,
-  nested blank nodes, and an ontology browser limited to declared classes and
-  properties actually used in the loaded vocabulary. Usage includes concepts,
+  nested blank nodes, and an ontology browser limited to declared classes,
+  properties and units actually used in the loaded vocabulary. Usage includes concepts,
   schemes, and their linked metadata, not standalone ontology descriptions.
   Unused declarations remain available in the RDF and downloads.
+- Ontology entries retain local detail pages and offer direct links to their
+  original URIs. Defined-by references open their source resources externally.
 - Readable advanced type labels, preferred-label and URI copying, explanatory
   property tooltips, browser back/forward with results-page/scroll restoration,
   native modifier-click links, shareable query-string links, and a raw Turtle view.

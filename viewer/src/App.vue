@@ -11,7 +11,7 @@ import MappingSection from './components/MappingSection.vue'
 import { createCloseMatchLoader } from './close-matches.js'
 import { createVocabulary, NS, TYPE, CONCEPT, PROCEDURE, PROPERTY, pathKey, compact } from './vocabulary.js'
 import { conceptHref, followLink, parseRoute } from './navigation.js'
-import { detailSections, displayValues } from './presentation.js'
+import { detailSections, displayValues, externalHref } from './presentation.js'
 import { definitionText } from './definition-text.js'
 
 const baseUrl = import.meta.env.BASE_URL
@@ -373,16 +373,37 @@ onBeforeUnmount(() => {
         </template>
 
         <template v-else-if="route.view === 'ontology'">
-          <div class="page-heading"><h1>SoilVoc ontology</h1><p>Classes and properties used in the loaded vocabulary.</p></div>
-          <div class="tabs ontology-tabs"><button :class="{ active: ontologyTab === 'classes' }" @click="ontologyTab = 'classes'">Classes ({{ model.ontology.classes.length }})</button><button :class="{ active: ontologyTab === 'properties' }" @click="ontologyTab = 'properties'">Properties ({{ model.ontology.properties.length }})</button></div>
-          <div class="ontology-list"><article v-for="uri in ontologyRows" :key="uri"><a :href="conceptHref(uri)" @click="followLink($event, () => navigate(uri))">{{ model.label(uri) }}</a><code>{{ compact(uri) }}</code><button v-if="model.typeUris.includes(uri)" class="text-button" @click="typeSearch(uri)">Browse concepts<ArrowRight :size="14" /></button></article></div>
-          <p v-if="!ontologyRows.length" class="empty-state">No used {{ ontologyTab === 'classes' ? 'classes' : 'properties' }} are declared in this vocabulary.</p>
+          <div class="page-heading"><h1>SoilVoc ontology</h1><p>Classes, properties and units used in the loaded vocabulary.</p></div>
+          <div class="tabs ontology-tabs" aria-label="Ontology categories">
+            <button :class="{ active: ontologyTab === 'classes' }" :aria-pressed="ontologyTab === 'classes'" @click="ontologyTab = 'classes'">Classes ({{ model.ontology.classes.length }})</button>
+            <button :class="{ active: ontologyTab === 'properties' }" :aria-pressed="ontologyTab === 'properties'" @click="ontologyTab = 'properties'">Properties ({{ model.ontology.properties.length }})</button>
+            <button :class="{ active: ontologyTab === 'units' }" :aria-pressed="ontologyTab === 'units'" @click="ontologyTab = 'units'">Units ({{ model.ontology.units.length }})</button>
+          </div>
+          <div class="ontology-list">
+            <article v-for="uri in ontologyRows" :key="uri">
+              <a :href="conceptHref(uri)" @click="followLink($event, () => navigate(uri))">{{ model.label(uri) }}</a>
+              <a v-if="externalHref(uri)" class="ontology-uri" :href="externalHref(uri)" :title="uri" :aria-label="`Open original URI for ${model.label(uri)}`" target="_blank" rel="noopener noreferrer"><code>{{ compact(uri) }}</code><ArrowUpRight :size="13" /></a>
+              <code v-else>{{ compact(uri) }}</code>
+              <button v-if="model.typeUris.includes(uri)" class="text-button" @click="typeSearch(uri)">Browse concepts<ArrowRight :size="14" /></button>
+            </article>
+          </div>
+          <p v-if="!ontologyRows.length" class="empty-state">No used {{ ontologyTab }} are declared in this vocabulary.</p>
         </template>
 
         <template v-else-if="route.view === 'concept'">
           <template v-if="resourceGroups.length">
             <div class="page-heading resource-heading"><p class="resource-category">Ontology resource</p><h1>{{ model.label(route.uri) }}</h1><div class="resource-tools"><button class="icon-button bordered" title="Copy resource URI" aria-label="Copy resource URI" @click="copyUri(route.uri)"><Copy :size="17" /></button><DownloadMenu :model="model" :uri="route.uri" @notice="notice" /></div></div>
-            <div class="property-table"><section v-for="group in resourceGroups" :key="group.predicate" class="property-row"><PropertyHeading :label="group.label" :predicate="group.predicate" :description="model.propertyTooltip(group.predicate)" /><ul class="values-list"><li v-for="(value, i) in group.values" :key="i"><TermValue :model="model" :value="value" @navigate="navigate" /></li></ul></section><section class="property-row"><h2>URI</h2><code class="canonical-uri">{{ route.uri }}</code></section></div>
+            <div class="property-table">
+              <section v-for="group in resourceGroups" :key="group.predicate" class="property-row" :data-predicate="group.predicate">
+                <PropertyHeading :label="group.label" :predicate="group.predicate" :description="model.propertyTooltip(group.predicate)" />
+                <ul class="values-list"><li v-for="(value, i) in group.values" :key="i"><TermValue :model="model" :value="value" :external-only="group.predicate === NS.rdfs + 'isDefinedBy'" :show-uri="group.predicate === NS.rdfs + 'isDefinedBy'" @navigate="navigate" /></li></ul>
+              </section>
+              <section class="property-row">
+                <h2>URI</h2>
+                <a v-if="externalHref(route.uri)" class="canonical-uri" :href="externalHref(route.uri)" :title="`Open original URI for ${model.label(route.uri)}`" target="_blank" rel="noopener noreferrer">{{ route.uri }}<ArrowUpRight :size="13" /></a>
+                <code v-else class="canonical-uri">{{ route.uri }}</code>
+              </section>
+            </div>
             <section v-if="resourceConcepts.length" class="typed-concepts"><h2>{{ resourceConcepts.length }} concepts of this type</h2><button class="button secondary" @click="typeSearch(route.uri)">Browse {{ model.label(route.uri) }} concepts<ArrowRight :size="16" /></button></section>
           </template>
           <div v-else class="empty-state"><h1>Concept not found</h1><p class="canonical-uri">{{ route.uri }}</p><button class="button primary" @click="go({})">Back to vocabulary</button></div>
@@ -393,7 +414,7 @@ onBeforeUnmount(() => {
           <div v-if="route.view === 'about'" class="vocabulary-facts"><div><strong>{{ model.stats.concepts.toLocaleString() }}</strong><span>Concepts</span></div><div><strong>{{ model.stats.properties }}</strong><span>Observable properties</span></div><div><strong>{{ model.stats.procedures }}</strong><span>Procedures</span></div><div><strong>{{ model.stats.definitions.toLocaleString() }}</strong><span>Definitions</span></div></div>
           <section v-if="route.view === 'about'" class="label-statistics" aria-label="Label statistics"><h2>Labels</h2><dl><div><dt>Preferred labels</dt><dd>{{ model.stats.preferredLabels.toLocaleString() }}</dd></div><div><dt>Alternative labels</dt><dd>{{ model.stats.alternativeLabels.toLocaleString() }}</dd></div><div><dt>Hidden labels</dt><dd>{{ model.stats.hiddenLabels.toLocaleString() }}</dd></div></dl></section>
           <template v-if="route.view === 'home'"><section class="overview-section"><h2>Top concepts</h2><div class="top-concepts"><a v-for="uri in model.roots" :key="uri" :href="conceptHref(uri)" @click="followLink($event, () => navigate(uri))">{{ model.label(uri) }}<ChevronRight :size="15" /></a></div></section></template>
-          <template v-else><div class="property-table"><section class="property-row"><h2>Vocabulary URI</h2><a :href="model.schemeUri" target="_blank" rel="noopener noreferrer">{{ model.schemeUri }}</a></section><section class="property-row"><h2>Language</h2><span>English</span></section><section class="property-row"><h2>Source file</h2><code>{{ manifest?.source || 'viewer/data/SoilVoc.ttl' }}</code></section><section class="property-row"><h2>RDF statements</h2><span>{{ model.stats.triples.toLocaleString() }}</span></section><section class="property-row"><h2>Source checksum</h2><code class="checksum">{{ manifest?.sha256 }}</code></section><section class="property-row"><h2>Downloads</h2><DownloadMenu :model="model" @notice="notice" /></section></div><section class="overview-section"><h2>Ontology</h2><p>{{ model.ontology.classes.length }} classes and {{ model.ontology.properties.length }} properties are used in the vocabulary.</p><button class="button secondary" @click="go({ view: 'ontology' })">Browse ontology<ArrowRight :size="16" /></button></section></template>
+          <template v-else><div class="property-table"><section class="property-row"><h2>Vocabulary URI</h2><a :href="model.schemeUri" target="_blank" rel="noopener noreferrer">{{ model.schemeUri }}</a></section><section class="property-row"><h2>Language</h2><span>English</span></section><section class="property-row"><h2>Source file</h2><code>{{ manifest?.source || 'viewer/data/SoilVoc.ttl' }}</code></section><section class="property-row"><h2>RDF statements</h2><span>{{ model.stats.triples.toLocaleString() }}</span></section><section class="property-row"><h2>Source checksum</h2><code class="checksum">{{ manifest?.sha256 }}</code></section><section class="property-row"><h2>Downloads</h2><DownloadMenu :model="model" @notice="notice" /></section></div><section class="overview-section"><h2>Ontology</h2><p>{{ model.ontology.classes.length }} classes, {{ model.ontology.properties.length }} properties and {{ model.ontology.units.length }} units are used in the vocabulary.</p><button class="button secondary" @click="go({ view: 'ontology' })">Browse ontology<ArrowRight :size="16" /></button></section></template>
           <section v-if="route.view === 'about'" class="overview-section workflow-section"><h2>SoilVoc in SoilWise</h2><img class="workflow-image" :src="`${baseUrl}workflow.png`" alt="SoilWise workflow and the role of SoilVoc" loading="lazy" /></section>
         </template>
       </main>

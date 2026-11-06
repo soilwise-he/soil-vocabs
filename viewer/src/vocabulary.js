@@ -10,6 +10,9 @@ export const NS = {
   eusoilvoc: 'https://w3id.org/eusoilvoc#',
   agrontology: 'http://aims.fao.org/aos/agrontology#',
   sio: 'http://semanticscience.org/resource/',
+  qudt: 'http://qudt.org/schema/qudt/',
+  unit: 'http://qudt.org/vocab/unit/',
+  om: 'http://www.ontology-of-units-of-measure.org/resource/om-2/',
   owl: 'http://www.w3.org/2002/07/owl#',
   xsd: 'http://www.w3.org/2001/XMLSchema#',
 }
@@ -33,6 +36,7 @@ const captions = {
   [NS.sosa + 'hasProcedure']: 'Has procedure', [NS.sosa + 'isProcedureFor']: 'Is procedure for',
   [NS.skos + 'exactMatch']: 'Exact matches', [NS.skos + 'closeMatch']: 'Close matches',
   [NS.skos + 'altLabel']: 'Alternative labels', [NS.skos + 'related']: 'Related concepts',
+  [NS.rdfs + 'isDefinedBy']: 'Defined by',
 }
 const propertyHelp = {
   [TYPE]: 'The classes assigned to this resource, such as Concept, Observable Property or Procedure.',
@@ -53,6 +57,7 @@ const propertyHelp = {
   [NS.skos + 'historyNote']: 'Information about changes to this concept.',
   [NS.skos + 'note']: 'Additional information recorded about this concept.',
   [NS.rdfs + 'comment']: 'A descriptive comment recorded about this resource.',
+  [NS.rdfs + 'isDefinedBy']: 'The source resource that defines this ontology term.',
 }
 
 export const pathKey = path => JSON.stringify(path)
@@ -365,8 +370,11 @@ export function createVocabulary(turtle) {
   }
   const declaredClasses = new Set(store.getSubjects(namedNode(TYPE), namedNode(NS.rdfs + 'Class'), null).map(t => t.value))
   const declaredProperties = new Set(store.getSubjects(namedNode(TYPE), namedNode(NS.rdf + 'Property'), null).map(t => t.value))
+  const unitTypes = [NS.qudt + 'Unit', NS.qudt + 'DerivedUnit', NS.om + 'Unit']
+  const declaredUnits = new Set(unitTypes.flatMap(type => store.getSubjects(namedNode(TYPE), namedNode(type), null)
+    .filter(term => term.termType === 'NamedNode').map(term => term.value)))
   const declarations = new Set([...declaredClasses, ...declaredProperties])
-  const usedClasses = new Set(), usedProperties = new Set(), visited = new Set()
+  const usedClasses = new Set(), usedProperties = new Set(), usedUnits = new Set(), visited = new Set()
   const pending = [...conceptUris, ...schemes].map(uri => namedNode(uri))
   // Follow instance metadata, including definition nodes, without treating
   // ontology descriptions themselves as evidence that a term is in use.
@@ -374,6 +382,7 @@ export function createVocabulary(turtle) {
     const subject = pending.pop(), key = subject.termType + ':' + subject.value
     if (visited.has(key)) continue
     visited.add(key)
+    if (subject.termType === 'NamedNode' && declaredUnits.has(subject.value)) usedUnits.add(subject.value)
     for (const { predicate, object } of store.getQuads(subject, null, null, null)) {
       usedProperties.add(predicate.value)
       if (predicate.value === TYPE) {
@@ -386,6 +395,7 @@ export function createVocabulary(turtle) {
   const ontology = {
     classes: sort([...declaredClasses].filter(uri => usedClasses.has(uri))),
     properties: sort([...declaredProperties].filter(uri => usedProperties.has(uri))),
+    units: sort(usedUnits),
   }
   return {
     store, concepts, sortedConcepts, parents, children, roots, typeUris, schemeUri, ontology,

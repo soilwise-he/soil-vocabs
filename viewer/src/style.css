@@ -272,10 +272,13 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
 .empty-state { padding: 44px 0; color: var(--muted); }
 .empty-state h2, .empty-state h1 { margin: 12px 0; color: var(--soil); font-size: 24px; }
 .empty-state .button { margin-top: 20px; }
-.ontology-tabs { border-bottom: 1px solid var(--line); }
+.ontology-tabs { border-bottom: 1px solid var(--line); flex-wrap: wrap; }
 .ontology-list { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr) auto; column-gap: 15px; }
 .ontology-list article { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; align-items: center; gap: 15px; padding: 16px 0; border-bottom: 1px solid var(--line); }
 .ontology-list code { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.ontology-uri { min-width: 0; overflow-wrap: anywhere; }
+.ontology-uri code { color: inherit; }
+.ontology-uri svg { margin-left: 4px; }
 .resource-heading { position: relative; padding-right: 160px; }
 .resource-heading .resource-category { font-size: 12px; margin-bottom: 8px; }
 .resource-tools { position: absolute; top: 28px; right: 0; display: flex; gap: 8px; }
