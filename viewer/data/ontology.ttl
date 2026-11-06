@@ -4,6 +4,7 @@
 @prefix eusoilvoc: <https://w3id.org/eusoilvoc#> .
 @prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -174,8 +175,9 @@ qudt:FactorUnit a rdfs:Class, owl:Class ;
 
 eusoilvoc:SquareKilometrePerYear a qudt:Unit, qudt:DerivedUnit ;
     rdfs:label "square kilometre per year"@en ;
-    qudt:symbol "km2/a" ;
+    qudt:symbol "km\u00B2/a" ;
     qudt:ucumCode "km2.a-1" ;
+    qudt:hasQuantityKind quantitykind:AreaPerTime ;
     qudt:hasFactorUnit [ a qudt:FactorUnit ;
             qudt:hasUnit unit:KiloM2 ;
             qudt:exponent 1 ],
