@@ -89,7 +89,7 @@ onBeforeUnmount(() => {
       </div>
       <div v-show="status !== 'error'">
         <component :is="widget" v-if="widget" id="concept-comments" v-bind="COMMENTS_CONFIG" mapping="specific" :term="uri"
-          strict="1" reactions-enabled="1" emit-metadata="1" input-position="top" theme="light" lang="en" loading="eager" />
+          strict="1" reactions-enabled="0" emit-metadata="1" input-position="bottom" theme="light" lang="en" loading="eager" />
       </div>
     </div>
   </section>
