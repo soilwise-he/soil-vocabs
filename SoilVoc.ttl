@@ -13,8 +13,8 @@
 @prefix inrae: <http://opendata.inrae.fr/thesaurusINRAE/> .
 @prefix iso11074: <https://data.geoscience.earth/ncl/ISO11074v2025/> .
 @prefix nalt: <https://lod.nal.usda.gov/nalt/> .
-@prefix ns1: <http://qudt.org/schema/qudt/> .
-@prefix ns2: <http://www.bioassayontology.org/bao#> .
+@prefix ns1: <http://www.bioassayontology.org/bao#> .
+@prefix ns2: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix she: <https://soilwise-he.github.io/soil-health#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -4138,11 +4138,14 @@ eusoilvoc:SoilBiodiversity a skos:Concept ;
     skos:prefLabel "soil biodiversity"@en .
 
 eusoilvoc:SoilBiologicalActivity a skos:Concept ;
+    skos:altLabel "biological activity in soil"@en ;
     skos:broader eusoilvoc:SoilBiologicalProcesses ;
+    skos:closeMatch nalt:17420 ;
     skos:exactMatch agrovoc:c_9264,
-        nalt:17420 ;
+        inrae:c_1492,
+        she:SoilBiologicalActivity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "biological activity in soil"@en .
+    skos:prefLabel "soil biological activity"@en .
 
 eusoilvoc:SoilBiologicalDegradation a skos:Concept ;
     skos:broader eusoilvoc:SoilDegradation ;
@@ -4762,10 +4765,10 @@ eusoilvoc:SoilHealth a skos:Concept ;
     skos:broader eusoilvoc:SoilQuality ;
     skos:closeMatch agrovoc:c_a9645d28,
         nalt:35826 ;
-    skos:definition [ dcterms:source <https://doi.org/10.2800/956606> ;
-            rdf:value "Soil health is the level to which soil functions are fulfilled."@en ],
-        [ dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
-            rdf:value "The physical, chemical and biological condition of soil, determining its capacity to function as a vital living system and to provide ecosystem services"@en ] ;
+    skos:definition [ dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
+            rdf:value "The physical, chemical and biological condition of soil, determining its capacity to function as a vital living system and to provide ecosystem services"@en ],
+        [ dcterms:source <https://doi.org/10.2800/956606> ;
+            rdf:value "Soil health is the level to which soil functions are fulfilled."@en ] ;
     skos:exactMatch inrae:c_2d69fde2,
         benchmarks:4036,
         she:SoilHealth ;
@@ -4845,10 +4848,11 @@ eusoilvoc:SoilHydraulicGradient a skos:Concept ;
     skos:prefLabel "soil hydraulic gradient"@en .
 
 eusoilvoc:SoilHydraulicPotential a skos:Concept ;
+    skos:altLabel "hydraulic potential (soil)"@en ;
     skos:broader eusoilvoc:SoilWaterPotential ;
     skos:exactMatch agrovoc:c_35950 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "hydraulic potential (soil)"@en .
+    skos:prefLabel "soil hydraulic potential"@en .
 
 eusoilvoc:SoilHydrology a skos:Concept ;
     skos:broader eusoilvoc:SoilSciences ;
@@ -5107,13 +5111,6 @@ eusoilvoc:SoilMulches a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil mulches"@en .
 
-eusoilvoc:SoilNLoss a skos:Concept ;
-    skos:altLabel "soil N loss"@en ;
-    skos:broader eusoilvoc:SoilNutrientLoss ;
-    skos:closeMatch she:SoilNitrogenLosses ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil nitrogen loss"@en .
-
 eusoilvoc:SoilNegativeAdsorption a skos:Concept ;
     skos:broader eusoilvoc:SoilChemicalProcesses ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
@@ -5121,6 +5118,13 @@ eusoilvoc:SoilNegativeAdsorption a skos:Concept ;
     skos:exactMatch spp:SoilNegativeAdsorption ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil negative adsorption"@en .
+
+eusoilvoc:SoilNitrogenLoss a skos:Concept ;
+    skos:altLabel "soil N loss"@en ;
+    skos:broader eusoilvoc:SoilNutrientLoss ;
+    skos:closeMatch she:SoilNitrogenLosses ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "soil nitrogen loss"@en .
 
 eusoilvoc:SoilNutrientHoldingCapacity a skos:Concept ;
     skos:broader eusoilvoc:SoilPhysicalCapacity ;
@@ -5211,13 +5215,6 @@ eusoilvoc:SoilOxygenDiffusionRate a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil oxygen diffusion rate"@en .
 
-eusoilvoc:SoilPLoss a skos:Concept ;
-    skos:altLabel "soil P loss"@en ;
-    skos:broader eusoilvoc:SoilNutrientLoss ;
-    skos:exactMatch she:SoilPLoss ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil phosphorus loss"@en .
-
 eusoilvoc:SoilPackingArrangement a skos:Concept ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
@@ -5300,6 +5297,13 @@ eusoilvoc:SoilPermittivity a skos:Concept ;
     skos:exactMatch spp:SoilPermittivity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil permittivity"@en .
+
+eusoilvoc:SoilPhosphorusLoss a skos:Concept ;
+    skos:altLabel "soil P loss"@en ;
+    skos:broader eusoilvoc:SoilNutrientLoss ;
+    skos:exactMatch she:SoilPLoss ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "soil phosphorus loss"@en .
 
 eusoilvoc:SoilPhysicalDegradation a skos:Concept ;
     skos:broader eusoilvoc:SoilDegradation ;
@@ -6075,12 +6079,13 @@ eusoilvoc:SoilWaterEvaporationRate a skos:Concept ;
     skos:prefLabel "soil water evaporation rate"@en .
 
 eusoilvoc:SoilWaterFiltration a skos:Concept ;
+    skos:altLabel "water filtration (soil)"@en ;
     skos:broader eusoilvoc:WaterPurification ;
     skos:definition [ dcterms:source agrovoc:c_25b98c3e ;
             rdf:value "Depending on soil properties, infiltrated precipitation water is partitioned into storage and groundwater recharge. Solutes and particles moving through soil have to pass the extensive inner surfaces of soil constituents where they might be sorbed or transformed. Hence, soils are also important to filter harmful substances, originating from industrial and agricultural production, municipal activities, or atmospheric deposits."@en ] ;
     skos:exactMatch agrovoc:c_25b98c3e ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "water filtration (soil)"@en .
+    skos:prefLabel "soil water filtration"@en .
 
 eusoilvoc:SoilWaterInfiltrationRateClass a skos:Concept,
         sosa:ObservableProperty ;
@@ -6225,10 +6230,10 @@ eusoilvoc:SplashErosion a skos:Concept ;
 eusoilvoc:SpodosolsUSDA a skos:Concept ;
     skos:altLabel "Spodosol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
-    skos:definition [ dcterms:source agrovoc:c_36874 ;
-            rdf:value "Spodosols are acid soils characterized by a subsurface accumulation of humus that is complexed with Al and Fe."@en ],
-        [ dcterms:source nalt:11601 ;
-            rdf:value "Acidic forest soil of low fertility"@en ] ;
+    skos:definition [ dcterms:source nalt:11601 ;
+            rdf:value "Acidic forest soil of low fertility"@en ],
+        [ dcterms:source agrovoc:c_36874 ;
+            rdf:value "Spodosols are acid soils characterized by a subsurface accumulation of humus that is complexed with Al and Fe."@en ] ;
     skos:exactMatch agrovoc:c_36874,
         nalt:11601 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -8597,35 +8602,35 @@ eusoilvoc:Colluvium a skos:Concept ;
 
 eusoilvoc:DNAMetabarcodingOfSoilAnimals a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:broader eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "DNA metabarcoding of soil animals"@en .
 
 eusoilvoc:DNAMetabarcodingOfSoilArchaea a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:broader eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "DNA metabarcoding of soil archaea"@en .
 
 eusoilvoc:DNAMetabarcodingOfSoilBacteria a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:broader eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "DNA metabarcoding of soil bacteria"@en .
 
 eusoilvoc:DNAMetabarcodingOfSoilFungi a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:broader eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "DNA metabarcoding of soil fungi"@en .
 
 eusoilvoc:DNAMetabarcodingOfSoilProtists a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:broader eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "DNA metabarcoding of soil protists"@en .
@@ -8831,8 +8836,8 @@ eusoilvoc:MassMovement a skos:Concept ;
 eusoilvoc:MeanAnnualDesealingArea a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit eusoilvoc:SquareKilometrePerYear ;
-    ns2:BAO_0002586 eusoilvoc:SoilSealing ;
+    ns2:hasUnit eusoilvoc:SquareKilometrePerYear ;
+    ns1:BAO_0002586 eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "mean annual de-sealing area"@en .
@@ -8840,8 +8845,8 @@ eusoilvoc:MeanAnnualDesealingArea a skos:Concept,
 eusoilvoc:MeanAnnualDesealingShareOfMemberStateArea a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/PERCENT-PER-YR> ;
-    ns2:BAO_0002586 eusoilvoc:SoilSealing ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/PERCENT-PER-YR> ;
+    ns1:BAO_0002586 eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "mean annual de-sealing share of Member State area"@en .
@@ -8849,8 +8854,8 @@ eusoilvoc:MeanAnnualDesealingShareOfMemberStateArea a skos:Concept,
 eusoilvoc:MeanAnnualNetSealingArea a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit eusoilvoc:SquareKilometrePerYear ;
-    ns2:BAO_0002586 eusoilvoc:SoilSealing ;
+    ns2:hasUnit eusoilvoc:SquareKilometrePerYear ;
+    ns1:BAO_0002586 eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "mean annual net sealing area"@en .
@@ -8858,8 +8863,8 @@ eusoilvoc:MeanAnnualNetSealingArea a skos:Concept,
 eusoilvoc:MeanAnnualNetSealingShareOfMemberStateArea a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/PERCENT-PER-YR> ;
-    ns2:BAO_0002586 eusoilvoc:SoilSealing ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/PERCENT-PER-YR> ;
+    ns1:BAO_0002586 eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "mean annual net sealing share of Member State area"@en .
@@ -8867,8 +8872,8 @@ eusoilvoc:MeanAnnualNetSealingShareOfMemberStateArea a skos:Concept,
 eusoilvoc:MeanAnnualSoilRemovalArea a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit eusoilvoc:SquareKilometrePerYear ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval ;
+    ns2:hasUnit eusoilvoc:SquareKilometrePerYear ;
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "mean annual soil removal area"@en .
@@ -8876,8 +8881,8 @@ eusoilvoc:MeanAnnualSoilRemovalArea a skos:Concept,
 eusoilvoc:MeanAnnualSoilRemovalShareOfMemberStateArea a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/PERCENT-PER-YR> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/PERCENT-PER-YR> ;
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "mean annual soil removal share of Member State area"@en .
@@ -8885,8 +8890,8 @@ eusoilvoc:MeanAnnualSoilRemovalShareOfMemberStateArea a skos:Concept,
 eusoilvoc:MeanAnnualSoilSealingArea a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit eusoilvoc:SquareKilometrePerYear ;
-    ns2:BAO_0002586 eusoilvoc:SoilSealing ;
+    ns2:hasUnit eusoilvoc:SquareKilometrePerYear ;
+    ns1:BAO_0002586 eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "mean annual soil sealing area"@en .
@@ -8894,8 +8899,8 @@ eusoilvoc:MeanAnnualSoilSealingArea a skos:Concept,
 eusoilvoc:MeanAnnualSoilSealingShareOfMemberStateArea a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/PERCENT-PER-YR> ;
-    ns2:BAO_0002586 eusoilvoc:SoilSealing ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/PERCENT-PER-YR> ;
+    ns1:BAO_0002586 eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "mean annual soil sealing share of Member State area"@en .
@@ -8965,7 +8970,7 @@ eusoilvoc:PermanentWiltingPoint a skos:Concept ;
 
 eusoilvoc:PhospholipidFattyAcidAnalysis a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:altLabel "PLFA analysis"@en ;
     skos:broader eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -9195,8 +9200,8 @@ eusoilvoc:SoilAnthropogenicChanges a skos:Concept ;
 eusoilvoc:SoilAntimonyConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilHeavyMetalConcentration ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil antimony concentration"@en .
@@ -9204,8 +9209,8 @@ eusoilvoc:SoilAntimonyConcentration a skos:Concept,
 eusoilvoc:SoilArsenicConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilHeavyMetalConcentration ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil arsenic concentration"@en .
@@ -9252,8 +9257,8 @@ eusoilvoc:SoilBorneViruses a skos:Concept ;
 eusoilvoc:SoilCadmiumConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilHeavyMetalConcentration ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil cadmium concentration"@en .
@@ -9282,8 +9287,8 @@ eusoilvoc:SoilChemicalDegradation a skos:Concept ;
 eusoilvoc:SoilCobaltConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilHeavyMetalConcentration ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil cobalt concentration"@en .
@@ -9291,8 +9296,8 @@ eusoilvoc:SoilCobaltConcentration a skos:Concept,
 eusoilvoc:SoilCopperConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilHeavyMetalConcentration ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil copper concentration"@en .
@@ -9467,8 +9472,8 @@ eusoilvoc:SoilLeaching a skos:Concept ;
 eusoilvoc:SoilLeadConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilHeavyMetalConcentration ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil lead concentration"@en .
@@ -9510,8 +9515,8 @@ eusoilvoc:SoilMechanics a skos:Concept ;
 eusoilvoc:SoilMercuryConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilHeavyMetalConcentration ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil mercury concentration"@en .
@@ -9537,8 +9542,8 @@ eusoilvoc:SoilMoistureDeficit a skos:Concept ;
 eusoilvoc:SoilNickelConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilHeavyMetalConcentration ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil nickel concentration"@en .
@@ -9776,8 +9781,8 @@ eusoilvoc:SoilTemperature a skos:Concept ;
 eusoilvoc:SoilThalliumConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilHeavyMetalConcentration ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil thallium concentration"@en .
@@ -9794,8 +9799,8 @@ eusoilvoc:SoilThermalRegimes a skos:Concept ;
 eusoilvoc:SoilVanadiumConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilHeavyMetalConcentration ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil vanadium concentration"@en .
@@ -9892,8 +9897,8 @@ eusoilvoc:SoilWaterTransmission a skos:Concept ;
 eusoilvoc:SoilZincConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilHeavyMetalConcentration ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "soil zinc concentration"@en .
@@ -9990,8 +9995,8 @@ eusoilvoc:Topsoil a skos:Concept ;
 eusoilvoc:TotalAreaThatUnderwentSoilRemoval a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/KiloM2> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/KiloM2> ;
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "total area that underwent soil removal"@en .
@@ -10008,8 +10013,8 @@ eusoilvoc:TotalPorosity a skos:Concept ;
 eusoilvoc:TotalSealedSoilArea a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/KiloM2> ;
-    ns2:BAO_0002586 eusoilvoc:SoilSealing ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/KiloM2> ;
+    ns1:BAO_0002586 eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "total sealed soil area"@en .
@@ -10017,8 +10022,8 @@ eusoilvoc:TotalSealedSoilArea a skos:Concept,
 eusoilvoc:TotalSealedSoilShareOfMemberStateArea a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/PERCENT> ;
-    ns2:BAO_0002586 eusoilvoc:SoilSealing ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/PERCENT> ;
+    ns1:BAO_0002586 eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "total sealed soil share of Member State area"@en .
@@ -10026,8 +10031,8 @@ eusoilvoc:TotalSealedSoilShareOfMemberStateArea a skos:Concept,
 eusoilvoc:TotalShareOfMemberStateAreaThatUnderwentSoilRemoval a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/PERCENT> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/PERCENT> ;
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "total share of Member State area that underwent soil removal"@en .
@@ -10035,8 +10040,8 @@ eusoilvoc:TotalShareOfMemberStateAreaThatUnderwentSoilRemoval a skos:Concept,
 eusoilvoc:TotalSoilChromiumConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilHeavyMetalConcentration ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "total soil chromium concentration"@en .
@@ -10131,6 +10136,15 @@ eusoilvoc:Cadmium a skos:Concept ;
         eusoilvoc:CadmiumTotalElements ;
     skos:prefLabel "cadmium"@en .
 
+eusoilvoc:ChangeInTheIntensityOfFloods a skos:Concept,
+        sosa:ObservableProperty ;
+    dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
+        eusoilvoc:SoilSealing ;
+    skos:broader eusoilvoc:SoilIndicators ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "change in the intensity of floods"@en .
+
 eusoilvoc:Clay a skos:Concept ;
     skos:broader eusoilvoc:SoilPrimaryParticles,
         eusoilvoc:SoilTexture ;
@@ -10161,7 +10175,7 @@ eusoilvoc:Copper a skos:Concept ;
 eusoilvoc:EarthwormAbundanceInSoil a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:broader eusoilvoc:BiologicalAbundance,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10170,20 +10184,11 @@ eusoilvoc:EarthwormAbundanceInSoil a skos:Concept,
 eusoilvoc:EarthwormDiversityInSoil a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:broader eusoilvoc:SoilBiologicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "earthworm diversity in soil"@en .
-
-eusoilvoc:EcosystemServiceLossFromSoilSealingOrRemoval a skos:Concept,
-        sosa:ObservableProperty ;
-    dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
-        eusoilvoc:SoilSealing ;
-    skos:broader eusoilvoc:SoilIndicators ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "ecosystem service loss from soil sealing or removal"@en .
 
 eusoilvoc:EffectiveCEC a skos:Concept,
         sosa:ObservableProperty ;
@@ -10227,15 +10232,6 @@ eusoilvoc:FieldPreparation a skos:Concept ;
         eusoilvoc:NurseryBedPreparation ;
     skos:prefLabel "field preparation"@en .
 
-eusoilvoc:FloodIntensityChangeFromSoilSealingOrRemoval a skos:Concept,
-        sosa:ObservableProperty ;
-    dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
-        eusoilvoc:SoilSealing ;
-    skos:broader eusoilvoc:SoilIndicators ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "flood intensity change from soil sealing or removal"@en .
-
 eusoilvoc:Floods a skos:Concept ;
     skos:altLabel "flood"@en ;
     skos:broader eusoilvoc:Inundation ;
@@ -10262,7 +10258,7 @@ eusoilvoc:GeneticSoilTypes a skos:Concept ;
 eusoilvoc:InvasiveAlienSpeciesPresenceInSoil a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:broader eusoilvoc:SoilBiologicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10283,7 +10279,7 @@ eusoilvoc:Iron a skos:Concept ;
 eusoilvoc:LandFragmentation a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:exactMatch agrovoc:c_0543301f ;
@@ -10293,7 +10289,7 @@ eusoilvoc:LandFragmentation a skos:Concept,
 eusoilvoc:LandRecyclingRate a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10302,7 +10298,7 @@ eusoilvoc:LandRecyclingRate a skos:Concept,
 eusoilvoc:LandTakenForAirports a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10311,7 +10307,7 @@ eusoilvoc:LandTakenForAirports a skos:Concept,
 eusoilvoc:LandTakenForCommercialActivities a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10320,7 +10316,7 @@ eusoilvoc:LandTakenForCommercialActivities a skos:Concept,
 eusoilvoc:LandTakenForLogisticHubs a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10329,7 +10325,7 @@ eusoilvoc:LandTakenForLogisticHubs a skos:Concept,
 eusoilvoc:LandTakenForMines a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10338,7 +10334,7 @@ eusoilvoc:LandTakenForMines a skos:Concept,
 eusoilvoc:LandTakenForRenewableEnergy a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10347,17 +10343,26 @@ eusoilvoc:LandTakenForRenewableEnergy a skos:Concept,
 eusoilvoc:LandTakenForRoads a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "land taken for roads"@en .
 
+eusoilvoc:LossOfEcosystemServices a skos:Concept,
+        sosa:ObservableProperty ;
+    dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
+        eusoilvoc:SoilSealing ;
+    skos:broader eusoilvoc:SoilIndicators ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "loss of ecosystem services"@en .
+
 eusoilvoc:MeanAnnualAreaOfLandUseChangeFromSettlementArea a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit eusoilvoc:SquareKilometrePerYear ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
+    ns2:hasUnit eusoilvoc:SquareKilometrePerYear ;
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10366,8 +10371,8 @@ eusoilvoc:MeanAnnualAreaOfLandUseChangeFromSettlementArea a skos:Concept,
 eusoilvoc:MeanAnnualAreaOfLandUseChangeToSettlementArea a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit eusoilvoc:SquareKilometrePerYear ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
+    ns2:hasUnit eusoilvoc:SquareKilometrePerYear ;
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10376,8 +10381,8 @@ eusoilvoc:MeanAnnualAreaOfLandUseChangeToSettlementArea a skos:Concept,
 eusoilvoc:MeanAnnualShareOfMemberStateAreaWithLandUseChangeFromSettlementArea a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/PERCENT-PER-YR> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
+    ns2:hasUnit <http://qudt.org/vocab/unit/PERCENT-PER-YR> ;
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10386,8 +10391,8 @@ eusoilvoc:MeanAnnualShareOfMemberStateAreaWithLandUseChangeFromSettlementArea a 
 eusoilvoc:MeanAnnualShareOfMemberStateAreaWithLandUseChangeToSettlementArea a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/PERCENT-PER-YR> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
+    ns2:hasUnit <http://qudt.org/vocab/unit/PERCENT-PER-YR> ;
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10415,7 +10420,7 @@ eusoilvoc:Molybdenum a skos:Concept ;
 eusoilvoc:NativeAntAbundanceInSoil a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:broader eusoilvoc:BiologicalAbundance,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10424,7 +10429,7 @@ eusoilvoc:NativeAntAbundanceInSoil a skos:Concept,
 eusoilvoc:NativeAntDiversityInSoil a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:broader eusoilvoc:SoilBiologicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10433,7 +10438,7 @@ eusoilvoc:NativeAntDiversityInSoil a skos:Concept,
 eusoilvoc:NematodeAbundanceInSoil a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:broader eusoilvoc:BiologicalAbundance,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10442,7 +10447,7 @@ eusoilvoc:NematodeAbundanceInSoil a skos:Concept,
 eusoilvoc:NematodeDiversityInSoil a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:broader eusoilvoc:SoilBiologicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10523,7 +10528,7 @@ eusoilvoc:PlantAvailableNitrogen a skos:Concept ;
 eusoilvoc:PlantPestPresenceInSoil a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:broader eusoilvoc:SoilBiologicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10531,7 +10536,7 @@ eusoilvoc:PlantPestPresenceInSoil a skos:Concept,
 
 eusoilvoc:ReductionOfSoilWaterInfiltration a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0095002 eusoilvoc:SaturatedHydraulicConductivity,
+    ns1:BAO_0095002 eusoilvoc:SaturatedHydraulicConductivity,
         eusoilvoc:SoilAirCapacity ;
     skos:broader eusoilvoc:SoilThreats ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10559,20 +10564,10 @@ eusoilvoc:Roots a skos:Concept ;
         eusoilvoc:RootPresence ;
     skos:prefLabel "roots"@en .
 
-eusoilvoc:SOCLoss a skos:Concept ;
-    dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0095002 eusoilvoc:SoilOrganicCarbon,
-        eusoilvoc:SoilOrganicCarbonStock ;
-    skos:altLabel "SOC loss"@en ;
-    skos:broader eusoilvoc:SoilThreats ;
-    skos:closeMatch she:SOCLosses ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "soil organic carbon loss"@en .
-
 eusoilvoc:SelectedEmergingSoilContaminantConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10581,7 +10576,7 @@ eusoilvoc:SelectedEmergingSoilContaminantConcentration a skos:Concept,
 eusoilvoc:SelectedEmergingSoilContaminantPresence a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10590,7 +10585,7 @@ eusoilvoc:SelectedEmergingSoilContaminantPresence a skos:Concept,
 eusoilvoc:SelectedSoilOrganicContaminantConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10599,7 +10594,7 @@ eusoilvoc:SelectedSoilOrganicContaminantConcentration a skos:Concept,
 eusoilvoc:SelectedSoilPFASConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10608,7 +10603,7 @@ eusoilvoc:SelectedSoilPFASConcentration a skos:Concept,
 eusoilvoc:SelectedSoilPesticideActiveSubstanceConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10617,7 +10612,7 @@ eusoilvoc:SelectedSoilPesticideActiveSubstanceConcentration a skos:Concept,
 eusoilvoc:SelectedSoilPesticideMetaboliteConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10663,7 +10658,7 @@ eusoilvoc:SoilBacteria a skos:Concept ;
 eusoilvoc:SoilBasalRespiration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:broader eusoilvoc:SoilBiologicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:closeMatch nalt:17423 ;
@@ -10673,7 +10668,7 @@ eusoilvoc:SoilBasalRespiration a skos:Concept,
 eusoilvoc:SoilBiologicalQualityBasedOnArthropods a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:altLabel "QBS-ar"@en ;
     skos:broader eusoilvoc:SoilBiologicalProperties,
         eusoilvoc:SoilDescriptor ;
@@ -10757,8 +10752,8 @@ eusoilvoc:SoilDensification a skos:Concept ;
 eusoilvoc:SoilErosionRate a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/TONNE-PER-HA-YR> ;
-    ns2:BAO_0002586 eusoilvoc:SoilErosion ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/TONNE-PER-HA-YR> ;
+    ns1:BAO_0002586 eusoilvoc:SoilErosion ;
     skos:broader eusoilvoc:SoilDescriptor,
         eusoilvoc:SoilPhysicalProperties ;
     skos:closeMatch she:SoilErosionRates ;
@@ -10876,15 +10871,25 @@ eusoilvoc:SoilNutrientLoss a skos:Concept ;
     skos:broader eusoilvoc:SoilThreats ;
     skos:exactMatch she:SoilNutrientLoss ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:SoilNLoss,
-        eusoilvoc:SoilPLoss ;
+    skos:narrower eusoilvoc:SoilNitrogenLoss,
+        eusoilvoc:SoilPhosphorusLoss ;
     skos:prefLabel "soil nutrient loss"@en .
+
+eusoilvoc:SoilOrganicCarbonLoss a skos:Concept ;
+    dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
+    ns1:BAO_0095002 eusoilvoc:SoilOrganicCarbon,
+        eusoilvoc:SoilOrganicCarbonStock ;
+    skos:altLabel "SOC loss"@en ;
+    skos:broader eusoilvoc:SoilThreats ;
+    skos:closeMatch she:SOCLosses ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "soil organic carbon loss"@en .
 
 eusoilvoc:SoilOrganicCarbonStock a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/TONNE-PER-HA> ;
-    ns2:BAO_0002586 eusoilvoc:SOCLoss ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/TONNE-PER-HA> ;
+    ns1:BAO_0002586 eusoilvoc:SoilOrganicCarbonLoss ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:closeMatch she:SOCStocks ;
@@ -10895,8 +10900,8 @@ eusoilvoc:SoilOrganicCarbonStock a skos:Concept,
 eusoilvoc:SoilOrganicCarbonToNitrogenRatio a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/UNITLESS> ;
-    ns2:BAO_0002586 eusoilvoc:ExcessNutrientContentInSoil ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/UNITLESS> ;
+    ns1:BAO_0002586 eusoilvoc:ExcessNutrientContentInSoil ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10915,7 +10920,7 @@ eusoilvoc:SoilOxidationReductionReaction a skos:Concept ;
 eusoilvoc:SoilPFAS21Concentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10924,7 +10929,7 @@ eusoilvoc:SoilPFAS21Concentration a skos:Concept,
 eusoilvoc:SoilPFAS43Concentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10964,7 +10969,7 @@ eusoilvoc:SoilPoreContinuity a skos:Concept ;
 
 eusoilvoc:SoilSalinisation a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0095002 eusoilvoc:SoilElectricalConductivity ;
+    ns1:BAO_0095002 eusoilvoc:SoilElectricalConductivity ;
     skos:altLabel "soil salinization"@en ;
     skos:broader eusoilvoc:SoilChemicalProcesses,
         eusoilvoc:SoilDegradation ;
@@ -11128,8 +11133,8 @@ eusoilvoc:SoilWaterFlow a skos:Concept ;
 eusoilvoc:SoilWaterHoldingCapacityExpressedAsWaterMassPercentageOfTotalSoilMass a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/PERCENT> ;
-    ns2:BAO_0002586 eusoilvoc:ReductionOfSoilWaterRetention ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/PERCENT> ;
+    ns1:BAO_0002586 eusoilvoc:ReductionOfSoilWaterRetention ;
     skos:broader eusoilvoc:SoilDescriptor,
         eusoilvoc:SoilWaterHoldingCapacity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -11138,8 +11143,8 @@ eusoilvoc:SoilWaterHoldingCapacityExpressedAsWaterMassPercentageOfTotalSoilMass 
 eusoilvoc:SoilWaterHoldingCapacityExpressedAsWaterVolumePercentageOfTotalSoilVolume a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/PERCENT> ;
-    ns2:BAO_0002586 eusoilvoc:ReductionOfSoilWaterRetention ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/PERCENT> ;
+    ns1:BAO_0002586 eusoilvoc:ReductionOfSoilWaterRetention ;
     skos:broader eusoilvoc:SoilDescriptor,
         eusoilvoc:SoilWaterHoldingCapacity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -11201,7 +11206,7 @@ eusoilvoc:SoilWetting a skos:Concept ;
 eusoilvoc:SpringtailAbundanceInSoil a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:broader eusoilvoc:BiologicalAbundance,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -11210,7 +11215,7 @@ eusoilvoc:SpringtailAbundanceInSoil a skos:Concept,
 eusoilvoc:SpringtailDiversityInSoil a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
+    ns1:BAO_0002586 eusoilvoc:SoilBiodiversityLoss ;
     skos:broader eusoilvoc:SoilBiologicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -11229,8 +11234,8 @@ eusoilvoc:StructuralSoilTypes a skos:Concept ;
 eusoilvoc:SubsoilBulkDensity a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/GM-PER-CentiM3> ;
-    ns2:BAO_0002586 eusoilvoc:SubsoilCompaction ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/GM-PER-CentiM3> ;
+    ns1:BAO_0002586 eusoilvoc:SubsoilCompaction ;
     skos:broader eusoilvoc:SoilBulkDensity,
         eusoilvoc:SoilDescriptor ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -11248,8 +11253,8 @@ eusoilvoc:Sulfur a skos:Concept ;
 eusoilvoc:TopsoilBulkDensity a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/GM-PER-CentiM3> ;
-    ns2:BAO_0002586 eusoilvoc:TopsoilCompaction ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/GM-PER-CentiM3> ;
+    ns1:BAO_0002586 eusoilvoc:TopsoilCompaction ;
     skos:broader eusoilvoc:SoilBulkDensity,
         eusoilvoc:SoilDescriptor ;
     skos:definition [ dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
@@ -11260,8 +11265,8 @@ eusoilvoc:TopsoilBulkDensity a skos:Concept,
 eusoilvoc:TotalSettlementArea a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/KiloM2> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
+    ns2:hasUnit <http://qudt.org/vocab/unit/KiloM2> ;
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -11270,8 +11275,8 @@ eusoilvoc:TotalSettlementArea a skos:Concept,
 eusoilvoc:TotalSettlementShareOfMemberStateArea a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/PERCENT> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
+    ns2:hasUnit <http://qudt.org/vocab/unit/PERCENT> ;
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -11414,7 +11419,7 @@ eusoilvoc:CoarseFragments a skos:Concept,
 
 eusoilvoc:ExcessNutrientContentInSoil a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0095002 eusoilvoc:NitrogenTotal,
+    ns1:BAO_0095002 eusoilvoc:NitrogenTotal,
         eusoilvoc:PhosphorusExtractableElements,
         eusoilvoc:SoilOrganicCarbonToNitrogenRatio ;
     skos:broader eusoilvoc:SoilThreats ;
@@ -11534,7 +11539,7 @@ eusoilvoc:Potassium a skos:Concept ;
 
 eusoilvoc:ReductionOfSoilWaterRetention a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0095002 eusoilvoc:SoilWaterHoldingCapacity,
+    ns1:BAO_0095002 eusoilvoc:SoilWaterHoldingCapacity,
         eusoilvoc:SoilWaterHoldingCapacityExpressedAsWaterMassPercentageOfTotalSoilMass,
         eusoilvoc:SoilWaterHoldingCapacityExpressedAsWaterVolumePercentageOfTotalSoilVolume ;
     skos:broader eusoilvoc:SoilThreats ;
@@ -11567,7 +11572,7 @@ eusoilvoc:Sodium a skos:Concept ;
 
 eusoilvoc:SoilAcidification a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0095002 eusoilvoc:BaseSaturation,
+    ns1:BAO_0095002 eusoilvoc:BaseSaturation,
         eusoilvoc:SoilpH ;
     skos:broader eusoilvoc:SoilChemicalDegradativeProcesses,
         eusoilvoc:SoilThreats ;
@@ -11595,7 +11600,7 @@ eusoilvoc:SoilAirFlow a skos:Concept ;
 
 eusoilvoc:SoilArtificialisation a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:SoilRemoval,
+    ns1:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -11881,7 +11886,7 @@ eusoilvoc:SoilWaterPotential a skos:Concept ;
 
 eusoilvoc:SubsoilCompaction a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0095002 eusoilvoc:SaturatedHydraulicConductivity,
+    ns1:BAO_0095002 eusoilvoc:SaturatedHydraulicConductivity,
         eusoilvoc:SoilAirCapacity,
         eusoilvoc:SubsoilBulkDensity ;
     skos:broader eusoilvoc:SoilCompaction ;
@@ -11891,7 +11896,7 @@ eusoilvoc:SubsoilCompaction a skos:Concept ;
 
 eusoilvoc:TopsoilCompaction a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0095002 eusoilvoc:SaturatedHydraulicConductivity,
+    ns1:BAO_0095002 eusoilvoc:SaturatedHydraulicConductivity,
         eusoilvoc:SoilAirCapacity,
         eusoilvoc:TopsoilBulkDensity ;
     skos:broader eusoilvoc:SoilCompaction ;
@@ -11914,8 +11919,8 @@ eusoilvoc:nitrogenTotalProcedure-TotalN_dc a skos:Concept,
 eusoilvoc:BaseSaturation a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/UNITLESS> ;
-    ns2:BAO_0002586 eusoilvoc:SoilAcidification ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/UNITLESS> ;
+    ns1:BAO_0002586 eusoilvoc:SoilAcidification ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Bascal ;
@@ -12135,8 +12140,8 @@ eusoilvoc:Sand a skos:Concept ;
 eusoilvoc:SaturatedHydraulicConductivity a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/centimetrePerDay> ;
-    ns2:BAO_0002586 eusoilvoc:ReductionOfSoilWaterInfiltration,
+    ns2:hasUnit <http://www.ontology-of-units-of-measure.org/resource/om-2/centimetrePerDay> ;
+    ns1:BAO_0002586 eusoilvoc:ReductionOfSoilWaterInfiltration,
         eusoilvoc:SubsoilCompaction,
         eusoilvoc:TopsoilCompaction ;
     skos:broader eusoilvoc:SoilDescriptor,
@@ -12165,8 +12170,8 @@ eusoilvoc:Slope a skos:Concept ;
 eusoilvoc:SoilAirCapacity a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/PERCENT> ;
-    ns2:BAO_0002586 eusoilvoc:ReductionOfSoilWaterInfiltration,
+    ns2:hasUnit <http://qudt.org/vocab/unit/PERCENT> ;
+    ns1:BAO_0002586 eusoilvoc:ReductionOfSoilWaterInfiltration,
         eusoilvoc:SubsoilCompaction,
         eusoilvoc:TopsoilCompaction ;
     skos:broader eusoilvoc:SoilDescriptor,
@@ -12792,7 +12797,7 @@ eusoilvoc:SoilTexture a skos:Concept,
 eusoilvoc:SoilWaterHoldingCapacity a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0002586 eusoilvoc:ReductionOfSoilWaterRetention ;
+    ns1:BAO_0002586 eusoilvoc:ReductionOfSoilWaterRetention ;
     skos:broader eusoilvoc:SoilDescriptor,
         eusoilvoc:SoilPhysicalCapacity,
         eusoilvoc:SoilWaterPhysicalProperties ;
@@ -13103,32 +13108,6 @@ eusoilvoc:ParentMaterial a skos:Concept ;
         eusoilvoc:ParentTextureUnconsolidated ;
     skos:prefLabel "parent material"@en .
 
-eusoilvoc:Soil a skos:Concept ;
-    dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
-    skos:closeMatch she:Soils ;
-    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "The uppermost layer of the Earth’s crust, supporting terrestrial life and forming the interface between the lithosphere and atmosphere."@en ],
-        [ dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
-            rdf:value "The top layer of the Earth’s crust, situated between the bedrock or the parent material and the land surface, and which is composed of mineral particles, organic matter, water, air and living organisms"@en ] ;
-    skos:exactMatch agrovoc:c_7156,
-        <http://id.agrisemantics.org/gacs/C113>,
-        spp:Soil,
-        inrae:c_1524,
-        gemet:7843,
-        iso11074:3.448,
-        nalt:63334,
-        benchmarks:soil ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:FineSoil,
-        eusoilvoc:ManagedSoils,
-        eusoilvoc:Rhizosphere,
-        eusoilvoc:SoilResources,
-        eusoilvoc:SoilSkeleton,
-        eusoilvoc:Subsoil,
-        eusoilvoc:Topsoil ;
-    skos:prefLabel "soil"@en ;
-    skos:topConceptOf <https://w3id.org/eusoilvoc> .
-
 eusoilvoc:SoilAggregatePhysicalProperties a skos:Concept ;
     skos:altLabel "soil aggregate physical property"@en ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
@@ -13170,6 +13149,7 @@ eusoilvoc:SoilOrganicMatter a skos:Concept,
 
 eusoilvoc:SoilProcesses a skos:Concept ;
     skos:altLabel "soil process"@en ;
+    skos:broader eusoilvoc:Soil ;
     skos:closeMatch gemet:7881 ;
     skos:exactMatch spp:SoilProcess,
         iso11074:3.464,
@@ -13183,8 +13163,7 @@ eusoilvoc:SoilProcesses a skos:Concept ;
         eusoilvoc:SoilChemicalProcesses,
         eusoilvoc:SoilDenudation,
         eusoilvoc:SoilPhysicalProcesses ;
-    skos:prefLabel "soil processes"@en ;
-    skos:topConceptOf <https://w3id.org/eusoilvoc> .
+    skos:prefLabel "soil processes"@en .
 
 eusoilvoc:WaterErosion a skos:Concept ;
     skos:altLabel "soil erosion by water"@en ;
@@ -13322,8 +13301,8 @@ eusoilvoc:SoilDensity a skos:Concept ;
 eusoilvoc:SoilElectricalConductivity a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/DeciS-PER-M> ;
-    ns2:BAO_0002586 eusoilvoc:SoilSalinisation ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/DeciS-PER-M> ;
+    ns1:BAO_0002586 eusoilvoc:SoilSalinisation ;
     skos:broader eusoilvoc:SoilDescriptor,
         eusoilvoc:SoilPhysicalProperties ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Eleccond ;
@@ -13407,6 +13386,7 @@ eusoilvoc:SoilStructureIndex a skos:Concept ;
     skos:prefLabel "soil structure index"@en .
 
 eusoilvoc:SoilSubstance a skos:Concept ;
+    skos:broader eusoilvoc:Soil ;
     skos:exactMatch spp:SoilSubstance ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:Contaminant,
@@ -13417,8 +13397,7 @@ eusoilvoc:SoilSubstance a skos:Concept ;
         eusoilvoc:SoilOrganisms,
         eusoilvoc:SoilPores,
         eusoilvoc:SoilSurfaceSeal ;
-    skos:prefLabel "soil substance"@en ;
-    skos:topConceptOf <https://w3id.org/eusoilvoc> .
+    skos:prefLabel "soil substance"@en .
 
 eusoilvoc:SoilTotalCarbon a skos:Concept,
         sosa:ObservableProperty ;
@@ -13510,8 +13489,8 @@ eusoilvoc:SoilTransport a skos:Concept ;
 eusoilvoc:SoilpH a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/PH> ;
-    ns2:BAO_0002586 eusoilvoc:SoilAcidification ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/PH> ;
+    ns1:BAO_0002586 eusoilvoc:SoilAcidification ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilDescriptor ;
@@ -13651,6 +13630,7 @@ eusoilvoc:SoilDrainage a skos:Concept ;
 
 eusoilvoc:SoilPhenomena a skos:Concept ;
     skos:altLabel "soil phenomenon"@en ;
+    skos:broader eusoilvoc:Soil ;
     skos:exactMatch spp:SoilPhenomena ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:DrainageToGroundwater,
@@ -13663,8 +13643,7 @@ eusoilvoc:SoilPhenomena a skos:Concept ;
         eusoilvoc:SoilPlantAtmosphereContinuum,
         eusoilvoc:SoilStrainHardening,
         eusoilvoc:SoilWaterRepellency ;
-    skos:prefLabel "soil phenomena"@en ;
-    skos:topConceptOf <https://w3id.org/eusoilvoc> .
+    skos:prefLabel "soil phenomena"@en .
 
 eusoilvoc:SoilPhysicalCapacity a skos:Concept ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
@@ -13684,6 +13663,7 @@ eusoilvoc:SoilPhysicalCapacity a skos:Concept ;
 
 eusoilvoc:SoilSciences a skos:Concept ;
     skos:altLabel "soil science"@en ;
+    skos:broader eusoilvoc:Soil ;
     skos:closeMatch inrae:c_36c1af09,
         gemet:7890,
         nalt:956 ;
@@ -13699,8 +13679,7 @@ eusoilvoc:SoilSciences a skos:Concept ;
         eusoilvoc:SoilMorphology,
         eusoilvoc:SoilPhysics,
         eusoilvoc:SoilScientists ;
-    skos:prefLabel "soil sciences"@en ;
-    skos:topConceptOf <https://w3id.org/eusoilvoc> .
+    skos:prefLabel "soil sciences"@en .
 
 eusoilvoc:AluminiumExchangeableBase a skos:Concept,
         sosa:ObservableProperty ;
@@ -14054,7 +14033,7 @@ eusoilvoc:SoilClayMineral a skos:Concept ;
 
 eusoilvoc:SoilErosion a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0095002 eusoilvoc:SoilErosionRate ;
+    ns1:BAO_0095002 eusoilvoc:SoilErosionRate ;
     skos:broader eusoilvoc:SoilPhysicalDegradativeProcesses,
         eusoilvoc:SoilThreats ;
     skos:closeMatch agrovoc:c_2651,
@@ -14127,6 +14106,7 @@ eusoilvoc:ChemicalSoilTypes a skos:Concept ;
 
 eusoilvoc:SoilFunctions a skos:Concept ;
     skos:altLabel "soil function"@en ;
+    skos:broader eusoilvoc:Soil ;
     skos:closeMatch gemet:3524,
         iso11074:3.453,
         nalt:335251 ;
@@ -14150,8 +14130,7 @@ eusoilvoc:SoilFunctions a skos:Concept ;
         eusoilvoc:SoilPhysicalFunctions,
         eusoilvoc:WaterPurification,
         eusoilvoc:WaterRegulation ;
-    skos:prefLabel "soil functions"@en ;
-    skos:topConceptOf <https://w3id.org/eusoilvoc> .
+    skos:prefLabel "soil functions"@en .
 
 eusoilvoc:extractableElementsProcedure-Extr_ap14 a skos:Concept,
         sosa:Procedure ;
@@ -15145,8 +15124,8 @@ eusoilvoc:SoilChemicalProcesses a skos:Concept ;
 eusoilvoc:SoilHeavyMetalConcentration a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
-    ns2:BAO_0002586 eusoilvoc:SoilContamination ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
+    ns1:BAO_0002586 eusoilvoc:SoilContamination ;
     skos:altLabel "concentration of heavy metals in soil"@en ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilDescriptor ;
@@ -15242,8 +15221,8 @@ eusoilvoc:SoilWaterPhysicalProcesses a skos:Concept ;
 eusoilvoc:NitrogenTotal a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-GM> ;
-    ns2:BAO_0002586 eusoilvoc:ExcessNutrientContentInSoil ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-GM> ;
+    ns1:BAO_0002586 eusoilvoc:ExcessNutrientContentInSoil ;
     skos:broader eusoilvoc:Nitrogen,
         eusoilvoc:NitrogenContent,
         eusoilvoc:SoilDescriptor ;
@@ -15270,6 +15249,7 @@ eusoilvoc:NitrogenTotal a skos:Concept,
 
 eusoilvoc:SoilThreats a skos:Concept ;
     skos:altLabel "soil threat"@en ;
+    skos:broader eusoilvoc:Soil ;
     skos:closeMatch benchmarks:soil-threat ;
     skos:definition [ dcterms:source <https://soilhealthbenchmarks.eu/glossary/soil-threat/> ;
             rdf:value "Soil threats are processes that could degrade (some of) the functions of soils and the services that soils provide. Examples of soil threats are: acidification, compaction, contamination (pollution), decline in soil organic matter, decline in soil biodiversity, desertification, erosion, flooding and water logging, landslides, salinization."@en ] ;
@@ -15278,7 +15258,6 @@ eusoilvoc:SoilThreats a skos:Concept ;
     skos:narrower eusoilvoc:ExcessNutrientContentInSoil,
         eusoilvoc:ReductionOfSoilWaterInfiltration,
         eusoilvoc:ReductionOfSoilWaterRetention,
-        eusoilvoc:SOCLoss,
         eusoilvoc:SoilAcidification,
         eusoilvoc:SoilBiodiversityLoss,
         eusoilvoc:SoilCompaction,
@@ -15287,11 +15266,11 @@ eusoilvoc:SoilThreats a skos:Concept ;
         eusoilvoc:SoilDegradation,
         eusoilvoc:SoilErosion,
         eusoilvoc:SoilNutrientLoss,
+        eusoilvoc:SoilOrganicCarbonLoss,
         eusoilvoc:SoilPollution,
         eusoilvoc:SoilSealing,
         eusoilvoc:Waterlogging ;
-    skos:prefLabel "soil threats"@en ;
-    skos:topConceptOf <https://w3id.org/eusoilvoc> .
+    skos:prefLabel "soil threats"@en .
 
 eusoilvoc:SoilTypes a skos:Concept,
         sosa:ObservableProperty ;
@@ -15377,6 +15356,42 @@ eusoilvoc:LithologicalSoilTypes a skos:Concept ;
         eusoilvoc:VolcanicSoils ;
     skos:prefLabel "lithological soil types"@en .
 
+eusoilvoc:Soil a skos:Concept ;
+    dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
+    skos:closeMatch she:Soils ;
+    skos:definition [ dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
+            rdf:value "The top layer of the Earth’s crust, situated between the bedrock or the parent material and the land surface, and which is composed of mineral particles, organic matter, water, air and living organisms"@en ],
+        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The uppermost layer of the Earth’s crust, supporting terrestrial life and forming the interface between the lithosphere and atmosphere."@en ] ;
+    skos:exactMatch agrovoc:c_7156,
+        <http://id.agrisemantics.org/gacs/C113>,
+        spp:Soil,
+        inrae:c_1524,
+        gemet:7843,
+        iso11074:3.448,
+        nalt:63334,
+        benchmarks:soil ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:FineSoil,
+        eusoilvoc:ManagedSoils,
+        eusoilvoc:Rhizosphere,
+        eusoilvoc:SoilDescription,
+        eusoilvoc:SoilFunctions,
+        eusoilvoc:SoilIndicators,
+        eusoilvoc:SoilManagement,
+        eusoilvoc:SoilPhenomena,
+        eusoilvoc:SoilProcesses,
+        eusoilvoc:SoilProperties,
+        eusoilvoc:SoilResources,
+        eusoilvoc:SoilSciences,
+        eusoilvoc:SoilSkeleton,
+        eusoilvoc:SoilSubstance,
+        eusoilvoc:SoilThreats,
+        eusoilvoc:Subsoil,
+        eusoilvoc:Topsoil ;
+    skos:prefLabel "soil"@en ;
+    skos:topConceptOf <https://w3id.org/eusoilvoc> .
+
 eusoilvoc:SoilComponents a skos:Concept ;
     skos:altLabel "soil component"@en ;
     skos:broader eusoilvoc:SoilSubstance ;
@@ -15405,7 +15420,7 @@ eusoilvoc:SoilComponents a skos:Concept ;
 
 eusoilvoc:SoilBiodiversityLoss a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0095002 eusoilvoc:DNAMetabarcodingOfSoilAnimals,
+    ns1:BAO_0095002 eusoilvoc:DNAMetabarcodingOfSoilAnimals,
         eusoilvoc:DNAMetabarcodingOfSoilArchaea,
         eusoilvoc:DNAMetabarcodingOfSoilBacteria,
         eusoilvoc:DNAMetabarcodingOfSoilFungi,
@@ -15466,6 +15481,7 @@ eusoilvoc:SoilMoistureContents a skos:Concept,
 
 eusoilvoc:SoilProperties a skos:Concept ;
     skos:altLabel "soil property"@en ;
+    skos:broader eusoilvoc:Soil ;
     skos:closeMatch inrae:c_11270 ;
     skos:exactMatch agrovoc:c_330883,
         spp:SoilProperty,
@@ -15491,8 +15507,7 @@ eusoilvoc:SoilProperties a skos:Concept ;
         eusoilvoc:SoilSurfaceProperties,
         eusoilvoc:SoilTrafficability,
         eusoilvoc:SoilWaterRepellency ;
-    skos:prefLabel "soil properties"@en ;
-    skos:topConceptOf <https://w3id.org/eusoilvoc> .
+    skos:prefLabel "soil properties"@en .
 
 eusoilvoc:AluminiumTotalElements a skos:Concept,
         sosa:ObservableProperty ;
@@ -15980,7 +15995,7 @@ eusoilvoc:SoilChemicophysicalProperties a skos:Concept ;
 eusoilvoc:SoilContamination a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj>,
         <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0095002 eusoilvoc:SelectedEmergingSoilContaminantConcentration,
+    ns1:BAO_0095002 eusoilvoc:SelectedEmergingSoilContaminantConcentration,
         eusoilvoc:SelectedEmergingSoilContaminantPresence,
         eusoilvoc:SelectedSoilOrganicContaminantConcentration,
         eusoilvoc:SelectedSoilPFASConcentration,
@@ -16043,8 +16058,7 @@ eusoilvoc:SoilPhysicalProcesses a skos:Concept ;
 eusoilvoc:SoilRemoval a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj>,
         <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0095002 eusoilvoc:EcosystemServiceLossFromSoilSealingOrRemoval,
-        eusoilvoc:FloodIntensityChangeFromSoilSealingOrRemoval,
+    ns1:BAO_0095002 eusoilvoc:ChangeInTheIntensityOfFloods,
         eusoilvoc:LandFragmentation,
         eusoilvoc:LandRecyclingRate,
         eusoilvoc:LandTakenForAirports,
@@ -16053,6 +16067,7 @@ eusoilvoc:SoilRemoval a skos:Concept ;
         eusoilvoc:LandTakenForMines,
         eusoilvoc:LandTakenForRenewableEnergy,
         eusoilvoc:LandTakenForRoads,
+        eusoilvoc:LossOfEcosystemServices,
         eusoilvoc:MeanAnnualAreaOfLandUseChangeFromSettlementArea,
         eusoilvoc:MeanAnnualAreaOfLandUseChangeToSettlementArea,
         eusoilvoc:MeanAnnualShareOfMemberStateAreaWithLandUseChangeFromSettlementArea,
@@ -16103,6 +16118,7 @@ eusoilvoc:SoilWaterPhysicalProperties a skos:Concept ;
     skos:prefLabel "soil water physical properties"@en .
 
 eusoilvoc:SoilManagement a skos:Concept ;
+    skos:broader eusoilvoc:Soil ;
     skos:exactMatch agrovoc:c_7176,
         spp:SoilManagement,
         inrae:c_3542,
@@ -16134,8 +16150,7 @@ eusoilvoc:SoilManagement a skos:Concept ;
         eusoilvoc:SoilRegeneration,
         eusoilvoc:SoilTillage,
         eusoilvoc:SoilTreatment ;
-    skos:prefLabel "soil management"@en ;
-    skos:topConceptOf <https://w3id.org/eusoilvoc> .
+    skos:prefLabel "soil management"@en .
 
 eusoilvoc:AluminiumExtractableElements a skos:Concept,
         sosa:ObservableProperty ;
@@ -16615,6 +16630,7 @@ eusoilvoc:SoilClassificationFAO a skos:Concept ;
     skos:prefLabel "soil classification FAO"@en .
 
 eusoilvoc:SoilDescription a skos:Concept ;
+    skos:broader eusoilvoc:Soil ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:CropClass,
         eusoilvoc:FragmentClass,
@@ -16642,14 +16658,13 @@ eusoilvoc:SoilDescription a skos:Concept ;
         eusoilvoc:TextureLabClass,
         eusoilvoc:Topsoil,
         eusoilvoc:VegetationClass ;
-    skos:prefLabel "soil description"@en ;
-    skos:topConceptOf <https://w3id.org/eusoilvoc> .
+    skos:prefLabel "soil description"@en .
 
 eusoilvoc:PhosphorusExtractableElements a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
-    ns2:BAO_0002586 eusoilvoc:ExcessNutrientContentInSoil ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/MilliGM-PER-KiloGM> ;
+    ns1:BAO_0002586 eusoilvoc:ExcessNutrientContentInSoil ;
     skos:broader eusoilvoc:Phosphorus,
         eusoilvoc:SoilDescriptor ;
     skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Phoext ;
@@ -16728,8 +16743,8 @@ eusoilvoc:SoilChemicalProperties a skos:Concept ;
 eusoilvoc:SoilOrganicCarbon a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns1:hasUnit <http://qudt.org/vocab/unit/GM-PER-KiloGM> ;
-    ns2:BAO_0002586 eusoilvoc:SOCLoss ;
+    ns2:hasUnit <http://qudt.org/vocab/unit/GM-PER-KiloGM> ;
+    ns1:BAO_0002586 eusoilvoc:SoilOrganicCarbonLoss ;
     skos:broader eusoilvoc:SoilDescriptor,
         eusoilvoc:SoilOrganicMatter,
         eusoilvoc:SoilTotalCarbon ;
@@ -16771,8 +16786,7 @@ eusoilvoc:SoilOrganicCarbon a skos:Concept,
 
 eusoilvoc:SoilSealing a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    ns2:BAO_0095002 eusoilvoc:EcosystemServiceLossFromSoilSealingOrRemoval,
-        eusoilvoc:FloodIntensityChangeFromSoilSealingOrRemoval,
+    ns1:BAO_0095002 eusoilvoc:ChangeInTheIntensityOfFloods,
         eusoilvoc:LandFragmentation,
         eusoilvoc:LandRecyclingRate,
         eusoilvoc:LandTakenForAirports,
@@ -16781,6 +16795,7 @@ eusoilvoc:SoilSealing a skos:Concept ;
         eusoilvoc:LandTakenForMines,
         eusoilvoc:LandTakenForRenewableEnergy,
         eusoilvoc:LandTakenForRoads,
+        eusoilvoc:LossOfEcosystemServices,
         eusoilvoc:MeanAnnualAreaOfLandUseChangeFromSettlementArea,
         eusoilvoc:MeanAnnualAreaOfLandUseChangeToSettlementArea,
         eusoilvoc:MeanAnnualDesealingArea,
@@ -16887,10 +16902,10 @@ eusoilvoc:SoilClassificationWRB a skos:Concept ;
 
 eusoilvoc:SoilIndicators a skos:Concept ;
     skos:altLabel "soil indicator"@en ;
+    skos:broader eusoilvoc:Soil ;
     skos:exactMatch she:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:EcosystemServiceLossFromSoilSealingOrRemoval,
-        eusoilvoc:FloodIntensityChangeFromSoilSealingOrRemoval,
+    skos:narrower eusoilvoc:ChangeInTheIntensityOfFloods,
         eusoilvoc:LandFragmentation,
         eusoilvoc:LandRecyclingRate,
         eusoilvoc:LandTakenForAirports,
@@ -16899,6 +16914,7 @@ eusoilvoc:SoilIndicators a skos:Concept ;
         eusoilvoc:LandTakenForMines,
         eusoilvoc:LandTakenForRenewableEnergy,
         eusoilvoc:LandTakenForRoads,
+        eusoilvoc:LossOfEcosystemServices,
         eusoilvoc:MeanAnnualAreaOfLandUseChangeFromSettlementArea,
         eusoilvoc:MeanAnnualAreaOfLandUseChangeToSettlementArea,
         eusoilvoc:MeanAnnualDesealingArea,
@@ -16924,8 +16940,7 @@ eusoilvoc:SoilIndicators a skos:Concept ;
         eusoilvoc:TotalSettlementArea,
         eusoilvoc:TotalSettlementShareOfMemberStateArea,
         eusoilvoc:TotalShareOfMemberStateAreaThatUnderwentSoilRemoval ;
-    skos:prefLabel "soil indicators"@en ;
-    skos:topConceptOf <https://w3id.org/eusoilvoc> .
+    skos:prefLabel "soil indicators"@en .
 
 eusoilvoc:SoilDescriptor a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
@@ -17068,15 +17083,5 @@ eusoilvoc:SoilPhysicalProperties a skos:Concept ;
         eusoilvoc:PlanetaryPhenomena,
         eusoilvoc:PublicConcerned,
         eusoilvoc:Soil,
-        eusoilvoc:SoilDescription,
-        eusoilvoc:SoilFunctions,
-        eusoilvoc:SoilIndicators,
-        eusoilvoc:SoilManagement,
-        eusoilvoc:SoilPhenomena,
-        eusoilvoc:SoilProcesses,
-        eusoilvoc:SoilProperties,
-        eusoilvoc:SoilSciences,
-        eusoilvoc:SoilSubstance,
-        eusoilvoc:SoilThreats,
         eusoilvoc:TransferFunction .
 

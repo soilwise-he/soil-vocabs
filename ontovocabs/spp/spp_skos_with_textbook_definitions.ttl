@@ -3602,6 +3602,7 @@ eusoilvoc:SoilDrying a skos:Concept ;
     skos:prefLabel "soil drying"@en .
 
 eusoilvoc:SoilFunctions a skos:Concept ;
+    skos:broader eusoilvoc:Soil ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "Roles performed by soil, including sustaining biomass, providing habitat and biodiversity, cycling elements, moderating environmental quality, supporting engineering uses, and preserving records, landscapes, and cultural heritage."@en ] ;
     skos:altLabel "soil function"@en ;
@@ -3669,6 +3670,7 @@ eusoilvoc:SoilPrimaryParticles a skos:Concept ;
 
 eusoilvoc:SoilProcesses a skos:Concept ;
     skos:altLabel "soil process"@en ;
+    skos:broader eusoilvoc:Soil ;
     skos:exactMatch spp:SoilProcess ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilBiologicalProcesses,
@@ -3678,6 +3680,7 @@ eusoilvoc:SoilProcesses a skos:Concept ;
 
 eusoilvoc:SoilProperties a skos:Concept ;
     skos:altLabel "soil property"@en ;
+    skos:broader eusoilvoc:Soil ;
     skos:exactMatch spp:SoilProperty ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilChemicophysicalProperties,
@@ -4018,6 +4021,7 @@ eusoilvoc:SoilMoisturePotential a skos:Concept ;
     skos:prefLabel "soil moisture potential"@en .
 
 eusoilvoc:SoilSubstance a skos:Concept ;
+    skos:broader eusoilvoc:Soil ;
     skos:exactMatch spp:SoilSubstance ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilChemical,
@@ -4178,6 +4182,7 @@ eusoilvoc:SoilStructureIndex a skos:Concept ;
 
 eusoilvoc:SoilPhenomena a skos:Concept ;
     skos:altLabel "soil phenomenon"@en ;
+    skos:broader eusoilvoc:Soil ;
     skos:exactMatch spp:SoilPhenomena ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:DrainageToGroundwater,
@@ -4226,6 +4231,7 @@ eusoilvoc:SoilContents a skos:Concept ;
     skos:prefLabel "soil contents"@en .
 
 eusoilvoc:SoilManagement a skos:Concept ;
+    skos:broader eusoilvoc:Soil ;
     skos:exactMatch spp:SoilManagement ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:FertiliserUse,

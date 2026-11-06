@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "retrievedAt": "2026-11-05T21:57:14.984594+00:00",
-  "vocabularySha256": "1c33a828a4a8d7214e5f3383cfce4d7d09e74b79ab69e61ba376f241b818c202",
+  "retrievedAt": "2026-11-06T00:30:40.421371+00:00",
+  "vocabularySha256": "60672b9c419c9132f423dd52798866066e9321cd3edaab3e986ca01459619bb1",
   "records": {
     "http://aims.fao.org/aos/agrovoc/c_101": {
       "source": "agrovoc",
@@ -13531,6 +13531,23 @@
           "text": "Captura y almacenamiento de carbono en depósitos de carbonos, tales como los océanos o depósitos terrestres, tales como bosques o suelos, para mantener el carbono fuera de la atmósfera."
         }
       ],
+      "provenance": {
+        "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
+      }
+    },
+    "https://lod.nal.usda.gov/nalt/17420": {
+      "source": "nalt",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "biological activity in soil"
+        },
+        {
+          "language": "es",
+          "text": "actividad biológica en el suelo"
+        }
+      ],
+      "definitions": [],
       "provenance": {
         "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
       }

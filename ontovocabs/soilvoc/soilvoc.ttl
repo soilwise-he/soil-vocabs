@@ -119,6 +119,7 @@ eusoilvoc:SoilCoating a skos:Concept ;
     skos:prefLabel "soil coating"@en .
 
 eusoilvoc:SoilDescription a skos:Concept ;
+    skos:broader eusoilvoc:Soil ;
     skos:prefLabel "soil description"@en .
 
 eusoilvoc:SoilHorizonBoundary a skos:Concept ;

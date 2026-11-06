@@ -33,6 +33,7 @@ eusoilvoc:SoilHealth a skos:Concept ;
 
 eusoilvoc:SoilIndicators a skos:Concept ;
     skos:altLabel "soil indicator"@en ;
+    skos:broader eusoilvoc:Soil ;
     skos:narrower eusoilvoc:NonsoilIndicators,
         eusoilvoc:SoilFunctionIndicators,
         eusoilvoc:SoilStructureIndex ;
@@ -51,9 +52,10 @@ eusoilvoc:SoilProperties a skos:Concept ;
 
 eusoilvoc:SoilThreats a skos:Concept ;
     skos:altLabel "soil threat"@en ;
+    skos:broader eusoilvoc:Soil ;
     skos:definition [ dcterms:source <https://soilhealthbenchmarks.eu/glossary/soil-threat/> ;
             rdf:value "Soil threats are processes that could degrade (some of) the functions of soils and the services that soils provide. Examples of soil threats are: acidification, compaction, contamination (pollution), decline in soil organic matter, decline in soil biodiversity, desertification, erosion, flooding and water logging, landslides, salinization."@en ] ;
-    skos:narrower eusoilvoc:SOCLoss,
+    skos:narrower eusoilvoc:SoilOrganicCarbonLoss,
         eusoilvoc:SoilAcidification,
         eusoilvoc:SoilBiodiversityLoss,
         eusoilvoc:SoilCompaction,
@@ -140,7 +142,7 @@ eusoilvoc:RegulatingServices a skos:Concept ;
     skos:altLabel "regulating service"@en ;
     skos:prefLabel "regulating services"@en .
 
-eusoilvoc:SOCLoss a skos:Concept ;
+eusoilvoc:SoilOrganicCarbonLoss a skos:Concept ;
     skos:altLabel "SOC loss"@en ;
     skos:prefLabel "soil organic carbon loss"@en .
 
@@ -245,16 +247,16 @@ eusoilvoc:SoilMicrofauna a skos:Concept ;
 eusoilvoc:SoilMoistureDeficit a skos:Concept ;
     skos:prefLabel "soil moisture deficit"@en .
 
-eusoilvoc:SoilNLoss a skos:Concept ;
+eusoilvoc:SoilNitrogenLoss a skos:Concept ;
     skos:altLabel "soil N loss"@en ;
     skos:prefLabel "soil nitrogen loss"@en .
 
 eusoilvoc:SoilNutrientLoss a skos:Concept ;
-    skos:narrower eusoilvoc:SoilNLoss,
-        eusoilvoc:SoilPLoss ;
+    skos:narrower eusoilvoc:SoilNitrogenLoss,
+        eusoilvoc:SoilPhosphorusLoss ;
     skos:prefLabel "soil nutrient loss"@en .
 
-eusoilvoc:SoilPLoss a skos:Concept ;
+eusoilvoc:SoilPhosphorusLoss a skos:Concept ;
     skos:altLabel "soil P loss"@en ;
     skos:prefLabel "soil phosphorus loss"@en .
 

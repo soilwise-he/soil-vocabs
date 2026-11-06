@@ -1672,10 +1672,11 @@ eusoilvoc:SoilAlgae a skos:Concept ;
     skos:prefLabel "soil algae"@en .
 
 eusoilvoc:SoilBiologicalActivity a skos:Concept ;
+    skos:altLabel "biological activity in soil"@en ;
     skos:broader eusoilvoc:SoilBiologicalProcesses ;
     skos:exactMatch agrovoc:c_9264 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "biological activity in soil"@en .
+    skos:prefLabel "soil biological activity"@en .
 
 eusoilvoc:SoilBiology a skos:Concept ;
     skos:broader eusoilvoc:SoilSciences ;
@@ -1798,10 +1799,11 @@ eusoilvoc:SoilHeating a skos:Concept ;
 eusoilvoc:SoilHydraulicConductivity skos:broader eusoilvoc:SoilHydraulicProperties .
 
 eusoilvoc:SoilHydraulicPotential a skos:Concept ;
+    skos:altLabel "hydraulic potential (soil)"@en ;
     skos:broader eusoilvoc:SoilWaterPotential ;
     skos:exactMatch agrovoc:c_35950 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "hydraulic potential (soil)"@en .
+    skos:prefLabel "soil hydraulic potential"@en .
 
 eusoilvoc:SoilHydrology a skos:Concept ;
     skos:broader eusoilvoc:SoilSciences ;
@@ -2052,12 +2054,13 @@ eusoilvoc:SoilTrafficability skos:broader eusoilvoc:SoilProperties .
 eusoilvoc:SoilWaterCharacteristics skos:broader eusoilvoc:SoilHydraulicProperties .
 
 eusoilvoc:SoilWaterFiltration a skos:Concept ;
+    skos:altLabel "water filtration (soil)"@en ;
     skos:broader eusoilvoc:WaterPurification ;
     skos:definition [ dcterms:source agrovoc:c_25b98c3e ;
             rdf:value "Depending on soil properties, infiltrated precipitation water is partitioned into storage and groundwater recharge. Solutes and particles moving through soil have to pass the extensive inner surfaces of soil constituents where they might be sorbed or transformed. Hence, soils are also important to filter harmful substances, originating from industrial and agricultural production, municipal activities, or atmospheric deposits."@en ] ;
     skos:exactMatch agrovoc:c_25b98c3e ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "water filtration (soil)"@en .
+    skos:prefLabel "soil water filtration"@en .
 
 eusoilvoc:SoilWaterMovement skos:broader eusoilvoc:SoilTransport .
 
@@ -3254,6 +3257,7 @@ eusoilvoc:SoilHorizons a skos:Concept ;
 
 eusoilvoc:SoilSciences a skos:Concept ;
     skos:altLabel "soil science"@en ;
+    skos:broader eusoilvoc:Soil ;
     skos:exactMatch agrovoc:c_7188 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:Agrology,

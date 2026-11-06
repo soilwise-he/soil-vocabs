@@ -506,7 +506,7 @@ eusoilvoc:SoilOrganicCarbon a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
     qudt:hasUnit unit:GM-PER-KiloGM ;
-    bao:BAO_0002586 eusoilvoc:SOCLoss ;
+    bao:BAO_0002586 eusoilvoc:SoilOrganicCarbonLoss ;
     skos:broader eusoilvoc:SoilDescriptor ;
     skos:prefLabel "soil organic carbon"@en .
 
@@ -514,7 +514,7 @@ eusoilvoc:SoilOrganicCarbonStock a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
     qudt:hasUnit unit:TONNE-PER-HA ;
-    bao:BAO_0002586 eusoilvoc:SOCLoss ;
+    bao:BAO_0002586 eusoilvoc:SoilOrganicCarbonLoss ;
     skos:broader eusoilvoc:SoilChemicalProperties,
         eusoilvoc:SoilDescriptor ;
     skos:prefLabel "soil organic carbon stock"@en .
@@ -642,21 +642,21 @@ eusoilvoc:TotalShareOfMemberStateAreaThatUnderwentSoilRemoval a skos:Concept,
     skos:broader eusoilvoc:SoilIndicators ;
     skos:prefLabel "total share of Member State area that underwent soil removal"@en .
 
-eusoilvoc:EcosystemServiceLossFromSoilSealingOrRemoval a skos:Concept,
+eusoilvoc:LossOfEcosystemServices a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
     bao:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
-    skos:prefLabel "ecosystem service loss from soil sealing or removal"@en .
+    skos:prefLabel "loss of ecosystem services"@en .
 
-eusoilvoc:FloodIntensityChangeFromSoilSealingOrRemoval a skos:Concept,
+eusoilvoc:ChangeInTheIntensityOfFloods a skos:Concept,
         sosa:ObservableProperty ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
     bao:BAO_0002586 eusoilvoc:SoilRemoval,
         eusoilvoc:SoilSealing ;
     skos:broader eusoilvoc:SoilIndicators ;
-    skos:prefLabel "flood intensity change from soil sealing or removal"@en .
+    skos:prefLabel "change in the intensity of floods"@en .
 
 eusoilvoc:LandFragmentation a skos:Concept,
         sosa:ObservableProperty ;
@@ -765,7 +765,7 @@ eusoilvoc:ReductionOfSoilWaterInfiltration a skos:Concept ;
     skos:broader eusoilvoc:SoilThreats ;
     skos:prefLabel "reduction of soil water infiltration"@en .
 
-eusoilvoc:SOCLoss a skos:Concept ;
+eusoilvoc:SoilOrganicCarbonLoss a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
     bao:BAO_0095002 eusoilvoc:SoilOrganicCarbon,
         eusoilvoc:SoilOrganicCarbonStock .
@@ -1042,8 +1042,8 @@ eusoilvoc:SoilContamination a skos:Concept ;
 eusoilvoc:SoilRemoval a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj>,
         <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    bao:BAO_0095002 eusoilvoc:EcosystemServiceLossFromSoilSealingOrRemoval,
-        eusoilvoc:FloodIntensityChangeFromSoilSealingOrRemoval,
+    bao:BAO_0095002 eusoilvoc:LossOfEcosystemServices,
+        eusoilvoc:ChangeInTheIntensityOfFloods,
         eusoilvoc:LandFragmentation,
         eusoilvoc:LandRecyclingRate,
         eusoilvoc:LandTakenForAirports,
@@ -1070,8 +1070,8 @@ eusoilvoc:SoilRemoval a skos:Concept ;
 
 eusoilvoc:SoilSealing a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-    bao:BAO_0095002 eusoilvoc:EcosystemServiceLossFromSoilSealingOrRemoval,
-        eusoilvoc:FloodIntensityChangeFromSoilSealingOrRemoval,
+    bao:BAO_0095002 eusoilvoc:LossOfEcosystemServices,
+        eusoilvoc:ChangeInTheIntensityOfFloods,
         eusoilvoc:LandFragmentation,
         eusoilvoc:LandRecyclingRate,
         eusoilvoc:LandTakenForAirports,
