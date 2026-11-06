@@ -8,6 +8,7 @@ import DownloadMenu from './components/DownloadMenu.vue'
 import HighlightedText from './components/HighlightedText.vue'
 import PropertyHeading from './components/PropertyHeading.vue'
 import MappingSection from './components/MappingSection.vue'
+import ConceptComments from './components/ConceptComments.vue'
 import { createCloseMatchLoader } from './close-matches.js'
 import { createVocabulary, NS, TYPE, CONCEPT, PROCEDURE, PROPERTY, pathKey, compact } from './vocabulary.js'
 import { conceptHref, followLink, parseRoute } from './navigation.js'
@@ -358,6 +359,7 @@ onBeforeUnmount(() => {
               </div>
             </template>
           </ItemDetails>
+          <ConceptComments :key="selected.uri" :uri="selected.uri" />
         </template>
 
         <template v-else-if="route.view === 'search'">

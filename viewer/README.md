@@ -204,6 +204,42 @@ remain distinct from procedure-based sidebar edges.
 
 ## Publishing
 
+### Concept Comments
+
+Individual SKOS concept pages include a lazy-loaded [giscus](https://giscus.app/)
+comments section. Home, search, About, ontology lists, and ontology resource pages
+do not load it. Comments are stored in GitHub Discussions, not in the RDF or on
+the hosting server. GitHub sign-in is required to post; reading is public.
+
+The target is `soilwise-he/soil-vocabs`, using its existing `Announcements`
+category (giscus recommends an announcement category to restrict discussion
+creation to maintainers and the app). Enable Discussions and install the
+[giscus GitHub App](https://github.com/apps/giscus) for this repository only.
+No access token or deployment secret is needed. Verified public repository and
+category IDs are stored in `src/comments.js`; update the category ID there if the
+category is deleted and recreated. The widget loads near the comments section
+and allows retry after failures. There is no browser-side configuration API call.
+Installation can be completed after deploying the viewer, without a rebuild.
+Until then, the section reports that comments are not enabled and links to GitHub.
+
+Each discussion is keyed by the full concept URI, using `mapping="specific"`
+and strict matching. Labels, hierarchy paths, viewer origins, and query-string
+ordering do not create separate threads. Changing a concept URI requires a
+discussion migration; changing its label does not. The discussion backlink uses
+the canonical concept URI. Hash-only concept routes are normalized to a `uri`
+query parameter before loading giscus so GitHub sign-in returns to that concept.
+The widget is recreated on concept changes, preventing an old thread from staying
+visible under a new concept. No discussions are created simply by browsing:
+giscus creates one on the first submitted comment or reaction.
+
+Configuration and lifecycle live in `src/comments.js` and
+`src/components/ConceptComments.vue`. Comments use third-party requests to
+`giscus.app` only near the comments section; a failure never blocks vocabulary
+browsing. End-to-end posting must be verified after the app is installed. Do not
+create test discussions or comments without explicit authorization.
+
+### GitHub Pages
+
 `.github/workflows/deploy-pages.yml` builds this directory on relevant pull
 requests without deploying them. Relevant pushes to `main` build and deploy
 through GitHub Actions to GitHub Pages, with Vite's base set to `/soil-vocabs/`.
