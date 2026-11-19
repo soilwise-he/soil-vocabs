@@ -2,7 +2,7 @@
 
 Self-hosted Latin and Latin Extended WOFF2 subsets from Google Fonts:
 
-- Public Sans, upright variable weights 400-700, version 21.
+- Public Sans, upright and italic variable weights 400-700, version 21.
 - EB Garamond, upright weight 700, version 33.
 
 Both are distributed under the SIL Open Font License. The corresponding

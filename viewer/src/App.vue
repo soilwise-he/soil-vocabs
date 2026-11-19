@@ -15,11 +15,13 @@ import { createCloseMatchLoader } from './close-matches.js'
 import { COMMENTS_REPO } from './comments.js'
 import { loadVocabularyText } from './load-vocabulary.js'
 import { createVocabulary, NS, TYPE, CONCEPT, PROCEDURE, PROPERTY, pathKey, compact } from './vocabulary.js'
-import { conceptHref, conceptParams, followLink, parseRoute } from './navigation.js'
+import { appRoot, conceptHref, conceptLocation, followLink, pageName, parseRoute, routeHref } from './navigation.js'
 import { detailSections, displayValues, externalHref } from './presentation.js'
 import { definitionText } from './definition-text.js'
 
 const baseUrl = import.meta.env.BASE_URL
+// Directory shared by index.html and the generated concept pages, such as /soil-vocabs/.
+const root = appRoot()
 const feedbackUrl = `https://github.com/${COMMENTS_REPO}/issues`
 const model = shallowRef(null), manifest = ref(null), error = ref(''), loading = ref(true)
 const previews = shallowRef({ status: 'idle', records: new Map() })
@@ -82,20 +84,22 @@ async function copyText(text, name) {
 }
 function copyUri(uri) { return copyText(uri, 'URI') }
 function readRoute() {
-  route.value = parseRoute(window.location.search, NS.eusoilvoc, window.location.hash)
+  route.value = parseRoute(window.location.search, NS.eusoilvoc, window.location.hash, pageName(window.location.pathname, root))
+  // Older ?uri= links and W3ID #fragments switch to the concept's short page address.
+  if (route.value.view === 'concept') {
+    const address = conceptLocation(window.location.href, route.value.uri, root)
+    if (address !== window.location.href) window.history.replaceState(window.history.state, '', address)
+  }
   query.value = route.value.q
   typeFilter.value = route.value.type
   rdfMode.value = false
   showSuggestions.value = false
   nextTick(() => document.querySelector('.reading-pane')?.scrollTo({ top: window.history.state?.readingScroll || 0 }))
 }
-function go(params) {
-  const url = new URL(window.location.href)
-  url.search = ''
-  url.hash = ''
-  for (const [key, value] of Object.entries(params)) if (value !== undefined && value !== null) url.searchParams.set(key, typeof value === 'string' ? value : JSON.stringify(value))
+function go(params) { goTo(routeHref(params, root)) }
+function goTo(href) {
   window.history.replaceState({ ...window.history.state, readingScroll: document.querySelector('.reading-pane')?.scrollTop || 0 }, '')
-  window.history.pushState({ readingScroll: 0 }, '', url)
+  window.history.pushState({ readingScroll: 0 }, '', new URL(href, window.location.href))
   readRoute()
   if (mobileSidebar.value) focusContent()
 }
@@ -107,10 +111,10 @@ async function focusContent() {
 function navigate(input) {
   const uri = typeof input === 'string' ? input : input.uri
   const path = typeof input === 'object' && model.value.validPath(input.path, uri) ? input.path : model.value.pathTo(uri, selectedPath.value)
-  go(conceptParams(uri, model.value.isDefaultPath(path) ? null : path))
+  goTo(pathHref(uri, path))
 }
 // Links name a branch only when it differs from the concept's default path.
-function pathHref(uri, path) { return conceptHref(uri, model.value.isDefaultPath(path) ? null : path) }
+function pathHref(uri, path) { return conceptHref(uri, model.value.isDefaultPath(path) ? null : path, root) }
 function chooseLetter(char) {
   letter.value = char
   alphabetLimit.value = 100
@@ -292,12 +296,12 @@ onBeforeUnmount(() => {
   <div class="app-shell">
     <a v-if="model" class="skip-link" href="#content" @click.prevent="focusContent">Skip to content</a>
     <header class="masthead">
-      <a class="brand" href="?" @click="followLink($event, () => go({}))">SoilVoc</a>
+      <a class="brand" :href="root" @click="followLink($event, () => go({}))">SoilVoc</a>
       <span class="brand-description">Soil science vocabulary</span>
       <nav aria-label="Main navigation" class="top-nav">
-        <a href="?" :class="{ active: !['ontology', 'about'].includes(route.view) }" @click="followLink($event, () => go({}))">Browse</a>
-        <a href="?view=ontology" :class="{ active: route.view === 'ontology' }" @click="followLink($event, () => go({ view: 'ontology' }))">Ontology</a>
-        <a href="?view=about" :class="{ active: route.view === 'about' }" @click="followLink($event, () => go({ view: 'about' }))">About</a>
+        <a :href="root" :class="{ active: !['ontology', 'about'].includes(route.view) }" @click="followLink($event, () => go({}))">Browse</a>
+        <a :href="routeHref({ view: 'ontology' }, root)" :class="{ active: route.view === 'ontology' }" @click="followLink($event, () => go({ view: 'ontology' }))">Ontology</a>
+        <a :href="routeHref({ view: 'about' }, root)" :class="{ active: route.view === 'about' }" @click="followLink($event, () => go({ view: 'about' }))">About</a>
         <a class="feedback-link" :href="feedbackUrl" target="_blank" rel="noopener noreferrer" title="Report problems or suggest changes on GitHub">Feedback<ArrowUpRight :size="13" aria-label="Opens GitHub issues" /></a>
         <a class="icon-button" :href="`${baseUrl}data/SoilVoc.ttl`" download title="Download complete vocabulary (Turtle)" aria-label="Download complete vocabulary"><Download :size="21" /></a>
       </nav>
@@ -312,7 +316,7 @@ onBeforeUnmount(() => {
         <button v-if="query" type="button" class="icon-button" aria-label="Clear search" @click="resetQuery"><X :size="19" /></button>
         <ul v-if="showSuggestions && query.trim()" id="search-suggestions" class="suggestions" role="listbox">
           <li v-for="({ concept, match }, index) in suggestions" :id="`suggestion-${index}`" :key="concept.uri" role="option" :aria-selected="index === suggestionIndex" @mousedown.prevent="chooseSuggestion(index)">
-            <span class="suggestion-label"><template v-if="match && !match.preferred"><HighlightedText :text="match.text" :ranges="match.ranges" /><ArrowRight :size="14" aria-label="Preferred label" /></template><HighlightedText :text="concept.label" :ranges="model.matchLabel(concept.label, query)?.ranges" /></span>
+            <span class="suggestion-label"><template v-if="match && !match.preferred"><HighlightedText class="alternative-label" :text="match.text" :ranges="match.ranges" /><ArrowRight :size="14" aria-label="Preferred label" /></template><HighlightedText :text="concept.label" :ranges="model.matchLabel(concept.label, query)?.ranges" /></span>
             <span class="suggestion-type">{{ typeCaption(concept) }}</span>
           </li>
           <li v-if="!suggestions.length" class="no-suggestions">No matching concepts</li>
@@ -421,7 +425,7 @@ onBeforeUnmount(() => {
           <div v-if="!searchResults.length" class="empty-state"><Search :size="28" /><h2>No matching concepts</h2><p>{{ route.q }}</p><button v-if="route.type" class="button secondary" @click="go({ q: route.q })">Search all types</button></div>
           <article v-for="concept in pageResults" :key="concept.uri" class="search-result">
             <div class="result-heading"><a :href="conceptHref(concept.uri)" @click="followLink($event, () => navigate(concept.uri))"><HighlightedText :text="concept.label" :ranges="model.matchLabel(concept.label, route.q)?.ranges" /></a><span class="result-type">{{ typeCaption(concept) }}</span></div>
-            <p v-if="concept.altLabels.length" class="result-alternatives"><span>Also known as: </span><template v-for="(label, i) in concept.altLabels" :key="i"><span v-if="i">; </span><HighlightedText :text="label.text" :ranges="model.matchLabel(label.text, route.q)?.ranges" /></template></p>
+            <p v-if="concept.altLabels.length" class="result-alternatives"><span>Also known as: </span><template v-for="(label, i) in concept.altLabels" :key="i"><span v-if="i">; </span><HighlightedText class="alternative-label" :text="label.text" :ranges="model.matchLabel(label.text, route.q)?.ranges" /></template></p>
             <p v-if="snippet(concept)">{{ snippet(concept) }}</p>
             <p v-if="navParents(concept.uri).length" class="result-parents"><span>Under</span><template v-for="parent in navParents(concept.uri)" :key="parent"><a :href="conceptHref(parent)" @click="followLink($event, () => navigate(parent))">{{ model.label(parent) }}</a></template></p>
           </article>

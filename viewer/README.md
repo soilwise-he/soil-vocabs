@@ -9,8 +9,10 @@ A-Z views, and concept pages as one property table.
 The viewer is published at <https://soilwise-he.github.io/soil-vocabs/> and
 <https://w3id.org/eusoilvoc>. Existing canonical concept links such as
 <https://w3id.org/eusoilvoc#CulturalServices> open their concept details and
-hierarchy path. Viewer links name SoilVoc concepts by local name, such as
-`?uri=CulturalServices`; links with complete URIs remain supported.
+hierarchy path. Each concept has a short address named after its local name, such
+as <https://soilwise-he.github.io/soil-vocabs/CulturalServices>. Older `?uri=`
+links (with a local name or a complete URI) and `#` fragments still work and switch
+to that address.
 
 ## Run Locally
 
@@ -216,9 +218,10 @@ has not yet been cached.
   original URIs. Defined-by references open their source resources externally.
 - Readable advanced type labels, preferred-label and URI copying, explanatory
   property tooltips, browser back/forward with results-page/scroll restoration,
-  native modifier-click links, and a raw Turtle view. Shareable query-string links
-  use local names for SoilVoc resources and add a `path` only for a branch other
-  than the concept's default one.
+  native modifier-click links, and a raw Turtle view. Concept addresses are short
+  (`/soil-vocabs/Soil`); a branch other than the concept's default one adds its
+  ancestors, such as `?path=Soil/SoilProperties`. Search, About and Ontology use
+  query parameters on the home page, as do resources outside SoilVoc (`?uri=`).
 - Concept or full-vocabulary downloads as Turtle, JSON-LD and RDF/XML, offered as
   direct links. Concept downloads include outgoing blank-node closure, not all linked concepts.
   Concept Turtle uses only necessary prefixes and readable inline blank nodes,
@@ -263,8 +266,8 @@ and strict matching. Labels, hierarchy paths, viewer origins, and query-string
 ordering do not create separate threads. Changing a concept URI requires a
 discussion migration; changing its label does not. The discussion backlink uses
 the canonical concept URI. Before giscus loads, the address is normalized to the
-viewer's short `uri` query parameter (the local name for SoilVoc concepts), so GitHub
-sign-in returns to that concept even from hash-only routes, whose fragments it drops.
+concept's page address, so GitHub sign-in returns to that concept even from
+hash-only routes, whose fragments it drops.
 The widget is recreated on concept changes, preventing an old thread from staying
 visible under a new concept. No discussions are created simply by browsing:
 giscus creates one on the first submitted comment or reaction.
@@ -288,6 +291,16 @@ root, preserving W3ID's Turtle content negotiation. `SoilVoc_augmented.ttl`,
 The viewer itself reads the separate display copy at `data/SoilVoc.ttl`; this
 is not the canonical `SoilVoc.ttl` served at the site root. The build also publishes
 `data/SoilVoc.ttl.gz`, an identical gzip copy that the viewer reads first.
+
+For short concept addresses, the build (`scripts/concept-pages.mjs`, a Vite plugin)
+writes an identical copy of the viewer page as `<LocalName>.html` for every concept
+in `data/SoilVoc.ttl`. GitHub Pages serves these at `/soil-vocabs/<LocalName>` with
+HTTP 200, and the viewer reads the concept from the address. Names that are unsafe
+as file names, or `index`, keep `?uri=` links instead. A `404.html` copy opens the
+viewer for any other address, which reports an unknown concept itself (HTTP 404).
+Servers that do not map `/name` to `name.html`, such as the API image's static
+files, reach concept addresses through that `404.html` with HTTP status 404.
+
 Push an updated `viewer/data/SoilVoc.ttl` to `main` (or merge a pull request)
 to rebuild and publish changed viewer data automatically. No manual HTML or JSON
 regeneration is needed. This workflow does not regenerate the source Turtle.
@@ -336,6 +349,7 @@ benchmark or architecture decision for very large vocabularies.
 - `src/components/MappingSection.vue`: mapping rows with cached external labels.
 - `src/App.vue`: routes, browsing and details using jskos-vue components.
 - `scripts/prepare.mjs`: copy the source/image, write its gzip copy and calculate its checksum.
+- `scripts/concept-pages.mjs`: write a page per concept and `404.html` for short addresses.
 - `scripts/generate_data.py`: regenerate the display snapshot from the augmented vocabulary.
 - `scripts/generate_close_matches.py`: refresh the separate mapping preview cache.
 - `src/close-matches.js`: isolated preview loader and language selection.
