@@ -1,0 +1,94 @@
+name: Check labels for duplicates in SoilVoc
+
+# For issues opened from the "Check duplicates" template ([check-duplicate] title
+# prefix): downloads the single CSV/XLSX attached to the issue description,
+# matches its label/prefLabel column against SoilVoc.ttl and posts the result as
+# an issue comment. Re-runs edit that comment instead of adding a new one.
+#
+# Trigger: opening/editing the issue, commenting "/check-duplicates" on it, or
+# manually from the Actions tab.
+
+on:
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      issue:
+        description: "Issue number to check"
+        required: true
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: check-duplicates-${{ github.event.issue.number || inputs.issue }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'issues' &&
+        startsWith(github.event.issue.title, '[check-duplicate]')) ||
+      (github.event_name == 'issue_comment' &&
+        !github.event.issue.pull_request &&
+        startsWith(github.event.issue.title, '[check-duplicate]') &&
+        startsWith(github.event.comment.body, '/check-duplicates'))
+
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ISSUE: ${{ github.event.issue.number || inputs.issue }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install rdflib openpyxl sentence-transformers
+
+      - name: Cache Hugging Face models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-paraphrase-multilingual-MiniLM-L12-v2-mmarco-mMiniLMv2-L12-H384-v1
+
+      # Read the issue through the API rather than the event payload so that
+      # edits and manual runs see the current description.
+      - name: Fetch issue description
+        run: |
+          gh issue view "$ISSUE" --repo "$GITHUB_REPOSITORY" --json body --jq .body > issue_body.md
+          echo "Collected $(wc -c < issue_body.md) bytes of issue text."
+
+      - name: Check labels against SoilVoc
+        run: |
+          python scripts/check_duplicates.py \
+            --body-file issue_body.md \
+            --ttl SoilVoc.ttl \
+            --comment-file comment.md
+
+      # Runs even if the check crashed, so the issue always gets an answer.
+      - name: Post or update the issue comment
+        if: always() && hashFiles('comment.md') != ''
+        run: |
+          cat comment.md >> "$GITHUB_STEP_SUMMARY"
+          ID=$(gh api "repos/$GITHUB_REPOSITORY/issues/$ISSUE/comments" --paginate \
+                 --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | contains("<!-- check-duplicates -->"))) | .id' \
+               | tail -n 1)
+          if [ -n "$ID" ]; then
+            gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$ID" -F body=@comment.md > /dev/null
+            echo "Updated comment $ID."
+          else
+            gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY" --body-file comment.md
+          fi
