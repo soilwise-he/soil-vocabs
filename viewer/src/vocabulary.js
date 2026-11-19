@@ -37,6 +37,12 @@ const captions = {
   [NS.skos + 'exactMatch']: 'Exact matches', [NS.skos + 'closeMatch']: 'Close matches',
   [NS.skos + 'altLabel']: 'Alternative labels', [NS.skos + 'related']: 'Related concepts',
   [NS.rdfs + 'isDefinedBy']: 'Defined by',
+  // Vocabulary metadata headings, used only when the concept scheme states these properties.
+  [NS.dcterms + 'title']: 'Title', [NS.dcterms + 'description']: 'Description',
+  [NS.dcterms + 'publisher']: 'Publisher', [NS.dcterms + 'creator']: 'Creator', [NS.dcterms + 'contributor']: 'Contributor',
+  [NS.dcterms + 'license']: 'License', [NS.dcterms + 'rights']: 'Rights', [NS.dcterms + 'bibliographicCitation']: 'Citation',
+  [NS.dcterms + 'issued']: 'Issued', [NS.dcterms + 'created']: 'Created', [NS.dcterms + 'modified']: 'Last modified',
+  [NS.owl + 'versionInfo']: 'Version',
 }
 const propertyHelp = {
   [TYPE]: 'The classes assigned to this resource, such as Concept, Observable Property or Procedure.',
@@ -241,6 +247,15 @@ export function createVocabulary(turtle) {
     }
     return fallback || [uri]
   }
+  // The path a concept opens with when a link names no branch.
+  const defaultPaths = new Map()
+  function defaultPath(uri) {
+    if (!defaultPaths.has(uri)) defaultPaths.set(uri, pathTo(uri))
+    return defaultPaths.get(uri)
+  }
+  function isDefaultPath(path) {
+    return Array.isArray(path) && path.length > 0 && pathKey(path) === pathKey(defaultPath(path.at(-1)))
+  }
   function validPath(path, target) {
     return Array.isArray(path) && path.length > 0 && path.at(-1) === target && rootSet.has(path[0]) &&
       new Set(path).size === path.length && path.every((uri, i) => concepts.has(uri) && (!i || children.get(path[i - 1]).has(uri)))
@@ -399,7 +414,8 @@ export function createVocabulary(turtle) {
   }
   return {
     store, concepts, sortedConcepts, parents, children, roots, typeUris, schemeUri, ontology,
-    objects, label, sort, pathTo, pathsTo, validPath, search, searchMatches, matchLabel, propertyTooltip, describe, propertiesFor, asJskos, conceptQuads, serialize,
+    labelLanguages: [...new Set(sortedConcepts.flatMap(c => Object.keys(c.prefLabel)))].filter(tag => tag !== 'und').sort(),
+    objects, label, sort, pathTo, pathsTo, defaultPath, isDefaultPath, validPath, search, searchMatches, matchLabel, propertyTooltip, describe, propertiesFor, asJskos, conceptQuads, serialize,
     sourceText: turtle,
     stats: { concepts: concepts.size, procedures: sortedConcepts.filter(c => c.isProcedure).length,
       properties: sortedConcepts.filter(c => c.isProperty).length,

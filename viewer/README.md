@@ -2,12 +2,15 @@
 
 A static vocabulary viewer using Vue 3 and selected jskos-vue components. It reads the complete
 `data/SoilVoc.ttl` directly in the browser. There is no triplestore,
-SPARQL server, external vocabulary API, or dependency on Skosmos.
+SPARQL server, external vocabulary API, or dependency on Skosmos. Its pages follow
+the layout of Skosmos 3: a vocabulary information page, a sidebar with hierarchy and
+A-Z views, and concept pages as one property table.
 
 The viewer is published at <https://soilwise-he.github.io/soil-vocabs/> and
 <https://w3id.org/eusoilvoc>. Existing canonical concept links such as
 <https://w3id.org/eusoilvoc#CulturalServices> open their concept details and
-hierarchy path. Query-string links remain supported too.
+hierarchy path. Viewer links name SoilVoc concepts by local name, such as
+`?uri=CulturalServices`; links with complete URIs remain supported.
 
 ## Run Locally
 
@@ -31,7 +34,8 @@ npm run preview
 Open <http://127.0.0.1:4174/>. Keep the server running while using the viewer;
 opening `dist/index.html` with `file://` will not load its RDF file correctly.
 `npm run dev` and `npm run build` copy the committed snapshot into the ignored
-`public/data/` directory without changing it. `npm run preview` serves the existing
+`public/data/` directory without changing it, and write an identical gzip copy
+(`SoilVoc.ttl.gz`) beside it. `npm run preview` serves the existing
 build and does not refresh its data. Restart development or rebuild after updating
 the original Turtle. Do not edit `public/` copies or `dist/` as source files.
 The About page reports the source SHA-256 checksum.
@@ -62,7 +66,7 @@ The files have separate roles; paths below are relative to the repository root:
 | `viewer/data/ontology.ttl` | Display ontology labels and class/property declarations embedded by the generator |
 | `viewer/data/SoilVoc.ttl` | Committed display snapshot read by the browser |
 | `viewer/data/workflow.png` | Shared workflow image for the viewer and repository documentation |
-| `viewer/data/close-matches.json` | Separate external-concept previews, never merged into SoilVoc RDF |
+| `viewer/data/close-matches.json` | Separate display cache of external mapping targets, never merged into SoilVoc RDF |
 
 After updating `SoilVoc_augmented.ttl`, regenerate the display snapshot from
 the repository root. This step requires Python and RDFLib; install RDFLib first
@@ -72,7 +76,7 @@ with `python -m pip install rdflib` if it is not already available:
 python viewer/scripts/generate_data.py
 ```
 
-To regenerate the viewer RDF **and** refresh its separate close-match previews
+To regenerate the viewer RDF **and** refresh its separate mapping previews
 in one command, use:
 
 ```powershell
@@ -84,7 +88,7 @@ either. If RDF parsing or external retrieval fails, both previous outputs remain
 unchanged. The cache checksum refers to the newly generated RDF. With `--output`,
 `close-matches.json` is written beside that custom RDF output.
 Without the flag, generation remains offline and leaves the preview cache alone.
-Refresh previews when close-match targets change or when you want newer source
+Refresh previews when mapping targets change or when you want newer source
 descriptions; changing only SoilVoc's own labels or definitions does not require it.
 
 The generator embeds `viewer/data/ontology.ttl`, preserves sourced definitions,
@@ -108,18 +112,23 @@ The ignored `skosmos/` folder is only a local reference deployment; changes ther
 no longer update the public viewer. It is absent from fresh clones, as are the
 local-only `cloudflare/` bundle and `viewer/test/` files.
 
-### Close-Match Previews
+### Mapping Previews
 
-The Close matches section displays original source preferred labels and expandable
-definitions. These describe the **external concepts**, not the SoilVoc concept.
-They never enter SoilVoc's definitions, search, hierarchy, statistics, or RDF exports.
-Exact matches and other mapping sections are unchanged.
+As in Skosmos, each mapping row shows the external concept's original label and the
+name of its vocabulary; the complete URI is the link target and appears on hover.
+A target without a cached label is shown by its URI, for example the Soil Property
+and Process Ontology classes, which have no labels in their source. Close matches
+also offer expandable source definitions, in English only. These describe the
+**external concepts**, not the SoilVoc concept. They never enter SoilVoc's
+definitions, search, hierarchy, statistics, or RDF exports.
 
 `data/close-matches.json` is a committed, display-only cache keyed by the exact
-external URI. The browser lazily loads this same-site file once when a concept has
-close matches; it does not contact external APIs. A failed load leaves the mapping
-links usable and offers Retry. An uncached new mapping is distinguished from a
-retrieved source record with no definition.
+external URI. Despite its name, it covers every SKOS mapping target: close-match
+records include definitions, while exact-match and other mapping targets are
+label-only records without a definitions list. The browser lazily loads this
+same-site file once when a concept has mappings; it does not contact external APIs.
+A failed load leaves the mapping links usable and offers Retry. An uncached new
+close match is distinguished from a retrieved source record with no English definition.
 
 The combined command above updates both files after vocabulary edits. To refresh
 only the cache against the existing viewer RDF, without regenerating that RDF:
@@ -131,31 +140,42 @@ npm --prefix viewer run build
 
 The refresh reads `viewer/data/SoilVoc.ttl` and queries AGROVOC SPARQL, NALT and
 INRAE Skosmos APIs, ISO 11074 RDF records, and the latest GEMET submission in
-AgroPortal SPARQL. SHKG and BENCHMARKS use local source snapshots:
-`ontovocabs/shkg/soil_health_KG.ttl` and `ontovocabs/shb/soil_health_benchmarks.ttl`.
+AgroPortal SPARQL. SHKG, BENCHMARKS and the Soil Property and Process Ontology use
+local source snapshots: `ontovocabs/shkg/soil_health_KG.ttl`,
+`ontovocabs/shb/soil_health_benchmarks.ttl` and `ontovocabs/spp/soil_property_process.ttl`.
 For matching, the notebook reads concept URIs and preferred/alternative labels from
 `ontovocabs/shb/soil_health_benchmarks.csv`, just like the other sources.
 Its exact-match enrichment cell adds English definitions to `SoilVoc_augmented.ttl`;
 close matches only supply viewer previews. Both definition paths read the Turtle file,
 including standard SKOS definitions
 and the glossary's policy and scientific definitions, citing the BENCHMARKS concept URI.
-The mapped legacy GLOSIS codelist URIs use the
-official historical revision pinned in the script; they are not substituted with
-GLOSIS v2 identifiers. Requests are bounded and retried; a retrieval/parsing failure
-or unsupported source stops the refresh without replacing the previous cache.
+The mapped legacy GLOSIS URIs (codelists, common, layer/horizon, procedure, profile,
+site/plot and surface modules) use the official historical revision pinned in the
+script; they are not substituted with GLOSIS v2 identifiers. The pinned layer/horizon
+file is not valid Turtle (an undeclared `cm:` prefix), so that module is read from
+`ontovocabs/glosis/glosis_ori/glosis_layer_horizon.ttl`, which differs from it only in
+unit restrictions. Labels come from
+`skos:prefLabel`, or from `rdfs:label` where a source labels only that way (some GLOSIS
+classes and properties). Requests are bounded and retried; a retrieval/parsing failure
+or unsupported source for a close-match target stops the refresh without replacing the
+previous cache. Labels for other mapping targets are best effort: missing or unlabelled
+records and unsupported sources are reported as `Shown as URIs` and left out of the cache.
 Only the small extracted records are saved, not complete external vocabularies.
 
 The cache retains literal text, language tags, definition-specific citations, and
-retrieval provenance (including GEMET submission and local snapshot checksum).
-The English interface prefers English labels and definitions; when none exist it
-shows untagged or original-language text without translating it. Untagged definition
-text is marked as such. Missing definitions are not invented. Concept-level SHKG
+retrieval provenance (including GEMET submission and local snapshot checksum), but
+only for what the English interface shows. Labels are English, otherwise untagged,
+otherwise in their original language (shown with its language tag, never translated).
+Definitions are English, otherwise untagged text, which is marked as such; definitions
+in other languages are neither cached nor shown, and the viewer applies the same rule
+to older caches. Missing definitions are not invented. Concept-level SHKG
 bibliographies are not attributed to individual definitions without evidence.
 
 Regeneration is explicit, not part of ordinary builds or GitHub Actions. Review
 and commit the JSON alongside intended viewer changes to publish previews. The
 cache is optional at runtime: later RDF updates still work before refreshing it,
-but newly mapped targets will show that a preview has not yet been cached.
+but newly mapped targets show their URIs, and new close matches show that a preview
+has not yet been cached.
 
 ## Implemented Features
 
@@ -166,19 +186,27 @@ but newly mapped targets will show that a preview has not yet been cached.
   A hierarchy-path chooser exposes every root-to-concept path without replacing
   the current branch until another path is selected.
 - Procedure badges from explicit RDF types; labels from the bundled ontology.
-- A-Z browsing, substring search across preferred/alternative/hidden labels and
+- A-Z browsing of preferred labels with a fixed letter bar; the hierarchy and A-Z
+  tabs keep their own scroll positions, and the tree reveals a concept opened from
+  A-Z when its tab is shown again.
+- Substring search across preferred/alternative/hidden labels and
   notations, internal `*` wildcards, autocomplete with highlighted matching
   synonyms, type filters, and URL-backed paginated results.
-- Concept pages with each blank-node definition paired with its own sources.
+- Concept pages laid out as one label/value table, as in Skosmos: preferred label,
+  type, definitions, relationships, labels and notes, URI and download links,
+  followed by the mapping rows. A breadcrumb ends with the current concept, and
+  lists of more than 12 values start with 10 and a "Show all" button.
+- Each blank-node definition is paired with its own sources.
   Embedded HTML in source definitions (such as ISO 11074 term-reference markup)
   is displayed as readable plain text, preserving reference wording and numbers.
   This also applies to search snippets and close-match previews. Source markup
   is never inserted into the page; original literals, citations, and RDF exports
   remain unchanged.
-- Bottom-of-page mapping sections pairing complete concept URIs with source
-  vocabulary URIs, using explicit RDF metadata or known-namespace display lookups.
-- Original close-match labels and expandable sourced definitions from a separate
-  static cache, clearly distinguished from SoilVoc definitions.
+- Mapping rows showing each matched concept's original label, or its URI when no
+  label is cached, with the name of its vocabulary from explicit RDF metadata or
+  known-namespace display lookups.
+- Expandable English source definitions for close matches from a separate static
+  cache, clearly distinguished from SoilVoc definitions.
 - Semantic relationships, mappings, labels, notes, arbitrary RDF properties,
   nested blank nodes, and an ontology browser limited to declared classes,
   properties and units actually used in the loaded vocabulary. Usage includes concepts,
@@ -188,14 +216,22 @@ but newly mapped targets will show that a preview has not yet been cached.
   original URIs. Defined-by references open their source resources externally.
 - Readable advanced type labels, preferred-label and URI copying, explanatory
   property tooltips, browser back/forward with results-page/scroll restoration,
-  native modifier-click links, shareable query-string links, and a raw Turtle view.
-- Concept or full-vocabulary downloads as Turtle, JSON-LD and RDF/XML. Concept
-  downloads include outgoing blank-node closure, not all linked concepts.
+  native modifier-click links, and a raw Turtle view. Shareable query-string links
+  use local names for SoilVoc resources and add a `path` only for a branch other
+  than the concept's default one.
+- Concept or full-vocabulary downloads as Turtle, JSON-LD and RDF/XML, offered as
+  direct links. Concept downloads include outgoing blank-node closure, not all linked concepts.
   Concept Turtle uses only necessary prefixes and readable inline blank nodes,
   preserving shared/cyclic nodes where identifiers are needed.
-- Vocabulary and preferred/alternative/hidden-label statistics, source checksum,
-  workflow image, and mobile navigation. Label counts count RDF label statements
-  on concepts, not distinct strings.
+- A vocabulary information page (the home page) with the concept scheme's own
+  metadata, the vocabulary URI, label languages, downloads (including the canonical
+  `SoilVoc.ttl` and `SoilVoc_concepts.csv`), resource and term counts, and top
+  concepts. Label counts count RDF label statements on concepts, not distinct strings.
+- An About page with the source file, statement count, checksum, ontology summary
+  and workflow image; mobile navigation; and a header Feedback link to GitHub issues.
+- The page frame appears while the vocabulary loads. The browser reads a gzip copy
+  of the snapshot (about one eighth of its size), because GitHub Pages serves Turtle
+  uncompressed, and falls back to the plain file.
 
 The navigation projection never rewrites the underlying RDF. Technical
 transitive-closure and display-parent predicates are hidden from ordinary detail
@@ -226,8 +262,9 @@ Each discussion is keyed by the full concept URI, using `mapping="specific"`
 and strict matching. Labels, hierarchy paths, viewer origins, and query-string
 ordering do not create separate threads. Changing a concept URI requires a
 discussion migration; changing its label does not. The discussion backlink uses
-the canonical concept URI. Hash-only concept routes are normalized to a `uri`
-query parameter before loading giscus so GitHub sign-in returns to that concept.
+the canonical concept URI. Before giscus loads, the address is normalized to the
+viewer's short `uri` query parameter (the local name for SoilVoc concepts), so GitHub
+sign-in returns to that concept even from hash-only routes, whose fragments it drops.
 The widget is recreated on concept changes, preventing an old thread from staying
 visible under a new concept. No discussions are created simply by browsing:
 giscus creates one on the first submitted comment or reaction.
@@ -249,7 +286,8 @@ The build also copies the unchanged canonical `SoilVoc.ttl` to the published
 root, preserving W3ID's Turtle content negotiation. `SoilVoc_augmented.ttl`,
 `SoilVoc_concepts.csv`, `CITATION.cff`, and `LICENSE` remain available there.
 The viewer itself reads the separate display copy at `data/SoilVoc.ttl`; this
-is not the canonical `SoilVoc.ttl` served at the site root.
+is not the canonical `SoilVoc.ttl` served at the site root. The build also publishes
+`data/SoilVoc.ttl.gz`, an identical gzip copy that the viewer reads first.
 Push an updated `viewer/data/SoilVoc.ttl` to `main` (or merge a pull request)
 to rebuild and publish changed viewer data automatically. No manual HTML or JSON
 regeneration is needed. This workflow does not regenerate the source Turtle.
@@ -270,13 +308,17 @@ the RDF adapter, hierarchy, sourced definitions, search and additional property
 rows are local Vue components. The stock jskos-vue tree is not used because
 expansion must distinguish occurrences of the same URI under different parents.
 
-The About page calculates current concept, procedure, property, definition and
-label counts from the loaded RDF. The display ontology declares advanced
+The vocabulary information page calculates current concept, procedure, property,
+definition and label counts from the loaded RDF. It shows the concept scheme's own
+metadata (for example `dcterms:title`, `description`, `publisher`, `creator`,
+`license` and `modified`) only as stated in the vocabulary; the viewer does not
+hard-code it. The display ontology declares advanced
 relationships, but the viewer shows them only when asserted in the source; it
 does not invent relationships. Local synthetic tests cover generic display data.
-Language switching, dedicated collection/change-history views, feedback/email,
-editing, REST compatibility and a public SPARQL endpoint are not part of this
-viewer. The optional REST API is documented separately in `api/README.md`.
+Language switching, dedicated collection/change-history views, a feedback form or
+email (the Feedback link opens GitHub issues), editing, REST compatibility and a
+public SPARQL endpoint are not part of this viewer. The optional REST API is
+documented separately in `api/README.md`.
 
 All RDF is downloaded and indexed in memory on initial load. Later navigation
 and search are local. This is appropriate for this snapshot but not yet a
@@ -285,12 +327,17 @@ benchmark or architecture decision for very large vocabularies.
 ## Structure
 
 - `src/vocabulary.js`: RDF parsing, labels, navigation, search and exports.
+- `src/navigation.js`: URL routes and short concept links.
+- `src/load-vocabulary.js`: reads the gzip snapshot, with the plain file as fallback.
+- `src/download.js`: concept and vocabulary RDF downloads.
 - `src/components/HierarchyNode.vue`: recursive, occurrence-keyed navigation.
 - `src/components/TermValue.vue`: generic RDF term and blank-node display.
+- `src/components/ValueList.vue`: property values, shortening long lists.
+- `src/components/MappingSection.vue`: mapping rows with cached external labels.
 - `src/App.vue`: routes, browsing and details using jskos-vue components.
-- `scripts/prepare.mjs`: copy the source/image and calculate its checksum.
+- `scripts/prepare.mjs`: copy the source/image, write its gzip copy and calculate its checksum.
 - `scripts/generate_data.py`: regenerate the display snapshot from the augmented vocabulary.
-- `scripts/generate_close_matches.py`: refresh the separate external-concept cache.
+- `scripts/generate_close_matches.py`: refresh the separate mapping preview cache.
 - `src/close-matches.js`: isolated preview loader and language selection.
 - `data/`: committed viewer snapshot, display ontology, workflow image, and external previews.
 - `test/` (optional, untracked): local source-consistency and viewer regression tests.

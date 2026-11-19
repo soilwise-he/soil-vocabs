@@ -1,4 +1,9 @@
-"""Cache external close-match descriptions for display, never for SoilVoc enrichment."""
+"""Cache external mapping-target descriptions for display, never for SoilVoc enrichment.
+
+Close-match targets keep their original labels and definitions. Other SKOS mapping
+targets, such as exact matches, keep only their original labels, when the source has one.
+The written cache holds the English subset the viewer shows.
+"""
 
 import argparse
 from collections import defaultdict
@@ -14,11 +19,13 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 from rdflib import Graph, Literal, URIRef
-from rdflib.namespace import DCTERMS, RDF, SKOS
+from rdflib.namespace import DCTERMS, RDF, RDFS, SKOS
 
 ROOT = Path(__file__).resolve().parents[2]
 GEMET_SOURCE = URIRef("http://www.eionet.europa.eu/gemet/2004/06/gemet-schema.rdf#source")
 TEXT_PREDICATES = (RDF.value, URIRef("https://schema.org/text"), URIRef("http://schema.org/text"))
+MAPPING_PREDICATES = (SKOS.exactMatch, SKOS.closeMatch, SKOS.broadMatch, SKOS.narrowMatch, SKOS.relatedMatch)
+GLOSIS_VERSION = "71aa9f7888675e4395182fda74499fd72866c893"
 SOURCES = {
     "agrovoc": {"prefix": "http://aims.fao.org/aos/agrovoc/", "endpoint": "https://agrovoc.fao.org/sparql"},
     "nalt": {"prefix": "https://lod.nal.usda.gov/nalt/", "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"},
@@ -34,11 +41,20 @@ SOURCES = {
             URIRef("https://soilwise-he.github.io/soil-health#scientificDefinition"),
         ),
     },
+    # The original Soil Property and Process Ontology snapshot; its classes have no labels.
+    "spp": {"prefix": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#", "path": "ontovocabs/spp/soil_property_process.ttl"},
     # These mapped identifiers predate GLOSIS v2. Keep the exact original records.
     "glosis": {
-        "prefix": "http://w3id.org/glosis/model/codelists/",
-        "endpoint": "https://raw.githubusercontent.com/glosis-ld/glosis/71aa9f7888675e4395182fda74499fd72866c893/glosis_cl.ttl",
-        "version": "71aa9f7888675e4395182fda74499fd72866c893",
+        "prefix": "http://w3id.org/glosis/model/",
+        "endpoint": f"https://raw.githubusercontent.com/glosis-ld/glosis/{GLOSIS_VERSION}/",
+        "version": GLOSIS_VERSION,
+        "modules": {
+            "codelists": "glosis_cl.ttl", "common": "glosis_common.ttl", "procedure": "glosis_procedure.ttl",
+            "profile": "glosis_profile.ttl", "siteplot": "glosis_siteplot.ttl", "surface": "glosis_surface.ttl",
+            # The pinned layer/horizon file is not valid Turtle (an undeclared `cm:` prefix). The repository's
+            # snapshot differs only in unit restrictions, so its labels and definitions are the same.
+            "layerhorizon": {"path": "ontovocabs/glosis/glosis_ori/glosis_layer_horizon.ttl"},
+        },
     },
 }
 
@@ -77,12 +93,19 @@ def unique(values):
     return [json.loads(key) for key in sorted({json.dumps(value, ensure_ascii=False, sort_keys=True) for value in values})]
 
 
-def extract_record(graph, uri, source, provenance):
+def original_labels(graph, uri):
     if not any(graph.triples((uri, None, None))):
         raise ValueError(f"Source record missing: {uri}")
-    labels = unique(literal(value) for value in graph.objects(uri, SKOS.prefLabel) if isinstance(value, Literal))
-    if not labels:
-        raise ValueError(f"No original preferred label found: {uri}")
+    # OWL-based sources such as GLOSIS label some classes and properties only with rdfs:label.
+    for predicate in (SKOS.prefLabel, RDFS.label):
+        labels = unique(literal(value) for value in graph.objects(uri, predicate) if isinstance(value, Literal))
+        if labels:
+            return labels
+    raise ValueError(f"No original preferred label found: {uri}")
+
+
+def extract_record(graph, uri, source, provenance):
+    labels = original_labels(graph, uri)
     definitions = []
     predicates = SOURCES.get(source, {}).get("definition_predicates", (SKOS.definition,))
     for node in {node for predicate in predicates for node in graph.objects(uri, predicate)}:
@@ -100,6 +123,21 @@ def extract_record(graph, uri, source, provenance):
             if isinstance(value, Literal) and str(value).strip():
                 definitions.append({**literal(value), "sources": unique(citation(c) for c in citations)})
     return {"source": source, "prefLabels": labels, "definitions": unique(definitions), "provenance": provenance}
+
+
+def extract_labels(graph, uri, source, provenance):
+    """Label-only record for exact and other mapping targets; their definitions are not shown."""
+    return {"source": source, "prefLabels": original_labels(graph, uri), "provenance": provenance}
+
+
+def keep(records, uri, build, skipped):
+    """Close-match records must resolve. Label lookups note a missing record and continue."""
+    try:
+        records[str(uri)] = build()
+    except (ValueError, HTTPError) as exc:
+        if skipped is None or (isinstance(exc, HTTPError) and exc.code not in (404, 410)):
+            raise
+        skipped.append((str(uri), f"HTTP {exc.code}" if isinstance(exc, HTTPError) else str(exc).split(":")[0]))
 
 
 def gemet_graph(endpoint):
@@ -124,7 +162,7 @@ SELECT ?graph ?version WHERE {{
     return uri, result[0]["version"]["value"]
 
 
-def fetch_batch(source, targets):
+def fetch_batch(source, targets, *, extract=extract_record, skipped=None):
     config = SOURCES[source]
     provenance = {"endpoint": config["endpoint"]}
     selected_graph = None
@@ -156,43 +194,91 @@ CONSTRUCT {{
         payload = request(config["endpoint"], {"query": query, "format": "text/turtle"}, post=source == "gemet")
         graph = Graph().parse(data=payload, format="turtle")
         for uri in batch:
-            records[str(uri)] = extract_record(graph, uri, source, provenance)
+            keep(records, uri, lambda uri=uri: extract(graph, uri, source, provenance), skipped)
     return records
 
 
-def fetch_source(source, targets):
+def glosis_module(uri):
+    return str(uri)[len(SOURCES["glosis"]["prefix"]):].split("/", 1)[0]
+
+
+def fetch_source(source, targets, *, extract=extract_record, skipped=None):
+    """Fetch records for one source. With `skipped`, missing records are noted instead of failing."""
     if source in ("agrovoc", "gemet"):
-        return fetch_batch(source, targets)
+        return fetch_batch(source, targets, extract=extract, skipped=skipped)
     config = SOURCES[source]
-    shared_graph = None
+    shared = {}
     if "path" in config:
         payload = (ROOT / config["path"]).read_bytes()
-        shared_graph = Graph().parse(data=payload, format="turtle")
-        provenance = {"file": config["path"], "sha256": sha256(payload).hexdigest()}
+        shared[None] = Graph().parse(data=payload, format="turtle"), {"file": config["path"], "sha256": sha256(payload).hexdigest()}
     elif source == "glosis":
-        payload = request(config["endpoint"])
-        shared_graph = Graph().parse(data=payload, format="turtle")
-        provenance = {"endpoint": config["endpoint"], "version": config["version"], "sha256": sha256(payload).hexdigest()}
-    records = {}
-    for index, uri in enumerate(targets, 1):
-        if shared_graph is not None:
-            graph = shared_graph
+        for module in sorted({glosis_module(uri) for uri in targets}):
+            entry = config["modules"][module]
+            if isinstance(entry, dict):
+                payload = (ROOT / entry["path"]).read_bytes()
+                provenance = {"file": entry["path"], "sha256": sha256(payload).hexdigest()}
+            else:
+                url = config["endpoint"] + entry
+                payload = request(url)
+                provenance = {"endpoint": url, "version": config["version"], "sha256": sha256(payload).hexdigest()}
+            shared[module] = Graph().parse(data=payload, format="turtle"), provenance
+
+    def build(uri):
+        if shared:
+            graph, provenance = shared[glosis_module(uri) if source == "glosis" else None]
         else:
             url = str(uri) if source == "iso11074" else config["endpoint"]
             params = {"_format": "ttl", "status": "valid"} if source == "iso11074" else {"uri": str(uri), "format": "text/turtle"}
-            graph = Graph().parse(data=request(url, params), format="turtle")
-            provenance = {"endpoint": url}
-        records[str(uri)] = extract_record(graph, uri, source, provenance)
+            graph, provenance = Graph().parse(data=request(url, params), format="turtle"), {"endpoint": url}
+        return extract(graph, uri, source, provenance)
+
+    records = {}
+    for index, uri in enumerate(targets, 1):
+        keep(records, uri, lambda uri=uri: build(uri), skipped)
         if index % 25 == 0:
             print(f"{source}: {index}/{len(targets)}", flush=True)
-        if shared_graph is None:
+        if not shared:
             time.sleep(0.15)
     return records
 
 
-def close_match_targets(graph):
-    return sorted({target for concept, target in graph.subject_objects(SKOS.closeMatch)
+def fetch_labels(source, targets):
+    """Best-effort labels for exact and other mapping targets; the viewer shows the URI otherwise."""
+    skipped = []
+    return fetch_source(source, targets, extract=extract_labels, skipped=skipped), skipped
+
+
+def source_for(uri):
+    name = next((name for name, config in SOURCES.items() if str(uri).startswith(config["prefix"])), None)
+    if name == "glosis" and glosis_module(uri) not in SOURCES["glosis"]["modules"]:
+        return None
+    return name
+
+
+def mapping_targets(graph, predicates=MAPPING_PREDICATES):
+    return sorted({target for predicate in predicates for concept, target in graph.subject_objects(predicate)
                    if isinstance(target, URIRef) and (concept, RDF.type, SKOS.Concept) in graph}, key=str)
+
+
+def close_match_targets(graph):
+    return mapping_targets(graph, (SKOS.closeMatch,))
+
+
+def preferred(values, any_language=True):
+    """English first, then untagged text; only labels may fall back to their original language."""
+    for accept in (lambda tag: tag == "en", lambda tag: tag.split("-")[0] == "en", lambda tag: not tag):
+        chosen = [value for value in values if accept(value["language"].lower())]
+        if chosen:
+            return chosen
+    return values if any_language else []
+
+
+def display_record(record):
+    """The cache keeps what the English viewer shows: no definitions in other languages."""
+    trimmed = {**record, "prefLabels": preferred(record["prefLabels"])}
+    if "definitions" in record:
+        trimmed["definitions"] = preferred(record["definitions"], any_language=False)
+    return trimmed
 
 
 def generate(input_path, output_path):
@@ -200,22 +286,40 @@ def generate(input_path, output_path):
     if output_path.suffix.lower() != ".json" or output_path.resolve() == input_path.resolve():
         raise ValueError("Output must be a separate .json file")
     payload = input_path.read_bytes()
-    targets = close_match_targets(Graph().parse(data=payload, format="turtle"))
-    batches = defaultdict(list)
-    for uri in targets:
-        source = next((name for name, config in SOURCES.items() if str(uri).startswith(config["prefix"])), None)
+    graph = Graph().parse(data=payload, format="turtle")
+    close = close_match_targets(graph)
+    batches, label_batches, skipped = defaultdict(list), defaultdict(list), defaultdict(list)
+    for uri in close:
+        source = source_for(uri)
         if source is None:
             raise ValueError(f"Unsupported source: {uri}; existing cache was not changed")
         batches[source].append(uri)
+    for uri in sorted(set(mapping_targets(graph)) - set(close), key=str):
+        source = source_for(uri)
+        if source is None:
+            skipped["unsupported"].append((str(uri), "No configured source"))
+        else:
+            label_batches[source].append(uri)
     records = {}
     for source, uris in batches.items():
         records.update(fetch_source(source, uris))
-        print(f"{source}: cached {len(uris)} original records", flush=True)
+        print(f"{source}: cached {len(uris)} original close-match records", flush=True)
+    for source, uris in label_batches.items():
+        found, missing = fetch_labels(source, uris)
+        records.update(found)
+        skipped[source].extend(missing)
+        print(f"{source}: cached labels for {len(found)} of {len(uris)} other mapping targets", flush=True)
+    for source, entries in sorted(skipped.items()):
+        reasons = defaultdict(list)
+        for uri, reason in entries:
+            reasons[reason].append(uri)
+        for reason, uris in sorted(reasons.items()):
+            print(f"Shown as URIs: {source}, {reason}: {len(uris)} (e.g. {', '.join(uris[:3])})", flush=True)
     document = {
         "schemaVersion": 1,
         "retrievedAt": datetime.now(timezone.utc).isoformat(),
         "vocabularySha256": sha256(payload).hexdigest(),
-        "records": dict(sorted(records.items())),
+        "records": {uri: display_record(record) for uri, record in sorted(records.items())},
     }
     temporary = None
     try:

@@ -1,3 +1,5 @@
+import { routeId } from './navigation.js'
+
 export const GISCUS_HOST = 'https://giscus.app'
 export const COMMENTS_REPO = 'soilwise-he/soil-vocabs'
 export const COMMENTS_CATEGORY = 'Announcements'
@@ -19,10 +21,10 @@ export function isConceptDiscussionUrl(value) {
 }
 
 export function commentLocation(href, uri) {
-  // giscus removes URL fragments during sign-in; retain hash-only concept routes.
+  // giscus removes URL fragments during sign-in; keep the concept in the viewer's
+  // short `uri` parameter (its local name for SoilVoc concepts).
   const url = new URL(href)
-  url.searchParams.set('uri', uri)
+  url.searchParams.set('uri', routeId(uri))
   url.hash = ''
   return url.href
 }
-

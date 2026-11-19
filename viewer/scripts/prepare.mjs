@@ -1,12 +1,15 @@
 import { copyFile, mkdir, readFile, writeFile } from 'node:fs/promises'
 import { createHash } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
+import { constants, gzipSync } from 'node:zlib'
 
 const source = new URL('../data/SoilVoc.ttl', import.meta.url)
 const publicDir = new URL('../public/', import.meta.url)
 await mkdir(new URL('data/', publicDir), { recursive: true })
 const bytes = await readFile(source)
 await copyFile(source, new URL('data/SoilVoc.ttl', publicDir))
+// GitHub Pages serves Turtle uncompressed; the viewer reads this identical gzip copy first.
+await writeFile(new URL('data/SoilVoc.ttl.gz', publicDir), gzipSync(bytes, { level: constants.Z_BEST_COMPRESSION }))
 await copyFile(new URL('../data/close-matches.json', import.meta.url), new URL('data/close-matches.json', publicDir))
 await copyFile(new URL('../data/workflow.png', import.meta.url), new URL('workflow.png', publicDir))
 await mkdir(new URL('font-licenses/', publicDir), { recursive: true })

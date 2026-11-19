@@ -12,35 +12,42 @@ const props = defineProps({ group: Object, model: Object, previews: Object })
 const emit = defineEmits(['navigate', 'retry-previews'])
 const headingId = useId()
 const isCloseMatch = computed(() => props.group.predicate === NS.skos + 'closeMatch')
-const rows = computed(() => props.group.values.map(value => ({ value, sources: mappingSources(value, props.model) })))
+const rows = computed(() => props.group.values.map(value => {
+  const record = value.kind === 'resource' ? props.previews?.records.get(value.uri) : null
+  return {
+    value, record, href: value.kind === 'resource' ? externalHref(value.uri) : null,
+    // Skosmos shows the matched concept's original label; without a known label it shows the URI.
+    labels: record?.prefLabels.length ? record.prefLabels : value.label && value.label !== value.uri ? [{ text: value.label, language: '' }] : [],
+    sources: mappingSources(value, props.model),
+  }
+}))
 </script>
 
 <template>
-  <section class="detail-section mapping-section" :data-predicate="group.predicate" :aria-labelledby="headingId">
+  <section class="property-row mapping-row" :data-predicate="group.predicate" :aria-labelledby="headingId">
     <PropertyHeading :id="headingId" :label="group.label" :predicate="group.predicate" :description="model.propertyTooltip(group.predicate)" />
-    <p v-if="isCloseMatch" class="mapping-preview-note">Descriptions from the matched vocabularies, not definitions of this SoilVoc concept.</p>
-    <p v-if="isCloseMatch && previews?.status === 'error'" class="mapping-preview-status" role="status">Source previews could not be loaded. <button type="button" class="text-button" @click="emit('retry-previews')">Retry</button></p>
-    <table class="mapping-table" role="table" :aria-labelledby="headingId">
-      <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">Concept URI</th><th role="columnheader" scope="col">Source vocabulary</th></tr></thead>
-      <tbody role="rowgroup">
-        <tr v-for="({ value, sources }, index) in rows" :key="value.uri || index" role="row">
-          <td class="mapping-target" role="cell">
-            <span class="mapping-mobile-label" aria-hidden="true">Concept URI</span>
-            <a v-if="value.kind === 'resource' && externalHref(value.uri)" :href="externalHref(value.uri)" target="_blank" rel="noopener noreferrer">{{ value.uri }}<ArrowUpRight :size="13" aria-label="External resource" /></a>
+    <div class="mapping-values">
+      <p v-if="isCloseMatch" class="mapping-preview-note">Descriptions from the matched vocabularies, not definitions of this SoilVoc concept.</p>
+      <p v-if="isCloseMatch && previews?.status === 'error'" class="mapping-preview-status" role="status">Source previews could not be loaded. <button type="button" class="text-button" @click="emit('retry-previews')">Retry</button></p>
+      <ul class="mapping-list">
+        <li v-for="({ value, record, href, labels, sources }, index) in rows" :key="value.uri || index" class="mapping-entry">
+          <div class="mapping-target">
+            <a v-if="href" :href="href" :title="value.uri" target="_blank" rel="noopener noreferrer" :class="{ 'mapping-uri': !labels.length }">
+              <template v-if="labels.length"><template v-for="(label, i) in labels" :key="i"><span v-if="i"> / </span><span :lang="label.language || undefined">{{ label.text }}</span><small v-if="label.language && !label.language.startsWith('en')" class="language-tag">{{ label.language }}</small></template></template>
+              <template v-else>{{ value.uri }}</template><ArrowUpRight :size="13" aria-label="External resource" />
+            </a>
             <TermValue v-else :value="value" :model="model" show-uri @navigate="emit('navigate', $event)" />
             <template v-if="isCloseMatch && value.kind === 'resource'">
-              <CloseMatchPreview v-if="previews?.records.has(value.uri)" :record="previews.records.get(value.uri)" />
+              <CloseMatchPreview v-if="record?.definitions" :record="record" />
               <p v-else-if="previews?.status === 'loading'" class="mapping-preview-status" role="status">Loading source preview...</p>
               <p v-else-if="previews?.status === 'ready'" class="mapping-preview-status">Source preview not cached yet.</p>
             </template>
-          </td>
-          <td class="mapping-source" role="cell">
-            <span class="mapping-mobile-label" aria-hidden="true">Source vocabulary</span>
-            <ul v-if="sources.length"><li v-for="source in sources" :key="source.uri"><span v-if="source.label !== source.uri" class="mapping-source-name">{{ source.label }}</span><a :href="source.uri" target="_blank" rel="noopener noreferrer">{{ source.uri }}<ArrowUpRight :size="13" aria-label="External resource" /></a></li></ul>
-            <span v-else class="mapping-source-unknown">Not specified</span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </div>
+          <div v-if="sources.length" class="mapping-vocabulary">
+            <span v-for="source in sources" :key="source.uri" :title="source.uri">{{ source.label }}</span>
+          </div>
+        </li>
+      </ul>
+    </div>
   </section>
 </template>

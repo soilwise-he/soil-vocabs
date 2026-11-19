@@ -94,6 +94,7 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
 .top-nav { display: flex; align-items: center; gap: 26px; margin-left: auto; }
 .top-nav > a:not(.icon-button) { color: var(--header-text); font-size: 14px; padding: 17px 0; border-bottom: 2px solid transparent; }
 .top-nav > a.active { color: var(--header-accent); border-bottom-color: var(--header-accent); font-weight: 600; }
+.top-nav > a.feedback-link { display: inline-flex; align-items: center; gap: 3px; }
 .icon-button { display: inline-flex; justify-content: center; align-items: center; border-radius: 4px; width: 34px; height: 34px; padding: 0; color: var(--muted); flex: 0 0 auto; }
 .icon-button:hover { background: var(--hover); text-decoration: none; color: var(--accent); }
 .masthead .icon-button { color: var(--header-text); }
@@ -112,6 +113,7 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
 .search-field input::placeholder { color: var(--muted); }
 .search-field:focus-within { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
 .search-field input:focus-visible { outline: none; }
+.search-field input:disabled { cursor: progress; }
 .search-field .icon-button { width: 26px; height: 28px; }
 .search-band select { border: 1px solid var(--control-border); border-radius: 4px; background: #fff; padding: 0 28px 0 12px; width: 190px; font-size: 14px; }
 .search-band > .primary { min-width: 96px; }
@@ -132,7 +134,15 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
 .tabs button { padding: 10px 0 12px; color: var(--muted); border-bottom: 2px solid transparent; font-size: 14px; }
 .tabs button[aria-selected="true"], .tabs button.active { color: var(--accent); font-weight: 600; border-color: var(--accent); }
 .collapse-button { margin-left: auto; margin-bottom: 4px; }
-.sidebar-content { flex: 1; min-height: 0; overflow: auto; padding: 12px 8px 24px; scrollbar-width: thin; }
+/* Each tab scrolls on its own; the A-Z letters stay above the list. */
+.sidebar-content { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.sidebar-scroll { flex: 1; min-height: 0; overflow: auto; padding: 12px 8px 24px; scrollbar-width: thin; }
+.alphabetical-index { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.alphabetical-scroll { padding-top: 4px; }
+.sidebar-skeleton { display: grid; gap: 16px; padding: 74px 24px; }
+.sidebar-skeleton span { display: block; height: 12px; border-radius: 3px; background: var(--line-soft); }
+.sidebar-skeleton span:nth-child(3n+2) { width: 70%; }
+.sidebar-skeleton span:nth-child(3n) { width: 52%; }
 .hierarchy-list { position: relative; }
 .hierarchy-list [role="group"]::before { content: ""; position: absolute; top: 0; bottom: calc(3px + var(--tree-target) / 2); left: calc(6px + var(--tree-target) / 2 + var(--depth) * 16px); border-left: 1px solid var(--tree-line); pointer-events: none; }
 .tree-row { position: relative; display: flex; align-items: start; padding: 3px 8px 3px calc(6px + var(--depth) * 16px); min-height: calc(var(--tree-target) + 6px); border-radius: 3px; }
@@ -157,6 +167,7 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
 .concept-navigation { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; margin-bottom: 14px; }
 .breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; font-size: 13px; color: var(--muted); min-height: 20px; min-width: 0; }
 .breadcrumbs a { color: var(--accent); }
+.current-crumb { color: var(--text); font-weight: 600; overflow-wrap: anywhere; }
 .breadcrumbs:empty { display: none; }
 .hierarchy-paths { font-size: 13px; min-width: 0; }
 .hierarchy-paths[open] { flex-basis: 100%; }
@@ -167,50 +178,52 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
 .path-chain { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 6px; flex: 1; min-width: 0; }
 .path-chain span { overflow-wrap: anywhere; }
 .concept-detail.jskos-vue-itemDetails { font-size: 16px; }
-.concept-detail .jskos-vue-itemDetails-name { display: grid; grid-template-columns: minmax(0,max-content) auto; gap: 6px 10px; align-items: start; margin-bottom: 12px; }
+/* The preferred label is the first row of the property table, as in Skosmos. */
+.concept-detail .jskos-vue-itemDetails-name { display: grid; grid-template-columns: 220px minmax(0,max-content) auto; column-gap: 10px; row-gap: 4px; align-items: baseline; margin-bottom: 12px; }
+.name-label { margin-right: 14px; color: var(--muted); font-size: 14px; }
 .concept-detail .jskos-vue-itemDetails-name > .jskos-vue-itemName { font-family: "EB Garamond", Georgia, serif; font-size: 32px; line-height: 1.15; font-weight: 700; color: var(--soil); overflow-wrap: anywhere; }
 .concept-detail .jskos-vue-itemName-notation { display: none; }
-.copy-label { justify-self: start; margin-top: 2px; }
-.type-row { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; }
+.copy-label { justify-self: start; align-self: center; }
+.type-values { display: flex; flex-wrap: wrap; gap: 6px; }
+.type-values li + li { margin-top: 0; }
 .type-label { font-size: 12px; background: var(--type-surface); border: 1px solid var(--line); border-radius: 3px; padding: 1px 8px; color: var(--type-text); }
-.concept-identity { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 8px; min-width: 0; color: var(--muted); font-size: 12px; }
-.concept-identity > span { flex: 0 0 auto; }
-.concept-identity .icon-button { width: 26px; height: 26px; align-self: center; }
 .canonical-uri { font-size: 13px; overflow-wrap: anywhere; min-width: 0; }
-.concept-identity .canonical-uri { color: var(--muted); }
 .canonical-uri svg { margin-left: 4px; }
+.uri-value { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.uri-value .canonical-uri { font-size: 14px; }
+.uri-value .icon-button { width: 28px; height: 28px; }
+.download-links, .file-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 20px; }
+.download-link, .file-links a { padding: 0; color: var(--accent); font-size: 14px; font-weight: 600; }
+.download-link:hover { text-decoration: underline; }
 .concept-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; border-bottom: 1px solid var(--line); }
 .detail-view-switch { display: flex; gap: 24px; }
 .detail-view-switch button { color: var(--muted); font-size: 14px; padding: 8px 0 11px; border-bottom: 2px solid transparent; }
 .detail-view-switch button[aria-selected="true"] { color: var(--accent); border-color: var(--accent); font-weight: 600; }
-.detail-section { padding: 20px 0; border-bottom: 1px solid var(--line); }
-.detail-section > h2 { font-size: 18px; line-height: 1.4; font-weight: 700; margin-bottom: 10px; color: var(--soil); }
 .definition-entry { max-width: 75ch; }
 .definition-entry + .definition-entry { border-top: 1px solid var(--line-soft); margin-top: 14px; padding-top: 14px; }
 .definition-text { white-space: pre-line; line-height: 1.6; overflow-wrap: anywhere; }
 .definition-source { display: flex; gap: 6px; margin-top: 6px; font-size: 13px; color: var(--muted); line-height: 1.5; overflow-wrap: anywhere; }
 .definition-source > span:first-child { flex: 0 0 auto; }
 .definition-source a { text-decoration: underline; text-decoration-color: var(--control-border); }
-.property-row { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 24px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.property-row { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 24px; padding: 14px 0; border-bottom: 1px solid var(--line); }
 .property-row > * { min-width: 0; }
-.property-row h2, .property-row h3 { font-size: 18px; line-height: 1.4; font-weight: 700; color: var(--soil); }
+.property-row h2, .property-row h3 { font-size: 16px; line-height: 1.4; font-weight: 700; color: var(--soil); }
+.property-row > h2:not(.property-heading) { display: flex; align-items: center; align-self: start; min-height: var(--control-target); }
 .concept-link { font-weight: 600; }
-.property-row > .values-list { padding-top: 4px; }
-.mapping-table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 14px; }
-.mapping-table th, .mapping-table td { width: 50%; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
-.mapping-table th { padding: 0 0 9px; color: var(--muted); font-size: 12px; font-weight: 600; border-bottom: 1px solid var(--line); }
-.mapping-table td { padding: 14px 0; border-bottom: 1px solid var(--line-soft); }
-.mapping-table th:first-child, .mapping-table td:first-child { padding-right: 24px; }
-.mapping-table tbody tr:last-child td { border-bottom: 0; padding-bottom: 0; }
-.mapping-table a svg { margin-left: 3px; }
-.mapping-source-name { display: block; color: var(--muted); font-size: 12px; margin-bottom: 3px; }
-.mapping-source li + li { margin-top: 10px; }
-.mapping-source-unknown { color: var(--muted); }
-.mapping-mobile-label { display: none; }
-.mapping-preview-note { font-size: 13px; color: var(--muted); margin: 0 0 16px; }
-.mapping-original-label { font-weight: 600; margin-top: 8px; }
-.mapping-preview-status { color: var(--muted); font-size: 13px; margin-top: 8px; }
-.mapping-definitions { margin-top: 8px; }
+/* Align the first value line with the heading text beside it. */
+.property-row > :nth-child(2) { padding-top: 4px; }
+.show-all { margin-top: 8px; font-weight: 600; }
+.rdf-downloads { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.mapping-preview-note { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.mapping-list { display: grid; gap: 12px; }
+.mapping-entry { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,14rem); gap: 2px 24px; align-items: baseline; }
+.mapping-target { min-width: 0; overflow-wrap: anywhere; }
+.mapping-target > a svg { margin-left: 3px; }
+.mapping-uri { font-size: 14px; }
+.mapping-vocabulary { color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
+.mapping-vocabulary span + span::before { content: ", "; }
+.mapping-preview-status { color: var(--muted); font-size: 13px; margin-top: 4px; }
+.mapping-definitions { margin-top: 4px; font-size: 14px; }
 .mapping-definitions summary { color: var(--accent); cursor: pointer; font-weight: 600; }
 .mapping-definitions summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .mapping-definitions .definition-entry { margin-top: 10px; }
@@ -223,7 +236,10 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
 .comments-status { color: var(--muted); font-size: 14px; }
 .comments-status .button { margin-top: 12px; }
 .concept-comments giscus-widget { display: block; width: 100%; }
-.property-heading { position: relative; display: flex; align-items: center; align-self: start; overflow-wrap: anywhere; }
+/* Block layout keeps the help button after the last word when a long heading wraps. */
+.property-heading { position: relative; display: block; align-self: start; overflow-wrap: anywhere; }
+.heading-tail { white-space: nowrap; }
+.heading-tail .property-tooltip { white-space: normal; }
 .property-help { display: inline-flex; flex: 0 0 auto; vertical-align: middle; margin-left: 3px; }
 .property-help > button { display: inline-flex; align-items: center; justify-content: center; width: var(--control-target); height: var(--control-target); flex: 0 0 var(--control-target); color: var(--muted); padding: 0; border-radius: 4px; line-height: 1; }
 .property-help > button:hover { color: var(--accent); background: var(--hover); }
@@ -242,7 +258,7 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
 .download-menu summary { list-style: none; min-height: 34px; padding: 5px 9px; font-size: 13px; }
 .download-menu summary::-webkit-details-marker { display: none; }
 .menu-popover { position: absolute; left: 0; top: calc(100% + 5px); width: 155px; background: #fff; border: 1px solid var(--control-border); border-radius: 4px; padding: 4px; z-index: 25; box-shadow: 0 4px 12px var(--shadow); }
-.concept-toolbar .menu-popover, .resource-tools .menu-popover { left: auto; right: 0; }
+.resource-tools .menu-popover { left: auto; right: 0; }
 .menu-popover button { display: flex; justify-content: space-between; width: 100%; padding: 8px; text-align: left; font-size: 13px; }
 .menu-popover button:hover { background: var(--rail); }
 .menu-popover small { color: var(--muted); }
@@ -251,12 +267,10 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
 .page-heading { margin-top: 8px; margin-bottom: 28px; }
 .page-heading h1 { font-size: 30px; font-weight: 700; line-height: 1.25; color: var(--soil); overflow-wrap: anywhere; }
 .page-heading > p { margin-top: 8px; font-size: 14px; color: var(--muted); }
-.vocabulary-facts { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; padding: 0 0 26px; border-bottom: 1px solid var(--line); margin-bottom: 26px; }
+.vocabulary-facts { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; }
 .vocabulary-facts div { display: flex; flex-direction: column; }
 .vocabulary-facts strong { font-size: 24px; font-weight: 600; color: var(--accent); }
 .vocabulary-facts span { color: var(--muted); font-size: 13px; }
-.label-statistics { padding-bottom: 24px; margin-bottom: 12px; border-bottom: 1px solid var(--line); }
-.label-statistics h2 { font-size: 18px; margin-bottom: 12px; color: var(--soil); }
 .label-statistics dl { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 15px; margin: 0; }
 .label-statistics dt { font-size: 13px; color: var(--muted); }
 .label-statistics dd { margin: 3px 0 0; font-size: 21px; }
@@ -291,10 +305,10 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
 .resource-heading .resource-category { font-size: 12px; margin-bottom: 8px; }
 .resource-tools { position: absolute; top: 28px; right: 0; display: flex; gap: 8px; }
 .typed-concepts { margin-top: 30px; }
-.letters { display: grid; grid-template-columns: repeat(7,1fr); gap: 3px; padding: 3px 8px 12px; border-bottom: 1px solid var(--line); }
+.letters { flex: none; display: grid; grid-template-columns: repeat(7,1fr); gap: 3px; padding: 12px 16px; border-bottom: 1px solid var(--line); }
 .letters button { font-size: 13px; min-height: 30px; padding: 3px; border-radius: 3px; }
 .letters button:hover, .letters button.active { background: var(--selected); color: var(--accent); }
-.list-count { font-size: 12px; color: var(--muted); margin: 12px 12px 7px; }
+.list-count { flex: none; font-size: 12px; color: var(--muted); margin: 10px 20px 0; }
 .alphabetical-index .jskos-vue-itemList-item { padding: 8px 12px; line-height: 1.5; font-size: 14px; overflow-wrap: anywhere; box-shadow: none; }
 .alphabetical-index .jskos-vue-itemList-item:hover { box-shadow: none; }
 .alphabetical-index .jskos-vue-itemList-item > .jskos-vue-itemName { display: none; }
@@ -305,22 +319,17 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
 .load-screen h1 { font-size: 25px; font-weight: 600; }
 .load-screen p { color: var(--muted); margin-top: 8px; }
 .load-screen button { margin-top: 20px; }
+.reading-pane .load-screen { padding: 12px 0; }
 .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; background: var(--soil); color: #fff; padding: 11px 18px; border-radius: 4px; font-size: 13px; z-index: 50; max-width: calc(100% - 32px); }
 .mobile-menu { display: none; }
 @media (min-width: 1600px) { .workspace { grid-template-columns: 350px minmax(0,1fr); } .reading-pane { padding-left: 56px; padding-right: 56px; } }
 @container reading (max-width: 680px) {
-  .property-row { grid-template-columns: minmax(0,1fr); gap: 6px; padding: 16px 0; }
-  .property-row > .values-list { padding-top: 0; }
+  .property-row { grid-template-columns: minmax(0,1fr); gap: 6px; padding: 14px 0; }
+  .property-row > :nth-child(2) { padding-top: 0; }
   .concept-detail .jskos-vue-itemDetails-name { grid-template-columns: minmax(0,1fr) max-content; }
+  .name-label { grid-column: 1 / -1; margin-right: 0; }
   .concept-detail .jskos-vue-itemDetails-name > .jskos-vue-itemName { font-size: 30px; }
-}
-@container reading (max-width: 520px) {
-  .mapping-table, .mapping-table tbody { display: block; width: 100%; }
-  .mapping-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
-  .mapping-table tbody tr { display: grid; grid-template-columns: minmax(0,1fr); gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
-  .mapping-table tbody tr:last-child { border-bottom: 0; padding-bottom: 0; }
-  .mapping-table tbody td, .mapping-table tbody td:first-child { width: 100%; padding: 0; border: 0; }
-  .mapping-mobile-label { display: block; margin-bottom: 4px; color: var(--muted); font-size: 12px; font-weight: 600; }
+  .mapping-entry { grid-template-columns: minmax(0,1fr); }
 }
 @media (max-width: 1100px) {
   .brand-description { display: none; }
@@ -331,9 +340,9 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
 @media (max-width: 760px) {
   .masthead { flex-basis: 56px; padding: 0 16px; gap: 12px; }
   .brand { font-size: 24px; }
-  .top-nav { gap: 16px; }
+  .top-nav { gap: 12px; }
   .top-nav > a:not(.icon-button) { font-size: 13px; padding: 16px 0; }
-  .top-nav > .icon-button { display: none; }
+  .top-nav > .icon-button, .top-nav > a.feedback-link svg { display: none; }
   .search-band { padding: 10px 16px; flex-wrap: wrap; gap: 8px; }
   .mobile-menu { display: inline-flex; height: 40px; width: 28px; }
   .search-field { flex-basis: calc(100% - 40px); gap: 7px; padding: 0 9px; }
@@ -349,13 +358,12 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
   .hierarchy-paths { font-size: 12px; }
   .concept-detail .jskos-vue-itemDetails-name > .jskos-vue-itemName { font-size: 30px; }
   .page-heading h1 { font-size: 28px; }
-  .concept-detail .jskos-vue-itemDetails-name { margin-bottom: 10px; }
-  .concept-identity { gap: 8px; }
-  .canonical-uri { font-size: 12px; }
-  .property-row { grid-template-columns: minmax(0,1fr); gap: 6px; padding: 16px 0; }
-  .detail-section { padding: 16px 0; }
-  .mapping-table { font-size: 13px; }
-  .mapping-table th:first-child, .mapping-table td:first-child { padding-right: 14px; }
+  .concept-detail .jskos-vue-itemDetails-name { margin-bottom: 10px; grid-template-columns: minmax(0,1fr) max-content; }
+  .name-label { grid-column: 1 / -1; margin-right: 0; }
+  .canonical-uri, .uri-value .canonical-uri { font-size: 12px; }
+  .property-row { grid-template-columns: minmax(0,1fr); gap: 6px; padding: 14px 0; }
+  .property-row > :nth-child(2) { padding-top: 0; }
+  .mapping-entry { grid-template-columns: minmax(0,1fr); }
   .definition-source { font-size: 13px; }
   .page-heading { margin-top: 4px; margin-bottom: 24px; }
   .top-concepts { grid-template-columns: minmax(0,1fr); }
@@ -370,6 +378,11 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
   .suggestion-type { display: block; text-align: left; font-size: 12px; margin-top: 2px; }
   .suggestions li.all-results { display: flex; }
   .toast { font-size: 12px; bottom: 14px; }
+}
+@media (max-width: 400px) {
+  /* The four header links fit from about 345px; narrower screens can swipe them. */
+  .top-nav { gap: 10px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+  .top-nav > a:not(.icon-button) { font-size: 12px; }
 }
 @media (max-width: 760px), (pointer: coarse) {
   :root { --control-target: 44px; --tree-target: 44px; }

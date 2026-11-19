@@ -15,6 +15,8 @@ const children = computed(() => props.model.sort(props.model.children.get(props.
 const cycle = computed(() => props.path.slice(0, -1).includes(props.uri))
 const expandable = computed(() => children.value.length > 0 && !cycle.value)
 const accessibleName = computed(() => `${concept.value.label}${concept.value.isProcedure ? ', Procedure' : ''}${cycle.value ? ', Cycle' : ''}`)
+// A link names its branch only when it differs from the concept's default path.
+const href = computed(() => conceptHref(props.uri, props.model.isDefaultPath(props.path) ? null : props.path))
 </script>
 
 <template>
@@ -24,7 +26,7 @@ const accessibleName = computed(() => `${concept.value.label}${concept.value.isP
         <ChevronRight :size="15" :class="{ rotated: open }" />
       </button>
       <span v-else class="tree-spacer"></span>
-      <a class="tree-select" tabindex="-1" :aria-label="accessibleName" :href="conceptHref(uri, path)" @click="followLink($event, () => emit('navigate', { uri, path }))" :aria-current="selected ? 'page' : undefined">
+      <a class="tree-select" tabindex="-1" :aria-label="accessibleName" :href="href" @click="followLink($event, () => emit('navigate', { uri, path }))" :aria-current="selected ? 'page' : undefined">
         <ItemName :item="model.asJskos(uri)" :show-notation="false" :draggable="false" />
         <span v-if="concept.isProcedure" class="procedure-badge">Procedure</span>
         <span v-if="cycle" class="cycle-marker" title="Cycle in the source graph; this branch is not expanded again">Cycle</span>
