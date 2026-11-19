@@ -184,11 +184,13 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
 .tree-row[data-selected="true"] { background: var(--selected); box-shadow: inset 3px 0 var(--brand); }
 .tree-row[data-selected="true"] .tree-select { color: var(--ink); font-weight: 700; }
 .tree-toggle, .tree-spacer { width: var(--tree-target); height: var(--tree-target); flex: 0 0 var(--tree-target); margin-right: 3px; }
-.tree-toggle { color: var(--ink); }
+.tree-toggle { position: relative; z-index: 1; color: var(--ink); }
 .tree-toggle svg { transition: transform .12s; }
 .tree-toggle .rotated { transform: rotate(90deg); }
 .tree-select { color: var(--accent); font-size: 15px; line-height: 1.45; min-width: 0; padding: calc((var(--tree-target) - 21.75px) / 2) 0; overflow-wrap: anywhere; }
 .tree-select:hover { color: var(--accent-hover); text-decoration: underline; }
+/* The whole row opens the concept, as in the A-Z list; the expand button stays above it. */
+.tree-select::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
 .procedure-badge { display: inline-block; padding: 0 7px; border: 1px solid var(--procedure-border); background: var(--procedure-surface); color: var(--procedure-text); border-radius: 999px; font-size: 10.5px; font-weight: 700; font-style: normal; line-height: 1.5; text-transform: uppercase; white-space: nowrap; vertical-align: 1px; margin-left: 6px; }
 .tree-select > .procedure-badge { display: table; margin: 2px 0 0; }
 .cycle-marker { color: #893d35; font-size: 11px; padding-left: 6px; }
