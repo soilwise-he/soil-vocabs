@@ -64,6 +64,8 @@ eusoilvoc:SoilNutrientRetention a skos:Concept ;
     skos:prefLabel "soil nutrient retention"@en .
 
 eusoilvoc:SoilOrganicMatter a skos:Concept ;
+    skos:broadMatch <http://aims.fao.org/aos/agrovoc/c_5387>,
+        <https://lod.nal.usda.gov/nalt/24613> ;
     skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "A complex mixture of living and dead substances of plant and animal origin in soil."@en ] ;
     skos:broader eusoilvoc:SoilOrganicComponents ;
@@ -3766,6 +3768,7 @@ eusoilvoc:SoilWaterMovement a skos:Concept ;
     skos:prefLabel "soil water movement"@en .
 
 eusoilvoc:LandCover a skos:Concept ;
+    skos:broadMatch <http://aims.fao.org/aos/agrovoc/c_5834> ;
     skos:exactMatch spp:LandCover ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:Building,

@@ -1,4 +1,6 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix eusoilvoc: <https://w3id.org/eusoilvoc#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 eusoilvoc:CarbonPools a skos:Concept ;
@@ -19,6 +21,24 @@ eusoilvoc:Cementation a skos:Concept ;
         eusoilvoc:CementationNature ;
     skos:prefLabel "cementation"@en .
 
+eusoilvoc:Cropland a skos:Concept ;
+    skos:broader eusoilvoc:LandUse ;
+    skos:broadMatch <https://lod.nal.usda.gov/nalt/5367> ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_2808>,
+        <https://lod.nal.usda.gov/nalt/215496> ;
+    skos:definition [ dcterms:source <https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/4_Volume4/19R_V4_Ch03_Land%20Representation.pdf#page=6> ;
+            rdf:value "Land used to grow crops, including rice paddies. In IPCC inventories this category also covers agroforestry where the vegetation does not meet national forest thresholds."@en ] ;
+    skos:prefLabel "cropland"@en .
+
+eusoilvoc:ForestLand a skos:Concept ;
+    skos:altLabel "forestland"@en ;
+    skos:broader eusoilvoc:Land, eusoilvoc:LandUse ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_24843>,
+        <https://lod.nal.usda.gov/nalt/80856> ;
+    skos:definition [ dcterms:source <https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/4_Volume4/19R_V4_Ch03_Land%20Representation.pdf#page=6> ;
+            rdf:value "Land whose woody vegetation meets the national inventory thresholds for forest, or can reach those thresholds on the site even though it does not yet meet them."@en ] ;
+    skos:prefLabel "forest land"@en .
+
 eusoilvoc:Fragments a skos:Concept ;
     skos:altLabel "fragment"@en ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
@@ -27,6 +47,15 @@ eusoilvoc:Fragments a skos:Concept ;
         eusoilvoc:Rock,
         eusoilvoc:WeatheringFragments ;
     skos:prefLabel "fragments"@en .
+
+eusoilvoc:Grassland a skos:Concept ;
+    skos:altLabel "grasslands"@en ;
+    skos:broader eusoilvoc:LandUse ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_3366>,
+        <https://lod.nal.usda.gov/nalt/9709> ;
+    skos:definition [ dcterms:source <https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/4_Volume4/19R_V4_Ch03_Land%20Representation.pdf#page=6> ;
+            rdf:value "The IPCC land-use category for rangeland and pasture not reported as cropland. It also covers natural, recreational and managed grasslands, and may include shrub or other woody vegetation below the national forest thresholds."@en ] ;
+    skos:prefLabel "grassland"@en .
 
 eusoilvoc:Habitats a skos:Concept ;
     skos:altLabel "habitat"@en ;
@@ -54,6 +83,12 @@ eusoilvoc:MineralParticles a skos:Concept ;
 eusoilvoc:Nitrogen a skos:Concept ;
     skos:narrower eusoilvoc:NitrogenTotal ;
     skos:prefLabel "nitrogen"@en .
+
+eusoilvoc:PedoclimaticArea a skos:Concept ;
+    skos:broader eusoilvoc:Land ;
+    skos:definition [ dcterms:source <https://www.project-marvic.eu/glossary> ;
+            rdf:value "A geographical area with relatively uniform soil type and climatic conditions."@en ] ;
+    skos:prefLabel "pedoclimatic area"@en .
 
 eusoilvoc:Phosphorus a skos:Concept ;
     skos:narrower eusoilvoc:PhosphorusExtractableElements,
@@ -142,3 +177,18 @@ eusoilvoc:Sulfur a skos:Concept ;
     skos:narrower eusoilvoc:SulfurExtractableElements,
         eusoilvoc:SulfurTotalElements ;
     skos:prefLabel "sulfur"@en .
+
+eusoilvoc:Wetlands a skos:Concept ;
+    skos:altLabel "wetland"@en ;
+    skos:broader eusoilvoc:LandUse ;
+    skos:broadMatch <http://aims.fao.org/aos/agrovoc/c_4179>,
+        <http://aims.fao.org/aos/agrovoc/c_5834> ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_8371>,
+        <http://metadata.un.org/thesaurus/1007000>,
+        <http://zbw.eu/stw/descriptor/18984-5>,
+        <https://d-nb.info/gnd/4016960-1>,
+        <https://data.gesis.org/thesoz/concept_10043551>,
+        <https://lod.nal.usda.gov/nalt/18403> ;
+    skos:definition [ dcterms:source <https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/4_Volume4/19R_V4_Ch03_Land%20Representation.pdf#page=6> ;
+            rdf:value "The IPCC category for peat extraction sites and seasonally or permanently inundated or waterlogged land not reported as forest, cropland, grassland or settlements. It includes reservoirs, natural rivers and lakes."@en ] ;
+    skos:prefLabel "wetlands"@en .

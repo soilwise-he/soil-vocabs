@@ -153,6 +153,7 @@ eusoilvoc:Peat a skos:Concept ;
     dcterms:source <https://doi.org/10.5281/zenodo.20341020>,
         <https://ec.europa.eu/transparency/documents-register/api/files/C(2026)4666_1/090166e5303f9cd4> ;
     skos:broader eusoilvoc:SoilSubstance ;
+    skos:broadMatch <http://aims.fao.org/aos/agrovoc/c_4852> ;
     skos:definition [ dcterms:source <https://doi.org/10.5281/zenodo.20341020> ;
             rdf:value "A layer of soil that primarily consists of partially decomposed plant material, that has accumulated under conditions of waterlogging"@en ],
         [ dcterms:source <https://ec.europa.eu/transparency/documents-register/api/files/C(2026)4666_1/090166e5303f9cd4> ;

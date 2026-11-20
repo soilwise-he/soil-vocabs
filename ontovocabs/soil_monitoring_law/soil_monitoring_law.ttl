@@ -188,6 +188,7 @@ eusoilvoc:SoilUnit a skos:Concept ;
 
 eusoilvoc:TransferFunction a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
+    skos:broader eusoilvoc:SoilSciences ;
     skos:definition [ dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
             rdf:value "A mathematical rule that enables the value of a measurement performed using a methodology different from a reference methodology to be converted into the value that would be obtained by performing the soil measurement using the reference methodology"@en ] ;
     skos:prefLabel "transfer function"@en .

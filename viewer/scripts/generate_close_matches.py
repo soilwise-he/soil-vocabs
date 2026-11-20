@@ -8,6 +8,7 @@ The written cache holds the English subset the viewer shows.
 import argparse
 from collections import defaultdict
 from datetime import datetime, timezone
+from functools import lru_cache
 from hashlib import sha256
 import json
 import os
@@ -15,7 +16,7 @@ from pathlib import Path
 from tempfile import NamedTemporaryFile
 import time
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
+from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
 
 from rdflib import Graph, Literal, URIRef
@@ -32,6 +33,18 @@ SOURCES = {
     "inrae": {"prefix": "http://opendata.inrae.fr/thesaurusINRAE/", "endpoint": "https://consultation.vocabulaires-ouverts.inrae.fr/rest/v1/thesaurus-inrae/data"},
     "iso11074": {"prefix": "https://data.geoscience.earth/ncl/ISO11074v2025/"},
     "gemet": {"prefix": "http://www.eionet.europa.eu/gemet/concept/", "endpoint": "https://sparql.agroportal.eu/sparql"},
+    "unbis": {"prefix": "http://metadata.un.org/thesaurus/", "endpoint": "https://metadata.un.org/skosmos/rest/v1/thesaurus/data"},
+    "stw": {"prefix": "http://zbw.eu/stw/descriptor/", "record_url": "https://zbw.eu/stw/version/latest/descriptor/{id}/about.ttl"},
+    "gnd": {
+        "prefix": "https://d-nb.info/gnd/", "record_url": "https://lobid.org/gnd/{id}.ttl",
+        "label_predicates": (URIRef("https://d-nb.info/standards/elementset/gnd#preferredName"),),
+        "definition_predicates": (SKOS.definition, URIRef("https://d-nb.info/standards/elementset/gnd#definition")),
+    },
+    "thesoz": {
+        "prefix": "https://data.gesis.org/thesoz/concept_",
+        "release": "https://zenodo.org/records/18773539/files/thesoz.ttl?download=1",
+        "sha256": "43f17d959ae2df19ac9724aa7db636883d80c8498b9936eb89093f8601a97d22",
+    },
     "shkg": {"prefix": "https://soilwise-he.github.io/soil-health#", "path": "ontovocabs/shkg/soil_health_KG.ttl"},
     "benchmarks": {
         "prefix": "https://soilhealthbenchmarks.eu/glossary/",
@@ -93,11 +106,11 @@ def unique(values):
     return [json.loads(key) for key in sorted({json.dumps(value, ensure_ascii=False, sort_keys=True) for value in values})]
 
 
-def original_labels(graph, uri):
+def original_labels(graph, uri, source):
     if not any(graph.triples((uri, None, None))):
         raise ValueError(f"Source record missing: {uri}")
     # OWL-based sources such as GLOSIS label some classes and properties only with rdfs:label.
-    for predicate in (SKOS.prefLabel, RDFS.label):
+    for predicate in (SKOS.prefLabel, RDFS.label, *SOURCES.get(source, {}).get("label_predicates", ())):
         labels = unique(literal(value) for value in graph.objects(uri, predicate) if isinstance(value, Literal))
         if labels:
             return labels
@@ -105,7 +118,7 @@ def original_labels(graph, uri):
 
 
 def extract_record(graph, uri, source, provenance):
-    labels = original_labels(graph, uri)
+    labels = original_labels(graph, uri, source)
     definitions = []
     predicates = SOURCES.get(source, {}).get("definition_predicates", (SKOS.definition,))
     for node in {node for predicate in predicates for node in graph.objects(uri, predicate)}:
@@ -127,7 +140,7 @@ def extract_record(graph, uri, source, provenance):
 
 def extract_labels(graph, uri, source, provenance):
     """Label-only record for exact and other mapping targets; their definitions are not shown."""
-    return {"source": source, "prefLabels": original_labels(graph, uri), "provenance": provenance}
+    return {"source": source, "prefLabels": original_labels(graph, uri, source), "provenance": provenance}
 
 
 def keep(records, uri, build, skipped):
@@ -202,6 +215,15 @@ def glosis_module(uri):
     return str(uri)[len(SOURCES["glosis"]["prefix"]):].split("/", 1)[0]
 
 
+@lru_cache(maxsize=1)
+def release_graph(url, digest):
+    # Both the close-match and label-only passes use the same publisher snapshot.
+    payload = request(url)
+    if sha256(payload).hexdigest() != digest:
+        raise ValueError(f"Unexpected checksum for vocabulary release: {url}")
+    return Graph().parse(data=payload, format="turtle")
+
+
 def fetch_source(source, targets, *, extract=extract_record, skipped=None):
     """Fetch records for one source. With `skipped`, missing records are noted instead of failing."""
     if source in ("agrovoc", "gemet"):
@@ -211,6 +233,9 @@ def fetch_source(source, targets, *, extract=extract_record, skipped=None):
     if "path" in config:
         payload = (ROOT / config["path"]).read_bytes()
         shared[None] = Graph().parse(data=payload, format="turtle"), {"file": config["path"], "sha256": sha256(payload).hexdigest()}
+    elif "release" in config:
+        url, digest = config["release"], config["sha256"]
+        shared[None] = release_graph(url, digest), {"endpoint": url, "sha256": digest}
     elif source == "glosis":
         for module in sorted({glosis_module(uri) for uri in targets}):
             entry = config["modules"][module]
@@ -226,6 +251,9 @@ def fetch_source(source, targets, *, extract=extract_record, skipped=None):
     def build(uri):
         if shared:
             graph, provenance = shared[glosis_module(uri) if source == "glosis" else None]
+        elif "record_url" in config:
+            url = config["record_url"].format(id=quote(str(uri)[len(config["prefix"]):], safe=""))
+            graph, provenance = Graph().parse(data=request(url), format="turtle"), {"endpoint": url}
         else:
             url = str(uri) if source == "iso11074" else config["endpoint"]
             params = {"_format": "ttl", "status": "valid"} if source == "iso11074" else {"uri": str(uri), "format": "text/turtle"}

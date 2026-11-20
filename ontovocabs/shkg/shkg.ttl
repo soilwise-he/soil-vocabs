@@ -112,10 +112,18 @@ eusoilvoc:Inputs a skos:Concept ;
     skos:prefLabel "inputs"@en .
 
 eusoilvoc:LandUse a skos:Concept ;
+    skos:broadMatch <http://aims.fao.org/aos/agrovoc/c_24866>,
+        <https://lod.nal.usda.gov/nalt/39546> ;
     skos:definition [ dcterms:source <https://www.eea.europa.eu/help/glossary/eea-glossary/land-use> ;
             rdf:value "Land use corresponds to the socio-economic description (functional dimension) of areas: areas used for residential, industrial or commercial purposes, for farming or forestry, for recreational or conservation purposes, etc. Links with land cover are possible; it may be possible to infer land use from land cover and conversely. But situations are often complicated and the link is not so evident. Contrary to land cover, land use is difficult to 'observe'. For example, it is often difficult to decide if grasslands are used or not for agricultural purposes. Distinctions between land use and land cover and their definition have impacts on the development of classification systems, data collection and information systems in general."@en ],
         [ dcterms:source <https://archive.ipcc.ch/ipccreports/sres/land_use/index.php?idp=45> ;
             rdf:value "The total of arrangements, activities, and inputs that people undertake in a certain land cover type (FAO, 1997a; FAO/UNEP, 1999)."@en ] ;
+    skos:exactMatch <http://eurovoc.europa.eu/4630>,
+        <http://metadata.un.org/thesaurus/1003603>,
+        <http://vocabularies.unesco.org/thesaurus/concept442>,
+        <http://zbw.eu/stw/descriptor/11859-1>,
+        <https://d-nb.info/gnd/4259046-2>,
+        <https://data.gesis.org/thesoz/concept_10039675> ;
     skos:prefLabel "land use"@en .
 
 eusoilvoc:NonsoilIndicators a skos:Concept ;

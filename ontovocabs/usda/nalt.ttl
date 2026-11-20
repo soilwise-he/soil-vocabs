@@ -1,8 +1,3 @@
-# USDA soil orders and reviewed erosion contributions from USDA NALT.
-# Generated offline by scripts/build_usda_classification_module.py.
-# Source records retrieved 2026-09-22; local URI and hierarchy adaptations.
-# Shared NALT WRB/USDA records use closeMatch; source cross-mappings are not imported.
-
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix eusoilvoc: <https://w3id.org/eusoilvoc#> .
 @prefix nalt: <https://lod.nal.usda.gov/nalt/> .
@@ -173,3 +168,13 @@ eusoilvoc:WindErosion skos:broader eusoilvoc:SoilErosion ;
     skos:definition [ dcterms:source nalt:63376 ;
             rdf:value "The process of detachment, transport, and deposition of soil by wind."@en ] ;
     skos:exactMatch nalt:63376 .
+
+eusoilvoc:Peatlands a skos:Concept ;
+    skos:altLabel "peatland"@en ;
+    skos:broader eusoilvoc:Land ;
+    skos:broadMatch nalt:18403 ;
+    skos:exactMatch <http://aims.fao.org/aos/agrovoc/c_13929> ;
+    skos:definition [ dcterms:source <https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/0_Overview/19R_V0_02_Glossary.pdf#page=14> ;
+            rdf:value "A wetland ecosystem with predominantly peat soil. Waterlogging slows decomposition, allowing organic matter to accumulate as peat."@en ] ;
+    skos:exactMatch nalt:18404 ;
+    skos:prefLabel "peatlands"@en .

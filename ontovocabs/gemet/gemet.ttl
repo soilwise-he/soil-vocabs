@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eusoilvoc: <https://w3id.org/eusoilvoc#> .
+@prefix gemet: <http://www.eionet.europa.eu/gemet/concept/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+eusoilvoc:BelowgroundBiomass a skos:Concept ;
+    dcterms:source <https://cordis.europa.eu/project/id/101112754> ;
+    skos:altLabel "below ground biomass"@en, "belowground biomass"@en ;
+    skos:broader eusoilvoc:CarbonPools, eusoilvoc:RootBiomass ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_363a2055>,
+        <https://lod.nal.usda.gov/nalt/131627> ;
+    skos:definition [ dcterms:source <https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/4_Volume4/19R_V4_Ch01_Introduction.pdf#page=9> ;
+            rdf:value "The biomass of living roots counted in a greenhouse gas inventory. Fine roots may be excluded when they cannot be distinguished from litter or soil organic matter; the IPCC suggests a diameter threshold of 2 mm."@en ] ;
+    skos:exactMatch gemet:15069 ;
+    skos:prefLabel "below-ground biomass"@en .

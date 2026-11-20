@@ -145,6 +145,11 @@ INRAE Skosmos APIs, ISO 11074 RDF records, and the latest GEMET submission in
 AgroPortal SPARQL. SHKG, BENCHMARKS and the Soil Property and Process Ontology use
 local source snapshots: `ontovocabs/shkg/soil_health_KG.ttl`,
 `ontovocabs/shb/soil_health_benchmarks.ttl` and `ontovocabs/spp/soil_property_process.ttl`.
+The UN Thesaurus uses its Skosmos API; STW and GND use per-concept Turtle from
+ZBW and lobid-gnd, respectively. GND supplies its authority label as `gndo:preferredName`.
+TheSoz records come from the checksum-verified [GESIS SKOS release](https://doi.org/10.7802/2912)
+because the concept URIs do not reliably serve records. The original mapping URIs
+are preserved; scope notes and cross-mappings are not treated as definitions.
 For matching, the notebook reads concept URIs and preferred/alternative labels from
 `ontovocabs/shb/soil_health_benchmarks.csv`, just like the other sources.
 Its exact-match enrichment cell adds English definitions to `SoilVoc_augmented.ttl`;

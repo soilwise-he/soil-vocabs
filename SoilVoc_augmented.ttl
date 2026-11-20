@@ -1083,6 +1083,18 @@ eusoilvoc:CropYield a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "crop yield"@en .
 
+eusoilvoc:Cropland a skos:Concept ;
+    skos:broadMatch nalt:5367 ;
+    skos:broader eusoilvoc:LandUse ;
+    skos:closeMatch agrovoc:c_2808,
+        nalt:215496 ;
+    skos:definition [ dcterms:source <https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/4_Volume4/19R_V4_Ch03_Land%20Representation.pdf#page=6> ;
+            rdf:value "Land used to grow crops, including rice paddies. In IPCC inventories this category also covers agroforestry where the vegetation does not meet national forest thresholds."@en ] ;
+    skos:exactMatch inrae:c_4893,
+        she:Cropland ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "cropland"@en .
+
 eusoilvoc:CryosolsWRB a skos:Concept ;
     skos:altLabel "Cryosol"@en ;
     skos:broader eusoilvoc:SoilClassificationWRB ;
@@ -1667,6 +1679,28 @@ eusoilvoc:Grasses a skos:Concept ;
         nalt:28913 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "grasses"@en .
+
+eusoilvoc:Grassland a skos:Concept ;
+    skos:altLabel "grasslands"@en ;
+    skos:broader eusoilvoc:LandUse ;
+    skos:closeMatch agrovoc:c_3366,
+        nalt:9709 ;
+    skos:definition [ dcterms:source benchmarks:grassland ;
+            rdf:value "Land predominantly covered by communities of grassland, grass-like plants and forbs. This class includes permanent grassland and permanent pasture that is not part of a crop rotation (normally for 5 years or more), which can be used to grow grasses and other herbaceous forage naturally (selfseeded) or through cultivation (sown). It may include sparsely occurring trees within a limit of a canopy below 10% and shrubs within a total limit of cover (including trees) of 20%. These can themselves be also grazed, provided that grasses and other herbaceous forage remain predominant as well."@en ],
+        [ dcterms:source gemet:3733,
+                "The Environment Encyclopedia and Directory, Europa Publications Ltd., London, 1994"@en ;
+            rdf:value "Grassland cover nearly one-fifth of the Earth's land surface. They include savannah, the prairies of North America, and the steppes of Russia and Central Asia. Grassland ecosystems support thousands of different species, above and below the ground, and have a vital part to play maintaining the ecological balance of the world."@en ],
+        [ dcterms:source inrae:c_6e7e381e,
+                "Adapté de : Michaud, A., et al. (2023) Les prairies pour répondre aux multiples enjeux de l'élevage. Bulletin des G.T.V., 109, 61-68. https://hal.inrae.fr/hal-04087298" ;
+            rdf:value "Agricultural land where the vegetation is used to produce fodder for harvesting and/or for grazing livestock."@en ],
+        [ dcterms:source <https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/4_Volume4/19R_V4_Ch03_Land%20Representation.pdf#page=6> ;
+            rdf:value "The IPCC land-use category for rangeland and pasture not reported as cropland. It also covers natural, recreational and managed grasslands, and may include shrub or other woody vegetation below the national forest thresholds."@en ] ;
+    skos:exactMatch inrae:c_6e7e381e,
+        gemet:3733,
+        benchmarks:grassland,
+        she:Grassland ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "grassland"@en .
 
 eusoilvoc:GrasslandSoils a skos:Concept ;
     skos:altLabel "grassland soil"@en ;
@@ -3303,6 +3337,30 @@ eusoilvoc:PeatVolume a skos:Concept,
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "peat volume"@en .
 
+eusoilvoc:Peatlands a skos:Concept ;
+    skos:altLabel "peatland"@en ;
+    skos:broadMatch nalt:18403 ;
+    skos:broader eusoilvoc:Land ;
+    skos:closeMatch inrae:c_1509 ;
+    skos:definition [ dcterms:source nalt:18404,
+                "NAL Thesaurus Staff" ;
+            rdf:value "Peatland is a generic term for an extensive tract of wetland where peat has formed. They develop more extensively in northern areas where water drainage is blocked, precipitation is retained, and organic matter decomposition is slowed."@en ],
+        [ dcterms:source agrovoc:c_13929 ;
+            rdf:value "An area with a naturally accumulated peat layer at the surface. The simple definition of a peatland is an area where peat is found. Peat, or turf as it is often called in Ireland, is a type of soil that contains a high proportion of dead organic matter, mainly plants, that has accumulated over thousands of years. Close inspection can reveal the types of plants that grew, died and accumulated to form a piece of peat."@en ],
+        [ dcterms:source <https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/0_Overview/19R_V0_02_Glossary.pdf#page=14> ;
+            rdf:value "A wetland ecosystem with predominantly peat soil. Waterlogging slows decomposition, allowing organic matter to accumulate as peat."@en ] ;
+    skos:exactMatch agrovoc:c_13929,
+        nalt:18404 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "peatlands"@en .
+
+eusoilvoc:PedoclimaticArea a skos:Concept ;
+    skos:broader eusoilvoc:Land ;
+    skos:definition [ dcterms:source <https://www.project-marvic.eu/glossary> ;
+            rdf:value "A geographical area with relatively uniform soil type and climatic conditions."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "pedoclimatic area"@en .
+
 eusoilvoc:Pedology a skos:Concept ;
     skos:broader eusoilvoc:SoilSciences ;
     skos:closeMatch nalt:956 ;
@@ -3940,13 +3998,6 @@ eusoilvoc:RootAbundance a skos:Concept,
     skos:exactMatch glosis_lh:rootsAbundanceProperty ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "root abundance"@en .
-
-eusoilvoc:RootBiomass a skos:Concept ;
-    skos:broader eusoilvoc:Biomass ;
-    skos:exactMatch spp:RootBiomass,
-        inrae:c_6400 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "root biomass"@en .
 
 eusoilvoc:RootPresence a skos:Concept,
         sosa:ObservableProperty ;
@@ -5191,13 +5242,13 @@ eusoilvoc:SoilHealth a skos:Concept ;
         [ dcterms:source benchmarks:4036 ;
             rdf:value "Soil health is the ability of a soil, at a specified point in time, to function as a vital living system, within natural or managed ecosystem boundaries and land-use boundaries, to sustain plant and animal productivity and health, maintain or enhance water and air quality and to further provide ecosystem services in the long-term without (increased) trade-offs between ecosystem services."@en ],
         [ dcterms:source she:SoilHealth ;
-            rdf:value "Soil health is defined as the actual capacity of a soil to perform its core functions and to provide ecosystem services."@en ],
-        [ dcterms:source she:SoilHealth ;
             rdf:value "The definition of soil quality and soil health is the capacity of a soil to function within ecosystems and land-use boundaries to sustain biological productivity, maintain environmental quality, and promote plant and animal health."@en ],
-        [ dcterms:source <https://doi.org/10.2800/956606> ;
-            rdf:value "Soil health is the level to which soil functions are fulfilled."@en ],
+        [ dcterms:source she:SoilHealth ;
+            rdf:value "Soil health is defined as the actual capacity of a soil to perform its core functions and to provide ecosystem services."@en ],
         [ dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
-            rdf:value "The physical, chemical and biological condition of soil, determining its capacity to function as a vital living system and to provide ecosystem services"@en ] ;
+            rdf:value "The physical, chemical and biological condition of soil, determining its capacity to function as a vital living system and to provide ecosystem services"@en ],
+        [ dcterms:source <https://doi.org/10.2800/956606> ;
+            rdf:value "Soil health is the level to which soil functions are fulfilled."@en ] ;
     skos:exactMatch inrae:c_2d69fde2,
         benchmarks:4036,
         she:SoilHealth ;
@@ -6465,10 +6516,10 @@ eusoilvoc:SoilVolume a skos:Concept ;
 eusoilvoc:SoilVolumetricMoistureContents a skos:Concept ;
     skos:altLabel "soil volumetric moisture content"@en ;
     skos:broader eusoilvoc:SoilMoistureContents ;
-    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "The volume of soil water divided by the total volume of soil."@en ],
-        [ dcterms:source agrovoc:c_4b440f7a ;
-            rdf:value "The volumetric water content is the volume of water per unit volume of soil, expressed as a percentage of the volume."@en ] ;
+    skos:definition [ dcterms:source agrovoc:c_4b440f7a ;
+            rdf:value "The volumetric water content is the volume of water per unit volume of soil, expressed as a percentage of the volume."@en ],
+        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The volume of soil water divided by the total volume of soil."@en ] ;
     skos:exactMatch agrovoc:c_4b440f7a,
         spp:SoilVolumetricMoistureContent ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -6690,11 +6741,11 @@ eusoilvoc:SplashErosion a skos:Concept ;
 eusoilvoc:SpodosolsUSDA a skos:Concept ;
     skos:altLabel "Spodosol"@en ;
     skos:broader eusoilvoc:SoilClassificationUSDA ;
-    skos:definition [ dcterms:source agrovoc:c_36874 ;
-            rdf:value "Spodosols are acid soils characterized by a subsurface accumulation of humus that is complexed with Al and Fe."@en ],
-        [ dcterms:source nalt:11601,
+    skos:definition [ dcterms:source nalt:11601,
                 "NAL Thesaurus Staff" ;
-            rdf:value "Acidic forest soil of low fertility"@en ] ;
+            rdf:value "Acidic forest soil of low fertility"@en ],
+        [ dcterms:source agrovoc:c_36874 ;
+            rdf:value "Spodosols are acid soils characterized by a subsurface accumulation of humus that is complexed with Al and Fe."@en ] ;
     skos:exactMatch agrovoc:c_36874,
         nalt:11601 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -6956,11 +7007,11 @@ eusoilvoc:TotalSoilMoisturePotential a skos:Concept ;
 
 eusoilvoc:TransferFunction a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
+    skos:broader eusoilvoc:SoilSciences ;
     skos:definition [ dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
             rdf:value "A mathematical rule that enables the value of a measurement performed using a methodology different from a reference methodology to be converted into the value that would be obtained by performing the soil measurement using the reference methodology"@en ] ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:prefLabel "transfer function"@en ;
-    skos:topConceptOf <https://w3id.org/eusoilvoc> .
+    skos:prefLabel "transfer function"@en .
 
 eusoilvoc:Transpiration a skos:Concept ;
     skos:broader eusoilvoc:WaterInterchange ;
@@ -7266,6 +7317,23 @@ eusoilvoc:WetlandSoils a skos:Concept ;
         nalt:35706 ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "wetland soils"@en .
+
+eusoilvoc:Wetlands a skos:Concept ;
+    skos:altLabel "wetland"@en ;
+    skos:broadMatch agrovoc:c_4179,
+        agrovoc:c_5834 ;
+    skos:broader eusoilvoc:LandUse ;
+    skos:closeMatch agrovoc:c_8371,
+        <http://metadata.un.org/thesaurus/1007000>,
+        gemet:9297,
+        <http://zbw.eu/stw/descriptor/18984-5>,
+        <https://d-nb.info/gnd/4016960-1>,
+        <https://data.gesis.org/thesoz/concept_10043551>,
+        nalt:18403 ;
+    skos:definition [ dcterms:source <https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/4_Volume4/19R_V4_Ch03_Land%20Representation.pdf#page=6> ;
+            rdf:value "The IPCC category for peat extraction sites and seasonally or permanently inundated or waterlogged land not reported as forest, cropland, grassland or settlements. It includes reservoirs, natural rivers and lakes."@en ] ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "wetlands"@en .
 
 eusoilvoc:WheelTracks a skos:Concept ;
     skos:altLabel "wheel track"@en ;
@@ -9043,6 +9111,23 @@ eusoilvoc:totalCarbonateEquivalentProcedure-CaCO3_calcul-tc-oc a skos:Concept,
     skos:prefLabel "CaCO3_calcul-tc-oc"@en ;
     sosa:isProcedureFor eusoilvoc:TotalCarbonateEquivalent .
 
+eusoilvoc:BelowgroundBiomass a skos:Concept ;
+    dcterms:source <https://cordis.europa.eu/project/id/101112754> ;
+    skos:altLabel "below ground biomass"@en,
+        "belowground biomass"@en ;
+    skos:broader eusoilvoc:CarbonPools,
+        eusoilvoc:RootBiomass ;
+    skos:closeMatch agrovoc:c_363a2055,
+        nalt:131627 ;
+    skos:definition [ dcterms:source gemet:15069,
+                "Food and Agriculture Organization of the United Nations “Forests and Climate Change Working Paper 5 - Definitional issues related to reducing emissions from deforestation in developing countries”, Dieter Schoene, Wulf Killmann, Heiner von Lüpke, Mette LoycheWilkie, Rome, 2007, http://www.fao.org/docrep/009/j9345e/j9345e12.htm#P693_33204  [13/06/2016]"@en ;
+            rdf:value "all living biomass of live roots"@en ],
+        [ dcterms:source <https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/4_Volume4/19R_V4_Ch01_Introduction.pdf#page=9> ;
+            rdf:value "The biomass of living roots counted in a greenhouse gas inventory. Fine roots may be excluded when they cannot be distinguished from litter or soil organic matter; the IPCC suggests a diameter threshold of 2 mm."@en ] ;
+    skos:exactMatch gemet:15069 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "below-ground biomass"@en .
+
 eusoilvoc:Bioturbation a skos:Concept ;
     skos:broader eusoilvoc:Pedoturbation,
         eusoilvoc:SoilBiologicalProcesses ;
@@ -9081,15 +9166,6 @@ eusoilvoc:CarbonFarming a skos:Concept ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:SoilEmissionReduction ;
     skos:prefLabel "carbon farming"@en .
-
-eusoilvoc:CarbonPools a skos:Concept ;
-    skos:altLabel "carbon pool"@en ;
-    skos:broader eusoilvoc:SoilFunctions ;
-    skos:closeMatch nalt:75002,
-        she:CarbonPool ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:BiogenicCarbonPool ;
-    skos:prefLabel "carbon pools"@en .
 
 eusoilvoc:CarbonRemoval a skos:Concept ;
     skos:broader eusoilvoc:Activity ;
@@ -9298,6 +9374,18 @@ eusoilvoc:FineSand a skos:Concept ;
         spp:FineSand ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:prefLabel "fine sand"@en .
+
+eusoilvoc:ForestLand a skos:Concept ;
+    skos:altLabel "forestland"@en ;
+    skos:broader eusoilvoc:Land,
+        eusoilvoc:LandUse ;
+    skos:closeMatch agrovoc:c_24843,
+        nalt:80856 ;
+    skos:definition [ dcterms:source <https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/4_Volume4/19R_V4_Ch03_Land%20Representation.pdf#page=6> ;
+            rdf:value "Land whose woody vegetation meets the national inventory thresholds for forest, or can reach those thresholds on the site even though it does not yet meet them."@en ] ;
+    skos:exactMatch she:ForestLand ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:prefLabel "forest land"@en .
 
 eusoilvoc:FreeLivingNematodes a skos:Concept ;
     skos:altLabel "free-living nematode"@en ;
@@ -9657,6 +9745,14 @@ eusoilvoc:RiskReductionMeasures a skos:Concept ;
     skos:narrower eusoilvoc:SoilRemediation ;
     skos:prefLabel "risk reduction measures"@en .
 
+eusoilvoc:RootBiomass a skos:Concept ;
+    skos:broader eusoilvoc:Biomass ;
+    skos:exactMatch spp:RootBiomass,
+        inrae:c_6400 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:BelowgroundBiomass ;
+    skos:prefLabel "root biomass"@en .
+
 eusoilvoc:RootGrowth a skos:Concept ;
     skos:broader eusoilvoc:SoilAgriculturalFunctions,
         eusoilvoc:SoilBiologicalProcesses ;
@@ -9989,11 +10085,11 @@ eusoilvoc:SoilDesertification a skos:Concept ;
 eusoilvoc:SoilFieldMoistureCapacity a skos:Concept ;
     skos:broader eusoilvoc:SoilMoistureContents,
         eusoilvoc:SoilWaterConstants ;
-    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "The soil moisture content reached after a soil has been thoroughly wetted and allowed to drain freely under gravity without loss by evaporation, with transmission pores drained and their water replaced by air."@en ],
-        [ dcterms:source agrovoc:c_32445,
+    skos:definition [ dcterms:source agrovoc:c_32445,
                 <http://www.fao.org/3/a-i6051e.pdf> ;
-            rdf:value "Field  capacity is an important concept when calculating soil water balances as it determines the amount of water that the root zone retains when the soil has drained after being thoroughly wetted by rainfall or irrigation."@en ] ;
+            rdf:value "Field  capacity is an important concept when calculating soil water balances as it determines the amount of water that the root zone retains when the soil has drained after being thoroughly wetted by rainfall or irrigation."@en ],
+        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The soil moisture content reached after a soil has been thoroughly wetted and allowed to drain freely under gravity without loss by evaporation, with transmission pores drained and their water replaced by air."@en ] ;
     skos:exactMatch agrovoc:c_32445,
         spp:SoilFieldMoistureCapacity ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10240,12 +10336,12 @@ eusoilvoc:SoilOxygenContents a skos:Concept ;
 eusoilvoc:SoilPlasticity a skos:Concept,
         sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
-    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+    skos:definition [ dcterms:source glosis_lh:plasticityProperty ;
+            rdf:value "The Plasticity measures the soil's ability to deform under stress without cracking or breaking, especially when wet. It is influenced by clay content and mineralogy and is important for engineering and agricultural applications. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ],
+        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
             rdf:value "The ability of soil to change shape without cracking under a deforming stress and to retain the deformed shape after the stress is removed."@en ],
         [ dcterms:source spp:SoilPlasticity ;
-            rdf:value "soil’s ability to change its shape without cracking when it is subjected to deforming stress."@en ],
-        [ dcterms:source glosis_lh:plasticityProperty ;
-            rdf:value "The Plasticity measures the soil's ability to deform under stress without cracking or breaking, especially when wet. It is influenced by clay content and mineralogy and is important for engineering and agricultural applications. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ] ;
+            rdf:value "soil’s ability to change its shape without cracking when it is subjected to deforming stress."@en ] ;
     skos:exactMatch spp:SoilPlasticity,
         glosis_lh:plasticityProperty ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10279,10 +10375,10 @@ eusoilvoc:SoilPoreSize a skos:Concept,
     skos:altLabel "pores size"@en ;
     skos:broader eusoilvoc:SoilPorePhysicalProperties,
         eusoilvoc:SoilPores ;
-    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "The dimension used to characterize soil pores by diameter, including equivalent cylindrical diameter in soil-pore size classifications."@en ],
-        [ dcterms:source glosis_lh:poresSizeProperty ;
-            rdf:value "The Pores Size categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ] ;
+    skos:definition [ dcterms:source glosis_lh:poresSizeProperty ;
+            rdf:value "The Pores Size categorizes soil pores by their diameter, such as macro-pores, meso-pores, and micro-pores. This property determines water retention, air movement, and root penetration in soil. Source: Brady, N.C., & Weil, R.R. (2008). The Nature and Properties of Soils."@en ],
+        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The dimension used to characterize soil pores by diameter, including equivalent cylindrical diameter in soil-pore size classifications."@en ] ;
     skos:exactMatch spp:SoilPoreSize,
         glosis_lh:poresSizeProperty ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10324,10 +10420,10 @@ eusoilvoc:SoilProductivity a skos:Concept ;
 eusoilvoc:SoilPuddling a skos:Concept ;
     skos:broader eusoilvoc:SoilPhysicalProcesses,
         eusoilvoc:SoilTillage ;
-    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "Physical manipulation of wet soil to slake and disrupt structural aggregates and decrease total porosity and macroporosity."@en ],
-        [ dcterms:source agrovoc:c_35282 ;
-            rdf:value "The tilling of flooded soil in order to create a muddy layer before seedlings are transplanted, especially for rice. "@en ] ;
+    skos:definition [ dcterms:source agrovoc:c_35282 ;
+            rdf:value "The tilling of flooded soil in order to create a muddy layer before seedlings are transplanted, especially for rice. "@en ],
+        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "Physical manipulation of wet soil to slake and disrupt structural aggregates and decrease total porosity and macroporosity."@en ] ;
     skos:exactMatch agrovoc:c_35282,
         spp:SoilPuddling ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10576,10 +10672,10 @@ eusoilvoc:SoilWaterPermeability a skos:Concept ;
 eusoilvoc:SoilWaterRepellency a skos:Concept ;
     skos:broader eusoilvoc:SoilPhenomena,
         eusoilvoc:SoilProperties ;
-    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "The repulsion of water by soil particles."@en ],
-        [ dcterms:source agrovoc:c_ad6278b9 ;
-            rdf:value "Soil water repellency is a reduction in the rate of wetting and retention of water in soil caused by the presence of hydrophobic coatings on soil particles."@en ] ;
+    skos:definition [ dcterms:source agrovoc:c_ad6278b9 ;
+            rdf:value "Soil water repellency is a reduction in the rate of wetting and retention of water in soil caused by the presence of hydrophobic coatings on soil particles."@en ],
+        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The repulsion of water by soil particles."@en ] ;
     skos:exactMatch agrovoc:c_ad6278b9,
         spp:SoilWaterRepellency ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -10789,10 +10885,10 @@ eusoilvoc:WaterPurification a skos:Concept ;
 eusoilvoc:WaterQuality a skos:Concept ;
     skos:broader eusoilvoc:SoilEngineeringFunctions,
         eusoilvoc:SoilEnvironmentalFunctions ;
-    skos:definition [ dcterms:source gemet:9214,
-                "Landy, M., Environmental Impact Statement Glossary. A Reference Source for EIS Writers, Revuewers, and Citizens., IFI/Plenum Publishing Corporation, New York, 1979"@en ;
+    skos:definition [ dcterms:source agrovoc:c_16061 ;
             rdf:value "A graded value of the components (organic and inorganic, chemical or physical) which comprise the nature of water."@en ],
-        [ dcterms:source agrovoc:c_16061 ;
+        [ dcterms:source gemet:9214,
+                "Landy, M., Environmental Impact Statement Glossary. A Reference Source for EIS Writers, Revuewers, and Citizens., IFI/Plenum Publishing Corporation, New York, 1979"@en ;
             rdf:value "A graded value of the components (organic and inorganic, chemical or physical) which comprise the nature of water."@en ] ;
     skos:exactMatch agrovoc:c_16061,
         spp:WaterQuality,
@@ -10879,6 +10975,16 @@ eusoilvoc:Cadmium a skos:Concept ;
     skos:narrower eusoilvoc:CadmiumExtractableElements,
         eusoilvoc:CadmiumTotalElements ;
     skos:prefLabel "cadmium"@en .
+
+eusoilvoc:CarbonPools a skos:Concept ;
+    skos:altLabel "carbon pool"@en ;
+    skos:broader eusoilvoc:SoilFunctions ;
+    skos:closeMatch nalt:75002,
+        she:CarbonPool ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:BelowgroundBiomass,
+        eusoilvoc:BiogenicCarbonPool ;
+    skos:prefLabel "carbon pools"@en .
 
 eusoilvoc:ChangeInTheIntensityOfFloods a skos:Concept,
         sosa:ObservableProperty ;
@@ -11642,11 +11748,11 @@ eusoilvoc:SoilMicroorganisms a skos:Concept ;
 
 eusoilvoc:SoilNutrientAvailability a skos:Concept ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
-    skos:definition [ dcterms:source spp:SoilNutrientAvailability ;
-            rdf:value "nutrient availability to the plants"@en ],
-        [ dcterms:source agrovoc:c_37554,
+    skos:definition [ dcterms:source agrovoc:c_37554,
                 <https://alpinesoils.eu/about-soils/soil-glossary/> ;
-            rdf:value "The amount of nutrient available in soil under specific (abiotic) conditions."@en ] ;
+            rdf:value "The amount of nutrient available in soil under specific (abiotic) conditions."@en ],
+        [ dcterms:source spp:SoilNutrientAvailability ;
+            rdf:value "nutrient availability to the plants"@en ] ;
     skos:exactMatch agrovoc:c_37554,
         spp:SoilNutrientAvailability,
         she:SoilNutrientAvailability ;
@@ -12339,20 +12445,21 @@ eusoilvoc:MineralogicalSoilTypes a skos:Concept ;
 eusoilvoc:Peat a skos:Concept ;
     dcterms:source <https://doi.org/10.5281/zenodo.20341020>,
         <https://ec.europa.eu/transparency/documents-register/api/files/C(2026)4666_1/090166e5303f9cd4> ;
+    skos:broadMatch agrovoc:c_4852 ;
     skos:broader eusoilvoc:SoilSubstance ;
     skos:definition [ dcterms:source gemet:6081,
                 "Landy, M., Environmental Impact Statement Glossary. A Reference Source for EIS Writers, Revuewers, and Citizens., IFI/Plenum Publishing Corporation, New York, 1979"@en ;
             rdf:value "Unconsolidated soil material consisting largely of undecomposed or slightly decomposed organic matter accumulated under conditions of excessive moisture."@en ],
-        [ dcterms:source agrovoc:c_5647,
-                <https://en.wikipedia.org/wiki/Peat> ;
-            rdf:value "Peat is an accumulation of partially decayed vegetation or organic matter. It is unique to natural areas called peatlands, bogs, mires, moors, or muskegs."@en ],
         [ dcterms:source <https://doi.org/10.5281/zenodo.20341020> ;
             rdf:value "A layer of soil that primarily consists of partially decomposed plant material, that has accumulated under conditions of waterlogging"@en ],
         [ dcterms:source <https://ec.europa.eu/transparency/documents-register/api/files/C(2026)4666_1/090166e5303f9cd4> ;
             rdf:value "soil material that consists of partially decomposed plant material, that has accumulated under conditions of waterlogging"@en ],
         [ dcterms:source nalt:57128,
                 "NAL Thesaurus Staff" ;
-            rdf:value "Partially decomposed organic matter of a vegetative nature formed under wet conditions."@en ] ;
+            rdf:value "Partially decomposed organic matter of a vegetative nature formed under wet conditions."@en ],
+        [ dcterms:source agrovoc:c_5647,
+                <https://en.wikipedia.org/wiki/Peat> ;
+            rdf:value "Peat is an accumulation of partially decayed vegetation or organic matter. It is unique to natural areas called peatlands, bogs, mires, moors, or muskegs."@en ] ;
     skos:exactMatch agrovoc:c_5647,
         <http://eurovoc.europa.eu/4469>,
         <http://metadata.un.org/thesaurus/1004786>,
@@ -12640,14 +12747,14 @@ eusoilvoc:SoilNutrients a skos:Concept ;
 eusoilvoc:SoilPermeability a skos:Concept ;
     skos:broader eusoilvoc:SoilPhysicalProperties,
         eusoilvoc:SoilProperties ;
-    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "The ability of soil, as a porous medium, to transmit fluid, expressed by its intrinsic permeability."@en ],
-        [ dcterms:source nalt:225083,
+    skos:definition [ dcterms:source nalt:225083,
                 "Schwarz, Charles F.; Thor, Edward C.; Elsner, Gary H. 1976. Wildland planning glossary. Gen. Tech. Rep. PSW-13. Berkeley, Calif.: U.S. Department of Agriculture, Forest Service, Pacific Southwest Forest and Range Experiment Station" ;
             rdf:value "The readiness with which soil or rock allows water, air, or plant roots to penetrate or pass through."@en ],
         [ dcterms:source agrovoc:c_14398,
                 <http://www.environment.nsw.gov.au/salinity/glossary.htm> ;
-            rdf:value "The characteristic of a soil that governs the rate at which water moves through it."@en ] ;
+            rdf:value "The characteristic of a soil that governs the rate at which water moves through it."@en ],
+        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The ability of soil, as a porous medium, to transmit fluid, expressed by its intrinsic permeability."@en ] ;
     skos:exactMatch agrovoc:c_14398,
         spp:SoilPermeability,
         inrae:c_17985,
@@ -12843,10 +12950,10 @@ eusoilvoc:BaseSaturation a skos:Concept,
                 nalt:15975,
                 "NAL Thesaurus Staff" ;
             rdf:value "The ratio of the quantity of exchangeable bases to the cation exchange capacity."@en ],
-        [ dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
-            rdf:value "Ratio of Ca + Mg + K to effective cation exchange capacity."@en ],
         [ dcterms:source glosis_cl:physioChemicalPropertyCode-Bascal ;
-            rdf:value "Base saturation represents the percentage of the soil's cation exchange capacity (CEC) occupied by basic cations such as calcium (Ca²⁺), magnesium (Mg²⁺), potassium (K⁺), and sodium (Na⁺). Higher base saturation typically correlates with higher fertility and a greater ability to supply essential nutrients to plants. This parameter also influences soil pH buffering capacity. Source: Brady & Weil (2017)."@en ] ;
+            rdf:value "Base saturation represents the percentage of the soil's cation exchange capacity (CEC) occupied by basic cations such as calcium (Ca²⁺), magnesium (Mg²⁺), potassium (K⁺), and sodium (Na⁺). Higher base saturation typically correlates with higher fertility and a greater ability to supply essential nutrients to plants. This parameter also influences soil pH buffering capacity. Source: Brady & Weil (2017)."@en ],
+        [ dcterms:source <https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202502360#anx_I> ;
+            rdf:value "Ratio of Ca + Mg + K to effective cation exchange capacity."@en ] ;
     skos:exactMatch agrovoc:c_dbde833c,
         glosis_cl:physioChemicalPropertyCode-Bascal,
         nalt:15975,
@@ -12920,9 +13027,9 @@ eusoilvoc:EcosystemServices a skos:Concept ;
     skos:closeMatch inrae:c_1611,
         iso11074:3.140 ;
     skos:definition [ dcterms:source benchmarks:ecosystem-services ;
-            rdf:value "Indirect contributions of ecosystems to the economic, social,culturaland other benefits that people derive from those ecosystems."@en ],
-        [ dcterms:source benchmarks:ecosystem-services ;
             rdf:value "The contributions of ecosystems (i.e. living systems) to human well-being."@en ],
+        [ dcterms:source benchmarks:ecosystem-services ;
+            rdf:value "Indirect contributions of ecosystems to the economic, social,culturaland other benefits that people derive from those ecosystems."@en ],
         [ dcterms:source she:EcosystemServices ;
             rdf:value "Ecosystem services can be summarised as the goods and benefits people and societies receive from ecosystems."@en ],
         [ dcterms:source gemet:15138 ;
@@ -12969,10 +13076,11 @@ eusoilvoc:Fragments a skos:Concept ;
 
 eusoilvoc:LandCover a skos:Concept ;
     dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
+    skos:broadMatch agrovoc:c_5834 ;
     skos:definition [ dcterms:source benchmarks:land-cover ;
-            rdf:value "LAND COVER(LC) = physical cover (“material”) observed at the earth’s surface. The main classes in the LUCAS land cover nomenclature are as follows:A00 Artificial land B00 Cropland C00 Woodland D00 Shrubland E00 Grassland F00 Bareland G00 Water H00 Wetland"@en ],
-        [ dcterms:source benchmarks:land-cover ;
             rdf:value "The physical and biological cover of the earth’s surface."@en ],
+        [ dcterms:source benchmarks:land-cover ;
+            rdf:value "LAND COVER(LC) = physical cover (“material”) observed at the earth’s surface. The main classes in the LUCAS land cover nomenclature are as follows:A00 Artificial land B00 Cropland C00 Woodland D00 Shrubland E00 Grassland F00 Bareland G00 Water H00 Wetland"@en ],
         [ dcterms:source gemet:4612 ;
             rdf:value "Land cover is the physical state of the land surface. It is the combination of vegetation, soil, rock, water and human-made structures, which make up the earth's landscape. The land cover is the interface between the earth's crust and the atmosphere, influencing the exchange of energy and matter in the climatic system and biogeochemical cycles."@en ],
         [ dcterms:source nalt:149093,
@@ -12995,36 +13103,6 @@ eusoilvoc:LandCover a skos:Concept ;
         eusoilvoc:PlantCover ;
     skos:prefLabel "land cover"@en ;
     skos:topConceptOf <https://w3id.org/eusoilvoc> .
-
-eusoilvoc:LandUse a skos:Concept ;
-    skos:broader eusoilvoc:ExternalFactors ;
-    skos:closeMatch she:LandUses ;
-    skos:definition [ dcterms:source benchmarks:land-use ;
-            rdf:value "The term land use deals with the spatial aspects of all human activities on the land and with the way in which the land surface is adapted, or could be adapted, to serve human needs. (GEMET, AGROVOC) LAND USE (LU) = socio-economic function of the observed earth’s surface (LUCAS) Some examples for land use classes in the LUCAS nomenclature (which are of relevance for BENCHMARKS) are: U110 Agriculture U120 Forestry U150 Hunting U210 Energy production U360 Recreational, leisure and sport U370 Residential U400 Unused"@en ],
-        [ dcterms:source gemet:4678,
-                "Goodall, B., Dictionary of Human Geography, Penguin Books, London, 1987"@en ;
-            rdf:value "The term land use deals with the spatial aspects of all human activities on the land and with the way in which the land surface is adapted, or could be adapted, to serve human needs."@en ],
-        [ dcterms:source nalt:1581,
-                "Schwarz, Charles F.; Thor, Edward C.; Elsner, Gary H. 1976. Wildland planning glossary. Gen. Tech. Rep. PSW-13. Berkeley, Calif.: U.S. Department of Agriculture, Forest Service, Pacific Southwest Forest and Range Experiment Station" ;
-            rdf:value "The occupation or reservation of land or water area for any human activity or any defined purpose. It also includes use of the air space above the land or water."@en ],
-        [ dcterms:source agrovoc:c_4182 ;
-            rdf:value "The activities, arrangements and inputs that people undertake on a particular land cover type to produce, change or maintain it. Land use encompasses a wide range of human activities, from farming and forestry to urban development and infrastructure, and is a key aspect of land management and sustainable development."@en ],
-        [ dcterms:source <https://www.eea.europa.eu/help/glossary/eea-glossary/land-use> ;
-            rdf:value "Land use corresponds to the socio-economic description (functional dimension) of areas: areas used for residential, industrial or commercial purposes, for farming or forestry, for recreational or conservation purposes, etc. Links with land cover are possible; it may be possible to infer land use from land cover and conversely. But situations are often complicated and the link is not so evident. Contrary to land cover, land use is difficult to 'observe'. For example, it is often difficult to decide if grasslands are used or not for agricultural purposes. Distinctions between land use and land cover and their definition have impacts on the development of classification systems, data collection and information systems in general."@en ],
-        [ dcterms:source <https://archive.ipcc.ch/ipccreports/sres/land_use/index.php?idp=45> ;
-            rdf:value "The total of arrangements, activities, and inputs that people undertake in a certain land cover type (FAO, 1997a; FAO/UNEP, 1999)."@en ] ;
-    skos:exactMatch agrovoc:c_4182,
-        spp:LandUse,
-        inrae:c_22741,
-        gemet:4678,
-        nalt:1581,
-        benchmarks:land-use ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:LandUseBareCover,
-        eusoilvoc:LandUseForests,
-        eusoilvoc:LandUseGrasses,
-        eusoilvoc:LandUseShrubs ;
-    skos:prefLabel "land use"@en .
 
 eusoilvoc:Mulch a skos:Concept ;
     skos:broader eusoilvoc:SoilAmendments,
@@ -13290,10 +13368,10 @@ eusoilvoc:SoilInorganicCarbon a skos:Concept,
     skos:definition [ dcterms:source nalt:338945,
                 "NAL Thesaurus Staff" ;
             rdf:value "Soil inorganic carbon (SIC) is the result of mineral weathering. It is derived from soil carbonates and usually concentrated below the topsoil. Most of SIC is in the form of calcium carbonate (CaCO3) in lower soil layers of arid and semi-arid regions of the world."@en ],
-        [ dcterms:source agrovoc:c_e3783c76 ;
-            rdf:value "Content or amount of total inorganic carbon in soil"@en ],
         [ dcterms:source glosis_cl:physioChemicalPropertyCode-Carinorg ;
-            rdf:value "Inorganic carbon in soil primarily consists of carbonates like calcium carbonate and magnesium carbonate. It contributes to soil pH buffering and is a significant feature of arid and calcareous soils. Excess inorganic carbon can immobilize certain nutrients, requiring careful management in agricultural systems. Source: Soil Science Society of America."@en ] ;
+            rdf:value "Inorganic carbon in soil primarily consists of carbonates like calcium carbonate and magnesium carbonate. It contributes to soil pH buffering and is a significant feature of arid and calcareous soils. Excess inorganic carbon can immobilize certain nutrients, requiring careful management in agricultural systems. Source: Soil Science Society of America."@en ],
+        [ dcterms:source agrovoc:c_e3783c76 ;
+            rdf:value "Content or amount of total inorganic carbon in soil"@en ] ;
     skos:exactMatch agrovoc:c_e3783c76,
         glosis_cl:physioChemicalPropertyCode-Carinorg,
         nalt:338945 ;
@@ -13691,36 +13769,6 @@ eusoilvoc:CarbonRemovalsAndCarbonFarmingRegulation a skos:Concept ;
     skos:prefLabel "Carbon Removals and Carbon Farming Regulation"@en ;
     skos:topConceptOf <https://w3id.org/eusoilvoc> .
 
-eusoilvoc:Land a skos:Concept ;
-    dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
-    skos:broader eusoilvoc:Physiography ;
-    skos:definition [ dcterms:source benchmarks:land ;
-            rdf:value "The surface of the Earth that is not covered by water."@en ],
-        [ dcterms:source gemet:4599,
-                "Whittow, J., Dictionary of Physical Geography, Penguin Books, London, 1984"@en ;
-            rdf:value "A specified geographical tract of the Earth's surface including all its attributes, comprising its geology, superficial deposits, topography, hydrology, soils, flora and fauna, together with the results of past and present human activity, to the extent that these attributes exert a significant influence on the present and future land utilization."@en ],
-        [ dcterms:source nalt:1580,
-                "Schwarz, Charles F.; Thor, Edward C.; Elsner, Gary H. 1976. Wildland planning glossary. Gen. Tech. Rep. PSW-13. Berkeley, Calif.: U.S. Department of Agriculture, Forest Service, Pacific Southwest Forest and Range Experiment Station" ;
-            rdf:value "A term denoting the entire complex of surface and near-surface attributes of the solid portions of the surface of the earth which are significant to man. Water bodies occurring within land masses are included with land in some land classification systems."@en ],
-        [ dcterms:source agrovoc:c_4172 ;
-            rdf:value "A delineable area of the Earth’s terrestrial surface, encompassing all attributes of the biosphere immediately above or below this surface, including those of the near-surface climate, the soil and terrain forms, the surface hydrology (including shallow lakes, rivers, marshes and swamps), the near-surface sedimentary layers and associated groundwater reserve, the plant and animal populations, the human settlement pattern, and the physical results of past and present human activity such as terracing, water storage and drainage structures, infrastructure, and buildings."@en ],
-        [ dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
-            rdf:value "the surface of the Earth that is not regularly covered by water bodies"@en ] ;
-    skos:exactMatch agrovoc:c_4172,
-        inrae:c_22714,
-        gemet:4599,
-        nalt:1580,
-        benchmarks:land,
-        she:Land ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:ContaminatedSite,
-        eusoilvoc:NaturalLand,
-        eusoilvoc:PotentiallyContaminatedSite,
-        eusoilvoc:SettlementArea,
-        eusoilvoc:SoilDistrict,
-        eusoilvoc:SoilUnit ;
-    skos:prefLabel "land"@en .
-
 eusoilvoc:OrganicMulches a skos:Concept ;
     skos:altLabel "organic mulch"@en ;
     skos:broader eusoilvoc:Mulch ;
@@ -13878,10 +13926,10 @@ eusoilvoc:SoilTexture a skos:Concept,
             rdf:value "The relative proportions of the three individual particle size classes (i.e., sand, silt and clay) in a soil."@en ],
         [ dcterms:source agrovoc:c_7199 ;
             rdf:value "The relative proportions of the various sized groups of individual soil grains in a mass of soil. Specifically, it refers to the proportions of clay, silt, and sand below 2 mm in size (fine earth fraction)."@en ],
-        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "A qualitative characterization of soil particle sizes based on the feel of the soil material, such as coarse, gritty, fine or smooth."@en ],
         [ dcterms:source glosis_cm:textureProperty ;
-            rdf:value "The Soil Texture refers to the relative proportions of sand, silt, and clay in a soil. It is a key indicator of the soil’s ability to retain moisture, drain water, and support root growth. Soils can be classified into textures such as sandy, loamy, or clayey, each with distinct characteristics affecting soil management. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ] ;
+            rdf:value "The Soil Texture refers to the relative proportions of sand, silt, and clay in a soil. It is a key indicator of the soil’s ability to retain moisture, drain water, and support root growth. Soils can be classified into textures such as sandy, loamy, or clayey, each with distinct characteristics affecting soil management. Source: Soil Science Society of America. (2008). Soil Science Glossary. Soil Science Society of America."@en ],
+        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A qualitative characterization of soil particle sizes based on the feel of the soil material, such as coarse, gritty, fine or smooth."@en ] ;
     skos:exactMatch agrovoc:c_7199,
         spp:SoilTexture,
         inrae:c_394,
@@ -14236,15 +14284,17 @@ eusoilvoc:SoilAggregatePhysicalProperties a skos:Concept ;
 
 eusoilvoc:SoilOrganicMatter a skos:Concept,
         sosa:ObservableProperty ;
+    skos:broadMatch agrovoc:c_5387,
+        nalt:24613 ;
     skos:broader eusoilvoc:SoilOrganicComponents ;
     skos:definition [ dcterms:source she:SoilOrganicMatter ;
             rdf:value "SOM is the sum of all dead organic components at various stages of decomposition in a soil, which are made from basic elements including carbon, nitrogen, oxygen, hydrogen and an array of attached cations and ions. Some definitions also include undecayed plant and animal residues as well as microbial biomass."@en ],
         [ dcterms:source agrovoc:c_35657 ;
             rdf:value "Soil organic matter is the complex and dynamic mixture of plant and animal residues, humus, and microorganisms found in soil. It is a crucial component of healthy soil, playing a vital role in soil structure, water retention, nutrient cycling, and crop productivity."@en ],
-        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "A complex mixture of living and dead substances of plant and animal origin in soil."@en ],
         [ dcterms:source glosis_cl:physioChemicalPropertyCode-Orgmat ;
-            rdf:value "Soil organic matter is composed of decomposed plant and animal residues, living soil organisms, and humus. It improves soil structure, water retention, nutrient supply, and microbial activity, making it critical for sustainable agriculture and soil health. Source: Brady & Weil (2017)."@en ] ;
+            rdf:value "Soil organic matter is composed of decomposed plant and animal residues, living soil organisms, and humus. It improves soil structure, water retention, nutrient supply, and microbial activity, making it critical for sustainable agriculture and soil health. Source: Brady & Weil (2017)."@en ],
+        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "A complex mixture of living and dead substances of plant and animal origin in soil."@en ] ;
     skos:exactMatch agrovoc:c_35657,
         spp:SoilOrganicMatter,
         inrae:c_336,
@@ -14354,6 +14404,48 @@ eusoilvoc:BulkDensityWholeSoil a skos:Concept,
         eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-co-unkn,
         eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-rpl-unkn,
         eusoilvoc:bulkDensityWholeSoilProcedure-BlkDensW_we-unkn .
+
+eusoilvoc:LandUse a skos:Concept ;
+    skos:broadMatch agrovoc:c_24866,
+        nalt:39546 ;
+    skos:broader eusoilvoc:ExternalFactors ;
+    skos:closeMatch she:LandUses ;
+    skos:definition [ dcterms:source benchmarks:land-use ;
+            rdf:value "The term land use deals with the spatial aspects of all human activities on the land and with the way in which the land surface is adapted, or could be adapted, to serve human needs. (GEMET, AGROVOC) LAND USE (LU) = socio-economic function of the observed earth’s surface (LUCAS) Some examples for land use classes in the LUCAS nomenclature (which are of relevance for BENCHMARKS) are: U110 Agriculture U120 Forestry U150 Hunting U210 Energy production U360 Recreational, leisure and sport U370 Residential U400 Unused"@en ],
+        [ dcterms:source gemet:4678,
+                "Goodall, B., Dictionary of Human Geography, Penguin Books, London, 1987"@en ;
+            rdf:value "The term land use deals with the spatial aspects of all human activities on the land and with the way in which the land surface is adapted, or could be adapted, to serve human needs."@en ],
+        [ dcterms:source nalt:1581,
+                "Schwarz, Charles F.; Thor, Edward C.; Elsner, Gary H. 1976. Wildland planning glossary. Gen. Tech. Rep. PSW-13. Berkeley, Calif.: U.S. Department of Agriculture, Forest Service, Pacific Southwest Forest and Range Experiment Station" ;
+            rdf:value "The occupation or reservation of land or water area for any human activity or any defined purpose. It also includes use of the air space above the land or water."@en ],
+        [ dcterms:source agrovoc:c_4182 ;
+            rdf:value "The activities, arrangements and inputs that people undertake on a particular land cover type to produce, change or maintain it. Land use encompasses a wide range of human activities, from farming and forestry to urban development and infrastructure, and is a key aspect of land management and sustainable development."@en ],
+        [ dcterms:source <https://www.eea.europa.eu/help/glossary/eea-glossary/land-use> ;
+            rdf:value "Land use corresponds to the socio-economic description (functional dimension) of areas: areas used for residential, industrial or commercial purposes, for farming or forestry, for recreational or conservation purposes, etc. Links with land cover are possible; it may be possible to infer land use from land cover and conversely. But situations are often complicated and the link is not so evident. Contrary to land cover, land use is difficult to 'observe'. For example, it is often difficult to decide if grasslands are used or not for agricultural purposes. Distinctions between land use and land cover and their definition have impacts on the development of classification systems, data collection and information systems in general."@en ],
+        [ dcterms:source <https://archive.ipcc.ch/ipccreports/sres/land_use/index.php?idp=45> ;
+            rdf:value "The total of arrangements, activities, and inputs that people undertake in a certain land cover type (FAO, 1997a; FAO/UNEP, 1999)."@en ] ;
+    skos:exactMatch agrovoc:c_4182,
+        <http://eurovoc.europa.eu/4630>,
+        spp:LandUse,
+        <http://metadata.un.org/thesaurus/1003603>,
+        inrae:c_22741,
+        <http://vocabularies.unesco.org/thesaurus/concept442>,
+        gemet:4678,
+        <http://zbw.eu/stw/descriptor/11859-1>,
+        <https://d-nb.info/gnd/4259046-2>,
+        <https://data.gesis.org/thesoz/concept_10039675>,
+        nalt:1581,
+        benchmarks:land-use ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:Cropland,
+        eusoilvoc:ForestLand,
+        eusoilvoc:Grassland,
+        eusoilvoc:LandUseBareCover,
+        eusoilvoc:LandUseForests,
+        eusoilvoc:LandUseGrasses,
+        eusoilvoc:LandUseShrubs,
+        eusoilvoc:Wetlands ;
+    skos:prefLabel "land use"@en .
 
 eusoilvoc:MineralConcentration a skos:Concept ;
     skos:broader eusoilvoc:SoilPhysicalProperties ;
@@ -14516,10 +14608,10 @@ eusoilvoc:SoilTotalCarbon a skos:Concept,
         sosa:ObservableProperty ;
     skos:broader eusoilvoc:SoilChemicophysicalProperties,
         eusoilvoc:SoilComponents ;
-    skos:definition [ dcterms:source agrovoc:c_24fb4269 ;
-            rdf:value "Content or amount of total carbon in soil, including organic carbon and carbon from lime."@en ],
-        [ dcterms:source glosis_cl:physioChemicalPropertyCode-Cartot ;
-            rdf:value "Total carbon in soil includes both organic carbon (from plant and microbial residues) and inorganic carbon (primarily carbonates). It is a fundamental component of soil organic matter, influencing soil fertility, structure, and water retention. High carbon levels are associated with better soil health and productivity. Source: USDA NRCS."@en ] ;
+    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Cartot ;
+            rdf:value "Total carbon in soil includes both organic carbon (from plant and microbial residues) and inorganic carbon (primarily carbonates). It is a fundamental component of soil organic matter, influencing soil fertility, structure, and water retention. High carbon levels are associated with better soil health and productivity. Source: USDA NRCS."@en ],
+        [ dcterms:source agrovoc:c_24fb4269 ;
+            rdf:value "Content or amount of total carbon in soil, including organic carbon and carbon from lime."@en ] ;
     skos:exactMatch agrovoc:c_24fb4269,
         glosis_cl:physioChemicalPropertyCode-Cartot ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -14546,6 +14638,39 @@ eusoilvoc:SoilTreatment a skos:Concept ;
         eusoilvoc:SoilSolarisation,
         eusoilvoc:SoilSterilisation ;
     skos:prefLabel "soil treatment"@en .
+
+eusoilvoc:Land a skos:Concept ;
+    dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
+    skos:broader eusoilvoc:Physiography ;
+    skos:definition [ dcterms:source benchmarks:land ;
+            rdf:value "The surface of the Earth that is not covered by water."@en ],
+        [ dcterms:source gemet:4599,
+                "Whittow, J., Dictionary of Physical Geography, Penguin Books, London, 1984"@en ;
+            rdf:value "A specified geographical tract of the Earth's surface including all its attributes, comprising its geology, superficial deposits, topography, hydrology, soils, flora and fauna, together with the results of past and present human activity, to the extent that these attributes exert a significant influence on the present and future land utilization."@en ],
+        [ dcterms:source nalt:1580,
+                "Schwarz, Charles F.; Thor, Edward C.; Elsner, Gary H. 1976. Wildland planning glossary. Gen. Tech. Rep. PSW-13. Berkeley, Calif.: U.S. Department of Agriculture, Forest Service, Pacific Southwest Forest and Range Experiment Station" ;
+            rdf:value "A term denoting the entire complex of surface and near-surface attributes of the solid portions of the surface of the earth which are significant to man. Water bodies occurring within land masses are included with land in some land classification systems."@en ],
+        [ dcterms:source agrovoc:c_4172 ;
+            rdf:value "A delineable area of the Earth’s terrestrial surface, encompassing all attributes of the biosphere immediately above or below this surface, including those of the near-surface climate, the soil and terrain forms, the surface hydrology (including shallow lakes, rivers, marshes and swamps), the near-surface sedimentary layers and associated groundwater reserve, the plant and animal populations, the human settlement pattern, and the physical results of past and present human activity such as terracing, water storage and drainage structures, infrastructure, and buildings."@en ],
+        [ dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
+            rdf:value "the surface of the Earth that is not regularly covered by water bodies"@en ] ;
+    skos:exactMatch agrovoc:c_4172,
+        inrae:c_22714,
+        gemet:4599,
+        nalt:1580,
+        benchmarks:land,
+        she:Land ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:ContaminatedSite,
+        eusoilvoc:ForestLand,
+        eusoilvoc:NaturalLand,
+        eusoilvoc:Peatlands,
+        eusoilvoc:PedoclimaticArea,
+        eusoilvoc:PotentiallyContaminatedSite,
+        eusoilvoc:SettlementArea,
+        eusoilvoc:SoilDistrict,
+        eusoilvoc:SoilUnit ;
+    skos:prefLabel "land"@en .
 
 eusoilvoc:SoilBiologicalProcesses a skos:Concept ;
     skos:altLabel "soil biological process"@en ;
@@ -14812,26 +14937,6 @@ eusoilvoc:SoilPhysicalCapacity a skos:Concept ;
         eusoilvoc:SoilWaterRetentionCapacity ;
     skos:prefLabel "soil physical capacity"@en .
 
-eusoilvoc:SoilSciences a skos:Concept ;
-    skos:altLabel "soil science"@en ;
-    skos:broader eusoilvoc:Soil ;
-    skos:closeMatch inrae:c_36c1af09,
-        gemet:7890,
-        nalt:956 ;
-    skos:exactMatch agrovoc:c_7188 ;
-    skos:inScheme <https://w3id.org/eusoilvoc> ;
-    skos:narrower eusoilvoc:Agrology,
-        eusoilvoc:Pedology,
-        eusoilvoc:SoilBiology,
-        eusoilvoc:SoilChemistry,
-        eusoilvoc:SoilErosionModels,
-        eusoilvoc:SoilHydrology,
-        eusoilvoc:SoilMechanics,
-        eusoilvoc:SoilMorphology,
-        eusoilvoc:SoilPhysics,
-        eusoilvoc:SoilScientists ;
-    skos:prefLabel "soil sciences"@en .
-
 eusoilvoc:AluminiumExchangeableBase a skos:Concept,
         sosa:ObservableProperty ;
     skos:broader eusoilvoc:Aluminium ;
@@ -15022,10 +15127,10 @@ eusoilvoc:SoilHydraulicConductivity a skos:Concept,
         eusoilvoc:SoilWaterPhysicalProperties,
         eusoilvoc:SoilWaterTransmissionIndex ;
     skos:closeMatch agrovoc:c_25579 ;
-    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "The proportionality coefficient relating water flux density through soil to the hydraulic gradient; its value characterizes both the soil medium and the water and depends on the saturation or moisture state."@en ],
-        [ dcterms:source glosis_cl:physioChemicalPropertyCode-Hydcond ;
-            rdf:value "Hydraulic conductivity refers to the rate at which water moves through soil pores under a unit hydraulic gradient. It reflects the soil's ability to transmit water, influenced by texture, structure, and porosity. Soils with high hydraulic conductivity, like sandy soils, allow rapid water movement, while clayey soils exhibit slower water flow. This property is critical for understanding water infiltration, drainage, and irrigation management. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils."@en ] ;
+    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Hydcond ;
+            rdf:value "Hydraulic conductivity refers to the rate at which water moves through soil pores under a unit hydraulic gradient. It reflects the soil's ability to transmit water, influenced by texture, structure, and porosity. Soils with high hydraulic conductivity, like sandy soils, allow rapid water movement, while clayey soils exhibit slower water flow. This property is critical for understanding water infiltration, drainage, and irrigation management. Source: Brady, N.C., & Weil, R.R. (2017). The Nature and Properties of Soils."@en ],
+        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The proportionality coefficient relating water flux density through soil to the hydraulic gradient; its value characterizes both the soil medium and the water and depends on the saturation or moisture state."@en ] ;
     skos:exactMatch spp:SoilHydraulicConductivity,
         inrae:c_13934,
         glosis_cl:physioChemicalPropertyCode-Hydcond ;
@@ -15061,6 +15166,27 @@ eusoilvoc:SoilMovement a skos:Concept ;
         eusoilvoc:SoilSubsidence,
         eusoilvoc:Solifluction ;
     skos:prefLabel "soil movement"@en .
+
+eusoilvoc:SoilSciences a skos:Concept ;
+    skos:altLabel "soil science"@en ;
+    skos:broader eusoilvoc:Soil ;
+    skos:closeMatch inrae:c_36c1af09,
+        gemet:7890,
+        nalt:956 ;
+    skos:exactMatch agrovoc:c_7188 ;
+    skos:inScheme <https://w3id.org/eusoilvoc> ;
+    skos:narrower eusoilvoc:Agrology,
+        eusoilvoc:Pedology,
+        eusoilvoc:SoilBiology,
+        eusoilvoc:SoilChemistry,
+        eusoilvoc:SoilErosionModels,
+        eusoilvoc:SoilHydrology,
+        eusoilvoc:SoilMechanics,
+        eusoilvoc:SoilMorphology,
+        eusoilvoc:SoilPhysics,
+        eusoilvoc:SoilScientists,
+        eusoilvoc:TransferFunction ;
+    skos:prefLabel "soil sciences"@en .
 
 eusoilvoc:SoilStructureIndirectIndex a skos:Concept ;
     skos:broader eusoilvoc:SoilStructureIndex ;
@@ -15192,9 +15318,9 @@ eusoilvoc:SoilErosion a skos:Concept ;
     skos:definition [ dcterms:source benchmarks:soil-erosion ;
             rdf:value "The wearing away of the land surface by water, wind, ice, gravity or other natural or anthropogenic agents that abrade, detach and remove soil particles or rock material from one point on the earth’s surface, for deposition elsewhere."@en ],
         [ dcterms:source she:SoilErosion ;
-            rdf:value "Soil erosion is the detachment, transport and sedimentation of soil particles by water or by wind."@en ],
-        [ dcterms:source she:SoilErosion ;
             rdf:value "Soil erosion refers to the loss of fertile topsoil after erosive rain events on sensitive soils, largely in the absence of sufficient vegetation cover."@en ],
+        [ dcterms:source she:SoilErosion ;
+            rdf:value "Soil erosion is the detachment, transport and sedimentation of soil particles by water or by wind."@en ],
         [ dcterms:source gemet:7858,
                 "Bates, R.L.; Jackson, J.A., Glossary of Geology - Third Edition, American Geological Institute, Alexandria, USA, 1987"@en ;
             rdf:value "Detachment and movement of topsoil or soil material from the upper part of the profile, by the action of wind or running water, especially as a result of changes brought about by human activity, such as unsuitable or mismanaged agriculture."@en ] ;
@@ -15223,10 +15349,10 @@ eusoilvoc:SoilPorosity a skos:Concept,
     skos:definition [ dcterms:source agrovoc:c_35320,
                 <http://www.environment.nsw.gov.au/salinity/glossary.htm> ;
             rdf:value "The degree to which the soil mass is permeated with pores or cavities."@en ],
-        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "The relative volume of soil voids or pores, expressed as a fraction or percentage of total soil volume or of the volume of soil solids, according to the measure used."@en ],
         [ dcterms:source glosis_cl:physioChemicalPropertyCode-Por ;
-            rdf:value "Porosity refers to the percentage of soil volume occupied by pores or voids, which hold air and water. It directly impacts water infiltration, drainage, and root growth. Soils with high porosity are better suited for crop cultivation, as they provide good aeration and water availability. Source: Brady & Weil (2017)."@en ] ;
+            rdf:value "Porosity refers to the percentage of soil volume occupied by pores or voids, which hold air and water. It directly impacts water infiltration, drainage, and root growth. Soils with high porosity are better suited for crop cultivation, as they provide good aeration and water availability. Source: Brady & Weil (2017)."@en ],
+        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The relative volume of soil voids or pores, expressed as a fraction or percentage of total soil volume or of the volume of soil solids, according to the measure used."@en ] ;
     skos:exactMatch agrovoc:c_35320,
         spp:SoilPorosity,
         inrae:c_16324,
@@ -16397,10 +16523,10 @@ eusoilvoc:NitrogenTotal a skos:Concept,
     skos:broader eusoilvoc:Nitrogen,
         eusoilvoc:NitrogenContent,
         eusoilvoc:SoilDescriptor ;
-    skos:definition [ dcterms:source agrovoc:c_bdc779f4 ;
-            rdf:value "Content or amount of total nitrogen in soil."@en ],
-        [ dcterms:source glosis_cl:physioChemicalPropertyCode-Nittot ;
-            rdf:value "Total nitrogen encompasses all nitrogen forms in soil, including organic nitrogen in humus and inorganic nitrogen such as ammonium (NH₄⁺) and nitrate (NO₃⁻). Nitrogen is essential for plant growth, being a vital component of amino acids, proteins, and chlorophyll. Total nitrogen is a key indicator of soil fertility and its capacity to sustain long-term crop productivity. Source: Brady & Weil (2017)."@en ] ;
+    skos:definition [ dcterms:source glosis_cl:physioChemicalPropertyCode-Nittot ;
+            rdf:value "Total nitrogen encompasses all nitrogen forms in soil, including organic nitrogen in humus and inorganic nitrogen such as ammonium (NH₄⁺) and nitrate (NO₃⁻). Nitrogen is essential for plant growth, being a vital component of amino acids, proteins, and chlorophyll. Total nitrogen is a key indicator of soil fertility and its capacity to sustain long-term crop productivity. Source: Brady & Weil (2017)."@en ],
+        [ dcterms:source agrovoc:c_bdc779f4 ;
+            rdf:value "Content or amount of total nitrogen in soil."@en ] ;
     skos:exactMatch agrovoc:c_bdc779f4,
         glosis_cl:physioChemicalPropertyCode-Nittot ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -16641,12 +16767,12 @@ eusoilvoc:SoilMoistureContents a skos:Concept,
     skos:broader eusoilvoc:SoilProperties,
         eusoilvoc:SoilWaterPhysicalProperties ;
     skos:closeMatch inrae:c_16362 ;
-    skos:definition [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "The amount of water removed from soil by heating at 105°C to constant weight, expressed as a fraction or percentage on a mass or volume basis. On a gravimetric basis it equals the difference between wet and dry soil mass divided by dry soil mass."@en ],
+    skos:definition [ dcterms:source glosis_lh:moistureContentProperty ;
+            rdf:value "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ],
         [ dcterms:source agrovoc:c_7208 ;
             rdf:value "Soil-water content is the basic state characteristic of soil; it expresses the relative quantity of water in the soil. Soil-water content can be expressed as the ratio of water amount and the amount of soil."@en ],
-        [ dcterms:source glosis_lh:moistureContentProperty ;
-            rdf:value "The Moisture Content measures the amount of water present in soil, expressed as a percentage of its dry weight. This property is critical for assessing soil water retention, irrigation needs, and plant-available water. Source: Hillel, D. (2004). Introduction to Environmental Soil Physics."@en ] ;
+        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The amount of water removed from soil by heating at 105°C to constant weight, expressed as a fraction or percentage on a mass or volume basis. On a gravimetric basis it equals the difference between wet and dry soil mass divided by dry soil mass."@en ] ;
     skos:exactMatch agrovoc:c_7208,
         spp:SoilMoistureContent,
         glosis_lh:moistureContentProperty ;
@@ -17049,10 +17175,10 @@ eusoilvoc:SoilTillage a skos:Concept ;
     skos:closeMatch nalt:25207 ;
     skos:definition [ dcterms:source agrovoc:c_7771 ;
             rdf:value "The physical loosening of soil carried out through various cultivation operations, either manually or mechanically."@en ],
-        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
-            rdf:value "The mechanical manipulation of soil to improve aeration, control weeds and incorporate organic matter."@en ],
         [ dcterms:source agrovoc:c_7771 ;
-            rdf:value "Any physical loosening of the soil carried out in a range of cultivation operations, either by hand or mechanized."@en ] ;
+            rdf:value "Any physical loosening of the soil carried out in a range of cultivation operations, either by hand or mechanized."@en ],
+        [ dcterms:source <https://doi.org/10.4324/9780203021231> ;
+            rdf:value "The mechanical manipulation of soil to improve aeration, control weeds and incorporate organic matter."@en ] ;
     skos:exactMatch agrovoc:c_7771,
         spp:SoilTillage ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
@@ -18032,9 +18158,9 @@ eusoilvoc:SoilSealing a skos:Concept ;
     skos:definition [ dcterms:source benchmarks:soil-sealing ;
             rdf:value "The destruction or covering of soil by buildings, constructions and layers, or other bodies of artificial material which may be very slowly permeable to water (e.g. asphalt, concrete, etc.), causing a deterioration or loss of one or more soil functions."@en ],
         [ dcterms:source she:SoilSealing ;
-            rdf:value "Soil sealing refers to the destruction or covering of soil by buildings, other constructions and layers of impermeable artificial material (asphalt, concrete, etc.)."@en ],
-        [ dcterms:source she:SoilSealing ;
             rdf:value "Soil sealing is the destruction or covering of the soil by an impermeable material."@en ],
+        [ dcterms:source she:SoilSealing ;
+            rdf:value "Soil sealing refers to the destruction or covering of soil by buildings, other constructions and layers of impermeable artificial material (asphalt, concrete, etc.)."@en ],
         [ dcterms:source agrovoc:c_f9554e7c ;
             rdf:value "Permanent covering of the soil surface with impermeable artificial materials, leading to non-reversible loss of soil and most of its ecosystem services"@en ],
         [ dcterms:source <https://eur-lex.europa.eu/eli/dir/2025/2360/oj> ;
@@ -18126,9 +18252,9 @@ eusoilvoc:SoilIndicators a skos:Concept ;
     skos:altLabel "soil indicator"@en ;
     skos:broader eusoilvoc:Soil ;
     skos:definition [ dcterms:source she:SoilIndicators ;
-            rdf:value "An soil indicator is embedded in a well-developed interpretative framework and has meaning beyond the measure it represents."@en ],
+            rdf:value "Soil indicators are soil attributes that provide substantial information on soil functions."@en ],
         [ dcterms:source she:SoilIndicators ;
-            rdf:value "Soil indicators are soil attributes that provide substantial information on soil functions."@en ] ;
+            rdf:value "An soil indicator is embedded in a well-developed interpretative framework and has meaning beyond the measure it represents."@en ] ;
     skos:exactMatch she:SoilIndicators ;
     skos:inScheme <https://w3id.org/eusoilvoc> ;
     skos:narrower eusoilvoc:ChangeInTheIntensityOfFloods,
@@ -18310,6 +18436,5 @@ eusoilvoc:SoilPhysicalProperties a skos:Concept ;
         eusoilvoc:Physiography,
         eusoilvoc:PlanetaryPhenomena,
         eusoilvoc:PublicConcerned,
-        eusoilvoc:Soil,
-        eusoilvoc:TransferFunction .
+        eusoilvoc:Soil .
 

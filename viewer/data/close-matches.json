@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "retrievedAt": "2026-11-20T00:06:58.201045+00:00",
-  "vocabularySha256": "919141850460522943d4200c917e5197a8d2b21f4ec3b5aa7e6079b2351c3613",
+  "retrievedAt": "2026-11-20T10:20:53.457560+00:00",
+  "vocabularySha256": "c6920a75503ecd90e4f9ed2aa46a95987a8a85401e6bfc357d359aecfe5aa872",
   "records": {
     "http://aims.fao.org/aos/agrovoc/c_016fddeb": {
       "source": "agrovoc",
@@ -404,6 +404,18 @@
         {
           "language": "en",
           "text": "resilience"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://agrovoc.fao.org/sparql"
+      }
+    },
+    "http://aims.fao.org/aos/agrovoc/c_13929": {
+      "source": "agrovoc",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "peatlands"
         }
       ],
       "provenance": {
@@ -1258,12 +1270,47 @@
         "endpoint": "https://agrovoc.fao.org/sparql"
       }
     },
+    "http://aims.fao.org/aos/agrovoc/c_24843": {
+      "source": "agrovoc",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "forest land"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "en",
+          "sources": [
+            {
+              "uri": "http://aims.fao.org/aos/agrovoc/c_24843"
+            }
+          ],
+          "text": "Land on which the vegetation is dominated by trees or, if trees are lacking, the land bears evidence of former forest and has not been converted to other vegetation or land use."
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://agrovoc.fao.org/sparql"
+      }
+    },
     "http://aims.fao.org/aos/agrovoc/c_24850": {
       "source": "agrovoc",
       "prefLabels": [
         {
           "language": "en",
           "text": "gravel"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://agrovoc.fao.org/sparql"
+      }
+    },
+    "http://aims.fao.org/aos/agrovoc/c_24866": {
+      "source": "agrovoc",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "land management"
         }
       ],
       "provenance": {
@@ -1865,6 +1912,29 @@
         {
           "language": "en",
           "text": "inorganic amendments"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://agrovoc.fao.org/sparql"
+      }
+    },
+    "http://aims.fao.org/aos/agrovoc/c_2808": {
+      "source": "agrovoc",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "farmland"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "en",
+          "sources": [
+            {
+              "uri": "http://aims.fao.org/aos/agrovoc/c_2808"
+            }
+          ],
+          "text": "Land area that is either arable, under permanent crops, or under permanent pastures."
         }
       ],
       "provenance": {
@@ -2601,6 +2671,29 @@
         "endpoint": "https://agrovoc.fao.org/sparql"
       }
     },
+    "http://aims.fao.org/aos/agrovoc/c_3366": {
+      "source": "agrovoc",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "grasslands"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "en",
+          "sources": [
+            {
+              "uri": "http://aims.fao.org/aos/agrovoc/c_3366"
+            }
+          ],
+          "text": "Grassland is a land cover class that includes any geographic area dominated by natural herbaceous  plants (grasslands, prairies, steppes and savannahs)  with a cover of 10 percent or more, irrespective of  different human and/or animal activities e.g. grazing, selective fire management."
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://agrovoc.fao.org/sparql"
+      }
+    },
     "http://aims.fao.org/aos/agrovoc/c_3378": {
       "source": "agrovoc",
       "prefLabels": [
@@ -3108,6 +3201,29 @@
         "endpoint": "https://agrovoc.fao.org/sparql"
       }
     },
+    "http://aims.fao.org/aos/agrovoc/c_363a2055": {
+      "source": "agrovoc",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "below ground biomass"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "en",
+          "sources": [
+            {
+              "uri": "http://aims.fao.org/aos/agrovoc/c_363a2055"
+            }
+          ],
+          "text": "All biomass of live roots. Fine roots of less than 2 mm diameter are excluded because these often cannot be distinguished empirically from soil organic matter or litter. "
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://agrovoc.fao.org/sparql"
+      }
+    },
     "http://aims.fao.org/aos/agrovoc/c_36452": {
       "source": "agrovoc",
       "prefLabels": [
@@ -3455,6 +3571,18 @@
         "endpoint": "https://agrovoc.fao.org/sparql"
       }
     },
+    "http://aims.fao.org/aos/agrovoc/c_4179": {
+      "source": "agrovoc",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "land resources"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://agrovoc.fao.org/sparql"
+      }
+    },
     "http://aims.fao.org/aos/agrovoc/c_4182": {
       "source": "agrovoc",
       "prefLabels": [
@@ -3750,6 +3878,18 @@
         }
       ],
       "definitions": [],
+      "provenance": {
+        "endpoint": "https://agrovoc.fao.org/sparql"
+      }
+    },
+    "http://aims.fao.org/aos/agrovoc/c_4852": {
+      "source": "agrovoc",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "mineral resources"
+        }
+      ],
       "provenance": {
         "endpoint": "https://agrovoc.fao.org/sparql"
       }
@@ -4051,6 +4191,18 @@
         "endpoint": "https://agrovoc.fao.org/sparql"
       }
     },
+    "http://aims.fao.org/aos/agrovoc/c_5387": {
+      "source": "agrovoc",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "organic matter"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://agrovoc.fao.org/sparql"
+      }
+    },
     "http://aims.fao.org/aos/agrovoc/c_5390": {
       "source": "agrovoc",
       "prefLabels": [
@@ -4236,6 +4388,18 @@
         {
           "language": "en",
           "text": "phosphorus"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://agrovoc.fao.org/sparql"
+      }
+    },
+    "http://aims.fao.org/aos/agrovoc/c_5834": {
+      "source": "agrovoc",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "physiographic features"
         }
       ],
       "provenance": {
@@ -5955,6 +6119,29 @@
         "endpoint": "https://agrovoc.fao.org/sparql"
       }
     },
+    "http://aims.fao.org/aos/agrovoc/c_8371": {
+      "source": "agrovoc",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "wetlands"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "en",
+          "sources": [
+            {
+              "uri": "http://aims.fao.org/aos/agrovoc/c_8371"
+            }
+          ],
+          "text": "Areas of marsh, fen, peatland or water, whether natural or artificial, permanent or temporary, with water that is static or flowing, fresh, brackish or salt, including areas of marine water the depth of which at low tide does not exceed six metres."
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://agrovoc.fao.org/sparql"
+      }
+    },
     "http://aims.fao.org/aos/agrovoc/c_8393": {
       "source": "agrovoc",
       "prefLabels": [
@@ -6983,6 +7170,43 @@
         "endpoint": "https://agrovoc.fao.org/sparql"
       }
     },
+    "http://metadata.un.org/thesaurus/1003603": {
+      "source": "unbis",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "LAND USE"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://metadata.un.org/skosmos/rest/v1/thesaurus/data"
+      }
+    },
+    "http://metadata.un.org/thesaurus/1004786": {
+      "source": "unbis",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "PEAT"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://metadata.un.org/skosmos/rest/v1/thesaurus/data"
+      }
+    },
+    "http://metadata.un.org/thesaurus/1007000": {
+      "source": "unbis",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "WETLANDS"
+        }
+      ],
+      "definitions": [],
+      "provenance": {
+        "endpoint": "https://metadata.un.org/skosmos/rest/v1/thesaurus/data"
+      }
+    },
     "http://opendata.inrae.fr/thesaurusINRAE/c_0617cfcc": {
       "source": "inrae",
       "prefLabels": [
@@ -7806,6 +8030,33 @@
         {
           "language": "en",
           "text": "soil biological activity"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://consultation.vocabulaires-ouverts.inrae.fr/rest/v1/thesaurus-inrae/data"
+      }
+    },
+    "http://opendata.inrae.fr/thesaurusINRAE/c_1509": {
+      "source": "inrae",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "peat bog"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "en",
+          "sources": [
+            {
+              "language": "",
+              "text": "Adapté de : Baize, D. (2016) Petit lexique de pédologie. Éditions Quae [ISBN : 978-2-7592-2445-6]"
+            },
+            {
+              "uri": "http://opendata.inrae.fr/thesaurusINRAE/c_1509"
+            }
+          ],
+          "text": "A place where peat is formed and extracted."
         }
       ],
       "provenance": {
@@ -9360,6 +9611,18 @@
         "endpoint": "https://consultation.vocabulaires-ouverts.inrae.fr/rest/v1/thesaurus-inrae/data"
       }
     },
+    "http://opendata.inrae.fr/thesaurusINRAE/c_4893": {
+      "source": "inrae",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "cropland"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://consultation.vocabulaires-ouverts.inrae.fr/rest/v1/thesaurus-inrae/data"
+      }
+    },
     "http://opendata.inrae.fr/thesaurusINRAE/c_5012": {
       "source": "inrae",
       "prefLabels": [
@@ -9713,6 +9976,18 @@
         {
           "language": "en",
           "text": "rhizosphere"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://consultation.vocabulaires-ouverts.inrae.fr/rest/v1/thesaurus-inrae/data"
+      }
+    },
+    "http://opendata.inrae.fr/thesaurusINRAE/c_6e7e381e": {
+      "source": "inrae",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "grassland"
         }
       ],
       "provenance": {
@@ -16262,6 +16537,20 @@
         "version": "GEMET - Concepts, version 4.2.3, 2021-12-06T13:37:25.364764+00:00"
       }
     },
+    "http://www.eionet.europa.eu/gemet/concept/15069": {
+      "source": "gemet",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "below-ground biomass"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://sparql.agroportal.eu/sparql",
+        "graph": "http://data.bioontology.org/ontologies/GEMET/submissions/14",
+        "version": "GEMET - Concepts, version 4.2.3, 2021-12-06T13:37:25.364764+00:00"
+      }
+    },
     "http://www.eionet.europa.eu/gemet/concept/15098": {
       "source": "gemet",
       "prefLabels": [
@@ -16633,6 +16922,20 @@
             }
           ],
           "text": "A very large and widespread family of Monocotyledoneae, with more than 10.000 species, most of which are herbaceous, but a few are woody. The stems are jointed, the long, narrow leaves originating at the nodes. The flowers are inconspicuous, with a much reduced perianth, and are wind-pollinated or cleistogamous. The fruit in single-seeded, usually a caryopsis. Grasses are the most important of all plants for food."
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://sparql.agroportal.eu/sparql",
+        "graph": "http://data.bioontology.org/ontologies/GEMET/submissions/14",
+        "version": "GEMET - Concepts, version 4.2.3, 2021-12-06T13:37:25.364764+00:00"
+      }
+    },
+    "http://www.eionet.europa.eu/gemet/concept/3733": {
+      "source": "gemet",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "grassland"
         }
       ],
       "provenance": {
@@ -18034,6 +18337,35 @@
         "version": "GEMET - Concepts, version 4.2.3, 2021-12-06T13:37:25.364764+00:00"
       }
     },
+    "http://www.eionet.europa.eu/gemet/concept/9297": {
+      "source": "gemet",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "wetland"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "en",
+          "sources": [
+            {
+              "language": "en",
+              "text": "Landy, M., Environmental Impact Statement Glossary. A Reference Source for EIS Writers, Revuewers, and Citizens., IFI/Plenum Publishing Corporation, New York, 1979"
+            },
+            {
+              "uri": "http://www.eionet.europa.eu/gemet/concept/9297"
+            }
+          ],
+          "text": "Areas that are inundated by surface or ground water with frequency sufficient to support a prevalence of vegetative or aquatic life that requires saturated or seasonally saturated soil conditions for growth or reproduction."
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://sparql.agroportal.eu/sparql",
+        "graph": "http://data.bioontology.org/ontologies/GEMET/submissions/14",
+        "version": "GEMET - Concepts, version 4.2.3, 2021-12-06T13:37:25.364764+00:00"
+      }
+    },
     "http://www.eionet.europa.eu/gemet/concept/9330": {
       "source": "gemet",
       "prefLabels": [
@@ -18074,6 +18406,80 @@
         "endpoint": "https://sparql.agroportal.eu/sparql",
         "graph": "http://data.bioontology.org/ontologies/GEMET/submissions/14",
         "version": "GEMET - Concepts, version 4.2.3, 2021-12-06T13:37:25.364764+00:00"
+      }
+    },
+    "http://zbw.eu/stw/descriptor/11859-1": {
+      "source": "stw",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "Land use"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://zbw.eu/stw/version/latest/descriptor/11859-1/about.ttl"
+      }
+    },
+    "http://zbw.eu/stw/descriptor/14211-3": {
+      "source": "stw",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "Peat"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://zbw.eu/stw/version/latest/descriptor/14211-3/about.ttl"
+      }
+    },
+    "http://zbw.eu/stw/descriptor/18984-5": {
+      "source": "stw",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "Wetland"
+        }
+      ],
+      "definitions": [],
+      "provenance": {
+        "endpoint": "https://zbw.eu/stw/version/latest/descriptor/18984-5/about.ttl"
+      }
+    },
+    "https://d-nb.info/gnd/4016960-1": {
+      "source": "gnd",
+      "prefLabels": [
+        {
+          "language": "",
+          "text": "Feuchtgebiet"
+        }
+      ],
+      "definitions": [],
+      "provenance": {
+        "endpoint": "https://lobid.org/gnd/4016960-1.ttl"
+      }
+    },
+    "https://d-nb.info/gnd/4185722-7": {
+      "source": "gnd",
+      "prefLabels": [
+        {
+          "language": "",
+          "text": "Torf"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://lobid.org/gnd/4185722-7.ttl"
+      }
+    },
+    "https://d-nb.info/gnd/4259046-2": {
+      "source": "gnd",
+      "prefLabels": [
+        {
+          "language": "",
+          "text": "Landnutzung"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://lobid.org/gnd/4259046-2.ttl"
       }
     },
     "https://data.geoscience.earth/ncl/ISO11074v2025/3.140": {
@@ -18371,6 +18777,33 @@
       ],
       "provenance": {
         "endpoint": "https://data.geoscience.earth/ncl/ISO11074v2025/3.92"
+      }
+    },
+    "https://data.gesis.org/thesoz/concept_10039675": {
+      "source": "thesoz",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "land use"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://zenodo.org/records/18773539/files/thesoz.ttl?download=1",
+        "sha256": "43f17d959ae2df19ac9724aa7db636883d80c8498b9936eb89093f8601a97d22"
+      }
+    },
+    "https://data.gesis.org/thesoz/concept_10043551": {
+      "source": "thesoz",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "wetland"
+        }
+      ],
+      "definitions": [],
+      "provenance": {
+        "endpoint": "https://zenodo.org/records/18773539/files/thesoz.ttl?download=1",
+        "sha256": "43f17d959ae2df19ac9724aa7db636883d80c8498b9936eb89093f8601a97d22"
       }
     },
     "https://lod.nal.usda.gov/nalt/10070": {
@@ -18710,6 +19143,19 @@
           "text": "Manmade systems of furrows, ditches, tile drains, pipes, etc. which collect and remove water from a central location."
         }
       ],
+      "provenance": {
+        "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
+      }
+    },
+    "https://lod.nal.usda.gov/nalt/131627": {
+      "source": "nalt",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "belowground biomass"
+        }
+      ],
+      "definitions": [],
       "provenance": {
         "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
       }
@@ -19156,6 +19602,45 @@
         "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
       }
     },
+    "https://lod.nal.usda.gov/nalt/18403": {
+      "source": "nalt",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "wetlands"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "en",
+          "sources": [
+            {
+              "language": "",
+              "text": "US Environmental Protection Agency"
+            },
+            {
+              "uri": "https://lod.nal.usda.gov/nalt/18403"
+            }
+          ],
+          "text": "An area that is saturated by surface or ground water with vegetation adapted for life under those soil conditions."
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
+      }
+    },
+    "https://lod.nal.usda.gov/nalt/18404": {
+      "source": "nalt",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "peatlands"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
+      }
+    },
     "https://lod.nal.usda.gov/nalt/18678": {
       "source": "nalt",
       "prefLabels": [
@@ -19321,6 +19806,33 @@
         {
           "language": "en",
           "text": "hardpans"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
+      }
+    },
+    "https://lod.nal.usda.gov/nalt/215496": {
+      "source": "nalt",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "cropland"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "en",
+          "sources": [
+            {
+              "language": "",
+              "text": "Schwarz, Charles F.; Thor, Edward C.; Elsner, Gary H. 1976. Wildland planning glossary. Gen. Tech. Rep. PSW-13. Berkeley, Calif.: U.S. Department of Agriculture, Forest Service, Pacific Southwest Forest and Range Experiment Station"
+            },
+            {
+              "uri": "https://lod.nal.usda.gov/nalt/215496"
+            }
+          ],
+          "text": "Land used primarily for the production of adapted cultivated and close-growing crops for harvest, alone or in association with sod crops, and open land recently in such uses. In some states land in fruit and nut trees, grapes, etc., is designated orchard land or vineyard land rather than \"cropland\"."
         }
       ],
       "provenance": {
@@ -19656,6 +20168,18 @@
         }
       ],
       "definitions": [],
+      "provenance": {
+        "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
+      }
+    },
+    "https://lod.nal.usda.gov/nalt/24613": {
+      "source": "nalt",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "organic matter"
+        }
+      ],
       "provenance": {
         "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
       }
@@ -21249,6 +21773,18 @@
         "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
       }
     },
+    "https://lod.nal.usda.gov/nalt/39546": {
+      "source": "nalt",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "land management"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
+      }
+    },
     "https://lod.nal.usda.gov/nalt/40066": {
       "source": "nalt",
       "prefLabels": [
@@ -22137,6 +22673,18 @@
         {
           "language": "en",
           "text": "mountain soils"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
+      }
+    },
+    "https://lod.nal.usda.gov/nalt/5367": {
+      "source": "nalt",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "agricultural land"
         }
       ],
       "provenance": {
@@ -23309,6 +23857,33 @@
         "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
       }
     },
+    "https://lod.nal.usda.gov/nalt/80856": {
+      "source": "nalt",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "forest land"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "en",
+          "sources": [
+            {
+              "language": "",
+              "text": "NAL Thesaurus Staff"
+            },
+            {
+              "uri": "https://lod.nal.usda.gov/nalt/80856"
+            }
+          ],
+          "text": "A part of land covered with forest or set aside for the cultivation of forests."
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
+      }
+    },
     "https://lod.nal.usda.gov/nalt/8668": {
       "source": "nalt",
       "prefLabels": [
@@ -23445,6 +24020,33 @@
         "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
       }
     },
+    "https://lod.nal.usda.gov/nalt/9709": {
+      "source": "nalt",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "grasslands"
+        }
+      ],
+      "definitions": [
+        {
+          "language": "en",
+          "sources": [
+            {
+              "language": "",
+              "text": "Glossary, National Institute of Food and Agriculture, USDA"
+            },
+            {
+              "uri": "https://lod.nal.usda.gov/nalt/9709"
+            }
+          ],
+          "text": "Large land areas covered with grass typically used for grazing."
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
+      }
+    },
     "https://lod.nal.usda.gov/nalt/971": {
       "source": "nalt",
       "prefLabels": [
@@ -23527,6 +24129,19 @@
         {
           "language": "en",
           "text": "ecosystem services"
+        }
+      ],
+      "provenance": {
+        "file": "ontovocabs/shb/soil_health_benchmarks.ttl",
+        "sha256": "8d015a8091b899ed4c9270eac59adcc05adbda4bdc8a97aa7e4bcc4a96b5fcc8"
+      }
+    },
+    "https://soilhealthbenchmarks.eu/glossary/grassland": {
+      "source": "benchmarks",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "grassland"
         }
       ],
       "provenance": {
@@ -24292,6 +24907,19 @@
         "sha256": "116b9bc37e86ff500f913c8d29351e589675d4ef2b5d99f4eed2ba72c2c97e23"
       }
     },
+    "https://soilwise-he.github.io/soil-health#Cropland": {
+      "source": "shkg",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "cropland"
+        }
+      ],
+      "provenance": {
+        "file": "ontovocabs/shkg/soil_health_KG.ttl",
+        "sha256": "116b9bc37e86ff500f913c8d29351e589675d4ef2b5d99f4eed2ba72c2c97e23"
+      }
+    },
     "https://soilwise-he.github.io/soil-health#Crops": {
       "source": "shkg",
       "prefLabels": [
@@ -24477,6 +25105,19 @@
         "sha256": "116b9bc37e86ff500f913c8d29351e589675d4ef2b5d99f4eed2ba72c2c97e23"
       }
     },
+    "https://soilwise-he.github.io/soil-health#ForestLand": {
+      "source": "shkg",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "forest land"
+        }
+      ],
+      "provenance": {
+        "file": "ontovocabs/shkg/soil_health_KG.ttl",
+        "sha256": "116b9bc37e86ff500f913c8d29351e589675d4ef2b5d99f4eed2ba72c2c97e23"
+      }
+    },
     "https://soilwise-he.github.io/soil-health#ForestSoils": {
       "source": "shkg",
       "prefLabels": [
@@ -24496,6 +25137,19 @@
         {
           "language": "en",
           "text": "frost heave"
+        }
+      ],
+      "provenance": {
+        "file": "ontovocabs/shkg/soil_health_KG.ttl",
+        "sha256": "116b9bc37e86ff500f913c8d29351e589675d4ef2b5d99f4eed2ba72c2c97e23"
+      }
+    },
+    "https://soilwise-he.github.io/soil-health#Grassland": {
+      "source": "shkg",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "grassland"
         }
       ],
       "provenance": {
