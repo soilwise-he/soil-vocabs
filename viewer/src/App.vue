@@ -199,6 +199,17 @@ async function treeKey(event) {
 function typeCaption(concept) { return concept.types.filter(uri => uri !== CONCEPT).map(uri => model.value.label(uri)).join(', ') || 'Concept' }
 function snippet(concept) { const text = definitionText(concept.definitions[0]?.text || ''); return text.length > 220 ? text.slice(0, 220) + '...' : text }
 function navParents(uri) { return model.value.sort(model.value.parents.get(uri) || []) }
+// Observable properties list their procedures in results; lists of more than 12
+// start with 10, as long value lists do on concept pages.
+const PROCEDURE_PREVIEW = 10, PROCEDURE_THRESHOLD = 12
+const expandedProcedures = ref(new Set())
+function resultProcedures(concept) {
+  const all = concept.isProperty ? model.value.proceduresFor(concept.uri) : []
+  return all.length <= PROCEDURE_THRESHOLD || expandedProcedures.value.has(concept.uri) ? all : all.slice(0, PROCEDURE_PREVIEW)
+}
+function toggleProcedures(uri) {
+  if (!expandedProcedures.value.delete(uri)) expandedProcedures.value.add(uri)
+}
 function typeSearch(uri) { go({ q: '', type: uri }) }
 function resetQuery() { query.value = ''; suggestionIndex.value = -1; searchInput.value?.focus() }
 function retry() { window.location.reload() }
@@ -428,6 +439,11 @@ onBeforeUnmount(() => {
             <p v-if="concept.altLabels.length" class="result-alternatives"><span>Also known as: </span><template v-for="(label, i) in concept.altLabels" :key="i"><span v-if="i">; </span><HighlightedText class="alternative-label" :text="label.text" :ranges="model.matchLabel(label.text, route.q)?.ranges" /></template></p>
             <p v-if="snippet(concept)">{{ snippet(concept) }}</p>
             <p v-if="navParents(concept.uri).length" class="result-parents"><span>Under</span><template v-for="parent in navParents(concept.uri)" :key="parent"><a :href="conceptHref(parent)" @click="followLink($event, () => navigate(parent))">{{ model.label(parent) }}</a></template></p>
+            <div v-if="resultProcedures(concept).length" class="result-procedures">
+              <span>Procedures ({{ model.proceduresFor(concept.uri).length }})</span>
+              <ul :aria-label="`Procedures for ${concept.label}`"><li v-for="procedure in resultProcedures(concept)" :key="procedure"><a class="procedure-chip" :href="conceptHref(procedure)" @click="followLink($event, () => navigate(procedure))">{{ model.label(procedure) }}</a></li></ul>
+              <button v-if="model.proceduresFor(concept.uri).length > PROCEDURE_THRESHOLD" type="button" class="text-button" :aria-expanded="expandedProcedures.has(concept.uri)" @click="toggleProcedures(concept.uri)">{{ expandedProcedures.has(concept.uri) ? 'Show fewer' : `Show all ${model.proceduresFor(concept.uri).length}` }}</button>
+            </div>
           </article>
           <nav v-if="searchResults.length > 30" class="pagination" aria-label="Results pages"><button class="button secondary" :disabled="page === 0" @click="changePage(-1)"><ArrowLeft :size="16" />Previous</button><span>{{ page + 1 }} / {{ Math.ceil(searchResults.length / 30) }}</span><button class="button secondary" :disabled="(page + 1) * 30 >= searchResults.length" @click="changePage(1)">Next<ArrowRight :size="16" /></button></nav>
         </template>

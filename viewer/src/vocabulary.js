@@ -207,6 +207,17 @@ export function createVocabulary(turtle) {
       addEdge(inverse ? quad.object.value : quad.subject.value, inverse ? quad.subject.value : quad.object.value)
     }
   }
+  // Procedures linked directly to each observable property, as in its "Has procedure" row.
+  const procedureSets = new Map()
+  const linkProcedure = (property, procedure) => {
+    if (!concepts.get(property)?.isProperty || !concepts.get(procedure)?.isProcedure) return
+    if (!procedureSets.has(property)) procedureSets.set(property, new Set())
+    procedureSets.get(property).add(procedure)
+  }
+  for (const q of store.getQuads(null, namedNode(NS.sosa + 'hasProcedure'), null, null)) linkProcedure(q.subject.value, q.object.value)
+  for (const q of store.getQuads(null, namedNode(NS.sosa + 'isProcedureFor'), null, null)) linkProcedure(q.object.value, q.subject.value)
+  const procedureLists = new Map([...procedureSets].map(([property, set]) => [property, sort(set)]))
+  const proceduresFor = uri => procedureLists.get(uri) || []
   const roots = sort([...conceptUris].filter(uri => !parents.get(uri).size))
   const rootSet = new Set(roots)
   const sortedConcepts = sort(conceptUris).map(uri => concepts.get(uri))
@@ -415,7 +426,7 @@ export function createVocabulary(turtle) {
   return {
     store, concepts, sortedConcepts, parents, children, roots, typeUris, schemeUri, ontology,
     labelLanguages: [...new Set(sortedConcepts.flatMap(c => Object.keys(c.prefLabel)))].filter(tag => tag !== 'und').sort(),
-    objects, label, sort, pathTo, pathsTo, defaultPath, isDefaultPath, validPath, search, searchMatches, matchLabel, propertyTooltip, describe, propertiesFor, asJskos, conceptQuads, serialize,
+    objects, label, sort, pathTo, pathsTo, defaultPath, isDefaultPath, validPath, proceduresFor, search, searchMatches, matchLabel, propertyTooltip, describe, propertiesFor, asJskos, conceptQuads, serialize,
     sourceText: turtle,
     stats: { concepts: concepts.size, procedures: sortedConcepts.filter(c => c.isProcedure).length,
       properties: sortedConcepts.filter(c => c.isProperty).length,

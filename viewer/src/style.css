@@ -325,6 +325,10 @@ code, pre { font-family: "Cascadia Code", Consolas, monospace; font-size: 13px; 
 .search-result .result-alternatives { color: var(--muted); }
 .result-parents { display: flex; gap: 6px 10px; flex-wrap: wrap; color: var(--muted); }
 .result-parents a { font-weight: 700; }
+.result-procedures { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; margin-top: 8px; font-size: 15px; color: var(--muted); }
+.result-procedures ul { display: flex; flex-wrap: wrap; gap: 6px; }
+.procedure-chip { display: inline-block; padding: 1px 9px; border: 1px solid var(--procedure-border); border-radius: 999px; background: var(--procedure-surface); color: var(--procedure-text); font-size: 13px; font-weight: 600; }
+.procedure-chip:hover { color: var(--procedure-text); border-color: var(--procedure-text); }
 .pagination { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-top: 1px solid var(--line); font-size: 14px; }
 .empty-state { padding: 44px 0; color: var(--muted); }
 .empty-state h2, .empty-state h1 { margin: 12px 0; color: var(--ink); font-size: 24px; }
