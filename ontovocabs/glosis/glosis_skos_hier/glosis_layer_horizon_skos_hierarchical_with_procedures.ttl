@@ -3019,7 +3019,7 @@ eusoilvoc:Molybdenum a skos:Concept ;
     skos:prefLabel "molybdenum"@en .
 
 eusoilvoc:Peat a skos:Concept ;
-    skos:broader eusoilvoc:SoilPhysicalProperties ;
+    skos:broader eusoilvoc:SoilSubstance ;
     skos:narrower eusoilvoc:PeatDecomposition,
         eusoilvoc:PeatDrainage,
         eusoilvoc:PeatVolume ;

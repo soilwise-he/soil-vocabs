@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "retrievedAt": "2026-11-19T11:28:27.084803+00:00",
-  "vocabularySha256": "c9c2854932e96c9e3a7dc42a9fbb8eea1b3b717ab36bf6574f68ebed28ac010a",
+  "retrievedAt": "2026-11-20T00:06:58.201045+00:00",
+  "vocabularySha256": "919141850460522943d4200c917e5197a8d2b21f4ec3b5aa7e6079b2351c3613",
   "records": {
     "http://aims.fao.org/aos/agrovoc/c_016fddeb": {
       "source": "agrovoc",
@@ -20665,6 +20665,18 @@
         {
           "language": "en",
           "text": "soil buffering capacity"
+        }
+      ],
+      "provenance": {
+        "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"
+      }
+    },
+    "https://lod.nal.usda.gov/nalt/325678": {
+      "source": "nalt",
+      "prefLabels": [
+        {
+          "language": "en",
+          "text": "carbon farming"
         }
       ],
       "provenance": {

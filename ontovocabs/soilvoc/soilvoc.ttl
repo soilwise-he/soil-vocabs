@@ -1,9 +1,6 @@
 @prefix eusoilvoc: <https://w3id.org/eusoilvoc#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-# Locally curated SoilVoc concepts, migrated from the GloSIS and SHKG SKOS modules.
-# Keep these concept declarations here; other modules may link to these URIs.
-
 eusoilvoc:CarbonPools a skos:Concept ;
     skos:altLabel "carbon pool"@en ;
     skos:prefLabel "carbon pools"@en .
