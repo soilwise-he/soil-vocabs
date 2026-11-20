@@ -118,14 +118,14 @@ local-only `cloudflare/` bundle and `viewer/test/` files.
 
 As in Skosmos, each mapping row shows the external concept's original label and the
 name of its vocabulary; the complete URI is the link target and appears on hover.
-A target without a cached label is shown by its URI, for example the Soil Property
-and Process Ontology classes, which have no labels in their source. Close matches
+A target from a source outside the notebook's seven definition sources, or one
+without a cached label, is shown by its URI. Supported close matches
 also offer expandable source definitions, in English only. These describe the
 **external concepts**, not the SoilVoc concept. They never enter SoilVoc's
 definitions, search, hierarchy, statistics, or RDF exports.
 
 `data/close-matches.json` is a committed, display-only cache keyed by the exact
-external URI. Despite its name, it covers every SKOS mapping target: close-match
+external URI. For the supported sources it covers all SKOS mapping types: close-match
 records include definitions, while exact-match and other mapping targets are
 label-only records without a definitions list. The browser lazily loads this
 same-site file once when a concept has mappings; it does not contact external APIs.
@@ -142,31 +142,21 @@ npm --prefix viewer run build
 
 The refresh reads `viewer/data/SoilVoc.ttl` and queries AGROVOC SPARQL, NALT and
 INRAE Skosmos APIs, ISO 11074 RDF records, and the latest GEMET submission in
-AgroPortal SPARQL. SHKG, BENCHMARKS and the Soil Property and Process Ontology use
-local source snapshots: `ontovocabs/shkg/soil_health_KG.ttl`,
-`ontovocabs/shb/soil_health_benchmarks.ttl` and `ontovocabs/spp/soil_property_process.ttl`.
-The UN Thesaurus uses its Skosmos API; STW and GND use per-concept Turtle from
-ZBW and lobid-gnd, respectively. GND supplies its authority label as `gndo:preferredName`.
-TheSoz records come from the checksum-verified [GESIS SKOS release](https://doi.org/10.7802/2912)
-because the concept URIs do not reliably serve records. The original mapping URIs
-are preserved; scope notes and cross-mappings are not treated as definitions.
+AgroPortal SPARQL. SHKG and BENCHMARKS use local source snapshots:
+`ontovocabs/shkg/soil_health_KG.ttl` and `ontovocabs/shb/soil_health_benchmarks.ttl`.
+These are the same seven sources as the notebook's exact-match definition importer.
+Mappings to other vocabularies stay in the RDF as clickable URIs; the generator
+does not fetch their labels or definitions. Scope notes are not used as definitions.
 For matching, the notebook reads concept URIs and preferred/alternative labels from
 `ontovocabs/shb/soil_health_benchmarks.csv`, just like the other sources.
 Its exact-match enrichment cell adds English definitions to `SoilVoc_augmented.ttl`;
 close matches only supply viewer previews. Both definition paths read the Turtle file,
 including standard SKOS definitions
 and the glossary's policy and scientific definitions, citing the BENCHMARKS concept URI.
-The mapped legacy GLOSIS URIs (codelists, common, layer/horizon, procedure, profile,
-site/plot and surface modules) use the official historical revision pinned in the
-script; they are not substituted with GLOSIS v2 identifiers. The pinned layer/horizon
-file is not valid Turtle (an undeclared `cm:` prefix), so that module is read from
-`ontovocabs/glosis/glosis_ori/glosis_layer_horizon.ttl`, which differs from it only in
-unit restrictions. Labels come from
-`skos:prefLabel`, or from `rdfs:label` where a source labels only that way (some GLOSIS
-classes and properties). Requests are bounded and retried; a retrieval/parsing failure
-or unsupported source for a close-match target stops the refresh without replacing the
-previous cache. Labels for other mapping targets are best effort: missing or unlabelled
-records and unsupported sources are reported as `Shown as URIs` and left out of the cache.
+Labels come from `skos:prefLabel`, or from `rdfs:label` when no preferred label
+is available. A retrieval or parsing failure for a supported close-match target
+stops the refresh without replacing the previous cache. Other mappings have
+best-effort labels: missing or unlabelled records are reported as `Shown as URIs`.
 Only the small extracted records are saved, not complete external vocabularies.
 
 The cache retains literal text, language tags, definition-specific citations, and
@@ -204,11 +194,15 @@ has not yet been cached.
   followed by the mapping rows. A breadcrumb ends with the current concept, and
   lists of more than 12 values start with 10 and a "Show all" button.
 - Each blank-node definition is paired with its own sources.
-  Embedded HTML in source definitions (such as ISO 11074 term-reference markup)
-  is displayed as readable plain text, preserving reference wording and numbers.
-  This also applies to search snippets and close-match previews. Source markup
-  is never inserted into the page; original literals, citations, and RDF exports
-  remain unchanged.
+  For an exact match, the notebook keeps the English wording already curated in
+  canonical `SoilVoc.ttl` for that concept and external record. An identical
+  upstream definition can add citations; different wording cannot replace or
+  supplement it. Other records can still contribute definitions. Rebuild the
+  canonical file from the modules before rerunning enrichment after a curation edit.
+- ISO 11074 definitions are converted to plain text on import and when generating
+  close-match previews. The reference wording, term numbers and definition
+  citations survive in the output; the publisher's records are not edited.
+  The viewer also renders any older embedded markup as text, including in search snippets.
 - Mapping rows showing each matched concept's original label, or its URI when no
   label is cached, with the name of its vocabulary from explicit RDF metadata or
   known-namespace display lookups.

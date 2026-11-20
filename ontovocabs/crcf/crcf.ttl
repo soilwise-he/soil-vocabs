@@ -39,7 +39,7 @@ eusoilvoc:CRCFCertification a skos:Concept ;
     skos:prefLabel "CRCF certification"@en .
 
 eusoilvoc:CRCFUnits a skos:Concept ;
-    skos:altLabel "CRCF certified units"@en ;
+    skos:altLabel "CRCF certified units"@en, "CRCF unit"@en ;
     skos:broader eusoilvoc:CarbonRemovalsAndCarbonFarmingRegulation ;
     skos:prefLabel "CRCF units"@en .
 

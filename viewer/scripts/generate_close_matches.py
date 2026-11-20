@@ -8,43 +8,34 @@ The written cache holds the English subset the viewer shows.
 import argparse
 from collections import defaultdict
 from datetime import datetime, timezone
-from functools import lru_cache
 from hashlib import sha256
+from html import unescape
+from html.parser import HTMLParser
 import json
 import os
 from pathlib import Path
+import re
 from tempfile import NamedTemporaryFile
 import time
 from urllib.error import HTTPError, URLError
-from urllib.parse import quote, urlencode
+from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 from rdflib import Graph, Literal, URIRef
 from rdflib.namespace import DCTERMS, RDF, RDFS, SKOS
 
 ROOT = Path(__file__).resolve().parents[2]
+ISO_PREFIX = "https://data.geoscience.earth/ncl/ISO11074v2025/"
 GEMET_SOURCE = URIRef("http://www.eionet.europa.eu/gemet/2004/06/gemet-schema.rdf#source")
 TEXT_PREDICATES = (RDF.value, URIRef("https://schema.org/text"), URIRef("http://schema.org/text"))
 MAPPING_PREDICATES = (SKOS.exactMatch, SKOS.closeMatch, SKOS.broadMatch, SKOS.narrowMatch, SKOS.relatedMatch)
-GLOSIS_VERSION = "71aa9f7888675e4395182fda74499fd72866c893"
+# Match DEFINITION_SOURCES in soil_vocabs.ipynb. Other mappings remain RDF links.
 SOURCES = {
     "agrovoc": {"prefix": "http://aims.fao.org/aos/agrovoc/", "endpoint": "https://agrovoc.fao.org/sparql"},
     "nalt": {"prefix": "https://lod.nal.usda.gov/nalt/", "endpoint": "https://lod.nal.usda.gov/rest/v1/nalt/data"},
     "inrae": {"prefix": "http://opendata.inrae.fr/thesaurusINRAE/", "endpoint": "https://consultation.vocabulaires-ouverts.inrae.fr/rest/v1/thesaurus-inrae/data"},
-    "iso11074": {"prefix": "https://data.geoscience.earth/ncl/ISO11074v2025/"},
+    "iso11074": {"prefix": ISO_PREFIX},
     "gemet": {"prefix": "http://www.eionet.europa.eu/gemet/concept/", "endpoint": "https://sparql.agroportal.eu/sparql"},
-    "unbis": {"prefix": "http://metadata.un.org/thesaurus/", "endpoint": "https://metadata.un.org/skosmos/rest/v1/thesaurus/data"},
-    "stw": {"prefix": "http://zbw.eu/stw/descriptor/", "record_url": "https://zbw.eu/stw/version/latest/descriptor/{id}/about.ttl"},
-    "gnd": {
-        "prefix": "https://d-nb.info/gnd/", "record_url": "https://lobid.org/gnd/{id}.ttl",
-        "label_predicates": (URIRef("https://d-nb.info/standards/elementset/gnd#preferredName"),),
-        "definition_predicates": (SKOS.definition, URIRef("https://d-nb.info/standards/elementset/gnd#definition")),
-    },
-    "thesoz": {
-        "prefix": "https://data.gesis.org/thesoz/concept_",
-        "release": "https://zenodo.org/records/18773539/files/thesoz.ttl?download=1",
-        "sha256": "43f17d959ae2df19ac9724aa7db636883d80c8498b9936eb89093f8601a97d22",
-    },
     "shkg": {"prefix": "https://soilwise-he.github.io/soil-health#", "path": "ontovocabs/shkg/soil_health_KG.ttl"},
     "benchmarks": {
         "prefix": "https://soilhealthbenchmarks.eu/glossary/",
@@ -54,22 +45,52 @@ SOURCES = {
             URIRef("https://soilwise-he.github.io/soil-health#scientificDefinition"),
         ),
     },
-    # The original Soil Property and Process Ontology snapshot; its classes have no labels.
-    "spp": {"prefix": "http://imash.leeds.ac.uk/ontologies/atu/SoilPhysics.owl#", "path": "ontovocabs/spp/soil_property_process.ttl"},
-    # These mapped identifiers predate GLOSIS v2. Keep the exact original records.
-    "glosis": {
-        "prefix": "http://w3id.org/glosis/model/",
-        "endpoint": f"https://raw.githubusercontent.com/glosis-ld/glosis/{GLOSIS_VERSION}/",
-        "version": GLOSIS_VERSION,
-        "modules": {
-            "codelists": "glosis_cl.ttl", "common": "glosis_common.ttl", "procedure": "glosis_procedure.ttl",
-            "profile": "glosis_profile.ttl", "siteplot": "glosis_siteplot.ttl", "surface": "glosis_surface.ttl",
-            # The pinned layer/horizon file is not valid Turtle (an undeclared `cm:` prefix). The repository's
-            # snapshot differs only in unit restrictions, so its labels and definitions are the same.
-            "layerhorizon": {"path": "ontovocabs/glosis/glosis_ori/glosis_layer_horizon.ttl"},
-        },
-    },
 }
+
+
+# Keep the ISO wording rules aligned with the definition importer in soil_vocabs.ipynb.
+_ISO_TAG = (r"</?(?:a|abbr|b|blockquote|br|div|em|i|li|ol|p|span|strong|sub|sup|table|td|th|tr|ul|script|style)"
+        r"(?=\s*(?:/?>|[\w:-]+\s*=))")
+_ISO_MARKUP = re.compile(_ISO_TAG, re.IGNORECASE)
+_ISO_BOUNDARIES = frozenset("blockquote br div li ol p table td th tr ul".split())
+_ISO_ENTITY = re.compile(r"&(?:#[0-9]+|#[xX][0-9a-fA-F]+|[A-Za-z][A-Za-z0-9]+);")
+_ISO_DELIMITERS = re.compile(rf"{_ISO_TAG}|{_ISO_ENTITY.pattern}|[<&]", re.IGNORECASE)
+_ISO_ESCAPES = {"<": "&lt;", "&": "&amp;"}
+
+
+class _ISOReferenceText(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts = []
+        self.hidden = None
+
+    def handle_starttag(self, tag, attrs):
+        if not self.hidden and tag in {"script", "style"}:
+            self.hidden = tag
+        elif not self.hidden and tag in _ISO_BOUNDARIES:
+            self.parts.append(" ")
+
+    def handle_endtag(self, tag):
+        if tag == self.hidden:
+            self.hidden = None
+        elif not self.hidden and tag in _ISO_BOUNDARIES:
+            self.parts.append(" ")
+
+    def handle_data(self, data):
+        if not self.hidden:
+            self.parts.append(data)
+
+
+def iso_definition_text(text):
+    """Keep inline wording, term numbers and scientific comparisons; discard formatting."""
+    if not _ISO_MARKUP.search(text):
+        # An entity alone does not make a literal containing '<' or '>' an HTML fragment.
+        return _ISO_ENTITY.sub(lambda m: unescape(m[0]).replace("\xa0", " "), text) if "&" in text else text
+    parser = _ISOReferenceText()
+    # In a mixed fragment HTMLParser would otherwise read "x<y and z>w" as a tag.
+    parser.feed(_ISO_DELIMITERS.sub(lambda m: _ISO_ESCAPES.get(m[0], m[0]), text))
+    parser.close()
+    return " ".join("".join(parser.parts).split())
 
 
 def request(url, params=None, *, post=False, accept="text/turtle"):
@@ -106,11 +127,10 @@ def unique(values):
     return [json.loads(key) for key in sorted({json.dumps(value, ensure_ascii=False, sort_keys=True) for value in values})]
 
 
-def original_labels(graph, uri, source):
+def original_labels(graph, uri):
     if not any(graph.triples((uri, None, None))):
         raise ValueError(f"Source record missing: {uri}")
-    # OWL-based sources such as GLOSIS label some classes and properties only with rdfs:label.
-    for predicate in (SKOS.prefLabel, RDFS.label, *SOURCES.get(source, {}).get("label_predicates", ())):
+    for predicate in (SKOS.prefLabel, RDFS.label):
         labels = unique(literal(value) for value in graph.objects(uri, predicate) if isinstance(value, Literal))
         if labels:
             return labels
@@ -118,7 +138,7 @@ def original_labels(graph, uri, source):
 
 
 def extract_record(graph, uri, source, provenance):
-    labels = original_labels(graph, uri, source)
+    labels = original_labels(graph, uri)
     definitions = []
     predicates = SOURCES.get(source, {}).get("definition_predicates", (SKOS.definition,))
     for node in {node for predicate in predicates for node in graph.objects(uri, predicate)}:
@@ -133,14 +153,18 @@ def extract_record(graph, uri, source, provenance):
         if source == "gemet":
             citations.update(graph.objects(uri, GEMET_SOURCE))
         for value in texts:
-            if isinstance(value, Literal) and str(value).strip():
-                definitions.append({**literal(value), "sources": unique(citation(c) for c in citations)})
+            if isinstance(value, Literal):
+                entry = literal(value)
+                if source == "iso11074":
+                    entry["text"] = iso_definition_text(entry["text"])
+                if entry["text"].strip():
+                    definitions.append({**entry, "sources": unique(citation(c) for c in citations)})
     return {"source": source, "prefLabels": labels, "definitions": unique(definitions), "provenance": provenance}
 
 
 def extract_labels(graph, uri, source, provenance):
     """Label-only record for exact and other mapping targets; their definitions are not shown."""
-    return {"source": source, "prefLabels": original_labels(graph, uri, source), "provenance": provenance}
+    return {"source": source, "prefLabels": original_labels(graph, uri), "provenance": provenance}
 
 
 def keep(records, uri, build, skipped):
@@ -211,61 +235,31 @@ CONSTRUCT {{
     return records
 
 
-def glosis_module(uri):
-    return str(uri)[len(SOURCES["glosis"]["prefix"]):].split("/", 1)[0]
-
-
-@lru_cache(maxsize=1)
-def release_graph(url, digest):
-    # Both the close-match and label-only passes use the same publisher snapshot.
-    payload = request(url)
-    if sha256(payload).hexdigest() != digest:
-        raise ValueError(f"Unexpected checksum for vocabulary release: {url}")
-    return Graph().parse(data=payload, format="turtle")
-
-
 def fetch_source(source, targets, *, extract=extract_record, skipped=None):
     """Fetch records for one source. With `skipped`, missing records are noted instead of failing."""
     if source in ("agrovoc", "gemet"):
         return fetch_batch(source, targets, extract=extract, skipped=skipped)
     config = SOURCES[source]
-    shared = {}
+    local_graph = None
     if "path" in config:
         payload = (ROOT / config["path"]).read_bytes()
-        shared[None] = Graph().parse(data=payload, format="turtle"), {"file": config["path"], "sha256": sha256(payload).hexdigest()}
-    elif "release" in config:
-        url, digest = config["release"], config["sha256"]
-        shared[None] = release_graph(url, digest), {"endpoint": url, "sha256": digest}
-    elif source == "glosis":
-        for module in sorted({glosis_module(uri) for uri in targets}):
-            entry = config["modules"][module]
-            if isinstance(entry, dict):
-                payload = (ROOT / entry["path"]).read_bytes()
-                provenance = {"file": entry["path"], "sha256": sha256(payload).hexdigest()}
-            else:
-                url = config["endpoint"] + entry
-                payload = request(url)
-                provenance = {"endpoint": url, "version": config["version"], "sha256": sha256(payload).hexdigest()}
-            shared[module] = Graph().parse(data=payload, format="turtle"), provenance
+        local_graph = Graph().parse(data=payload, format="turtle")
+        provenance = {"file": config["path"], "sha256": sha256(payload).hexdigest()}
 
     def build(uri):
-        if shared:
-            graph, provenance = shared[glosis_module(uri) if source == "glosis" else None]
-        elif "record_url" in config:
-            url = config["record_url"].format(id=quote(str(uri)[len(config["prefix"]):], safe=""))
-            graph, provenance = Graph().parse(data=request(url), format="turtle"), {"endpoint": url}
-        else:
-            url = str(uri) if source == "iso11074" else config["endpoint"]
-            params = {"_format": "ttl", "status": "valid"} if source == "iso11074" else {"uri": str(uri), "format": "text/turtle"}
-            graph, provenance = Graph().parse(data=request(url, params), format="turtle"), {"endpoint": url}
-        return extract(graph, uri, source, provenance)
+        if local_graph is not None:
+            return extract(local_graph, uri, source, provenance)
+        url = str(uri) if source == "iso11074" else config["endpoint"]
+        params = {"_format": "ttl", "status": "valid"} if source == "iso11074" else {"uri": str(uri), "format": "text/turtle"}
+        graph = Graph().parse(data=request(url, params), format="turtle")
+        return extract(graph, uri, source, {"endpoint": url})
 
     records = {}
     for index, uri in enumerate(targets, 1):
         keep(records, uri, lambda uri=uri: build(uri), skipped)
         if index % 25 == 0:
             print(f"{source}: {index}/{len(targets)}", flush=True)
-        if not shared:
+        if local_graph is None:
             time.sleep(0.15)
     return records
 
@@ -277,10 +271,7 @@ def fetch_labels(source, targets):
 
 
 def source_for(uri):
-    name = next((name for name, config in SOURCES.items() if str(uri).startswith(config["prefix"])), None)
-    if name == "glosis" and glosis_module(uri) not in SOURCES["glosis"]["modules"]:
-        return None
-    return name
+    return next((name for name, config in SOURCES.items() if str(uri).startswith(config["prefix"])), None)
 
 
 def mapping_targets(graph, predicates=MAPPING_PREDICATES):
@@ -315,17 +306,14 @@ def generate(input_path, output_path):
         raise ValueError("Output must be a separate .json file")
     payload = input_path.read_bytes()
     graph = Graph().parse(data=payload, format="turtle")
-    close = close_match_targets(graph)
+    close = set(close_match_targets(graph))
     batches, label_batches, skipped = defaultdict(list), defaultdict(list), defaultdict(list)
-    for uri in close:
-        source = source_for(uri)
-        if source is None:
-            raise ValueError(f"Unsupported source: {uri}; existing cache was not changed")
-        batches[source].append(uri)
-    for uri in sorted(set(mapping_targets(graph)) - set(close), key=str):
+    for uri in mapping_targets(graph):
         source = source_for(uri)
         if source is None:
             skipped["unsupported"].append((str(uri), "No configured source"))
+        elif uri in close:
+            batches[source].append(uri)
         else:
             label_batches[source].append(uri)
     records = {}

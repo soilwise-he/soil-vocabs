@@ -124,6 +124,10 @@ eusoilvoc:GullyErosion skos:broader eusoilvoc:WaterErosion ;
 eusoilvoc:InterrillErosion skos:broader eusoilvoc:WaterErosion ;
     skos:exactMatch nalt:47543 .
 
+eusoilvoc:Nanoplastics skos:definition [ dcterms:source nalt:323563 ;
+            rdf:value "Nanoparticles made out of plastic materials."@en ] ;
+    skos:exactMatch nalt:323563 .
+
 eusoilvoc:RillErosion skos:broader eusoilvoc:WaterErosion ;
     skos:definition [ dcterms:source nalt:61575 ;
             rdf:value "The process by which numerous small channels, at the most only several inches deep, are formed on recently cultivated or exposed soils."@en ] ;
