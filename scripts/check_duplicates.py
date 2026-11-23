@@ -5,14 +5,19 @@ attachment, reads its ``label`` or ``prefLabel`` column and looks for existing
 SoilVoc concepts that each label may duplicate. The result is written as a
 Markdown issue comment to ``--comment-file``; the workflow posts it.
 
-Matching, per input label (first hit wins):
-  1. Exact label  -> label equals a SoilVoc prefLabel or altLabel
+Matching, per input label (every match is reported, one per concept):
+  1. Exact label  -> every concept whose prefLabel or altLabel equals the label
                      (case-insensitive, whitespace-normalised). Score 1.
-  2. Retrieve + rerank, ported from metadata-augmentation/keyword-matcher/match.py:
+  2. Retrieve + rerank, ported from metadata-augmentation/keyword-matcher/match.py,
+     run for every input label:
        a. bi-encoder top-k nearest SoilVoc labels (prefLabels + altLabels,
           cosine >= COSINE_FLOOR), deduplicated to the best label per concept;
        b. cross-encoder scores (input label, "prefLabel: definition");
-       c. the best candidate is reported if its score >= CE_THRESHOLD.
+       c. every candidate scoring > CE_THRESHOLD is reported, unless that
+          concept is already an exact match for the label.
+
+In the report, matches for one label are ordered exact first, then by
+cross-encoder score from high to low.
 
 Exit codes: 0 whenever a comment was produced, including for user-facing
 problems such as a missing attachment. Non-zero only for internal errors; a
@@ -80,7 +85,9 @@ class InputLabel:
 class Match:
     item: InputLabel
     concept: Concept
-    score: float
+    score: float              # displayed score: 1.0 for exact, else truncated and capped at 0.99
+    raw_score: float = 1.0    # untruncated CE score, used to order matches
+    exact: bool = False
 
 
 def norm_label(value: str) -> str:
@@ -225,23 +232,25 @@ def load_concepts(ttl_path: Path) -> list[Concept]:
 
 # --------------------------------------------------------------------------- matching
 
-def exact_matches(items: list[InputLabel], concepts: list[Concept]):
-    """Return (matches, unmatched items). prefLabels take precedence over altLabels."""
-    index: dict[str, Concept] = {}
+def exact_matches(items: list[InputLabel], concepts: list[Concept]) -> list[Match]:
+    """Every concept whose prefLabel or altLabel equals an input label.
+
+    prefLabel hits are listed before altLabel hits.
+    """
+    index: dict[str, list[Concept]] = {}
     for concept in concepts:
-        index.setdefault(norm_label(concept.pref_label), concept)
+        index.setdefault(norm_label(concept.pref_label), []).append(concept)
     for concept in concepts:
         for alt in concept.alt_labels:
-            index.setdefault(norm_label(alt), concept)
+            hits = index.setdefault(norm_label(alt), [])
+            if concept not in hits:
+                hits.append(concept)
 
-    matches, rest = [], []
-    for item in items:
-        concept = index.get(norm_label(item.label))
-        if concept is not None:
-            matches.append(Match(item, concept, 1.0))
-        else:
-            rest.append(item)
-    return matches, rest
+    return [
+        Match(item, concept, 1.0, 1.0, exact=True)
+        for item in items
+        for concept in index.get(norm_label(item.label), [])
+    ]
 
 
 def semantic_matches(items: list[InputLabel], concepts: list[Concept]) -> list[Match]:
@@ -284,19 +293,31 @@ def semantic_matches(items: list[InputLabel], concepts: list[Concept]) -> list[M
     ce_model = CrossEncoder(CE_MODEL_NAME, activation_fn=torch.nn.Sigmoid(), max_length=CE_MAX_LENGTH)
     scores = ce_model.predict(pairs, show_progress_bar=False)
 
-    best_by_item: dict[int, tuple[float, int]] = {}
-    for (qi, ci), score in zip(meta, scores):
-        score = float(score)
-        if qi not in best_by_item or score > best_by_item[qi][0]:
-            best_by_item[qi] = (score, ci)
-
-    # Truncate to two decimals and cap at 0.99 so that a reported 1.00 always
-    # means an exact label match (CE sigmoid scores can reach 0.9996).
+    # Every candidate above the threshold is kept. Scores are truncated to two
+    # decimals and capped at 0.99 so that a reported 1.00 always means an exact
+    # label match (CE sigmoid scores can reach 0.9996).
     return [
-        Match(items[qi], concepts[ci], min(math.floor(score * 100) / 100, 0.99))
-        for qi, (score, ci) in best_by_item.items()
-        if score >= CE_THRESHOLD
+        Match(items[qi], concepts[ci], min(math.floor(float(score) * 100) / 100, 0.99), float(score))
+        for (qi, ci), score in zip(meta, scores)
+        if float(score) > CE_THRESHOLD
     ]
+
+
+def combine_matches(exact: list[Match], semantic: list[Match]) -> list[Match]:
+    """Merge both match lists, one entry per (input row, concept), exact wins.
+
+    Ordered by input row; within a row exact matches first, then by CE score
+    from high to low.
+    """
+    seen: set[tuple[int, str]] = set()
+    combined = []
+    for m in [*exact, *semantic]:
+        key = (m.item.row, m.concept.uri)
+        if key not in seen:
+            seen.add(key)
+            combined.append(m)
+    # sort is stable, so exact matches keep their prefLabel-before-altLabel order
+    return sorted(combined, key=lambda m: (m.item.row, not m.exact, -m.raw_score))
 
 
 def repeated_labels(items: list[InputLabel]) -> list[list[InputLabel]]:
@@ -321,22 +342,29 @@ def report(file_name: str, column: str, items, matches, repeats) -> str:
         "",
     ]
     if matches:
+        matched_labels = len({m.item.row for m in matches})
         lines += [
-            f"### Possible duplicates ({len(matches)} of {len(items)} labels)",
+            f"### Possible duplicates ({matched_labels} of {len(items)} labels)",
             "",
             "| Row | Input label | SoilVoc prefLabel | SoilVoc URI | Match score |",
             "|---:|---|---|---|---:|",
         ]
-        for m in sorted(matches, key=lambda m: m.item.row):
+        previous_row = None
+        for m in matches:  # already ordered by combine_matches
+            first = m.item.row != previous_row
+            previous_row = m.item.row
+            row = str(m.item.row) if first else ""
+            label = cell(m.item.label) if first else ""
             lines.append(
-                f"| {m.item.row} | {cell(m.item.label)} | {cell(m.concept.pref_label)} "
+                f"| {row} | {label} | {cell(m.concept.pref_label)} "
                 f"| {m.concept.uri} | {m.score:.2f} |"
             )
         lines += [
             "",
             "A score of 1.00 means the label is already a SoilVoc prefLabel or altLabel. "
-            f"Lower scores are semantic similarity (shown when ≥ {CE_THRESHOLD:.2f}); "
-            "please review them before proposing the term.",
+            f"Lower scores are semantic similarity (shown when > {CE_THRESHOLD:.2f}); "
+            "please review them before proposing the term. "
+            "A label can match several concepts; its matches are listed from best to worst.",
             "",
         ]
     else:
@@ -393,9 +421,9 @@ def run(issue_body: str, ttl_path: Path) -> str:
     concepts = load_concepts(ttl_path)
     logging.info("Loaded %d SoilVoc concepts", len(concepts))
 
-    matches, rest = exact_matches(items, concepts)
-    logging.info("Exact matches: %d; sent to retrieve + rerank: %d", len(matches), len(rest))
-    matches += semantic_matches(rest, concepts)
+    exact = exact_matches(items, concepts)
+    logging.info("Exact matches: %d; sending all %d labels to retrieve + rerank", len(exact), len(items))
+    matches = combine_matches(exact, semantic_matches(items, concepts))
 
     return report(name, column, items, matches, repeated_labels(items))
 
