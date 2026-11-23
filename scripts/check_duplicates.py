@@ -349,8 +349,8 @@ def report(file_name: str, column: str, items, matches, repeats) -> str:
         lines += [
             f"### Possible duplicates ({matched_labels} of {len(items)} labels)",
             "",
-            "| Row | Input label | SoilVoc prefLabel | SoilVoc URI | Match score |",
-            "|---:|---|---|---|---:|",
+            "| Row | Input label | SoilVoc prefLabel | Match score | SoilVoc URI |",
+            "|---:|---|---|---:|---|",
         ]
         previous_row = None
         for m in matches:  # already ordered by combine_matches
@@ -360,7 +360,7 @@ def report(file_name: str, column: str, items, matches, repeats) -> str:
             label = cell(m.item.label) if first else ""
             lines.append(
                 f"| {row} | {label} | {cell(m.concept.pref_label)} "
-                f"| {m.concept.uri} | {m.score:.2f} |"
+                f"| {m.score:.2f} | {m.concept.uri} |"
             )
         lines += [
             "",
