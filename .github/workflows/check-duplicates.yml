@@ -2,7 +2,7 @@ name: Check labels for duplicates in SoilVoc
 
 # For issues opened from the "Check duplicates" template ([check-duplicate] title
 # prefix): downloads the single CSV/XLSX attached to the issue description,
-# matches its label/prefLabel column against SoilVoc.ttl and posts the result as
+# matches its skos:prefLabel/prefLabel/label column against SoilVoc.ttl and posts the result as
 # an issue comment. Re-runs edit that comment instead of adding a new one.
 #
 # Trigger: opening/editing the issue, commenting "/check-duplicates" on it, or

@@ -13,7 +13,7 @@ Use this template to check whether terms you want to propose already exist in So
 
 - Attach one csv or xlsx file to this issue description. 
 
-- The file must contain a column named `label` or `prefLabel` (case-insensitive).
+- The file must contain a column named `skos:prefLabel`, `prefLabel` or `label` (case and spaces are ignored). Other columns are ignored.
 
 - One term per row. At most 500 terms.
 

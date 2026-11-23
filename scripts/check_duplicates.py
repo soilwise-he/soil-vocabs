@@ -1,7 +1,7 @@
 """Check labels attached to a [check-duplicate] issue against SoilVoc.
 
 Reads the issue body (the text after the title), finds the single CSV/XLSX
-attachment, reads its ``label`` or ``prefLabel`` column and looks for existing
+attachment, reads its ``skos:prefLabel``, ``prefLabel`` or ``label`` column and looks for existing
 SoilVoc concepts that each label may duplicate. The result is written as a
 Markdown issue comment to ``--comment-file``; the workflow posts it.
 
@@ -41,7 +41,9 @@ from pathlib import Path
 COMMENT_MARKER = "<!-- check-duplicates -->"
 
 SUPPORTED_EXTENSIONS = (".csv", ".xlsx")
-LABEL_COLUMNS = ("preflabel", "label")  # preference order, compared case-insensitively
+# Accepted label headers, in order of preference. Headers are compared
+# case-insensitively with all whitespace removed (see norm_header).
+LABEL_COLUMNS = ("skos:preflabel", "preflabel", "label")
 MAX_ROWS = 500
 MAX_DOWNLOAD_BYTES = 10 * 1024 * 1024
 
@@ -92,6 +94,11 @@ class Match:
 
 def norm_label(value: str) -> str:
     return re.sub(r"\s+", " ", str(value or "")).strip().casefold()
+
+
+def norm_header(value: str) -> str:
+    """Header key: casefolded with every whitespace character removed."""
+    return re.sub(r"\s+", "", str(value or "")).casefold()
 
 
 # --------------------------------------------------------------------------- attachment
@@ -166,16 +173,12 @@ def extract_labels(rows: list[list[str]]) -> tuple[list[InputLabel], str]:
     """Return the non-empty labels and the name of the column they came from."""
     if not rows:
         raise CheckError("The file is empty.")
-    header = [norm_label(h) for h in rows[0]]
-    column = None
-    for wanted in LABEL_COLUMNS:
-        if wanted in header:
-            column = header.index(wanted)
-            break
+    header = [norm_header(h) for h in rows[0]]
+    column = next((header.index(w) for w in LABEL_COLUMNS if w in header), None)
     if column is None:
         found = ", ".join(f"`{h.strip()}`" for h in rows[0] if h.strip()) or "none"
         raise CheckError(
-            "The file has no `label` or `prefLabel` column in its first row "
+            "The file has no `skos:prefLabel`, `prefLabel` or `label` column in its first row "
             f"(columns found: {found})."
         )
 
@@ -386,7 +389,7 @@ def error_report(message: str, hint: bool = True) -> str:
     lines = [COMMENT_MARKER, "## SoilVoc duplicate check", "", f"❌ **The check could not run:** {message}", ""]
     if hint:
         lines += [
-            "Please attach exactly one `.csv` or `.xlsx` file with a `label` or `prefLabel` column "
+            "Please attach exactly one `.csv` or `.xlsx` file with a `skos:prefLabel`, `prefLabel` or `label` column "
             "to the issue description, then edit the issue or comment `/check-duplicates`.",
             "",
         ]
