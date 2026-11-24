@@ -42,7 +42,8 @@ COMMENT_MARKER = "<!-- check-duplicates -->"
 
 SUPPORTED_EXTENSIONS = (".csv", ".xlsx")
 # Accepted label headers, in order of preference. Headers are compared
-# case-insensitively with all whitespace removed (see norm_header).
+# case-insensitively with all whitespace and an optional trailing "@en"
+# language tag removed (see norm_header), so "skos:prefLabel @en" also matches.
 LABEL_COLUMNS = ("skos:preflabel", "preflabel", "label")
 MAX_ROWS = 500
 MAX_DOWNLOAD_BYTES = 10 * 1024 * 1024
@@ -97,8 +98,9 @@ def norm_label(value: str) -> str:
 
 
 def norm_header(value: str) -> str:
-    """Header key: casefolded with every whitespace character removed."""
-    return re.sub(r"\s+", "", str(value or "")).casefold()
+    """Header key: casefolded, whitespace removed, trailing "@en" tag dropped."""
+    key = re.sub(r"\s+", "", str(value or "")).casefold()
+    return key.removesuffix("@en")
 
 
 # --------------------------------------------------------------------------- attachment
